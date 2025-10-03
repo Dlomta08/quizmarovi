@@ -1,0 +1,86 @@
+.mode-selections {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode overrides */
+body.dark-mode .mode-selections {
+  background-color: #222; /* dark background */
+  color: white;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* Style buttons inside mode-selections */
+.mode-selections button {
+  margin: 10px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+body.dark-mode .mode-selections button {
+  background: #2980b9;
+}
+
+.mode-selections button:hover {
+  background: #2c80b4;
+}
+
+body.dark-mode .mode-selections button:hover {
+  background: #1f6693;
+}
+
+
+
+#mode-selection {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  #mode-selection.active {
+    background-color: coral;
+
+  }
+  #mode-selection button {
+    margin: 10px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  #mode-selection button:hover {
+    background: #2c80b4;
+  }
+  
+  #timer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #e74c3c;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  
+

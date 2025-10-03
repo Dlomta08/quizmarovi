@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math Quiz</title>
+  <link rel="stylesheet" href="qvizebi.css">
+  <link rel="stylesheet" href="quiz.css">
+  <link rel="stylesheet" href="quiz-style.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script>
+  // Immediately apply dark mode if saved in localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark-mode');
+  }
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <button id="toggle-dark">🌙</button>
+
+  <h1 id="quiz-title"></h1>
+  
+  <div id="mode-selection" class="mode-selections" >
+    <p>აირჩიეთ რეჟიმი:</p>
+    <button onclick="startQuiz(false)">ჩვეულებრივი</button>
+    <button onclick="startQuiz(true)">სიმულაცია</button>
+  </div>
+  
+  <!-- Timer Display -->
+  <div id="timer">დარჩენილი დრო: <span id="time">05:00</span></div>
+
+  <!-- Quiz Form -->
+  <form id="quizForm" style="display: none;">
+    <button type="submit">Submit</button>
+  </form>
+  <div id="result"></div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const classNum = params.get("class");
+    const year = params.get("year");
+    const number = params.get("number");
+    const numshow = (number == 1 ? '1-ელი' : `მე-${number}`);
+    if (classNum && year && number) {
+      const title = `მათემატიკის ${numshow} ქვიზი — ${classNum} კლასი, ${year} წელი.`;
+      document.getElementById("quiz-title").textContent = title;
+      const script = document.createElement("script");
+      script.src = `class-${classNum}/${year}/quiz-${number}.js`;
+      script.onload = () => {
+        if (typeof quizData !== "undefined") {
+          document.getElementById("mode-selection").style.display = "block";
+        } else {
+          document.body.innerHTML = "<p>ქვიზი ვერ ჩაიტვირთა. ❌</p>";
+        }
+      };
+      script.onerror = () => {
+        document.body.innerHTML = "<p> ქვიზი ვერ მოიძებნა. ❌</p>";
+      };
+      document.head.appendChild(script);
+    } else {
+      document.body.innerHTML = "<p>არასწორი ბმული. ❌</p>";
+    }
+  </script>
+  <script src="quiz.js"></script>
+  <script src="darkmode.js"></script>
+</body>
+</html>

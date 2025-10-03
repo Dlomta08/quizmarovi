@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hallo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ტესტები</title>
+  <link rel="stylesheet" href="style1.css">
+  <script>
+  // Immediately apply dark mode if saved in localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark-mode');
+  }
+</script>
 </head>
 <body>
-    <h1>Hallo</h1>
+  
+  <button id="toggle-dark">🌙</button>
+
+  <div class="center-container">
+    <a href="page2.html">
+        <button class="big-button">კომაროვი</button>
+  </div>
+
+  <script src="darkmode.js"></script>
 </body>
 </html>

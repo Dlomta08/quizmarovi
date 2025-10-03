@@ -1,0 +1,142 @@
+/* RESET MARGINS, PADDINGS, AND BOX-SIZING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* MAKE HTML AND BODY FILL THE ENTIRE VIEWPORT */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+  overflow-x: hidden; /* prevent horizontal scrollbar */
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  transition: background-color 0.0s ease, color 0.0s ease;
+}
+/* Page container: Use flexbox to align everything neatly */
+.page2-container {
+    display: flex;
+    flex-direction: column; /* Stack everything vertically */
+    align-items: center; /* Center everything horizontally */
+    gap: 40px; /* Space between titles and button groups */
+    padding: 50px;
+    height: 100vh;
+    box-sizing: border-box; /* Ensure padding doesn't affect layout */
+}
+
+/* Container for the titles to make them appear next to each other */
+.titles-container {
+    display: flex;
+    gap: 50px; /* Space between titles */
+    justify-content: center; /* Center titles horizontally */
+    width: 75%;
+}
+
+/* Style for the non-clickable title (modern and large) */
+.text-title {
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    font-size: 60px; /* Larger font size */
+    font-weight: 700; /* Bold text */
+    color: #cc6133; /* Green color */
+    text-align: center;
+    text-transform: uppercase; /* Makes text all uppercase */
+    letter-spacing: 2px; /* Adds spacing between letters */
+    background: linear-gradient(135deg, #3633cc, #ff6673); /* Gradient background */
+    -webkit-background-clip: text; /* Clips the gradient to the text */
+    color: transparent; /* Makes text transparent so gradient is visible */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.286); /* Soft shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth animation on hover */
+    flex: 1; /* Ensure both titles take equal space */
+}
+
+.text-title:hover {
+    transform: scale(1.1); /* Slightly enlarge the text on hover */
+}
+
+/* Container for buttons (centered under the titles) */
+.buttons-container {
+    display: flex;
+    justify-content: space-between; /* Ensure equal spacing between button groups */
+    gap: 40px; /* Space between the button columns */
+    width: 100%;
+    max-width: 1000px; /* Prevent container from stretching too wide */
+}
+
+/* Style for the vertical buttons */
+.vertical-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Ensure both button groups take equal width */
+}
+
+/* Style for the buttons */
+.vertical-buttons button {
+    width: 240px;              /* Increased width */
+    padding: 20px 40px;        /* More padding for larger size */
+    font-size: 22px;           /* Larger text */
+    border-radius: 10px;       /* Slightly more rounded corners */
+    background-color: #4c99af;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.vertical-buttons button:hover {
+    background-color: #3a0e61;
+}
+
+/* Ensuring symmetry */
+.vertical-buttons button {
+    width: 300px; /* Set a fixed width for all buttons to keep them uniform */
+    text-align: center; /* Make text inside buttons centered */
+}
+
+/* DARK MODE STYLES */
+body.dark-mode, html.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .page2-container {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .text-title {
+  color: transparent;
+  background: linear-gradient(135deg, #66ccff, #ff99cc);
+  -webkit-background-clip: text;
+}
+
+body.dark-mode .vertical-buttons button {
+  background-color: #336699;
+  color: white;
+}
+
+body.dark-mode .vertical-buttons button:hover {
+  background-color: #224466;
+}
+
+/* DARK MODE TOGGLE BUTTON */
+#toggle-dark {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;      /* inherit font size, family, etc. */
+  color: rgb(231, 231, 231);        /* choose your text color */
+  cursor: pointer;
+   /* optional, looks like a link */
+}
+
+#toggle-dark:hover {
+  color: rgb(0, 0, 0);    /* change color on hover */
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Quizzes by Year</title>
+  <link rel="stylesheet" href="styles2.css">
+  <script>
+  // Immediately apply dark mode if saved in localStorage
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.classList.add('dark-mode');
+  }
+</script>
+</head>
+<body>
+  <button id="toggle-dark">🌙 </button>
+  <div class="container">
+  <div class="year-table" id="yearTable">
+    <script>
+    const classNum = 9;
+    const startYear = 2020;
+    const endYear = 2024;
+    const quizzesPerYear = 5;
+    const yearTable = document.getElementById("yearTable");
+    for (let y = endYear; y >= startYear; y--) {
+      const academicYear = `${y}/${(y + 1).toString().slice(-2)}`;
+      const row = document.createElement("div");
+      row.className = "year-row";
+      const yearLabel = document.createElement("div");
+      yearLabel.className = "year";
+      yearLabel.textContent = academicYear;
+      const btnGroup = document.createElement("div");
+      btnGroup.className = "quiz-buttons";
+      for (let q = 1; q <= quizzesPerYear; q++) {
+        const btn = document.createElement("button");
+        btn.textContent = q;
+        btn.onclick = () => handleQuizClick(academicYear, q, classNum);
+        btnGroup.appendChild(btn);
+      }
+      row.appendChild(yearLabel);
+      row.appendChild(btnGroup);
+      yearTable.appendChild(row);
+    }
+  </script>
+  </div>
+</div>
+  <script>
+    function handleQuizClick(year, number, classNum) {
+      const yearFolder = year.replace("/", "-");
+      const url = `quiz.html?class=${classNum}&year=${yearFolder}&number=${number}`;
+      window.location.href = url;
+    }
+  </script>
+  <script src="darkmode.js"></script>
+</body>
+</html>
