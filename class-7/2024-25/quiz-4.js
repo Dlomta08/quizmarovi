@@ -49,7 +49,7 @@ const quizData = [
   },
   // 9
   {
-    image: "math/class-7/images/image.27.png",
+    image: "class-7/images/image.27.png",
     question: "წრეწირის $C$ წერტილიდან გავლებულია ორი ტოლი ქორდა $EC = CD$, $\\angle ECD = 54^\\circ$, ხოლო $BD$ წრეწირის დიამეტრია. იპოვეთ კუთხე $\\angle BDC$. (იხ. ნახაზი)",
     options: [],
     tags: []

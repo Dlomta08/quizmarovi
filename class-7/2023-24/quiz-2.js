@@ -192,7 +192,7 @@ const quizData = [
 
   //25
   {
-    image: "math/class-7/images/image.18.png",
+    image: "class-7/images/image.18.png",
     question: "მოცემულ ნახაზზე $KB$ და $FC$ პარალელური წრფეებია, ხოლო $KPL$ და $FPN$ მართკუთხა სამკუთხედებია ($\\angle L = 90^\\circ$, $\\angle N = 90^\\circ$). იპოვეთ $\\angle NFC$, თუ $\\angle BKL = 47^\\circ$, $\\angle LPN = 122^\\circ$.",
     options: ["$8^\\circ$", "$13^\\circ$", "$15^\\circ$", "$11^\\circ$", "$9^\\circ$", "$17^\\circ$"],
     correct: 3,
