@@ -3,6 +3,42 @@ let timeLeft = 3 * 60 * 60;
 let simulationMode = false;
 const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
 
+/* ---------- Inject minimal CSS for answer chips (once) ---------- */
+(function ensureChipStyles(){
+  if (document.getElementById("answer-chip-styles")) return;
+  const s = document.createElement("style");
+  s.id = "answer-chip-styles";
+  s.textContent = `
+    .option-chip{
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.6rem 1rem; margin:.25rem .35rem .25rem 0;
+      border:1px solid var(--border-color, rgba(255,255,255,.15));
+      border-radius:9999px;
+      background: rgba(255,255,255,0.06);
+      color: inherit;
+      transition: background .25s ease, border-color .25s ease, color .25s ease, transform .05s ease;
+    }
+    .option-chip input[type="radio"]{ accent-color: var(--primary-color); }
+    .option-chip:hover{ transform: translateY(-1px); }
+
+    /* ✅ soft green */
+    .option-chip.is-correct{
+      background:#86efac !important;     /* minty green */
+      border-color:#86efac !important;
+      color:#064e3b !important;          /* dark teal text for contrast */
+    }
+
+    /* ❌ soft red */
+    .option-chip.is-wrong{
+      background:#fca5a5 !important;     /* light coral red */
+      border-color:#fca5a5 !important;
+      color:#7f1d1d !important;          /* deep red text */
+    }
+  `;
+  document.head.appendChild(s);
+})();
+
+/* -------------------- existing code -------------------- */
 function timer() {
   const timeBox = document.getElementById("time-selection");
   simulationMode ^= 1;
@@ -46,10 +82,10 @@ function startQuiz(withTimer) {
 }
 
 function updateTimerDisplay() {
-    const hours = String(Math.floor(timeLeft / 3600)).padStart(2, "0");
-    const minutes = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, "0");
-    const seconds = String(timeLeft % 60).padStart(2, "0");
-    document.getElementById("time").textContent = `${hours}:${minutes}:${seconds}`;
+  const hours = String(Math.floor(timeLeft / 3600)).padStart(2, "0");
+  const minutes = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, "0");
+  const seconds = String(timeLeft % 60).padStart(2, "0");
+  document.getElementById("time").textContent = `${hours}:${minutes}:${seconds}`;
 }
 
 function renderQuiz(){
@@ -60,21 +96,21 @@ function renderQuiz(){
       
     // intro
     if (quizData.length > 0 && typeof quizData[i].intro === "string" && quizData[i].intro.trim() !== "") {
-        const introDiv = document.createElement("div");
-        introDiv.className = "introduction";
-        introDiv.innerHTML = quizData[i].intro;
-        form.appendChild(introDiv);
-        if (window.MathJax) MathJax.typeset();
-      }
+      const introDiv = document.createElement("div");
+      introDiv.className = "introduction";
+      introDiv.innerHTML = quizData[i].intro;
+      form.appendChild(introDiv);
+      if (window.MathJax) MathJax.typeset();
+    }
       
-      // task
-      if (quizData.length > 0 && typeof quizData[i].task === "string" && quizData[i].task.trim() !== "") {
-        const taskDiv = document.createElement("div");
-        taskDiv.className = "task";
-        taskDiv.innerHTML = quizData[i].task;
-        form.appendChild(taskDiv);
-        if (window.MathJax) MathJax.typeset();
-      }
+    // task
+    if (quizData.length > 0 && typeof quizData[i].task === "string" && quizData[i].task.trim() !== "") {
+      const taskDiv = document.createElement("div");
+      taskDiv.className = "task";
+      taskDiv.innerHTML = quizData[i].task;
+      form.appendChild(taskDiv);
+      if (window.MathJax) MathJax.typeset();
+    }
 
     // warning
     if (typeof q.warning === "string" && q.warning.trim() !== "") {
@@ -111,6 +147,13 @@ function renderQuiz(){
     checkBtn.style.marginTop = "8px";
     checkBtn.style.display = "none"; // initially hidden
 
+    /* ---------- helper: clear previous green/red states on this question ---------- */
+    function clearChipColors() {
+      fieldset.querySelectorAll("label.option-chip").forEach(l => {
+        l.classList.remove("is-correct","is-wrong");
+      });
+    }
+
     checkBtn.addEventListener("click", () => {
       if (Array.isArray(q.correct) && q.correct.length === q.options.length) {
         feedback.innerHTML = `<span style="color: green;">ყველა პასუხი სწორია ✔️</span>`;
@@ -119,49 +162,59 @@ function renderQuiz(){
       }
 
       const selected = form.querySelector(`input[name="question${i}"]:checked`);
+      clearChipColors();
+
       if (!selected) {
-    feedback.innerHTML = `<span style="color: orange;">პასუხი არ არის არჩეული</span>`;
-  } else {
-    const userIdx = parseInt(selected.value);
-    let isCorrect;
-
-    if (Array.isArray(q.correct)) {
-      isCorrect = q.correct.includes(userIdx);
-    } else {
-      isCorrect = (userIdx === q.correct);
-    }
-
-    if (isCorrect) {
-      feedback.innerHTML = `<span style="color: green;">პასუხი სწორია ✔️</span>`;
-    } else {
-      if (Array.isArray(q.correct)) {
-        const allCorrectOptions = q.correct
-          .map(idx => fox[idx] + " " + q.options[idx])
-          .join(", ");
-        feedback.innerHTML = `
-          <span style="color: red;">პასუხი არასწორია ❌</span>
-          – სწორი პასუხებია: <strong>${allCorrectOptions}</strong>
-        `;
+        feedback.innerHTML = `<span style="color: orange;">პასუხი არ არის არჩეული</span>`;
       } else {
-        feedback.innerHTML = `
-          <span style="color: red;">პასუხი არასწორია ❌</span>
-          – სწორი პასუხია: <strong>${fox[q.correct]} ${q.options[q.correct]}</strong>
-        `;
+        const userIdx = parseInt(selected.value, 10);
+        const parentLabel = selected.closest("label"); // the chip to color
+
+        let isCorrect;
+        if (Array.isArray(q.correct)) {
+          isCorrect = q.correct.includes(userIdx);
+        } else {
+          isCorrect = (userIdx === q.correct);
+        }
+
+        if (isCorrect) {
+          parentLabel.classList.add("is-correct");      // ✅ GREEN chip
+          feedback.innerHTML = `<span style="color: green;">პასუხი სწორია ✔️</span>`;
+        } else {
+          parentLabel.classList.add("is-wrong");        // ❌ RED chip
+          if (Array.isArray(q.correct)) {
+            const allCorrectOptions = q.correct
+              .map(idx => fox[idx] + " " + q.options[idx])
+              .join(", ");
+            feedback.innerHTML = `
+              <span style="color: red;">პასუხი არასწორია ❌</span>
+              – სწორი პასუხებია: <strong>${allCorrectOptions}</strong>
+            `;
+          } else {
+            feedback.innerHTML = `
+              <span style="color: red;">პასუხი არასწორია ❌</span>
+              – სწორი პასუხია: <strong>${fox[q.correct]} ${q.options[q.correct]}</strong>
+            `;
+          }
+        }
+        if (window.MathJax) MathJax.typeset();
       }
-    }
-      if (window.MathJax) MathJax.typeset();
-  }
-});
+    });
 
     q.options.forEach((opt, j) => {
       const label = document.createElement("label");
+      label.classList.add("option-chip");       // ← make the whole pill colorable
+
       const radio = document.createElement("input");
       radio.type = "radio";
       radio.name = `question${i}`;
       radio.value = j;
       radio.addEventListener("change", () => {
+        // when user changes selection, hide previous color until "check"
+        label.classList.remove("is-correct","is-wrong");
         if (!simulationMode) checkBtn.style.display = "inline-block";
       });
+
       label.append(`${fox[j]}`);
       label.appendChild(radio);
       label.append(`${opt}`);
@@ -259,14 +312,18 @@ function renderQuiz(){
       const answer = form.querySelector(`input[name="question${i}"]:checked`);
       const fieldset = form.querySelectorAll("fieldset")[i];
       const feedback = fieldset.querySelector(".feedback");
-      const isCorrect = answer && parseInt(answer.value) === q.correct;
+      const isCorrect = answer && (Array.isArray(q.correct)
+        ? q.correct.includes(parseInt(answer.value,10))
+        : parseInt(answer.value,10) === q.correct);
+
       if (isCorrect) score++;
+
       if(!answer){
         feedback.innerHTML = `<span style="color: orange;">პასუხი არ არის არჩეული</span>`;
       }else{
         feedback.innerHTML = isCorrect
-        ? `<span style="color: green;">პასუხი სწორია ✔️</span>`
-        : `<span style="color: red;">პასუხი არასწორია ❌</span> – სწორი პასუხია: <strong> ${fox[q.correct]} ${q.options[q.correct]} </strong>`;
+          ? `<span style="color: green;">პასუხი სწორია ✔️</span>`
+          : `<span style="color: red;">პასუხი არასწორია ❌</span> – სწორი პასუხია: <strong> ${fox[q.correct]} ${q.options[q.correct]} </strong>`;
       }
       fieldset.appendChild(feedback);
     });
