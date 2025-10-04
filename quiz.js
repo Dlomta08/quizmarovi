@@ -339,48 +339,4 @@ function renderQuiz(){
     if (window.MathJax) MathJax.typeset();
   });
 }
-
-/* =====================
-   📸 Image Modal Feature
-   ===================== */
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.createElement("div");
-  modal.className = "img-modal";
-  modal.innerHTML = `
-    <span class="img-modal-close">&times;</span>
-    <img class="img-modal-content" id="imgInModal">
-  `;
-  document.body.appendChild(modal);
-
-  const modalImg = modal.querySelector("#imgInModal");
-  const closeBtn = modal.querySelector(".img-modal-close");
-  let scale = 1;
-
-  // open modal
-  document.body.addEventListener("click", e => {
-    if (e.target.classList.contains("quiz-image")) {
-      modal.style.display = "block";
-      modalImg.src = e.target.src;
-      scale = 1;
-      modalImg.style.transform = "scale(1)";
-    }
-  });
-
-  // close modal
-  closeBtn.onclick = () => modal.style.display = "none";
-  modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
-
-  // zoom with scroll wheel
-  modalImg.addEventListener("wheel", e => {
-    e.preventDefault();
-    const delta = e.deltaY > 0 ? -0.1 : 0.1;
-    scale = Math.min(Math.max(1, scale + delta), 5);
-    modalImg.style.transform = `scale(${scale})`;
-  });
-
-  // reset zoom on double click
-  modalImg.addEventListener("dblclick", () => {
-    scale = 1;
-    modalImg.style.transform = "scale(1)";
-  });
-});
+;
