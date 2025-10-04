@@ -170,7 +170,7 @@ const quizData = [
 },
 // 25
 {
-  image: "math/class-7/images/image.17.png",
+  image: "class-7/images/image.17.png",
   question: "მოცემულია $ABC$ (იხ. ნახაზი) ტოლფერდა სამკუთხედი ($AB = BC$). $A$ წერტილიდან გავლებული წრფე $BC$ გვერდს კვეთს $K$ წერტილში. ცნობილია, რომ $AC = CD$, $\\angle BAK = 2\\alpha$, $\\angle BCD = \\alpha$. იპოვეთ $BC$ და $AD$ წრფეებს შორის კუთხე.",
   options: ["$30^\\circ$", "$60^\\circ$", "$90^\\circ$", "$\\alpha$", "$2\\alpha$", "$3\\alpha$"],
   correct: 1,

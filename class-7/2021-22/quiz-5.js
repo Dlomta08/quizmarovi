@@ -26,7 +26,7 @@ const quizData = [
   //4
   {
     task: "ნახაზის მიხედვით იპოვეთ უცნობი კუთხის სიდიდე (რომელიც კითხვის ნიშნითაა აღნიშნული) ($4-7$ ამოცანები).",
-    image: "math/class-7/images/image.11.png",
+    image: "class-7/images/image.11.png",
     question: "",
     options: ["$52^\\circ$", "$34^\\circ$", "$54^\\circ$", "$66^\\circ$", "$48^\\circ$", "$72^\\circ$"],
     correct: 3,
@@ -35,7 +35,7 @@ const quizData = [
 
   //5
   {
-    image: "math/class-7/images/image.12.png",
+    image: "class-7/images/image.12.png",
     question: "",
     options: ["$55^\\circ$", "$64^\\circ$", "$58^\\circ$", "$50^\\circ$", "$72^\\circ$", "$84^\\circ$"],
     correct: 0,
@@ -44,7 +44,7 @@ const quizData = [
 
   //6
   {
-    image: "math/class-7/images/image.13.png",
+    image: "class-7/images/image.13.png",
     question: "",
     options: ["$18^\\circ$", "$22^\\circ$", "$26^\\circ$", "$32^\\circ$", "$34^\\circ$", "$36^\\circ$"],
     correct: 1,
@@ -53,7 +53,7 @@ const quizData = [
 
   //7
   {
-    image: "math/class-7/images/image.14.png",
+    image: "class-7/images/image.14.png",
     question: "",
     options: ["$48^\\circ$", "$54^\\circ$", "$62^\\circ$", "$66^\\circ$", "$72^\\circ$", "$84^\\circ$"],
     correct: 2,
@@ -101,7 +101,7 @@ const quizData = [
 
   //13
   {
-    image: "math/class-7/images/image.15.png",
+    image: "class-7/images/image.15.png",
     question: "ნახაზზე მოცემულია ორი $𝑦 = 0{,}8𝑥 + 1$ და $𝑦 = 𝑘𝑥 + 𝑏$ პარალელური წრფე. იპოვეთ $𝑘 + 𝑏$.",
     options: ["$0$", "$1$", "$0{,}2$", "$1{,}8$", "$1{,}2$", "$1{,}6$"],
     correct: 0,

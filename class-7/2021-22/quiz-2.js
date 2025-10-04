@@ -19,7 +19,7 @@ const quizData = [
   },
   // 4
   {
-    image: "math/class-7/images/image15.png",
+    image: "class-7/images/image15.png",
     question: "$ABC$ სამკუთხედის $CM$ მედიანის გაგრძელებაზე აღებულია $K$ წერტილი ისე, რომ $CM = MK$ (იხ.ნახაზი). იპოვეთ $\\angle CBK$, თუ $\\angle ACM = 28^\\circ$ და $\\angle BCM = 37^\\circ$.",
     options: [],
     tags: []
@@ -38,7 +38,7 @@ const quizData = [
   },
   // 7
   {
-    image: "math/class-7/images/image16.png",
+    image: "class-7/images/image16.png",
     question: "$ABCD$ მართკუთხედის $AB$ და $BC$ გვერდებზე გარედან აგებულია $ABM$ და $BCN$ ტოლგვერდა სამკუთხედები (იხ.ნახაზი).  იპოვეთ $MND$ სამკუთხედის გვერდები, თუ მისი პერიმეტრი $p$-ს ტოლია (პასუხი დაასაბუთეთ).",
     options: [],
     tags: []

@@ -43,7 +43,7 @@ const quizData = [
   },
   // 8
   {
-    image: "math/class-7/images/image17.png",
+    image: "class-7/images/image17.png",
     question: "ნახაზის მიხედვით იპოვეთ $\\alpha + \\beta + \\delta + \\theta$, თუ $\\angle AMN = \\theta$, $\\angle ANM = \\delta$, $\\angle PKQ = \\beta$ და $\\angle BAQ = \\angle ACB = \\angle KPQ = \\alpha$.",
     options: [],
     tags: []

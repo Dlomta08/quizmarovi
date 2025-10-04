@@ -193,7 +193,7 @@ const quizData = [
 
   //25
   {
-    image: "math/class-7/images/image.16.png",
+    image: "class-7/images/image.16.png",
     question: "$AB$ და $DM$ პარალელური წრფეებია. $CM$ არის $∠BCD$ კუთხის ბისექტრისა. $CB$ წრფე პარალელურია $MN$ წრფის. $∠ABC = 32°$, $∠CDM = 108°$. იპოვეთ $∠CMN$ კუთხე.",
     options: ["$40°$", "$76°$", "$140°$", "$128°$", "$70°$", "$88°$"],
     correct: 3,
