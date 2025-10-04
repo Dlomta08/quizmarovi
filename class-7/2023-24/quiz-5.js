@@ -9,7 +9,7 @@ const quizData = [
 
 //2
 {
-  image: "math/class-7/images/image.19.png",
+  image: "class-7/images/image.19.png",
   question: "სიბრტყეზე მოცემულია წრფე და ორი მართკუთხედი, რომლის თითო წვერო ამ წრფეზე მდებარეობს (იხ. ნახაზი). იპოვეთ უცნობი კუთხის სიდიდე.",
   options: ["$135^\\circ$", "$110^\\circ$", "$120^\\circ$", "$140^\\circ$", "$130^\\circ$", "$115^\\circ$"],
   correct: 1,
@@ -42,7 +42,7 @@ const quizData = [
 
 //6
 {
-  image: "math/class-7/images/image.20.png",  
+  image: "class-7/images/image.20.png",  
   question: "$24$სმ-იანი მონაკვეთი წრეწირთან გადაკვეთის წერტილებით იყოფა შეფარდებით $1:2:3$. მიღებული ქორდა წრეწირის ცენტრიდან $60^\\circ$-იანი კუთხით ჩანს. რას უდრის წრეწირის დიამეტრი?",
   options: ["$10$", "$12$", "$16$", "$15$", "$14$", "$18$"],
   correct: 2,
@@ -107,7 +107,7 @@ const quizData = [
 //14
 {
   task: "$N14,$ $N15$, $N16$ და $N17$ ამოცანებში ნახაზის მიხედვით იპოვეთ უცნობი კუთხის ან რკალის სიდიდე, რომლებიც $X$-ით ან კითხვის ნიშნითაა აღნიშნული (გაითვალისწინეთ, რომ ერთნაირად მონიშნული კუთხეები აუცილებლად ტოლ კუთხეებს არ ნიშნავს).",
-  image: "math/class-7/images/image.21.png",
+  image: "class-7/images/image.21.png",
   question: "",
   options: ["$62^\\circ$", "$54^\\circ$", "$44^\\circ$", "$36^\\circ$", "$48^\\circ$", "$52^\\circ$"],
   correct: 1,
@@ -116,7 +116,7 @@ const quizData = [
 
 //15
 {
-  image: "math/class-7/images/image.22.png",
+  image: "class-7/images/image.22.png",
   question: "",
   options: ["$56^\\circ$", "$60^\\circ$", "$58^\\circ$", "$50^\\circ$", "$70^\\circ$", "$84^\\circ$"],
   correct: 4,
@@ -125,7 +125,7 @@ const quizData = [
 
 //16
 {
-  image: "math/class-7/images/image.23.png",
+  image: "class-7/images/image.23.png",
   question: "",
   options: ["$60^\\circ$", "$40^\\circ$", "$30^\\circ$", "$70^\\circ$", "$50^\\circ$", "$80^\\circ$"],
   correct: 5,
@@ -134,7 +134,7 @@ const quizData = [
 
 //17
 {
-  image: "math/class-7/images/image.24.png",
+  image: "class-7/images/image.24.png",
   question: "",
   options: ["$28^\\circ$", "$24^\\circ$", "$58^\\circ$", "$34^\\circ$", "$36^\\circ$", "$28^\\circ$"],
   correct: 4,
