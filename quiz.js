@@ -1,6 +1,17 @@
 let timerInterval;
 let timeLeft = 3 * 60 * 60;
 let simulationMode = false;
+const fox = ["ა)", "ბ)", "გ)", "დ)", "ე)", "ვ)"];
+
+function timer() {
+  const timeBox = document.getElementById("time-selection");
+  simulationMode ^= 1;
+  if (simulationMode) {
+    timeBox.classList.add("visible");
+  } else {
+    timeBox.classList.remove("visible");
+  }
+}
 
 function startQuiz(withTimer) {
   simulationMode = withTimer; 
@@ -9,6 +20,15 @@ function startQuiz(withTimer) {
   quizForm.style.display = "block";
   renderQuiz();
   if (withTimer) {
+    const customMinutesInput = document.getElementById("customTime");
+    let customMinutes = 180; // fallback
+    if (customMinutesInput) {
+      const inputVal = parseInt(customMinutesInput.value);
+      if (!isNaN(inputVal) && inputVal >= 1) {
+        customMinutes = inputVal;
+      }
+    }
+    timeLeft = customMinutes * 60;
     document.getElementById("timer").style.display = "block";
     updateTimerDisplay();
     timerInterval = setInterval(() => {
@@ -37,28 +57,50 @@ function renderQuiz(){
   form.innerHTML = "";
   quizData.forEach((q, i) => {
     const fieldset = document.createElement("fieldset");
+      
+    // intro
+    if (quizData.length > 0 && typeof quizData[i].intro === "string" && quizData[i].intro.trim() !== "") {
+        const introDiv = document.createElement("div");
+        introDiv.className = "introduction";
+        introDiv.innerHTML = quizData[i].intro;
+        form.appendChild(introDiv);
+        if (window.MathJax) MathJax.typeset();
+      }
+      
+      // task
+      if (quizData.length > 0 && typeof quizData[i].task === "string" && quizData[i].task.trim() !== "") {
+        const taskDiv = document.createElement("div");
+        taskDiv.className = "task";
+        taskDiv.innerHTML = quizData[i].task;
+        form.appendChild(taskDiv);
+        if (window.MathJax) MathJax.typeset();
+      }
 
-
+    // warning
     if (typeof q.warning === "string" && q.warning.trim() !== "") {
       const warnDiv = document.createElement("div");
       warnDiv.className = "warning";
       warnDiv.innerText = q.warning;
       fieldset.appendChild(warnDiv);
     }
-
+    
+    const contentWrapper = document.createElement("div");
+    contentWrapper.className = "quiz-question-wrapper";
 
     const legend = document.createElement("legend");
     legend.innerHTML = `<strong>${i + 1}.</strong><br>${q.question}`;
-    fieldset.appendChild(legend);
+    contentWrapper.appendChild(legend);
 
+    // image inside wrapper
     if (q.image) {
       const img = document.createElement("img");
       img.src = q.image;
-      img.alt = q.alt || `Question ${i+1} illustration`;
-      img.style.maxWidth = "100%";
-      img.style.margin   = "8px 0";
-      fieldset.appendChild(img);
+      img.alt = q.alt || `Question ${i + 1} illustration`;
+      img.className = "quiz-image";
+      contentWrapper.appendChild(img);
     }
+
+    fieldset.appendChild(contentWrapper);
 
     const feedback = document.createElement("div");
     feedback.className = "feedback";
@@ -83,8 +125,6 @@ function renderQuiz(){
     const userIdx = parseInt(selected.value);
     let isCorrect;
 
-    // If q.correct is an array, check if userIdx is included;
-    // otherwise compare directly as before.
     if (Array.isArray(q.correct)) {
       isCorrect = q.correct.includes(userIdx);
     } else {
@@ -92,14 +132,11 @@ function renderQuiz(){
     }
 
     if (isCorrect) {
-      // If every answer is correct, the simplest feedback is:
       feedback.innerHTML = `<span style="color: green;">პასუხი სწორია ✔️</span>`;
     } else {
-      // If q.correct is an array, show all “correct” options; else show the single one.
       if (Array.isArray(q.correct)) {
-        // Build a comma‐separated list of all correct options:
         const allCorrectOptions = q.correct
-          .map(idx => q.options[idx])
+          .map(idx => fox[idx] + " " + q.options[idx])
           .join(", ");
         feedback.innerHTML = `
           <span style="color: red;">პასუხი არასწორია ❌</span>
@@ -108,7 +145,7 @@ function renderQuiz(){
       } else {
         feedback.innerHTML = `
           <span style="color: red;">პასუხი არასწორია ❌</span>
-          – სწორი პასუხია: <strong>${q.options[q.correct]}</strong>
+          – სწორი პასუხია: <strong>${fox[q.correct]} ${q.options[q.correct]}</strong>
         `;
       }
     }
@@ -125,8 +162,9 @@ function renderQuiz(){
       radio.addEventListener("change", () => {
         if (!simulationMode) checkBtn.style.display = "inline-block";
       });
+      label.append(`${fox[j]}`);
       label.appendChild(radio);
-      label.append(` ${opt}`);
+      label.append(`${opt}`);
       fieldset.appendChild(label);
     });
 
@@ -147,6 +185,62 @@ function renderQuiz(){
   result.id = "result";
   result.style.marginTop = "12px";
   form.appendChild(result);
+
+  const markDoneBtn = document.createElement("button");
+  markDoneBtn.type = "button";
+  markDoneBtn.textContent = "ქვიზის გაკეთებულად მონიშვნა";
+  markDoneBtn.style.marginLeft = "10px";
+  markDoneBtn.style.transition = "background-color 0.3s ease, color 0.3s ease";
+
+  const tickSpan = document.createElement("span");
+  tickSpan.style.marginLeft = "8px";
+  tickSpan.style.color = "green";
+  tickSpan.textContent = "";
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const year = urlParams.get("year");
+  const number = urlParams.get("number");
+  const classNum = urlParams.get("class");
+  const category = urlParams.get("category");
+
+  const doneKey = `done-${classNum}-${year}-${number}-${category}`;
+
+  let isMarkedDone = localStorage.getItem(doneKey) === "true";
+  if (isMarkedDone) {
+    tickSpan.textContent = "✔";
+    markDoneBtn.style.backgroundColor = "#28a745"; 
+    markDoneBtn.style.color = "white";
+    markDoneBtn.textContent = "ქვიზი მონიშნულია";
+  }
+
+  markDoneBtn.addEventListener("click", () => {
+    isMarkedDone = !isMarkedDone;
+    if (isMarkedDone) {
+      localStorage.setItem(doneKey, "true");
+      tickSpan.textContent = "✔";
+      markDoneBtn.style.backgroundColor = "#28a745";
+      markDoneBtn.style.color = "white";
+      markDoneBtn.textContent = "ქვიზი მონიშნულია";
+    } else {
+      localStorage.removeItem(doneKey);
+      tickSpan.textContent = "";
+      markDoneBtn.style.backgroundColor = "";
+      markDoneBtn.style.color = "";
+      markDoneBtn.textContent = "ქვიზის გაკეთებულად მონიშვნა";
+    }
+  });
+
+  form.appendChild(markDoneBtn);
+  form.appendChild(tickSpan);
+
+  const actionRow = document.createElement("div");
+  actionRow.style.gap = "10px";
+  actionRow.style.alignItems = "center";
+  actionRow.style.marginTop = "20px";
+  actionRow.appendChild(submitBtn);
+  actionRow.appendChild(markDoneBtn);
+  actionRow.appendChild(tickSpan);
+  form.appendChild(actionRow);
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -172,7 +266,7 @@ function renderQuiz(){
       }else{
         feedback.innerHTML = isCorrect
         ? `<span style="color: green;">პასუხი სწორია ✔️</span>`
-        : `<span style="color: red;">პასუხი არასწორია ❌</span> – სწორი პასუხია: <strong>${q.options[q.correct]}</strong>`;
+        : `<span style="color: red;">პასუხი არასწორია ❌</span> – სწორი პასუხია: <strong> ${fox[q.correct]} ${q.options[q.correct]} </strong>`;
       }
       fieldset.appendChild(feedback);
     });
@@ -188,3 +282,48 @@ function renderQuiz(){
     if (window.MathJax) MathJax.typeset();
   });
 }
+
+/* =====================
+   📸 Image Modal Feature
+   ===================== */
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.createElement("div");
+  modal.className = "img-modal";
+  modal.innerHTML = `
+    <span class="img-modal-close">&times;</span>
+    <img class="img-modal-content" id="imgInModal">
+  `;
+  document.body.appendChild(modal);
+
+  const modalImg = modal.querySelector("#imgInModal");
+  const closeBtn = modal.querySelector(".img-modal-close");
+  let scale = 1;
+
+  // open modal
+  document.body.addEventListener("click", e => {
+    if (e.target.classList.contains("quiz-image")) {
+      modal.style.display = "block";
+      modalImg.src = e.target.src;
+      scale = 1;
+      modalImg.style.transform = "scale(1)";
+    }
+  });
+
+  // close modal
+  closeBtn.onclick = () => modal.style.display = "none";
+  modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+
+  // zoom with scroll wheel
+  modalImg.addEventListener("wheel", e => {
+    e.preventDefault();
+    const delta = e.deltaY > 0 ? -0.1 : 0.1;
+    scale = Math.min(Math.max(1, scale + delta), 5);
+    modalImg.style.transform = `scale(${scale})`;
+  });
+
+  // reset zoom on double click
+  modalImg.addEventListener("dblclick", () => {
+    scale = 1;
+    modalImg.style.transform = "scale(1)";
+  });
+});
