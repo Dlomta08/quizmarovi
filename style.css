@@ -1,3 +1,6 @@
+/* Import modern fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 /* RESET MARGINS, PADDINGS, AND BOX-SIZING */
 * {
   margin: 0;
@@ -5,27 +8,90 @@
   box-sizing: border-box;
 }
 
+/* CSS Variables for theming */
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --accent-color: #4895ef;
+  --background-light: #f8f9fa;
+  --text-primary: #2b2d42;
+  --text-secondary: #6c757d;
+  --transition-speed: 0.3s;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --primary-rgb: 67, 97, 238;
+  --accent-rgb: 72, 149, 239;
+  --nav-bg: #ffffff;
+  --card-bg: #ffffff;
+  --card-bg-secondary: #f8f9fa;
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+  --background-light: #1a1b1e;
+  --text-primary: #f8f9fa;
+  --text-secondary: #ced4da;
+  --box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  --nav-bg: #2d2d2d;
+  --card-bg: #2d2d2d;
+  --card-bg-secondary: #363636;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode toggle button styles */
+#toggle-dark {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transition: transform var(--transition-speed) ease;
+}
+
+#toggle-dark:hover {
+  opacity: 0.8;
+}
+
+#toggle-dark.rotate {
+  animation: rotate 0.5s ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* MAKE HTML AND BODY FILL THE ENTIRE VIEWPORT */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: white;
-  color: black;
-  overflow-x: hidden; /* prevent horizontal scrollbar */
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-  transition: background-color 0.0s ease, color 0.0s ease;
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: all var(--transition-speed) ease;
 }
+
 /* Page container: Use flexbox to align everything neatly */
 .page2-container {
+    min-height: 100vh;
+    padding: 6rem 2rem 4rem;
     display: flex;
-    flex-direction: column; /* Stack everything vertically */
-    align-items: center; /* Center everything horizontally */
-    gap: 40px; /* Space between titles and button groups */
-    padding: 50px;
-    height: 100vh;
-    box-sizing: border-box; /* Ensure padding doesn't affect layout */
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        rgba(67, 97, 238, 0.05),
+        rgba(72, 149, 239, 0.05)
+    );
 }
 
 /* Container for the titles to make them appear next to each other */
@@ -38,19 +104,21 @@ html, body {
 
 /* Style for the non-clickable title (modern and large) */
 .text-title {
-    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
-    font-size: 60px; /* Larger font size */
-    font-weight: 700; /* Bold text */
-    color: #cc6133; /* Green color */
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
     text-align: center;
-    text-transform: uppercase; /* Makes text all uppercase */
-    letter-spacing: 2px; /* Adds spacing between letters */
-    background: linear-gradient(135deg, #3633cc, #ff6673); /* Gradient background */
-    -webkit-background-clip: text; /* Clips the gradient to the text */
-    color: transparent; /* Makes text transparent so gradient is visible */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.286); /* Soft shadow for depth */
-    transition: transform 0.3s ease-in-out; /* Smooth animation on hover */
-    flex: 1; /* Ensure both titles take equal space */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transition: all var(--transition-speed) ease;
+    flex: 1;
+    position: relative;
+    padding: 1rem;
 }
 
 .text-title:hover {
@@ -78,65 +146,356 @@ html, body {
 
 /* Style for the buttons */
 .vertical-buttons button {
-    width: 240px;              /* Increased width */
-    padding: 20px 40px;        /* More padding for larger size */
-    font-size: 22px;           /* Larger text */
-    border-radius: 10px;       /* Slightly more rounded corners */
-    background-color: #4c99af;
+    width: 300px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 12px;
+    background: var(--primary-color);
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all var(--transition-speed) ease;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(10px);
 }
 
 .vertical-buttons button:hover {
-    background-color: #3a0e61;
+    transform: translateY(-2px);
+    background: var(--secondary-color);
+    box-shadow: 0 6px 12px rgba(67, 97, 238, 0.3);
 }
 
-/* Ensuring symmetry */
-.vertical-buttons button {
-    width: 300px; /* Set a fixed width for all buttons to keep them uniform */
-    text-align: center; /* Make text inside buttons centered */
+.vertical-buttons button:active {
+    transform: translateY(0);
 }
 
-/* DARK MODE STYLES */
-body.dark-mode, html.dark-mode {
-  background-color: #121212;
-  color: white;
+.vertical-buttons button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: all 0.6s ease;
 }
 
-body.dark-mode .page2-container {
-  background-color: #121212;
-  color: white;
+.vertical-buttons button:hover::before {
+    left: 100%;
 }
 
-body.dark-mode .text-title {
-  color: transparent;
-  background: linear-gradient(135deg, #66ccff, #ff99cc);
-  -webkit-background-clip: text;
+/* Navigation styles */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
 }
 
-body.dark-mode .vertical-buttons button {
-  background-color: #336699;
-  color: white;
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-body.dark-mode .vertical-buttons button:hover {
-  background-color: #224466;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
 }
 
-/* DARK MODE TOGGLE BUTTON */
+.logo i {
+    font-size: 2rem;
+}
+
 #toggle-dark {
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;      /* inherit font size, family, etc. */
-  color: rgb(231, 231, 231);        /* choose your text color */
-  cursor: pointer;
-   /* optional, looks like a link */
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all var(--transition-speed) ease;
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #toggle-dark:hover {
-  color: rgb(0, 0, 0);    /* change color on hover */
+    background-color: rgba(var(--primary-rgb), 0.1);
+}
+
+#toggle-dark i {
+    font-size: 1.2rem;
+    transition: transform var(--transition-speed) ease;
+}
+
+#toggle-dark:active i {
+    transform: scale(0.9);
+}
+
+/* Hero section styles */
+.hero-section {
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        45deg,
+        rgba(67, 97, 238, 0.1),
+        rgba(72, 149, 239, 0.1)
+    );
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+/* Grid container for cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Card styles */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all var(--transition-speed) ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--box-shadow);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(67, 97, 238, 0.2);
+    border-color: var(--primary-color);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-content i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-content p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Subject header styles */
+.subject-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.subject-description {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Grade grid layout */
+.grade-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Grade card styles */
+.grade-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all var(--transition-speed) ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.grade-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(var(--primary-rgb), 0.1),
+        rgba(var(--accent-rgb), 0.1)
+    );
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.grade-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.grade-card:hover::before {
+    opacity: 1;
+}
+
+.grade-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    z-index: 1;
+    padding: 1rem;
+}
+
+.grade-number {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.grade-content h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+/* Footer styles */
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hero-section {
+        padding: 5rem 1rem 1rem;
+    }
+
+    .grid-container {
+        padding: 1rem;
+    }
+
+    .grade-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 1rem;
+    }
+    
+    .grade-card {
+        padding: 1.5rem;
+    }
+    
+    .grade-number {
+        font-size: 3rem;
+    }
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .main-nav {
+    background: rgba(26, 27, 30, 0.8);
+}
+
+[data-theme="dark"] .card {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .grade-card {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .grade-card:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section > * {
+    animation: fadeIn 0.6s ease-out forwards;
 }

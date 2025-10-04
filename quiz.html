@@ -1,71 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Math Quiz</title>
-  <link rel="stylesheet" href="qvizebi.css">
-  <link rel="stylesheet" href="quiz.css">
+  <title>მათემატიკის ქვიზი</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <link rel="stylesheet" href="quiz-style.css">
+  
   <script>
     window.MathJax = {
       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
       svg: { fontCache: 'global' }
     };
   </script>
-  <script>
-  // Immediately apply dark mode if saved in localStorage
-  if (localStorage.getItem('theme') === 'dark') {
-    document.documentElement.classList.add('dark-mode');
-  }
-</script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
 <body>
-  <button id="toggle-dark">🌙</button>
 
-  <h1 id="quiz-title"></h1>
-  
-  <div id="mode-selection" class="mode-selections" >
-    <p>აირჩიეთ რეჟიმი:</p>
-    <button onclick="startQuiz(false)">ჩვეულებრივი</button>
-    <button onclick="startQuiz(true)">სიმულაცია</button>
+  <nav class="main-nav">
+    <div class="nav-content">
+      <a href="#" id="back-link" class="logo">
+        <i class="fas fa-arrow-left"></i>
+        <span>უკან დაბრუნება</span>
+      </a>
+      <button id="toggle-dark" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="quiz-view-container">
+    <div class="quiz-card-main">
+      <h1 id="quiz-title" class="text-title"></h1>
+
+      <div id="mode-selection" class="mode-selection-card">
+        <p>აირჩიეთ რეჟიმი:</p>
+        <div>
+          <button class="button" onclick="startQuiz(false)">ჩვეულებრივი</button>
+          <button class="button" onclick="startQuiz(true)">სიმულაცია</button>
+        </div>
+      </div>
+
+      <div id="timer" style="display: none;">დარჩენილი დრო: <span id="time">03:00:00</span></div>
+
+      <form id="quizForm" style="display:none;"></form>
+    </div>
   </div>
-  
-  <!-- Timer Display -->
-  <div id="timer">დარჩენილი დრო: <span id="time">05:00</span></div>
 
-  <!-- Quiz Form -->
-  <form id="quizForm" style="display: none;">
-    <button type="submit">Submit</button>
-  </form>
-  <div id="result"></div>
+  <footer class="main-footer">
+    <p>&copy; 2025 კომაროვის სკოლა. ყველა უფლება დაცულია.</p>
+  </footer>
+
   <script>
+    // Dynamically set title and back-link URL from parameters
     const params = new URLSearchParams(window.location.search);
     const classNum = params.get("class");
     const year = params.get("year");
     const number = params.get("number");
-    const numshow = (number == 1 ? '1-ელი' : `მე-${number}`);
+    
     if (classNum && year && number) {
-      const title = `მათემატიკის ${numshow} ქვიზი — ${classNum} კლასი, ${year} წელი.`;
+      const numShow = (number == 1 ? '1-ელი' : `მე-${number}`);
+      const title = `მათემატიკის ${numShow} ქვიზი — ${classNum} კლასი, ${year.replace("-","/")} წელი.`;
+      
+      document.title = `${numShow} ქვიზი - ${classNum} კლასი`;
       document.getElementById("quiz-title").textContent = title;
+      
+      // Set the back link to go to the correct class page
+      document.getElementById("back-link").href = `class-quizzes.html?class=${classNum}`;
+
+      // Load the specific quiz data
       const script = document.createElement("script");
       script.src = `class-${classNum}/${year}/quiz-${number}.js`;
-      script.onload = () => {
-        if (typeof quizData !== "undefined") {
-          document.getElementById("mode-selection").style.display = "block";
-        } else {
-          document.body.innerHTML = "<p>ქვიზი ვერ ჩაიტვირთა. ❌</p>";
-        }
-      };
       script.onerror = () => {
-        document.body.innerHTML = "<p> ქვიზი ვერ მოიძებნა. ❌</p>";
+        document.querySelector(".quiz-card-main").innerHTML = "<h1>ქვიზი ვერ მოიძებნა. ❌</h1>";
       };
       document.head.appendChild(script);
     } else {
-      document.body.innerHTML = "<p>არასწორი ბმული. ❌</p>";
+      document.querySelector(".quiz-card-main").innerHTML = "<h1>არასწორი ბმული. ❌</h1>";
     }
   </script>
+  
   <script src="quiz.js"></script>
   <script src="darkmode.js"></script>
 </body>

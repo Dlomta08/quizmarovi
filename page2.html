@@ -1,42 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <title>Page 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>მათემატიკის ტესტები</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page2-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <button id="toggle-dark">🌙 </button>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-square-root-variable"></i>
+                <span>მათემატიკის ტესტები</span>
+            </a>
+            <button id="toggle-dark" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
 
     <div class="page2-container">
-        <!-- Titles next to each other -->
-        <div class="titles-container">
-            <span class="text-title">მათემატიკა</span> 
-            <span class="text-title">ფიზიკა</span>
+        <div class="subject-header">
+            <h1 class="text-title">აირჩიეთ <span class="highlight">კლასი</span></h1>
         </div>
 
-        <!-- Buttons for each subject below -->
-        <div class="buttons-container">
-            <div class="vertical-buttons">
-                <button onclick="location.href='main7.html'" style="transform: translateX(-50px);">მე-7 კლასი</button>
-                <button onclick="location.href='main8.html'" style="transform: translateX(-50px);">მე-8 კლასი</button>
-                <button onclick="location.href='main9.html'" style="transform: translateX(-50px);">მე-9 კლასი</button>
-                <button onclick="location.href='main10.html'" style="transform: translateX(-50px);">მე-10 კლასი</button>
-                <button onclick="location.href='main11.html'" style="transform: translateX(-50px);">მე-11 კლასი</button>
-                <button onclick="location.href='main12.html'" style="transform: translateX(-50px);">მე-12 კლასი</button>
-            </div>
-
-            <div class="vertical-buttons">
-                <button onclick="location.href='page10.html'" style="transform: translateX(50px);">მე-7 კლასი</button>
-                <button onclick="location.href='page11.html'" style="transform: translateX(50px);">მე-8 კლასი</button>
-                <button onclick="location.href='page12.html'" style="transform: translateX(50px);">მე-9 კლასი</button>
-                <button onclick="location.href='page13.html'" style="transform: translateX(50px);">მე-10 კლასი</button>
-                <button onclick="location.href='page14.html'" style="transform: translateX(50px);">მე-11 კლასი</button>
-                <button onclick="location.href='page15.html'" style="transform: translateX(50px);">მე-12 კლასი</button>
-            </div>
+        <div class="grade-grid">
+            <a href="class-quizzes.html?class=7" class="grade-card">
+                <div class="shine"></div>
+                <div class="grade-content">
+                    <span class="grade-number">7</span>
+                    <h2>მე-7 კლასი</h2>
+                </div>
+            </a>
+            <a href="class-quizzes.html?class=8" class="grade-card">
+                <div class="shine"></div>
+                <div class="grade-content">
+                    <span class="grade-number">8</span>
+                    <h2>მე-8 კლასი</h2>
+                </div>
+            </a>
+            <a href="class-quizzes.html?class=9" class="grade-card">
+                <div class="shine"></div>
+                <div class="grade-content">
+                    <span class="grade-number">9</span>
+                    <h2>მე-9 კლასი</h2>
+                </div>
+            </a>
+            <a href="class-quizzes.html?class=10" class="grade-card">
+                <div class="shine"></div>
+                <div class="grade-content">
+                    <span class="grade-number">10</span>
+                    <h2>მე-10 კლასი</h2>
+                </div>
+            </a>
+            <a href="class-quizzes.html?class=11" class="grade-card">
+                <div class="shine"></div>
+                <div class="grade-content">
+                    <span class="grade-number">11</span>
+                    <h2>მე-11 კლასი</h2>
+                </div>
+            </a>
+            <a href="class-quizzes.html?class=12" class="grade-card">
+                <div class="shine"></div>
+                <div class="grade-content">
+                    <span class="grade-number">12</span>
+                    <h2>მე-12 კლასი</h2>
+                </div>
+            </a>
         </div>
     </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 კომაროვის სკოლა. ყველა უფლება დაცულია.</p>
+    </footer>
+
     <script src="darkmode.js"></script>
 </body>
 </html>

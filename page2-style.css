@@ -1,0 +1,265 @@
+/* Styles specific to page2.html */
+.page2-container {
+    min-height: 100vh;
+    width: 100%;
+    padding: 6rem 0 4rem;
+    max-width: none;
+    margin: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, 
+        rgba(var(--primary-rgb), 0.04) 0%,
+        rgba(var(--accent-rgb), 0.04) 100%);
+}
+
+/* Add subtle background decoration */
+.page2-container::before,
+.page2-container::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(80px);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.page2-container::before {
+    background: var(--primary-color);
+    top: -100px;
+    right: -100px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.page2-container::after {
+    background: var(--accent-color);
+    bottom: -100px;
+    left: -100px;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+.subject-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.text-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 600px;
+    margin: 1rem auto 0;
+}
+
+.grade-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 280px));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    justify-content: center;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.grade-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08),
+                0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    will-change: transform, box-shadow;
+    isolation: isolate;
+}
+
+.grade-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.grade-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+        rgba(var(--primary-rgb), 0.12) 0%,
+        rgba(var(--accent-rgb), 0.08) 30%,
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+.grade-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 24px 48px rgba(var(--primary-rgb), 0.15),
+                0 12px 24px rgba(0, 0, 0, 0.1),
+                0 0 0 2px var(--primary-color),
+                0 0 80px rgba(var(--accent-rgb), 0.08);
+}
+
+.grade-card:active {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(var(--primary-rgb), 0.15);
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grade-card:hover::after {
+    opacity: 1;
+}
+
+/* Shine effect */
+.grade-card .shine {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 70%
+    );
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.grade-card:hover .shine {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+}
+
+.grade-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grade-card:hover .grade-content {
+    transform: translateY(0);
+}
+
+.grade-number {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(135deg, 
+        var(--primary-color) 0%,
+        var(--accent-color) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grade-card:hover .grade-number {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, 
+        var(--accent-color) 0%,
+        var(--primary-color) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.grade-content h2 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .grade-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 640px) {
+    .page2-container {
+        padding: 5rem 1.5rem 3rem;
+    }
+
+    .grade-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        gap: 1.5rem;
+    }
+
+    .grade-card {
+        padding: 2rem;
+    }
+
+    .grade-number {
+        font-size: 3.5rem;
+    }
+}

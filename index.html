@@ -1,26 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ტესტები</title>
-  <link rel="stylesheet" href="style1.css">
-  <script>
-  // Immediately apply dark mode if saved in localStorage
-  if (localStorage.getItem('theme') === 'dark') {
-    document.documentElement.classList.add('dark-mode');
-  }
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="კომაროვის სკოლის ტესტები">
+    <title>კომაროვის ტესტები</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  
-  <button id="toggle-dark">🌙</button>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>ქვიზმაროვი</span>
+            </div>
+            <button id="toggle-dark" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
 
-  <div class="center-container">
-    <a href="page2.html">
-        <button class="big-button">კომაროვი</button>
-  </div>
+    <main class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="main-title">კომაროვის სკოლის<br><span class="highlight">მათემატიკის ქვიზები</span></h1>
 
-  <script src="darkmode.js"></script>
+                <a href="page2.html" class="main-button">
+                    <span>იხილეთ</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 კომაროვის სკოლა. ყველა უფლება დაცულია.</p>
+    </footer>
+
+    <script src="darkmode.js"></script>
 </body>
 </html>

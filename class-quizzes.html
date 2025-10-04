@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ka" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კლასის ტესტები</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="page2.html" class="logo">
+                <i class="fas fa-arrow-left"></i>
+                <span>უკან დაბრუნება</span>
+            </a>
+            <button id="toggle-dark" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <div class="quiz-container">
+        <div class="page-header">
+            <h1 class="text-title"></h1>
+        </div>
+
+        <div class="years-grid" id="yearsGrid">
+            <script>
+            // Get class number from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const classNum = parseInt(urlParams.get('class')) || 7;
+            
+            // Update page title
+            document.title = `${classNum}-ე კლასის ტესტები`;
+            document.querySelector('.text-title').textContent = 
+                classNum === 1 ? '1-ლი კლასის ტესტები' : 
+                `მე-${classNum} კლასის ტესტები`;
+            
+            const startYear = 2020;
+            const endYear = 2024;
+            const quizzesPerYear = 5;
+            const yearsGrid = document.getElementById("yearsGrid");
+            
+            for (let y = endYear; y >= startYear; y--) {
+                const academicYear = `${y}/${(y + 1).toString().slice(-2)}`;
+                
+                // Create year section
+                const yearSection = document.createElement("div");
+                yearSection.className = "year-section";
+                
+                // Year header
+                const yearHeader = document.createElement("div");
+                yearHeader.className = "year-header";
+                const yearIcon = document.createElement("i");
+                yearIcon.className = "fas fa-calendar-alt";
+                const yearTitle = document.createElement("h2");
+                yearTitle.textContent = `${academicYear} სასწავლო წელი`;
+                yearHeader.appendChild(yearIcon);
+                yearHeader.appendChild(yearTitle);
+                
+                // Quizzes grid
+                const quizzesGrid = document.createElement("div");
+                quizzesGrid.className = "quizzes-grid";
+                
+                for (let q = 1; q <= quizzesPerYear; q++) {
+                    const quizCard = document.createElement("div");
+                    quizCard.className = "quiz-card";
+                    quizCard.onclick = () => handleQuizClick(academicYear, q, classNum);
+                    
+                    const quizIcon = document.createElement("i");
+                    quizIcon.className = "fas fa-file-alt quiz-icon";
+                    
+                    const quizNumber = document.createElement("span");
+                    quizNumber.className = "quiz-number";
+                    quizNumber.textContent = q;
+                    
+                    const quizTitle = document.createElement("h3");
+                    quizTitle.textContent = q === 1 ? `1-ლი ქვიზი` : `მე-${q} ქვიზი`;
+                    
+                    const statusIcon = document.createElement("i");
+                    statusIcon.className = "fas fa-circle status-icon";
+                    
+                    quizCard.appendChild(quizIcon);
+                    quizCard.appendChild(quizNumber);
+                    quizCard.appendChild(quizTitle);
+                    quizCard.appendChild(statusIcon);
+                    quizzesGrid.appendChild(quizCard);
+                }
+                
+                yearSection.appendChild(yearHeader);
+                yearSection.appendChild(quizzesGrid);
+                yearsGrid.appendChild(yearSection);
+            }
+            </script>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 კომაროვის სკოლა. ყველა უფლება დაცულია.</p>
+    </footer>
+
+    <script>
+        function handleQuizClick(year, number, classNum) {
+            const yearFolder = year.replace("/", "-");
+            const url = `quiz.html?class=${classNum}&year=${yearFolder}&number=${number}`;
+            window.location.href = url;
+        }
+    </script>
+    <script src="darkmode.js"></script>
+</body>
+</html>

@@ -1,43 +1,218 @@
-body {
-  background: #f7f7f7;
-  color: #222;
-  font-family: Arial, sans-serif;
-  transition: background 0.3s ease, color 0.3s ease;
+/* Stylesheet for the main quiz view (quiz.html) */
+
+/* Main Container: Adjusted for full-page width */
+.quiz-view-container {
+    padding: 7rem 4rem 4rem; /* Increased side padding for a better full-page look */
+    max-width: none; /* Remove maximum width restriction */
+    margin: 0 auto;
+    animation: fadeIn 0.6s ease-out forwards;
 }
 
-.quiz-container {
-  max-width: 700px;
-  margin: 100px auto;
-  padding: 40px;
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+.quiz-card-main {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--box-shadow);
 }
 
-/* 🔥 Add Dark Mode Rules */
-body.dark-mode {
-  background: #121212;
-  color: #f5f5f5;
+/* Page Title */
+.text-title {
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
 }
 
-body.dark-mode .quiz-container {
-  background: #1e1e1e;
-  box-shadow: 0 4px 20px rgba(255,255,255,0.05);
+/* Mode Selection Card */
+.mode-selection-card {
+    background: rgba(var(--primary-rgb), 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    text-align: center;
 }
 
-#toggle-dark {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 24px;      /* inherit font size, family, etc. */
-  color: rgb(255, 255, 255);        /* choose your text color */
-  cursor: pointer;
-   /* optional, looks like a link */
+.mode-selection-card p {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
 }
 
-#toggle-dark:hover {
-  color: rgb(0, 0, 0);    /* change color on hover */
+/* Buttons */
+.button, #quizForm button[type="submit"] {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+    margin: 0.25rem;
+}
+
+.button:hover, #quizForm button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(var(--primary-rgb), 0.4);
+    background: var(--secondary-color);
+}
+
+/* Timer */
+#timer {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    background-color: var(--card-bg-secondary);
+    padding: 0.75rem;
+    border-radius: 12px;
+    max-width: 300px;
+    margin: 1.5rem auto;
+    border: 1px solid var(--border-color);
+}
+
+/* Quiz Form Styling */
+#quizForm {
+    margin-top: 2rem;
+}
+
+#quizForm fieldset {
+    border: none;
+    padding: 2rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#quizForm fieldset:last-of-type {
+    border-bottom: none;
+}
+
+#quizForm legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* NEW: Container for horizontal options (requires a <div> wrapper in HTML/JS) */
+#quizForm fieldset > div {
+    display: flex;
+    flex-wrap: wrap; /* Allows options to wrap to the next line if space runs out */
+    gap: 10px; /* Space between the options */
+    margin-bottom: 0.75rem; /* Space below the option group */
+}
+
+/* Option Labels: Adjusted for horizontal layout */
+#quizForm label {
+    display: inline-block; /* Essential for horizontal flow */
+    background: var(--card-bg-secondary);
+    padding: 1rem 1.5rem; /* Adjusted padding */
+    margin-bottom: 0; /* Removed bottom margin, spacing handled by gap */
+    border-radius: 50px; /* More rounded shape for horizontal "pill" options */
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    font-size: 1rem;
+}
+
+#quizForm label:hover {
+    border-color: var(--primary-color);
+    background: rgba(var(--primary-rgb), 0.1);
+}
+
+#quizForm input[type="radio"] {
+    margin-right: 0.75rem;
+    accent-color: var(--primary-color);
+    transform: scale(1.2);
+    vertical-align: middle;
+}
+
+/* Feedback messages inside the form */
+.feedback {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.feedback span[style*="green"] {
+    background-color: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    display: block;
+}
+
+.feedback span[style*="red"] {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    display: block;
+}
+
+.feedback span[style*="orange"] {
+    background-color: rgba(249, 115, 22, 0.1);
+    color: #f97316;
+    display: block;
+}
+
+/* Final Score Result */
+#result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    background: var(--card-bg-secondary);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+/* Submit Button */
+#quizForm button[type="submit"] {
+    width: 100%;
+    max-width: 400px;
+    margin: 1.5rem auto 0;
+    padding: 1rem;
+    font-size: 1.1rem;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .quiz-view-container {
+        padding: 6rem 1rem 2rem;
+    }
+    .quiz-card-main {
+        padding: 1.5rem;
+    }
+    .text-title {
+        font-size: 1.5rem;
+    }
+    #quizForm legend {
+        font-size: 1.1rem;
+    }
+    /* Allow options to stack vertically on small screens if they don't fit */
+    #quizForm fieldset > div {
+        flex-direction: row; /* Keep row direction, flex-wrap will handle stacking */
+        gap: 8px;
+    }
+    #quizForm label {
+        padding: 0.75rem 1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

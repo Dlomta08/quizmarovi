@@ -1,60 +1,292 @@
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f0f2f5;
-  color: #2c3e50;
-  transition: background 0.3s ease, color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background-light);
+    color: var(--text-primary);
+    transition: all var(--transition-speed) ease;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  padding: 4rem 1rem;
+.quiz-container {
+    padding: 7rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.year-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+.years-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: fadeIn 0.8s ease-out forwards;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.year-section {
+    background: var(--card-bg, #ffffff);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+    transition: all var(--transition-speed) ease;
+}
+
+.year-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.15);
+}
+
+.year-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+}
+
+.year-header i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.year-header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.quizzes-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.quiz-card {
+    position: relative;
+    background: var(--card-bg-secondary, #f8f9fa);
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.1));
+    min-width: 0; /* Prevents overflow in grid */
+}
+
+.quiz-card:hover {
+    transform: translateY(-3px);
+    background: rgba(var(--primary-rgb), 0.1);
 }
 
 .year-table {
   width: 100%;
-  max-width: 800px;
-  background: #ffffff;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.6s ease-out forwards;
+  position: relative;
+  max-height: 600px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
 }
 
 .year-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid rgba(var(--primary-rgb), 0.1);
   padding: 1.5rem 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  transition: all var(--transition-speed) ease;
+}
+
+.year-row:last-child {
+  border-bottom: none;
+}
+
+.year-row:hover {
+  background: rgba(var(--primary-rgb), 0.05);
 }
 
 .year {
-  width: 120px;
-  font-weight: bold;
-  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.year::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
 }
 
 .quiz-buttons {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.quiz-buttons button {
-  padding: 1rem 2.4rem;
+.quiz-link {
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  background: #34c5db;
+  background: var(--primary-color);
+  color: white;
   border: none;
-  border-radius: 16px;
-  color: rgb(255, 255, 255);
+  border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all var(--transition-speed) ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
 }
 
-.quiz-buttons button:hover {
-  background: #492cb4;
+.quiz-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+  background: var(--secondary-color);
+}
+
+.quiz-link i {
+  font-size: 1.1rem;
+}
+
+.quiz-link[data-status="completed"] i {
+  color: #22c55e;
+}
+
+.quiz-link[data-status="new"] i {
+  color: var(--accent-color);
+}
+
+.quiz-icon {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.quiz-number {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+}
+
+.quiz-card h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.status-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.75rem;
+}
+
+.status-icon.new {
+    color: var(--accent-color);
+}
+
+.status-icon.completed {
+    color: #22c55e;
+}
+
+.status-icon.in-progress {
+    color: #eab308;
+}
+
+/* Scroll indicator for table */
+.year-table {
+  position: relative;
+  max-height: 600px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
+}
+
+.year-table::-webkit-scrollbar {
+  width: 6px;
+}
+
+.year-table::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.year-table::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 3px;
+}
+
+/* Loading state for quiz links */
+.quiz-link.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.quiz-link.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+  );
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 
 /* 🌙 DARK MODE STYLES */
@@ -97,4 +329,39 @@ body.dark-mode .quiz-buttons button:hover {
 
 #toggle-dark:hover {
   color: rgb(0, 0, 0);    /* change color on hover */
+}
+
+[data-theme="dark"] .year-table {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .year-row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .year-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .quiz-link {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .quiz-link:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.year-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
 }
