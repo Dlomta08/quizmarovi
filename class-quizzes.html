@@ -11,6 +11,13 @@
         const theme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', theme);
     </script>
+    <style>
+        /* status dot on cards */
+        .status-icon{ color:#d0d0d0; transition: color .2s ease; font-size:12px; }
+        .status-icon.done{ color:#28a745; }
+        .quiz-card{ position:relative; }
+        .quiz-card .status-icon{ position:absolute; top:10px; right:10px; }
+    </style>
 </head>
 <body>
     <nav class="main-nav">
@@ -32,6 +39,27 @@
 
         <div class="years-grid" id="yearsGrid">
             <script>
+            // ===== helpers for DONE state (matches quiz page keys) =====
+            function hasAnyDoneKey(prefix){
+              // Look for ANY localStorage key that starts with our prefix and is "true"
+              for (let i = 0; i < localStorage.length; i++) {
+                const k = localStorage.key(i);
+                if (k && k.startsWith(prefix) && localStorage.getItem(k) === 'true') {
+                  return true;
+                }
+              }
+              return false;
+            }
+            function refreshAllStatusIcons(){
+              document.querySelectorAll('.status-icon[data-keyprefix]').forEach(icon=>{
+                const prefix = icon.getAttribute('data-keyprefix');
+                const done = hasAnyDoneKey(prefix);
+                icon.classList.toggle('done', done);
+                icon.title = done ? 'დასრულებულია' : 'არ არის დასრულებული';
+                icon.setAttribute('aria-label', icon.title);
+              });
+            }
+
             // Get class number from URL
             const urlParams = new URLSearchParams(window.location.search);
             const classNum = parseInt(urlParams.get('class')) || 7;
@@ -49,6 +77,7 @@
             
             for (let y = endYear; y >= startYear; y--) {
                 const academicYear = `${y}/${(y + 1).toString().slice(-2)}`;
+                const yearFolderForKey = academicYear.replace("/", "-"); // matches quiz.html ?year=
                 
                 // Create year section
                 const yearSection = document.createElement("div");
@@ -83,8 +112,24 @@
                     const quizTitle = document.createElement("h3");
                     quizTitle.textContent = q === 1 ? `1-ლი ქვიზი` : `მე-${q} ქვიზი`;
                     
+                    // The tiny white circle (turns green when done)
                     const statusIcon = document.createElement("i");
                     statusIcon.className = "fas fa-circle status-icon";
+                    // Build a key *prefix* that matches how quiz.html stores done:
+                    // quiz page uses: done-${class}-${yearFolder}-${number}-${category?}
+                    // We don't know category here, so we match any with this prefix.
+                    const keyPrefix = `done-${classNum}-${yearFolderForKey}-${q}`;
+                    statusIcon.setAttribute('data-keyprefix', keyPrefix);
+
+                    // initial paint from localStorage
+                    if (hasAnyDoneKey(keyPrefix)) {
+                        statusIcon.classList.add('done');
+                        statusIcon.title = 'დასრულებულია';
+                        statusIcon.setAttribute('aria-label', 'დასრულებულია');
+                    } else {
+                        statusIcon.title = 'არ არის დასრულებული';
+                        statusIcon.setAttribute('aria-label', 'არ არის დასრულებული');
+                    }
                     
                     quizCard.appendChild(quizIcon);
                     quizCard.appendChild(quizNumber);
@@ -97,6 +142,13 @@
                 yearSection.appendChild(quizzesGrid);
                 yearsGrid.appendChild(yearSection);
             }
+
+            // If the DONE flag changes in another tab, update icons here
+            window.addEventListener('storage', (e)=>{
+              if (e.key && e.key.startsWith('done-')) {
+                refreshAllStatusIcons();
+              }
+            });
             </script>
         </div>
     </div>

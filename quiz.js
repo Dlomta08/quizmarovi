@@ -1,7 +1,7 @@
 let timerInterval;
 let timeLeft = 3 * 60 * 60;
 let simulationMode = false;
-const fox = ["ა)", "ბ)", "გ)", "დ)", "ე)", "ვ)"];
+const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
 
 function timer() {
   const timeBox = document.getElementById("time-selection");
