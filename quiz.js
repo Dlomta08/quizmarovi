@@ -9,6 +9,7 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
   const s = document.createElement("style");
   s.id = "answer-chip-styles";
   s.textContent = `
+    /* base look gets applied to each <label> used as an option */
     .option-chip{
       display:inline-flex; align-items:center; gap:.5rem;
       padding:.6rem 1rem; margin:.25rem .35rem .25rem 0;
@@ -16,16 +17,16 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       border-radius:9999px;
       background: rgba(255,255,255,0.06);
       color: inherit;
-      transition: background .25s ease, border-color .25s ease, color .25s ease, transform .05s ease;
+      transition: background .2s ease, border-color .2s ease, color .2s ease, transform .05s ease;
     }
     .option-chip input[type="radio"]{ accent-color: var(--primary-color); }
     .option-chip:hover{ transform: translateY(-1px); }
 
-    /* ✅ soft green */
+    /* green when correct */
     .option-chip.is-correct{
-      background:#86efac !important;     /* minty green */
-      border-color:#86efac !important;
-      color:#064e3b !important;          /* dark teal text for contrast */
+      background:#22c55e !important;     /* green */
+      border-color:#22c55e !important;
+      color:#fff !important;
     }
 
     /* ❌ soft red */
