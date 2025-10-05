@@ -17,23 +17,48 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       border-radius:9999px;
       background: rgba(255,255,255,0.06);
       color: inherit;
-      transition: background .2s ease, border-color .2s ease, color .2s ease, transform .05s ease;
+      transition: background .2s ease, border-color .2s ease, color .2s ease, transform .05s ease, box-shadow .2s ease;
+      cursor: pointer;
+      user-select: none;
     }
-    .option-chip input[type="radio"]{ accent-color: var(--primary-color); }
+    /* hide the native radio visually but keep it accessible for screen readers */
+    .option-chip input[type="radio"]{
+      position:absolute !important;
+      opacity:0 !important;
+      width:0 !important;
+      height:0 !important;
+      margin:0 !important;
+      pointer-events:none !important;
+    }
     .option-chip:hover{ transform: translateY(-1px); }
 
-    /* green when correct */
-    .option-chip.is-correct{
-      background:#22c55e !important;     /* green */
-      border-color:#22c55e !important;
-      color:#fff !important;
+    /* selected (after clicking chip) */
+    .option-chip.selected{
+      background: rgba(var(--primary-rgb, 67,97,238), 0.12);
+      border-color: rgba(var(--primary-rgb, 67,97,238), 0.5);
+      box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 67,97,238), 0.15) inset;
     }
 
-    /* ❌ soft red */
+    /* keyboard focus outline */
+    .option-chip:focus-visible{
+      outline: 2px solid rgba(var(--primary-rgb, 67,97,238), .6);
+      outline-offset: 2px;
+    }
+
+    /* ✅ green when correct */
+    .option-chip.is-correct{
+      background:#22c55e !important;
+      border-color:#22c55e !important;
+      color:#fff !important;
+      box-shadow:none !important;
+    }
+
+    /* ❌ soft red when wrong */
     .option-chip.is-wrong{
       background:#fca5a5 !important;
       border-color:#fca5a5 !important;
       color:#7f1d1d !important;
+      box-shadow:none !important;
     }
 
     /* ========== Button Styles (using CSS variables) ========== */
@@ -53,22 +78,14 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       display: block;
       margin: 1.5rem auto 0;
     }
-
     button[type="submit"]:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(var(--primary-rgb, 102, 126, 234), 0.4);
       background: var(--secondary-color);
     }
-
-    button[type="submit"]:active {
-      transform: translateY(0);
-    }
-
+    button[type="submit"]:active { transform: translateY(0); }
     button[type="submit"]:disabled {
-      background: #999;
-      cursor: not-allowed;
-      box-shadow: none;
-      opacity: 0.6;
+      background: #999; cursor: not-allowed; box-shadow: none; opacity: 0.6;
     }
 
     /* Check answer button (შემოწმება) */
@@ -84,7 +101,6 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       transition: all var(--transition-speed, 0.3s) ease;
       box-shadow: 0 2px 8px rgba(var(--primary-rgb, 102, 126, 234), 0.25);
     }
-
     button[type="button"]:not(.mark-done-btn):hover {
       background: var(--secondary-color);
       transform: translateY(-1px);
@@ -104,22 +120,18 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       transition: all var(--transition-speed, 0.3s) ease;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-
     .mark-done-btn:hover {
       border-color: var(--primary-color);
       color: var(--primary-color);
       transform: translateY(-1px);
       box-shadow: 0 4px 12px rgba(var(--primary-rgb, 102, 126, 234), 0.2);
     }
-
-    /* When marked as done */
     .mark-done-btn.is-done {
       background: var(--primary-color);
       color: white;
       border-color: var(--primary-color);
       box-shadow: 0 3px 12px rgba(var(--primary-rgb, 102, 126, 234), 0.3);
     }
-
     .mark-done-btn.is-done:hover {
       background: var(--secondary-color);
       border-color: var(--secondary-color);
@@ -127,48 +139,21 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
 
     /* Action row container */
     .action-row {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      justify-content: center;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
+      display: flex; gap: 12px; align-items: center; justify-content: center;
+      margin-top: 1.5rem; flex-wrap: wrap;
     }
-
-    /* Checkmark styling */
     .tick-mark {
-      color: var(--primary-color);
-      font-size: 1.5rem;
-      font-weight: bold;
+      color: var(--primary-color); font-size: 1.5rem; font-weight: bold;
       animation: scaleIn 0.3s ease;
     }
-
     @keyframes scaleIn {
-      0% {
-        transform: scale(0);
-        opacity: 0;
-      }
-      50% {
-        transform: scale(1.2);
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); opacity: 1; }
     }
-
-    /* Responsive design */
     @media (max-width: 640px) {
-      .action-row {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      
-      button[type="submit"],
-      .mark-done-btn {
-        width: 100%;
-        max-width: none;
-      }
+      .action-row { flex-direction: column; align-items: stretch; }
+      button[type="submit"], .mark-done-btn { width: 100%; max-width: none; }
     }
   `;
   document.head.appendChild(s);
@@ -312,10 +297,10 @@ function renderQuiz(){
         }
 
         if (isCorrect) {
-          parentLabel.classList.add("is-correct");
+          parentLabel.classList.add("is-correct"); // GREEN chip
           feedback.innerHTML = `<span style="color: green;">პასუხი სწორია ✔️</span>`;
         } else {
-          parentLabel.classList.add("is-wrong");
+          parentLabel.classList.add("is-wrong");   // RED chip
           if (Array.isArray(q.correct)) {
             const allCorrectOptions = q.correct
               .map(idx => fox[idx] + " " + q.options[idx])
@@ -338,18 +323,42 @@ function renderQuiz(){
     q.options.forEach((opt, j) => {
       const label = document.createElement("label");
       label.classList.add("option-chip");
+      label.setAttribute("tabindex", "0"); // keyboard focus
 
       const radio = document.createElement("input");
       radio.type = "radio";
       radio.name = `question${i}`;
       radio.value = j;
+
+      // when user clicks anywhere on the chip or presses Enter/Space -> select
+      label.addEventListener("click", (e) => {
+        // ignore if click originated from a nested control (none now, but safe)
+        if (e.target !== radio) {
+          radio.checked = true;
+          // update selected visual state for this question (remove from siblings)
+          fieldset.querySelectorAll(`label.option-chip`).forEach(l => l.classList.remove("selected"));
+          label.classList.add("selected");
+          label.classList.remove("is-correct","is-wrong");
+          if (!simulationMode) checkBtn.style.display = "inline-block";
+        }
+      });
+      label.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          label.click();
+        }
+      });
+
       radio.addEventListener("change", () => {
+        fieldset.querySelectorAll(`label.option-chip`).forEach(l => l.classList.remove("selected"));
+        label.classList.add("selected");
         label.classList.remove("is-correct","is-wrong");
         if (!simulationMode) checkBtn.style.display = "inline-block";
       });
 
+      // structure label text
       label.append(`${fox[j]}`);
-      label.appendChild(radio);
+      label.appendChild(radio);   // hidden, but keeps form semantics
       label.append(`${opt}`);
       fieldset.appendChild(label);
     });
@@ -463,3 +472,4 @@ function renderQuiz(){
     if (window.MathJax) MathJax.typeset();
   });
 }
+;
