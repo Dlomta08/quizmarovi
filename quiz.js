@@ -437,14 +437,14 @@ function renderQuiz(){
 
       if (isCorrect) score++;
 
-      if(!answer){
-        feedback.innerHTML = `<span style="color: orange;">პასუხი არ არის არჩეული</span>`;
-      }else{
-        feedback.innerHTML = isCorrect
-          ? `<span style="color: green;">პასუხი სწორია ✔️</span>`
-          : `<span style="color: red;">პასუხი არასწორია ❌</span> – სწორი პასუხია: <strong> ${fox[q.correct]} ${q.options[q.correct]} </strong>`;
-      }
-      fieldset.appendChild(feedback);
+      // if(!answer){
+      //   feedback.innerHTML = `<span style="color: orange;">პასუხი არ არის არჩეული</span>`;
+      // }else{
+      //   feedback.innerHTML = isCorrect
+      //     ? `<span style="color: green;">პასუხი სწორია ✔️</span>`
+      //     : `<span style="color: red;">პასუხი არასწორია ❌</span> – სწორი პასუხია: <strong> ${fox[q.correct]} ${q.options[q.correct]} </strong>`;
+      // }
+      // fieldset.appendChild(feedback);
     });
 
     result.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}`;
