@@ -244,14 +244,23 @@
 }
 
 .warning {
-    background: rgba(249, 115, 22, 0.1);
-    border-left: 4px solid #f97316;
+    background: rgba(239, 68, 68, 0.1);   /* soft red background for light mode */
+    border-left: 4px solid #ef4444;       /* vivid red border */
     padding: 1rem 1.5rem;
     margin: 1rem 0;
     border-radius: 8px;
-    color: #ea580c;
+    color: #b91c1c;                       /* deep red text for light mode */
     font-weight: 500;
+    transition: all 0.3s ease;
 }
+
+/* 🌙 Dark mode version */
+[data-theme="dark"] .warning {
+    background: rgba(239, 68, 68, 0.2);   /* stronger red tint for dark mode */
+    border-left-color: #f87171;           /* lighter red border */
+    color: #fecaca;                       /* soft light-pinkish red text */
+}
+
 
 /* Quiz images */
 .quiz-image {
