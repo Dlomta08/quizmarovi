@@ -2,8 +2,8 @@
 
 /* Main Container: Adjusted for full-page width */
 .quiz-view-container {
-    padding: 7rem 4rem 4rem; /* Increased side padding for a better full-page look */
-    max-width: none; /* Remove maximum width restriction */
+    padding: 7rem 4rem 4rem;
+    max-width: none;
     margin: 0 auto;
     animation: fadeIn 0.6s ease-out forwards;
 }
@@ -45,8 +45,8 @@
     color: var(--text-secondary);
 }
 
-/* Buttons */
-.button, #quizForm button[type="submit"] {
+/* General Buttons - but NOT the new styled buttons from quiz.js */
+.button {
     display: inline-block;
     padding: 0.8rem 1.8rem;
     font-weight: 600;
@@ -62,11 +62,14 @@
     margin: 0.25rem;
 }
 
-.button:hover, #quizForm button[type="submit"]:hover {
+.button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(var(--primary-rgb), 0.4);
     background: var(--secondary-color);
 }
+
+/* REMOVED: Submit button styles - now handled in quiz.js injected styles */
+/* The gradient buttons from quiz.js will take precedence */
 
 /* Timer */
 #timer {
@@ -107,32 +110,33 @@
     line-height: 1.5;
 }
 
-/* NEW: Container for horizontal options (requires a <div> wrapper in HTML/JS) */
-#quizForm fieldset > div {
+/* Container for horizontal options */
+#quizForm fieldset > div:not(.feedback):not(.warning):not(.introduction):not(.task) {
     display: flex;
-    flex-wrap: wrap; /* Allows options to wrap to the next line if space runs out */
-    gap: 10px; /* Space between the options */
-    margin-bottom: 0.75rem; /* Space below the option group */
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 0.75rem;
 }
 
-/* Option Labels: Adjusted for horizontal layout */
-#quizForm label {
-    display: inline-block; /* Essential for horizontal flow */
+/* Option Labels: These styles work WITH the option-chip styles from quiz.js */
+#quizForm label:not(.option-chip) {
+    display: inline-block;
     background: var(--card-bg-secondary);
-    padding: 1rem 1.5rem; /* Adjusted padding */
-    margin-bottom: 0; /* Removed bottom margin, spacing handled by gap */
-    border-radius: 50px; /* More rounded shape for horizontal "pill" options */
+    padding: 1rem 1.5rem;
+    margin-bottom: 0;
+    border-radius: 50px;
     border: 1px solid var(--border-color);
     cursor: pointer;
     transition: all var(--transition-speed) ease;
     font-size: 1rem;
 }
 
-#quizForm label:hover {
+#quizForm label:not(.option-chip):hover {
     border-color: var(--primary-color);
     background: rgba(var(--primary-rgb), 0.1);
 }
 
+/* Radio button styling */
 #quizForm input[type="radio"] {
     margin-right: 0.75rem;
     accent-color: var(--primary-color);
@@ -178,14 +182,84 @@
     border: 1px solid var(--border-color);
 }
 
-/* Submit Button */
-#quizForm button[type="submit"] {
-    width: 100%;
-    max-width: 400px;
-    margin: 1.5rem auto 0;
+/* Action row - better alignment */
+.action-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Ensure submit button doesn't take full width when in action-row */
+.action-row button[type="submit"] {
+    width: auto;
+    max-width: none;
+    margin: 0;
+}
+
+/* Mark done button sizing */
+.action-row .mark-done-btn {
+    flex-shrink: 0;
+}
+
+/* Tick mark in action row */
+.action-row .tick-mark {
+    flex-shrink: 0;
+}
+
+/* Time selection input */
+#time-selection {
+    margin-top: 1rem;
     padding: 1rem;
-    font-size: 1.1rem;
+    background: var(--card-bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+#time-selection label {
     display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+#time-selection input[type="number"] {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+/* Introduction and Task sections */
+.introduction, .task {
+    background: rgba(var(--primary-rgb), 0.05);
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+}
+
+.warning {
+    background: rgba(249, 115, 22, 0.1);
+    border-left: 4px solid #f97316;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    color: #ea580c;
+    font-weight: 500;
+}
+
+/* Quiz images */
+.quiz-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 1rem 0;
+    box-shadow: var(--box-shadow);
 }
 
 /* Responsive adjustments */
@@ -202,9 +276,8 @@
     #quizForm legend {
         font-size: 1.1rem;
     }
-    /* Allow options to stack vertically on small screens if they don't fit */
-    #quizForm fieldset > div {
-        flex-direction: row; /* Keep row direction, flex-wrap will handle stacking */
+    #quizForm fieldset > div:not(.feedback):not(.warning):not(.introduction):not(.task) {
+        flex-direction: row;
         gap: 8px;
     }
     #quizForm label {
