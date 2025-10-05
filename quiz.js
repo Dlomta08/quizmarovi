@@ -407,8 +407,8 @@ function renderQuiz(){
       fieldset.appendChild(label);
     });
 
-    fieldset.appendChild(feedback);
     form.appendChild(fieldset);
+    
   });
 
   if (window.MathJax) MathJax.typeset();
