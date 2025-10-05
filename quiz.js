@@ -9,19 +9,26 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
   const s = document.createElement("style");
   s.id = "answer-chip-styles";
   s.textContent = `
-    /* base look gets applied to each <label> used as an option */
+    /* base look for option chip */
     .option-chip{
+      position: relative;
+      overflow: hidden;                      /* needed for ripple */
       display:inline-flex; align-items:center; gap:.5rem;
       padding:.6rem 1rem; margin:.25rem .35rem .25rem 0;
       border:1px solid var(--border-color, rgba(255,255,255,.15));
       border-radius:9999px;
       background: rgba(255,255,255,0.06);
       color: inherit;
-      transition: background .2s ease, border-color .2s ease, color .2s ease, transform .05s ease, box-shadow .2s ease;
       cursor: pointer;
       user-select: none;
+      transition:
+        background .28s ease,
+        border-color .28s ease,
+        color .28s ease,
+        box-shadow .28s ease,
+        transform .18s ease;
     }
-    /* hide the native radio visually but keep it accessible for screen readers */
+    /* hide native radio but keep semantics */
     .option-chip input[type="radio"]{
       position:absolute !important;
       opacity:0 !important;
@@ -32,36 +39,46 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
     }
     .option-chip:hover{ transform: translateY(-1px); }
 
-    /* selected (after clicking chip) */
+    /* tiny tap feeling */
+    .option-chip.pop { animation: pop .18s ease; }
+    @keyframes pop { 0%{ transform: scale(.98) } 100%{ transform: scale(1) } }
+
+    /* subtle selection before grading (very brief) */
     .option-chip.selected{
-      background: rgba(var(--primary-rgb, 67,97,238), 0.12);
-      border-color: rgba(var(--primary-rgb, 67,97,238), 0.5);
-      box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 67,97,238), 0.15) inset;
+      background: rgba(var(--primary-rgb, 67,97,238), 0.10);
+      border-color: rgba(var(--primary-rgb, 67,97,238), 0.45);
+      box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 67,97,238), 0.12) inset;
     }
 
-    /* keyboard focus outline */
-    .option-chip:focus-visible{
-      outline: 2px solid rgba(var(--primary-rgb, 67,97,238), .6);
-      outline-offset: 2px;
-    }
-
-    /* ✅ green when correct */
+    /* ✅ correct (soft green + glow) */
     .option-chip.is-correct{
-      background:#22c55e !important;
-      border-color:#22c55e !important;
-      color:#fff !important;
-      box-shadow:none !important;
+      background:#86efac !important;
+      border-color:#86efac !important;
+      color:#064e3b !important;
+      box-shadow: 0 0 0 2px rgba(134,239,172,.35) inset, 0 6px 16px rgba(16,185,129,.25);
     }
 
-    /* ❌ soft red when wrong */
+    /* ❌ wrong (soft red + glow) */
     .option-chip.is-wrong{
       background:#fca5a5 !important;
       border-color:#fca5a5 !important;
       color:#7f1d1d !important;
-      box-shadow:none !important;
+      box-shadow: 0 0 0 2px rgba(252,165,165,.35) inset, 0 6px 16px rgba(239,68,68,.2);
     }
 
-    /* ========== Button Styles (using CSS variables) ========== */
+    /* Ripple effect */
+    .chip-ripple{
+      position:absolute; border-radius:50%;
+      transform: translate(-50%,-50%) scale(0);
+      animation: ripple .6s ease-out forwards;
+      pointer-events:none;
+      opacity:.85;
+    }
+    @keyframes ripple{
+      to { transform: translate(-50%,-50%) scale(18); opacity:0; }
+    }
+
+    /* ========== Buttons (kept from your file) ========== */
     button[type="submit"] {
       background: var(--primary-color);
       color: white;
@@ -88,26 +105,6 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       background: #999; cursor: not-allowed; box-shadow: none; opacity: 0.6;
     }
 
-    /* Check answer button (შემოწმება) */
-    button[type="button"]:not(.mark-done-btn) {
-      background: var(--primary-color);
-      color: white;
-      border: none;
-      padding: 0.5rem 1.2rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all var(--transition-speed, 0.3s) ease;
-      box-shadow: 0 2px 8px rgba(var(--primary-rgb, 102, 126, 234), 0.25);
-    }
-    button[type="button"]:not(.mark-done-btn):hover {
-      background: var(--secondary-color);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(var(--primary-rgb, 102, 126, 234), 0.35);
-    }
-
-    /* Mark as done button */
     .mark-done-btn {
       background: var(--card-bg, white);
       color: var(--text-primary, #333);
@@ -137,20 +134,12 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       border-color: var(--secondary-color);
     }
 
-    /* Action row container */
     .action-row {
       display: flex; gap: 12px; align-items: center; justify-content: center;
       margin-top: 1.5rem; flex-wrap: wrap;
     }
-    .tick-mark {
-      color: var(--primary-color); font-size: 1.5rem; font-weight: bold;
-      animation: scaleIn 0.3s ease;
-    }
-    @keyframes scaleIn {
-      0% { transform: scale(0); opacity: 0; }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); opacity: 1; }
-    }
+    .tick-mark { color: var(--primary-color); font-size: 1.5rem; font-weight: bold; animation: scaleIn .3s ease; }
+    @keyframes scaleIn { 0%{transform:scale(0);opacity:0} 50%{transform:scale(1.2)} 100%{transform:scale(1);opacity:1} }
     @media (max-width: 640px) {
       .action-row { flex-direction: column; align-items: stretch; }
       button[type="submit"], .mark-done-btn { width: 100%; max-width: none; }
@@ -163,11 +152,8 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
 function timer() {
   const timeBox = document.getElementById("time-selection");
   simulationMode ^= 1;
-  if (simulationMode) {
-    timeBox.classList.add("visible");
-  } else {
-    timeBox.classList.remove("visible");
-  }
+  if (simulationMode) timeBox.classList.add("visible");
+  else timeBox.classList.remove("visible");
 }
 
 function startQuiz(withTimer) {
@@ -181,40 +167,44 @@ function startQuiz(withTimer) {
     let customMinutes = 180;
     if (customMinutesInput) {
       const inputVal = parseInt(customMinutesInput.value);
-      if (!isNaN(inputVal) && inputVal >= 1) {
-        customMinutes = inputVal;
-      }
+      if (!isNaN(inputVal) && inputVal >= 1) customMinutes = inputVal;
     }
     timeLeft = customMinutes * 60;
     document.getElementById("timer").style.display = "block";
     updateTimerDisplay();
     timerInterval = setInterval(() => {
-      timeLeft--;
-      updateTimerDisplay();
-      if (timeLeft <= 0) {
-        clearInterval(timerInterval);
-        alert("დრო ამოიწურა! ქვიზი ავტომატურად დასრულდა.");
-        quizForm.requestSubmit();
-      }
+      timeLeft--; updateTimerDisplay();
+      if (timeLeft <= 0) { clearInterval(timerInterval); alert("დრო ამოიწურა! ქვიზი ავტომატურად დასრულდა."); quizForm.requestSubmit(); }
     }, 1000);
-  } else {
-    document.getElementById("timer").style.display = "none";
-  }
+  } else document.getElementById("timer").style.display = "none";
 }
 
 function updateTimerDisplay() {
-  const hours = String(Math.floor(timeLeft / 3600)).padStart(2, "0");
-  const minutes = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, "0");
-  const seconds = String(timeLeft % 60).padStart(2, "0");
-  document.getElementById("time").textContent = `${hours}:${minutes}:${seconds}`;
+  const h = String(Math.floor(timeLeft / 3600)).padStart(2,"0");
+  const m = String(Math.floor((timeLeft % 3600) / 60)).padStart(2,"0");
+  const s = String(timeLeft % 60).padStart(2,"0");
+  document.getElementById("time").textContent = `${h}:${m}:${s}`;
+}
+
+/* ------------ ripple utility ------------ */
+function addRipple(el, x, y, color){
+  const r = document.createElement('span');
+  r.className = 'chip-ripple';
+  r.style.left = x + 'px';
+  r.style.top  = y + 'px';
+  r.style.width = r.style.height = '10px';
+  r.style.background = color;
+  el.appendChild(r);
+  r.addEventListener('animationend', () => r.remove());
 }
 
 function renderQuiz(){
   const form = document.getElementById("quizForm");
   form.innerHTML = "";
+
   quizData.forEach((q, i) => {
     const fieldset = document.createElement("fieldset");
-      
+
     // intro
     if (quizData.length > 0 && typeof quizData[i].intro === "string" && quizData[i].intro.trim() !== "") {
       const introDiv = document.createElement("div");
@@ -223,7 +213,6 @@ function renderQuiz(){
       form.appendChild(introDiv);
       if (window.MathJax) MathJax.typeset();
     }
-      
     // task
     if (quizData.length > 0 && typeof quizData[i].task === "string" && quizData[i].task.trim() !== "") {
       const taskDiv = document.createElement("div");
@@ -232,7 +221,6 @@ function renderQuiz(){
       form.appendChild(taskDiv);
       if (window.MathJax) MathJax.typeset();
     }
-
     // warning
     if (typeof q.warning === "string" && q.warning.trim() !== "") {
       const warnDiv = document.createElement("div");
@@ -240,7 +228,7 @@ function renderQuiz(){
       warnDiv.innerText = q.warning;
       fieldset.appendChild(warnDiv);
     }
-    
+
     const contentWrapper = document.createElement("div");
     contentWrapper.className = "quiz-question-wrapper";
 
@@ -248,7 +236,6 @@ function renderQuiz(){
     legend.innerHTML = `<strong>${i + 1}.</strong><br>${q.question}`;
     contentWrapper.appendChild(legend);
 
-    // image inside wrapper
     if (q.image) {
       const img = document.createElement("img");
       img.src = q.image;
@@ -262,87 +249,94 @@ function renderQuiz(){
     const feedback = document.createElement("div");
     feedback.className = "feedback";
 
-    const checkBtn = document.createElement("button");
-    checkBtn.type = "button";
-    checkBtn.textContent = "შემოწმება";
-    checkBtn.style.display = "none";
-
-    function clearChipColors() {
+    function gradeAndLock(selectedIdx, clickEvent) {
+      // clear previous visuals
       fieldset.querySelectorAll("label.option-chip").forEach(l => {
-        l.classList.remove("is-correct","is-wrong");
+        l.classList.remove("selected","is-correct","is-wrong","pop");
       });
-    }
 
-    checkBtn.addEventListener("click", () => {
-      if (Array.isArray(q.correct) && q.correct.length === q.options.length) {
-        feedback.innerHTML = `<span style="color: green;">ყველა პასუხი სწორია ✔️</span>`;
-        if (window.MathJax) MathJax.typeset();
-        return;
+      const selectedLabel = fieldset.querySelector(`label.option-chip[data-index="${selectedIdx}"]`);
+      let isCorrect;
+
+      // add a quick pop animation
+      if (selectedLabel){
+        selectedLabel.classList.add("pop");
+        // ripple color by status (we decide after isCorrect is known)
       }
 
-      const selected = form.querySelector(`input[name="question${i}"]:checked`);
-      clearChipColors();
-
-      if (!selected) {
-        feedback.innerHTML = `<span style="color: orange;">პასუხი არ არის არჩეული</span>`;
+      if (Array.isArray(q.correct)) {
+        isCorrect = q.correct.includes(selectedIdx);
+        q.correct.forEach(idx => {
+          const lbl = fieldset.querySelector(`label.option-chip[data-index="${idx}"]`);
+          if (lbl) lbl.classList.add("is-correct");
+        });
+        if (!isCorrect && selectedLabel) selectedLabel.classList.add("is-wrong");
       } else {
-        const userIdx = parseInt(selected.value, 10);
-        const parentLabel = selected.closest("label");
-
-        let isCorrect;
-        if (Array.isArray(q.correct)) {
-          isCorrect = q.correct.includes(userIdx);
-        } else {
-          isCorrect = (userIdx === q.correct);
-        }
-
+        isCorrect = (selectedIdx === q.correct);
+        const correctLabel = fieldset.querySelector(`label.option-chip[data-index="${q.correct}"]`);
         if (isCorrect) {
-          parentLabel.classList.add("is-correct"); // GREEN chip
-          feedback.innerHTML = `<span style="color: green;">პასუხი სწორია ✔️</span>`;
+          if (selectedLabel) selectedLabel.classList.add("is-correct");
         } else {
-          parentLabel.classList.add("is-wrong");   // RED chip
-          if (Array.isArray(q.correct)) {
-            const allCorrectOptions = q.correct
-              .map(idx => fox[idx] + " " + q.options[idx])
-              .join(", ");
-            feedback.innerHTML = `
-              <span style="color: red;">პასუხი არასწორია ❌</span>
-              – სწორი პასუხებია: <strong>${allCorrectOptions}</strong>
-            `;
-          } else {
-            feedback.innerHTML = `
-              <span style="color: red;">პასუხი არასწორია ❌</span>
-              – სწორი პასუხია: <strong>${fox[q.correct]} ${q.options[q.correct]}</strong>
-            `;
-          }
+          if (selectedLabel) selectedLabel.classList.add("is-wrong");
+          if (correctLabel) correctLabel.classList.add("is-correct");
         }
-        if (window.MathJax) MathJax.typeset();
       }
-    });
+
+      // feedback
+      // if (isCorrect) {
+      //   feedback.innerHTML = `<span style="color: green;">პასუხი სწორია ✔️</span>`;
+      // } else {
+      //   if (Array.isArray(q.correct)) {
+      //     const allCorrectOptions = q.correct
+      //       .map(idx => fox[idx] + " " + q.options[idx])
+      //       .join(", ");
+      //     feedback.innerHTML = `
+      //       <span style="color: red;">პასუხი არასწორია ❌</span>
+      //       – სწორი პასუხებია: <strong>${allCorrectOptions}</strong>
+      //     `;
+      //   } else {
+      //     feedback.innerHTML = `
+      //       <span style="color: red;">პასუხი არასწორია ❌</span>
+      //       – სწორი პასუხია: <strong>${fox[q.correct]} ${q.options[q.correct]}</strong>
+      //     `;
+      //   }
+      // }
+      if (window.MathJax) MathJax.typeset();
+
+      // ripple after we know correctness (so color matches)
+      if (selectedLabel && clickEvent){
+        const rect = selectedLabel.getBoundingClientRect();
+        const x = clickEvent.clientX - rect.left;
+        const y = clickEvent.clientY - rect.top;
+        const rippleColor = isCorrect ? "rgba(134,239,172,.7)" : "rgba(252,165,165,.75)";
+        addRipple(selectedLabel, x, y, rippleColor);
+      }
+
+      // lock this question
+      fieldset.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
+      fieldset.classList.add("answered");
+    }
 
     q.options.forEach((opt, j) => {
       const label = document.createElement("label");
       label.classList.add("option-chip");
-      label.setAttribute("tabindex", "0"); // keyboard focus
+      label.dataset.index = j;
+      label.setAttribute("tabindex", "0");
 
       const radio = document.createElement("input");
       radio.type = "radio";
       radio.name = `question${i}`;
       radio.value = j;
 
-      // when user clicks anywhere on the chip or presses Enter/Space -> select
       label.addEventListener("click", (e) => {
-        // ignore if click originated from a nested control (none now, but safe)
-        if (e.target !== radio) {
-          radio.checked = true;
-          // update selected visual state for this question (remove from siblings)
-          fieldset.querySelectorAll(`label.option-chip`).forEach(l => l.classList.remove("selected"));
-          label.classList.add("selected");
-          label.classList.remove("is-correct","is-wrong");
-          if (!simulationMode) checkBtn.style.display = "inline-block";
-        }
+        if (fieldset.classList.contains("answered")) return;
+        radio.checked = true;
+        label.classList.add("selected");
+        gradeAndLock(j, e);
       });
+
       label.addEventListener("keydown", (e) => {
+        if (fieldset.classList.contains("answered")) return;
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           label.click();
@@ -350,20 +344,16 @@ function renderQuiz(){
       });
 
       radio.addEventListener("change", () => {
-        fieldset.querySelectorAll(`label.option-chip`).forEach(l => l.classList.remove("selected"));
-        label.classList.add("selected");
-        label.classList.remove("is-correct","is-wrong");
-        if (!simulationMode) checkBtn.style.display = "inline-block";
+        if (fieldset.classList.contains("answered")) return;
+        gradeAndLock(j, null);
       });
 
-      // structure label text
       label.append(`${fox[j]}`);
-      label.appendChild(radio);   // hidden, but keeps form semantics
+      label.appendChild(radio);
       label.append(`${opt}`);
       fieldset.appendChild(label);
     });
 
-    if(!simulationMode) fieldset.appendChild(checkBtn);
     fieldset.appendChild(feedback);
     form.appendChild(fieldset);
   });
@@ -413,28 +403,22 @@ function renderQuiz(){
     }
   });
 
-  // Create action row and append buttons in correct order
   const actionRow = document.createElement("div");
   actionRow.className = "action-row";
   actionRow.appendChild(submitBtn);
   actionRow.appendChild(markDoneBtn);
   actionRow.appendChild(tickSpan);
-  
-  // Create result div
+
   const result = document.createElement("div");
   result.id = "result";
-  
-  // Append to form in correct order
+
   form.appendChild(actionRow);
   form.appendChild(result);
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    
-    if (timerInterval) {
-      clearInterval(timerInterval);
-    }
-    
+    if (timerInterval) clearInterval(timerInterval);
+
     let score = 0;
     const result = document.getElementById("result");
     result.innerHTML = "";
@@ -445,9 +429,11 @@ function renderQuiz(){
       const answer = form.querySelector(`input[name="question${i}"]:checked`);
       const fieldset = form.querySelectorAll("fieldset")[i];
       const feedback = fieldset.querySelector(".feedback");
-      const isCorrect = answer && (Array.isArray(q.correct)
-        ? q.correct.includes(parseInt(answer.value,10))
-        : parseInt(answer.value,10) === q.correct);
+      const isCorrect = answer && (
+        Array.isArray(q.correct)
+          ? q.correct.includes(parseInt(answer.value,10))
+          : parseInt(answer.value,10) === q.correct
+      );
 
       if (isCorrect) score++;
 
@@ -471,5 +457,4 @@ function renderQuiz(){
     if(simulationMode) form.querySelector("button[type='submit']").disabled = true;
     if (window.MathJax) MathJax.typeset();
   });
-}
-;
+};
