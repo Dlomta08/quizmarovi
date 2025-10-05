@@ -1,3 +1,4 @@
+
 let timerInterval;
 let timeLeft = 3 * 60 * 60;
 let simulationMode = false;
@@ -43,7 +44,7 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
     .option-chip.pop { animation: pop .18s ease; }
     @keyframes pop { 0%{ transform: scale(.98) } 100%{ transform: scale(1) } }
 
-    /* subtle selection before grading (very brief) */
+    /* subtle selection before grading */
     .option-chip.selected{
       background: rgba(var(--primary-rgb, 67,97,238), 0.10);
       border-color: rgba(var(--primary-rgb, 67,97,238), 0.45);
@@ -78,7 +79,7 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       to { transform: translate(-50%,-50%) scale(18); opacity:0; }
     }
 
-    /* ========== Buttons (kept from your file) ========== */
+    /* ========== Buttons (kept) ========== */
     button[type="submit"] {
       background: var(--primary-color);
       color: white;
@@ -148,7 +149,7 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
   document.head.appendChild(s);
 })();
 
-/* -------------------- existing code -------------------- */
+/* -------------------- timer controls -------------------- */
 function timer() {
   const timeBox = document.getElementById("time-selection");
   simulationMode ^= 1;
@@ -174,7 +175,13 @@ function startQuiz(withTimer) {
     updateTimerDisplay();
     timerInterval = setInterval(() => {
       timeLeft--; updateTimerDisplay();
-      if (timeLeft <= 0) { clearInterval(timerInterval); alert("დრო ამოიწურა! ქვიზი ავტომატურად დასრულდა."); quizForm.requestSubmit(); }
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        alert("დრო ამოიწურა! ქვიზი ავტომატურად დასრულდა.");
+        const form = document.getElementById("quizForm");
+        // Auto-finish to reveal all answers
+        form.requestSubmit();
+      }
     }, 1000);
   } else document.getElementById("timer").style.display = "none";
 }
@@ -196,6 +203,52 @@ function addRipple(el, x, y, color){
   r.style.background = color;
   el.appendChild(r);
   r.addEventListener('animationend', () => r.remove());
+}
+
+/* ------------ reveal all answers (called on finish/timeout) ------------ */
+function revealAllAnswers(form){
+  const fieldsets = form.querySelectorAll("fieldset");
+  let score = 0;
+
+  fieldsets.forEach((fs, i) => {
+    const q = quizData[i];
+    // remove old visual states
+    fs.querySelectorAll("label.option-chip").forEach(l => {
+      l.classList.remove("is-correct","is-wrong","pop");
+    });
+
+    const selected = form.querySelector(`input[name="question${i}"]:checked`);
+    const selectedIdx = selected ? parseInt(selected.value,10) : null;
+
+    // mark correct options
+    if (Array.isArray(q.correct)) {
+      q.correct.forEach(idx => {
+        const lbl = fs.querySelector(`label.option-chip[data-index="${idx}"]`);
+        if (lbl) lbl.classList.add("is-correct");
+      });
+      if (selected && !q.correct.includes(selectedIdx)) {
+        const wrongLbl = fs.querySelector(`label.option-chip[data-index="${selectedIdx}"]`);
+        if (wrongLbl) wrongLbl.classList.add("is-wrong");
+      }
+      if (selected && q.correct.includes(selectedIdx)) score++;
+    } else {
+      const correctLbl = fs.querySelector(`label.option-chip[data-index="${q.correct}"]`);
+      if (correctLbl) correctLbl.classList.add("is-correct");
+      if (selectedIdx != null) {
+        if (selectedIdx === q.correct) score++;
+        else {
+          const wrongLbl = fs.querySelector(`label.option-chip[data-index="${selectedIdx}"]`);
+          if (wrongLbl) wrongLbl.classList.add("is-wrong");
+        }
+      }
+    }
+
+    // lock after finish
+    fs.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
+    fs.classList.add("answered");
+  });
+
+  return score;
 }
 
 function renderQuiz(){
@@ -249,6 +302,7 @@ function renderQuiz(){
     const feedback = document.createElement("div");
     feedback.className = "feedback";
 
+    // Original immediate grading function (kept for non-simulation mode)
     function gradeAndLock(selectedIdx, clickEvent) {
       // clear previous visuals
       fieldset.querySelectorAll("label.option-chip").forEach(l => {
@@ -261,7 +315,6 @@ function renderQuiz(){
       // add a quick pop animation
       if (selectedLabel){
         selectedLabel.classList.add("pop");
-        // ripple color by status (we decide after isCorrect is known)
       }
 
       if (Array.isArray(q.correct)) {
@@ -282,28 +335,9 @@ function renderQuiz(){
         }
       }
 
-      // feedback
-      // if (isCorrect) {
-      //   feedback.innerHTML = `<span style="color: green;">პასუხი სწორია ✔️</span>`;
-      // } else {
-      //   if (Array.isArray(q.correct)) {
-      //     const allCorrectOptions = q.correct
-      //       .map(idx => fox[idx] + " " + q.options[idx])
-      //       .join(", ");
-      //     feedback.innerHTML = `
-      //       <span style="color: red;">პასუხი არასწორია ❌</span>
-      //       – სწორი პასუხებია: <strong>${allCorrectOptions}</strong>
-      //     `;
-      //   } else {
-      //     feedback.innerHTML = `
-      //       <span style="color: red;">პასუხი არასწორია ❌</span>
-      //       – სწორი პასუხია: <strong>${fox[q.correct]} ${q.options[q.correct]}</strong>
-      //     `;
-      //   }
-      // }
       if (window.MathJax) MathJax.typeset();
 
-      // ripple after we know correctness (so color matches)
+      // ripple color by status
       if (selectedLabel && clickEvent){
         const rect = selectedLabel.getBoundingClientRect();
         const x = clickEvent.clientX - rect.left;
@@ -315,6 +349,25 @@ function renderQuiz(){
       // lock this question
       fieldset.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
       fieldset.classList.add("answered");
+    }
+
+    // Simulation-mode behavior: only tick selection (no correctness shown, no lock)
+    function selectOnly(selectedIdx, clickEvent){
+      // remove "selected" from siblings
+      fieldset.querySelectorAll("label.option-chip").forEach(l => l.classList.remove("selected","pop"));
+      const selectedLabel = fieldset.querySelector(`label.option-chip[data-index="${selectedIdx}"]`);
+      if (selectedLabel){
+        selectedLabel.classList.add("selected","pop");
+        // neutral ripple
+        if (clickEvent){
+          const rect = selectedLabel.getBoundingClientRect();
+          const x = clickEvent.clientX - rect.left;
+          const y = clickEvent.clientY - rect.top;
+          addRipple(selectedLabel, x, y, "rgba(67,97,238,.3)");
+        }
+      }
+      // keep inputs enabled to allow changes before finish
+      fieldset.classList.remove("answered");
     }
 
     q.options.forEach((opt, j) => {
@@ -329,14 +382,15 @@ function renderQuiz(){
       radio.value = j;
 
       label.addEventListener("click", (e) => {
-        if (fieldset.classList.contains("answered")) return;
         radio.checked = true;
-        label.classList.add("selected");
-        gradeAndLock(j, e);
+        if (simulationMode) {
+          selectOnly(j, e);
+        } else {
+          if (!fieldset.classList.contains("answered")) gradeAndLock(j, e);
+        }
       });
 
       label.addEventListener("keydown", (e) => {
-        if (fieldset.classList.contains("answered")) return;
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           label.click();
@@ -344,8 +398,11 @@ function renderQuiz(){
       });
 
       radio.addEventListener("change", () => {
-        if (fieldset.classList.contains("answered")) return;
-        gradeAndLock(j, null);
+        if (simulationMode) {
+          selectOnly(j, null);
+        } else {
+          if (!fieldset.classList.contains("answered")) gradeAndLock(j, null);
+        }
       });
 
       label.append(`${fox[j]}`);
@@ -419,42 +476,16 @@ function renderQuiz(){
     e.preventDefault();
     if (timerInterval) clearInterval(timerInterval);
 
-    let score = 0;
-    const result = document.getElementById("result");
-    result.innerHTML = "";
+    const resultBox = document.getElementById("result");
+    resultBox.innerHTML = "";
 
-    const tagStats = {};
+    // Reveal all answers and compute score
+    const score = revealAllAnswers(form);
 
-    quizData.forEach((q, i) => {
-      const answer = form.querySelector(`input[name="question${i}"]:checked`);
-      const fieldset = form.querySelectorAll("fieldset")[i];
-      const feedback = fieldset.querySelector(".feedback");
-      const isCorrect = answer && (
-        Array.isArray(q.correct)
-          ? q.correct.includes(parseInt(answer.value,10))
-          : parseInt(answer.value,10) === q.correct
-      );
+    resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}`;
 
-      if (isCorrect) score++;
-
-      // if(!answer){
-      //   feedback.innerHTML = `<span style="color: orange;">პასუხი არ არის არჩეული</span>`;
-      // }else{
-      //   feedback.innerHTML = isCorrect
-      //     ? `<span style="color: green;">პასუხი სწორია ✔️</span>`
-      //     : `<span style="color: red;">პასუხი არასწორია ❌</span> – სწორი პასუხია: <strong> ${fox[q.correct]} ${q.options[q.correct]} </strong>`;
-      // }
-      // fieldset.appendChild(feedback);
-    });
-
-    result.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}`;
-    for (let tag in tagStats) {
-      const { correct, total } = tagStats[tag];
-      const percentage = ((correct / total) * 100).toFixed(1);
-      result.innerHTML += `<p>${tag}: ${correct} / ${total} (${percentage}%)</p>`;
-    }
-
-    if(simulationMode) form.querySelector("button[type='submit']").disabled = true;
+    // Lock submit in simulation mode to prevent re-submitting
+    if (simulationMode) form.querySelector("button[type='submit']").disabled = true;
     if (window.MathJax) MathJax.typeset();
   });
 };
