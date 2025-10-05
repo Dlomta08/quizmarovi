@@ -45,7 +45,7 @@ const quizData = [
     tags: []
   },
   {
-    question: "ამოხსენით განტოლება: \n$2 \\arcsin^2 x = \\arccos 7x$",
+    question: "ამოხსენით განტოლება: \n$2 \\arcsin2 x = \\arccos 7x$",
     options: [],
     tags: []
   }
