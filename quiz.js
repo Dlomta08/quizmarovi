@@ -4,16 +4,16 @@ let timeLeft = 3 * 60 * 60;
 let simulationMode = false;
 const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
 
-/* ---------- Inject minimal CSS for answer chips (once) ---------- */
-(function ensureChipStyles(){
-  if (document.getElementById("answer-chip-styles")) return;
+/* ---------- Inject CSS (options + floating timer) ---------- */
+(function ensureGlobalStyles(){
+  if (document.getElementById("quiz-global-styles")) return;
   const s = document.createElement("style");
-  s.id = "answer-chip-styles";
+  s.id = "quiz-global-styles";
   s.textContent = `
-    /* base look for option chip */
+    /* ===== Option chips ===== */
     .option-chip{
       position: relative;
-      overflow: hidden;                      /* needed for ripple */
+      overflow: hidden;
       display:inline-flex; align-items:center; gap:.5rem;
       padding:.6rem 1rem; margin:.25rem .35rem .25rem 0;
       border:1px solid var(--border-color, rgba(255,255,255,.15));
@@ -29,57 +29,27 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
         box-shadow .28s ease,
         transform .18s ease;
     }
-    /* hide native radio but keep semantics */
-    .option-chip input[type="radio"]{
-      position:absolute !important;
-      opacity:0 !important;
-      width:0 !important;
-      height:0 !important;
-      margin:0 !important;
-      pointer-events:none !important;
-    }
+    .option-chip input[type="radio"]{ position:absolute !important; opacity:0 !important; width:0 !important; height:0 !important; margin:0 !important; pointer-events:none !important; }
     .option-chip:hover{ transform: translateY(-1px); }
-
-    /* tiny tap feeling */
     .option-chip.pop { animation: pop .18s ease; }
     @keyframes pop { 0%{ transform: scale(.98) } 100%{ transform: scale(1) } }
-
-    /* subtle selection before grading */
     .option-chip.selected{
       background: rgba(var(--primary-rgb, 67,97,238), 0.10);
       border-color: rgba(var(--primary-rgb, 67,97,238), 0.45);
       box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 67,97,238), 0.12) inset;
     }
-
-    /* ✅ correct (soft green + glow) */
     .option-chip.is-correct{
-      background:#86efac !important;
-      border-color:#86efac !important;
-      color:#064e3b !important;
+      background:#86efac !important; border-color:#86efac !important; color:#064e3b !important;
       box-shadow: 0 0 0 2px rgba(134,239,172,.35) inset, 0 6px 16px rgba(16,185,129,.25);
     }
-
-    /* ❌ wrong (soft red + glow) */
     .option-chip.is-wrong{
-      background:#fca5a5 !important;
-      border-color:#fca5a5 !important;
-      color:#7f1d1d !important;
+      background:#fca5a5 !important; border-color:#fca5a5 !important; color:#7f1d1d !important;
       box-shadow: 0 0 0 2px rgba(252,165,165,.35) inset, 0 6px 16px rgba(239,68,68,.2);
     }
+    .chip-ripple{ position:absolute; border-radius:50%; transform: translate(-50%,-50%) scale(0); animation: ripple .6s ease-out forwards; pointer-events:none; opacity:.85; }
+    @keyframes ripple{ to { transform: translate(-50%,-50%) scale(18); opacity:0; } }
 
-    /* Ripple effect */
-    .chip-ripple{
-      position:absolute; border-radius:50%;
-      transform: translate(-50%,-50%) scale(0);
-      animation: ripple .6s ease-out forwards;
-      pointer-events:none;
-      opacity:.85;
-    }
-    @keyframes ripple{
-      to { transform: translate(-50%,-50%) scale(18); opacity:0; }
-    }
-
-    /* ========== Buttons (kept) ========== */
+    /* ===== Buttons & layout ===== */
     button[type="submit"] {
       background: var(--primary-color);
       color: white;
@@ -96,54 +66,63 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       display: block;
       margin: 1.5rem auto 0;
     }
-    button[type="submit"]:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(var(--primary-rgb, 102, 126, 234), 0.4);
-      background: var(--secondary-color);
-    }
+    button[type="submit"]:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(var(--primary-rgb, 102, 126, 234), 0.4); background: var(--secondary-color); }
     button[type="submit"]:active { transform: translateY(0); }
-    button[type="submit"]:disabled {
-      background: #999; cursor: not-allowed; box-shadow: none; opacity: 0.6;
-    }
-
-    .mark-done-btn {
-      background: var(--card-bg, white);
-      color: var(--text-primary, #333);
-      border: 2px solid var(--border-color, #ddd);
-      padding: 0.8rem 1.8rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all var(--transition-speed, 0.3s) ease;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    .mark-done-btn:hover {
-      border-color: var(--primary-color);
-      color: var(--primary-color);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(var(--primary-rgb, 102, 126, 234), 0.2);
-    }
-    .mark-done-btn.is-done {
-      background: var(--primary-color);
-      color: white;
-      border-color: var(--primary-color);
-      box-shadow: 0 3px 12px rgba(var(--primary-rgb, 102, 126, 234), 0.3);
-    }
-    .mark-done-btn.is-done:hover {
-      background: var(--secondary-color);
-      border-color: var(--secondary-color);
-    }
-
-    .action-row {
-      display: flex; gap: 12px; align-items: center; justify-content: center;
-      margin-top: 1.5rem; flex-wrap: wrap;
-    }
+    button[type="submit"]:disabled { background: #999; cursor: not-allowed; box-shadow: none; opacity: 0.6; }
+    .mark-done-btn { background: var(--card-bg, white); color: var(--text-primary, #333); border: 2px solid var(--border-color, #ddd); padding: 0.8rem 1.8rem; font-size: 1rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all var(--transition-speed, 0.3s) ease; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
+    .mark-done-btn:hover { border-color: var(--primary-color); color: var(--primary-color); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(var(--primary-rgb, 102, 126, 234), 0.2); }
+    .mark-done-btn.is-done { background: var(--primary-color); color: white; border-color: var(--primary-color); box-shadow: 0 3px 12px rgba(var(--primary-rgb, 102, 126, 234), 0.3); }
+    .mark-done-btn.is-done:hover { background: var(--secondary-color); border-color: var(--secondary-color); }
+    .action-row { display: flex; gap: 12px; align-items: center; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
     .tick-mark { color: var(--primary-color); font-size: 1.5rem; font-weight: bold; animation: scaleIn .3s ease; }
     @keyframes scaleIn { 0%{transform:scale(0);opacity:0} 50%{transform:scale(1.2)} 100%{transform:scale(1);opacity:1} }
-    @media (max-width: 640px) {
-      .action-row { flex-direction: column; align-items: stretch; }
-      button[type="submit"], .mark-done-btn { width: 100%; max-width: none; }
+    @media (max-width: 640px) { .action-row { flex-direction: column; align-items: stretch; } button[type="submit"], .mark-done-btn { width: 100%; max-width: none; } }
+
+    /* ===== Floating timer (detached to body) ===== */
+    #floating-timer {
+      position: fixed;
+      top: max(10px, env(safe-area-inset-top));
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2147483647; /* sit above everything */
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      font-weight: 900;
+      font-size: 1.3rem;
+      padding: 8px 16px;
+      letter-spacing: .5px;
+      border-radius: 9999px;
+      border: 1px solid rgba(0,0,0,.08);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+      color: #111827; /* gray-900 */
+      pointer-events: none; /* never block clicks below */
+    }
+    [data-theme="dark"] #floating-timer {
+      background: rgba(17,24,39, 0.74); /* gray-900 */
+      color: #e5e7eb; /* gray-200 */
+      border-color: rgba(255,255,255,.12);
+      box-shadow: 0 6px 18px rgba(0,0,0,.45);
+    }
+    #floating-timer .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: #10b981; /* emerald-500 */
+      box-shadow: 0 0 0 6px rgba(16,185,129,.15);
+      animation: pulse 1.6s ease-in-out infinite;
+      pointer-events: none;
+    }
+    #floating-timer .time {
+      font-variant-numeric: tabular-nums;
+      min-width: 74px;
+      text-align: center;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16,185,129,.5); }
+      70% { box-shadow: 0 0 0 10px rgba(16,185,129,0); }
+      100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); }
     }
   `;
   document.head.appendChild(s);
@@ -157,12 +136,30 @@ function timer() {
   else timeBox.classList.remove("visible");
 }
 
+function createFloatingTimer(){
+  let ft = document.getElementById("floating-timer");
+  if (!ft) {
+    ft = document.createElement("div");
+    ft.id = "floating-timer";
+    ft.innerHTML = `<span class="dot"></span><span class="time" id="floating-time">00:00:00</span>`;
+    document.body.appendChild(ft);
+  }
+  return ft;
+}
+
+function removeFloatingTimer(){
+  const ft = document.getElementById("floating-timer");
+  if (ft) ft.remove();
+}
+
 function startQuiz(withTimer) {
   simulationMode = withTimer; 
   document.getElementById("mode-selection").style.display = "none";
   const quizForm = document.getElementById("quizForm");
   quizForm.style.display = "block";
   renderQuiz();
+
+  const pageTimerEl = document.getElementById("timer"); // existing on-page timer
   if (withTimer) {
     const customMinutesInput = document.getElementById("customTime");
     let customMinutes = 180;
@@ -171,7 +168,11 @@ function startQuiz(withTimer) {
       if (!isNaN(inputVal) && inputVal >= 1) customMinutes = inputVal;
     }
     timeLeft = customMinutes * 60;
-    document.getElementById("timer").style.display = "block";
+
+    // Hide original portal spot; show floating timer instead
+    if (pageTimerEl) pageTimerEl.style.display = "none";
+    const ft = createFloatingTimer();
+
     updateTimerDisplay();
     timerInterval = setInterval(() => {
       timeLeft--; updateTimerDisplay();
@@ -179,18 +180,28 @@ function startQuiz(withTimer) {
         clearInterval(timerInterval);
         alert("დრო ამოიწურა! ქვიზი ავტომატურად დასრულდა.");
         const form = document.getElementById("quizForm");
-        // Auto-finish to reveal all answers
         form.requestSubmit();
       }
     }, 1000);
-  } else document.getElementById("timer").style.display = "none";
+  } else {
+    if (pageTimerEl) {
+      pageTimerEl.style.display = "none";
+    }
+    removeFloatingTimer();
+  }
 }
 
 function updateTimerDisplay() {
   const h = String(Math.floor(timeLeft / 3600)).padStart(2,"0");
   const m = String(Math.floor((timeLeft % 3600) / 60)).padStart(2,"0");
   const s = String(timeLeft % 60).padStart(2,"0");
-  document.getElementById("time").textContent = `${h}:${m}:${s}`;
+  const t = `${h}:${m}:${s}`;
+
+  const timeEl = document.getElementById("time");
+  if (timeEl) timeEl.textContent = t;
+
+  const floating = document.getElementById("floating-time");
+  if (floating) floating.textContent = t;
 }
 
 /* ------------ ripple utility ------------ */
@@ -212,7 +223,6 @@ function revealAllAnswers(form){
 
   fieldsets.forEach((fs, i) => {
     const q = quizData[i];
-    // remove old visual states
     fs.querySelectorAll("label.option-chip").forEach(l => {
       l.classList.remove("is-correct","is-wrong","pop");
     });
@@ -220,7 +230,6 @@ function revealAllAnswers(form){
     const selected = form.querySelector(`input[name="question${i}"]:checked`);
     const selectedIdx = selected ? parseInt(selected.value,10) : null;
 
-    // mark correct options
     if (Array.isArray(q.correct)) {
       q.correct.forEach(idx => {
         const lbl = fs.querySelector(`label.option-chip[data-index="${idx}"]`);
@@ -243,7 +252,6 @@ function revealAllAnswers(form){
       }
     }
 
-    // lock after finish
     fs.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
     fs.classList.add("answered");
   });
@@ -258,7 +266,6 @@ function renderQuiz(){
   quizData.forEach((q, i) => {
     const fieldset = document.createElement("fieldset");
 
-    // intro
     if (quizData.length > 0 && typeof quizData[i].intro === "string" && quizData[i].intro.trim() !== "") {
       const introDiv = document.createElement("div");
       introDiv.className = "introduction";
@@ -266,7 +273,6 @@ function renderQuiz(){
       form.appendChild(introDiv);
       if (window.MathJax) MathJax.typeset();
     }
-    // task
     if (quizData.length > 0 && typeof quizData[i].task === "string" && quizData[i].task.trim() !== "") {
       const taskDiv = document.createElement("div");
       taskDiv.className = "task";
@@ -274,7 +280,6 @@ function renderQuiz(){
       form.appendChild(taskDiv);
       if (window.MathJax) MathJax.typeset();
     }
-    // warning
     if (typeof q.warning === "string" && q.warning.trim() !== "") {
       const warnDiv = document.createElement("div");
       warnDiv.className = "warning";
@@ -302,9 +307,7 @@ function renderQuiz(){
     const feedback = document.createElement("div");
     feedback.className = "feedback";
 
-    // Original immediate grading function (kept for non-simulation mode)
     function gradeAndLock(selectedIdx, clickEvent) {
-      // clear previous visuals
       fieldset.querySelectorAll("label.option-chip").forEach(l => {
         l.classList.remove("selected","is-correct","is-wrong","pop");
       });
@@ -312,7 +315,6 @@ function renderQuiz(){
       const selectedLabel = fieldset.querySelector(`label.option-chip[data-index="${selectedIdx}"]`);
       let isCorrect;
 
-      // add a quick pop animation
       if (selectedLabel){
         selectedLabel.classList.add("pop");
       }
@@ -337,7 +339,6 @@ function renderQuiz(){
 
       if (window.MathJax) MathJax.typeset();
 
-      // ripple color by status
       if (selectedLabel && clickEvent){
         const rect = selectedLabel.getBoundingClientRect();
         const x = clickEvent.clientX - rect.left;
@@ -346,19 +347,15 @@ function renderQuiz(){
         addRipple(selectedLabel, x, y, rippleColor);
       }
 
-      // lock this question
       fieldset.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
       fieldset.classList.add("answered");
     }
 
-    // Simulation-mode behavior: only tick selection (no correctness shown, no lock)
     function selectOnly(selectedIdx, clickEvent){
-      // remove "selected" from siblings
       fieldset.querySelectorAll("label.option-chip").forEach(l => l.classList.remove("selected","pop"));
       const selectedLabel = fieldset.querySelector(`label.option-chip[data-index="${selectedIdx}"]`);
       if (selectedLabel){
         selectedLabel.classList.add("selected","pop");
-        // neutral ripple
         if (clickEvent){
           const rect = selectedLabel.getBoundingClientRect();
           const x = clickEvent.clientX - rect.left;
@@ -366,7 +363,6 @@ function renderQuiz(){
           addRipple(selectedLabel, x, y, "rgba(67,97,238,.3)");
         }
       }
-      // keep inputs enabled to allow changes before finish
       fieldset.classList.remove("answered");
     }
 
@@ -479,13 +475,12 @@ function renderQuiz(){
     const resultBox = document.getElementById("result");
     resultBox.innerHTML = "";
 
-    // Reveal all answers and compute score
     const score = revealAllAnswers(form);
 
     resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}`;
 
-    // Lock submit in simulation mode to prevent re-submitting
     if (simulationMode) form.querySelector("button[type='submit']").disabled = true;
+    removeFloatingTimer();
     if (window.MathJax) MathJax.typeset();
   });
 };
