@@ -263,3 +263,18 @@
         font-size: 3.5rem;
     }
 }
+.grade-card.special {
+  background: linear-gradient(135deg, #6a5acd, #8a2be2);
+  color: white;
+  box-shadow: 0 0 15px rgba(138,43,226,0.4);
+}
+
+.grade-card.special:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(138,43,226,0.6);
+}
+
+.grade-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ka" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>შემთხვევითი ქვიზი</title>
+    
+    <!-- Links to your existing site styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="quiz-style.css">
+    
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <style>
+        /* Custom style for the info box */
+        .quiz-info-box {
+            text-align: left;
+            margin: 0 auto 2rem;
+            padding: 1rem 1.5rem;
+            background: var(--card-bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+    </style>
+    
+</head>
+<body>
+
+    <!-- Re-used navigation from your site -->
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="random-quiz-generator.html" id="back-link" class="logo">
+                <i class="fas fa-arrow-left"></i>
+                <span>უკან დაბრუნება</span>
+            </a>
+            <button id="toggle-dark" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Using the same layout as quiz.html -->
+    <div class="quiz-view-container">
+        <div class="quiz-card-main">
+            <h1 id="quiz-title" class="text-title">შემთხვევითი ქვიზი</h1>
+
+            <div id="quiz-info-container"></div>
+
+            <div id="mode-selection" class="mode-selection-card" style="display: none;">
+                <p>აირჩიეთ რეჟიმი:</p>
+                <div>
+                    <button class="button" onclick="startQuiz(false)">ჩვეულებრივი</button>
+                    <button class="button" onclick="startQuiz(true)">სიმულაცია</button>
+                </div>
+            </div>
+
+            <div id="timer" style="display: none;">დარჩენილი დრო: <span id="time">03:00:00</span></div>
+
+            <form id="quizForm" style="display:none;"></form>
+
+            <div id="error-container" style="display: none;">
+                <h2>ქვიზი ვერ მოიძებნა ❌</h2>
+                <p>ქვიზის მონაცემები ვერ მოიძებნა. გთხოვთ დაუბრუნდეთ გენერატორს და ხელახლა სცადოთ.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Re-used footer from your site -->
+    <footer class="main-footer">
+        <p>&copy; 2025 კომაროვის სკოლა. ყველა უფლება დაცულია.</p>
+    </footer>
+
+    <script>
+        const storedData = sessionStorage.getItem('randomQuizData');
+        const storedConfig = sessionStorage.getItem('randomQuizConfig');
+        
+        if (!storedData) {
+            document.getElementById('error-container').style.display = 'block';
+            document.getElementById('quiz-title').style.display = 'none';
+        } else {
+            window.quizData = JSON.parse(storedData);
+            let config = storedConfig ? JSON.parse(storedConfig) : null;
+            
+            document.getElementById("quiz-title").textContent = `შემთხვევითი ქვიზი (${window.quizData.length} ამოცანა)`;
+            
+            if (config) {
+                const infoContainer = document.getElementById('quiz-info-container');
+                const classText = config.classes.map(c => `${c}-კლასი`).join(', ');
+                
+                infoContainer.innerHTML = `
+                    <div class="quiz-info-box">
+                        <strong>კლასები:</strong> ${classText}<br>
+                        <small>მოძებნილი ამოცანები: ${config.totalAvailable} | არჩეული: ${window.quizData.length}</small>
+                    </div>
+                `;
+            }
+            
+            document.getElementById("mode-selection").style.display = "block";
+        }
+    </script>
+    
+    <!-- Link to your existing quiz and dark mode scripts -->
+     
+    <script src="quiz.js"></script>
+    <script src="darkmode.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const hideButton = () => {
+            document.querySelectorAll(".mark-done-btn").forEach(btn => btn.remove());
+        };
+        hideButton();
+        const observer = new MutationObserver(hideButton);
+        observer.observe(document.body, { childList: true, subtree: true });
+    });
+    </script>
+</body>
+</html>
+
