@@ -116,7 +116,7 @@ const quizData = [
     tags: []
   },
   {
-    question: "სამკუთხედის გვერდებია $5სმ$, $5სმ$ და $6სმ$. იპოვეთ ამ სამკუთხედზე შემოხაზული წრეწირის რადიუსი.",
+    question: "სამკუთხედის გვერდებია $5$სმ, $5$სმ და $6$სმ. იპოვეთ ამ სამკუთხედზე შემოხაზული წრეწირის რადიუსი.",
     options: ["$2\\sqrt{2}$", "$\\frac{25}{8}$", "$\\frac{9}{\\sqrt{7}}$", "$3\\sqrt{3}$", "$\\frac{8}{3}$", "$3$"],
     correct: 1,
     tags: []
@@ -130,7 +130,7 @@ const quizData = [
   {
     //ფოტომასალა აქვს
     question: `$ABC$ სამკუთხედში $\\angle C=90^\\circ$, $\\angle B=\\beta$. $BC$ მონაკვეთზე აღებულია $D$ წერტილი ისე, რომ $BD = m$ და $\\angle ADC = \\alpha$, იპოვეთ $AC$ მონაკვეთის სიგრძე თუ $\\tan(\\alpha)=\\frac{2}{3}$, $\\tan(\\beta)=\\frac{1}{4}$.`,
-    image:   "math/class-8/images/t.jpg.png",
+    image:   "class-8/images/t.jpg.png",
   
     options: ["$\\frac{m}{3}$", "$\\frac{2m}{5}$", "$\\frac{2m}{3}$", "$\\frac{3m}{8}$", "$\\frac{m}{7}$", "$\\frac{3m}{5}$"],
     correct: 1,
