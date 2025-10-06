@@ -13,7 +13,7 @@ const quizData = [
         tags: ["Geometry", "Surface Area"]
     },
     {
-        question: "დაალაგეთ ზრდადობით $a=e^{-2}$; $b=\\log_{0.1} e$; $c=e^{-4}$. სადაც $e=\\lim\\limits_{n\\to\\infty}\\left(1+\\frac{1}{n}\\right)^n$",
+        question: "დაალაგეთ ზრდადობით $a=e^{-2}$; $b=\\log_{0{,}1} e$; $c=e-4$. სადაც $e=\\lim\\limits_{n\\to\\infty}\\left(1+\\frac{1}{n}\\right)^n$",
         options: [
             "$a; b; c$",
             "$a; c; b$",
@@ -195,7 +195,7 @@ const quizData = [
         tags: ["Geometry", "Surface Area"]
     },
     {
-        question: "რისი ტოლია იმ სამკუთხედის ფართობი, რომელიც შემოსაზღვრულია $y=x+2$; $y=-2x+5$ და $y=-0.5x+2$ წრფეებით?",
+        question: "რისი ტოლია იმ სამკუთხედის ფართობი, რომელიც შემოსაზღვრულია $y=x+2$; $y=-2x+5$ და $y=-0{,}5x+2$ წრფეებით?",
         options: [
             "$0{,}5$",
             "$1$",

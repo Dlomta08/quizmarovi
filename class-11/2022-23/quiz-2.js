@@ -60,7 +60,7 @@ const quizData = [
     "tags": ["geometry", "cone", "plane section", "area"]
   },
   {
-    "question": "ამოხსნეთ $\\sqrt{2x - 8} \\geq \\cos x - 2$ უტოლობა.",
+    "question": "ამოხსნეთ $\\sqrt{2^x - 8} \\geq \\cos x - 2$ უტოლობა.",
     "options": ["$(3; 8)$", "$[3; +\\infty)$", "$(3; \\frac{8\\pi}{3})$", "$(\\pi; 2\\pi)$", "$R$", "∅"],
     "correct": 1,
     "tags": ["inequality", "radical", "trigonometry"]
@@ -132,7 +132,7 @@ const quizData = [
     "tags": ["system of equations", "logarithms", "parameter"]
   },
   {
-    "question": "საკოორდინატო სიბრტყეზე დაშტრიხეს $ \\begin{cases} \\log_{0.8-|x|}(x^2 + 1) \\geq \\log_{0.8-|x|}(9 - 2x) \\\\ y \\leq 5x \\\\ y^2 \\leq 16 \\end{cases} $ სისტემის ამონახსნთა სიმრავლე. იპოვეთ დაშტრიხული არის ფართობი.",
+    "question": "საკოორდინატო სიბრტყეზე დაშტრიხეს $ \\begin{cases} \\log_{0{,}8-|x|}(x^2 + 1) \\geq \\log_{0{,}8-|x|}(9 - 2x) \\\\ y \\leq 5x \\\\ y^2 \\leq 16 \\end{cases} $ სისტემის ამონახსნთა სიმრავლე. იპოვეთ დაშტრიხული არის ფართობი.",
     "options": ["$1{,}9$", "$3{,}5$", "$4{,}8$", "$6{,}4$", "$8{,}5$", "$19{,}9$"],
     "correct": 3,
     "tags": ["system of inequalities", "logarithms", "area"]
