@@ -77,7 +77,7 @@ const quizData = [
   {
     question: "დავუშვათ $a$ და $b$ დადებითი რიცხვებია. რომელი უტოლობაა აუცილებლად ჭეშმარიტი?",
     options: [
-      "$\\frac{\\sqrt{a^2 + b^2}}{2} \\leq \\frac{a + b}{2}$",
+      "$\\sqrt{\\frac{a^2 + b^2}{2}} \\leq \\frac{a + b}{2}$",
       "$\\frac{2ab}{a + b} \\geq \\sqrt{ab}$",
       "$\\sqrt{ab} \\geq \\frac{a + b}{2}$",
       "$\\sqrt{ab} \\geq \\frac{2ab}{a + b}$",
