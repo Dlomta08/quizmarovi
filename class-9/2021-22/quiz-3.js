@@ -49,7 +49,7 @@ const quizData = [
   },
   // 9
   {
-    image: "math/class-9/images/image3.png",
+    image: "class-9/images/image3.png",
     question: "$ABCD$ კვადრატის გვერდებზე, როგორც დიამეტრებზე აგებულია ნახევარწრეწირები (იხ. ნახაზი). იპოვეთ გამუქებული ფიგურის ფართობი, თუ კვადრატის გვერდის სიგრძე $a$-ს ტოლია.",
     options: [],
     tags: []

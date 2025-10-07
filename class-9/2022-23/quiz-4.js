@@ -127,7 +127,7 @@ const quizData = [
 
 //16
 {
-  question: "ნებისმიერი ორი $A$ და $B$ ხდომილებისთვის შემდეგი სამი ტოლობიდან რომელია აუცილებლად ჭეშმარიტი? ( $A + B = A \\cup B$, $A \\cdot B = A \\cap B$, $A - B = A{/} B$ ) <br><br> I. $A + (B \\cdot A) = (A + B) \\cdot A \\qquad $ II. $A − (B \\cdot A) = (A − B) \\cdot A \\qquad $  III. $A + (B − A) = (A + B) − A$",
+  question: "ნებისმიერი ორი $A$ და $B$ ხდომილებისთვის შემდეგი სამი ტოლობიდან რომელია აუცილებლად ჭეშმარიტი? ( $A + B = A \\cup B$, $A \\cdot B = A \\cap B$, $A - B = A \\backslash B$ ) <br><br> I. $A + (B \\cdot A) = (A + B) \\cdot A \\qquad $ II. $A − (B \\cdot A) = (A − B) \\cdot A \\qquad $  III. $A + (B − A) = (A + B) − A$",
   options: ["მხოლოდ I და II", "მხოლოდ I და III", "მხოლოდ II და III", "მხოლოდ I", "მხოლოდ II", "მხოლოდ III"],
   correct: 0,
   tags: []

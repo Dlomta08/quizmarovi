@@ -1,7 +1,7 @@
 const quizData = [
   //1
   {
-    image: "math/class-9/images/image5.png",
+    image: "class-9/images/image5.png",
     question: "ნახაზზე მოცემულია პარაბოლის ფრაგმენტი. იპოვეთ მისი წვეროს ორდინატა.",
     options: ["$2$", "$3$", "$3{,}5$", "$4$", "$4{,}5$", "$5$"],
     correct: 3,
