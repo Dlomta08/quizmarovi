@@ -175,7 +175,7 @@ function startQuiz(withTimer) {
   const pageTimerEl = document.getElementById("timer");
   if (withTimer) {
     const customMinutesInput = document.getElementById("customTime");
-    let customMinutes = 30;
+    let customMinutes = 180;
     if (customMinutesInput) {
       const inputVal = parseInt(customMinutesInput.value);
       if (!isNaN(inputVal) && inputVal >= 1) customMinutes = inputVal;
