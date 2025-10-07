@@ -3,6 +3,7 @@ let timerInterval;
 let timeLeft = 3 * 60 * 60;
 let simulationMode = false;
 const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
+const selectionFadeTimers = new WeakMap(); // manage fade timers per label
 
 /* ---------- Inject CSS (options + floating timer) ---------- */
 (function ensureGlobalStyles(){
@@ -23,10 +24,10 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       cursor: pointer;
       user-select: none;
       transition:
-        background .08s ease,
-        border-color .08s ease,
-        color .08s ease,
-        box-shadow .08s ease,
+        background .20s ease,
+        border-color .20s ease,
+        color .18s ease,
+        box-shadow .20s ease,
         transform .12s ease;
     }
     .option-chip input[type="radio"]{ position:absolute !important; opacity:0 !important; width:0 !important; height:0 !important; margin:0 !important; pointer-events:none !important; }
@@ -84,7 +85,7 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       top: max(10px, env(safe-area-inset-top));
       left: 50%;
       transform: translateX(-50%);
-      z-index: 2147483647; /* sit above everything */
+      z-index: 2147483647;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -98,18 +99,18 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       background: rgba(255,255,255,0.92);
       backdrop-filter: blur(8px);
       box-shadow: 0 6px 18px rgba(0,0,0,.18);
-      color: #111827; /* gray-900 */
-      pointer-events: none; /* never block clicks below */
+      color: #111827;
+      pointer-events: none;
     }
     [data-theme="dark"] #floating-timer {
-      background: rgba(17,24,39, 0.74); /* gray-900 */
-      color: #e5e7eb; /* gray-200 */
+      background: rgba(17,24,39, 0.74);
+      color: #e5e7eb;
       border-color: rgba(255,255,255,.12);
       box-shadow: 0 6px 18px rgba(0,0,0,.45);
     }
     #floating-timer .dot {
       width: 10px; height: 10px; border-radius: 50%;
-      background: #10b981; /* emerald-500 */
+      background: #10b981;
       box-shadow: 0 0 0 6px rgba(16,185,129,.15);
       animation: pulse 1.6s ease-in-out infinite;
       pointer-events: none;
@@ -119,10 +120,8 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       min-width: 74px;
       text-align: center;
     }
-
-    /* Turn dot red in last 30 minutes */
     #floating-timer.warning .dot {
-      background: #ef4444; /* red-500 */
+      background: #ef4444;
       box-shadow: 0 0 0 6px rgba(239,68,68,.25);
     }
     @keyframes pulse {
@@ -130,7 +129,6 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       70% { box-shadow: 0 0 0 10px rgba(16,185,129,0); }
       100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); }
     }
-    /* Red pulse for warning */
     #floating-timer.warning .dot {
       animation: pulse-red 1.6s ease-in-out infinite !important;
     }
@@ -174,7 +172,7 @@ function startQuiz(withTimer) {
   quizForm.style.display = "block";
   renderQuiz();
 
-  const pageTimerEl = document.getElementById("timer"); // existing on-page timer
+  const pageTimerEl = document.getElementById("timer");
   if (withTimer) {
     const customMinutesInput = document.getElementById("customTime");
     let customMinutes = 30;
@@ -184,7 +182,6 @@ function startQuiz(withTimer) {
     }
     timeLeft = customMinutes * 60;
 
-    // Hide original portal spot; show floating timer instead
     if (pageTimerEl) pageTimerEl.style.display = "none";
     const ft = createFloatingTimer();
 
@@ -218,7 +215,6 @@ function updateTimerDisplay() {
   const floating = document.getElementById("floating-time");
   if (floating) floating.textContent = t;
 
-  // Toggle red warning dot for last 30 minutes
   const ftRoot = document.getElementById("floating-timer");
   if (ftRoot) {
     if (timeLeft <= 1800) ftRoot.classList.add("warning");
@@ -273,6 +269,8 @@ function revealAllAnswers(form){
         }
       }
     }
+
+    fs.classList.add("answered");
   });
 
   return score;
@@ -326,10 +324,9 @@ function renderQuiz(){
     const feedback = document.createElement("div");
     feedback.className = "feedback";
 
-    // === Ultra-fast grading: no MathJax.typeset() here, and use pointer events ===
     function gradeAndLock(selectedIdx, clickEvent) {
       fieldset.querySelectorAll("label.option-chip").forEach(l => {
-        l.classList.remove("selected","is-correct","is-wrong","pop");
+        l.classList.remove("selected","pop");
       });
 
       const selectedLabel = fieldset.querySelector(`label.option-chip[data-index="${selectedIdx}"]`);
@@ -365,23 +362,59 @@ function renderQuiz(){
         addRipple(selectedLabel, x, y, rippleColor);
       }
 
-      fieldset.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
       fieldset.classList.add("answered");
     }
 
-    function selectOnly(selectedIdx, clickEvent){
-      fieldset.querySelectorAll("label.option-chip").forEach(l => l.classList.remove("selected","pop"));
+    // Persistent selection used ONLY during simulation mode before finish
+    function selectPersistent(selectedIdx, clickEvent){
+      // Remove selection from others (radio behavior)
+      fieldset.querySelectorAll("label.option-chip").forEach(l => {
+        l.classList.remove("selected","pop");
+        const pending = selectionFadeTimers.get(l);
+        if (pending) { clearTimeout(pending); selectionFadeTimers.delete(l); }
+      });
       const selectedLabel = fieldset.querySelector(`label.option-chip[data-index="${selectedIdx}"]`);
       if (selectedLabel){
         selectedLabel.classList.add("selected","pop");
+        const radio = selectedLabel.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
         if (clickEvent){
           const rect = selectedLabel.getBoundingClientRect();
           const x = clickEvent.clientX - rect.left;
           const y = clickEvent.clientY - rect.top;
           addRipple(selectedLabel, x, y, "rgba(67,97,238,.3)");
         }
+        // NO fade timer here; keep selected persistently (old behavior)
       }
-      fieldset.classList.remove("answered");
+    }
+
+    // Post-finish simulation-style quick flash (0.2s solid + transition fade)
+    function selectOnly(selectedIdx, clickEvent){
+      fieldset.querySelectorAll("label.option-chip").forEach(l => {
+        l.classList.remove("selected","pop");
+        const pending = selectionFadeTimers.get(l);
+        if (pending) { clearTimeout(pending); selectionFadeTimers.delete(l); }
+      });
+
+      const selectedLabel = fieldset.querySelector(`label.option-chip[data-index="${selectedIdx}"]`);
+      if (selectedLabel){
+        selectedLabel.classList.add("selected","pop");
+        const radio = selectedLabel.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+
+        if (clickEvent){
+          const rect = selectedLabel.getBoundingClientRect();
+          const x = clickEvent.clientX - rect.left;
+          const y = clickEvent.clientY - rect.top;
+          addRipple(selectedLabel, x, y, "rgba(67,97,238,.3)");
+        }
+
+        const fadeId = setTimeout(() => {
+          selectedLabel.classList.remove("selected");
+          selectionFadeTimers.delete(selectedLabel);
+        }, 200);
+        selectionFadeTimers.set(selectedLabel, fadeId);
+      }
     }
 
     q.options.forEach((opt, j) => {
@@ -395,32 +428,40 @@ function renderQuiz(){
       radio.name = `question${i}`;
       radio.value = j;
 
-      // Faster feedback: pointerdown fires sooner than click on some devices
       label.addEventListener("pointerdown", (e) => {
-        e.preventDefault(); // prevent focus flicker / text selection
+        e.preventDefault();
         radio.checked = true;
-        if (simulationMode) {
+        const formEl = document.getElementById("quizForm");
+        const isFinished = formEl && formEl.classList.contains("finished");
+
+        if (isFinished || fieldset.classList.contains("answered")) {
+          // after finish -> quick flash behavior
           selectOnly(j, e);
+        } else if (simulationMode) {
+          // during simulation with timer -> persistent tick like original
+          selectPersistent(j, e);
         } else {
-          if (!fieldset.classList.contains("answered")) gradeAndLock(j, e);
+          // immediate mode -> grade & lock
+          gradeAndLock(j, e);
         }
       });
 
       label.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          // emulate pointerdown path for keyboard
+          const formEl = document.getElementById("quizForm");
+          const isFinished = formEl && formEl.classList.contains("finished");
           radio.checked = true;
-          if (simulationMode) {
+
+          if (isFinished || fieldset.classList.contains("answered")) {
             selectOnly(j, null);
+          } else if (simulationMode) {
+            selectPersistent(j, null);
           } else {
-            if (!fieldset.classList.contains("answered")) gradeAndLock(j, null);
+            gradeAndLock(j, null);
           }
         }
       });
-
-      // Remove the 'change' handler to avoid double-processing and any event lag
-      // radio.addEventListener("change", ... )  // intentionally omitted
 
       label.append(`${fox[j]}`);
       label.appendChild(radio);
@@ -499,6 +540,9 @@ function renderQuiz(){
     const score = revealAllAnswers(form);
 
     resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}`;
+
+    // mark finished so clicks become quick-flash simulation
+    form.classList.add("finished");
 
     if (simulationMode) form.querySelector("button[type='submit']").disabled = true;
     removeFloatingTimer();
