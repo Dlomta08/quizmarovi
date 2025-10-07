@@ -23,15 +23,15 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       cursor: pointer;
       user-select: none;
       transition:
-        background .28s ease,
-        border-color .28s ease,
-        color .28s ease,
-        box-shadow .28s ease,
-        transform .18s ease;
+        background .08s ease,
+        border-color .08s ease,
+        color .08s ease,
+        box-shadow .08s ease,
+        transform .12s ease;
     }
     .option-chip input[type="radio"]{ position:absolute !important; opacity:0 !important; width:0 !important; height:0 !important; margin:0 !important; pointer-events:none !important; }
     .option-chip:hover{ transform: translateY(-1px); }
-    .option-chip.pop { animation: pop .18s ease; }
+    .option-chip.pop { animation: pop .12s ease; }
     @keyframes pop { 0%{ transform: scale(.98) } 100%{ transform: scale(1) } }
     .option-chip.selected{
       background: rgba(var(--primary-rgb, 67,97,238), 0.28);
@@ -46,7 +46,7 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       background:#fca5a5 !important; border-color:#fca5a5 !important; color:#7f1d1d !important;
       box-shadow: 0 0 0 2px rgba(252,165,165,.35) inset, 0 6px 16px rgba(239,68,68,.2);
     }
-    .chip-ripple{ position:absolute; border-radius:50%; transform: translate(-50%,-50%) scale(0); animation: ripple .6s ease-out forwards; pointer-events:none; opacity:.85; }
+    .chip-ripple{ position:absolute; border-radius:50%; transform: translate(-50%,-50%) scale(0); animation: ripple .45s ease-out forwards; pointer-events:none; opacity:.85; }
     @keyframes ripple{ to { transform: translate(-50%,-50%) scale(18); opacity:0; } }
 
     /* ===== Buttons & layout ===== */
@@ -59,7 +59,7 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       font-weight: 600;
       border-radius: 50px;
       cursor: pointer;
-      transition: all var(--transition-speed, 0.3s) ease;
+      transition: all var(--transition-speed, 0.2s) ease;
       box-shadow: 0 4px 12px rgba(var(--primary-rgb, 102, 126, 234), 0.3);
       width: 100%;
       max-width: 400px;
@@ -69,13 +69,13 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
     button[type="submit"]:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(var(--primary-rgb, 102, 126, 234), 0.4); background: var(--secondary-color); }
     button[type="submit"]:active { transform: translateY(0); }
     button[type="submit"]:disabled { background: #999; cursor: not-allowed; box-shadow: none; opacity: 0.6; }
-    .mark-done-btn { background: var(--card-bg, white); color: var(--text-primary, #333); border: 2px solid var(--border-color, #ddd); padding: 0.8rem 1.8rem; font-size: 1rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all var(--transition-speed, 0.3s) ease; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
-    .mark-done-btn:hover { border-color: var(--primary-color); color: var(--primary-color); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(var(--primary-rgb, 102, 126, 234), 0.2); }
-    .mark-done-btn.is-done { background: var(--primary-color); color: white; border-color: var(--primary-color); box-shadow: 0 3px 12px rgba(var(--primary-rgb, 102, 126, 234), 0.3); }
+    .mark-done-btn { background: var(--card-bg, white); color: var(--text-primary, #333); border: 2px solid var(--border-color, #ddd); padding: 0.8rem 1.8rem; font-size: 1rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all var(--transition-speed, 0.2s) ease; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
+    .mark-done-btn:hover { border-color: var(--primary-color); color: var(--primary-color); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+    .mark-done-btn.is-done { background: var(--primary-color); color: white; border-color: var(--primary-color); box-shadow: 0 3px 12px rgba(0,0,0, 0.3); }
     .mark-done-btn.is-done:hover { background: var(--secondary-color); border-color: var(--secondary-color); }
     .action-row { display: flex; gap: 12px; align-items: center; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
-    .tick-mark { color: var(--primary-color); font-size: 1.5rem; font-weight: bold; animation: scaleIn .3s ease; }
-    @keyframes scaleIn { 0%{transform:scale(0);opacity:0} 50%{transform:scale(1.2)} 100%{transform:scale(1);opacity:1} }
+    .tick-mark { color: var(--primary-color); font-size: 1.5rem; font-weight: bold; animation: scaleIn .2s ease; }
+    @keyframes scaleIn { 0%{transform:scale(0);opacity:0} 50%{transform:scale(1.15)} 100%{transform:scale(1);opacity:1} }
     @media (max-width: 640px) { .action-row { flex-direction: column; align-items: stretch; } button[type="submit"], .mark-done-btn { width: 100%; max-width: none; } }
 
     /* ===== Floating timer (detached to body) ===== */
@@ -226,13 +226,6 @@ function updateTimerDisplay() {
   }
 }
 
-  const timeEl = document.getElementById("time");
-  if (timeEl) timeEl.textContent = t;
-
-  const floating = document.getElementById("floating-time");
-  if (floating) floating.textContent = t;
-
-
 /* ------------ ripple utility ------------ */
 function addRipple(el, x, y, color){
   const r = document.createElement('span');
@@ -280,9 +273,6 @@ function revealAllAnswers(form){
         }
       }
     }
-
-  // fs.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
-  // fs.classList.add("answered");
   });
 
   return score;
@@ -336,13 +326,14 @@ function renderQuiz(){
     const feedback = document.createElement("div");
     feedback.className = "feedback";
 
+    // === Ultra-fast grading: no MathJax.typeset() here, and use pointer events ===
     function gradeAndLock(selectedIdx, clickEvent) {
       fieldset.querySelectorAll("label.option-chip").forEach(l => {
         l.classList.remove("selected","is-correct","is-wrong","pop");
       });
 
       const selectedLabel = fieldset.querySelector(`label.option-chip[data-index="${selectedIdx}"]`);
-      let isCorrect;
+      let isCorrect = false;
 
       if (selectedLabel){
         selectedLabel.classList.add("pop");
@@ -366,8 +357,6 @@ function renderQuiz(){
         }
       }
 
-      if (window.MathJax) MathJax.typeset();
-
       if (selectedLabel && clickEvent){
         const rect = selectedLabel.getBoundingClientRect();
         const x = clickEvent.clientX - rect.left;
@@ -376,8 +365,8 @@ function renderQuiz(){
         addRipple(selectedLabel, x, y, rippleColor);
       }
 
-  fieldset.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
-  fieldset.classList.add("answered");
+      fieldset.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
+      fieldset.classList.add("answered");
     }
 
     function selectOnly(selectedIdx, clickEvent){
@@ -406,7 +395,9 @@ function renderQuiz(){
       radio.name = `question${i}`;
       radio.value = j;
 
-      label.addEventListener("click", (e) => {
+      // Faster feedback: pointerdown fires sooner than click on some devices
+      label.addEventListener("pointerdown", (e) => {
+        e.preventDefault(); // prevent focus flicker / text selection
         radio.checked = true;
         if (simulationMode) {
           selectOnly(j, e);
@@ -418,17 +409,18 @@ function renderQuiz(){
       label.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          label.click();
+          // emulate pointerdown path for keyboard
+          radio.checked = true;
+          if (simulationMode) {
+            selectOnly(j, null);
+          } else {
+            if (!fieldset.classList.contains("answered")) gradeAndLock(j, null);
+          }
         }
       });
 
-      radio.addEventListener("change", () => {
-        if (simulationMode) {
-          selectOnly(j, null);
-        } else {
-          if (!fieldset.classList.contains("answered")) gradeAndLock(j, null);
-        }
-      });
+      // Remove the 'change' handler to avoid double-processing and any event lag
+      // radio.addEventListener("change", ... )  // intentionally omitted
 
       label.append(`${fox[j]}`);
       label.appendChild(radio);
