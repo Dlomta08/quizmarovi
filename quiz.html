@@ -7,7 +7,6 @@
   
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
   <link rel="stylesheet" href="quiz-style.css">
   
   <script>
@@ -17,6 +16,20 @@
     };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+  <style>
+    /* Keep footer at bottom */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .quiz-view-container {
+      flex: 1;
+    }
+    
+  </style>
 </head>
 <body>
 
@@ -70,7 +83,6 @@
     </footer>
 
   <script>
-    // Dynamically set title and back-link URL from parameters
     const params = new URLSearchParams(window.location.search);
     const classNum = params.get("class");
     const year = params.get("year");
@@ -82,11 +94,8 @@
       
       document.title = `${numShow} ქვიზი - ${classNum} კლასი`;
       document.getElementById("quiz-title").textContent = title;
-      
-      // Set the back link to go to the correct class page
       document.getElementById("back-link").href = `class-quizzes.html?class=${classNum}`;
 
-      // Load the specific quiz data
       const script = document.createElement("script");
       script.src = `class-${classNum}/${year}/quiz-${number}.js`;
       script.onerror = () => {
