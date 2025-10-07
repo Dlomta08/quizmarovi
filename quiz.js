@@ -34,9 +34,9 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
     .option-chip.pop { animation: pop .18s ease; }
     @keyframes pop { 0%{ transform: scale(.98) } 100%{ transform: scale(1) } }
     .option-chip.selected{
-      background: rgba(var(--primary-rgb, 67,97,238), 0.10);
-      border-color: rgba(var(--primary-rgb, 67,97,238), 0.45);
-      box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 67,97,238), 0.12) inset;
+      background: rgba(var(--primary-rgb, 67,97,238), 0.28);
+      border-color: rgba(var(--primary-rgb, 67,97,238), 0.75);
+      box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 67,97,238), 0.22) inset;
     }
     .option-chip.is-correct{
       background:#86efac !important; border-color:#86efac !important; color:#064e3b !important;
@@ -119,10 +119,25 @@ const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
       min-width: 74px;
       text-align: center;
     }
+
+    /* Turn dot red in last 30 minutes */
+    #floating-timer.warning .dot {
+      background: #ef4444; /* red-500 */
+      box-shadow: 0 0 0 6px rgba(239,68,68,.25);
+    }
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(16,185,129,.5); }
       70% { box-shadow: 0 0 0 10px rgba(16,185,129,0); }
       100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); }
+    }
+    /* Red pulse for warning */
+    #floating-timer.warning .dot {
+      animation: pulse-red 1.6s ease-in-out infinite !important;
+    }
+    @keyframes pulse-red {
+      0% { box-shadow: 0 0 0 0 rgba(239,68,68,.5); }
+      70% { box-shadow: 0 0 0 10px rgba(239,68,68,0); }
+      100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); }
     }
   `;
   document.head.appendChild(s);
@@ -162,7 +177,7 @@ function startQuiz(withTimer) {
   const pageTimerEl = document.getElementById("timer"); // existing on-page timer
   if (withTimer) {
     const customMinutesInput = document.getElementById("customTime");
-    let customMinutes = 180;
+    let customMinutes = 30;
     if (customMinutesInput) {
       const inputVal = parseInt(customMinutesInput.value);
       if (!isNaN(inputVal) && inputVal >= 1) customMinutes = inputVal;
@@ -202,7 +217,21 @@ function updateTimerDisplay() {
 
   const floating = document.getElementById("floating-time");
   if (floating) floating.textContent = t;
+
+  // Toggle red warning dot for last 30 minutes
+  const ftRoot = document.getElementById("floating-timer");
+  if (ftRoot) {
+    if (timeLeft <= 1800) ftRoot.classList.add("warning");
+    else ftRoot.classList.remove("warning");
+  }
 }
+
+  const timeEl = document.getElementById("time");
+  if (timeEl) timeEl.textContent = t;
+
+  const floating = document.getElementById("floating-time");
+  if (floating) floating.textContent = t;
+
 
 /* ------------ ripple utility ------------ */
 function addRipple(el, x, y, color){
@@ -252,8 +281,8 @@ function revealAllAnswers(form){
       }
     }
 
-    fs.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
-    fs.classList.add("answered");
+  // fs.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
+  // fs.classList.add("answered");
   });
 
   return score;
@@ -347,8 +376,8 @@ function renderQuiz(){
         addRipple(selectedLabel, x, y, rippleColor);
       }
 
-      fieldset.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
-      fieldset.classList.add("answered");
+  fieldset.querySelectorAll(`input[name="question${i}"]`).forEach(inp => inp.disabled = true);
+  fieldset.classList.add("answered");
     }
 
     function selectOnly(selectedIdx, clickEvent){

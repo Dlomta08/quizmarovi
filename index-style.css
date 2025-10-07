@@ -1,3 +1,20 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main.hero-section {
+    flex: 1 0 auto;
+}
+
+.main-footer {
+    flex-shrink: 0;
+}
 /* Styles specific to index.html */
 .hero-section {
     min-height: calc(100vh - 60px - 60px);
@@ -67,7 +84,11 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: clamp(3rem, 7vw, 4.5rem);
+    font-size: clamp(2.8rem, 6vw, 4rem);
+    line-height: 1.25;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
+    overflow: visible;
 }
 
 .main-button {
