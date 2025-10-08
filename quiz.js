@@ -212,6 +212,7 @@ function updateTimerDisplay() {
   if (ftRoot) {
     const dot = ftRoot.querySelector(".dot");
     if (dot && timeLeft <= 1800) dot.style.background = "#ef4444";
+    if (dot && timeLeft <= 1800) dot.style.animation = "pulse-red 1.6s ease-in-out infinite";
   }
 }
 
