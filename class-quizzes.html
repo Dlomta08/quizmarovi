@@ -96,7 +96,6 @@
                 // Quizzes grid
                 const quizzesGrid = document.createElement("div");
                 quizzesGrid.className = "quizzes-grid";
-                
                 for (let q = 1; q <= quizzesPerYear; q++) {
                     const quizCard = document.createElement("div");
                     quizCard.className = "quiz-card";
@@ -110,8 +109,8 @@
                     quizNumber.textContent = q;
                     
                     const quizTitle = document.createElement("h3");
+                    quizTitle.className = "quiz-title";
                     quizTitle.textContent = q === 1 ? `1-ლი ქვიზი` : `მე-${q} ქვიზი`;
-                    
                     // The tiny white circle (turns green when done)
                     const statusIcon = document.createElement("i");
                     statusIcon.className = "fas fa-circle status-icon";
