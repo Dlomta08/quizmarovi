@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
 
   //1
   {

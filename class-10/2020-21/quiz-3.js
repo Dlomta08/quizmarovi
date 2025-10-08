@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "ამოხსენით უტოლობა: $\\sqrt{x^2 - x - 2} < x - 2$.",

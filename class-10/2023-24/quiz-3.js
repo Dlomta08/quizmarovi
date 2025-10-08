@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
 // 1
 {
   question: "ამოხსენით $\\sin x \\cos 2x + \\cos x \\sin 2x = 1$ განტოლება (სავარაუდო პასუხებში ყველგან $k \\in \\mathbb{Z}$).",

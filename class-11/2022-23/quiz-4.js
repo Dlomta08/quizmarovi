@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
     {
         question: "გამოთვალეთ $f'\\left(\\frac{\\pi}{4}\\right)$, თუ $f(x) = \\sin2x$.",
         options: [

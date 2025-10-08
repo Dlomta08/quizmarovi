@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "$\\lim\\limits_{x \\to 0} \\frac{\\sqrt{1 + 2x} - 1}{5x} = $",

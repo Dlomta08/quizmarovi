@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   {
     // 1
     question: "მოცემულია შემდეგი სიმრავლეები: $A = [-5; 7)$, $B = \\left(-\\frac{19}{4}; 0\\right)$ და $C = \\left[-1; \\frac{4}{3}\\right)$. რამდენი მთელი რიცხვია $(A \\cap B) \\setminus C$ სიმრავლეში?",

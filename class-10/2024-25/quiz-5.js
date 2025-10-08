@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   //1
   {
     question: "გამოთვალეთ $\\cos 75^\\circ - \\sin 15^\\circ$.",

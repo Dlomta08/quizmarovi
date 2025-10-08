@@ -1,5 +1,5 @@
 //1
-const quizData = [
+quizData = [
   {
     question: "$f(x) = x^3 + x^2$, $g(x) = x^3$ და $h(x) = x^2$ ფუქნციებიდან რომელია ლუწი?",
     options: [

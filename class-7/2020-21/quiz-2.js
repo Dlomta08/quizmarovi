@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "გამოთვალეთ:  $28 − 4 \\cdot (25 − 33 + (−100))$",

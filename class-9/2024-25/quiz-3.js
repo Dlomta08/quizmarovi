@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   //1
   {
     question: "რამდენი ამონახსნი აქვს $27x \\equiv 1 \\pmod{9}$ განტოლებას?",

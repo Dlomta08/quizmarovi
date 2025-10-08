@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "ამოხსენით უტოლობა $\\sin x \\cdot \\cos x > \\frac{1}{4}$",

@@ -1,5 +1,5 @@
 // საწერია
-const quizData = [
+quizData = [
   // 1
   {
     question: "იპოვეთ $a + b$, თუ $a = 0{,}(199)$ და $b = 0{,}(800)$.",

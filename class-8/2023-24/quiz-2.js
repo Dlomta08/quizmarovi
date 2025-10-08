@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "გამოთვალეთ $0{,}(27) + 0{,}5(45)$.",

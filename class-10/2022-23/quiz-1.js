@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   //1
   {
     question: "დაალაგეთ ზრდადობით $a = \\sin 7; \\quad b = \\cos 280^\\circ; \\quad c = \\sin 8.$",

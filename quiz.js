@@ -120,17 +120,10 @@ const selectionFadeTimers = new WeakMap(); // manage fade timers per label
       min-width: 74px;
       text-align: center;
     }
-    #floating-timer.warning .dot {
-      background: #ef4444;
-      box-shadow: 0 0 0 6px rgba(239,68,68,.25);
-    }
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(16,185,129,.5); }
       70% { box-shadow: 0 0 0 10px rgba(16,185,129,0); }
       100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); }
-    }
-    #floating-timer.warning .dot {
-      animation: pulse-red 1.6s ease-in-out infinite !important;
     }
     @keyframes pulse-red {
       0% { box-shadow: 0 0 0 0 rgba(239,68,68,.5); }
@@ -217,8 +210,8 @@ function updateTimerDisplay() {
 
   const ftRoot = document.getElementById("floating-timer");
   if (ftRoot) {
-    if (timeLeft <= 1800) ftRoot.classList.add("warning");
-    else ftRoot.classList.remove("warning");
+    const dot = ftRoot.querySelector(".dot");
+    if (dot && timeLeft <= 1800) dot.style.background = "#ef4444";
   }
 }
 

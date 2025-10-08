@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
     {
         question: "იპოვეთ $\\lim\\limits_{x\\to\\infty}\\frac{2x^3+3x^2}{x^3}$ ზღვარი.",
         options: [

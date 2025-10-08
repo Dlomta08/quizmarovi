@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "ჩაწერეთ $\\left(-\\frac{1}{3}a^3b^2\\right)^2 \\cdot \\left(2a^5b^7\\right)^3$ გამოსახულება სტანდარტული სახით.",

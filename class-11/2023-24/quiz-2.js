@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
     {
         question: "რისი ტოლია \\(\\log_{0{,}5}(\\log_2 \\sqrt{x + 1}) > 0\\) უტოლობის მთელი ამონახსნების ჯამი.",
         options: [

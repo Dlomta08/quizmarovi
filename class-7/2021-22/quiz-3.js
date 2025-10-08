@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "იპოვეთ გამოსახულების მნიშვნელობა: <br><br> ა) $(2\\dfrac{2}{3})^8 \\cdot (\\dfrac{3}{8})^{8}$; $\\quad$ ბ) $\\dfrac{3^{16} \\cdot 2^{10}}{54^{5}}$.",

@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
     {
         question: "იპოვეთ $y= \\sqrt[3]{0{,}5x-1}$ ფუნქციის შექცეული ფუნქცია.",
         options: [

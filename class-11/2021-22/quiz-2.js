@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "ამოხსენით $\\log_{\\sin 25^\\circ}|2x - 1| > \\log_{\\sin 25^\\circ} 3$ უტოლობა.",

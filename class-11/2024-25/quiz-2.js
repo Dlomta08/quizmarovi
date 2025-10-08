@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "$3^\\sqrt{x} < 3^{x - 2}$ უტოლობის ამონახსნთა სიმრავლეა:",

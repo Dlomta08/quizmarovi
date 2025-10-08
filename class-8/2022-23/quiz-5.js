@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "გამოთვალეთ: $\\frac{(-12)^{-6} \\cdot 16^3}{81^{-2}}$.",

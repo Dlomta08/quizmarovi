@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
     // 1
 {
   question: "იპოვეთ $x^2 + 3x = 0$ და $x^2 = 9$ განტოლებების საერთო ფესვი.",

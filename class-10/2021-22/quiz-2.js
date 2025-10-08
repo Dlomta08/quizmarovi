@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "ამოხსენით $\\cos x = a$ განტოლება, სადაც $a = 2 \\cos 20° \\cdot \\cos 40° - \\cos 20°$.",

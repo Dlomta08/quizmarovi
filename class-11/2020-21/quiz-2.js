@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   {
     question: "იპოვეთ კუთხე \\( y = 5x - 2 \\) და \\( y = 3x + 1 \\) ფუნქციების გრაფიკებს შორის.",
     options: ["$arcsin\\frac{3}{5}$", "$arccos\\frac{3}{5}$", "$arctan\\frac{1}{8}$", "$arccot\\frac{2}{7}$", "$15^\\circ$", "$22{,}5^\\circ$"],

@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
 // 1
 {
   question: "დაალგეთ ზრდადობის მიხედვით $a = \\tan 280^\\circ$, $b = \\sin 18^\\circ$, $c = \\cos 18^\\circ$.",

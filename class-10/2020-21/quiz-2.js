@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // Question 1
   {
     question: "$C_{10}^{2} + C_{10}^{3} = $",

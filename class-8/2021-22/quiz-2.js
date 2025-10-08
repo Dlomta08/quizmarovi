@@ -1,5 +1,5 @@
 // საწერია
-const quizData = [
+quizData = [
   // 1
   {
     question: "ცნობილია, რომ $3 \\leq m \\leq 7$ და $5 \\leq n \\leq 8$. შეაფასეთ $2m − 3n$ და $\\frac{5m + 7n}{mn}$ გამოსახულებების მნიშვნელობები.",

@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   //1
   {
     question: "იპოვეთ $\\frac{3}{x - 1} < 1$ უტოლობის ამონახსნთა სიმრავლე.",

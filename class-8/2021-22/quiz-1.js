@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
 //1
 {
   question: "იპოვეთ $a$, თუ $a - b = a^2 - b^2 = 199$.",

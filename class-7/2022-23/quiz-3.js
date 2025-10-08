@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "გამოთვალეთ $\\dfrac{7^3 - 1}{57}$.",

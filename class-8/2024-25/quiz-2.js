@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "გამოთვალეთ: $\\sqrt{12{\\frac{1}{4}}} + \\frac{\\sqrt{10{,}8}}{\\sqrt{4{,}8}}$ = ?",

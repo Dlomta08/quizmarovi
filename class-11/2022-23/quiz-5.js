@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
     {
       question: "გამოთვალეთ \\( \\int_{\\frac{\\pi}{12}}^{\\frac{\\pi}{4}} \\cos2x \\, dx \\) ინტეგრალი.",
       options: ["$\\pi$", "$-1$", "$0$", "$1$", "$\\frac{1}{4}$", "$\\frac{1}{2}$"],

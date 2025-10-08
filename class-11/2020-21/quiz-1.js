@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "ამოხსენით განტოლება: $\\log_3(3x - 20) - \\log_3(2x - 19) = \\log_{\\sqrt{3}} \\sqrt{x}$",

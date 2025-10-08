@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "გამოთვალეთ: $\\dfrac{(83\\frac{5}{18} - 85\\frac{7}{30}) : 2\\frac{2}{3}}{0{,}04} \\cdot (-\\dfrac{3}{11})$.",

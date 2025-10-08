@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "ამოხსენით $4 \\sin x = 5 \\cos x$ განტოლება.",

@@ -1,5 +1,5 @@
 // saweria
-const quizData = [
+quizData = [
   // 1
   {
     question: "ამოხსენით $\\begin{cases} 3(x − y) − 2(x − y)^2 = −2 \\\\ 2x + 7y = −5 \\end{cases}$ განტოლებათა სისტემა.",

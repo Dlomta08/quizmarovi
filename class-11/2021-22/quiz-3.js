@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "იპოვეთ $\\lim\\limits_{x\\to\\infty}\\frac{(2n + 3)!}{n^2 \\cdot (2n + 1)!}$ მიმდევრობის ზღვარი.",

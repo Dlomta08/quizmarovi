@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
         {
             question: "გამოთვალეთ $\\log_5 7 \\cdot \\log_{49} 125$.",
             options: ["$\\frac{3}{2}$", "$5$", "$7$", "$\\frac{5}{2}$", "$3$", "$35$"],

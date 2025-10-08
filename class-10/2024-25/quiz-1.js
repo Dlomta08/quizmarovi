@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "დაალაგეთ კლებადობის მიხედვით $a = \\tan 243°$, $b = \\sin 90°$, $c = \\tan 223°$.",

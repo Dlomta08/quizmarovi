@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   //1
   {
     question: "გამოთვალეთ  $\\dfrac{3^5 \\cdot 6^8}{9^6 \\cdot 4^4}$.",

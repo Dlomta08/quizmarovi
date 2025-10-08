@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   //1
   {
     question: "გამოთვალეთ $\\frac{1}{9} - 0{,}(7) + \\frac{1}{3}$.",

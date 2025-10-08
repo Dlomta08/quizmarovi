@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
     {
         question: "გამოთვალეთ $f'(1)$, თუ $f(x) = 2x^3 + 5(3x-1)^2 + 4$.",
         options: [

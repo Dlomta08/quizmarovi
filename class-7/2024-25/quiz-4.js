@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "ამოხსენით $3x - 1 = -x + 7$ განტოლება გრაფიკულად.",

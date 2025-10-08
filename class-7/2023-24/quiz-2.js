@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   //1
   {
     question: "იპოვეთ $|2x − 3| = 9$ განტოლების ამონახსნთა ჯამი.",

@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   //1
   {
   image: "class-9/images/image5.png",

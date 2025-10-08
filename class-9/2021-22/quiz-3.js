@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "დაწერეთ $y = \\sqrt{x - 2}, \\ x \\geq 4$ ფუნქციის შექცეული ფუნქციის განტოლება.",

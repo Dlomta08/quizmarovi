@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "ამოხსენით უტოლობა: $\\frac{{(x - 2x^2)}^3{(3x + 9)}}{- x^2 + 5x - 6} \\leq 0 $",

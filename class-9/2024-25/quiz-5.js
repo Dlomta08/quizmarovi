@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   //1
   {
     question: "იპოვეთ $f(x) = 3 - \\dfrac{2}{2 + \\sqrt{x - 5}}$ ფუნქციის უმცირესი მნიშვნელობა.",

@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
 // 1
 {
   question: "იპოვეთ $\\left[2^{\\frac{4}{3}} + 2^{\\frac{1}{3}}\\right]$. (აქ $[\\ldots ]$ მთელი ნაწილია)",

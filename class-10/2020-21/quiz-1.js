@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   {
   question: "გამოთვალეთ:  \n$\\frac{\\sin 35^\\circ \\cdot \\sin 84^\\circ - \\sin 55^\\circ \\cdot \\sin 6^\\circ}{\\cos 50^\\circ \\cdot \\sin 21^\\circ - \\cos 40^\\circ \\cdot \\cos 21^\\circ}$",
   options: [],

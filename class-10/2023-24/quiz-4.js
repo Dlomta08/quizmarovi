@@ -1,6 +1,7 @@
-const quizData = [
+quizData = [
 // 1
 {
+  random: 1,
   intro: `
     <p><strong>ბილეთში ყველგან:</strong></p>
     <p>

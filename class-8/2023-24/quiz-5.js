@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "იპოვეთ $\\sqrt{|x - 3|} = 1$ განტოლების ფესვების ჯამი.",

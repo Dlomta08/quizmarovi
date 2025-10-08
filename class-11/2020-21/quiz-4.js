@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   {
     question: "იპოვეთ შემდეგი ინტეგრალები: ა) $\\int\\left(x^{-0{,}5} + \\sin x - \\frac{2}{x}\\right) dx$   ბ) $\\int\\left(\\frac{1}{\\cos^2x} + \\frac{2}{\\sqrt{1-x^2}} - 2^x\\right) dx$   გ) $\\int\\frac{2x dx}{1+x^4}$",
     options: [],

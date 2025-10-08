@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
 // 1
 {
   question: "იპოვეთ $\\vec{m}(-3; 3; -2)$ ვექტორის სიგრძე:",

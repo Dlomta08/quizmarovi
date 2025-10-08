@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   // 1
   {
     question: "ამოხსენით $\\sin x = \ tg x$ განტოლება. (სავარაუდო პასუხებში ყველგან $n \\in \\mathbb{Z}$)",

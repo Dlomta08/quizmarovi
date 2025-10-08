@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
   //1
   {
     question: "რისი ტოლია $\\cos(\\alpha + \\beta) + \\cos(\\alpha - \\beta)$ გამოსახულების მნიშვნელობა?",

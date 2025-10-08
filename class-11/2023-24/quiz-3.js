@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
     {
         question: "მოცემული გვაქვს მიმდევრობა $X_n= \\begin{cases} 1 + \\frac{1}{n} & n=2k+1 \\\\ -2 + \\frac{1}{n} & n=2k \\end{cases}$. ჩამოთვლილთაგან რომელია სამართლიანი?",
         options: [

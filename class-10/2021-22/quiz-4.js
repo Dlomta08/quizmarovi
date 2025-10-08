@@ -1,4 +1,4 @@
-const quizData = [
+quizData = [
 // 1
 {
   question: "ამოხსენით $\\sqrt{x + 5} \\geq -5$ უტოლობა.",
