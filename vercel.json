@@ -1,6 +1,4 @@
 {
-    "rewrites": [
-        { "source": "/classes", "destination": "/page2.html" }
-    ]
-
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "cleanUrls": true
 }
