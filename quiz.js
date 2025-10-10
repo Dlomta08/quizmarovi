@@ -534,8 +534,19 @@ function renderQuiz(){
     const score = revealAllAnswers(form);
 
     resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}`;
-    if(score >= 15) resultBox.innerHTML += "<br> ბარიერი გადალახულია! </strong>";
-    else resultBox.innerHTML += "<br> ბარიერი არ არის გადალუხული! </strong>";
+    const message = document.createElement("span");
+
+    if (score >= 15) {
+      message.textContent = "ბარიერი გადალახულია!";
+      message.style.color = "green";
+    } else {
+      message.textContent = "ბარიერი არ არის გადალახული!";
+      message.style.color = "red";
+    }
+
+    resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}</strong><br>`;
+    resultBox.appendChild(message);
+
     // mark finished so clicks become quick-flash simulation
     form.classList.add("finished");
 
