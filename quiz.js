@@ -534,7 +534,8 @@ function renderQuiz(){
     const score = revealAllAnswers(form);
 
     resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}`;
-
+    if(score >= 15) resultBox.innerHTML += "<br> ბარიერი გადალახულია! </strong>";
+    else resultBox.innerHTML += "<br> ბარიერი არ არის გადალუხული! </strong>";
     // mark finished so clicks become quick-flash simulation
     form.classList.add("finished");
 
