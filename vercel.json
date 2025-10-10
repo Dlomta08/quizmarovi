@@ -1,6 +1,6 @@
 {
     "rewrites": [
-        { "source": "/კლასები", "destination": "/page2.html" }
+        { "source": "/classes", "destination": "/page2.html" }
     ]
 
 }
