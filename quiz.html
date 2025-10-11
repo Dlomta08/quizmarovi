@@ -99,11 +99,11 @@
       const script = document.createElement("script");
       script.src = `class-${classNum}/${year}/quiz-${number}.js`;
       script.onerror = () => {
-        document.querySelector(".quiz-card-main").innerHTML = "<h1>ქვიზი ვერ მოიძებნა. ❌</h1>";
+        document.querySelector(".quiz-card-main").innerHTML = "<h1>ქვიზი არ ჩატარებულა.</h1>";
       };
       document.head.appendChild(script);
     } else {
-      document.querySelector(".quiz-card-main").innerHTML = "<h1>არასწორი ბმული. ❌</h1>";
+      document.querySelector(".quiz-card-main").innerHTML = "<h1>არასწორი ბმული.</h1>";
     }
   </script>
   

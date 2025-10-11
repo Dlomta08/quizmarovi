@@ -280,14 +280,15 @@
         padding: 1rem;
     }
     #quizForm legend {
-        font-size: 1rem;
+        font-size: 0.85rem;
         margin-bottom: 1rem;
     }
     #quizForm fieldset > div:not(.feedback):not(.warning):not(.introduction):not(.task) {
-        flex-direction: column; /* stack options vertically on small screens */
+        flex-direction: column;
         gap: 6px;
     }
     #quizForm label {
+        font-size: 0.85rem;
         padding: 0.6rem 1rem;
     }
 }
