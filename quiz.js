@@ -514,15 +514,20 @@ function renderQuiz(){
 
   const actionRow = document.createElement("div");
   actionRow.className = "action-row";
-  actionRow.appendChild(submitBtn);
-  actionRow.appendChild(markDoneBtn);
-  actionRow.appendChild(tickSpan);
+  if (quizData.some(q => q.options && q.options.length > 0)){
+    actionRow.appendChild(submitBtn);
+    actionRow.appendChild(markDoneBtn);
+    actionRow.appendChild(tickSpan);
+    const result = document.createElement("div");
+    result.id = "result";
 
-  const result = document.createElement("div");
-  result.id = "result";
-
-  form.appendChild(actionRow);
-  form.appendChild(result);
+    form.appendChild(actionRow);
+    form.appendChild(result);
+  }else{
+    actionRow.appendChild(markDoneBtn);
+    actionRow.appendChild(tickSpan);
+    form.appendChild(actionRow);
+  }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -535,23 +540,15 @@ function renderQuiz(){
 
     resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}`;
     const message = document.createElement("span");
-
-  if (quizData.some(q => q.options && q.options.length > 0)) {
-    const message = document.createElement("span");
-
-  if (score >= 15) {
-    message.textContent = "ბარიერი გადალახულია!";
-    message.style.color = "green";
-  } else {
-    message.textContent = "ბარიერი არ არის გადალახული!";
-    message.style.color = "red";
-  }
-
-  resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}</strong><br>`;
-  resultBox.appendChild(message);
-  } else {
-  resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}</strong>`;
-  }
+    if (score >= 15) {
+      message.textContent = "ბარიერი გადალახულია!";
+      message.style.color = "green";
+    } else {
+      message.textContent = "ბარიერი არ არის გადალახული!";
+      message.style.color = "red";
+    }
+    resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}</strong><br>`;
+    resultBox.appendChild(message);
 
     // mark finished so clicks become quick-flash simulation
     form.classList.add("finished");
