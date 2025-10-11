@@ -3,9 +3,8 @@ let timerInterval;
 let timeLeft = 3 * 60 * 60;
 let simulationMode = false;
 const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
-const selectionFadeTimers = new WeakMap(); // manage fade timers per label
+const selectionFadeTimers = new WeakMap();
 
-/* ---------- Inject CSS (options + floating timer) ---------- */
 (function ensureGlobalStyles(){
   if (document.getElementById("quiz-global-styles")) return;
   const s = document.createElement("style");
@@ -134,7 +133,6 @@ const selectionFadeTimers = new WeakMap(); // manage fade timers per label
   document.head.appendChild(s);
 })();
 
-/* -------------------- timer controls -------------------- */
 function timer() {
   const timeBox = document.getElementById("time-selection");
   simulationMode ^= 1;
@@ -216,7 +214,6 @@ function updateTimerDisplay() {
   }
 }
 
-/* ------------ ripple utility ------------ */
 function addRipple(el, x, y, color){
   const r = document.createElement('span');
   r.className = 'chip-ripple';
@@ -228,7 +225,6 @@ function addRipple(el, x, y, color){
   r.addEventListener('animationend', () => r.remove());
 }
 
-/* ------------ reveal all answers (called on finish/timeout) ------------ */
 function revealAllAnswers(form){
   const fieldsets = form.querySelectorAll("fieldset");
   let score = 0;
@@ -359,9 +355,7 @@ function renderQuiz(){
       fieldset.classList.add("answered");
     }
 
-    // Persistent selection used ONLY during simulation mode before finish
     function selectPersistent(selectedIdx, clickEvent){
-      // Remove selection from others (radio behavior)
       fieldset.querySelectorAll("label.option-chip").forEach(l => {
         l.classList.remove("selected","pop");
         const pending = selectionFadeTimers.get(l);
@@ -378,11 +372,9 @@ function renderQuiz(){
           const y = clickEvent.clientY - rect.top;
           addRipple(selectedLabel, x, y, "rgba(67,97,238,.3)");
         }
-        // NO fade timer here; keep selected persistently (old behavior)
       }
     }
 
-    // Post-finish simulation-style quick flash (0.2s solid + transition fade)
     function selectOnly(selectedIdx, clickEvent){
       fieldset.querySelectorAll("label.option-chip").forEach(l => {
         l.classList.remove("selected","pop");
@@ -429,13 +421,10 @@ function renderQuiz(){
         const isFinished = formEl && formEl.classList.contains("finished");
 
         if (isFinished || fieldset.classList.contains("answered")) {
-          // after finish -> quick flash behavior
           selectOnly(j, e);
         } else if (simulationMode) {
-          // during simulation with timer -> persistent tick like original
           selectPersistent(j, e);
         } else {
-          // immediate mode -> grade & lock
           gradeAndLock(j, e);
         }
       });
@@ -486,9 +475,8 @@ function renderQuiz(){
   const year = urlParams.get("year");
   const number = urlParams.get("number");
   const classNum = urlParams.get("class");
-  const category = urlParams.get("category");
 
-  const doneKey = `done-${classNum}-${year}-${number}-${category}`;
+  const doneKey = `done-${classNum}-${year}-${number}`;
 
   let isMarkedDone = localStorage.getItem(doneKey) === "true";
   if (isMarkedDone) {
@@ -550,7 +538,6 @@ function renderQuiz(){
     resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}</strong><br>`;
     resultBox.appendChild(message);
 
-    // mark finished so clicks become quick-flash simulation
     form.classList.add("finished");
 
     if (simulationMode) form.querySelector("button[type='submit']").disabled = true;
