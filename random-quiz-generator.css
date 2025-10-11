@@ -1,6 +1,3 @@
-/* Stylesheet for the Random Quiz Generator Page */
-
-/* Main Container to match site layout */
 .generator-container {
     padding: 7rem 2rem 4rem;
     max-width: 900px;
@@ -16,7 +13,6 @@
     box-shadow: var(--box-shadow);
 }
 
-/* Title */
 .generator-title {
     text-align: center;
     font-size: clamp(1.5rem, 4vw, 2rem);
@@ -28,7 +24,7 @@
     line-height: 1.3;
 }
 
-/* Option Groups */
+
 .option-group {
     width: 100%;
     margin: 1.5rem 0;
@@ -45,7 +41,7 @@
     font-weight: 600;
 }
 
-/* Checkbox Grid */
+
 .checkbox-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -84,7 +80,6 @@
     background: rgba(var(--primary-rgb), 0.1);
 }
 
-/* Number Input */
 .number-input-group {
     display: flex;
     align-items: center;
@@ -116,8 +111,8 @@
 
 .generate-btn-container {
     display: flex;
-    justify-content: center; /* horizontal center */
-    margin-top: 20px;        /* space from other elements */
+    justify-content: center; 
+    margin-top: 20px;        
 }
 
 .generate-btn.button {
@@ -170,7 +165,7 @@
     color: var(--primary-color);
 }
 
-/* Messages */
+
 .error-message {
     color: #ef4444;
     background: rgba(239, 68, 68, 0.1);
@@ -189,13 +184,12 @@
     font-weight: 500;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
+
 @media (max-width: 640px) {
     .generator-container {
         padding: 6rem 1rem 2rem;

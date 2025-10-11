@@ -1,6 +1,3 @@
-/* Stylesheet for the main quiz view (quiz.html) */
-
-/* Main Container: Adjusted for full-page width */
 .quiz-view-container {
     padding: 7rem 4rem 4rem;
     max-width: none;
@@ -16,7 +13,7 @@
     box-shadow: var(--box-shadow);
 }
 
-/* Page Title */
+
 .text-title {
     text-align: center;
     font-size: clamp(1.5rem, 4vw, 2rem);
@@ -28,7 +25,7 @@
     line-height: 1.3;
 }
 
-/* Mode Selection Card */
+
 .mode-selection-card {
     background: rgba(var(--primary-rgb), 0.05);
     border: 1px solid var(--border-color);
@@ -45,7 +42,6 @@
     color: var(--text-secondary);
 }
 
-/* General Buttons - but NOT the new styled buttons from quiz.js */
 .button {
     display: inline-block;
     padding: 0.8rem 1.8rem;
@@ -68,10 +64,7 @@
     background: var(--secondary-color);
 }
 
-/* REMOVED: Submit button styles - now handled in quiz.js injected styles */
-/* The gradient buttons from quiz.js will take precedence */
 
-/* Timer */
 #timer {
     text-align: center;
     font-weight: 700;
@@ -85,7 +78,6 @@
     border: 1px solid var(--border-color);
 }
 
-/* Quiz Form Styling */
 #quizForm {
     margin-top: 2rem;
 }
@@ -110,7 +102,6 @@
     line-height: 1.5;
 }
 
-/* Container for horizontal options */
 #quizForm fieldset > div:not(.feedback):not(.warning):not(.introduction):not(.task) {
     display: flex;
     flex-wrap: wrap;
@@ -118,7 +109,6 @@
     margin-bottom: 0.75rem;
 }
 
-/* Option Labels: These styles work WITH the option-chip styles from quiz.js */
 #quizForm label:not(.option-chip) {
     display: inline-block;
     background: var(--card-bg-secondary);
@@ -136,7 +126,6 @@
     background: rgba(var(--primary-rgb), 0.1);
 }
 
-/* Radio button styling */
 #quizForm input[type="radio"] {
     margin-right: 0.75rem;
     accent-color: var(--primary-color);
@@ -144,7 +133,6 @@
     vertical-align: middle;
 }
 
-/* Feedback messages inside the form */
 .feedback {
     margin-top: 1rem;
     padding: 0.75rem 1rem;
@@ -170,7 +158,6 @@
     display: block;
 }
 
-/* Final Score Result */
 #result {
     margin-top: 2rem;
     padding: 1.5rem;
@@ -182,7 +169,6 @@
     border: 1px solid var(--border-color);
 }
 
-/* Action row - better alignment */
 .action-row {
     display: flex;
     justify-content: center;
@@ -192,24 +178,20 @@
     flex-wrap: wrap;
 }
 
-/* Ensure submit button doesn't take full width when in action-row */
 .action-row button[type="submit"] {
     width: auto;
     max-width: none;
     margin: 0;
 }
 
-/* Mark done button sizing */
 .action-row .mark-done-btn {
     flex-shrink: 0;
 }
 
-/* Tick mark in action row */
 .action-row .tick-mark {
     flex-shrink: 0;
 }
 
-/* Time selection input */
 #time-selection {
     margin-top: 1rem;
     padding: 1rem;
@@ -234,7 +216,6 @@
     margin: 0 0.5rem;
 }
 
-/* Introduction and Task sections */
 .introduction, .task {
     background: rgba(var(--primary-rgb), 0.05);
     border-left: 4px solid var(--primary-color);
@@ -244,25 +225,25 @@
 }
 
 .warning {
-    background: rgba(239, 68, 68, 0.1);   /* soft red background for light mode */
-    border-left: 4px solid #ef4444;       /* vivid red border */
+    background: rgba(239, 68, 68, 0.1);   
+    border-left: 4px solid #ef4444;       
     padding: 1rem 1.5rem;
     margin: 1rem 0;
     border-radius: 8px;
-    color: #b91c1c;                       /* deep red text for light mode */
+    color: #b91c1c;                      
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
-/* 🌙 Dark mode version */
+
 [data-theme="dark"] .warning {
-    background: rgba(239, 68, 68, 0.2);   /* stronger red tint for dark mode */
-    border-left-color: #f87171;           /* lighter red border */
-    color: #fecaca;                       /* soft light-pinkish red text */
+    background: rgba(239, 68, 68, 0.2);   
+    border-left-color: #f87171;           
+    color: #fecaca;                      
 }
 
 
-/* Quiz images */
+
 .quiz-image {
     max-width: 100%;
     height: auto;
@@ -271,7 +252,7 @@
     box-shadow: var(--box-shadow);
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 640px) {
     .quiz-view-container {
         padding: 6rem 0.75rem 1rem;

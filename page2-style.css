@@ -1,4 +1,3 @@
-/* Styles specific to page2.html */
 .page2-container {
     min-height: 100vh;
     width: 100%;
@@ -15,7 +14,6 @@
         rgba(var(--accent-rgb), 0.04) 100%);
 }
 
-/* Add subtle background decoration */
 .page2-container::before,
 .page2-container::after {
     content: '';
@@ -145,7 +143,6 @@
     opacity: 1;
 }
 
-/* Shine effect */
 .grade-card .shine {
     position: absolute;
     top: -50%;
@@ -236,7 +233,6 @@
     }
 }
 
-/* Responsive adjustments */
 @media (max-width: 1024px) {
     .grade-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -279,13 +275,11 @@
   margin-bottom: 10px;
 }
 
-/* Light mode: special card background */
 :root[data-theme="light"] .grade-card.special {
-    background: #799be5; /* light blue */
+    background: #799be5; 
     box-shadow: 0 0 15px rgba(70, 164, 195, 0.4);
 }
 
-/* Hover effect in light mode */
 :root[data-theme="light"] .grade-card.special:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(173, 216, 230, 0.6);

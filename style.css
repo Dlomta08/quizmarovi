@@ -1,14 +1,13 @@
-/* Import modern fonts */
+/* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* RESET MARGINS, PADDINGS, AND BOX-SIZING */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* CSS Variables for theming */
 :root {
   --primary-color: #4361ee;
   --secondary-color: #3f37c9;
@@ -26,7 +25,6 @@
   --border-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Dark mode variables */
 [data-theme="dark"] {
   --background-light: #1a1b1e;
   --text-primary: #f8f9fa;
@@ -38,7 +36,6 @@
   --border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Dark mode toggle button styles */
 #toggle-dark {
   background: none;
   border: none;
@@ -66,7 +63,7 @@
   }
 }
 
-/* MAKE HTML AND BODY FILL THE ENTIRE VIEWPORT */
+
 html, body {
   height: 100%;
   margin: 0;
@@ -80,7 +77,7 @@ html, body {
   transition: all var(--transition-speed) ease;
 }
 
-/* Page container: Use flexbox to align everything neatly */
+
 .page2-container {
     min-height: 100vh;
     padding: 6rem 2rem 4rem;
@@ -94,15 +91,15 @@ html, body {
     );
 }
 
-/* Container for the titles to make them appear next to each other */
+
 .titles-container {
     display: flex;
-    gap: 50px; /* Space between titles */
-    justify-content: center; /* Center titles horizontally */
+    gap: 50px; 
+    justify-content: center; 
     width: 75%;
 }
 
-/* Style for the non-clickable title (modern and large) */
+
 .text-title {
     font-family: 'Poppins', sans-serif;
     font-size: 3.5rem;
@@ -122,29 +119,28 @@ html, body {
 }
 
 .text-title:hover {
-    transform: scale(1.1); /* Slightly enlarge the text on hover */
+    transform: scale(1.1); 
 }
 
-/* Container for buttons (centered under the titles) */
 .buttons-container {
     display: flex;
-    justify-content: space-between; /* Ensure equal spacing between button groups */
-    gap: 40px; /* Space between the button columns */
+    justify-content: space-between; 
+    gap: 40px; 
     width: 100%;
-    max-width: 1000px; /* Prevent container from stretching too wide */
+    max-width: 1000px; 
 }
 
-/* Style for the vertical buttons */
+
 .vertical-buttons {
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
+    flex-direction: column; 
     gap: 15px;
     justify-content: center;
     align-items: center;
-    flex: 1; /* Ensure both button groups take equal width */
+    flex: 1; 
 }
 
-/* Style for the buttons */
+
 .vertical-buttons button {
     width: 300px;
     padding: 1rem 2rem;
@@ -193,7 +189,6 @@ html, body {
     left: 100%;
 }
 
-/* Navigation styles */
 .main-nav {
     position: fixed;
     top: 0;
@@ -261,7 +256,6 @@ html, body {
     transform: scale(0.9);
 }
 
-/* Hero section styles */
 .hero-section {
     min-height: 100vh;
     padding: 6rem 2rem 2rem;
@@ -296,7 +290,6 @@ html, body {
     margin-bottom: 3rem;
 }
 
-/* Grid container for cards */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -304,7 +297,6 @@ html, body {
     padding: 2rem;
 }
 
-/* Card styles */
 .card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -345,7 +337,6 @@ html, body {
     font-size: 1rem;
 }
 
-/* Subject header styles */
 .subject-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -358,7 +349,6 @@ html, body {
     margin-top: 1rem;
 }
 
-/* Grade grid layout */
 .grade-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -369,7 +359,6 @@ html, body {
     animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Grade card styles */
 .grade-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -437,7 +426,6 @@ html, body {
     text-align: center;
 }
 
-/* Footer styles */
 .main-footer {
     text-align: center;
     padding: 2rem;
@@ -445,7 +433,6 @@ html, body {
     color: var(--text-secondary);
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     html {
         font-size: 14px;
@@ -473,7 +460,6 @@ html, body {
     }
 }
 
-/* Dark mode styles */
 [data-theme="dark"] .main-nav {
     background: rgba(26, 27, 30, 0.8);
 }
@@ -490,7 +476,6 @@ html, body {
     background: rgba(0, 0, 0, 0.3);
 }
 
-/* Animation keyframes */
 @keyframes fadeIn {
     from {
         opacity: 0;

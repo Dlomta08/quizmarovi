@@ -15,7 +15,7 @@ main.hero-section {
 .main-footer {
     flex-shrink: 0;
 }
-/* Styles specific to index.html */
+
 .hero-section {
     min-height: calc(100vh - 60px - 60px);
     display: flex;
@@ -49,7 +49,7 @@ main.hero-section {
     position: relative;
 }
 
-/* Add decorative background elements */
+
 .hero-content::before {
     content: '';
     position: absolute;
