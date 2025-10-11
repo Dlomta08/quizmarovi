@@ -536,16 +536,22 @@ function renderQuiz(){
     resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}`;
     const message = document.createElement("span");
 
-    if (score >= 15) {
-      message.textContent = "ბარიერი გადალახულია!";
-      message.style.color = "green";
-    } else {
-      message.textContent = "ბარიერი არ არის გადალახული!";
-      message.style.color = "red";
-    }
+  if (quizData.some(q => q.options && q.options.length > 0)) {
+    const message = document.createElement("span");
 
-    resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}</strong><br>`;
-    resultBox.appendChild(message);
+  if (score >= 15) {
+    message.textContent = "ბარიერი გადალახულია!";
+    message.style.color = "green";
+  } else {
+    message.textContent = "ბარიერი არ არის გადალახული!";
+    message.style.color = "red";
+  }
+
+  resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}</strong><br>`;
+  resultBox.appendChild(message);
+  } else {
+  resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}</strong>`;
+  }
 
     // mark finished so clicks become quick-flash simulation
     form.classList.add("finished");
