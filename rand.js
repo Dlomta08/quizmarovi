@@ -19,7 +19,7 @@ function toggleAllQuizzes() {
 async function loadQuizScript(path) {
     return new Promise((resolve, reject) => {
         const script = document.createElement('script');
-        script.src = path + '?v=' + Math.random();
+        script.src = path;
         script.onload = () => {
             if (typeof quizData !== 'undefined' && Array.isArray(quizData)) {
                 const dataCopy = [...quizData];
@@ -29,7 +29,7 @@ async function loadQuizScript(path) {
                 resolve(null);
             }
         };
-        script.onerror = () => reject(`Failed to load ${path}`);
+        script.onerror = () => resolve(null);
         document.head.appendChild(script);
     });
 }
@@ -56,31 +56,41 @@ async function generateQuiz() {
     generateBtn.disabled = true;
 
     const years = ['2020-21', '2021-22', '2022-23', '2023-24', '2024-25'];
-    let allProblems = [];
-
+    
+    const paths = [];
     for (const year of years) {
         for (const classNum of classes) {
             for (const quizNum of quizNumbers) {
-                const path = `class-${classNum}/${year}/quiz-${quizNum}.js`;
-                console.log('Loading:', path);
-                try {
-                    const data = await loadQuizScript(path);
-                    if (data) {
-                        data.forEach(p => {
-                            p.source = { class: classNum, year: year, quiz: quizNum };
-                            if(p.random == 1){
-                                p.intro = "";
-                                p.task = "";
-                            }
-                            if(p.options.length) allProblems.push(p);
-                        });
-                    }
-                } catch (err) {
-                    console.warn(err);
-                }
+                paths.push({
+                    path: `class-${classNum}/${year}/quiz-${quizNum}.js`,
+                    meta: { class: classNum, year: year, quiz: quizNum }
+                });
             }
         }
     }
+    
+    const results = await Promise.all(
+        paths.map(async ({path, meta}) => {
+            try {
+                const data = await loadQuizScript(path);
+                if (data) {
+                    return data.map(p => ({
+                        ...p,
+                        source: meta,
+                        intro: p.random == 1 ? "" : p.intro,
+                        task: p.random == 1 ? "" : p.task
+                    })).filter(p => p.options.length);
+                }
+                return [];
+            } catch (err) {
+                console.warn(`Failed to load ${path}:`, err);
+                return [];
+            }
+        })
+    );
+
+    const allProblems = results.flat();
+    
     loadingDiv.style.display = 'none';
     generateBtn.disabled = false;
 
