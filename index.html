@@ -1,42 +1,40 @@
 <!DOCTYPE html>
-<html lang="ka" data-theme="light">
+<html lang="ka">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="კომაროვის სკოლის ქვიზები">
-  <title>კომაროვის ქვიზები</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="კომაროვის სკოლის ქვიზები">
+<title>კომაროვის ქვიზები</title>
 
-  <!-- ✅ Inline minimal critical CSS -->
-  <style>
-    html, body { height: 100%; margin: 0; }
-    body { display: flex; flex-direction: column; min-height: 100vh; }
-    .hero-section { display: flex; align-items: center; justify-content: center; text-align: center; min-height: calc(100vh - 60px - 60px); }
-  </style>
+<script>
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark.matches;
+document.documentElement.setAttribute('data-theme', initialDark ? 'dark' : 'light');
+</script>
 
-  <!-- ✅ Load local CSS non-blocking -->
-  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="index-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index-style.css">
-  </noscript>
+<style>
+html, body { height: 100%; margin: 0; }
+body { display: flex; flex-direction: column; min-height: 100vh; }
+.hero-section { display: flex; align-items: center; justify-content: center; text-align: center; min-height: calc(100vh - 60px - 60px); }
+</style>
 
-  <!-- ✅ Font Awesome non-blocking -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="index-style.css">
 
-  <!-- ✅ Google Font optimized -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">ylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
 
-  <!-- ✅ Favicon -->
-  <link rel="icon" type="image/png" href="paper.png">
+<link rel="icon" type="image/png" href="paper.png">
 
+<<<<<<< HEAD
   <!-- ✅ Defer JS so it doesn't block render -->
   <script src="darkmode.js" defer></script>
   
+=======
+<script src="darkmode.js"></script>
+>>>>>>> 18dda075278f96d3b28e6b418bebf4ea34e83971
 </head>
-
 <body>
     <nav class="main-nav">
         <div class="nav-content">
@@ -82,7 +80,6 @@
     </style>
     </footer>
 
-    <script src="darkmode.js"></script>
     <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>

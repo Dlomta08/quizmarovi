@@ -1,9 +1,19 @@
 const root = document.documentElement;
-const savedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark.matches;
 
-root.setAttribute('data-theme', initialDark ? 'dark' : 'light');
+function applyTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark.matches;
+    root.setAttribute('data-theme', initialDark ? 'dark' : 'light');
+}
+
+applyTheme();
+
+window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+        applyTheme();
+    }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('toggle-dark');
@@ -19,9 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
     }
 
-    updateTheme(initialDark);
+    const currentTheme = root.getAttribute('data-theme');
+    const isDark = currentTheme === 'dark';
+    icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    toggleButton.title = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
 
-    if (!savedTheme) {
+    if (!localStorage.getItem('theme')) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
         prefersDark.addEventListener('change', (e) => {
             if (!localStorage.getItem('theme')) {
                 updateTheme(e.matches);
