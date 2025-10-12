@@ -427,10 +427,18 @@ html, body {
 }
 
 .main-footer {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text-secondary);
+  text-align: center;
+  padding: 2rem;
+  min-height: 100px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+/* Dark mode footer fix */
+[data-theme="dark"] .main-footer {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text-primary);
 }
 
 @media (max-width: 768px) {
