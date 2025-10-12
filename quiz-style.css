@@ -1,22 +1,16 @@
-/* Ensure the page can scroll horizontally if necessary */
-html, body {
-    width: 100%;
-    overflow-x: auto; /* allows horizontal scroll if content overflows */
-    box-sizing: border-box;
-}
-
-/* Prevent quiz container from breaking layout */
 .quiz-view-container {
-    padding: 7rem 1rem 4rem; /* reduced side padding for mobile */
-    max-width: 100%; /* prevent overflowing fixed width */
+    padding: 7rem 4rem 4rem;
+    max-width: none;
     margin: 0 auto;
     animation: fadeIn 0.6s ease-out forwards;
 }
 
-.quiz-card-main, .mode-selection-card, #quizForm label {
-    max-width: 100%;
-    width: 100%; /* ensure no element is wider than parent */
-    box-sizing: border-box;
+.quiz-card-main {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--box-shadow);
 }
 
 
@@ -109,8 +103,10 @@ html, body {
 }
 
 #quizForm fieldset > div:not(.feedback):not(.warning):not(.introduction):not(.task) {
+    display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 10px;
+    margin-bottom: 0.75rem;
 }
 
 #quizForm label:not(.option-chip) {
@@ -255,6 +251,7 @@ html, body {
     margin: 0 0 1rem 0;
     box-shadow: var(--box-shadow);
 }
+
 
 
 @media (max-width: 640px) {
