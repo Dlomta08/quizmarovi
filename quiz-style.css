@@ -254,26 +254,27 @@
 
 
 
+/* Enable horizontal scroll on mobile only */
 @media (max-width: 640px) {
-    .quiz-view-container {
-        padding: 6rem 0.75rem 1rem;
-    }
-    .quiz-card-main {
-        padding: 1rem;
-    }
-    #quizForm legend {
-        font-size: 0.85rem;
-        margin-bottom: 1rem;
-    }
-    #quizForm fieldset > div:not(.feedback):not(.warning):not(.introduction):not(.task) {
-        flex-direction: column;
-        gap: 6px;
-    }
-    #quizForm label {
-        font-size: 0.85rem;
-        padding: 0.6rem 1rem;
-    }
+  html, body {
+    overflow-x: auto; /* allow horizontal scroll */
+  }
+
+  .quiz-view-container {
+    padding: 6rem 1rem 2rem; /* keep mobile padding */
+    min-width: 320px; /* ensures container is at least mobile width */
+  }
+
+  .quiz-card-main {
+    padding: 1rem;
+    min-width: 300px; /* prevents card from being too narrow */
+  }
+
+  .hero-section .container {
+    min-width: 320px; /* allow hero content to scroll if needed */
+  }
 }
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
