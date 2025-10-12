@@ -336,16 +336,6 @@ main.hero-section {
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
-    .feature-item {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-}
 
 @keyframes fadeIn {
     from {

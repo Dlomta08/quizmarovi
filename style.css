@@ -450,8 +450,13 @@ html, body {
         padding: 5rem 1rem 1rem;
     }
     */
+    .feature-item {
+        width: 100%;
+        justify-content: center;
+    }
     .grid-container {
         padding: 1rem;
+        grid-template-columns: 1fr;
     }
 
     .grade-grid {
