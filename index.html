@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="კომაროვის სკოლის ქვიზები">
-<title>კომაროვის ქვიზები</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="კომაროვის სკოლის ქვიზები">
+  <title>კომაროვის ქვიზები</title>
 
-<script>
-const savedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark.matches;
-document.documentElement.setAttribute('data-theme', initialDark ? 'dark' : 'light');
-</script>
+  <!-- 🌗 Theme handling before paint -->
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark.matches;
+    document.documentElement.setAttribute('data-theme', initialDark ? 'dark' : 'light');
+  </script>
 
-<style>
-html, body { height: 100%; margin: 0; }
-body { display: flex; flex-direction: column; min-height: 100vh; }
-.hero-section { display: flex; align-items: center; justify-content: center; text-align: center; min-height: calc(100vh - 60px - 60px); }
-</style>
+  <!-- ⚡ Preconnect for faster font loading -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="index-style.css">
+  <!-- 🧱 Inline layout fix for hero section -->
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    .hero-section { display: flex; align-items: center; justify-content: center; text-align: center; min-height: calc(100vh - 60px - 60px); }
+  </style>
 
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <!-- 🎨 Your main styles (order matters!) -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index-style.css">
 
-<script src="darkmode.js"></script>
+  <!-- 🧩 Optimized font loading -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <script src="darkmode.js" defer></script>
+
 </head>
 <body>
     <nav class="main-nav">
