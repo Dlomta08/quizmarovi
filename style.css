@@ -530,7 +530,7 @@ html, body {
     outline: none; /* optional, but consider adding a visible outline for keyboard users */
 }
 [data-theme="dark"] .email-link {
-    color: #11a3dd; /* light blue for dark background */
+    color: #6e47ee; /* soft lavender-blue */
 }
 
 
