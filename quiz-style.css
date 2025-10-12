@@ -254,26 +254,38 @@
 
 
 
-/* Enable horizontal scroll on mobile only */
+/* Mobile adjustments: horizontal scroll + zoom */
 @media (max-width: 640px) {
   html, body {
-    overflow-x: auto; /* allow horizontal scroll */
+    overflow-x: auto; /* enable horizontal scroll */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
   }
 
   .quiz-view-container {
-    padding: 6rem 1rem 2rem; /* keep mobile padding */
-    min-width: 320px; /* ensures container is at least mobile width */
+    padding: 6rem 1rem 2rem;
+    min-width: 320px; /* ensure minimum width for scrolling */
   }
 
   .quiz-card-main {
     padding: 1rem;
-    min-width: 300px; /* prevents card from being too narrow */
+    min-width: 300px; /* prevent card from shrinking too much */
   }
 
   .hero-section .container {
     min-width: 320px; /* allow hero content to scroll if needed */
   }
+
+  #quizForm fieldset > div:not(.feedback):not(.warning):not(.introduction):not(.task) {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  #quizForm label {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
 }
+
 
 
 @keyframes fadeIn {
