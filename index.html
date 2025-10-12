@@ -6,16 +6,14 @@
   <meta name="description" content="კომაროვის სკოლის ქვიზები">
   <title>კომაროვის ქვიზები</title>
 
-  <!-- ✅ Minimal critical CSS inline -->
+  <!-- ✅ Inline minimal critical CSS -->
   <style>
-    html, body { height: 100%; margin: 0; font-family: 'Poppins', sans-serif; }
+    html, body { height: 100%; margin: 0; }
     body { display: flex; flex-direction: column; min-height: 100vh; }
     .hero-section { display: flex; align-items: center; justify-content: center; text-align: center; min-height: calc(100vh - 60px - 60px); }
-    .email-link { color: var(--primary-color); text-decoration: none; transition: text-decoration 0.2s ease; }
-    .email-link:hover { text-decoration: underline; }
   </style>
 
-  <!-- ✅ Load main CSS asynchronously -->
+  <!-- ✅ Load local CSS non-blocking -->
   <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="index-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
@@ -23,18 +21,20 @@
     <link rel="stylesheet" href="index-style.css">
   </noscript>
 
-  <!-- ✅ Font Awesome (full CDN to keep button icons visible) -->
+  <!-- ✅ Font Awesome non-blocking -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  </noscript>
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
   <!-- ✅ Google Font optimized -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-  </noscript>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"></noscript>
 
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="paper.png">
+
+  <!-- ✅ Defer JS so it doesn't block render -->
+  <script src="darkmode.js" defer></script>
+</head>
 
 <body>
     <nav class="main-nav">
