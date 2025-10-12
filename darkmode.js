@@ -1,39 +1,34 @@
-// Dark mode system with system preference detection and smooth transitions
+const root = document.documentElement;
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark.matches;
+
+root.setAttribute('data-theme', initialDark ? 'dark' : 'light');
+
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('toggle-dark');
-    const root = document.documentElement;
+    if (!toggleButton) return;
     
-    // Function to update theme
+    const icon = toggleButton.querySelector('i');
+    if (!icon) return;
+
     function updateTheme(isDark) {
-        // Update theme attribute
         root.setAttribute('data-theme', isDark ? 'dark' : 'light');
-        
-        // Update button icon and title
-        const icon = toggleButton.querySelector('i');
-        icon.classList.remove('fa-sun', 'fa-moon');
-        icon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
-        toggleButton.setAttribute('title', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
-        
-        // Store preference
+        icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        toggleButton.title = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
     }
 
-    // Check system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // Set initial state based on localStorage or system preference
-    const savedTheme = localStorage.getItem('theme');
-    const initialDark = savedTheme ? savedTheme === 'dark' : prefersDark.matches;
     updateTheme(initialDark);
 
-    // Listen for system theme changes
-    prefersDark.addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-            updateTheme(e.matches);
-        }
-    });
+    if (!savedTheme) {
+        prefersDark.addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                updateTheme(e.matches);
+            }
+        });
+    }
 
-    // Add click handler with animation
     toggleButton.addEventListener('click', () => {
         const isDark = root.getAttribute('data-theme') === 'dark';
         toggleButton.classList.add('rotate');
