@@ -518,6 +518,20 @@ html, body {
        url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff') format('woff');
 }
 
+.email-link {
+    color: var(--primary-color);
+    text-decoration: underline;  /* always visible */
+    font-weight: 600;            /* optional for emphasis */
+}
+.email-link:hover,
+.email-link:focus {
+    color: var(--accent-color);
+    text-decoration: underline;
+    outline: none; /* optional, but consider adding a visible outline for keyboard users */
+}
+[data-theme="dark"] .email-link {
+    color: #11a3dd; /* light blue for dark background */
+}
 
 
 /*
