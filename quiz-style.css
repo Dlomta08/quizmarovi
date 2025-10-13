@@ -391,7 +391,13 @@ body {
     font-size: 0.9rem;
     width: 60px;
   }
-   #quizForm legend .MathJax,
+  #quizForm input[type="radio"] {
+    margin-right: 0.4rem;
+    transform: scale(1);
+  }
+
+  /* Control MathJax formula sizes on mobile */
+  #quizForm legend .MathJax,
   #quizForm legend mjx-container {
     font-size: 0.75rem !important;
   }
