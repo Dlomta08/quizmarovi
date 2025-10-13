@@ -391,6 +391,26 @@ body {
     font-size: 0.9rem;
     width: 60px;
   }
+   #quizForm legend .MathJax,
+  #quizForm legend mjx-container {
+    font-size: 0.75rem !important;
+  }
+
+  #quizForm label .MathJax,
+  #quizForm label mjx-container {
+    font-size: 0.7rem !important;
+  }
+
+  /* Scale down MathJax SVG elements */
+  #quizForm legend mjx-container svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  #quizForm label mjx-container svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
 }
 
 
