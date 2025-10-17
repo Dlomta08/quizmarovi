@@ -2,7 +2,7 @@
 let timerInterval;
 let timeLeft = 3 * 60 * 60;
 let simulationMode = false;
-const fox = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
+const variantebi = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
 const selectionFadeTimers = new WeakMap();
 
 (function ensureGlobalStyles(){
@@ -446,7 +446,7 @@ function renderQuiz(){
         }
       });
 
-      label.append(`${fox[j]}`);
+      label.append(`${variantebi[j]}`);
       label.appendChild(radio);
       label.append(`${opt}`);
       fieldset.appendChild(label);

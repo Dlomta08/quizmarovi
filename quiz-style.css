@@ -1,3 +1,10 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
     overflow-x: auto; /* allows horizontal scroll */
     -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
@@ -8,7 +15,9 @@ body {
     max-width: none;
     margin: 0 auto;
     animation: fadeIn 0.6s ease-out forwards;
+    flex: 1;
 }
+
 
 .quiz-card-main {
     background: var(--card-bg);
@@ -257,6 +266,17 @@ body {
     box-shadow: var(--box-shadow);
 }
 
+.quiz-info-box {
+    text-align: left;
+    margin: 0 auto 2rem;
+    padding: 1rem 1.5rem;
+    background: var(--card-bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
 
 
 
