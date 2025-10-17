@@ -65,7 +65,7 @@ async function generateQuiz() {
         for (const classNum of classes) {
             for (const quizNum of quizNumbers) {
                 paths.push({
-                    path: `class-${classNum}/${year}/quiz-${quizNum}.js`,
+                    path: `quizzes/class-${classNum}/${year}/quiz-${quizNum}.js`,
                     meta: { class: classNum, year: year, quiz: quizNum }
                 });
             }
