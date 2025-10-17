@@ -8,6 +8,8 @@ function toggleAllClasses() {
 }
 
 
+
+
 function toggleAllQuizzes() {
     const checkboxes = document.querySelectorAll('input[name="quiz"]');
     const allChecked = Array.from(checkboxes).every(cb => cb.checked);
