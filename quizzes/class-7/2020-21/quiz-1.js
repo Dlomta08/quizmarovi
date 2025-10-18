@@ -176,7 +176,7 @@ quizData = [
 
 // 24
 {
-  image: "quizzes/quizzes/class-7/images/image1.png",
+  image: "quizzes/class-7/images/image1.png",
   question: "$𝑎$ და $𝑏$ პარალელური წრფეები გადაკვეთილია $𝑐$ წრფით. ნახაზის მიხედვით იპოვეთ $𝑥$ კუთხის სიდიდე, თუ $𝛼 + 𝛽 = 276^\\circ$.",
   options: ["$42^\\circ$", "$48^\\circ$", "$52^\\circ$", "$66^\\circ$", "$76^\\circ$", "$82^\\circ$"],
   correct: 0,
