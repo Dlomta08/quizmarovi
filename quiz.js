@@ -227,8 +227,7 @@ function addRipple(el, x, y, color){
 
 function revealAllAnswers(form){
   const fieldsets = form.querySelectorAll("fieldset");
-  let score = 0;
-
+  let score = 0, minpt = -1;
   fieldsets.forEach((fs, i) => {
     const q = quizData[i];
     fs.querySelectorAll("label.option-chip").forEach(l => {
@@ -237,7 +236,7 @@ function revealAllAnswers(form){
 
     const selected = form.querySelector(`input[name="question${i}"]:checked`);
     const selectedIdx = selected ? parseInt(selected.value,10) : null;
-
+    if(q.minpoint != null) minpt = q.minpoint;
     if (Array.isArray(q.correct)) {
       q.correct.forEach(idx => {
         const lbl = fs.querySelector(`label.option-chip[data-index="${idx}"]`);
@@ -263,7 +262,7 @@ function revealAllAnswers(form){
     fs.classList.add("answered");
   });
 
-  return score;
+  return [score, minpt];
 }
 
 function renderQuiz(){
@@ -524,11 +523,11 @@ function renderQuiz(){
     const resultBox = document.getElementById("result");
     resultBox.innerHTML = "";
 
-    const score = revealAllAnswers(form);
-
+    let [score, minpt] = revealAllAnswers(form);
+    if(minpt == -1) minpt = 15;
     resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}`;
     const message = document.createElement("span");
-    if (score >= 15) {
+    if (score >= minpt) {
       message.textContent = "ბარიერი გადალახულია!";
       message.style.color = "green";
     } else {
