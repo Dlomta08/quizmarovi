@@ -20,6 +20,22 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
   <script src="darkmode.js"></script>
+
+  <style>
+      .button-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem; /* Space between buttons */
+          align-items: center;
+          width: 100%;
+          margin-top: 2rem;
+      }
+      /* Ensure buttons have same width if desired, or keep auto */
+      .main-button {
+          min-width: 200px; /* Optional: makes buttons same size */
+          justify-content: center;
+      }
+  </style>
 </head>
 <body>
     <nav class="main-nav">
@@ -37,22 +53,28 @@
     <main class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1 class="main-title">კომაროვის სკოლის<br><span class="highlight">მათემატიკის ქვიზები</span></h1>
+                <h1 class="main-title">კომაროვის სკოლის<br><span class="highlight">ქვიზები</span></h1>
 
-                <a href="classes.html" class="main-button">
-                    <span>იხილეთ</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+                <div class="button-wrapper">
+                    <a href="classes.html" class="main-button">
+                        <span>მათემატიკა</span>
+                        <i class="fas fa-square-root-variable"></i>
+                    </a>
+
+                    <a href="physics.html" class="main-button">
+                        <span>ფიზიკა</span>
+                        <i class="fas fa-atom"></i>
+                    </a>
+                </div>
+                
             </div>
         </div>
     </main>
 
     <footer class="main-footer">
         <p>&copy; 2025 სსიპ ვლადიმირ კომაროვის თბილისის ფიზიკა-მათემატიკის N199 საჯარო სკოლა. ყველა უფლება დაცულია.</p>
-            </i>&nbsp; საკონტაქტო ინფორმაცია:
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-            <a href="mailto:komaroviqvizebi@gmail.com" class="email-link"> komaroviqvizebi@gmail.com
-        </a>
+        <p>საკონტაქტო ინფორმაცია:
+            <a href="mailto:komaroviqvizebi@gmail.com" class="email-link">komaroviqvizebi@gmail.com</a>
         </p>
         <style>
         .email-link {

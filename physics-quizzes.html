@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ფიზიკის ქვიზები</title> <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="paper.png">
+    <script src="darkmode.js"></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="physics.html" class="logo">
+                <i class="fas fa-arrow-left"></i>
+                <span>უკან დაბრუნება</span>
+            </a>
+            <button id="toggle-dark" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <div class="quiz-container">
+        <div class="page-header">
+            <h1 class="text-title"></h1>
+        </div>
+
+        <div class="years-grid" id="yearsGrid">
+            <script>
+            function isDone(prefix){
+              return localStorage.getItem(prefix) === 'true';
+            }
+            function refreshAllStatusIcons(){
+              document.querySelectorAll('.status-icon[data-keyprefix]').forEach(icon=>{
+                const prefix = icon.getAttribute('data-keyprefix');
+                const done = isDone(prefix);
+                icon.classList.toggle('done', done);
+                icon.title = done ? 'დასრულებულია' : 'არ არის დასრულებული';
+                icon.setAttribute('aria-label', icon.title);
+              });
+            }
+            const urlParams = new URLSearchParams(window.location.search);
+            const classNum = parseInt(urlParams.get('class')) || 7;
+            document.title = `მე-${classNum} კლასის ქვიზები`;
+            document.querySelector('.text-title').textContent = `მე-${classNum} კლასის ქვიზები`;
+            
+            const startYear = 2020; const endYear = 2024; const quizzesPerYear = 5;
+            const yearsGrid = document.getElementById("yearsGrid");  
+            for (let y = endYear; y >= startYear; y--) {
+                const academicYear = `${y}/${(y + 1).toString().slice(-2)}`;
+                const yearFolderForKey = academicYear.replace("/", "-");
+                const yearSection = document.createElement("div");
+                yearSection.className = "year-section";
+                
+                const yearHeader = document.createElement("div");
+                yearHeader.className = "year-header";
+                const yearIcon = document.createElement("i");
+                yearIcon.className = "fas fa-calendar-alt";
+                const yearTitle = document.createElement("h2");
+                yearTitle.textContent = `${academicYear} სასწავლო წელი`;
+                yearHeader.appendChild(yearIcon);
+                yearHeader.appendChild(yearTitle);
+                
+                const quizzesGrid = document.createElement("div");
+                quizzesGrid.className = "quizzes-grid";
+                for (let q = 1; q <= quizzesPerYear; q++) {
+                    const quizCard = document.createElement("div");
+                    quizCard.className = "quiz-card";
+                    quizCard.onclick = () => handleQuizClick(academicYear, q, classNum);
+                    
+                    const quizIcon = document.createElement("i");
+                    quizIcon.className = "fas fa-file-alt quiz-icon";
+                    
+                    const quizNumber = document.createElement("span");
+                    quizNumber.className = "quiz-number";
+                    quizNumber.textContent = q;
+                    
+                    const quizTitle = document.createElement("h3");
+                    quizTitle.className = "quiz-title";
+                    quizTitle.textContent = q === 1 ? `1-ელი ქვიზი` : `მე-${q} ქვიზი`;
+
+                    const statusIcon = document.createElement("i");
+                    statusIcon.className = "fas fa-circle status-icon";
+                    const keyPrefix = `done-${classNum}-${yearFolderForKey}-${q}`;
+                    statusIcon.setAttribute('data-keyprefix', keyPrefix);
+
+                    if (isDone(keyPrefix)) {
+                        statusIcon.classList.add('done');
+                        statusIcon.title = 'დასრულებულია';
+                        statusIcon.setAttribute('aria-label', 'დასრულებულია');
+                    } else {
+                        statusIcon.title = 'არ არის დასრულებული';
+                        statusIcon.setAttribute('aria-label', 'არ არის დასრულებული');
+                    }
+                    
+                    quizCard.appendChild(quizIcon);
+                    quizCard.appendChild(quizNumber);
+                    quizCard.appendChild(quizTitle);
+                    quizCard.appendChild(statusIcon);
+                    quizzesGrid.appendChild(quizCard);
+                }
+                
+                yearSection.appendChild(yearHeader);
+                yearSection.appendChild(quizzesGrid);
+                yearsGrid.appendChild(yearSection);
+            }
+            window.addEventListener('storage', (e)=>{
+              if (e.key && e.key.startsWith('done-')) {
+                refreshAllStatusIcons();
+              }
+            });
+            </script>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 სსიპ ვლადიმირ კომაროვის თბილისის ფიზიკა-მათემატიკის N199 საჯარო სკოლა სკოლა. ყველა უფლება დაცულია.</p>
+        <p>საკონტაქტო ინფორმაცია:
+        <a href="mailto:komaroviqvizebi@gmail.com" class="email-link">komaroviqvizebi@gmail.com</a>
+        </p>
+
+        <style>
+        .email-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: text-decoration 0.2s ease;
+        }
+
+    .email-link:hover {
+        text-decoration: underline;
+    }
+    </style>
+    </footer>
+
+    <script>
+        function handleQuizClick(year, number, classNum) {
+            const yearFolder = year.replace("/", "-");
+            // CHANGE 2: Point to physics-game.html instead of quiz.html
+            const url = `physics-game.html?class=${classNum}&year=${yearFolder}&number=${number}`;
+            window.location.href = url;
+        }
+    </script>
+    
+    <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    
+</body>
+</html>
