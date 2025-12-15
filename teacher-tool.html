@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Task Creator</title>
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script src="darkmode.js"></script>
+
+    <style>
+        /* Layout */
+        .tool-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100vh;
+        }
+
+        /* --- EDITOR PANEL --- */
+        .editor-panel {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            border-top: 5px solid #2563eb;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .editor-title { color: #2563eb; font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 700; }
+        .input-group { margin-bottom: 1.5rem; }
+        .input-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #4b5563; }
+
+        .form-control {
+            width: 100%; padding: 0.8rem; border: 2px solid #e5e7eb;
+            border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;
+            box-sizing: border-box; font-family: monospace;
+        }
+        .form-control:focus { outline: none; border-color: #2563eb; }
+
+        /* Latex Toolbar */
+        .latex-toolbar {
+            display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.5rem;
+            background: #f3f4f6; padding: 0.8rem; border-radius: 8px;
+        }
+        .latex-group-label {
+            width: 100%; font-size: 0.75rem; color: #6b7280;
+            margin-top: 0.5rem; margin-bottom: 0.2rem; font-weight: bold; text-transform: uppercase;
+        }
+        .latex-group-label:first-child { margin-top: 0; }
+        .latex-btn {
+            background: white; border: 1px solid #d1d5db; padding: 0.4rem 0.7rem;
+            border-radius: 6px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s;
+            font-family: 'Times New Roman', serif; font-style: italic;
+        }
+        .latex-btn:hover { background: #2563eb; color: white; border-color: #2563eb; transform: translateY(-1px); }
+
+        /* Live Preview Box */
+        .live-preview-box {
+            background: #eff6ff; border: 1px dashed #2563eb; border-radius: 8px;
+            padding: 1rem; min-height: 60px; margin-top: 0.5rem;
+            color: #1e3a8a; font-size: 1.1rem; display: flex; align-items: center;
+        }
+        .live-preview-label { font-size: 0.8rem; color: #2563eb; font-weight: bold; text-transform: uppercase; margin-bottom: 0.25rem; display: block; }
+
+        /* File Upload Styling */
+        .file-upload-wrapper {
+            border: 2px dashed #d1d5db; padding: 1rem; border-radius: 8px;
+            text-align: center; cursor: pointer; transition: 0.2s; background: #f9fafb;
+        }
+        .file-upload-wrapper:hover { border-color: #2563eb; background: #eff6ff; }
+        input[type="file"] { width: 100%; cursor: pointer; }
+
+        /* Options Grid (Editor) */
+        .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+        .add-btn {
+            width: 100%; padding: 1rem; background: #2563eb; color: white;
+            border: none; border-radius: 8px; font-weight: 700; cursor: pointer;
+            transition: background 0.3s; margin-top: auto;
+        }
+        .add-btn:hover { background: #1d4ed8; }
+
+        /* --- PREVIEW PANEL --- */
+        .preview-panel {
+            background: #fdf4ff; padding: 2rem; border-radius: 16px;
+            border-top: 5px solid #d946ef; box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            display: flex; flex-direction: column; height: 85vh;
+        }
+        .preview-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+        .preview-title { color: #d946ef; font-size: 1.5rem; font-weight: 700; }
+
+        /* The Paper Sheet */
+        #test-paper {
+            background: white; padding: 2rem; flex: 1; overflow-y: auto;
+            border: 1px solid #e5e7eb; box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+            font-family: 'Times New Roman', Times, serif; 
+        }
+
+        .test-item {
+            margin-bottom: 2rem; padding-bottom: 1.5rem;
+            border-bottom: 1px dashed #ccc; position: relative;
+        }
+
+        .test-question {
+            font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem;
+        }
+
+        /* Image Display in Preview */
+        .task-image-display {
+            display: block; max-width: 300px; max-height: 200px;
+            margin: 0.5rem 0 1rem 1.5rem; border: 1px solid #ddd;
+            border-radius: 4px; padding: 2px;
+        }
+
+        /* Horizontal Options Style */
+        .test-options {
+            display: flex; flex-wrap: wrap; gap: 1.5rem; /* Space between options */
+            margin-left: 1.5rem; margin-top: 0.5rem;
+        }
+        .option-item {
+            display: inline-block;
+        }
+
+        .delete-btn {
+            position: absolute; right: 0; top: 0; background: #ef4444; color: white;
+            border: none; width: 25px; height: 25px; border-radius: 50%;
+            cursor: pointer; font-size: 0.8rem;
+        }
+
+        @media print { .delete-btn { display: none; } }
+
+        .download-btn {
+            background: #d946ef; color: white; border: none; padding: 0.8rem 1.5rem;
+            border-radius: 50px; font-weight: 600; cursor: pointer;
+            box-shadow: 0 4px 15px rgba(217, 70, 239, 0.3); transition: transform 0.2s;
+        }
+        .download-btn:hover { transform: translateY(-2px); background: #c026d3; }
+
+        @media (max-width: 900px) {
+            .tool-container { grid-template-columns: 1fr; height: auto; }
+            .preview-panel { height: auto; min-height: 500px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="tool-container">
+    
+    <div class="editor-panel">
+        <h2 class="editor-title"><i class="fas fa-edit"></i> Task Creator</h2>
+        
+        <div class="input-group">
+            <label>1. Question Statement</label>
+            <div class="latex-toolbar">
+                <div class="latex-group-label">Basic</div>
+                <button class="latex-btn" onclick="insertMath('\\frac{a}{b}')">Fraction</button>
+                <button class="latex-btn" onclick="insertMath('\\sqrt{x}')">Root</button>
+                <button class="latex-btn" onclick="insertMath('x^{2}')">Power</button>
+                <button class="latex-btn" onclick="insertMath('x_{i}')">Sub</button>
+                
+                <div class="latex-group-label">Trigonometry</div>
+                <button class="latex-btn" onclick="insertMath('\\sin')">sin</button>
+                <button class="latex-btn" onclick="insertMath('\\cos')">cos</button>
+                <button class="latex-btn" onclick="insertMath('\\tan')">tan</button>
+                <button class="latex-btn" onclick="insertMath('\\theta')">θ</button>
+                <button class="latex-btn" onclick="insertMath('^{\\circ}')">°</button>
+
+                <div class="latex-group-label">Calculus & Symbols</div>
+                <button class="latex-btn" onclick="insertMath('\\int_{a}^{b}')">∫</button>
+                <button class="latex-btn" onclick="insertMath('\\sum')">∑</button>
+                <button class="latex-btn" onclick="insertMath('\\infty')">∞</button>
+                <button class="latex-btn" onclick="insertMath('\\pi')">π</button>
+
+                <div class="latex-group-label">Greek Letters</div>
+                <button class="latex-btn" onclick="insertMath('\\alpha')" title="Alpha">$\alpha$</button>
+                <button class="latex-btn" onclick="insertMath('\\beta')" title="Beta">$\beta$</button>
+                <button class="latex-btn" onclick="insertMath('\\gamma')" title="Gamma">$\gamma$</button>
+                <button class="latex-btn" onclick="insertMath('\\delta')" title="Delta">$\delta$</button>
+                <button class="latex-btn" onclick="insertMath('\\theta')" title="Theta">$\theta$</button>
+                <button class="latex-btn" onclick="insertMath('\\lambda')" title="Lambda">$\lambda$</button>
+                <button class="latex-btn" onclick="insertMath('\\pi')" title="Pi">$\pi$</button>
+                <button class="latex-btn" onclick="insertMath('\\sigma')" title="Sigma">$\sigma$</button>
+                <button class="latex-btn" onclick="insertMath('\\omega')" title="Omega">$\omega$</button>
+                <button class="latex-btn" onclick="insertMath('\\Delta')" title="Big Delta">$\Delta$</button>
+                <button class="latex-btn" onclick="insertMath('\\vec{v}')" title="Vector">$\vec{v}$</button>
+
+                <div class="latex-group-label">Operators</div>
+                <button class="latex-btn" onclick="insertMath('\\times')" title="Times">$\times$</button>
+                <button class="latex-btn" onclick="insertMath('\\div')" title="Divide">$\div$</button>
+                <button class="latex-btn" onclick="insertMath('\\cdot')" title="Dot">$\cdot$</button>
+                <button class="latex-btn" onclick="insertMath('\\pm')" title="Plus Minus">$\pm$</button>
+                <button class="latex-btn" onclick="insertMath('\\neq')" title="Not Equal">$\neq$</button>
+                <button class="latex-btn" onclick="insertMath('\\approx')" title="Approx">$\approx$</button>
+                <button class="latex-btn" onclick="insertMath('\\leq')" title="Less or Equal">$\leq$</button>
+                <button class="latex-btn" onclick="insertMath('\\geq')" title="Greater or Equal">$\geq$</button>
+
+                <div class="latex-group-label">Sets & Logic</div>
+                <button class="latex-btn" onclick="insertMath('\\in')" title="Element of">$\in$</button>
+                <button class="latex-btn" onclick="insertMath('\\notin')" title="Not element of">$\notin$</button>
+                <button class="latex-btn" onclick="insertMath('\\cup')" title="Union">$\cup$</button>
+                <button class="latex-btn" onclick="insertMath('\\cap')" title="Intersection">$\cap$</button>
+                <button class="latex-btn" onclick="insertMath('\\subset')" title="Subset">$\subset$</button>
+                <button class="latex-btn" onclick="insertMath('\\forall')" title="For All">$\forall$</button>
+                <button class="latex-btn" onclick="insertMath('\\exists')" title="Exists">$\exists$</button>
+            </div>
+            
+            <textarea id="questionInput" class="form-control" rows="3" placeholder="Type question here..."></textarea>
+            
+            <span class="live-preview-label">Live Preview:</span>
+            <div id="live-preview" class="live-preview-box"></div>
+        </div>
+
+        <div class="input-group">
+            <label>2. Add Image (Optional)</label>
+            <div class="file-upload-wrapper">
+                <input type="file" id="imageInput" accept="image/*">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>3. Options (Leave empty to hide)</label>
+            <div class="options-grid">
+                <input type="text" id="optA" class="form-control" placeholder="Option A">
+                <input type="text" id="optB" class="form-control" placeholder="Option B">
+                <input type="text" id="optC" class="form-control" placeholder="Option C">
+                <input type="text" id="optD" class="form-control" placeholder="Option D">
+                <input type="text" id="optE" class="form-control" placeholder="Option E">
+                <input type="text" id="optF" class="form-control" placeholder="Option F">
+            </div>
+        </div>
+
+        <button class="add-btn" onclick="addTask()">Add Task to Test</button>
+    </div>
+
+    <div class="preview-panel">
+        <div class="preview-header">
+            <h2 class="preview-title">Class Test Preview</h2>
+            <button class="download-btn" onclick="generatePDF()">
+                <i class="fas fa-file-pdf"></i> Download PDF
+            </button>
+        </div>
+
+        <div id="test-paper">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2>Mathematics Test</h2>
+                <p>Name: __________________________ &nbsp;&nbsp; Date: ____________</p>
+                <hr>
+            </div>
+            
+            <div id="tasks-container">
+                </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    let questionCount = 0;
+    const input = document.getElementById('questionInput');
+    const preview = document.getElementById('live-preview');
+
+    // Live Preview
+    function updatePreview() {
+        preview.innerHTML = input.value;
+        if(window.MathJax) {
+            MathJax.typesetPromise([preview]).catch(err => console.log(err));
+        }
+    }
+    input.addEventListener('input', updatePreview);
+
+    // Insert Math
+    function insertMath(symbol) {
+        const start = input.selectionStart;
+        const end = input.selectionEnd;
+        const text = input.value;
+        const insert = ` $${symbol}$ `;
+        input.value = text.substring(0, start) + insert + text.substring(end);
+        input.focus();
+        input.selectionStart = input.selectionEnd = start + insert.length;
+        updatePreview();
+    }
+
+    // --- MAIN ADD TASK FUNCTION ---
+    function addTask() {
+        const qText = input.value;
+        const imgInput = document.getElementById('imageInput');
+        
+        // Collect Options
+        const opts = [
+            { label: 'A', val: document.getElementById('optA').value },
+            { label: 'B', val: document.getElementById('optB').value },
+            { label: 'C', val: document.getElementById('optC').value },
+            { label: 'D', val: document.getElementById('optD').value },
+            { label: 'E', val: document.getElementById('optE').value },
+            { label: 'F', val: document.getElementById('optF').value }
+        ];
+
+        if (qText.trim() === "") {
+            alert("Please enter a question statement.");
+            return;
+        }
+
+        // Logic to handle Image Upload (Async)
+        if (imgInput.files && imgInput.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                // Once image is read, create the task with the image
+                createTaskHTML(qText, opts, e.target.result);
+            }
+            reader.readAsDataURL(imgInput.files[0]);
+        } else {
+            // No image, create task without it
+            createTaskHTML(qText, opts, null);
+        }
+    }
+
+    function createTaskHTML(question, options, imageSrc) {
+        questionCount++;
+        
+        // 1. Build Image HTML if exists
+        let imgHTML = '';
+        if (imageSrc) {
+            imgHTML = `<img src="${imageSrc}" class="task-image-display">`;
+        }
+
+        // 2. Build Options HTML (Horizontal & Conditional)
+        let optionsHTML = '';
+        options.forEach(opt => {
+            if (opt.val.trim() !== "") {
+                // Added class option-item for styling
+                optionsHTML += `<div class="option-item"><strong>${opt.label})</strong> ${opt.val}</div>`;
+            }
+        });
+
+        // 3. Combine into one item
+        const newItemHTML = `
+            <div class="test-item" id="task-${questionCount}">
+                <button class="delete-btn" onclick="removeTask('task-${questionCount}')">X</button>
+                <div class="test-question">
+                    ${questionCount}. ${question}
+                </div>
+                ${imgHTML}
+                <div class="test-options">
+                    ${optionsHTML}
+                </div>
+            </div>
+        `;
+
+        // 4. Insert
+        const container = document.getElementById('tasks-container');
+        container.insertAdjacentHTML('beforeend', newItemHTML);
+
+        // 5. Render Math
+        const newTaskElement = document.getElementById(`task-${questionCount}`);
+        MathJax.typesetPromise([newTaskElement]);
+
+        // 6. Reset Form
+        input.value = "";
+        preview.innerHTML = "";
+        document.getElementById('imageInput').value = ""; // Clear file input
+        ['optA','optB','optC','optD','optE','optF'].forEach(id => document.getElementById(id).value = "");
+    }
+
+    function removeTask(id) {
+        document.getElementById(id).remove();
+    }
+
+    function generatePDF() {
+        const element = document.getElementById('test-paper');
+        const deleteBtns = document.querySelectorAll('.delete-btn');
+        deleteBtns.forEach(btn => btn.style.display = 'none');
+
+        const opt = {
+            margin:       0.4,
+            filename:     'Class_Test.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2, useCORS: true },
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).save().then(() => {
+            deleteBtns.forEach(btn => btn.style.display = 'block');
+        });
+    }
+</script>
+
+</body>
+</html>
