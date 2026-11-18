@@ -456,3 +456,28 @@ body {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* ===== Solution ("ამოხსნა") under a question ===== */
+.solution {
+    margin-top: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--card-bg-secondary);
+}
+
+/* Multiple-choice questions: hide the solution until the question is answered */
+fieldset:not(.answered) .solution[data-after-answer] {
+    display: none;
+}
+
+.solution summary {
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    user-select: none;
+}
+
+.solution-body {
+    padding: 0 1rem 1rem;
+    line-height: 1.7;
+}

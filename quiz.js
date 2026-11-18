@@ -519,6 +519,22 @@ function renderQuiz(){
       fieldset.appendChild(label);
     });
 
+    // Optional solution ("ამოხსნა"), collapsed by default.
+    // For multiple-choice questions it stays hidden until the question is answered
+    // (standard mode) or the quiz is finished (simulation mode); see .solution in quiz-style.css.
+    if (typeof q.solution === "string" && q.solution.trim() !== "") {
+      const sol = document.createElement("details");
+      sol.className = "solution";
+      if (q.options && q.options.length) sol.dataset.afterAnswer = "";
+      const summary = document.createElement("summary");
+      summary.textContent = "ამოხსნა";
+      const body = document.createElement("div");
+      body.className = "solution-body";
+      body.innerHTML = q.solution;
+      sol.append(summary, body);
+      fieldset.appendChild(sol);
+    }
+
     form.appendChild(fieldset);
     
   });
