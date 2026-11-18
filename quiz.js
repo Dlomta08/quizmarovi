@@ -156,8 +156,55 @@ function removeFloatingTimer(){
   if (ft) ft.remove();
 }
 
-function startQuiz(withTimer) {
-  simulationMode = withTimer; 
+/* ===== Simulation progress saved in sessionStorage (survives a page refresh) ===== */
+// One entry per quiz page (URL), shaped like { endTime: <ms timestamp>, answers: { "<question index>": <option index> } }.
+const SIM_STATE_KEY = "sim-state:" + location.pathname + location.search;
+let simState = null;
+
+function loadSimState() {
+  try {
+    const s = JSON.parse(sessionStorage.getItem(SIM_STATE_KEY));
+    return s && typeof s.endTime === "number" ? s : null;
+  } catch { return null; }
+}
+function saveSimState() {
+  if (!simState) return;
+  try { sessionStorage.setItem(SIM_STATE_KEY, JSON.stringify(simState)); } catch {}
+}
+function clearSimState() {
+  simState = null;
+  try { sessionStorage.removeItem(SIM_STATE_KEY); } catch {}
+}
+
+// Re-select saved answers after the quiz has been rendered.
+function restoreSimAnswers() {
+  if (!simState || !simState.answers) return;
+  const form = document.getElementById("quizForm");
+  const fieldsets = form.querySelectorAll("fieldset");
+  Object.entries(simState.answers).forEach(([qi, optIdx]) => {
+    const fs = fieldsets[Number(qi)];
+    if (!fs) return;
+    const label = fs.querySelector(`label.option-chip[data-index="${optIdx}"]`);
+    if (!label) return;
+    label.classList.add("selected");
+    const radio = label.querySelector('input[type="radio"]');
+    if (radio) radio.checked = true;
+  });
+}
+
+// If the page was refreshed during a simulation, continue it automatically.
+// "load" waits for the quiz data script (added dynamically in quiz.html / physics-game.html).
+window.addEventListener("load", () => {
+  const saved = loadSimState();
+  if (!saved || typeof quizData === "undefined" || !Array.isArray(quizData)) return;
+  const modeSel = document.getElementById("mode-selection");
+  const form = document.getElementById("quizForm");
+  if (!modeSel || !form || form.style.display === "block") return;
+  startQuiz(true, saved);
+});
+
+function startQuiz(withTimer, savedState) {
+  simulationMode = withTimer;
   document.getElementById("mode-selection").style.display = "none";
   const quizForm = document.getElementById("quizForm");
   quizForm.style.display = "block";
@@ -165,27 +212,39 @@ function startQuiz(withTimer) {
 
   const pageTimerEl = document.getElementById("timer");
   if (withTimer) {
-    const customMinutesInput = document.getElementById("customTime");
-    let customMinutes = 180;
-    if (customMinutesInput) {
-      const inputVal = parseInt(customMinutesInput.value);
-      if (!isNaN(inputVal) && inputVal >= 1) customMinutes = inputVal;
+    if (savedState) {
+      simState = savedState;
+      if (!simState.answers) simState.answers = {};
+    } else {
+      const customMinutesInput = document.getElementById("customTime");
+      let customMinutes = 180;
+      if (customMinutesInput) {
+        const inputVal = parseInt(customMinutesInput.value);
+        if (!isNaN(inputVal) && inputVal >= 1) customMinutes = inputVal;
+      }
+      simState = { endTime: Date.now() + customMinutes * 60 * 1000, answers: {} };
+      saveSimState();
     }
-    timeLeft = customMinutes * 60;
+    restoreSimAnswers();
 
     if (pageTimerEl) pageTimerEl.style.display = "none";
-    const ft = createFloatingTimer();
+    createFloatingTimer();
 
-    updateTimerDisplay();
-    timerInterval = setInterval(() => {
-      timeLeft--; updateTimerDisplay();
+    // Time is computed from the saved end time, so it stays correct across refreshes
+    // and doesn't drift when the tab is in the background.
+    const tick = () => {
+      timeLeft = Math.max(0, Math.round((simState.endTime - Date.now()) / 1000));
+      updateTimerDisplay();
       if (timeLeft <= 0) {
         clearInterval(timerInterval);
         alert("დრო ამოიწურა! ქვიზი ავტომატურად დასრულდა.");
-        const form = document.getElementById("quizForm");
-        form.requestSubmit();
+        document.getElementById("quizForm").requestSubmit();
       }
-    }, 1000);
+    };
+    timeLeft = Math.max(0, Math.round((simState.endTime - Date.now()) / 1000));
+    updateTimerDisplay();
+    timerInterval = setInterval(tick, 1000);
+    if (timeLeft <= 0) setTimeout(tick, 0);
   } else {
     if (pageTimerEl) {
       pageTimerEl.style.display = "none";
@@ -303,8 +362,10 @@ function renderQuiz(){
     if (q.image) {
       const img = document.createElement("img");
       img.src = q.image;
-      img.alt = q.alt || `Question ${i + 1} illustration`;
+      img.alt = q.alt || `${i + 1}-ე ამოცანის ნახაზი`;
       img.className = "quiz-image";
+      img.loading = "lazy";
+      img.decoding = "async";
       contentWrapper.appendChild(img);
     }
 
@@ -371,6 +432,11 @@ function renderQuiz(){
           const y = clickEvent.clientY - rect.top;
           addRipple(selectedLabel, x, y, "rgba(67,97,238,.3)");
         }
+        // Remember the answer so a refresh doesn't lose it.
+        if (simState) {
+          simState.answers[i] = selectedIdx;
+          saveSimState();
+        }
       }
     }
 
@@ -413,8 +479,10 @@ function renderQuiz(){
       radio.name = `question${i}`;
       radio.value = j;
 
-      label.addEventListener("pointerdown", (e) => {
-        e.preventDefault();
+      // "click" (not "pointerdown") so a touch-scroll that starts on an option doesn't select it.
+      label.addEventListener("click", (e) => {
+        e.preventDefault(); // stop the label from re-dispatching a click to the radio
+        if (e.target === radio) return;
         radio.checked = true;
         const formEl = document.getElementById("quizForm");
         const isFinished = formEl && formEl.classList.contains("finished");
@@ -475,7 +543,10 @@ function renderQuiz(){
   const number = urlParams.get("number");
   const classNum = urlParams.get("class");
 
-  const doneKey = `done-${classNum}-${year}-${number}`;
+  // Physics pages set window.QUIZ_SUBJECT = "physics" so their progress doesn't collide with math.
+  // Math keeps the original key format so existing saved progress still shows.
+  const subjectPrefix = window.QUIZ_SUBJECT ? `${window.QUIZ_SUBJECT}-` : "";
+  const doneKey = `done-${subjectPrefix}${classNum}-${year}-${number}`;
 
   let isMarkedDone = localStorage.getItem(doneKey) === "true";
   if (isMarkedDone) {
@@ -524,8 +595,10 @@ function renderQuiz(){
     resultBox.innerHTML = "";
 
     let [score, minpt] = revealAllAnswers(form);
-    if(minpt == -1) minpt = 15;
-    resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}`;
+    // Only multiple-choice questions can be scored; open questions don't count toward the total.
+    const gradedCount = quizData.filter(q => q.options && q.options.length).length;
+    // Default pass mark: 60% of graded questions (15 of 25 for a standard math quiz).
+    if (minpt == -1) minpt = Math.ceil(gradedCount * 0.6);
     const message = document.createElement("span");
     if (score >= minpt) {
       message.textContent = "ბარიერი გადალახულია!";
@@ -534,9 +607,26 @@ function renderQuiz(){
       message.textContent = "ბარიერი არ არის გადალახული!";
       message.style.color = "red";
     }
-    resultBox.innerHTML = `<strong>ქულა: ${score} / ${quizData.length}</strong><br>`;
+    resultBox.innerHTML = `<strong>ქულა: ${score} / ${gradedCount}</strong><br>`;
     resultBox.appendChild(message);
 
+    // Keep the best score for regular quizzes (random quizzes have no class/year/number).
+    // Key matches the "done" key with "best-" instead of "done-"; the quiz list pages read it.
+    if (classNum && year && number && gradedCount > 0) {
+      const bestKey = doneKey.replace(/^done-/, "best-");
+      let best = null;
+      try { best = JSON.parse(localStorage.getItem(bestKey)); } catch {}
+      if (!best || typeof best.score !== "number" || score > best.score || best.total !== gradedCount) {
+        best = { score, total: gradedCount };
+        try { localStorage.setItem(bestKey, JSON.stringify(best)); } catch {}
+      }
+      const bestLine = document.createElement("div");
+      bestLine.className = "best-score-line";
+      bestLine.textContent = `საუკეთესო შედეგი: ${best.score} / ${best.total}`;
+      resultBox.appendChild(bestLine);
+    }
+
+    clearSimState();
     form.classList.add("finished");
 
     if (simulationMode) form.querySelector("button[type='submit']").disabled = true;

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="კომაროვის სკოლის მათემატიკის ქვიზები სასწავლო წლების მიხედვით, პასუხების შემოწმებით და ტაიმერიანი სიმულაციით.">
     <title>კლასის ქვიზები</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="quiz-pages.css">
@@ -33,6 +34,19 @@
             function isDone(prefix){
               return localStorage.getItem(prefix) === 'true';
             }
+            // Best score is saved by quiz.js under the same key with "best-" instead of "done-".
+            function getBest(prefix){
+              try {
+                const b = JSON.parse(localStorage.getItem(prefix.replace(/^done-/, 'best-')));
+                return b && typeof b.score === 'number' ? b : null;
+              } catch { return null; }
+            }
+            function renderBest(el, prefix){
+              const b = getBest(prefix);
+              el.textContent = b ? `${b.score}/${b.total}` : '';
+              el.title = b ? 'საუკეთესო შედეგი' : '';
+              el.hidden = !b;
+            }
             function refreshAllStatusIcons(){
               document.querySelectorAll('.status-icon[data-keyprefix]').forEach(icon=>{
                 const prefix = icon.getAttribute('data-keyprefix');
@@ -41,13 +55,16 @@
                 icon.title = done ? 'დასრულებულია' : 'არ არის დასრულებული';
                 icon.setAttribute('aria-label', icon.title);
               });
+              document.querySelectorAll('.best-score[data-keyprefix]').forEach(el=>{
+                renderBest(el, el.getAttribute('data-keyprefix'));
+              });
             }
             const urlParams = new URLSearchParams(window.location.search);
             const classNum = parseInt(urlParams.get('class')) || 7;
             document.title = `მე-${classNum} კლასის ქვიზები`;
             document.querySelector('.text-title').textContent = `მე-${classNum} კლასის ქვიზები`;
             
-            const startYear = 2020; const endYear = 2024; const quizzesPerYear = 5;
+            const startYear = 2020; const endYear = 2025; const quizzesPerYear = 5;
             const yearsGrid = document.getElementById("yearsGrid");  
             for (let y = endYear; y >= startYear; y--) {
                 const academicYear = `${y}/${(y + 1).toString().slice(-2)}`;
@@ -67,9 +84,10 @@
                 const quizzesGrid = document.createElement("div");
                 quizzesGrid.className = "quizzes-grid";
                 for (let q = 1; q <= quizzesPerYear; q++) {
-                    const quizCard = document.createElement("div");
+                    // A real link, so it works with Tab/Enter and "open in new tab".
+                    const quizCard = document.createElement("a");
                     quizCard.className = "quiz-card";
-                    quizCard.onclick = () => handleQuizClick(academicYear, q, classNum);
+                    quizCard.href = `quiz.html?class=${classNum}&year=${yearFolderForKey}&number=${q}`;
                     
                     const quizIcon = document.createElement("i");
                     quizIcon.className = "fas fa-file-alt quiz-icon";
@@ -100,6 +118,12 @@
                     quizCard.appendChild(quizNumber);
                     quizCard.appendChild(quizTitle);
                     quizCard.appendChild(statusIcon);
+
+                    const bestScore = document.createElement("span");
+                    bestScore.className = "best-score";
+                    bestScore.setAttribute('data-keyprefix', keyPrefix);
+                    renderBest(bestScore, keyPrefix);
+                    quizCard.appendChild(bestScore);
                     quizzesGrid.appendChild(quizCard);
                 }
                 
@@ -107,8 +131,9 @@
                 yearSection.appendChild(quizzesGrid);
                 yearsGrid.appendChild(yearSection);
             }
+            window.addEventListener('pageshow', (e)=>{ if (e.persisted) refreshAllStatusIcons(); });
             window.addEventListener('storage', (e)=>{
-              if (e.key && e.key.startsWith('done-')) {
+              if (e.key && (e.key.startsWith('done-') || e.key.startsWith('best-'))) {
                 refreshAllStatusIcons();
               }
             });
@@ -117,7 +142,7 @@
     </div>
 
     <footer class="main-footer">
-        <p>&copy; 2026 სსიპ ვლადიმირ კომაროვის თბილისის ფიზიკა-მათემატიკის N199 საჯარო სკოლა სკოლა. ყველა უფლება დაცულია.</p>
+        <p>&copy; 2026 სსიპ ვლადიმირ კომაროვის თბილისის ფიზიკა-მათემატიკის N199 საჯარო სკოლა. ყველა უფლება დაცულია.</p>
         <p>საკონტაქტო ინფორმაცია:
         <a href="mailto:komaroviqvizebi@gmail.com" class="email-link">komaroviqvizebi@gmail.com</a>
         </p>
@@ -135,14 +160,6 @@
     </style>
     </footer>
 
-    <script>
-        function handleQuizClick(year, number, classNum) {
-            const yearFolder = year.replace("/", "-");
-            const url = `quiz.html?class=${classNum}&year=${yearFolder}&number=${number}`;
-            window.location.href = url;
-        }
-        
-    </script>
     
     <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };

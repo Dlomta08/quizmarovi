@@ -79,6 +79,31 @@
     min-width: 0;
 }
 
+a.quiz-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.quiz-card:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Best score badge, e.g. "18/25" (bottom of the card) */
+.quiz-card .best-score {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background: rgba(var(--primary-rgb), 0.12);
+    padding: 0.1rem 0.5rem;
+    border-radius: 9999px;
+    font-variant-numeric: tabular-nums;
+}
+
+.quiz-card .best-score[hidden] {
+    display: none;
+}
+
 .quiz-card:hover {
     transform: translateY(-3px);
     background: rgba(var(--primary-rgb), 0.1);

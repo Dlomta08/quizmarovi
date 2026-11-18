@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="შექმენით შემთხვევითი ქვიზი კომაროვის სკოლის წინა წლების ამოცანებიდან: აირჩიეთ კლასები, ქვიზები და ამოცანების რაოდენობა.">
     <title>შემთხვევითი ქვიზის გენერატორი</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -77,13 +78,22 @@
     </style>
     </footer>
     <script>
+        // ?subject=physics switches the generator to physics (classes 8–11).
+        const isPhysics = new URLSearchParams(window.location.search).get('subject') === 'physics';
+        const firstClass = isPhysics ? 8 : 7;
+        if (isPhysics) {
+            document.title = 'ფიზიკის შემთხვევითი ქვიზის გენერატორი';
+            document.querySelector('.generator-title').textContent = 'ფიზიკის შემთხვევითი ქვიზის გენერატორი';
+            document.querySelector('.main-nav .logo').href = 'physics.html';
+        }
+
         const classContainer = document.getElementById('classCheckboxes');
-        for (let i = 7; i <= 11; i++) {
+        for (let i = firstClass; i <= 11; i++) {
             const label = document.createElement('label');
             label.className = 'checkbox-label';
-            if (i === 7) label.classList.add('checked');
+            if (i === firstClass) label.classList.add('checked');
             label.innerHTML = `
-                <input type="checkbox" name="class" value="${i}" ${i === 7 ? 'checked' : ''}>
+                <input type="checkbox" name="class" value="${i}" ${i === firstClass ? 'checked' : ''}>
                 <span>${i} კლასი</span>
             `;
             classContainer.appendChild(label);

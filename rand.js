@@ -19,22 +19,36 @@ function toggleAllQuizzes() {
     });
 }
 
+// Subject comes from the URL: random-quiz-generator.html?subject=physics
+const RANDOM_SUBJECT = new URLSearchParams(window.location.search).get('subject') === 'physics' ? 'physics' : 'math';
+const QUIZ_BASE_DIR = RANDOM_SUBJECT === 'physics' ? 'physics-quizzes' : 'quizzes';
+
+// Loads one quiz file and returns its quizData array (or null).
+// Files are fetched and run in their own scope instead of being added as <script> tags,
+// because physics files declare `const quizData`, which can't be declared twice on one page.
 async function loadQuizScript(path) {
-    return new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = path;
-        script.onload = () => {
-            if (typeof quizData !== 'undefined' && Array.isArray(quizData)) {
-                const dataCopy = [...quizData];
-                delete window.quizData;
-                resolve(dataCopy);
-            } else {
-                resolve(null);
-            }
-        };
-        script.onerror = () => resolve(null);
-        document.head.appendChild(script);
-    });
+    try {
+        const res = await fetch(path);
+        if (!res.ok) return null;
+        const source = (await res.text())
+            .replace(/^﻿/, '')
+            .replace(/^\s*(?:const|let|var)\s+quizData\s*=/m, 'quizData =');
+        const data = new Function('let quizData;\n' + source + '\n;return quizData;')();
+        return Array.isArray(data) ? data : null;
+    } catch (err) {
+        console.warn(`Failed to load ${path}:`, err);
+        return null;
+    }
+}
+
+// Unbiased Fisher–Yates shuffle (returns a new array).
+function shuffle(array) {
+    const a = array.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
 }
 
 async function generateQuiz() {
@@ -58,14 +72,14 @@ async function generateQuiz() {
     loadingDiv.style.display = 'block';
     generateBtn.disabled = true;
 
-    const years = ['2020-21', '2021-22', '2022-23', '2023-24', '2024-25'];
+    const years = ['2020-21', '2021-22', '2022-23', '2023-24', '2024-25', '2025-26'];
     
     const paths = [];
     for (const year of years) {
         for (const classNum of classes) {
             for (const quizNum of quizNumbers) {
                 paths.push({
-                    path: `quizzes/class-${classNum}/${year}/quiz-${quizNum}.js`,
+                    path: `${QUIZ_BASE_DIR}/class-${classNum}/${year}/quiz-${quizNum}.js`,
                     meta: { class: classNum, year: year, quiz: quizNum }
                 });
             }
@@ -82,7 +96,7 @@ async function generateQuiz() {
                         source: meta,
                         intro: p.random == 1 ? "" : p.intro,
                         task: p.random == 1 ? "" : p.task
-                    })).filter(p => p.options.length);
+                    })).filter(p => p.options && p.options.length);
                 }
                 return [];
             } catch (err) {
@@ -103,12 +117,17 @@ async function generateQuiz() {
         return;
     }
 
-    const shuffled = allProblems.sort(() => 0.5 - Math.random());
+    const shuffled = shuffle(allProblems);
     const selectedProblems = shuffled.slice(0, Math.min(problemCount, allProblems.length));
 
     try {
+        // A new random quiz has the same URL as the previous one, so drop any unfinished
+        // simulation progress saved for it (see SIM_STATE_KEY in quiz.js).
+        Object.keys(sessionStorage)
+            .filter(k => k.startsWith('sim-state:/random-quiz'))
+            .forEach(k => sessionStorage.removeItem(k));
         sessionStorage.setItem('randomQuizData', JSON.stringify(selectedProblems));
-        const config = { classes, quizNumbers, totalAvailable: allProblems.length };
+        const config = { subject: RANDOM_SUBJECT, classes, quizNumbers, totalAvailable: allProblems.length };
         sessionStorage.setItem('randomQuizConfig', JSON.stringify(config));
         window.location.href = 'random-quiz.html';
     } catch (e) {
