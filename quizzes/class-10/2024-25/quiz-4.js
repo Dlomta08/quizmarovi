@@ -11,7 +11,15 @@ quizData = [
       "$2C_{11}^5 x^{34}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["combinatorics"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //2
   {
@@ -25,28 +33,60 @@ quizData = [
       "$(-1; 0{,}5)$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //3
   {
     question: "იპოვეთ $(\\sqrt{x} + \\sqrt[4]{x})^{20}$ დაშლის იმ წევრის ნომერი, რომელიც შეიცავს $x^8$ წევრს.",
     options: ["$7$", "$12$", "$6$", "$16$", "$5$", "$9$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["nth-roots"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //4
   {
     question: "იპოვეთ $n$, თუ $\\vec{a} = (n;−2; 1)$ და $\\vec{b} = (5; 3n − 5;−7)$ ვექტორები მართობულია.",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors","coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //5
   {
     question: "მოცემულია $\\vec{a} = (3m − n; n − 2m; 6)$ და $\\vec{b} = (n − 4m; 3; c)$ ტოლი ვექტორები. იპოვეთ $m + n + c$.",
     options: ["$11$", "$2$", "$9$", "$15$", "$5$", "$20$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //6
   {
@@ -60,7 +100,15 @@ quizData = [
       "$\\frac{1}{4}$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 10,
+    difficulty: 1,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //7
   {
@@ -74,7 +122,15 @@ quizData = [
       "$\\frac{\\pi}{2} + \\pi n \\leq \\alpha \\leq \\frac{11\\pi}{6} + 2\\pi n$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //8
   {
@@ -88,7 +144,15 @@ quizData = [
       "$[−\\frac{\\pi}{2}; \\frac{7\\pi}{15}]$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-ineq"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -96,21 +160,45 @@ quizData = [
     question: "იპოვეთ $m + n$, თუ $\\vec{a} = (n − 2; 3; 6)$ და $\\vec{b} = (4; m + 3; 2)$ ვექტორები კოლენიალურია.",
     options: ["$12$", "$5$", "$15$", "$7$", "$11$", "$17$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //10
   {
     question: "$\\vec{a}$ ვექტორი, რომელიც $\\vec{b} = (12;−16;−15)$ ვექტორის კოლენიალურია, $\\vec{c} = (0; 0; 11)$ ვექტორთან ქმნის მახვილ კუთხეს. იპოვეთ $\\vec{a}$ ვექტორის კოორდინატების ჯამი, თუ $|\\vec{a}| = 25$.",
     options: ["$-19$", "$19$", "$-23$", "$23$", "$-43$", "$43$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors","coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //11
   {
     question: "იპოვეთ ალბათობა იმისა, რომ შემთხვევით შერჩეული ნამდვილი $a \\in [-3; 7]$ რიცხვისათვის $\\sqrt{x - 3} = a$ განტოლების ფესვი არ აღემატება $12$-ს.",
     options: ["$0{,}3$", "$0{,}6$", "$0{,}9$", "$0{,}25$", "$0{,}5$", "$0{,}75$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //12
   {
@@ -124,28 +212,60 @@ quizData = [
       "$[−\\frac{2\\pi}{5}; \\frac{3\\pi}{7}]$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-ineq","sum-formulas"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //13
   {
     question: "იპოვეთ $(1 + x)^7 + (1 + x)^8 + (1 + x)^9$ გამოსახულების სტანდარტული სახით წარმოდგენისას $x^7$ წევრის კოეფიციენტი.",
     options: ["$1$", "$12$", "$24$", "$36$", "$45$", "$63$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //14
   {
     question: "წესიერი წაკვეთილი ოთკუთხა პირამიდის ფუძეების ცენტრების შემაერთებელ წრფეზე გავლებული სიბრტყე პირამიდის ფუძეების წიბოებს მართი კუთხით გადაკვეთს. მიღებულ კვეთაში ჩახაზულია $R = 2$ რადიუსის მქონე წრეწირი. იპოვეთ პირამიდის ზედაპირის ფართობი, თუ პირამიდის აპოთემაა $5$.",
     options: ["$96$", "$120$", "$125$", "$144$", "$168$", "$172$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //15
   {
     question: "იპოვეთ $\\vec{a} \\cdot \\vec{c}$, თუ $\\vec{a} = (2; 3; 1)$, ხოლო $\\vec{c} = \\vec{b} \\times \\vec{d}$, სადაც $\\vec{b} = (1;−1; 2)$ და $\\vec{d} = (1; 2; 1)$.",
     options: ["$-4$", "$-2$", "$-1$", "$3$", "$7$", "$9$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors","coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //16
   {
@@ -159,7 +279,15 @@ quizData = [
       "$\\frac{3}{5}$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //17
   {
@@ -167,42 +295,90 @@ quizData = [
     question: "იპოვეთ $x$, თუ სამართლიანია $\\sqrt{4 - x^2} \\leq \\sin y + \\frac{1}{\\sin y}$ უტოლობა.",
     options: ["$0$", "$1$", "$\\frac{1}{\\pi}$", "$(−1; 1)$", "$(−2; 0)$", "$(−2; 2)$"],
     correct: [0,1,2,3,4,5],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-ineq"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //18
   {
     question: "იპოვეთ $(x^2 − x) = \\sqrt{x^2 − x + 2}$ განტოლების ყველა ამონახსნთა ჯამი.",
     options: ["$5$", "$-2$", "$1$", "$6$", "$-4$", "$8$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //19
   {
     question: "მოცემულია ორი $\\vec{a} = (1;−2; 1)$ და $\\vec{b} = (5;−2;−1)$ ვექტორი. ჩამოთვლილთაგან $\\vec{d} = (2;1;3)$, $\\vec{e} = (4;2;6)$, $\\vec{f} = (8;4;12)$, $\\vec{k} = (1;2;-2)$, რომელი ვექტორი უნდა ავიღოთ მესამე ვექტორად, რომ სამეული იყოს კომპლანარული ვექტორები?",
     options: ["მხოლოდ $\\vec{d}$", "მხოლოდ $\\vec{e}$", "მხოლოდ $\\vec{f}$", "მხოლოდ $\\vec{k}$", "მხოლოდ $\\vec{d}$ და $\\vec{e}$", "მხოლოდ $\\vec{e}$ და $\\vec{k}$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors","coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //20
   {
     question: "მოცემულია $ABCD A_1 B_1 C_1 D_1$ წესიერი წაკვეთილი პირამიდა. $AB = 8$, $A_1B_1 = 4$. პირამიდის სიმაღლეა $3$. იპოვეთ მანძილი $A_1$ წვეროდან $CD$ გვერდის შუა წერტილამდე.",
     options: ["$6$", "$9$", "$7$", "$2\\sqrt{3}$", "$3\\sqrt{2}$", "$\\sqrt{15}$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["combinatorics","pyramid"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //21
   {
     question: "ჩამოთვლილთაგან რომელი შუალედის ყოველი მნიშვნელობა დააკმაყოფილებს $\\sin2 x − 2 \\sin 37^\\circ \\cos x > 0$ უტოლობას?",
     options: ["$(3^\\circ; 11^\\circ)$", "$(15^\\circ; 21^\\circ)$", "$(23^\\circ; 29^\\circ)$", "$(97^\\circ; 115^\\circ)$", "$(123^\\circ; 131^\\circ)$", "$(161^\\circ; 173^\\circ)$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-ineq","sum-formulas"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //22
   {
     question: "რამდენი ამონახსნი აქვს $(\\sin \\pi x − \\cos \\pi x) \\sqrt{6 + x − x^2} = 0$ განტოლებას?",
     options: ["$2$", "$4$", "$5$", "$7$", "$8$", "$8$-ზე მეტი"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //23
   {
@@ -216,19 +392,43 @@ quizData = [
       "$y \\in (−\\infty;−3)$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //24
   {
     question: "წესიერ $A_1A_2A_3\\dots A_8$ რვაკუთხედზე შემოხაზულია ერთეულოვანი დიამეტრის მქონე წრეწირი. $K$ წერტილი წრეწირზე მდებარეობს. იპოვეთ $\\vec{KA_1} + \\vec{KA_2} + \\dots + \\vec{KA_8}$ ვექტორის სიგრძე.",
     options: ["$0$", "$\\frac{1}{2}$", "$1$", "$2$", "$4$", "$8$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["combinatorics","vectors"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //25
   {
     question: "ვთქვათ $\\vec{OA}, \\vec{OB}, \\vec{OC} და \\vec{OD}$ სხვადასხვა ერთეულოვანი ვექტორებია სივრცეში, ამასთან ცნობილია, რომ $\\vec{OA} \\cdot \\vec{OB} = \\vec{OB} \\cdot \\vec{OC} = \\vec{OC} \\cdot \\vec{OA} = \\vec{OD} \\cdot \\vec{OB} = \\vec{OD} \\cdot \\vec{OC} = \\frac{1}{2}$. იპოვეთ $\\vec{OA} \\cdot \\vec{OD}$.",
     options: ["$0$", "$1$", "$-\\frac{1}{3}$", "$-\\frac{1}{2}$", "$\\frac{1}{3}$", "$\\frac{1}{3}$"],
     correct: 2,
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

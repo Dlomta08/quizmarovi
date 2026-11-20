@@ -4,7 +4,15 @@ quizData = [
     question: "$x$ და $y$ სიდიდეები აკმაყოფილებენ $xy = 15$ და $x^2 + y^2 = 34$ ტოლობებს. იპოვეთ $x + y$ ჯამის მინიმალური შესაძლო მნიშვნელობა.",
     options: ["$-6$", "$-8$", "$-10$", "$-12$", "$-14$", "$-16$"],
     correct: 1,
-    tags: ["algebra", "quadratic", "symmetry"]
+    tags: ["algebra", "quadratic", "symmetry"],
+    area: "geometry",
+    topics: ["line-circle-eq","max-min"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -12,7 +20,15 @@ quizData = [
     question: "იპოვეთ $y = -x^2 - 4x - 4$ ფუნქციის მნიშვნელობათა სიმრავლე.",
     options: ["$[0; +\\infty)$", "$[2; +\\infty)$", "$[4; +\\infty)$", "$(−\\infty; 0]$", "$(−\\infty; 2]$", "$(−\\infty; 4]$"],
     correct: 3,
-    tags: ["functions", "quadratic"]
+    tags: ["functions", "quadratic"],
+    area: "algebra",
+    topics: ["function-basics","quadratic-func"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -20,7 +36,15 @@ quizData = [
     question: "რამდენი მთელი ამონახსნი აქვს $x^2 − 8x + 3 \\geq 0$ უტოლობას?",
     options: ["არცერთი", "ერთი", "ორი", "სამი", "ოთხი", "უამრავი"],
     correct: 5,
-    tags: ["inequalities", "quadratic"]
+    tags: ["inequalities", "quadratic"],
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 9,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -28,7 +52,15 @@ quizData = [
     question: "სამკუთხედის გვერდების სირძეებია $\\sqrt{11}$, $\\sqrt{12}$ და $\\sqrt{23}$. იპოვეთ ამ სამკუთხედის ფართობი.",
     options: ["$\\sqrt{46}$", "$6$", "$\\sqrt{33}$", "$4\\sqrt{2}$", "$5$", "$2\\sqrt{7}$"],
     correct: 2,
-    tags: ["geometry", "area"]
+    tags: ["geometry", "area"],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -36,14 +68,30 @@ quizData = [
     question: "მართკუთხა სამკუთხედში მახვილი კუთხის ბისექტრისა მოპირდაპირე კათეტს $4$-ისა და $5$-ის ტოლ მონაკვეთებად ყოფს. იპოვეთ მართკუთხა სამკუთხედის ფართობი.",
     options: ["$56$", "$41$", "$48$", "$40$", "$54$", "$60$"],
     correct: 4,
-    tags: ["geometry", "bisector", "triangle"]
+    tags: ["geometry", "bisector", "triangle"],
+    area: "geometry",
+    topics: ["right-triangle"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     //6
   {
     question: "იპოვეთ $5x + 1 \\geq |2x + 1|$ უტოლობის ამონახსნთა სიმრავლე?",
     options: ["$[0; +\\infty)$", "$(−1; 3)$", "$(−5; 2)$", "$(−3; 5)$", "$(−1; 1)$", "ყველა წინა პასუხი მცდარია"],
     correct: 0,
-    tags: ["inequalities", "absolute value"]
+    tags: ["inequalities", "absolute value"],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 9,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -51,7 +99,15 @@ quizData = [
     question: "$y = x^2 + 6x − 2$ ფორმულით განსაზღვრული ფუნქციის განსაზღვრის არეა $D_x = [−4; 0]$. იპოვეთ ამ ფუნქციის მნიშვნელობათა $E_y$ სიმრავლე.",
     options: ["$[−11; −2]$", "$[−11; −10]$", "$[−10; −2]$", "$[−11; +\\infty)$", "$[−10; +\\infty)$", "$[−2; +\\infty)$"],
     correct: 0,
-    tags: ["functions", "quadratic"]
+    tags: ["functions", "quadratic"],
+    area: "algebra",
+    topics: ["function-basics","quadratic-func"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -59,7 +115,15 @@ quizData = [
     question: "$a(x) = −x^2 − 4x + 3$, $b(x) = x^2 − 4x + 31$, $c(x) = x^2 + 4x + 1$ და $d(x) = −3x^2 − 12x + 13$ ფუნქციებიდან რომელი ორის ზრდადობის შუალედი ემთხვევა ერთმანეთს?",
     options: ["$a(x)$-ისა და $b(x)$-ის", "$a(x)$-ისა და $c(x)$-ის", "$a(x)$-ისა და $d(x)$-ის", "$b(x)$-ისა და $c(x)$-ის", "$b(x)$-ისა და $d(x)$-ის", "$c(x)$-ისა და $d(x)$-ის"],
     correct: 2,
-    tags: ["functions", "growth", "comparison"]
+    tags: ["functions", "growth", "comparison"],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -67,7 +131,15 @@ quizData = [
     question: "ტოლფერდა სამკუთხედის ფერდი უდრის $6$-ს, ფუძეზე დაშვებული სიმაღლე კი $4$-ს. იპოვეთ ამ სამკუთხედზე შემოხაზული წრეწირის რადიუსი.",
     options: ["$3$", "$3{,}5$", "$4$", "$4{,}5$", "$5$", "$5{,}5$"],
     correct: 3,
-    tags: ["geometry", "radius", "triangle"]
+    tags: ["geometry", "radius", "triangle"],
+    area: "geometry",
+    topics: ["isosceles","inscribed-circum"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -82,7 +154,15 @@ quizData = [
       "$\\dfrac{4ab}{(a + b)^2}$"
     ],
     correct: 1,
-    tags: ["geometry", "trigonometry", "rhombus"]
+    tags: ["geometry", "trigonometry", "rhombus"],
+    area: "geometry",
+    topics: ["rhombus-rect-sq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     //11
   {
@@ -96,7 +176,15 @@ quizData = [
       "$(1; \\sqrt{2})$"
     ],
     correct: 5,
-    tags: ["inequalities", "roots", "interval"]
+    tags: ["inequalities", "roots", "interval"],
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -111,7 +199,15 @@ quizData = [
       "$D < 0$"
     ],
     correct: 4,
-    tags: ["functions", "discriminant", "graph"]
+    tags: ["functions", "discriminant", "graph"],
+    area: "geometry",
+    topics: ["line-circle-eq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["graph"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -126,7 +222,15 @@ quizData = [
       "$\\mathbb{R}$"
     ],
     correct: 4,
-    tags: ["equations", "absolute value", "parameters"]
+    tags: ["equations", "absolute value", "parameters"],
+    area: "algebra",
+    topics: ["abs-eq","function-basics"],
+    grade: 9,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["parameter","absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //14
@@ -141,7 +245,15 @@ quizData = [
       "$\\dfrac{1}{\\sqrt{3} + 1}$"
     ],
     correct: 3,
-    tags: ["geometry", "sine", "triangle"]
+    tags: ["geometry", "sine", "triangle"],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -156,14 +268,30 @@ quizData = [
       "$\\dfrac{13}{6}$"
     ],
     correct: 2,
-    tags: ["geometry", "triangle", "radius"]
+    tags: ["geometry", "triangle", "radius"],
+    area: "geometry",
+    topics: ["inscribed-circum"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     //16
   {
     question: "იპოვეთ პარაბოლის წვეროს $y$ კოორდინატი, თუ ეს პარაბოლა $A(1; 0)$, $B(3; 0)$ და $C(0; 9)$ წერტილებზე გადადის.",
     options: ["$0$", "$-5$", "$1$", "$-2$", "$4$", "$-3$"],
     correct: 5,
-    tags: ["parabola", "vertex", "geometry"]
+    tags: ["parabola", "vertex", "geometry"],
+    area: "algebra",
+    topics: ["quadratic-func"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -178,7 +306,15 @@ quizData = [
       "$(0; 9)$"
     ],
     correct: 1,
-    tags: ["parabola", "intercept", "geometry"]
+    tags: ["parabola", "intercept", "geometry"],
+    area: "algebra",
+    topics: ["quadratic-func"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -193,7 +329,15 @@ quizData = [
       "$\\dfrac{20\\sqrt{2}}{3}$"
     ],
     correct: 0,
-    tags: ["geometry", "isosceles triangle", "minimization"]
+    tags: ["geometry", "isosceles triangle", "minimization"],
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -201,7 +345,15 @@ quizData = [
     question: "$\\triangle ABC$-ში $AB = 20$, $BC = 15$ და $\\cos \\angle A = \\dfrac{4}{5}$. იპოვეთ $\\triangle ABC$-ის ფართობის უდიდესი შესაძლო მნიშვნელობისა და უმცირესი შესაძლო მნიშვნელობის სხვაობა.",
     options: ["$0$", "$320$", "$108$", "$160$", "$90$", "$180$"],
     correct: 2,
-    tags: ["geometry", "cosine rule", "area difference"]
+    tags: ["geometry", "cosine rule", "area difference"],
+    area: "geometry",
+    topics: ["area-formulas"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -209,7 +361,15 @@ quizData = [
     question: "პირველი სამკუთხედის გვერდების სიგრძებია $a$ სმ, $b$ სმ და $c$ სმ, მეორე სამკუთხედისა კი − $a$ დმ, $b$ დმ და $c$ დმ. იპოვეთ მეორე სამკუთხედის სმ$^2$-ში დათვლილი ფართობის შეფარდება პირველი სამკუთხედის დმ$^2$-ში დათვლილ ფართობთან.",
     options: ["$1$", "$10$", "$10^2$", "$10^4$", "$10^8$", "ყველა წინა პასუხი მცდარია"],
     correct: 3,
-    tags: ["geometry", "area", "unit conversion"]
+    tags: ["geometry", "area", "unit conversion"],
+    area: "geometry",
+    topics: ["area-formulas"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //21
   {
@@ -223,7 +383,15 @@ quizData = [
       "$\\dfrac{375}{4}$"
     ],
     correct: 1,
-    tags: ["algebra", "minimization", "expressions"]
+    tags: ["algebra", "minimization", "expressions"],
+    area: "algebra",
+    topics: ["max-min"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //22
@@ -231,7 +399,15 @@ quizData = [
     question: "რამდენი მთელი ამონახსნი აქვს $\\dfrac{(x^2−3)(x^2−5x+4)}{(x+3)^2(x^2+2)} \\leq 0$ უტოლობას?",
     options: ["$2$", "$3$", "$5$", "$6$", "$7$", "ყველა წინა პასუხი მცდარია"],
     correct: 3,
-    tags: ["inequalities", "rational expressions", "roots"]
+    tags: ["inequalities", "rational expressions", "roots"],
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //23
@@ -246,7 +422,15 @@ quizData = [
       "$[2; 3]$"
     ],
     correct: 0,
-    tags: ["functions", "parameters", "domain"]
+    tags: ["functions", "parameters", "domain"],
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //24
@@ -261,7 +445,15 @@ quizData = [
       "$abc \\cdot \\sqrt{a^2 + b^2 + c^2}$"
     ],
     correct: 5,
-    tags: ["geometry", "triangle", "incenter"]
+    tags: ["geometry", "triangle", "incenter"],
+    area: "geometry",
+    topics: ["inscribed-circum"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //25
@@ -277,6 +469,14 @@ quizData = [
       "$2\\sqrt{6}$"
     ],
     correct: [0,1,2,3,4,5],
-    tags: ["geometry", "parallelogram", "area"]
+    tags: ["geometry", "parallelogram", "area"],
+    area: "geometry",
+    topics: ["parallelogram"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -4,7 +4,15 @@ quizData = [
     question: "რამდენი ამონახსნი აქვს $27x \\equiv 1 \\pmod{9}$ განტოლებას?",
     options: ["$1$", "$2$", "$3$", "$4$", "უამრავი", "არა აქვს ამონახსნი"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 9,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -12,7 +20,15 @@ quizData = [
     question: "ცნობილია, რომ $a_1 = 2$ და ნებისმიერი ნატურალური $n$-სთვის $a_{n+1} = 3a_n - 1$. იპოვეთ $a_5$.",
     options: ["$100$", "$122$", "$147$", "$178$", "$199$", "$201$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -20,7 +36,15 @@ quizData = [
     question: "იპოვეთ $a_n = 12 - n^2 + 8n$ მიმდევრობის უდიდესი წევრი.",
     options: ["$28$", "$36$", "$44$", "$16$", "$18$", "$20$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -35,7 +59,15 @@ quizData = [
       "$6\\pi$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["regular-polygon","circle-angles","inscribed-circum"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -43,14 +75,30 @@ quizData = [
     question: "$O$ ცენტრის მქონე წრეწირი $A$ და $B$ წერტილებზე გამავალ წრფეს ეხება $A$ წერტილში. $C$ წერტილი ამ წრეწირზე მდებარეობს ისე, რომ $\\angle CAB = 30^\\circ$. ჩამოთვლილთაგან რომელი რიცხვი მიჩვენებს, თუ რამდენჯერ აღემატება ამ წრეწირით შემოსაზღვრული წრის ფართობი $AOC$ სექტორის ფართობს?",
     options: ["$2$", "$3$", "$4$", "$5$", "$6$", "$10$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-length-area","circle-segments","function-props"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     //6
   {
     question: "ჩამოთვლილთაგან ცვლადის რომელი მნიშვნელობა აკმაყოფილებს $15x \\equiv 21 \\pmod{18}$ განტოლებას?",
     options: ["$60$", "$69$", "$70$", "$71$", "$75$", "$87$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 9,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -65,7 +113,15 @@ quizData = [
       "$-\\dfrac{1}{3}$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -80,7 +136,15 @@ quizData = [
       "$a,\\ c,\\ d,\\ b$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["numeric-ineq","nth-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -95,7 +159,15 @@ quizData = [
       "$3\\pi$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -110,14 +182,30 @@ quizData = [
       "$\\dfrac{\\alpha(1 + \\cos \\alpha)^2}{\\pi \\cos^2 \\alpha}$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-length-area","inscribed-circum","circle-segments"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //11
   {
     question: "მოცემული $a_n = n^2 - 7n + 18$ მიმდევრობის რამდენი წევრი ეკუთვნის $[-1; 8]$ შუალედს?",
     options: ["არცერთი", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -132,7 +220,15 @@ quizData = [
       "$2\\sqrt[6]{3}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["nth-roots"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -147,7 +243,15 @@ quizData = [
       "ოთხივე"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //14
@@ -162,7 +266,15 @@ quizData = [
       "$49\\pi$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-length-area"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -177,14 +289,30 @@ quizData = [
       "$\\dfrac{9}{\\pi}$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-length-area","chords-tangents"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //16
   {
     question: "ჩამოთვლილთაგან რისი ტოლია $a$ პარამეტრის მნიშვნელობა, თუ $x^2 - (2a + 1)x + a^2 - 7a + 6 = 0$ განტოლებას აქვს მხოლოდ დადებითი ნამდვილი ამონახსნები.",
     options: ["$1$", "$2$", "$3$", "$4$", "$6$", "$7$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -192,7 +320,15 @@ quizData = [
     question: "იპოვეთ $x_n = (n + 1)(n - 5)(n - 8)$ მიმდევრობის უმცირესი წევრი.",
     options: ["$-30$", "$-16$", "$-14$", "$0$", "$2$", "$6$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -200,7 +336,15 @@ quizData = [
     question: "იპოვეთ $k$ პარამეტრის უდიდესი მნიშვნელობა, რომლისთვისაც $(k - 3)x^2 - 2kx + 6k = 0$ განტოლების ყველა ფესვი დადებითია.",
     options: ["$3$", "$5$", "$\\dfrac{18}{5}$", "$\\dfrac{16}{3}$", "$-4$", "$-2$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["max-min","quadratic-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -208,7 +352,15 @@ quizData = [
     question: "იპოვეთ უმცირესი ნატურალური $M$ რიცხვი, რომ $y_n = \\sqrt{7 + \\sqrt{7 + \\sqrt{7 + \\sqrt{7 + \\dots}}}}$ მიმდევრობისთვის შესრულდეს $y_n \\leq M$ უტოლობა.",
     options: ["$3$", "$4$", "$5$", "$7$", "$49$", "მიმდევრობა არ არის შემოსაზღვრული"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -223,7 +375,15 @@ quizData = [
       "$\\dfrac{\\pi}{11}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-length-area","circle-angles","function-props"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //21
   {
@@ -237,7 +397,15 @@ quizData = [
       "$1 + 4\\sqrt{2}$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles","circle-segments","rhombus-rect-sq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //22
@@ -245,7 +413,15 @@ quizData = [
     question: "იპოვეთ $a$ პარამეტრის ყველა იმ მნიშვნელობათა ნამრავლი, რომელთათვისაც $3ax^2 + (3a^3 - 12a^2 - 1)x - a(a - 4) = 0$ განტოლების ყველა ფესვი აკმაყოფილებს პირობას $|x| < 1$.",
     options: ["$-6$", "$-4$", "$0$", "$8$", "$\\sqrt{6} - 1$", "$4 + \\sqrt{15}$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //23
@@ -260,7 +436,15 @@ quizData = [
       "$\\dfrac{\\sqrt[3]{2} + \\sqrt[4]{3}}{\\sqrt[4]{3} - \\sqrt[3]{2}}$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["nth-roots"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //24
@@ -275,7 +459,15 @@ quizData = [
       "$4\\sqrt{3}\\pi$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid","circle-angles","inscribed-circum"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //25
@@ -290,6 +482,14 @@ quizData = [
       "$\\dfrac{m}{2}$"
     ],
     correct: 3, 
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles","circle-segments"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

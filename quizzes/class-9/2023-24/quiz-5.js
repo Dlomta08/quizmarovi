@@ -4,174 +4,374 @@ quizData = [
     question: "იპოვეთ $P(A \\cap B)$ თანაკვეთის ალბათობა, თუ ცნობილია, რომ $A$ და $B$ დამოუკიდებელი ხდომილობებია და $P(A) = 0{,}5; \\; P(A \\cup B) = 0{,}9.$",
     options: ["$0{,}6$", "$0{,}4$", "$0{,}46$", "$0{,}5$", "$0{,}3$", "$0{,}7$"],
     correct: 1,
-    tags: ["probability"]
+    tags: ["probability"],
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //2
   {
     question: "მოცემული ხუთი მონაცემი ნატურალური რიცხვებია. ამ მონაცემთა საშუალო ერთადერთ მოდაზე $3$-ით მეტია, ხოლო მედიანაზე $1$-ით ნაკლებია. იპოვეთ ამ მონაცემთა დიაპაზონი.",
     options: ["$5$", "$4$", "$6$", "$7$", "$8$", "$9$"],
     correct: 2,
-    tags: ["statistics"]
+    tags: ["statistics"],
+    area: "prob-stats",
+    topics: ["statistics"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //3
   {
     question: "$k$ პარამეტრის რა მნიშვნელობისთვის არის $\\frac{\\Big(\\sqrt[3]{\\sqrt{x}}\\Big)^{1{,}2}}{x^k} = 1$ განტოლების ამონახსენი ნებისმიერი დადებითი რიცხვი.",
     options: ["$1$", "$0{,}3$", "$1{,}5$", "$0{,}2$", "$0{,}5$", "$-0{,}4$"],
     correct: 3,
-    tags: ["algebra"]
+    tags: ["algebra"],
+    area: "algebra",
+    topics: ["nth-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //4
   {
     question: "$ABC$ სამკუთხედში $N$ წერტილი $AC$ გვერდზე მდებარეობს, იპოვეთ $ABN$ და $ABC$ სამკუთხედების ფართობთა შეფარდება, თუ $A$, $N$ და $C$ წერტილების კოორდინატებია: $A(-2;2)$, $N(1;2)$ და $C(2;2)$. ",
     options: ["$3:4$", "$4:9$", "$3:5$", "$9:16$", "$2:3$", "$2:5$"],
     correct: 0,
-    tags: ["geometry"]
+    tags: ["geometry"],
+    area: "geometry",
+    topics: ["area-ratios"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //5
   {
     question: "$ABCD$ ამოზნექილ ოთხკუთხედში $AC$ და $BD$ დიაგონალების სიგრძეები შესაბამისად $4$-ისა და $5$-ის ტოლია. იპოვეთ $\\vec{AC} \\cdot \\vec{BD}$ სკალარული ნამრავლი იმ შემთხვევისთვის, როცა $ABCD$ ოთხკუთხედის ფართობი ღებულობს მაქსიმალურ შესაძლო მნიშვნელობას.",
     options: ["$20$", "$32$", "$0$", "$25$", "$40$", "$15$"],
     correct: 2,
-    tags: ["vectors"]
+    tags: ["vectors"],
+    area: "geometry",
+    topics: ["vectors","dot-product"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //6
   {
     question: "მოცემულია $a_n$ არითმეტიკული პროგრესია. იპოვეთ არადადებითი წევრების რაოდენობა, თუ $a_9 = -70$ და პროგრესიის სხვაობა $d = 1\\frac{1}{4}$. ",
     options: ["$48$", "$75$", "$60$", "$45$", "$65$", "$80$"],
     correct: 4,
-    tags: ["sequences"]
+    tags: ["sequences"],
+    area: "algebra",
+    topics: ["arithmetic-prog"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //7
   {
     question: "იპოვე $a_n$ მიმდევრობის მე-$10$ წევრი, თუ ამ მიმდევრობის პირველი $n$ წევრის ჯამი $S_n = n^2 - 9n + 10$ ფორმულით გამოითვლება.",
     options: ["$27$", "$100$", "$19$", "$9$", "$20$", "$10$"],
     correct: 5,
-    tags: ["sequences"]
+    tags: ["sequences"],
+    area: "algebra",
+    topics: ["arithmetic-prog"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //8
   {
     question: "იპოვეთ უსასრულოდ კლებადი გეომეტრიული პროგრესიის მნიშვნელი, თუ მისი წევრთა ჯამი $1$-ის ტოლია, ხოლო მისი წევრების კვადრატების ჯამი $\\frac{1}{2}$-ის ტოლია.",
     options: ["$\\frac{1}{2}$", "$\\frac{1}{3}$", "$\\frac{2}{5}$", "$\\frac{3}{7}$", "$\\frac{1}{4}$", "$\\frac{3}{8}$"],
     correct: 1,
-    tags: ["series"]
+    tags: ["series"],
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //9
   {
     question: "$k$ პარამეტრის რა მნიშვნელობისთვის არიან $\\vec{a}(k; -2)$ და $\\vec{b}(-8; k)$ ვექტორები თანამიმართული?",
     options: ["$-16$", "$8$", "$-4$", "$16$", "$-2$", "$4\\sqrt{2}$"],
     correct: 2,
-    tags: ["vectors"]
+    tags: ["vectors"],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["parameter","vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //10
   {
     question: "მოცემულია წერტილები $A(0;-1)$, $B(2;1)$ და $C(0;2)$. იპოვეთ $AB$ და $AC$ წრფეებს შორის კუთხის კოსინუსი.",
     options: ["$\\frac{1}{2}$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{2}{\\sqrt{5}}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{3}}{4}$", "$\\frac{3}{8}$"],
     correct: 3,
-    tags: ["geometry"]
+    tags: ["geometry"],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //11
 {
   question: "მოცემულია წესიერი $A_1A_2A_3…A_{10}$ ათკუთხედი. იპოვეთ ალბათობა იმისა, რომ ამ ათკუთხედის შემთხვევით შერჩეული დიაგონალის ორივე ბოლოს ინდექსი კენტი იქნება.",
   options: ["$\\frac{13}{35}$", "$\\frac{3}{13}$", "$\\frac{2}{7}$", "$\\frac{2}{5}$", "$\\frac{1}{3}$", "$\\frac{9}{35}$"],
   correct: 2,
-  tags: ["probability"]
+  tags: ["probability"],
+  area: "prob-stats",
+  topics: ["probability"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //12
 {
   question: "რამდენი ამონახსენი აქვს $\\sqrt{x + 2} = 1 - x^3$ განტოლებას?",
   options: ["$5$", "$4$", "$3$", "$2$", "$1$", "არცერთი"],
   correct: 4,
-  tags: ["algebra"]
+  tags: ["algebra"],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 9,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //13
 {
   question: "იპოვეთ $b_n$ გეომეტრიული პროგრესიის მნიშვნელი, თუ პირველი $10$ წევრის ჯამი $15$-ის ტოლია და $b_1 + b_3 + b_5 + b_7 + b_9 = 12$.",
   options: ["$0{,}25$", "$1{,}2$", "$0{,}5$", "$1{,}5$", "$0{,}6$", "$0{,}75$"],
   correct: 0,
-  tags: ["series"]
+  tags: ["series"],
+  area: "algebra",
+  topics: ["geometric-prog"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //14
 {
   question: "სამკუთხედში ორი გვერდის მედიანა შესაბამისად $9$ და $12$-ის ტოლია, ხოლო მესამე გვერდი $10$-ს უდრის. იპოვეთ ამ სამკუთხედის ფართობი.",
   options: ["$96$", "$48$", "$100$", "$72$", "$36\\sqrt{2}$", "$60$"],
   correct: 3,
-  tags: ["geometry"]
+  tags: ["geometry"],
+  area: "geometry",
+  topics: ["cevians"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //15
 {
   question: "$B$ და $C$ წერტილები $y = x - 2$ წრფის შესაბამისად $ox$ და $oy$ საკოორდინატო ღერძებთან კვეთის წერტილებია. იპოვეთ $ABC$ სამკუთხედის ფართობი, თუ $A$ წერტილი $y = x + 2$ წრფის ერთ-ერთი წერტილია.",
   options: ["$2\\sqrt{2}$", "$6$", "$4\\sqrt{6}$", "$4$", "$8$", "$4\\sqrt{3}$"],
   correct: 3,
-  tags: ["geometry"]
+  tags: ["geometry"],
+  area: "algebra",
+  topics: ["linear-func"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //16
 {
   question: "იპოვეთ $y = x^2 + bx - 3$ ფუნქციის უმცირესი მნიშვნელობა, თუ ცნობილია, რომ ამ ფუნქციის გრაფიკი $y = c$ წრფეს $(-2; c)$ და $(4; c)$ წერტილებში კვეთს.",
   options: ["$1$", "$1{,}25$", "$-9$", "$-5$", "$-4$", "$-2{,}25$"],
   correct: 4,
-  tags: ["functions"]
+  tags: ["functions"],
+  area: "algebra",
+  topics: ["quadratic-func","max-min"],
+  grade: 9,
+  difficulty: 2,
+  type: ["graph"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //17
 {
   question: "$a_n = n^{-\\frac{1}{3}}; \\quad b_n = \\frac{-2n^2 + 1}{n} და \\quad c_n = n^2 - 2n + 9$ მიმდევრობებიდან რომელია შემოსაზღვრული? (შემოსაზღვრულობა იგულისხმება, როგორც ზემოდან ისე ქვემოდან)",
   options: ["არცერთი", "მხოლოდ $\\; a_n$", "მხოლოდ $\\; b_n$", "მხოლოდ $\\; c_n$", "მხოლოდ $\\; a_n \\;$ და $\\; b_n$", "მხოლოდ $\\; a_n \\;$ და $\\; c_n$"],
   correct: 1,
-  tags: ["sequences"]
+  tags: ["sequences"],
+  area: "prob-stats",
+  topics: ["statistics","arithmetic-prog","function-props"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //18
 {
   question: "მთელი რიცხვი $6$-ზე გაყოფისას ნაშთს გვაძლევს $3$-ს, ხოლო $4$-ზე გაყოფისას ნაშთს გვაძლევს $1$-ს. რა ნაშთს მოგვცემს ეს რიცხვი $12$-ზე გაყოფისას?",
   options: ["$1$", "$3$", "$4$", "$5$", "$7$", "$9$"],
   correct: 5,
-  tags: ["number theory"]
+  tags: ["number theory"],
+  area: "algebra",
+  topics: ["divisibility"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //19
 {
   question: "საკოორდინატო სიბრტყეზე მოცემულია სამი წერტილი: $A(-4;0)$, $B(0;3)$ და $C(0;0)$. იპოვეთ $ABC$ სამკუთხედში ჩახაზული წრეწირის განტოლება.",
   options: ["$x^2 + y^2 = 2x - 2y + 3$", "$x^2 + y^2 = 2y - 2x - 1$", "$x^2 + y^2 = 4y - 2x - 2$", "$x^2 + y^2 = 2x - 2y - 1$", "$x^2 - y^2 = 2x - 2y - 7$", "$x^2 + y^2 = 4x - 2y + 31$"],
   correct: 1,
-  tags: ["geometry"]
+  tags: ["geometry"],
+  area: "geometry",
+  topics: ["inscribed-circum","line-circle-eq"],
+  grade: 9,
+  difficulty: 3,
+  type: ["solve"],
+  method: ["coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //20
 {
   question: "ჩამოთვლილთაგან რომელი განტოლებით მოცემული წრფეა $x^2 + 2x + y^2 = 0$ წრეწირის მხები?",
   options: ["$x + y = -2$", "$x = -1$", "$x + y = 0$", "$y = -1$", "$x + y = -1$", "$y = -2$"],
   correct: 3,
-  tags: ["geometry"]
+  tags: ["geometry"],
+  area: "geometry",
+  topics: ["chords-tangents","quadratic-eq"],
+  grade: 9,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //21
 {
   question: "რამდენი მთელი ამონახსენი აქვს $\\frac{x^2 - 4|x| - 5}{x^4} \\leq 0$ უტოლობას?",
   options: ["$10$", "$3$", "$12$", "$7$", "$9$", "$12$-ზე მეტი"],
   correct: 0,
-  tags: ["inequalities"]
+  tags: ["inequalities"],
+  area: "algebra",
+  topics: ["quadratic-ineq","interval-method"],
+  grade: 9,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //22
 {
   question: "$x^2 - 2ax + 3b = 0$ განტოლებას აქვს ორი განსხვავებული $x_1$ და $x_2$ ამონახსნი. $x_1, a, b$ და $x_2$ რიცხვები გეომეტრიული პროგრესიის ოთხი მომდევნო წევრია. იპოვეთ $x_1 + x_2$.",
   options: ["$12$", "$8$", "$16$", "$4$", "$6$", "$9$"],
   correct: 4,
-  tags: ["algebra"]
+  tags: ["algebra"],
+  area: "algebra",
+  topics: ["geometric-prog","vieta"],
+  grade: 9,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //23
 {
   question: "$\\{ c_n \\}$ მიმდევრობის მეზობელი წევრების სხვაობები $c_{n+1} - c_n$ ადგენენ არითმეტიკულ პროგრესიას. იპოვეთ $c_{21}$, თუ $c_1 = 2$, $c_2 = 3$ და $c_3 = 7$.",
   options: ["$603$", "$500$", "$472$", "$721$", "$646$", "$592$"],
   correct: 5,
-  tags: ["sequences"]
+  tags: ["sequences"],
+  area: "algebra",
+  topics: ["arithmetic-prog"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //24
 {
   question: "$ABCD$ ტრაპეციაში $AC$ და $BD$ დიაგონალები $O$ წერტილში იკვეთებიან. ტრაპეციაში შემთხვევით ვარდება წერტილი (წერტილის განაწილება თანაბარია მთელს ტრაპეციაში). ალბათობა იმისა, რომ ეს წერტილი $ABO$ სამკუთხედში ჩავარდება $\\frac{3}{16}$-ის ტოლია. იპოვეთ ტრაპეციის $BC$ მცირე ფუძისა და $AD$ დიდი ფუძის სიგრძეების შეფარდება.",
   options: ["$1:2$", "$2:5$", "$3:5$", "$1:3$", "$2:3$", "$3:4$"],
   correct: 3,
-  tags: ["geometry", "probability"]
+  tags: ["geometry", "probability"],
+  area: "prob-stats",
+  topics: ["probability","trapezoid"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //25
 {
   question: "$ABCD$ მართკუთხედში $AB, BC, CD$ და $AD$ გვერდებზე შესაბამისად აღებულია $M, K, N$ და $E$ წერტილები ისე, რომ $AM:MB = 2:1$, $BK:KC = 3:1$, $CN:ND = 1:1$ და $AE:ED = 3:5$. იპოვეთ $MN$ და $EK$ წრფეებს შორის კუთხის კოსინუსი, თუ $AB:BC = 3:4$.",
   options: ["$\\frac{2}{5\\sqrt{3}}$", "$\\frac{6}{5\\sqrt{13}}$", "$\\frac{1}{3}$", "$\\frac{3}{2\\sqrt{15}}$", "$\\frac{3}{5}$", "$\\frac{3}{2\\sqrt{13}}$"],
   correct: 1,
-  tags: ["geometry"]
+  tags: ["geometry"],
+  area: "geometry",
+  topics: ["rhombus-rect-sq"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];

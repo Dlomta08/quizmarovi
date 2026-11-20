@@ -5,7 +5,15 @@ quizData = [
     question: "იპოვეთ $𝑦 = \\frac{\\sqrt{𝑥^2−6𝑥+5}}{\\sqrt{25−𝑥^2}}$ ფუნქციის განსაზღვრის არე:",
     options: ["$]−∞; 5]$", "$]−5; 1[$", "$[5; ∞[$", "$]−5; 1]$", "$]−5; 5[$", "∅"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //2
@@ -13,7 +21,15 @@ quizData = [
     question: "$𝑦 = 𝑓(𝑥)$ ფუნქციის მნიშვნელობათა სიმრავლეა $[−5; 3]$. იპოვეთ $𝑦 = 3𝑓(𝑥) − 12$ ფუნქციის მნიშვნელობათა სიმრავლე.",
     options: ["$[3; −3]$", "$[−9; 3]$", "$[−27; −3]$", "$[−12; −3]$", "$[−22; 3]$", "$[−12; −9]$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //3
@@ -21,7 +37,15 @@ quizData = [
     question: "$𝑦 = 𝑎𝑥^2 + 𝑏𝑥 + 𝑐$ პარაბოლის წვერო მდებარეობს $(1; 8)$ წერტილში და გადის $(2; -12)$ წერტილში. იპოვეთ $𝑎 + 𝑏 + 𝑐$.",
     options: ["$6$", "$7$", "$8$", "$9$", "$10$", "$11$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-func"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //4
@@ -29,14 +53,30 @@ quizData = [
     question: "გამოთვალეთ $𝑓(5)$, თუ ცნობილია, რომ $𝑔(𝑥) = 𝑓(𝑥) + 𝑥^2$ ფუნქცია კენტია და $𝑓(−5) = 1$.",
     options: ["$-51$", "$51$", "$-50$", "$50$", "$-49$", "$49$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //5
   {
     question: "$y = f(x)$ ფუნქცია ლუწია და $f(3) + f(-5) = 7$. იპოვეთ $7f(3) + 8 f(-5) - 2f(-3) - 3f(5)$.",
     options: ["$30$", "$31$", "$32$", "$33$", "$34$", "$35$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //6
   {
@@ -44,7 +84,15 @@ quizData = [
     question: "ნახაზზე მოცემული $𝑦 = 𝑎𝑥^2 + 𝑏𝑥 + 𝑐$ ფუნქციისათვის განსაზღვრეთ $𝑎$, $𝑏$ და $𝑐$ კოეფიციენტების ნიშნები:",
     options: ["$𝑎 > 0; 𝑏 > 0; 𝑐 > 0$", "$𝑎 < 0; 𝑏 > 0; 𝑐 > 0$", "$𝑎 < 0; 𝑏 < 0; 𝑐 > 0$", "$𝑎 < 0; 𝑏 < 0; 𝑐 < 0$", "$𝑎 < 0; 𝑏 > 0; 𝑐 < 0$", "$𝑎 > 0; 𝑏 < 0; 𝑐 > 0$"],
     correct: 2,
-    tags: []
+    tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
   },
 
 //7
@@ -52,7 +100,15 @@ quizData = [
     question: "იპოვეთ $𝑎$ პარამეტრის ყველა ის მნიშვნელობა, რომელთათვისაც $𝑦 = 𝑥^2 − 6𝑎𝑥 + 4 + 8𝑎^2$ პარაბოლის წვერო მოთავსებულია მეორე მეოთხედში.",
     options: ["$𝑎 ∈ ]−2; 2[$", "$𝑎 ∈ ]−2; 0[$", "$𝑎 = −1$", "$𝑎 ∈ ]0; 2[$", "$𝑎 ∈ ]−4; 0[$", "$𝑎 < 0$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-func"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //8
@@ -60,7 +116,15 @@ quizData = [
     question: "ცნობილია, რომ $𝑓(𝑥) = 𝑥^2 + 𝑏𝑥 + 𝑐$ ფუნქცია ღებულობს მხოლოდ არაუარყოფით მნიშვნელობებს. იპოვეთ $(b+c)$ გამოსახულების უმცირესი მნიშვნელობა.",
     options: ["$-3$", "$-1$", "$3$", "$5$", "$7$", "$8$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-func","max-min"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //9
@@ -68,7 +132,15 @@ quizData = [
     question: "$\\left\\{ \\begin{array}{l} -2x^2 - 5x + 18 \\ge 0 \\\\ x^2 + 4x - 5 \\le 0 \\end{array} \\right.$ უტოლობათა სისტემის მთელ ამონახსნთა რაოდენობაა:",
     options: ["$6$", "$5$", "$4$", "$3$", "$2$", "$1$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["diophantine","quadratic-ineq","linear-systems"],
+    grade: 9,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //10
@@ -76,7 +148,15 @@ quizData = [
     question: "იპოვეთ $𝑎$ პარამეტრის ყველა ის მნიშვნელობა, რომელთათვისაც $𝑎𝑥^2 + 2(1 + 𝑎)𝑥 + 9𝑎 + 4 < 0$ შესრულდება ცვლადის ნებისმიერი ნამდვილი მნიშვნელობისთვის:",
     options: ["$𝑎 < 0{,}25$", "$]−0{,}25; 0{,}5[$", "$]−1; 5[$", "$𝑎 > −1$", "$𝑎 < −0{,}5$", "$𝑎 > 2$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //11
@@ -84,7 +164,15 @@ quizData = [
     question: "იპოვეთ $𝑐$ პარამეტრის ყველა ის მნიშვნელობა, რომელთათვისაც $𝑦 = 𝑥^2 + 6𝑥 + 𝑐$ პარაბოლას წვერო დაშორებულია კოორდინატთა სათავიდან $5$ ერთეულის ტოლი მანძილით?",
     options: ["$5$ და $13$", "$5$", "$7$", "$3$ და $12$", "$1{,}3$ და $2$", "$13$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-func"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //12
@@ -92,7 +180,15 @@ quizData = [
     question: "$2x - y = 5$ წრფეზე იპოვეთ ისეთი $M$ წერტილი, რომ მანძილი $M$ წერტილიდან $A(-7; 1)$ წერტილამდე იყოს უმცირესი.",
     options: ["$(0; -5)$", "$(1; -5)$", "$(3; -5)$", "$(-2; -9)$", "$(0; -5)$", "$(1; -3)$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //13
@@ -100,7 +196,15 @@ quizData = [
     question: "იპოვეთ $𝑎$ პარამეტრის ყველა ის მნიშვნელობა, რომელთათვისაც $𝑦 = 𝑥^2 − 2𝑎𝑥 + 5$ ფუნქცია იზრდება $[−3; −2]$ შუალედში?",
     options: ["$𝑎 = −3$", "$𝑎 ≤ −3$", "$𝑎 ∈ ]−3; 0[$", "$𝑎 ≥ −2$", "$𝑎 ≥ −3$", "$𝑎 = −4$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-func"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //14
@@ -108,7 +212,15 @@ quizData = [
     question: "$𝑓(𝑥)$ ფუნქცია განსაზღვრულია $ℝ$ სიმრავლეზე. მაშინ $𝑓(𝑥) + 𝑓(−𝑥)$ აუცილებლად:",
     options: ["ზრდადია", "კლებადია", "ლუწია", "კენტია", "აქვს ლუწი რაოდენობის ნული", "არც ერთი პასუხი არ არის სწორი"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //15
@@ -116,7 +228,15 @@ quizData = [
     question: "$𝑦 = 𝑓(𝑥)$ კენტი ფუნქციაა და განსაზღვრულია $ℝ$ სიმრავლეზე. თუ ამ ფუნქციას აქვს მხოლოდ ორი დადებითი ნული, მაშინ მისი ყველა ნულების რაოდენობა იქნება:",
     options: ["$2$", "$3$", "$4$", "$5$", "$6$", "ვერ დავადგენთ"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //16
@@ -124,7 +244,15 @@ quizData = [
     question: "მართკუთხა სამკუთხედში ჩახაზული წრეწირი, შეხების წერტილით ჰიპოტენუზას ყოფს $8$სმ და $12$სმ სიგრძის მონაკვეთებად. იპოვეთ ამ სამკუთხედის ფართობი.",
     options: ["$84$", "$88$", "$90$", "$92$", "$94$", "$96$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle","inscribed-circum"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //17
@@ -132,7 +260,15 @@ quizData = [
     question: "$ABC$ მართკუთხა სამკუთხედში $AB$ ჰიპოტენუზისადმი გავლებულია $CM$ სიმაღლე. $ACM$ სამკუთხედის ფართობია $6$სმ$^2$, ხოლო $BCM$ სამკუთხედის ფართობი — $54$სმ$^2$. იპოვეთ $ABC$ სამკუთხედის კათეტთა ჯამი.",
     options: ["$10\\sqrt{12}$", "$12$", "$6\\sqrt{8}$", "$11$", "$8\\sqrt{10}$", "$9$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //18
@@ -140,7 +276,15 @@ quizData = [
     question: "$ABC$ სამკუთხედში $∠A=30°$. $B$ და $C$ წვეროებიდან მოპირდაპირე გვერდებზე დაშვებული სიმაღლეები $2$სმ და $3$სმ-ის ტოლია. იპოვეთ $ABC$ სამკუთხედის ფართობი.",
     options: ["$7$სმ$^2$", "$6$სმ$^2$", "$7{,}5$სმ$^2$", "$8$სმ$^2$", "$6{,}5$სმ$^2$", "$8{,}5$სმ$^2$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //19
@@ -148,7 +292,15 @@ quizData = [
     question: "$ABC$ სამკუთხედში გავლებულია $BM$ და $CN$ მედიანები, რომლებიც $K$ წერტილში იკვეთებიან. იპოვეთ $BKC$ სამკუთხედის ფართობი, თუ $ABC$ სამკუთხედის ფართობი $24$სმ$^2$-ია.",
     options: ["$4$", "$6$", "$8$", "$10$", "$11$", "$13$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //20
@@ -157,7 +309,15 @@ quizData = [
     question: "სამკუთხედის გვერდის პარალელურმა წრფემ სამკუთხედის ფართობი გაყო შეფარდებით $16 : 25$. რა შეფარდებით გაყოფს ეს წრფე სამკუთხედის გვერდს, მასთან გადაკვეთის წერტილით.",
     options: ["$4 : 3$", "$3 : 7$", "$4 : 7$", "$2 : 3$", "$4 : 5$", "$2 : 5$"],
     correct: [0,1,2,3,4,5],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //21
@@ -165,7 +325,15 @@ quizData = [
     question: "მართკუთხედის კუთხის ბისექტრისა მისსავე დიაგონალს ყოფს $1 : 4$ შეფარდებით. იპოვეთ მართკუთხედის პერიმეტრი, თუ მისი ფართობი $36$მ$^2$-ია.",
     options: ["$28$", "$30$", "$32$", "$31$", "$29$", "$26$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["rhombus-rect-sq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //22
@@ -173,7 +341,15 @@ quizData = [
     question: "$ABC$ სამკუთხედში $AB=13$სმ, $BC=14$სმ, $AC=15$სმ. სამკუთხედის შიგნით აღებულია $M$ წერტილი, რომელიც $AB$ გვერდიდან დაშორებულია $6$სმ-ით, ხოლო $BC$ გვერდიდან — $3$სმ-ით. იპოვეთ მანძილი $M$ წერტილიდან $AC$ გვერდამდე.",
     options: ["$2{,}8$სმ", "$3{,}2$სმ", "$3{,}4$სმ", "$3{,}1$სმ", "$2{,}9$სმ", "$2{,}6$სმ"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //23
@@ -181,7 +357,15 @@ quizData = [
     question: "$KLM$ სამკუთხედის $KL$ და $LM$ გვერდებზე აღებულია $A$ და $B$ წერტილები. $KB$ და $MA$ მონაკვეთები იკვეთებიან $C$ წერტილში. $KAC$, $MBC$ და $KCM$ სამკუთხედების ფართობები შესაბამისად ტოლია $3$-ის, $1$-ის და $3$-ის. იპოვეთ $ALC$ სამკუთხედის ფართობი.",
     options: ["$1$", "$1{,}5$", "$2$", "$2{,}5$", "$3$", "$3{,}5$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["area-formulas"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //24
@@ -189,7 +373,15 @@ quizData = [
     question: "$MN$ მონაკვეთი წრეწირის დიამეტრია, $K$ წერტილი კი ამ წრეწირის გარეთ მდებარეობს. $MK$ და $NK$ მონაკვეთები წრეწირს შესაბამისად $A$ და $B$ წერტილებში კვეთენ. $S_{AKB} : S_{MNK} = 1 : 4$. იპოვეთ $∠ANK$.",
     options: ["$75°$", "$60°$", "$50°$", "$45°$", "$30°$", "$15°$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 //25
@@ -197,6 +389,14 @@ quizData = [
     question: "$ABCD$ მართკუთხედში $B$ წერტილიდან $AC$ დიაგონალისადმი გავლებული მართობი $AD$ გვერდს $M$ წერტილში კვეთს. $M$ წერტილი თანაბრადაა დაშორებული $B$ და $D$ წვეროებიდან. იპოვეთ $S_{ABCD}$, თუ $BC = 9\\sqrt{3}$.",
     options: ["$54\\sqrt{3}$", "$27\\sqrt{3}$", "$36\\sqrt{6}$", "$45\\sqrt{6}$", "$63\\sqrt{6}$", "$81\\sqrt{3}$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["rhombus-rect-sq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -5,7 +5,15 @@ quizData = [
     options: ["არცერთი", "$12$", "$24$", "$11$", "$29$", "$22$"],
     correct: 5,
     tags: [],
-    solution: "$999^{\\frac{1}{3}} = \\sqrt[3]{999}$: $9^3 = 729 < 999 < 1000 = 10^3$, ამიტომ $9 < \\sqrt[3]{999} < 10$. $10^{\\frac{3}{2}} = \\sqrt{1000}$: $31^2 = 961 < 1000 < 1024 = 32^2$.<br><br>ნატურალური რიცხვები შორის: $10, 11, \\ldots, 31$ — $22$ რიცხვი.<br><br><strong>პასუხი:</strong> ვ) $22$."
+    solution: "$999^{\\frac{1}{3}} = \\sqrt[3]{999}$: $9^3 = 729 < 999 < 1000 = 10^3$, ამიტომ $9 < \\sqrt[3]{999} < 10$. $10^{\\frac{3}{2}} = \\sqrt{1000}$: $31^2 = 961 < 1000 < 1024 = 32^2$.<br><br>ნატურალური რიცხვები შორის: $10, 11, \\ldots, 31$ — $22$ რიცხვი.<br><br><strong>პასუხი:</strong> ვ) $22$.",
+    area: "algebra",
+    topics: ["nth-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["estimation"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -14,7 +22,15 @@ quizData = [
     options: ["$0{,}7$", "$0{,}4$", "$0{,}6$", "$0{,}8$", "$1$", "$0{,}3$"],
     correct: 0,
     tags: [],
-    solution: "$P(B) = 1 - P(\\overline{B}) = 0{,}4$. არათავსებადი ხდომილებებისთვის $P(A \\cup B) = P(A) + P(B) = 0{,}7$.<br><br><strong>პასუხი:</strong> ა) $0{,}7$."
+    solution: "$P(B) = 1 - P(\\overline{B}) = 0{,}4$. არათავსებადი ხდომილებებისთვის $P(A \\cup B) = P(A) + P(B) = 0{,}7$.<br><br><strong>პასუხი:</strong> ა) $0{,}7$.",
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -23,7 +39,15 @@ quizData = [
     options: ["$4$", "$5$", "$12$", "$20$", "$3$", "$9$"],
     correct: 1,
     tags: [],
-    solution: "$[20{,}26] = 20$: $a_n = -2n^2 + 20n - 19$. პარაბოლის წვერო: $n = \\dfrac{20}{4} = 5$ (მთელია).<br><br><strong>პასუხი:</strong> ბ) $5$."
+    solution: "$[20{,}26] = 20$: $a_n = -2n^2 + 20n - 19$. პარაბოლის წვერო: $n = \\dfrac{20}{4} = 5$ (მთელია).<br><br><strong>პასუხი:</strong> ბ) $5$.",
+    area: "algebra",
+    topics: ["max-min"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -32,7 +56,15 @@ quizData = [
     options: ["$\\dfrac{1}{2\\sqrt{5}}$", "$\\dfrac{2}{3\\sqrt{2}}$", "$1$", "$\\dfrac{1}{\\sqrt{5}}$", "$0$", "$\\dfrac{2}{\\sqrt{5}}$"],
     correct: 4,
     tags: [],
-    solution: "წრფეების ნორმალის ვექტორები: $(1;\\ 2)$ და $(2;\\ -1)$. სკალარული ნამრავლი: $2 - 2 = 0$ — წრფეები ურთიერთმართობულია, $\\cos 90^\\circ = 0$.<br><br><strong>პასუხი:</strong> ე) $0$."
+    solution: "წრფეების ნორმალის ვექტორები: $(1;\\ 2)$ და $(2;\\ -1)$. სკალარული ნამრავლი: $2 - 2 = 0$ — წრფეები ურთიერთმართობულია, $\\cos 90^\\circ = 0$.<br><br><strong>პასუხი:</strong> ე) $0$.",
+    area: "geometry",
+    topics: ["line-circle-eq"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -41,7 +73,15 @@ quizData = [
     options: ["$\\dfrac{1}{4}$", "$\\dfrac{\\sqrt{2}}{2}$", "$\\dfrac{4}{9}$", "$\\dfrac{1}{2}$", "$\\dfrac{1}{3}$", "$\\dfrac{3}{4}$"],
     correct: 5,
     tags: [],
-    solution: "გვერდი $a$: შემოხაზულის რადიუსი $a$, ჩახაზულის $\\dfrac{a\\sqrt{3}}{2}$. ფართობების შეფარდება: $\\left(\\dfrac{\\sqrt{3}}{2}\\right)^2 = \\dfrac{3}{4}$.<br><br><strong>პასუხი:</strong> ვ) $\\dfrac{3}{4}$."
+    solution: "გვერდი $a$: შემოხაზულის რადიუსი $a$, ჩახაზულის $\\dfrac{a\\sqrt{3}}{2}$. ფართობების შეფარდება: $\\left(\\dfrac{\\sqrt{3}}{2}\\right)^2 = \\dfrac{3}{4}$.<br><br><strong>პასუხი:</strong> ვ) $\\dfrac{3}{4}$.",
+    area: "geometry",
+    topics: ["regular-polygon","circle-length-area"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -50,7 +90,15 @@ quizData = [
     options: ["არცერთი", "მხოლოდ $a_n$", "მხოლოდ $b_n$", "მხოლოდ $c_n$", "მხოლოდ $a_n$ და $b_n$", "მხოლოდ $a_n$ და $c_n$"],
     correct: 2,
     tags: [],
-    solution: "$a_n = \\dfrac{1}{n} - n$ — ორივე შესაკრები კლებადია, $a_n$ კლებადია.<br>$b_n = \\dfrac{2n + 1}{n + 1} = 2 - \\dfrac{1}{n + 1}$ — <strong>ზრდადია</strong>.<br>$c_n = -n^2 - 9n + 10$ — წვერო $n = -4{,}5$-ზეა, ნატურალური $n$-ისთვის კლებადია.<br><br><strong>პასუხი:</strong> გ) მხოლოდ $b_n$."
+    solution: "$a_n = \\dfrac{1}{n} - n$ — ორივე შესაკრები კლებადია, $a_n$ კლებადია.<br>$b_n = \\dfrac{2n + 1}{n + 1} = 2 - \\dfrac{1}{n + 1}$ — <strong>ზრდადია</strong>.<br>$c_n = -n^2 - 9n + 10$ — წვერო $n = -4{,}5$-ზეა, ნატურალური $n$-ისთვის კლებადია.<br><br><strong>პასუხი:</strong> გ) მხოლოდ $b_n$.",
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -59,7 +107,15 @@ quizData = [
     options: ["$11$", "$5$", "$9$", "$4$", "$16$", "$7$"],
     correct: 5,
     tags: [],
-    solution: "$\\dfrac{80}{n + 2} - n > 0 \\Leftrightarrow n(n + 2) < 80 \\Leftrightarrow (n + 10)(n - 8) < 0$, ნატურალური $n$-ისთვის $n < 8$: $n = 1, \\ldots, 7$.<br><br><strong>პასუხი:</strong> ვ) $7$."
+    solution: "$\\dfrac{80}{n + 2} - n > 0 \\Leftrightarrow n(n + 2) < 80 \\Leftrightarrow (n + 10)(n - 8) < 0$, ნატურალური $n$-ისთვის $n < 8$: $n = 1, \\ldots, 7$.<br><br><strong>პასუხი:</strong> ვ) $7$.",
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -68,7 +124,15 @@ quizData = [
     options: ["$f^{-1}(x) = \\dfrac{1}{x + 1}$", "$f^{-1}(x) = \\dfrac{x}{x - 1}$", "$f^{-1}(x) = \\dfrac{x}{1 - x}$", "$f^{-1}(x) = \\dfrac{1 - x}{x + 1}$", "$f^{-1}(x) = \\dfrac{1}{1 - x}$", "$f^{-1}(x) = \\dfrac{x}{x + 1}$"],
     correct: 2,
     tags: [],
-    solution: "$y = 1 - \\dfrac{1}{x + 1} = \\dfrac{x}{x + 1}$. ამოვხსნათ $x$-ის მიმართ: $y(x + 1) = x \\Rightarrow x(1 - y) = y \\Rightarrow x = \\dfrac{y}{1 - y}$.<br><br>$f^{-1}(x) = \\dfrac{x}{1 - x}$.<br><br><strong>პასუხი:</strong> გ) $f^{-1}(x) = \\dfrac{x}{1 - x}$."
+    solution: "$y = 1 - \\dfrac{1}{x + 1} = \\dfrac{x}{x + 1}$. ამოვხსნათ $x$-ის მიმართ: $y(x + 1) = x \\Rightarrow x(1 - y) = y \\Rightarrow x = \\dfrac{y}{1 - y}$.<br><br>$f^{-1}(x) = \\dfrac{x}{1 - x}$.<br><br><strong>პასუხი:</strong> გ) $f^{-1}(x) = \\dfrac{x}{1 - x}$.",
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -77,7 +141,15 @@ quizData = [
     options: ["$27\\pi$", "$12\\pi$", "$36\\pi$", "$9\\pi$", "$18\\pi$", "$24\\pi$"],
     correct: 0,
     tags: [],
-    solution: "არითმეტიკულ პროგრესიაში მყოფი კუთხეებისთვის საშუალო კუთხე $60^\\circ$-ია ($3\\beta = 180^\\circ$). საშუალო გვერდი ამ კუთხის მოპირდაპირეა. სინუსების თეორემით: $2R = \\dfrac{9}{\\sin 60^\\circ} = 6\\sqrt{3}$, $R = 3\\sqrt{3}$.<br><br>ფართობი: $\\pi R^2 = 27\\pi$.<br><br><strong>პასუხი:</strong> ა) $27\\pi$."
+    solution: "არითმეტიკულ პროგრესიაში მყოფი კუთხეებისთვის საშუალო კუთხე $60^\\circ$-ია ($3\\beta = 180^\\circ$). საშუალო გვერდი ამ კუთხის მოპირდაპირეა. სინუსების თეორემით: $2R = \\dfrac{9}{\\sin 60^\\circ} = 6\\sqrt{3}$, $R = 3\\sqrt{3}$.<br><br>ფართობი: $\\pi R^2 = 27\\pi$.<br><br><strong>პასუხი:</strong> ა) $27\\pi$.",
+    area: "algebra",
+    topics: ["arithmetic-prog","law-cos-sin","circle-length-area"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -86,7 +158,15 @@ quizData = [
     options: ["$2\\pi$", "$3$", "$1$", "$2$", "$\\pi$", "$1{,}5$"],
     correct: 2,
     tags: [],
-    solution: "$l = r\\theta = 4$ და $S = \\dfrac{1}{2}r^2\\theta = \\dfrac{1}{2}rl = 2r = 8$, ამიტომ $r = 4$, $\\theta = \\dfrac{l}{r} = 1$.<br><br><strong>პასუხი:</strong> გ) $1$."
+    solution: "$l = r\\theta = 4$ და $S = \\dfrac{1}{2}r^2\\theta = \\dfrac{1}{2}rl = 2r = 8$, ამიტომ $r = 4$, $\\theta = \\dfrac{l}{r} = 1$.<br><br><strong>პასუხი:</strong> გ) $1$.",
+    area: "geometry",
+    topics: ["circle-length-area"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 11
@@ -95,7 +175,15 @@ quizData = [
     options: ["$0$", "$1$", "$2$", "$3$", "$4$", "$5$"],
     correct: 2,
     tags: [],
-    solution: "$0, 1, 2, 3, 4$ განსხვავებულია, ამიტომ ერთადერთი მოდა არსებობს მხოლოდ მაშინ, როცა $x$ ერთ-ერთ მათგანს ემთხვევა; მოდა $x$-ია.<br><br>$x = 2$: $0, 1, 2, 2, 3, 4$ — მედიანა $2$, მოდა $2$, საშუალო $\\dfrac{12}{6} = 2 = \\dfrac{2 + 2}{2}$ ✓.<br>სხვა $x$-ისთვის ($0, 1, 3, 4$) ტოლობა არ სრულდება (მაგ., $x = 3$: საშუალო $\\dfrac{13}{6}$, ხოლო $\\dfrac{2{,}5 + 3}{2} = 2{,}75$).<br><br><strong>პასუხი:</strong> გ) $2$."
+    solution: "$0, 1, 2, 3, 4$ განსხვავებულია, ამიტომ ერთადერთი მოდა არსებობს მხოლოდ მაშინ, როცა $x$ ერთ-ერთ მათგანს ემთხვევა; მოდა $x$-ია.<br><br>$x = 2$: $0, 1, 2, 2, 3, 4$ — მედიანა $2$, მოდა $2$, საშუალო $\\dfrac{12}{6} = 2 = \\dfrac{2 + 2}{2}$ ✓.<br>სხვა $x$-ისთვის ($0, 1, 3, 4$) ტოლობა არ სრულდება (მაგ., $x = 3$: საშუალო $\\dfrac{13}{6}$, ხოლო $\\dfrac{2{,}5 + 3}{2} = 2{,}75$).<br><br><strong>პასუხი:</strong> გ) $2$.",
+    area: "prob-stats",
+    topics: ["statistics"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12
@@ -104,7 +192,15 @@ quizData = [
     options: ["$6$", "$20$", "$12$", "$8$", "$10$", "$18$"],
     correct: 0,
     tags: [],
-    solution: "ლუწ ადგილებზე მდგომი წევრების ჯამი კენტ ადგილებზე მდგომების ჯამის $q$-ჯერადია. მთელი ჯამი: $(1 + q)S_{\\text{კენტ}} = 3S_{\\text{კენტ}}$, $q = 2$.<br><br>$6 \\cdot 2^{n-1} = 192$, $2^{n-1} = 32$, $n = 6$.<br><br><strong>პასუხი:</strong> ა) $6$."
+    solution: "ლუწ ადგილებზე მდგომი წევრების ჯამი კენტ ადგილებზე მდგომების ჯამის $q$-ჯერადია. მთელი ჯამი: $(1 + q)S_{\\text{კენტ}} = 3S_{\\text{კენტ}}$, $q = 2$.<br><br>$6 \\cdot 2^{n-1} = 192$, $2^{n-1} = 32$, $n = 6$.<br><br><strong>პასუხი:</strong> ა) $6$.",
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -113,7 +209,15 @@ quizData = [
     options: ["$130$", "$120$", "$240$", "$180$", "$260$", "$210$"],
     correct: 5,
     tags: [],
-    solution: "$S_4$, $S_8 - S_4$, $S_{12} - S_8$ — ყოველი შემდეგი $16d$-ით მეტია, ე.ი. არითმეტიკულ პროგრესიას ქმნის: $30$, $70$, $110$.<br><br>$S_{12} = 30 + 70 + 110 = 210$.<br><br><strong>პასუხი:</strong> ვ) $210$."
+    solution: "$S_4$, $S_8 - S_4$, $S_{12} - S_8$ — ყოველი შემდეგი $16d$-ით მეტია, ე.ი. არითმეტიკულ პროგრესიას ქმნის: $30$, $70$, $110$.<br><br>$S_{12} = 30 + 70 + 110 = 210$.<br><br><strong>პასუხი:</strong> ვ) $210$.",
+    area: "algebra",
+    topics: ["arithmetic-prog"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -122,7 +226,15 @@ quizData = [
     options: ["$26$", "$18\\sqrt{3}$", "$27$", "$16\\sqrt{3}$", "$18$", "$9\\sqrt{3}$"],
     correct: 2,
     tags: [],
-    solution: "გვერდების შუაწერტილები ძევს ჩახაზულ წრეწირზე, რომლის რადიუსია აპოთემა $\\dfrac{a\\sqrt{3}}{2}$. თითო გვერდის გამოტოვებით შეერთებისას მიიღება ამ წრეწირში ჩახაზული წესიერი სამკუთხედი, გვერდით $\\dfrac{a\\sqrt{3}}{2} \\cdot \\sqrt{3} = \\dfrac{3a}{2}$.<br><br>ფართობი: $\\dfrac{\\sqrt{3}}{4} \\cdot \\dfrac{9a^2}{4} = \\dfrac{9\\sqrt{3}a^2}{16}$. $a^2 = 16\\sqrt{3}$, ამიტომ $S = \\dfrac{9\\sqrt{3} \\cdot 16\\sqrt{3}}{16} = 27$.<br><br><strong>პასუხი:</strong> გ) $27$."
+    solution: "გვერდების შუაწერტილები ძევს ჩახაზულ წრეწირზე, რომლის რადიუსია აპოთემა $\\dfrac{a\\sqrt{3}}{2}$. თითო გვერდის გამოტოვებით შეერთებისას მიიღება ამ წრეწირში ჩახაზული წესიერი სამკუთხედი, გვერდით $\\dfrac{a\\sqrt{3}}{2} \\cdot \\sqrt{3} = \\dfrac{3a}{2}$.<br><br>ფართობი: $\\dfrac{\\sqrt{3}}{4} \\cdot \\dfrac{9a^2}{4} = \\dfrac{9\\sqrt{3}a^2}{16}$. $a^2 = 16\\sqrt{3}$, ამიტომ $S = \\dfrac{9\\sqrt{3} \\cdot 16\\sqrt{3}}{16} = 27$.<br><br><strong>პასუხი:</strong> გ) $27$.",
+    area: "geometry",
+    topics: ["regular-polygon","area-formulas"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15
@@ -131,7 +243,15 @@ quizData = [
     options: ["$2$", "$\\sqrt{2}$", "$1{,}6$", "$2\\sqrt{2}$", "$1$", "$1{,}2$"],
     correct: 4,
     tags: [],
-    solution: "$\\overrightarrow{AB} = (3;\\ 1)$, $\\overrightarrow{AC} = (4;\\ 3)$, $AC = 5$. $S = \\dfrac{1}{2}|3 \\cdot 3 - 1 \\cdot 4| = \\dfrac{5}{2}$.<br><br>$B$-დან სიმაღლე: $h = \\dfrac{2S}{AC} = \\dfrac{5}{5} = 1$.<br><br><strong>პასუხი:</strong> ე) $1$."
+    solution: "$\\overrightarrow{AB} = (3;\\ 1)$, $\\overrightarrow{AC} = (4;\\ 3)$, $AC = 5$. $S = \\dfrac{1}{2}|3 \\cdot 3 - 1 \\cdot 4| = \\dfrac{5}{2}$.<br><br>$B$-დან სიმაღლე: $h = \\dfrac{2S}{AC} = \\dfrac{5}{5} = 1$.<br><br><strong>პასუხი:</strong> ე) $1$.",
+    area: "geometry",
+    topics: ["line-circle-eq","area-formulas"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 16
@@ -140,7 +260,15 @@ quizData = [
     options: ["$5$", "$2$", "$-5$", "$3$", "$-2$", "$-3$"],
     correct: 2,
     tags: [],
-    solution: "$b_1 = 5$, $b_2 = 2$, $b_3 = -3$, $b_4 = -5$, $b_5 = -2$, $b_6 = 3$, $b_7 = 5$, $b_8 = 2$, … — მიმდევრობა პერიოდულია, პერიოდი $6$.<br><br>$2026 = 6 \\cdot 337 + 4$, ამიტომ $b_{2026} = b_4 = -5$.<br><br><strong>პასუხი:</strong> გ) $-5$."
+    solution: "$b_1 = 5$, $b_2 = 2$, $b_3 = -3$, $b_4 = -5$, $b_5 = -2$, $b_6 = 3$, $b_7 = 5$, $b_8 = 2$, … — მიმდევრობა პერიოდულია, პერიოდი $6$.<br><br>$2026 = 6 \\cdot 337 + 4$, ამიტომ $b_{2026} = b_4 = -5$.<br><br><strong>პასუხი:</strong> გ) $-5$.",
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -149,7 +277,15 @@ quizData = [
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 3,
     tags: [],
-    solution: "$4^3 = 64 = 9 \\cdot 7 + 1 \\equiv 1 \\pmod{7}$. $199 = 3 \\cdot 66 + 1$, ამიტომ $4^{199} = (4^3)^{66} \\cdot 4 \\equiv 4 \\pmod{7}$.<br><br><strong>პასუხი:</strong> დ) $4$."
+    solution: "$4^3 = 64 = 9 \\cdot 7 + 1 \\equiv 1 \\pmod{7}$. $199 = 3 \\cdot 66 + 1$, ამიტომ $4^{199} = (4^3)^{66} \\cdot 4 \\equiv 4 \\pmod{7}$.<br><br><strong>პასუხი:</strong> დ) $4$.",
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -158,7 +294,15 @@ quizData = [
     options: ["$5^{\\frac{1}{3}}$", "$3$", "$4^{\\frac{1}{3}}$", "$2 - 5^{\\frac{1}{3}}$", "$1 + 5^{\\frac{1}{3}}$", "$1$"],
     correct: 5,
     tags: [],
-    solution: "აღვნიშნოთ $s = \\sqrt[3]{2 + \\sqrt{5}} + \\sqrt[3]{2 - \\sqrt{5}}$. შესაკრებების ნამრავლი: $\\sqrt[3]{4 - 5} = -1$.<br><br>$s^3 = (2 + \\sqrt{5}) + (2 - \\sqrt{5}) + 3 \\cdot (-1) \\cdot s = 4 - 3s$, ე.ი. $s^3 + 3s - 4 = (s - 1)(s^2 + s + 4) = 0$. $s^2 + s + 4 > 0$, ამიტომ $s = 1$.<br><br><strong>პასუხი:</strong> ვ) $1$."
+    solution: "აღვნიშნოთ $s = \\sqrt[3]{2 + \\sqrt{5}} + \\sqrt[3]{2 - \\sqrt{5}}$. შესაკრებების ნამრავლი: $\\sqrt[3]{4 - 5} = -1$.<br><br>$s^3 = (2 + \\sqrt{5}) + (2 - \\sqrt{5}) + 3 \\cdot (-1) \\cdot s = 4 - 3s$, ე.ი. $s^3 + 3s - 4 = (s - 1)(s^2 + s + 4) = 0$. $s^2 + s + 4 > 0$, ამიტომ $s = 1$.<br><br><strong>პასუხი:</strong> ვ) $1$.",
+    area: "algebra",
+    topics: ["nth-roots"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["substitution"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -167,7 +311,15 @@ quizData = [
     options: ["$\\dfrac{1}{3}$", "$-\\dfrac{1}{\\sqrt{3}}$", "$\\dfrac{2}{\\sqrt{10}}$", "$-\\dfrac{2}{\\sqrt{5}}$", "$-\\dfrac{3}{5}$", "$-\\dfrac{2}{3}$"],
     correct: 4,
     tags: [],
-    solution: "მედიანების გადაკვეთის წერტილი: $O\\left(\\dfrac{0 + 4 - 1}{3};\\ \\dfrac{4 + 0 - 1}{3}\\right) = (1;\\ 1)$.<br><br>$\\overrightarrow{OA} = (-1;\\ 3)$, $\\overrightarrow{OB} = (3;\\ -1)$: $\\cos\\varphi = \\dfrac{-3 - 3}{\\sqrt{10} \\cdot \\sqrt{10}} = -\\dfrac{3}{5}$.<br><br><strong>პასუხი:</strong> ე) $-\\dfrac{3}{5}$."
+    solution: "მედიანების გადაკვეთის წერტილი: $O\\left(\\dfrac{0 + 4 - 1}{3};\\ \\dfrac{4 + 0 - 1}{3}\\right) = (1;\\ 1)$.<br><br>$\\overrightarrow{OA} = (-1;\\ 3)$, $\\overrightarrow{OB} = (3;\\ -1)$: $\\cos\\varphi = \\dfrac{-3 - 3}{\\sqrt{10} \\cdot \\sqrt{10}} = -\\dfrac{3}{5}$.<br><br><strong>პასუხი:</strong> ე) $-\\dfrac{3}{5}$.",
+    area: "geometry",
+    topics: ["vectors","dot-product"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates","vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -176,7 +328,15 @@ quizData = [
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 1,
     tags: [],
-    solution: "$(x - 1)^2 + (y + 2)^2 = 2$: ცენტრი $(1;\\ -2)$, $r = \\sqrt{2}$. $x - y = 1$-ის კუთხური კოეფიციენტი $1$-ია, ამიტომ $k = -1$: $x + y - b = 0$.<br><br>მხები: $\\dfrac{|1 - 2 - b|}{\\sqrt{2}} = \\sqrt{2}$, $|b + 1| = 2$, $b = 1$ ან $b = -3$.<br><br>$|k - b| = |-1 - 1| = 2$ ან $|-1 + 3| = 2$.<br><br><strong>პასუხი:</strong> ბ) $2$."
+    solution: "$(x - 1)^2 + (y + 2)^2 = 2$: ცენტრი $(1;\\ -2)$, $r = \\sqrt{2}$. $x - y = 1$-ის კუთხური კოეფიციენტი $1$-ია, ამიტომ $k = -1$: $x + y - b = 0$.<br><br>მხები: $\\dfrac{|1 - 2 - b|}{\\sqrt{2}} = \\sqrt{2}$, $|b + 1| = 2$, $b = 1$ ან $b = -3$.<br><br>$|k - b| = |-1 - 1| = 2$ ან $|-1 + 3| = 2$.<br><br><strong>პასუხი:</strong> ბ) $2$.",
+    area: "geometry",
+    topics: ["line-circle-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 21
@@ -185,7 +345,15 @@ quizData = [
     options: ["$3$", "$1$", "$5$", "$2$", "$6$", "$7$"],
     correct: 0,
     tags: [],
-    solution: "$a_2 = 2 + d$, $a_7 = 2 + 6d$, $a_{27} = 2 + 26d$. $(2 + 6d)^2 = (2 + d)(2 + 26d)$: $4 + 24d + 36d^2 = 4 + 54d + 26d^2$, $10d^2 = 30d$, $d = 3$ (ზრდადი, $d \\ne 0$).<br><br>შემოწმება: $5, 20, 80$ — გეომეტრიული პროგრესიაა.<br><br><strong>პასუხი:</strong> ა) $3$."
+    solution: "$a_2 = 2 + d$, $a_7 = 2 + 6d$, $a_{27} = 2 + 26d$. $(2 + 6d)^2 = (2 + d)(2 + 26d)$: $4 + 24d + 36d^2 = 4 + 54d + 26d^2$, $10d^2 = 30d$, $d = 3$ (ზრდადი, $d \\ne 0$).<br><br>შემოწმება: $5, 20, 80$ — გეომეტრიული პროგრესიაა.<br><br><strong>პასუხი:</strong> ა) $3$.",
+    area: "algebra",
+    topics: ["arithmetic-prog","geometric-prog"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -194,7 +362,15 @@ quizData = [
     options: ["$144$", "$64$", "$96$", "$60$", "$104$", "$72$"],
     correct: 2,
     tags: [],
-    solution: "$a^2 - b^2 = 12(a - b) \\Rightarrow (a - b)(a + b - 12) = 0$; $a \\ne b$, ამიტომ $a + b = 12$.<br><br>$a^2 + 2b^2 = (12 - b)^2 + 2b^2 = 3b^2 - 24b + 144 = 3(b - 4)^2 + 96 \\ge 96$; ტოლობა $b = 4$, $a = 8$ — დადებითი და განსხვავებული.<br><br><strong>პასუხი:</strong> გ) $96$."
+    solution: "$a^2 - b^2 = 12(a - b) \\Rightarrow (a - b)(a + b - 12) = 0$; $a \\ne b$, ამიტომ $a + b = 12$.<br><br>$a^2 + 2b^2 = (12 - b)^2 + 2b^2 = 3b^2 - 24b + 144 = 3(b - 4)^2 + 96 \\ge 96$; ტოლობა $b = 4$, $a = 8$ — დადებითი და განსხვავებული.<br><br><strong>პასუხი:</strong> გ) $96$.",
+    area: "algebra",
+    topics: ["max-min","factoring"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["full-square"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -203,7 +379,15 @@ quizData = [
     options: ["$\\dfrac{1}{2}$", "$0$", "$\\dfrac{2}{\\sqrt{10}}$", "$\\dfrac{3}{8}$", "$1$", "$\\dfrac{3}{4}$"],
     correct: 3,
     tags: [],
-    solution: "$f(x) = ax^2 - 2(a - 1)x + a - 1$.<br>$a > 0$: ამონახსნთა სიმრავლე შემოუსაზღვრელია — არ გამოდგება. $a = 0$: $2x - 1 \\ge 0$, $x \\ge \\dfrac{1}{2}$ — არ გამოდგება.<br>$a < 0$: შტოები ქვემოთაა, $\\dfrac{D}{4} = (a - 1)^2 - a(a - 1) = 1 - a > 0$, ამონახსნი ფესვებს შორის მონაკვეთია. ის $[0;\\ 2]$-შია, თუ $f(0) \\le 0$, $f(2) \\le 0$ და წვერო $[0;\\ 2]$-შია:<br>$f(0) = a - 1 < 0$ ✓; $f(2) = a + 3 \\le 0 \\Rightarrow a \\le -3$; წვერო $1 - \\dfrac{1}{a} \\in (1;\\ 2]$ ✓.<br><br>$a \\in [-12;\\ -3]$, სიგრძე $9$; ალბათობა $\\dfrac{9}{24} = \\dfrac{3}{8}$.<br><br><strong>პასუხი:</strong> დ) $\\dfrac{3}{8}$."
+    solution: "$f(x) = ax^2 - 2(a - 1)x + a - 1$.<br>$a > 0$: ამონახსნთა სიმრავლე შემოუსაზღვრელია — არ გამოდგება. $a = 0$: $2x - 1 \\ge 0$, $x \\ge \\dfrac{1}{2}$ — არ გამოდგება.<br>$a < 0$: შტოები ქვემოთაა, $\\dfrac{D}{4} = (a - 1)^2 - a(a - 1) = 1 - a > 0$, ამონახსნი ფესვებს შორის მონაკვეთია. ის $[0;\\ 2]$-შია, თუ $f(0) \\le 0$, $f(2) \\le 0$ და წვერო $[0;\\ 2]$-შია:<br>$f(0) = a - 1 < 0$ ✓; $f(2) = a + 3 \\le 0 \\Rightarrow a \\le -3$; წვერო $1 - \\dfrac{1}{a} \\in (1;\\ 2]$ ✓.<br><br>$a \\in [-12;\\ -3]$, სიგრძე $9$; ალბათობა $\\dfrac{9}{24} = \\dfrac{3}{8}$.<br><br><strong>პასუხი:</strong> დ) $\\dfrac{3}{8}$.",
+    area: "prob-stats",
+    topics: ["probability","quadratic-ineq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24 (the original has a sketch: semicircle on AB, point C on AB, perpendicular CD up to the arc)
@@ -212,7 +396,15 @@ quizData = [
     options: ["$\\dfrac{\\pi}{2} - 1$", "$\\pi - 2$", "$\\dfrac{2}{3}\\pi - \\sqrt{2}$", "$\\pi + 1$", "$\\dfrac{\\pi}{2} - \\sqrt{2}$", "$2\\pi - 2\\sqrt{2}$"],
     correct: 0,
     tags: [],
-    solution: "$AB = AC + CB = 4$, რადიუსი $2$, ცენტრი $O$: $OC = 2 - (2 - \\sqrt{2}) = \\sqrt{2}$. $OCD$-დან $CD = \\sqrt{4 - 2} = \\sqrt{2}$, ე.ი. $\\angle DOC = 45^\\circ$.<br><br>ფიგურის ფართობი = $DOB$ სექტორი − $OCD$ სამკუთხედი $= \\dfrac{45}{360} \\cdot 4\\pi - \\dfrac{1}{2} \\cdot \\sqrt{2} \\cdot \\sqrt{2} = \\dfrac{\\pi}{2} - 1$.<br><br><strong>პასუხი:</strong> ა) $\\dfrac{\\pi}{2} - 1$."
+    solution: "$AB = AC + CB = 4$, რადიუსი $2$, ცენტრი $O$: $OC = 2 - (2 - \\sqrt{2}) = \\sqrt{2}$. $OCD$-დან $CD = \\sqrt{4 - 2} = \\sqrt{2}$, ე.ი. $\\angle DOC = 45^\\circ$.<br><br>ფიგურის ფართობი = $DOB$ სექტორი − $OCD$ სამკუთხედი $= \\dfrac{45}{360} \\cdot 4\\pi - \\dfrac{1}{2} \\cdot \\sqrt{2} \\cdot \\sqrt{2} = \\dfrac{\\pi}{2} - 1$.<br><br><strong>პასუხი:</strong> ა) $\\dfrac{\\pi}{2} - 1$.",
+    area: "geometry",
+    topics: ["circle-segments"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25
@@ -221,6 +413,14 @@ quizData = [
     options: ["$-2{,}2$", "$2{,}5$", "$-3$", "$2$", "$3{,}2$", "$4$"],
     correct: 3,
     tags: [],
-    solution: "ვთქვათ, $|\\vec{a}| = 1$, $|\\vec{b}| = 2$, $\\vec{a}\\cdot\\vec{b} = c \\in [-2;\\ 2]$. პირობა: $(\\vec{a} + \\vec{b})(4\\vec{a} - k\\vec{b}) = 4 + (4 - k)c - 4k = 0$, $c = \\dfrac{4k - 4}{4 - k}$.<br><br>შევამოწმოთ: $k = 2$: $c = 2$ ✓ (თანამიმართული ვექტორები). $k = -2{,}2$: $c \\approx -2{,}06$; $k = 2{,}5$: $c = 4$; $k = -3$: $c \\approx -2{,}29$; $k = 3{,}2$: $c = 11$ — $[-2;\\ 2]$-ს გარეთაა; $k = 4$: $4 - 16 \\ne 0$.<br><br><strong>პასუხი:</strong> დ) $2$."
+    solution: "ვთქვათ, $|\\vec{a}| = 1$, $|\\vec{b}| = 2$, $\\vec{a}\\cdot\\vec{b} = c \\in [-2;\\ 2]$. პირობა: $(\\vec{a} + \\vec{b})(4\\vec{a} - k\\vec{b}) = 4 + (4 - k)c - 4k = 0$, $c = \\dfrac{4k - 4}{4 - k}$.<br><br>შევამოწმოთ: $k = 2$: $c = 2$ ✓ (თანამიმართული ვექტორები). $k = -2{,}2$: $c \\approx -2{,}06$; $k = 2{,}5$: $c = 4$; $k = -3$: $c \\approx -2{,}29$; $k = 3{,}2$: $c = 11$ — $[-2;\\ 2]$-ს გარეთაა; $k = 4$: $4 - 16 \\ne 0$.<br><br><strong>პასუხი:</strong> დ) $2$.",
+    area: "geometry",
+    topics: ["dot-product"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter","vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

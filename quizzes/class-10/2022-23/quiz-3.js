@@ -11,7 +11,15 @@ quizData = [
       "$x \\in (-\\frac{5\\pi}{6} + 2\\pi k; -\\frac{\\pi}{6} + 2\\pi k);\\; k \\in \\mathbb{Z}$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-ineq"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -19,7 +27,15 @@ quizData = [
     question: "გამოთვალეთ $\\arcsin(\\sin 5)$ გამოსახულების მნიშვნელობა.",
     options: ["$5 - \\pi$", "$5$", "$5 - \\pi$", "$5 + \\pi$", "$5 + 2\\pi$", "$5 - 2\\pi$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["inverse-trig"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -27,7 +43,15 @@ quizData = [
     question: "ამოხსენით განტოლება და იპოვეთ უმცირესი დადებითი ამონახსნი: $4 \\sin^2 x - \\sin2 x = 3$",
     options: ["$x = 1$", "$x = 0$", "$x = 0{,}5$", "$x = \\arctan(-1)$", "$x = 0{,}25\\pi$", "$x = \\arctan 3$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq","sum-formulas","product-sum"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -35,7 +59,15 @@ quizData = [
     question: "წესიერი სამკუთხა პირამიდის გვერდითი წიბოა $5$, ხოლო ამ პირამიდის ფუძეზე დაშვებული სიმაღლეა $3$. იპოვეთ პირამიდის გვერდითი ზედაპირის ფართობი.",
     options: ["$12\\sqrt{5}$", "$24\\sqrt{5}$", "$6\\sqrt{39}$", "$5\\sqrt{3}$", "$10\\sqrt{3}$", "$15\\sqrt{3}$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -43,7 +75,15 @@ quizData = [
     question: "რა ფიგურა შეიძლება მივიღოთ კუბის ისეთი სიბრტყის კვეთისას, რომელიც კუბის სულ ცოტა ერთ-ერთი წიბოს პარალელურია?",
     options: ["სამკუთხედი", "სამკუთხედი, ოთხკუთხედი, ხუთკუთხედი ან ექვსკუთხედი", "მხოლოდ ოთხკუთხედი", "სამკუთხედი ან ოთხკუთხედი", "ხუთკუთხედი", "ექვსკუთხედი"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["prism"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -51,7 +91,15 @@ quizData = [
     question: "ამოხსენით განტოლება: $\\sin(5x) = \\sin(-3x)$ $($ყველა სავარაუდო პასუხში იგულისხმება $k \\in \\mathbb{Z})$.",
     options: ["$x = \\frac{\\pi}{2} + \\pi k$", "$x = \\frac{\\pi}{4} + \\pi k$", "$x = \\frac{\\pi}{4} + 2\\pi k$", "$x = \\frac{\\pi}{2} + 2\\pi k$", "$x = \\frac{\\pi}{4} + \\frac{\\pi k}{2}$", "$x = \\frac{\\pi k}{4}$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -66,7 +114,15 @@ quizData = [
       "$x = 30^\\circ + 90^\\circ k;\\; k \\in \\mathbb{Z}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq","linear-systems"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -81,7 +137,15 @@ quizData = [
       "$x \\in [0; \\frac{3\\pi}{4}]$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-ineq"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -89,7 +153,15 @@ quizData = [
     question: "წესიერი ოთხკუთხა პირამიდის ფუძის გვერდია $2$, ხოლო გვერდითი ზედაპირის ფართობია $5$. იპოვეთ ამ პირამიდის ფუძეზე დაშვებული სიმაღლე.",
     options: ["$1$", "$0{,}5$", "$0{,}75$", "$0{,}2$", "$0{,}25$", "$1{,}25$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -97,7 +169,15 @@ quizData = [
     question: "პირამიდას ფუძეში აქვს ტრაპეცია. მისი ყველა გვერდითი წახნაგი $60^\\circ$-იანი კუთხითაა დახრილი ფუძისადმი. იპოვეთ პირამიდის გვერდითი ზედაპირის ფართობი, თუ ტრაპეციის შუა ხაზია $3$, ხოლო ამ ტრაპეციაში ჩახაზული წრეწირის რადიუსია $1$.",
     options: ["$6$", "$12$", "$15$", "$18$", "$21$", "$24$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid","pyramid","inscribed-circum"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 11
   {
@@ -111,7 +191,15 @@ quizData = [
       "$x = \\frac{1}{2} \\pi k$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12
@@ -126,7 +214,15 @@ quizData = [
       "$-0{,}75\\pi$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq","inverse-trig"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -134,7 +230,15 @@ quizData = [
     question: "რამდენი მთელი ამონახსნი აქვს $[−\\pi; 0]$ შუალედში $(2 + 2\\tan^2 x) \\cdot \\cos x + 1 < 0$ უტოლობას?",
     options: ["$1$", "$2$", "$3$", "$4$", "$6$", "$7$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-ineq"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -149,7 +253,15 @@ quizData = [
       "ექვსკუთხედი"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15
@@ -157,7 +269,15 @@ quizData = [
     question: "წესიერი ოთხკუთხა წაკვეთილი პირამიდის ფუძის გვერდებია $\\sqrt{2}$ და $3\\sqrt{2}$. იპოვეთ ამ წაკვეთილი პირამიდის დიაგონალური კვეთის ფართობი, თუ მისი დიაგონალები ურთიერთმართობულია.",
     options: ["$12$", "$13$", "$14$", "$15$", "$16$", "$17$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","cross-sections"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 16
@@ -172,7 +292,15 @@ quizData = [
       "$a \\in [−1; 0{,}5]$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -180,7 +308,15 @@ quizData = [
     question: "იპოვეთ $−\\sin^2(0{,}8x) + \\sin(0{,}8x) = \\tan^2(0{,}1x) − 4\\tan(0{,}1x) + 6$ განტოლების პირველ მეოთხედში მოთავსებული ამონახსნი.",
     options: ["$30^\\circ$", "$45^\\circ$", "$60^\\circ$", "$15^\\circ$", "$75^\\circ$", "$x \\in$ ∅"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq","product-sum"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -195,7 +331,15 @@ quizData = [
       "$\\frac{\\sqrt{2}-1}{3}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["inverse-trig"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -203,7 +347,15 @@ quizData = [
     question: "წესიერი ოთხკუთხა პირამიდის ფუძეა კვადრატი, რომლის გვერდია $\\sqrt{6}$. ამ პირამიდის გვერდით წახნაგებს შორის ორწახნაგა კუთხეა $120^\\circ$. რისი ტოლია პირამიდის გვერდითი ზედაპირის ფართობი.",
     options: ["$3\\sqrt{3}$", "$4\\sqrt{6}$", "$12\\sqrt{6}$", "$6\\sqrt{3}$", "$3\\sqrt{6}$", "$6\\sqrt{2}$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","angles-space","rhombus-rect-sq"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -211,7 +363,15 @@ quizData = [
     question: "წესიერი სამკუთხა წაკვეთილი პირამიდის ფუძეებზე შემოხაზული წრეწირის რადიუსებია $2$ და $8$. გვერდითი წიბო კი $3\\sqrt{5}$-ის ტოლია. რისი ტოლია ამ პირამიდის გვერდით წახნაგსა და ფუძის სიბრტყეს შორის კუთხე?",
     options: ["$30^\\circ$", "$45^\\circ$", "$60^\\circ$", "$15^\\circ$", "$75^\\circ$", "$67{,}5^\\circ$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","inscribed-circum"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 21
@@ -226,7 +386,15 @@ quizData = [
       "$x \\in$  ∅"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq","product-sum"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -241,7 +409,15 @@ quizData = [
       "$x \\in$  ∅"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-ineq","product-sum"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -256,7 +432,15 @@ quizData = [
       "$a \\in$ ∅"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["inverse-trig"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24
@@ -265,7 +449,15 @@ quizData = [
     question: "სამკუთხა პირამიდას ფუძეში აქვს ტოლფერდა მართკუთხა $ABC$ $(C$ მართი კუთხით$)$ სამკუთხედი, რომლის კათეტია $6$. პირამიდის $DC$ სიმაღლე $8$-ის ტოლია. $E$ წერტილი $ACD$ სამკუთხედში ჩახაზული წრეწირის ცენტრია, $F$ წერტილი $BCD$ სამკუთხედში ჩახაზული წრეწირის ცენტრი, ხოლო $P$ წერტილი $ABC$ სამკუთხედზე შემოხაზული წრეწირის ცენტრია. იპოვეთ სიბრტყიდან რა მანძილზე კვეთს $EFP$ სიბრტყე პირამიდის $DC$ სიმაღლეს?",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: [0,1,2,3,4,5],
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","isosceles","right-triangle"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25
@@ -280,6 +472,14 @@ quizData = [
       "$\\frac{2}{\\sqrt{3}}$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["combinatorics"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

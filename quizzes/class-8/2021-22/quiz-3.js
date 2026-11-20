@@ -4,69 +4,149 @@ quizData = [
   {
     question: "იპოვეთ $a + b$, თუ $a = 0{,}(199)$ და $b = 0{,}(800)$.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
   {
     question: "ამოხსენით $\\sqrt{2x + 3} < 4$ განტოლება.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
   {
     question: "გამოთვალეთ $tg30^\\circ + tg60^\\circ + \\cos45^\\circ$.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
   {
     question: "გაამარტივეთ $\\left(\\frac{\\sqrt{x}+1}{\\sqrt{x}-1} - \\frac{4\\sqrt{x}}{x-1}\\right) \\cdot \\frac{x + \\sqrt{x}}{\\sqrt{x}-1}$ და იპოვეთ მისი მნიშვნელობა, როცა $x = 361$.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["rational-expr"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
   {
     question: "$R = 9$ და $r = 4$ რადიუსიანი წრეწირების საერთო გარე მხების სიგრძე $15$-ის ტოლია. იპოვეთ ამ წრეწირების ცენტრებს შორის მანძილი.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
   {
     question: "იპოვეთ ორი ირაციონალური რიცხვის ერთი მაინც წყვილი, რომელთა საშუალო არითმეტიკულიცა და საშუალო გეომეტრიულიც რაციონალური რიცხვია.",
     options: [],
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["statistics","means"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
   {
     question: "ტრაპეციის ფუძეებია $7$ და $15$, ფუძესთან მდებარე კუთხეები კი $-$ $30^\\circ$-სა და $60^\\circ$-ის ტოლია. იპოვეთ ამ ტრაპეციის დიაგონალები.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
   {
     question: "მოსპეთ ირაციონალობა $\\frac{1}{\\sqrt{3} + \\sqrt{2} + 1}$ წილადის მნიშვნელში.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
   {
     question: "$ABCD$ ტრაპეციაში ჩახაზული $I$ ცენტრის მქონე წრეწირი $AB$ და $CD$ ფერდებს ეხება $K$ და $P$ წერტილებში, შესაბამისად. ცნობილია, რომ $KA = 3$, $KB = 2$, $PC = 1$ და $PD = 6$. იპოვეთ $IA \\cdot IB \\cdot IC \\cdot ID$ ნამრავლი.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
   {
     question: "დაამტკიცეთ, რომ $\\sqrt{11 - 6\\sqrt{2}}  + \\sqrt{6 - 4\\sqrt{2}}  + \\sqrt{9 - 4\\sqrt{2}}$ გამოსახულების მნიშვნელობა რაციონალური რიცხვია.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 3,
+    type: ["proof"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -10,7 +10,15 @@ quizData = [
             "$4$"
         ],
         correct: 0,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "algebra",
+        topics: ["sum-formulas"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ $\\int_{0}^{2} (3x^2 + x) dx$.",
@@ -23,7 +31,15 @@ quizData = [
             "$10$"
         ],
         correct: 5,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "calculus",
+        topics: ["definite-integral"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან $a$-ს რომელი მნიშვნელობისთვის მოიძებნება ისეთი $F(x)$ ფუნქცია, რომლისთვისაც $F(x) + x^8 + a = 0$ განტოლებას ექნება ამონახსნი ნამდვილ რიცხვთა სიმრავლეში, თუ $F'(x) = g(x)$, ხოლო $g(x) = 2x$? I. $a=5$ II. $a=3$ III. $a=-8$",
@@ -36,7 +52,15 @@ quizData = [
             "სამივე"
         ],
         correct: 5,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "calculus",
+        topics: ["derivative"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $\\frac{x^2}{8^2} - \\frac{y^2}{6^2} = 1$ ჰიპერბოლის ექსცენტრისიტეტი.",
@@ -49,7 +73,15 @@ quizData = [
             "$\\frac{2}{3}$"
         ],
         correct: 1,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "geometry",
+        topics: ["conics"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "მოცემულია $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ ელიფსის განტოლება. ჩამოთვლილთაგან რისი ტოლია $a + b$, თუ დიდი ღერძის სიგრძე $34$-ის, ხოლო ექსცენტრისიტეტი $\\frac{15}{17}$-ის ტოლია.",
@@ -62,7 +94,15 @@ quizData = [
             "$16$"
         ],
         correct: 2,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "geometry",
+        topics: ["conics","quadratic-eq"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$\\alpha(x)$ და $\\beta(x)$ ფუნქციებისთვის სრულდება $\\tan(\\alpha(x)) = x$ და $\\cot(\\beta(x)) = x$ ტოლობები. გამოთვალეთ $(\\alpha(x) + \\beta(x))'$.",
@@ -75,7 +115,15 @@ quizData = [
             "$\\sqrt{1 - x^2}$"
         ],
         correct: 0,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "algebra",
+        topics: ["trig-identities"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "მოცემულია $f(x) = (x^2 + \\sin^2x)^4$ და $g(x) = \\frac{f'(x)}{8(x^2+\\sin^2x)^3}$. იპოვეთ $g'\\left(\\frac{\\pi}{4}\\right)$.",
@@ -88,7 +136,15 @@ quizData = [
             "$\\frac{\\pi}{8}$"
         ],
         correct: 0,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "calculus",
+        topics: ["derivative"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან რომელ შუალედშია $y = \\frac{x^4}{4} - x^3 - \\frac{x^2}{2} + 3x$ ფუნქცია ზრდადი?",
@@ -101,7 +157,15 @@ quizData = [
             "$(1;5)$"
         ],
         correct: 2,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "algebra",
+        topics: ["function-props"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი მხები გაივლება $A(4; 6)$ წერტილიდან $y^2 = 9x$ პარაბოლისადმი?",
@@ -114,7 +178,15 @@ quizData = [
             "არცერთი"
         ],
         correct: 0,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "geometry",
+        topics: ["conics","quadratic-func","chords-tangents"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან, რომელია $\\frac{x^2}{45} - \\frac{y^2}{20} = 1$ ჰიპერბოლას ასიმპტოტი?",
@@ -127,7 +199,15 @@ quizData = [
             "$y=-\\frac{9}{4}x$"
         ],
         correct: 1,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "calculus",
+        topics: ["curve-sketching","conics"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ $\\int_{0}^{\\frac{\\pi}{4}} \\left(2\\cos^2\\left(\\frac{\\pi}{4} - \\frac{x}{2}\\right) + \\cos x\\right) dx$.",
@@ -140,7 +220,15 @@ quizData = [
             "$\\frac{\\pi}{4} + 1$"
         ],
         correct: 5,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "calculus",
+        topics: ["definite-integral","real-exponent"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან $f(x) = x^3 + 2x^2$ ფუნქციის გრაფიკზე მდებარე რომელ წერტილზე გაივლება მხები, რომელიც $y = -x + 7$ წრფის პარალელურია?",
@@ -153,7 +241,15 @@ quizData = [
             "$(1;3)$"
         ],
         correct: 0,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "algebra",
+        topics: ["linear-func","chords-tangents"],
+        grade: 11,
+        difficulty: 2,
+        type: ["graph"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $\\frac{x^2}{25} + \\frac{y^2}{21} = 1$ ელიფსის დირექტრისებს შორის მანძილი.",
@@ -166,7 +262,15 @@ quizData = [
             "$8$"
         ],
         correct: 1,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "geometry",
+        topics: ["conics"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$Ax + By + Cz + D = 0$ სიბრტყე $OZ$ ღერძის მართობულია და გადის $N(3;5;1)$ წერტილზე. გამოთვალეთ $A + B + C + D$ ჯამი.",
@@ -179,7 +283,15 @@ quizData = [
             "$-1$"
         ],
         correct: 1,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "algebra",
+        topics: [],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან რისი ტოლია $a$ პარამეტრი, თუ $f(x) = \\frac{a}{3}x^3 + 4x^2 + ax + 7a^2 - 11$ ფუნქცია კლებადია მთელ რიცხვთა ღერძზე?",
@@ -192,7 +304,15 @@ quizData = [
             "$7$"
         ],
         correct: 0,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "algebra",
+        topics: ["function-props"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: ["parameter"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ რა უმცირესი სიგრძე შეიძლება ჰქონდეს $N(0;0)$ წერტილისა და $f(x) = \\sqrt{10 + x - 2x^2}$ ფუნქციის გრაფიკზე მდებარე წერტილის შემაერთებელ მონაკვეთს.",
@@ -205,7 +325,15 @@ quizData = [
             "$\\sqrt{5}$"
         ],
         correct: 1,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "algebra",
+        topics: ["square-roots"],
+        grade: 11,
+        difficulty: 2,
+        type: ["graph"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი $y = kx + b$ სახის ასიმპტოტი გააჩნია $f(x) = \\frac{x}{\\sqrt{x^2 + x}}$ ფუნქციას?",
@@ -218,7 +346,15 @@ quizData = [
             "$6$"
         ],
         correct: 2,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "calculus",
+        topics: ["curve-sketching","linear-func"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ იმ ოთხკუთხედის ფართობი, რომლის ორი წვერო ემთხვევა $\\frac{x^2}{13} - \\frac{y^2}{36} = 1$ ჰიპერბოლის ფოკუსებს, ხოლო დანაჩენი ორი მისი წარმოსახვითი ღერძის ბოლოებს.",
@@ -231,7 +367,15 @@ quizData = [
             "$18$"
         ],
         correct: 3,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "geometry",
+        topics: ["conics"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ იმ სხეულის მოცულობა, რომელიც მიიღება $y = 2x + 1$, $x = 1$, $x = 4$ და $y = 0$ წირებით შემოსაზღვრული ფიგურის ბრუნვით $Ox$ ღერძის გარშემო.",
@@ -244,7 +388,15 @@ quizData = [
             "$117\\pi$"
         ],
         correct: 5,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "calculus",
+        topics: ["definite-integral","function-props","linear-func"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "სხეულის გავლილი მანძილის დროზე დამოკიდებულება $S(t) = 18t + 9t^2 - t^3$ ტოლობით გამოისახება. იპოვეთ სხეულის მაქსიმალური სიჩქარე ($V(t) = S'(t)$).",
@@ -257,7 +409,15 @@ quizData = [
             "$90$"
         ],
         correct: 1,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "algebra",
+        topics: ["word-problems","max-min"],
+        grade: 11,
+        difficulty: 3,
+        type: ["word"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან რისი ტოლია იმ $A$ წერტილის კოორდინატები, რომლიდანაც $f(x) = x^4 - x^3$ ფუნქციის გრაფიკზე მდებარე რომელიმე $M$ წერტილისთვის და $g(x) = 5x^2 - 12$ ფუნქციის გრაფიკზე მდებარე რომელიმე $N$ წერტილისთვის $AM + AN$ ჯამი იქნება უმცირესი?",
@@ -270,7 +430,15 @@ quizData = [
             "$(4;6)$"
         ],
         correct: 4,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "algebra",
+        topics: [],
+        grade: 11,
+        difficulty: 3,
+        type: ["graph"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი ამონახსნი აქვს $f(f(x)) = f(x)$ განტოლებას, თუ $f(x) = \\sqrt[5]{3 - x^3 - x}$ ნამდვილ რიცხვთა სიმრავლიდან?",
@@ -283,7 +451,15 @@ quizData = [
             "$5$"
         ],
         correct: 1,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "algebra",
+        topics: ["nth-roots"],
+        grade: 11,
+        difficulty: 3,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ მანძილი $A(1;3;7)$ წერტილიდან იმ სიბრტყემდე, რომელიც $Ox$, $Oy$ და $Oz$ ღერძების დადებითი მიმართულებებიდან მოკვეთს შესაბამისად $2$, $1$ და $2$ სიგრძის მონაკვეთებს.",
@@ -296,7 +472,15 @@ quizData = [
             "$11$"
         ],
         correct: 3,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "algebra",
+        topics: ["square-roots"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$Ax + By + Cz + D = 0$ სიბრტყე გადის კოორდინატთა სათავეზე და $M(0;1;2)$ წერტილზე და ეს სიბრტყე $3x - 4y + 5z - 12 = 0$ სიბრტყის მართობულია. ჩამოთვლითაგან რისი ტოლია $\\frac{A}{C}$?",
@@ -309,7 +493,15 @@ quizData = [
             "ყველა წინა პასუხი მცდარია"
         ],
         correct: 2,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "solid",
+        topics: ["perpendicular-space"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $y^2 = x$, $y^2 = 2x$ და $y = \\frac{x}{2}$ წირებით შემოსაზღვრული ფიგურის ფართობი.",
@@ -322,6 +514,14 @@ quizData = [
             "$6$"
         ],
         correct: 4,
-        tags: ["Math"]
+        tags: ["Math"],
+        area: "calculus",
+        topics: ["definite-integral","conics","function-props"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     }
 ];

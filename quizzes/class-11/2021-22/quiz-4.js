@@ -10,7 +10,15 @@ quizData = [
             "$66$"
         ],
         correct: 5, 
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "calculus",
+        topics: ["derivative","cylinder"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ქვემოთჩამოთვლილთაგან, რისი ტოლი შეიძლება იყოს $a$ და $b$, თუ ცნობილია, რომ $y=\\frac{x^2+ax+b}{2-x}$ ფუნქციის დახრილი ასიმპტოტია $y=7-x$ წრფე?",
@@ -23,7 +31,15 @@ quizData = [
             "ასეთი $a$ და $b$ არ არსებობს."
         ],
         correct: 1, 
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "calculus",
+        topics: ["curve-sketching","cylinder"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$(\\arcsin x + \\arccos x)' = $",
@@ -36,7 +52,15 @@ quizData = [
             "$0$"
         ],
         correct: 5, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "algebra",
+        topics: ["inverse-trig","cylinder"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $\\frac{x^2}{9} + \\frac{y^2}{5} = 1$ ელიფსის ექსცენტრისიტეტი.",
@@ -49,7 +73,15 @@ quizData = [
             "$\\frac{1}{9}$"
         ],
         correct: 1, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "geometry",
+        topics: ["conics","cylinder"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ცნობილია, რომ $x-3y-12=0$ წრფე ეხება $\\frac{x^2}{36} + \\frac{y^2}{12} = 1$ ელიფსს. ჩამოთვლილთაგან რომელია შეხების წერტილის კოორდინატები.",
@@ -62,7 +94,15 @@ quizData = [
             "$(-2;5)$"
         ],
         correct: 1, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "geometry",
+        topics: ["conics","cylinder","quadratic-eq"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი ექსტრემუმის წერტილი გააჩნია $f(x) = \\sin2x$ ფუნქციას $(0;3)$ შუალედში?",
@@ -75,7 +115,15 @@ quizData = [
             "$5$"
         ],
         correct: 2, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "calculus",
+        topics: ["monotonic-extrema","cylinder","sum-formulas"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ $f'\\left(\\frac{\\pi}{16}\\right)$, თუ $f(x) = \\tan^34x$.",
@@ -88,7 +136,15 @@ quizData = [
             "$4$"
         ],
         correct: 3, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "solid",
+        topics: ["cylinder"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $A(1;1;1)$ წერტილზე გამავალი იმ სიბრტყის განტოლება, რომელიც პარალელურია $\\vec{a} = (1;1;1)$ და $\\vec{b} = (-1; 1;2)$ ვექტორების.",
@@ -101,7 +157,15 @@ quizData = [
             "$x-3y+2z=0$"
         ],
         correct: 5, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "geometry",
+        topics: ["vectors","cylinder"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: ["vectors","coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი ამონახსნი აქვს $Ax=B$ განტოლებას, თუ $Ax+By+Cz+9=0$ სიბრტყე პარალელურია $Oxy$ სიბრტყის?",
@@ -114,7 +178,15 @@ quizData = [
             "$4$-ზე მეტი"
         ],
         correct: 5, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "solid",
+        topics: ["cylinder"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი მხები გაივლება $\\frac{x^2}{20} + \\frac{y^2}{16} = 1$ ელიფსისადმი $A(1;2)$ წერტილიდან?",
@@ -127,7 +199,15 @@ quizData = [
             "არცერთი"
         ],
         correct: 5, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "geometry",
+        topics: ["conics","cylinder","chords-tangents"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ $f'(1)$, თუ $f(x) = \\sin(x\\cdot e^x)$.",
@@ -140,7 +220,15 @@ quizData = [
             "$e^e$"
         ],
         correct: 2, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "calculus",
+        topics: ["derivative","cylinder"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "მოცემულია $[-1;2]$ შუალედში განსაზღვრული $f(x) = \\frac{x^3}{3} - 4x^2 + 7x + 5$ ფუნქცია და $[-2;4]$ შუალედში განსაზღვრული $g(x) = 3^{x^2 - ax}$ ფუნქცია. ცნობილია, რომ $f(x)$ ფუნქცია მაქსიმალურ მნიშვნელობას და $g(x)$ ფუნქცია მინიმალურ მნიშვნელობას არგუმენტის ერთი და იგივე მნიშვნელობისათვის აღწევენ. იპოვეთ $a$.",
@@ -153,7 +241,15 @@ quizData = [
             "$4$"
         ],
         correct: 0, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "solid",
+        topics: ["cylinder","max-min"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ $f'\\left(\\sqrt{\\frac{\\pi}{6}}\\right)$, თუ $f(x) = \\sin^3\\left(x^2 + \\frac{\\pi}{6}\\right)$.",
@@ -166,7 +262,15 @@ quizData = [
             "$\\frac{2\\pi}{3}$"
         ],
         correct: 3, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "solid",
+        topics: ["cylinder"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან რომელია $9x^2 - 16y^2 = 144$ ჰიპერბოლის ფოკუსი?",
@@ -179,7 +283,15 @@ quizData = [
             "$(3; 0)$"
         ],
         correct: 3, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "geometry",
+        topics: ["conics","cylinder"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "მოცემულია პარაბოლა $y^2 = 12x$. იპოვეთ მანძილი $A(3;6)$ წერტილიდან პარაბოლის ფოკუსამდე.",
@@ -192,7 +304,15 @@ quizData = [
             "$8$"
         ],
         correct: 2, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "geometry",
+        topics: ["conics","cylinder","quadratic-func"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {   
         warning: "ყველა პასუხი ჩათვლილია",
@@ -206,7 +326,15 @@ quizData = [
             "$0$ ან $7$"
         ],
         correct: [0,1,2,3,4,5], // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "calculus",
+        topics: ["monotonic-extrema","cylinder"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $f(x) = \\frac{x^4}{4} - 2\\cdot\\frac{x^3}{3} - 5\\cdot\\frac{x^2}{2} + 6x$ ფუნქციის ზრდადობის შუალედი.",
@@ -219,7 +347,15 @@ quizData = [
             "$(-1;9)$"
         ],
         correct: 1, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "calculus",
+        topics: ["monotonic-extrema","cylinder","function-props"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$XOY$ საკოორდინატო სიბრტყეზე იპოვეთ უმოკლესი მანძილი $y=4x-7$ წრფესა და $f(x) = x^2$ ფუნქციის გრაფიკს შორის.",
@@ -232,7 +368,15 @@ quizData = [
             "$7$"
         ],
         correct: 2, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "geometry",
+        topics: ["line-circle-eq","cylinder","linear-func"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან რომელია იმ სიბრტყის განტოლება, რომელიც $x+2y-2z+7=0$ სიბრტყის პარალელურია და დაშორებულია $A(4; 3;-2)$ წერტილიდან $d=7$ მანძილით.",
@@ -245,7 +389,15 @@ quizData = [
             "$3x+6y-2z+45=0$"
         ],
         correct: 0, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "solid",
+        topics: ["parallel-space","cylinder"],
+        grade: 11,
+        difficulty: 3,
+        type: ["solve"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$\\vec{a}$ ვექტორის გასწვრივ პარალელურმა გადატანამ $2x-3y+5z+7=0$ სიბრტყე თავის თავში ასახა. ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს $\\vec{a}$ ვექტორის კოორდინატები?",
@@ -258,7 +410,15 @@ quizData = [
             "$(0; 7; 1)$"
         ],
         correct: 2, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "geometry",
+        topics: ["vectors","cylinder"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: ["vectors","coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ამოხსენით უტოლობა $f'(x) \\geq 0$, თუ $f(x) = \\log_{0{,}3}(x^2-4)$.",
@@ -271,7 +431,15 @@ quizData = [
             "$(-\\infty; 2) \\cup (2; +\\infty)$"
         ],
         correct: 3, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "algebra",
+        topics: ["log-ineq","derivative","cylinder"],
+        grade: 11,
+        difficulty: 3,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან რომელია $f(x) = \\frac{x^2+2x-1}{x}$ ფუნქციის დახრილი ასიმპტოტი.",
@@ -284,7 +452,15 @@ quizData = [
             "$y=3x-1$"
         ],
         correct: 0, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "calculus",
+        topics: ["curve-sketching","cylinder"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი უწყვეტი წირისგან შედგება $f(x) = \\frac{x^3}{x^2-5}$ ფუნქციის გრაფიკი?",
@@ -297,7 +473,15 @@ quizData = [
             "$5$"
         ],
         correct: 3, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "calculus",
+        topics: ["continuity","cylinder"],
+        grade: 11,
+        difficulty: 3,
+        type: ["graph"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ქვემოთ ჩამოთვლილთაგან რომელი $a$-სთვის, მოიძებნება ისეთი $b$, რომ $(a-4)x+2y+tz+5=0$ და $x+bty+tz+9=0$ სიბრტყეებს შორის კუთხე იქნება მახვილი ნებისმიერი $t$-სთვის?",
@@ -310,7 +494,15 @@ quizData = [
             "$4$"
         ],
         correct: 4, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "solid",
+        topics: ["angles-space","cylinder"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან რომელ წერტილში გადაკვეთს $Oz$ ღერძს ის სიბრტყე, რომელიც გადის $2x-2y+z-3=0$ და $x+2y-2z+12=0$ სიბრტყეების გადაკვეთის წრფეზე და მოცემულ სიბრტყეებით შექმნილ ორწახნაგა კუთხეს შუაზე ყოფს?",
@@ -323,6 +515,14 @@ quizData = [
             "$(0; 0; 5)$"
         ],
         correct: 5, // ე) πR³/√2 is the correct answer
-        tags: ["სტერეომეტრია", "ცილინდრი"]
+        tags: ["სტერეომეტრია", "ცილინდრი"],
+        area: "solid",
+        topics: ["angles-space","cylinder"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     }
 ];

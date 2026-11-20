@@ -4,63 +4,135 @@ quizData = [
     question: "რამდენ აცდენილ წრფეთა წყვილი მიიღება თუ განვიხილავთ რომელიმე ტეტრაედრის წიბოების შემცველ ყველა წრფეს?",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","parallel-space"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 2
   {
     question: "დახრილი სიბრტყესთან ადგენს $45^{\\circ}$-იან კუთხეს. ამ დახრილის გეგმილი იგივე სიბრტყეზე გავლებულ $𝒂$ წრფესთან ადგენს ასევე $45^{\\circ}$-ს. რა კუთხეს ადგენს დახრილი $a$ წრფესთან?",
     options: ["$15^\\circ$", "$22{,}5^\\circ$", "$30^\\circ$", "$45^\\circ$", "$60^\\circ$", "$75^\\circ$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 3
   {
     question: "დაალაგეთ ზრდადობით (მცირედან დიდისკენ) $𝑎 = \\sin 4$, $𝑏 = \\tan 95^\\circ$, $𝑐 = \\cos 7$.",
     options: ["$𝑎; 𝑏; 𝑐$", "$𝑎; 𝑐; 𝑏$", "$𝑏; 𝑐; 𝑎$", "$𝑏; 𝑎; 𝑐$", "$𝑐; 𝑏; 𝑎$", "$𝑐; 𝑎; 𝑏$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["numeric-ineq","function-props","reduction"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 4
   {
     question: "$\\sin(\\alpha − 90^\\circ) − \\cos(180^\\circ + \\alpha) + \\sin(\\alpha + \\beta) \\left( \\frac{1}{\\cos^2 \\beta} − 1 − \\tan^2 \\beta \\right) = $",
     options: ["$0$", "$1$", "$-1$", "$2$", "$-2$", "$3$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["reduction","sum-formulas"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 5
   {
     question: "რამდენი დიაგონალი აქვს შვიდკუთხა პრიზმას?",
     options: ["$14$", "$21$", "$28$", "$7$", "$35$", "$42$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["prism"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 6
   {
     question: "იპოვეთ $y = \\cos 4x + \\sin^2 2x$ ფუნქციის უმცირესი დადებითი პერიოდი.",
     options: ["$\\pi$", "$2\\pi$", "$3\\pi$", "$4\\pi$", "$0{,}5\\pi$", "$0{,}25\\pi$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 7
   {
     question: "მართი სამკუთხა პრიზმის ფუძის გვერდზე, ფუძის სიბრტყისადმი $30^{\\circ}$-იანი დახრით გავლებული სიბრტყე პრიზმას კვეთს ისე, რომ კვეთაში მიიღება სამკუთხედი, რომლის ფართობია $4\\sqrt{3}$. იპოვეთ პრიზმის ფუძის ფართობი.",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["prism","cross-sections"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 8
   {
     question: "გამოთვალეთ $\\sin(\\arccos(-0{,}6))$",
     options: ["$0{,}8$", "$−0{,}8$", "$0{,}6$", "$−0{,}6$", "$−\\cos 0{,}6$", "$\\cos 0{,}6$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["inverse-trig"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 9
   {
     question: "რამდენი ამონახსნი აქვს $\\sqrt{3}\\sin x + \\cos x = 2$ განტოლებას $[0; 2\\pi]$ შუალედში?",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 10
   {
@@ -74,7 +146,15 @@ quizData = [
       "$\\frac{1}{6\\sqrt{2}}$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","perpendicular-space","cross-sections"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 11
   {
@@ -88,7 +168,15 @@ quizData = [
       "$\\frac{14}{\\sqrt{3}}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 12
   {
@@ -102,14 +190,30 @@ quizData = [
       "$x ∈ \\left(-\\frac{2\\pi}{3} + 2\\pi k; 2\\pi k\\right) \\cup \\left(\\frac{2\\pi}{3} + 2\\pi k; \\pi + 2\\pi k\\right)$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-ineq","sum-formulas","product-sum"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 13
   {
     question: "კუბის გვერდია $1$. ამ კუბში ჩახაზულია ოთხკუთხა პირამიდა ისე, რომ წვერო აქვს ერთი წახნაგის დიაგონალების გადაკვეთაზე, ხოლო ფუძე მოპირდაპირე წახნაგს ემთხვევა. იპოვეთ პირამიდის გვერდითი ზედაპირის ფართობი.",
     options: ["$\\sqrt{7}$", "$\\sqrt{6}$", "$\\sqrt{5}$", "$2\\sqrt{3}$", "$3\\sqrt{2}$", "$2\\sqrt{2}$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["prism","pyramid"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 14
   {
@@ -123,7 +227,15 @@ quizData = [
       "$a ∈ [−1; 1]$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 15
   {
@@ -137,7 +249,15 @@ quizData = [
       "$x ∈ (1; +\\infty)$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 16
   {
@@ -151,14 +271,30 @@ quizData = [
       "$y = −5x + 15$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["similar-figures","line-circle-eq","linear-func"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 17
   {
     question: "იპოვეთ კუთხე $\\vec{a}$ და $\\vec{b}$ არანულოვან ვექტორებს შორის, თუ ცნობილია, რომ $|\\vec{a} + \\vec{b}| = |\\vec{a} − \\vec{b}|$.",
     options: ["$30^{\\circ}$", "$45^{\\circ}$", "$60^{\\circ}$", "$90^{\\circ}$", "$120^{\\circ}$", "$180^{\\circ}$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 18
   {
@@ -172,7 +308,15 @@ quizData = [
       "$\\arctan(1)$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors","line-circle-eq","inverse-trig"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors","coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 19
   {
@@ -186,7 +330,15 @@ quizData = [
       "$c = \\frac{3}{5}\\vec{a} + \\frac{2}{5}\\vec{b}$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["notable-points","vectors"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 20
   {
@@ -200,14 +352,30 @@ quizData = [
       "$\\frac{4}{1296}$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 21
   {
     question: "სამი სახის ტკბილეულიდან უნდა ავარჩიოთ $10$ ცალი ისე, რომ თითოეული სახის ერთი ტკბილეული მაინც იყოს შერჩეული. რამდენნაირადაა ეს შესაძლებელი?",
     options: ["$100$", "$81$", "$64$", "$49$", "$36$", "$25$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["combinatorics"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 22
   {
@@ -221,7 +389,15 @@ quizData = [
       "$\\frac{17}{45}$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 23
   {
@@ -235,7 +411,15 @@ quizData = [
       "$x ∈$ ∅; $\\quad y ∈$ ∅"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq","linear-systems","sum-formulas"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 24
   {
@@ -249,13 +433,29 @@ quizData = [
       "$y = \\sin(3|x|)$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 25
   {
     question: "რამდენი ამონახსნი აქვს $\\sin 2x = \\sin 3x$ განტოლებას $[0; 2\\pi]$ სიმრავლეში?",
     options: ["$4$", "$5$", "$6$", "$7$", "$8$", "$9$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq","sum-formulas"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

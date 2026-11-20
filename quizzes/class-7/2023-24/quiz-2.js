@@ -4,7 +4,15 @@ quizData = [
     question: "იპოვეთ $|2x − 3| = 9$ განტოლების ამონახსნთა ჯამი.",
     options: ["$1$", "$0$", "$2$", "$3$", "$−1$", "$−9$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 7,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -12,7 +20,15 @@ quizData = [
     question: "$ABC$ სამკუთხედში $\\angle A = a^\\circ$, $\\angle B = b^\\circ$, $\\angle C = c^\\circ$. გამოთვალეთ შემდეგი გამოსახულების უმცირესი მნიშვნელობა: $|3(a^\\circ − 2b^\\circ) − 5(a^\\circ − 3c^\\circ) − 4(c^\\circ − b^\\circ) − 11c^\\circ + 4b^\\circ|$.",
     options: ["$1^\\circ$", "$10^\\circ$", "$0^\\circ$", "$20^\\circ$", "$5^\\circ$", "$180^\\circ$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -20,7 +36,15 @@ quizData = [
     question: "წინა წელს სკოლის მოსწავლეთა $10\\%$ დადიოდა სპორტზე, წელს კი $25\\%$ დადის. რამდენი პროცენტით მეტი მოსწავლე დადის სპორტზე წელს, წინა წელთან შედარებით, თუ სკოლაში მოსწავლეთა რაოდენობა არ შეცვლილა?",
     options: ["$10\\%$", "$15\\%$", "$20\\%$", "$50\\%$", "$150\\%$", "$200\\%$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["percent"],
+    grade: 7,
+    difficulty: 1,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -28,7 +52,15 @@ quizData = [
     question: "ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს სამკუთხედის ორი გვერდის შუა მართობებს შორის კუთხე, თუ ამ სამკუთხედის ორი კუთხეა $57^\\circ$ და $67^\\circ$.",
     options: ["$72^\\circ$", "$56^\\circ$", "$52^\\circ$", "$66^\\circ$", "$45^\\circ$", "$76^\\circ$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["angle-sum"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -36,14 +68,30 @@ quizData = [
     question: "$ABC$ სამკუთხედის $A$ და $C$ კუთხეებიდან გავლებულ სიმაღლეებს შორის კუთხე $30^\\circ$-ია. ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს $B$ კუთხის სიდიდე?",
     options: ["$30^\\circ$", "$36^\\circ$", "$72^\\circ$", "$45^\\circ$", "$60^\\circ$", "$90^\\circ$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //6
   {
     question: "რიცხვი $470$ დაყვეს სამ $3$, $4$ და $5$-ის უკუპროპორციულ ნაწილად. იპოვეთ უდიდესისა და უმცირესი ნაწილების სხვაობა.",
     options: ["$\\dfrac{175}{12}$", "$\\dfrac{217}{12}$", "$\\dfrac{470}{7}$", "$80$", "$50$", "$30$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -51,7 +99,15 @@ quizData = [
     question: "$A$ სიმრავლე შედგება ისეთი ხუთი განსხვავებული ნატურალური რიცხვისგან, რომელთა საშუალო $10$-ის ტოლია. $B$ სიმრავლე შედგება ისეთი ექვსი განსხვავებული ნატურალური რიცხვისგან, რომელთა საშუალო $10$-ის ტოლია. იპოვეთ $|a − b|$ გამოსახულების უდიდესი მნიშვნელობა, თუ $a ∈ A$ და $b ∈ B$.",
     options: ["$1$", "$10$", "$0$", "$59$", "$39$", "$44$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -59,7 +115,15 @@ quizData = [
     question: "იპოვეთ $5|x − 1{,}4| + 3|x − 7| − 2(x − 12)$ გამოსახულების მნიშვნელობა, თუ $x = 1{,}99$.",
     options: ["$0$", "$199$", "$19{,}9$", "$27$", "$38$", "$15$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -67,7 +131,15 @@ quizData = [
     question: "იპოვეთ ტოლფერდა $ABC$ სამკუთხედის $A$ კუთხის გრადუსული ზომა, თუ $C$ კუთხის გრადუსული ზომაა $100^\\circ$.",
     options: ["$30^\\circ$", "$10^\\circ$", "$40^\\circ$", "$80^\\circ$", "$100^\\circ$", "შეუძლებელია განსაზღვრა"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -75,7 +147,15 @@ quizData = [
     question: "სამკუთხედის გვერდების სიგრძეები $7$-ის, $8$-ისა და $10$-ის პირდაპირპროპორციულია. იპოვეთ სამკუთხედის პერიმეტრი, თუ უმცირესი გვერდი $14\\text{სმ}$-ია.",
     options: ["$70\\text{სმ}$", "$55\\text{სმ}$", "$60\\text{სმ}$", "$50\\text{სმ}$", "$80\\text{სმ}$", "$65\\text{სმ}$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //11
@@ -83,7 +163,15 @@ quizData = [
     question: "რამდენ პროცენტიანი $50$ ლიტრი მარილხსნარი უნდა დავამატოთ $30$ ლიტრ $10\\%$-იან მარილხსნარს, რომ მივიღოთ $5\\%$-იანი მარილხსნარი?",
     options: ["$1\\%$", "$2\\%$", "$4\\%$", "$5\\%$", "$10\\%$", "$20\\%$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["percent","word-problems"],
+    grade: 7,
+    difficulty: 2,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -91,7 +179,15 @@ quizData = [
     question: "ყუთში $10$ თეთრი, $8$ წითელი, $7$ მწვანე ფანქარია. ყუთში არსებული ფანქრების მაქსიმუმ რამდენი პროცენტი უნდა ამოვიღოთ ყუთიდან მასში ჩაუხედავად, რომ ყუთში აუცილებლად დარჩეს სამივე ფერის ორ-ორი ფანქარი მაინც?",
     options: ["$20\\%$", "$24\\%$", "$76\\%$", "$72\\%$", "$52\\%$", "$48\\%$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["percent"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -99,7 +195,15 @@ quizData = [
     question: "გიორგიმ პირველ დღეს სამუშაოს $20\\%$ შეასრულა, სამუშაოს დარჩენილი ნაწილის რამდენი პროცენტი უნდა შეასრულოს მეორე დღეს, რომ ამ ორი დღის მუშაობის შედეგად მთელი სამუშაოს ნახევარი იყოს შესრულებული?",
     options: ["$47{,}5\\%$", "$30\\%$", "$32\\%$", "$37{,}5\\%$", "$44{,}5\\%$", "$14\\%$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["percent","word-problems"],
+    grade: 7,
+    difficulty: 2,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //14
@@ -107,7 +211,15 @@ quizData = [
     question: "ტოლფერდა სამკუთხედის ორი გვერდი ისე შეეფარდება ერთმანეთს, როგორც $3 : 4$. ამ სამკუთხედის პერიმეტრია $88\\text{სმ}$. იპოვეთ სამკუთხედის უმცირესი გვერდი, თუ სამივე გვერდი მთელი რიცხვია.",
     options: ["$18$", "$20$", "$24$", "$28$", "$32$", "$33$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -115,7 +227,15 @@ quizData = [
     question: "$ABC$ სამკუთხედის $A$ და $C$ კუთხეების ჯამის გრადუსული ზომა $B$ კუთხის გრადუსული ზომის $80\\%$-ია. იპოვეთ $A$ და $C$ კუთხის ბისექტრისებს შორის უმცირესი კუთხე.",
     options: ["$15^\\circ$", "$10^\\circ$", "$45^\\circ$", "$20^\\circ$", "$40^\\circ$", "$30^\\circ$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["percent"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //16
@@ -123,7 +243,15 @@ quizData = [
     question: "$a$ რიცხვი ნაკლებია $b$ რიცხვზე $20\\%$-ით, ხოლო $c$ რიცხვი მეტია $a$ რიცხვზე $40\\%$-ით. რამდენი პროცენტითაა მეტი $b$ და $c$ რიცხვებს შორის უდიდესი უმცირესზე?",
     options: ["$10\\%$", "$20\\%$", "$60\\%$", "$48\\%$", "$75\\%$", "$12\\%$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["percent"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -131,7 +259,15 @@ quizData = [
     question: "იპოვეთ $|||3x − 1| − 1| + 6| = 7$ განტოლების ამონახსნთა ჯამი.",
     options: ["$\\dfrac{1}{3}$", "$\\dfrac{1}{6}$", "$0$", "$1$", "$7$", "$12$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 7,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -139,7 +275,15 @@ quizData = [
     question: "ვაჭარმა $A$ ქალაქიდან $B$ ქალაქში პროდუქციის ჩასატანად სამი საბაჟო უნდა გაიაროს. პირველზე ის ტოვებს პროდუქციის მეათედ ნაწილს, მეორეზე დარჩენილის $20\\%$-ს, ხოლო მესამეზე დარჩენილის მესამედ ნაწილს. თავდაპირველი პროდუქციის რამდენი პროცენტი მიიტანა ვაჭარმა $B$ ქალაქში?",
     options: ["$10\\%$", "$25\\%$", "$33\\%$", "$48\\%$", "$50\\%$", "$72\\%$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["percent"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -147,7 +291,15 @@ quizData = [
     question: "$ABC$ სამკუთხედის $AB$ და $BC$ გვერდების შუამართობები $AC$ გვერდზე გადაიკვეთებიან. იპოვეთ $\\angle A + \\angle C$.",
     options: ["$120^\\circ$", "$150^\\circ$", "$100^\\circ$", "$90^\\circ$", "$80^\\circ$", "შეუძლებელია განსაზღვრა"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -155,7 +307,15 @@ quizData = [
     question: "ტოლფერდა $ABC$ ($AB = AC$) სამკუთხედის $AC$ გვერდზე აღებულია $E$ წერტილი. $AE$ მონაკვეთზე აღებულია $D$ წერტილი ისე, რომ $ED = BE$. იპოვეთ $\\angle DBC$, თუ $\\angle CBE = \\angle DBA$.",
     options: ["$60^\\circ$", "$72^\\circ$", "$75^\\circ$", "$30^\\circ$", "$45^\\circ$", "$54^\\circ$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //21
@@ -163,7 +323,15 @@ quizData = [
     question: "$A$ არის იმ ორნიშნა რიცხვების რაოდენობა, რომელთაც $7$ გამყოფი აქვს, ხოლო $B$ იმ სამნიშნა რიცხვების რაოდენობა, რომელთაც $7$ გამყოფი აქვს. რისი ტოლია $A \\cdot B$ ნამრავლი?",
     options: ["$6$", "$7$", "$8$", "$3$", "$2$", "$1$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //22
@@ -171,7 +339,15 @@ quizData = [
     question: "ჩამოთვლილთაგან რისი ტოლია $a + b$, თუ $5x − 2 = 2a + 3b$ და $|2x − 1| = b$ განტოლებები ტოლფასია?",
     options: ["$0$", "$1$", "$\\dfrac{1}{2}$", "$\\dfrac{1}{4}$", "$2$", "$5$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 7,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //23
@@ -179,7 +355,15 @@ quizData = [
     question: "სკოლის ხუთი სხვადასხვა კლასის $30$-მა მოსწავლემ სკოლის ბიბლიოთეკისთვის $40$ წიგნი მოიტანა. ამასთან, თანაკლასელებმა ერთნაირი რაოდენობის, ხოლო სხვადასხვა კლასის მოსწავლეებმა სხვადასხვა რაოდენობის წიგნები მოიტანეს. რამდენმა მოსწავლემ მოიტანა თითო წიგნი?",
     options: ["$29$", "$20$", "$24$", "$23$", "$26$", "$25$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //24
@@ -187,7 +371,15 @@ quizData = [
     question: "$ABC$ ტოლგვერდა სამკუთხედის $BC$ გვერდზე აღებულია $M$ წერტილი. ხოლო $AC$ გვერდის გაგრძელებაზე $N$ წერტილი ($C$ წერტილი $A$ და $N$ წერტილებს შორისაა) ისე, რომ $AM = MN$. იპოვეთ $CN$ მონაკვეთის სიგრძის რამდენი პროცენტია $BM$ მონაკვეთის სიგრძე.",
     options: ["$100\\%$", "$50\\%$", "$75\\%$", "$80\\%$", "$150\\%$", "$125\\%$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles","percent"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //25
@@ -196,6 +388,14 @@ quizData = [
     question: "მოცემულ ნახაზზე $KB$ და $FC$ პარალელური წრფეებია, ხოლო $KPL$ და $FPN$ მართკუთხა სამკუთხედებია ($\\angle L = 90^\\circ$, $\\angle N = 90^\\circ$). იპოვეთ $\\angle NFC$, თუ $\\angle BKL = 47^\\circ$, $\\angle LPN = 122^\\circ$.",
     options: ["$8^\\circ$", "$13^\\circ$", "$15^\\circ$", "$11^\\circ$", "$9^\\circ$", "$17^\\circ$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle","parallel-lines"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

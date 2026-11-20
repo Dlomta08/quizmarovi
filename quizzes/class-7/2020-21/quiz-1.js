@@ -4,7 +4,15 @@ quizData = [
   question: "მანძილი $𝐴$ წერტილიდან $𝑎$ წრფემდე $2{,}3$-ის ტოლია, ხოლო მის პარალელურ $𝑏$ წრფემდე $3{,}8$ სმ-ის. ქვემოთ ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს მანძილი $𝑎$ წრფესა და $𝑏$ წრფეს შორის?",
   options: ["$2{,}6$ სმ", "$3{,}7$ სმ", "$4{,}9$ სმ", "$6{,}1$ სმ", "$7{,}4$ სმ", "$7{,}9$ სმ"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 2
@@ -12,7 +20,15 @@ quizData = [
   question: "იპოვეთ პროპორციის უცნობი წევრი: \\( \\dfrac{𝑥−1}{𝑥+2} = \\dfrac{2}{3} \\)",
   options: ["$4$", "$1$", "$3$", "$7$", "$8$", "$5$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["proportion"],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 3
@@ -20,7 +36,15 @@ quizData = [
   question: "გაამარტივეთ გამოსახულება: $−0{,}5𝑥^5 \\cdot (−2𝑥^3)^4$;",
   options: ["$4𝑥^7$", "$4𝑥^{12}$", "$8𝑥^{12}$", "$18𝑥^{17}$", "$-8𝑥^{17}$", "$−𝑥^{12}$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 4
@@ -28,7 +52,15 @@ quizData = [
   question: "გამოიანგარიშეთ: $1 + \\dfrac{1}{1+\\dfrac{2}{1+3}}$;",
   options: ["$1\\dfrac{1}{3}$", "$1\\dfrac{1}{4}$", "$1\\dfrac{2}{3}$", "$1\\dfrac{1}{2}$", "$1$", "$2$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 5
@@ -36,14 +68,30 @@ quizData = [
   question: "იპოვეთ გამოსახულების $\\dfrac{2{,}84^3}{1{,}42^3}$ მნიშვნელობა:",
   options: ["$90$", "$8$", "$10$", "$4$", "$2$", "$1$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["powers"],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
   // 6
 {
   question: "მოსაზღვრე კუთხეებიდან ერთის $10\\%$ უდრის მეორის $20\\%$-ს. იპოვეთ უმცირესი მათგანი.",
   options: ["$10^\\circ$", "$20^\\circ$", "$30^\\circ$", "$40^\\circ$", "$50^\\circ$", "$60^\\circ$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["angle-pairs","percent"],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 7
@@ -51,7 +99,15 @@ quizData = [
   question: "რამდენი ნატურალური გამყოფი აქვს $12^3 \\cdot 4^3-ს$?",
   options: ["$44$", "$48$", "$52$", "$72$", "$80$", "$150$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["powers"],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 8
@@ -59,7 +115,15 @@ quizData = [
   question: "$𝐴$ წერტილი $𝑎$ წრფეზე მდებარეობს, ხოლო $𝐵$ წერტილი - მის გარეთ. $𝐵$ წერტილიდან $𝑎$ წრფეზე დაშვებულია $𝐵𝐾$ მართობი, რომლის სიგრძე $5$ სმ-ია. იპოვეთ $𝐴𝐾$ სიგრძე, თუ $𝐴𝐵$ წრფესა $𝑎$ წრფეს შორის კუთხე $45^\\circ$-ია.",
   options: ["$4$ სმ", "$6$ სმ", "$2{,}5$ სმ", "$7$ სმ", "$8$ სმ", "$5$ სმ"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: [],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 9
@@ -67,7 +131,15 @@ quizData = [
   question: "$A$ სიმრავლე $18$ ელემენტიანია, $B$ სიმრავლე $12$ ელემენტიანი, $A \\cup B$ სიმრავლე კი $21$ ელემენტიანი. რამდენი ელემენტია $A \\setminus B$ სიმრავლეში?",
   options: ["$4$", "$9$", "$3$", "$7$", "$8$", "$5$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["sets"],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 10
@@ -75,14 +147,30 @@ quizData = [
   question: "იპოვეთ პირველი $20$ ნატურალური რიცხვის საშუალო არითმეტიკული:",
   options: ["$9$", "$9{,}5$", "$10$", "$10{,}5$", "$11$", "$11{,}51$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["statistics"],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 11
 {
   question: "$(2𝑥 − 1)^3=$",
   options: ["$2𝑥^3 − 12𝑥^2 − 6𝑥 − 1$", "$8𝑥^3 − 6𝑥^2 + 3𝑥 − 1$", "$8𝑥^3 − 12𝑥^2 − 6𝑥 − 1$", "$8𝑥^3 + 12𝑥^2 − 6𝑥 + 1$", "$8𝑥^3 − 12𝑥^2 + 6𝑥 − 1$", "$8𝑥^3 − 6𝑥^2 + 6𝑥 − 1$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 12
@@ -90,7 +178,15 @@ quizData = [
   question: "$ABC$ ტოლფერდა სამკუთხედში, რომლის წვეროსთან მდებარე ∠$𝐴𝐵𝐶=36°$-ია, გავლებულია $AK$ ბისექტრისა. იპოვეთ სამკუთხედის ფუძის სიგრძე, თუ $BK=12$ სმ.",
   options: ["$6$ სმ", "$8$ სმ", "$9$ სმ", "$10$ სმ", "$12$ სმ", "$15$ სმ"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["isosceles"],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 13
@@ -98,7 +194,15 @@ quizData = [
   question: "მართკუთხა სამკუთხედში მახვილი კუთხეების სხვაობა $20^\\circ$-ია. იპოვეთ კუთხე სამკუთხედის $A$ და $C$ წვეროებთან მდებარე გარე კუთხეების ბისექტრისებს შორის.",
   options: ["$10^\\circ$", "$20^\\circ$", "$30^\\circ$", "$40^\\circ$", "$50^\\circ$", "$60^\\circ$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["right-triangle"],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 14
@@ -106,56 +210,120 @@ quizData = [
   question: "$ABC$ სამკუთხედში ∠$𝐴𝐵𝐶=28^\\circ$. იპოვეთ კუთხე სამკუთხედის $𝐴$ და $𝐶$ წვეროებთან მდებარე გარე კუთხეების ბისექტრისებს შორის.",
   options: ["$104^\\circ$", "$48^\\circ$", "$76^\\circ$", "$96^\\circ$", "$56^\\circ$", "$82^\\circ$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["cevians"],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
   // 15
   {
     question: "სამკუთხედის გვერდებია $7{,}9$ სმ; $23{,}8$ სმ და $𝑛$ სმ. რამდენი განსხვავებული მთელი მნიშვნელობის მიღება შეუძლია $n$-ს?",
     options: ["$13$", "$14$", "$15$", "$16$", "$17$", "$18$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 16
   {
     question: "მართკუთხა სამკუთხედის ორი გვერდის სიგრძეა $2$ სმ და $2$ სმ. ქვემოთ ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს სამკუთხედის გარე კუთხე?",
     options: ["$10^\\circ$", "$40^\\circ$", "$60^\\circ$", "$80^\\circ$", "$135^\\circ$", "$150^\\circ$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 17
   {
     question: "ცნობილია, რომ $9𝑥^2 + 𝑏𝑥 + 16 = (3𝑥 − 𝑐)^2$ ტოლობა სამართლიანია $x$ ცვლადის ნებისმიერი მნიშვნელობისთვის. იპოვეთ $|𝑏 + 𝑐|$.",
     options: ["$10$", "$14$", "$16$", "$20$", "$24$", "$28$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["special-products"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 18
   {
     question: "გარდაქმენით $(1 − 𝑥) \\cdot (1 + 𝑥 + 𝑥^2 + 𝑥^3 + 𝑥^4)$ ნამრავლი მრავალწევრად:",
   options: ["$1 − 𝑥^5$", "$1 − 𝑥 + 𝑥^3 − 𝑥^5$", "$1 − 2𝑥^3 − 𝑥^5$", "$1$", "$1 − 2𝑥^2 − 𝑥^5$", "$1 + 𝑥 + 𝑥^3 + 𝑥^5$"],
   correct: 0,
-  tags: []
+  tags: [],
+    area: "algebra",
+    topics: ["polynomials"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 19
   {
     question: "იპოვეთ: $𝑥(12 − 𝑥) − 5 = 4𝑥 − 𝑥(10 − (4 − 𝑥))$ განტოლების ამონახსნი:",
   options: ["$\\dfrac{5}{14}$", "$\\dfrac{2}{9}$", "$\\dfrac{3}{16}$", "$\\dfrac{4}{11}$", "$\\dfrac{7}{8}$", "$\\dfrac{3}{7}$"],
   correct: 0,
-  tags: []
+  tags: [],
+    area: "algebra",
+    topics: ["linear-eq"],
+    grade: 7,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 20
 {
   question: "იპოვეთ $5^{24} − 15^2 − (5^3 − 2)(5^3 + 2)(5^6 + 4)(5^{12} + 16)$ გამოსახულების მნიშვნელობა:",
   options: ["$4$", "$7$", "$10$", "$11$", "$24$", "$31$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["powers"],
+  grade: 7,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 21
 {
   question: "იპოვეთ $9𝑥^2 + 24𝑥 − 1$ გამოსახულების უმცირესი მნიშვნელობა (შეგიძლიათ გამოიყენოთ კვადრატის გამოყოფის მეთოდი):",
   options: ["$0$", "$-1$", "$-4$", "$-15$", "$-17$", "$-19$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["rhombus-rect-sq"],
+  grade: 7,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 22
@@ -163,7 +331,15 @@ quizData = [
   question: "მართკუთხა სამკუთხედში, რომლის ერთ-ერთი მახვილი კუთხე $30^\\circ$-ის ტოლია, ჰიპოტენუზისადმი გავლებული მედიანის სიგრძე უდრის $8$ სმ-ს. იპოვეთ სამკუთხედის მცირე კათეტი.",
   options: ["$4$ სმ", "$6$ სმ", "$3$ სმ", "$7$ სმ", "$8$ სმ", "$5$ სმ"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["right-triangle"],
+  grade: 7,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 23
@@ -171,7 +347,15 @@ quizData = [
   question: "სამკუთხედის ორი კუთხის სხვაობაა $24^\\circ$, ხოლო მესამე წვეროსთან მდებარე გარე კუთხე $124^\\circ$. იპოვეთ სამკუთხედის საშუალო ზომის კუთხის სიდიდე.",
   options: ["$48^\\circ$", "$50^\\circ$", "$56^\\circ$", "$66^\\circ$", "$74^\\circ$", "$82^\\circ$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["angle-sum"],
+  grade: 7,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 24
@@ -180,7 +364,15 @@ quizData = [
   question: "$𝑎$ და $𝑏$ პარალელური წრფეები გადაკვეთილია $𝑐$ წრფით. ნახაზის მიხედვით იპოვეთ $𝑥$ კუთხის სიდიდე, თუ $𝛼 + 𝛽 = 276^\\circ$.",
   options: ["$42^\\circ$", "$48^\\circ$", "$52^\\circ$", "$66^\\circ$", "$76^\\circ$", "$82^\\circ$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["parallel-lines"],
+  grade: 7,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 25
@@ -188,7 +380,15 @@ quizData = [
   question: "რამდენი განსხვავებული ამონახსნი გააჩნია $|𝑥 − 1{,}8| + |𝑥 − 5{,}2| = 3{,}4$ განტოლებას?",
   options: ["ამონახსნი არ გააჩნია", "ერთი", "ორი", "სამი", "ოთხი", "უამრავი"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["abs-eq"],
+  grade: 7,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];
 

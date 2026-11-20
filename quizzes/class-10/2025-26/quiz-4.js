@@ -5,7 +5,15 @@ quizData = [
     options: ["$x \\in \\varnothing$", "$x = -2$", "$x = 2$", "$x = 0$", "$x = 1$", "$x = -1$"],
     correct: 5,
     tags: [],
-    solution: "ორივე შესაკრები არაუარყოფითია, ამიტომ ჯამი $0$-ია მხოლოდ მაშინ, როცა ორივე $0$-ია: $x^2 + x = 0$ ($x = 0$ ან $x = -1$) და $x^2 - 1 = 0$ ($x = \\pm 1$). საერთოა $x = -1$.<br><br><strong>პასუხი:</strong> ვ) $x = -1$."
+    solution: "ორივე შესაკრები არაუარყოფითია, ამიტომ ჯამი $0$-ია მხოლოდ მაშინ, როცა ორივე $0$-ია: $x^2 + x = 0$ ($x = 0$ ან $x = -1$) და $x^2 - 1 = 0$ ($x = \\pm 1$). საერთოა $x = -1$.<br><br><strong>პასუხი:</strong> ვ) $x = -1$.",
+    area: "algebra",
+    topics: ["irrational-eq"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -14,7 +22,15 @@ quizData = [
     options: ["$x \\in \\varnothing$", "$x \\in (-\\infty;\\ +\\infty)$", "$x \\in [0;\\ +\\infty)$", "$x \\in (0;\\ +\\infty)$", "$x \\in [-1;\\ 0]$", "$x \\in (-1;\\ 0)$"],
     correct: 2,
     tags: [],
-    solution: "განსაზღვრის არე: $x \\ge 0$. ამ არეზე $x < x + 1$ ყოველთვის სრულდება, ხოლო $\\sqrt{t}$ ზრდადია, ამიტომ უტოლობა სრულდება ყველა $x \\ge 0$-ისთვის.<br><br><strong>პასუხი:</strong> გ) $x \\in [0;\\ +\\infty)$."
+    solution: "განსაზღვრის არე: $x \\ge 0$. ამ არეზე $x < x + 1$ ყოველთვის სრულდება, ხოლო $\\sqrt{t}$ ზრდადია, ამიტომ უტოლობა სრულდება ყველა $x \\ge 0$-ისთვის.<br><br><strong>პასუხი:</strong> გ) $x \\in [0;\\ +\\infty)$.",
+    area: "algebra",
+    topics: ["irrational-eq"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -23,7 +39,15 @@ quizData = [
     options: ["$-\\dfrac{1}{2026}$", "$-\\dfrac{1}{1013}$", "$-2026$", "$-1013$", "$-1$", "$-4052$"],
     correct: 0,
     tags: [],
-    solution: "$\\sqrt{-x}$ მოითხოვს $x \\le 0$, ხოლო მნიშვნელი — $x \\ne 0$, ამიტომ $x < 0$. მაშინ $(\\sqrt{-x})^2 = -x$, $\\sqrt{x^2} = |x| = -x$.<br><br>$\\dfrac{-2x}{2x^2} = -\\dfrac{1}{x} = 2026$, $x = -\\dfrac{1}{2026}$.<br><br><strong>პასუხი:</strong> ა) $-\\dfrac{1}{2026}$."
+    solution: "$\\sqrt{-x}$ მოითხოვს $x \\le 0$, ხოლო მნიშვნელი — $x \\ne 0$, ამიტომ $x < 0$. მაშინ $(\\sqrt{-x})^2 = -x$, $\\sqrt{x^2} = |x| = -x$.<br><br>$\\dfrac{-2x}{2x^2} = -\\dfrac{1}{x} = 2026$, $x = -\\dfrac{1}{2026}$.<br><br><strong>პასუხი:</strong> ა) $-\\dfrac{1}{2026}$.",
+    area: "algebra",
+    topics: ["square-roots","rational-eq"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -32,7 +56,15 @@ quizData = [
     options: ["$1$", "$-1$", "$-2$", "$2$", "$0$", "$3$"],
     correct: 0,
     tags: [],
-    solution: "$\\vec{a}\\cdot\\vec{b} = x + x(x - 2) - 2 = x^2 - x - 2 = 0$, $x = 2$ ან $x = -1$. ჯამი: $1$.<br><br><strong>პასუხი:</strong> ა) $1$."
+    solution: "$\\vec{a}\\cdot\\vec{b} = x + x(x - 2) - 2 = x^2 - x - 2 = 0$, $x = 2$ ან $x = -1$. ჯამი: $1$.<br><br><strong>პასუხი:</strong> ა) $1$.",
+    area: "geometry",
+    topics: ["dot-product"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -41,7 +73,15 @@ quizData = [
     options: ["$1$", "$-\\dfrac{1}{4}$", "$-\\dfrac{4}{5}$", "$\\dfrac{1}{5}$", "$0$", "$\\dfrac{4}{5}$"],
     correct: 2,
     tags: [],
-    solution: "$\\vec{a}\\cdot\\vec{b} = 2 - 18 = -16$, $|\\vec{a}| = \\sqrt{10}$, $|\\vec{b}| = \\sqrt{40}$, $|\\vec{a}||\\vec{b}| = 20$.<br><br>$\\cos\\varphi = -\\dfrac{16}{20} = -\\dfrac{4}{5}$.<br><br><strong>პასუხი:</strong> გ) $-\\dfrac{4}{5}$."
+    solution: "$\\vec{a}\\cdot\\vec{b} = 2 - 18 = -16$, $|\\vec{a}| = \\sqrt{10}$, $|\\vec{b}| = \\sqrt{40}$, $|\\vec{a}||\\vec{b}| = 20$.<br><br>$\\cos\\varphi = -\\dfrac{16}{20} = -\\dfrac{4}{5}$.<br><br><strong>პასუხი:</strong> გ) $-\\dfrac{4}{5}$.",
+    area: "geometry",
+    topics: ["dot-product"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -50,7 +90,15 @@ quizData = [
     options: ["$120$", "$126$", "$100$", "$128$", "$148$", "$146$"],
     correct: 1,
     tags: [],
-    solution: "$P_3 = 3! = 6$, $A_4^2 = 4 \\cdot 3 = 12$, $C_5^3 = 10$. $6 + 12 \\cdot 10 = 126$.<br><br><strong>პასუხი:</strong> ბ) $126$."
+    solution: "$P_3 = 3! = 6$, $A_4^2 = 4 \\cdot 3 = 12$, $C_5^3 = 10$. $6 + 12 \\cdot 10 = 126$.<br><br><strong>პასუხი:</strong> ბ) $126$.",
+    area: "prob-stats",
+    topics: ["combinatorics"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -59,7 +107,15 @@ quizData = [
     options: ["$x \\in [2;\\ +\\infty)$", "$x \\in [2;\\ +\\infty) \\cup \\{-1\\}$", "$x \\in [2;\\ +\\infty) \\cup \\{1\\}$", "$x \\in [-1;\\ +\\infty)$", "$x \\in \\varnothing$", "$x \\in [-2;\\ +\\infty)$"],
     correct: 1,
     tags: [],
-    solution: "განსაზღვრის არე: $x^2 - x - 2 = (x - 2)(x + 1) \\ge 0$, ე.ი. $x \\le -1$ ან $x \\ge 2$.<br><br>$x = -1$ და $x = 2$-ზე გამოსახულება $0$-ია ✓. $x > 2$-ზე $x - 1 > 0$ ✓. $x < -1$-ზე $x - 1 < 0$, ფესვი დადებითია — ნამრავლი უარყოფითია ✗.<br><br><strong>პასუხი:</strong> ბ) $x \\in [2;\\ +\\infty) \\cup \\{-1\\}$."
+    solution: "განსაზღვრის არე: $x^2 - x - 2 = (x - 2)(x + 1) \\ge 0$, ე.ი. $x \\le -1$ ან $x \\ge 2$.<br><br>$x = -1$ და $x = 2$-ზე გამოსახულება $0$-ია ✓. $x > 2$-ზე $x - 1 > 0$ ✓. $x < -1$-ზე $x - 1 < 0$, ფესვი დადებითია — ნამრავლი უარყოფითია ✗.<br><br><strong>პასუხი:</strong> ბ) $x \\in [2;\\ +\\infty) \\cup \\{-1\\}$.",
+    area: "algebra",
+    topics: ["irrational-eq","interval-method"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -68,7 +124,15 @@ quizData = [
     options: ["$0{,}2^2 \\cdot 0{,}8^3$", "$A_5^2 \\cdot 0{,}2^2 \\cdot 0{,}8^3$", "$C_5^2 \\cdot 0{,}2^3 \\cdot 0{,}8^2$", "$C_5^2 \\cdot 0{,}2^2 \\cdot 0{,}8^3$", "$1$", "$\\dfrac{2}{5}$"],
     correct: 3,
     tags: [],
-    solution: "აცილების ალბათობა $0{,}2$, მოხვედრის $0{,}8$. ბერნულის ფორმულით ზუსტად $2$ აცილება $5$ გასროლიდან: $C_5^2 \\cdot 0{,}2^2 \\cdot 0{,}8^3$.<br><br><strong>პასუხი:</strong> დ) $C_5^2 \\cdot 0{,}2^2 \\cdot 0{,}8^3$."
+    solution: "აცილების ალბათობა $0{,}2$, მოხვედრის $0{,}8$. ბერნულის ფორმულით ზუსტად $2$ აცილება $5$ გასროლიდან: $C_5^2 \\cdot 0{,}2^2 \\cdot 0{,}8^3$.<br><br><strong>პასუხი:</strong> დ) $C_5^2 \\cdot 0{,}2^2 \\cdot 0{,}8^3$.",
+    area: "prob-stats",
+    topics: ["probability","combinatorics"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -77,7 +141,15 @@ quizData = [
     options: ["$5$", "$4$", "$2$", "$1$", "$3$", "არცერთი"],
     correct: 3,
     tags: [],
-    solution: "განსაზღვრის არე $|x| \\ge 4$, $x \\ne 4$. მარცხენა მხარე არაუარყოფითია, ამიტომ მარჯვენა დადებითი უნდა იყოს: $x > 4$.<br><br>$x > 4$-ზე მარცხენა მხარე ზრდადია, მარჯვენა კლებადი — მაქსიმუმ ერთი ფესვი. $x = 5$: $2 \\cdot 3 + 4 = 10 = \\dfrac{10}{1}$ ✓.<br><br><strong>პასუხი:</strong> დ) $1$."
+    solution: "განსაზღვრის არე $|x| \\ge 4$, $x \\ne 4$. მარცხენა მხარე არაუარყოფითია, ამიტომ მარჯვენა დადებითი უნდა იყოს: $x > 4$.<br><br>$x > 4$-ზე მარცხენა მხარე ზრდადია, მარჯვენა კლებადი — მაქსიმუმ ერთი ფესვი. $x = 5$: $2 \\cdot 3 + 4 = 10 = \\dfrac{10}{1}$ ✓.<br><br><strong>პასუხი:</strong> დ) $1$.",
+    area: "algebra",
+    topics: ["irrational-eq"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["estimation"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -86,7 +158,15 @@ quizData = [
     options: ["$C_{25}^5 - C_{18}^5$", "$C_{18}^5$", "$C_{25}^5$", "$A_{18}^5$", "$A_{25}^5 - A_{18}^5$", "$A_{25}^5$"],
     correct: 0,
     tags: [],
-    solution: "ყველა ჯგუფი: $C_{25}^5$; ჯგუფები გოგოს გარეშე (მხოლოდ ვაჟები): $C_{18}^5$. ერთი გოგო მაინც: $C_{25}^5 - C_{18}^5$.<br><br><strong>პასუხი:</strong> ა) $C_{25}^5 - C_{18}^5$."
+    solution: "ყველა ჯგუფი: $C_{25}^5$; ჯგუფები გოგოს გარეშე (მხოლოდ ვაჟები): $C_{18}^5$. ერთი გოგო მაინც: $C_{25}^5 - C_{18}^5$.<br><br><strong>პასუხი:</strong> ა) $C_{25}^5 - C_{18}^5$.",
+    area: "prob-stats",
+    topics: ["combinatorics"],
+    grade: 10,
+    difficulty: 2,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 11
@@ -95,7 +175,15 @@ quizData = [
     options: ["$5$", "$3$", "$4$", "$2$", "$1$", "$6$"],
     correct: 1,
     tags: [],
-    solution: "$90^\\circ$-ით შემობრუნება საათის ისრის საწინააღმდეგოდ: $(x;\\ y) \\to (-y;\\ x)$, $B(-3;\\ 2)$. გადატანა: $C = (-3 + 3;\\ 2 + 1) = (0;\\ 3)$.<br><br>ჯამი: $3$.<br><br><strong>პასუხი:</strong> ბ) $3$."
+    solution: "$90^\\circ$-ით შემობრუნება საათის ისრის საწინააღმდეგოდ: $(x;\\ y) \\to (-y;\\ x)$, $B(-3;\\ 2)$. გადატანა: $C = (-3 + 3;\\ 2 + 1) = (0;\\ 3)$.<br><br>ჯამი: $3$.<br><br><strong>პასუხი:</strong> ბ) $3$.",
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12
@@ -104,7 +192,15 @@ quizData = [
     options: ["$n \\in \\left(-\\dfrac{9}{5};\\ 2\\right)$", "$n \\in \\left(-\\dfrac{1}{5};\\ 2\\right)$", "$n \\in \\left(\\dfrac{1}{5};\\ 2\\right)$", "$n \\in \\left(\\dfrac{8}{5};\\ 2\\right)$", "$n \\in \\left(-\\dfrac{18}{5};\\ 2\\right)$", "$n \\in \\left(2;\\ \\dfrac{18}{5}\\right)$"],
     correct: 4,
     tags: [],
-    solution: "კუთხე ბლაგვია, თუ $\\vec{a}\\cdot\\vec{b} < 0$ და ვექტორები საპირისპიროდ კოლინეარული არ არის.<br><br>$\\vec{a}\\cdot\\vec{b} = -3(6 - n) + n(5 + 5n) - 18 = 5n^2 + 8n - 36 < 0$; ფესვები $n = 2$ და $n = -\\dfrac{18}{5}$, ამიტომ $n \\in \\left(-\\dfrac{18}{5};\\ 2\\right)$.<br><br>კოლინეარობისთვის საჭიროა $\\vec{a} = \\lambda\\vec{b}$, $\\lambda = -\\dfrac{2}{9}$, საიდანაც $n = \\dfrac{16}{3}$ — შუალედს არ ეკუთვნის.<br><br><strong>პასუხი:</strong> ე) $n \\in \\left(-\\dfrac{18}{5};\\ 2\\right)$."
+    solution: "კუთხე ბლაგვია, თუ $\\vec{a}\\cdot\\vec{b} < 0$ და ვექტორები საპირისპიროდ კოლინეარული არ არის.<br><br>$\\vec{a}\\cdot\\vec{b} = -3(6 - n) + n(5 + 5n) - 18 = 5n^2 + 8n - 36 < 0$; ფესვები $n = 2$ და $n = -\\dfrac{18}{5}$, ამიტომ $n \\in \\left(-\\dfrac{18}{5};\\ 2\\right)$.<br><br>კოლინეარობისთვის საჭიროა $\\vec{a} = \\lambda\\vec{b}$, $\\lambda = -\\dfrac{2}{9}$, საიდანაც $n = \\dfrac{16}{3}$ — შუალედს არ ეკუთვნის.<br><br><strong>პასუხი:</strong> ე) $n \\in \\left(-\\dfrac{18}{5};\\ 2\\right)$.",
+    area: "geometry",
+    topics: ["dot-product"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["parameter","vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -113,7 +209,15 @@ quizData = [
     options: ["$1$", "$3$", "$10$", "$9$", "$15$", "$21$"],
     correct: 2,
     tags: [],
-    solution: "განსაზღვრის არე $x \\ge 4$. მარცხენა მხარე ზრდადია და $x = 4$-ზე უდრის $0 + 2 + 2\\sqrt{2} \\approx 4{,}83$, შემდეგ უსასრულოდ იზრდება. ამონახსნი არ არის, როცა $a < 2 + 2\\sqrt{2}$.<br><br>დადებითი მთელი $a$: $1, 2, 3, 4$, ჯამი $10$.<br><br><strong>პასუხი:</strong> გ) $10$."
+    solution: "განსაზღვრის არე $x \\ge 4$. მარცხენა მხარე ზრდადია და $x = 4$-ზე უდრის $0 + 2 + 2\\sqrt{2} \\approx 4{,}83$, შემდეგ უსასრულოდ იზრდება. ამონახსნი არ არის, როცა $a < 2 + 2\\sqrt{2}$.<br><br>დადებითი მთელი $a$: $1, 2, 3, 4$, ჯამი $10$.<br><br><strong>პასუხი:</strong> გ) $10$.",
+    area: "algebra",
+    topics: ["irrational-eq"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["parameter","estimation"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -122,7 +226,15 @@ quizData = [
     options: ["$1$", "$3$", "$10$", "$9$", "$15$", "$21$"],
     correct: 1,
     tags: [],
-    solution: "$S = \\dfrac{1}{2}|x_1y_2 - x_2y_1| = \\dfrac{1}{2}|1 \\cdot (-2) - 2 \\cdot (-4)| = \\dfrac{1}{2} \\cdot 6 = 3$.<br><br><strong>პასუხი:</strong> ბ) $3$."
+    solution: "$S = \\dfrac{1}{2}|x_1y_2 - x_2y_1| = \\dfrac{1}{2}|1 \\cdot (-2) - 2 \\cdot (-4)| = \\dfrac{1}{2} \\cdot 6 = 3$.<br><br><strong>პასუხი:</strong> ბ) $3$.",
+    area: "geometry",
+    topics: ["vectors","area-formulas"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15
@@ -131,7 +243,15 @@ quizData = [
     options: ["$5$", "$3$", "$4$", "$2$", "$1$", "$6$"],
     correct: 0,
     tags: [],
-    solution: "$P_2 + P_3 = 2 + 6 = 8$. $C_n^2 + A_n^1 = \\dfrac{n(n - 1)}{2} + n = \\dfrac{n(n + 1)}{2} \\le 8$.<br><br>$C_n^2$ განსაზღვრულია $n \\ge 2$-ისთვის: $n = 2$ ($3 \\le 8$) ✓, $n = 3$ ($6 \\le 8$) ✓, $n = 4$ ($10$) ✗. ჯამი: $2 + 3 = 5$.<br><br><strong>პასუხი:</strong> ა) $5$."
+    solution: "$P_2 + P_3 = 2 + 6 = 8$. $C_n^2 + A_n^1 = \\dfrac{n(n - 1)}{2} + n = \\dfrac{n(n + 1)}{2} \\le 8$.<br><br>$C_n^2$ განსაზღვრულია $n \\ge 2$-ისთვის: $n = 2$ ($3 \\le 8$) ✓, $n = 3$ ($6 \\le 8$) ✓, $n = 4$ ($10$) ✗. ჯამი: $2 + 3 = 5$.<br><br><strong>პასუხი:</strong> ა) $5$.",
+    area: "prob-stats",
+    topics: ["combinatorics"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 16
@@ -140,7 +260,15 @@ quizData = [
     options: ["$\\dfrac{3}{10}$", "$\\dfrac{3}{5}$", "$\\dfrac{C_{10}^6}{10^6}$", "$1 - \\dfrac{C_4^3}{C_{10}^3}$", "$\\dfrac{C_4^3}{C_{10}^3}$", "$\\dfrac{2}{3}$"],
     correct: 3,
     tags: [],
-    solution: "საწინააღმდეგო ხდომილება: სამივე საკითხი უცნობია; უცნობია $4$ საკითხი, ალბათობა $\\dfrac{C_4^3}{C_{10}^3}$.<br><br>ერთი მაინც ცნობილი: $1 - \\dfrac{C_4^3}{C_{10}^3}$.<br><br><strong>პასუხი:</strong> დ) $1 - \\dfrac{C_4^3}{C_{10}^3}$."
+    solution: "საწინააღმდეგო ხდომილება: სამივე საკითხი უცნობია; უცნობია $4$ საკითხი, ალბათობა $\\dfrac{C_4^3}{C_{10}^3}$.<br><br>ერთი მაინც ცნობილი: $1 - \\dfrac{C_4^3}{C_{10}^3}$.<br><br><strong>პასუხი:</strong> დ) $1 - \\dfrac{C_4^3}{C_{10}^3}$.",
+    area: "prob-stats",
+    topics: ["probability","combinatorics"],
+    grade: 10,
+    difficulty: 2,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -149,7 +277,15 @@ quizData = [
     options: ["$1$", "$\\dfrac{\\sqrt{3}}{2}$", "$0$", "$\\dfrac{\\sqrt{2}}{2}$", "$\\dfrac{\\sqrt{3}}{3}$", "$\\dfrac{2}{3}$"],
     correct: 2,
     tags: [],
-    solution: "$C(0;\\ 0)$, $A(1;\\ 0)$, $B(0;\\ \\sqrt{2})$; $K\\left(0;\\ \\dfrac{\\sqrt{2}}{2}\\right)$ — $BC$-ს შუაწერტილი, $M\\left(\\dfrac{1}{2};\\ \\dfrac{\\sqrt{2}}{2}\\right)$ — $AB$-ს შუაწერტილი.<br><br>$\\overrightarrow{AK} = \\left(-1;\\ \\dfrac{\\sqrt{2}}{2}\\right)$, $\\overrightarrow{CM} = \\left(\\dfrac{1}{2};\\ \\dfrac{\\sqrt{2}}{2}\\right)$: $-\\dfrac{1}{2} + \\dfrac{1}{2} = 0$.<br><br><strong>პასუხი:</strong> გ) $0$."
+    solution: "$C(0;\\ 0)$, $A(1;\\ 0)$, $B(0;\\ \\sqrt{2})$; $K\\left(0;\\ \\dfrac{\\sqrt{2}}{2}\\right)$ — $BC$-ს შუაწერტილი, $M\\left(\\dfrac{1}{2};\\ \\dfrac{\\sqrt{2}}{2}\\right)$ — $AB$-ს შუაწერტილი.<br><br>$\\overrightarrow{AK} = \\left(-1;\\ \\dfrac{\\sqrt{2}}{2}\\right)$, $\\overrightarrow{CM} = \\left(\\dfrac{1}{2};\\ \\dfrac{\\sqrt{2}}{2}\\right)$: $-\\dfrac{1}{2} + \\dfrac{1}{2} = 0$.<br><br><strong>პასუხი:</strong> გ) $0$.",
+    area: "geometry",
+    topics: ["dot-product"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["coordinates","vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -158,7 +294,15 @@ quizData = [
     options: ["$1$", "$3$", "$10$", "$9$", "$15$", "$21$"],
     correct: 3,
     tags: [],
-    solution: "თავიდან მესამე და ბოლოდან მესამე კოეფიციენტები ტოლია: $2C_n^2 = 9900$, $\\dfrac{n(n - 1)}{2} = 4950$, $n = 100$.<br><br>$T_k = C_{100}^k \\cdot 3^{\\frac{100 - k}{4}} \\cdot 4^{\\frac{k}{3}}$ რაციონალურია, როცა $100 - k$ იყოფა $4$-ზე და $k$ — $3$-ზე, ე.ი. $k$ იყოფა $12$-ზე: $k = 0, 12, \\ldots, 96$ — $9$ წევრი.<br><br><strong>პასუხი:</strong> დ) $9$."
+    solution: "თავიდან მესამე და ბოლოდან მესამე კოეფიციენტები ტოლია: $2C_n^2 = 9900$, $\\dfrac{n(n - 1)}{2} = 4950$, $n = 100$.<br><br>$T_k = C_{100}^k \\cdot 3^{\\frac{100 - k}{4}} \\cdot 4^{\\frac{k}{3}}$ რაციონალურია, როცა $100 - k$ იყოფა $4$-ზე და $k$ — $3$-ზე, ე.ი. $k$ იყოფა $12$-ზე: $k = 0, 12, \\ldots, 96$ — $9$ წევრი.<br><br><strong>პასუხი:</strong> დ) $9$.",
+    area: "prob-stats",
+    topics: ["binomial"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -167,7 +311,15 @@ quizData = [
     options: ["$x \\in [-2;\\ -1] \\cup \\{3\\}$", "$x \\in [1;\\ 2] \\cup \\{3\\}$", "$x \\in [1;\\ 3] \\cup \\{-3\\}$", "$x \\in [-3;\\ -1] \\cup \\{3\\}$", "$x \\in [-\\infty;\\ -1]$", "$x \\in [-\\infty;\\ -3]$"],
     correct: 0,
     tags: [],
-    solution: "განსაზღვრის არე: $6 + x - x^2 \\ge 0$, $x \\in [-2;\\ 3]$. $x = -2$ და $x = 3$-ზე ორივე მხარე $0$-ია ✓.<br><br>$x \\in (-2;\\ 3)$-ზე ფესვი დადებითია, გავყოთ: $\\dfrac{1}{2x + 5} \\ge \\dfrac{1}{x + 4}$; ორივე მნიშვნელი დადებითია, ამიტომ $x + 4 \\ge 2x + 5$, $x \\le -1$.<br><br>$[-2;\\ -1] \\cup \\{3\\}$.<br><br><strong>პასუხი:</strong> ა) $x \\in [-2;\\ -1] \\cup \\{3\\}$."
+    solution: "განსაზღვრის არე: $6 + x - x^2 \\ge 0$, $x \\in [-2;\\ 3]$. $x = -2$ და $x = 3$-ზე ორივე მხარე $0$-ია ✓.<br><br>$x \\in (-2;\\ 3)$-ზე ფესვი დადებითია, გავყოთ: $\\dfrac{1}{2x + 5} \\ge \\dfrac{1}{x + 4}$; ორივე მნიშვნელი დადებითია, ამიტომ $x + 4 \\ge 2x + 5$, $x \\le -1$.<br><br>$[-2;\\ -1] \\cup \\{3\\}$.<br><br><strong>პასუხი:</strong> ა) $x \\in [-2;\\ -1] \\cup \\{3\\}$.",
+    area: "algebra",
+    topics: ["irrational-eq","interval-method"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -176,7 +328,15 @@ quizData = [
     options: ["$\\dfrac{4}{3}$; $\\left(\\dfrac{7}{5};\\ \\dfrac{7}{15}\\right)$", "$-\\dfrac{4}{3}$; $\\left(\\dfrac{5}{7};\\ \\dfrac{15}{7}\\right)$", "$-\\dfrac{4}{3}$; $\\left(\\dfrac{15}{7};\\ \\dfrac{5}{7}\\right)$", "$-\\dfrac{4}{3}$; $\\left(\\dfrac{7}{5};\\ \\dfrac{7}{15}\\right)$", "$\\dfrac{4}{3}$; $\\left(\\dfrac{10}{7};\\ \\dfrac{15}{7}\\right)$", "$-\\dfrac{4}{3}$; $\\left(\\dfrac{15}{7};\\ \\dfrac{10}{7}\\right)$"],
     correct: 1,
     tags: [],
-    solution: "$\\overrightarrow{AB} = (3;\\ 4)$, $\\overrightarrow{A_1B_1} = \\left(-4;\\ -\\dfrac{16}{3}\\right) = -\\dfrac{4}{3}(3;\\ 4)$, ამიტომ $k = -\\dfrac{4}{3}$.<br><br>ცენტრი $O$: $A_1 - O = k(A - O)$, $O = \\dfrac{A_1 - kA}{1 - k} = \\dfrac{(-1;\\ 1) + \\frac{4}{3}(2;\\ 3)}{7/3} = \\left(\\dfrac{5}{7};\\ \\dfrac{15}{7}\\right)$.<br><br><strong>პასუხი:</strong> ბ) $-\\dfrac{4}{3}$; $\\left(\\dfrac{5}{7};\\ \\dfrac{15}{7}\\right)$."
+    solution: "$\\overrightarrow{AB} = (3;\\ 4)$, $\\overrightarrow{A_1B_1} = \\left(-4;\\ -\\dfrac{16}{3}\\right) = -\\dfrac{4}{3}(3;\\ 4)$, ამიტომ $k = -\\dfrac{4}{3}$.<br><br>ცენტრი $O$: $A_1 - O = k(A - O)$, $O = \\dfrac{A_1 - kA}{1 - k} = \\dfrac{(-1;\\ 1) + \\frac{4}{3}(2;\\ 3)}{7/3} = \\left(\\dfrac{5}{7};\\ \\dfrac{15}{7}\\right)$.<br><br><strong>პასუხი:</strong> ბ) $-\\dfrac{4}{3}$; $\\left(\\dfrac{5}{7};\\ \\dfrac{15}{7}\\right)$.",
+    area: "geometry",
+    topics: ["vectors","similar-figures"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 21
@@ -185,7 +345,15 @@ quizData = [
     options: ["$2$", "$1$", "$6$", "$3$", "$5$", "$4$"],
     correct: 5,
     tags: [],
-    solution: "ერთ-ერთი პირობაა $x + y \\le 4$, ამიტომ $x + y$ $4$-ს ვერ გადააჭარბებს. $x = y = 2$ ყველა პირობას აკმაყოფილებს ($-2 + 2 = 0 \\le 1$, $8 + 4 = 12 \\le 12$), ე.ი. $4$ მიიღწევა.<br><br><strong>პასუხი:</strong> ვ) $4$."
+    solution: "ერთ-ერთი პირობაა $x + y \\le 4$, ამიტომ $x + y$ $4$-ს ვერ გადააჭარბებს. $x = y = 2$ ყველა პირობას აკმაყოფილებს ($-2 + 2 = 0 \\le 1$, $8 + 4 = 12 \\le 12$), ე.ი. $4$ მიიღწევა.<br><br><strong>პასუხი:</strong> ვ) $4$.",
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["graphical"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -194,7 +362,15 @@ quizData = [
     options: ["$\\dfrac{2}{5}$", "$\\dfrac{\\sqrt{3}}{5}$", "$\\dfrac{\\sqrt{15}}{5}$", "$\\dfrac{\\sqrt{10}}{5}$", "$\\dfrac{1}{5}$", "$\\dfrac{\\sqrt{2}}{5}$"],
     correct: 3,
     tags: [],
-    solution: "$SA$, $SB$, $SC$ ურთიერთმართობული და ტოლია (ავიღოთ $2$): $S(0;0;0)$, $A(2;0;0)$, $B(0;2;0)$, $C(0;0;2)$; $D(1;\\ 0;\\ 1)$, $E(0;\\ 1;\\ 0)$.<br><br>$\\overrightarrow{SD} = (1;\\ 0;\\ 1)$, $\\overrightarrow{EC} = (0;\\ -1;\\ 2)$: $\\cos\\varphi = \\dfrac{2}{\\sqrt{2} \\cdot \\sqrt{5}} = \\dfrac{\\sqrt{10}}{5}$.<br><br><strong>პასუხი:</strong> დ) $\\dfrac{\\sqrt{10}}{5}$."
+    solution: "$SA$, $SB$, $SC$ ურთიერთმართობული და ტოლია (ავიღოთ $2$): $S(0;0;0)$, $A(2;0;0)$, $B(0;2;0)$, $C(0;0;2)$; $D(1;\\ 0;\\ 1)$, $E(0;\\ 1;\\ 0)$.<br><br>$\\overrightarrow{SD} = (1;\\ 0;\\ 1)$, $\\overrightarrow{EC} = (0;\\ -1;\\ 2)$: $\\cos\\varphi = \\dfrac{2}{\\sqrt{2} \\cdot \\sqrt{5}} = \\dfrac{\\sqrt{10}}{5}$.<br><br><strong>პასუხი:</strong> დ) $\\dfrac{\\sqrt{10}}{5}$.",
+    area: "geometry",
+    topics: ["dot-product","pyramid"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates","vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -203,7 +379,15 @@ quizData = [
     options: ["$15\\sqrt{3}$", "$5\\sqrt{3}$", "$10$", "$18$", "$2$", "$2\\sqrt{3} + 20$"],
     correct: 2,
     tags: [],
-    solution: "$(2\\vec{a} + \\vec{b}) \\times (\\vec{b} - 3\\vec{a}) = 2\\vec{a}\\times\\vec{b} - 6\\vec{a}\\times\\vec{a} + \\vec{b}\\times\\vec{b} - 3\\vec{b}\\times\\vec{a} = 5\\,\\vec{a}\\times\\vec{b}$.<br><br>სიგრძე: $5 \\cdot 2 \\cdot 2 \\cdot \\sin 30^\\circ = 10$.<br><br><strong>პასუხი:</strong> გ) $10$."
+    solution: "$(2\\vec{a} + \\vec{b}) \\times (\\vec{b} - 3\\vec{a}) = 2\\vec{a}\\times\\vec{b} - 6\\vec{a}\\times\\vec{a} + \\vec{b}\\times\\vec{b} - 3\\vec{b}\\times\\vec{a} = 5\\,\\vec{a}\\times\\vec{b}$.<br><br>სიგრძე: $5 \\cdot 2 \\cdot 2 \\cdot \\sin 30^\\circ = 10$.<br><br><strong>პასუხი:</strong> გ) $10$.",
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24
@@ -212,7 +396,15 @@ quizData = [
     options: ["$\\dfrac{23}{39}$", "$\\dfrac{35}{44}$", "$\\dfrac{7}{8}$", "$\\dfrac{27}{40}$", "$\\dfrac{29}{44}$", "$\\dfrac{31}{45}$"],
     correct: 1,
     tags: [],
-    solution: "ზუსტად ორი ნათურის გადაწვა:<br>$1, 2$: $0{,}5 \\cdot 0{,}7 \\cdot 0{,}4 = 0{,}14$;<br>$1, 3$: $0{,}5 \\cdot 0{,}3 \\cdot 0{,}6 = 0{,}09$;<br>$2, 3$: $0{,}5 \\cdot 0{,}7 \\cdot 0{,}6 = 0{,}21$. სულ $0{,}44$.<br><br>მეორე ნათურა გადაწვულთა შორისაა: $0{,}14 + 0{,}21 = 0{,}35$. პირობითი ალბათობა: $\\dfrac{0{,}35}{0{,}44} = \\dfrac{35}{44}$.<br><br><strong>პასუხი:</strong> ბ) $\\dfrac{35}{44}$."
+    solution: "ზუსტად ორი ნათურის გადაწვა:<br>$1, 2$: $0{,}5 \\cdot 0{,}7 \\cdot 0{,}4 = 0{,}14$;<br>$1, 3$: $0{,}5 \\cdot 0{,}3 \\cdot 0{,}6 = 0{,}09$;<br>$2, 3$: $0{,}5 \\cdot 0{,}7 \\cdot 0{,}6 = 0{,}21$. სულ $0{,}44$.<br><br>მეორე ნათურა გადაწვულთა შორისაა: $0{,}14 + 0{,}21 = 0{,}35$. პირობითი ალბათობა: $\\dfrac{0{,}35}{0{,}44} = \\dfrac{35}{44}$.<br><br><strong>პასუხი:</strong> ბ) $\\dfrac{35}{44}$.",
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 10,
+    difficulty: 3,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25 (same options as task 24 in the original)
@@ -221,6 +413,14 @@ quizData = [
     options: ["$\\dfrac{23}{39}$", "$\\dfrac{35}{44}$", "$\\dfrac{7}{8}$", "$\\dfrac{27}{40}$", "$\\dfrac{29}{44}$", "$\\dfrac{31}{45}$"],
     correct: 2,
     tags: [],
-    solution: "$D$ არის $BC$-ს შუაწერტილი, ნებისმიერი $P$-სთვის $\\overrightarrow{PB}\\cdot\\overrightarrow{PC} = PD^2 - DB^2$.<br><br>$AD = 3t$, $DF = t$, $DE = 2t$: $9t^2 - DB^2 = 4$ და $t^2 - DB^2 = -1$. აქედან $8t^2 = 5$, $t^2 = \\dfrac{5}{8}$, $DB^2 = \\dfrac{13}{8}$.<br><br>$\\overrightarrow{BE}\\cdot\\overrightarrow{CE} = 4t^2 - DB^2 = \\dfrac{20}{8} - \\dfrac{13}{8} = \\dfrac{7}{8}$.<br><br><strong>პასუხი:</strong> გ) $\\dfrac{7}{8}$."
+    solution: "$D$ არის $BC$-ს შუაწერტილი, ნებისმიერი $P$-სთვის $\\overrightarrow{PB}\\cdot\\overrightarrow{PC} = PD^2 - DB^2$.<br><br>$AD = 3t$, $DF = t$, $DE = 2t$: $9t^2 - DB^2 = 4$ და $t^2 - DB^2 = -1$. აქედან $8t^2 = 5$, $t^2 = \\dfrac{5}{8}$, $DB^2 = \\dfrac{13}{8}$.<br><br>$\\overrightarrow{BE}\\cdot\\overrightarrow{CE} = 4t^2 - DB^2 = \\dfrac{20}{8} - \\dfrac{13}{8} = \\dfrac{7}{8}$.<br><br><strong>პასუხი:</strong> გ) $\\dfrac{7}{8}$.",
+    area: "geometry",
+    topics: ["dot-product"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

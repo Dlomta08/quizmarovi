@@ -11,7 +11,15 @@ quizData = [
     "$x = \\pm \\frac{\\pi}{2} + 2\\pi k$"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","sum-formulas","product-sum"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 2
@@ -26,7 +34,15 @@ quizData = [
     "$x = \\pm \\frac{\\pi}{2} + \\pi k$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 3
@@ -41,7 +57,15 @@ quizData = [
     "$\\frac{7\\pi}{3}$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 4
@@ -49,7 +73,15 @@ quizData = [
   question: "ოთხკუთხა პირამიდის ოთხივე აპოთემა ტოლი სიგრძისაა და ფუძეში რომბია $60^{\\circ}$-იანი მახვილი კუთხით. იპოვეთ დიაგონალური კვეთების ფართობების შეფარდება.",
   options: ["$\\sqrt{2}$", "$\\sqrt{3}$", "$2$", "$\\sqrt{6}$", "$2\\sqrt{2}$", "$3$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid","area-ratios","rhombus-rect-sq"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 5
@@ -64,7 +96,15 @@ quizData = [
     "$60^{\\circ}$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid","angles-space","inverse-trig"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 6
@@ -79,7 +119,15 @@ quizData = [
     "$\\frac{5\\pi}{6}$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","product-sum"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 7
@@ -94,7 +142,15 @@ quizData = [
     "$\\left\\{\\begin{aligned} x &= \\frac{\\pi}{6} + \\pi k \\\\ y &= \\pm \\frac{\\pi}{6} + 2\\pi p \\end{aligned}\\right.$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","linear-systems"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 8
@@ -109,7 +165,15 @@ quizData = [
     "$x = \\pi + 1$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["inverse-trig"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 9
@@ -124,7 +188,15 @@ quizData = [
     "ოთხკუთხედი, რომელზეც შემოიხაზება წრეწირი"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid","polygon-basics","parallelogram"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 10
@@ -139,7 +211,15 @@ quizData = [
     "$18\\sqrt{10}$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["parallelogram","pyramid"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 11
@@ -147,7 +227,15 @@ quizData = [
   question: "$1 + \\sin2 x = \\sin x + \\cos x$ განტოლების ერთ-ერთი ამონახსნი ჩასვეს $\\tan x + \\cot x$ გამოსახულებაში და დათვალეს მისი მნიშვნელობა. ჩამოთვლილთაგან რომელი სიდიდე შეიძლებოდა მიეღოთ?",
   options: ["$\\sqrt{6}$", "$-2$", "$1$", "$-\\sqrt{3}$", "$4$", "$-\\sqrt{5}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","sum-formulas"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 12
@@ -162,7 +250,15 @@ quizData = [
     "$x = \\frac{3\\pi k}{4}$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 13
@@ -170,7 +266,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომელი $a$ პარამეტრისათვის ექნება $(a - 1)\\sin x + (a + 1)\\cos x = 4$ განტოლებას ამონახსნი?",
   options: ["$1$", "$-\\sqrt{3}$", "$2$", "$-\\sqrt{5}$", "$\\sqrt{6}$", "$-2\\sqrt{2}$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 14
@@ -185,7 +289,15 @@ quizData = [
     "$\\frac{\\sqrt{11}}{5}$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["combinatorics","prism"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 15
@@ -200,7 +312,15 @@ quizData = [
     "$\\cos(\\alpha + \\beta) = 0$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid","cross-sections"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 16
@@ -215,7 +335,15 @@ quizData = [
     "$\\left\\{\\begin{aligned} x &= \\pi k + \\frac{\\pi p}{2} \\\\ y &= \\pi k - \\frac{\\pi p}{2} \\end{aligned}\\right.$"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 17
@@ -223,7 +351,15 @@ quizData = [
   question: "რამდენი ამონახსნი აქვს $|\\sin x| = \\sin x + 2\\cos x$ განტოლებას $[0; 2\\pi]$ შუალედში?",
   options: ["არცერთი", "ერთი", "ორი", "სამი", "ოთხი", "ხუთი"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","abs-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: ["absolute"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 18
@@ -238,7 +374,15 @@ quizData = [
     "შეუძლებელია გამოთვლა"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["inverse-trig"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 19
@@ -246,7 +390,15 @@ quizData = [
   question: "რა მაქსიმალური რაოდენობის წიბო შეიძლება ჰქონდეს პირამიდას, თუ მისი ყველა წიბო ტოლია?",
   options: ["$8$", "$6$", "$16$", "$14$", "$10$", "$18$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid","max-min"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 20
@@ -261,7 +413,15 @@ quizData = [
     "$\\frac{2\\sqrt{3}}{3}$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 21
@@ -276,7 +436,15 @@ quizData = [
     "$60^{\\circ}$"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["inverse-trig"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 22
@@ -291,7 +459,15 @@ quizData = [
     "თამარმა და დავითმა"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-eq"],
+  grade: 10,
+  difficulty: 3,
+  type: ["word"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 23
@@ -306,7 +482,15 @@ quizData = [
     "$\\mathbb{R}$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","function-basics"],
+  grade: 10,
+  difficulty: 3,
+  type: ["solve"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 24
@@ -321,7 +505,15 @@ quizData = [
     "$ON \\perp OM$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 25
@@ -336,6 +528,14 @@ quizData = [
     "$\\cos^2\\frac{\\alpha}{2}$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid","angles-space"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];

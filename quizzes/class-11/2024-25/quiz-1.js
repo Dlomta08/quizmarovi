@@ -4,7 +4,15 @@ quizData = [
     question: "$\\log_{81}{27} = ?$",
     options: ["$0{,}75$", "$0{,}5$", "$0{,}199$", "$0{,}25$", "$0{,}9$", "$0{,}6$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["logarithms"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 2
   {
@@ -18,42 +26,90 @@ quizData = [
       "$\\frac{2b+1}{3a+2}$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["logarithms"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 3
   {
     question: "ქვემოთჩამოთვლილთაგან, რომელი რიცხვი არ არის $y = \\sqrt{\\log_{9}(6x + 1) + \\log_{199}(7x + 1)}$ ფუნქციის განსაზღვრის არეში?",
     options: ["$2$", "$1$", "$0{,}3$", "$0{,}1$", "$−0{,}1$", "$3$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-basics","logarithms"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 4
   {
     question: "სამკუთხა პრიზმის გვერდით წიბოებს შორის მანძილები, შესაბამისად, $3$-ის, $4$-ისა და $5$-ის ტოლია. ამ პრიზმის გვერდითი წიბოს სიგრძეა $6$. რისი ტოლია პრიზმის მოცულობა?",
     options: ["$180$", "$18$", "$12$", "$36$", "$60$", "$90$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["prism","volume-surface"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 5
   {
     question: "კონუსის ღერძული კვეთის ფართობი ფუძის ფართობის ტოლია. რას უდრის კუთხის ტანგენსი მსახველსა და ფუძის სიბრტყეს შორის?",
     options: ["$1$", "$3$", "$2$", "$\\sqrt{2}$", "$\\pi$", "$3\\sqrt{3}$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["cone","cross-sections"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 6
   {
     question: "$\\log_7 3$, $\\log_7 x$, $\\log_7 y$, $\\log_7 24$ რიცხვები ამ თანმიმდევრობით ადგენს არითმეტიკულ პროგრესიას. რისი ტოლია $x + y$?",
     options: ["$18$", "$72$", "$2{,}1$", "$25$", "$16{,}8$", "$27$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["arithmetic-prog"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 7
   {
     question: "რისი ტოლია $x$, თუ $\\frac{1}{\\log_2 x} + \\frac{1}{\\log_3 x} + \\frac{1}{\\log_4 x} = 1$?",
     options: ["$18$", "$12$", "$9$", "$1$", "$36$", "$24$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["logarithms"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 8
   {
@@ -67,21 +123,45 @@ quizData = [
       "$2\\sqrt{3}$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","volume-surface"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 9
   {
     question: "კონუსში მოიძებნება სამი, წყვილ-წყვილად ურთიერთმართობული მსახველი. რისი ტოლია მსახველსა და ფუძეს შორის მდებარე კუთხის ტანგენსის კვადრატი?",
     options: ["$1{,}5$", "$1$", "$0{,}5$", "$2{,}5$", "$2{,}1$", "შეუძლებელია დადგენა"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["cone","rhombus-rect-sq"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 10
   {
     question: "$(625^{\\log_5 2024})^{0{,}25}$",
     options: ["$5$", "$5^{506}$", "$\\sqrt[4]{2024}$", "$506$", "$625$", "$2024$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["logarithms"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 11
   {
@@ -95,21 +175,45 @@ quizData = [
       "მხოლოდ III-ს"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["log-eq"],
+    grade: 11,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 12
   {
     question: "$x$ ნატურალური რიცხვია და $\\log_2(\\log_{16} x) = \\log_4(\\log_4 x)$. იპოვეთ $x$-ის ციფრთა ჯამი.",
     options: ["$2$", "$4$", "$10$", "$7$", "$13$", "$15$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility","logarithms"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 13
   {
     question: "$y = \\log_3(15 − 12\\sin x)$ ფუნქციის მნიშვნელობათა სიმრავლეში მდებარე ყველა მთელი რიცხვის ჯამია",
     options: ["$1$", "$9$", "$2$", "$6$", "$5$", "$3$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-basics","logarithms"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 14
   {
@@ -123,7 +227,15 @@ quizData = [
       "$2$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["log-eq"],
+    grade: 11,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 15
   {
@@ -137,14 +249,30 @@ quizData = [
       "$6$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 16
   {
     question: "ნებისმიერი $x > 1$-თვის ცნობილია, რომ $\\sqrt[a]{x \\cdot \\sqrt[b]{x \\cdot \\sqrt[c]{x}}} = \\sqrt[36]{x^{25}}$. ქვემოთჩამოთვლილთაგან, რისი ტოლია $b$, თუ $a$, $b$ და $c$ ერთზე მეტი ნატურალური რიცხვებია?",
     options: ["$2$", "$3$", "$4$", "$5$", "$6$", "$7$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["nth-roots","linear-ineq"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 17
   {
@@ -158,7 +286,15 @@ quizData = [
       "$y = \\log_{0{,}2}(x + 2)$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["line-circle-eq"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 18
   {
@@ -172,28 +308,60 @@ quizData = [
       "$2$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["log-eq"],
+    grade: 11,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 19
   {
     question: "ცილინდრის ორი კვეთა, რომელიც ერთი და იგივე მსახველზე გადის, ერთმანეთთან ადგენს მართ კუთხეს. ცილინდრის ღერძიდან ამ სიბრტყეებამდე მანძილებია $2{,}5$ და $6$. იპოვეთ ცილინდრის ღერძული კვეთის ფართობი, თუ მისი სიმაღლე $4$-ის ტოლია.",
     options: ["$18$", "$48$", "$52$", "$\\frac{144}{3}$", "$64$", "$100$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["cylinder","cross-sections"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 20
   {
     question: "კონუსის წვეროდან ორ მსახველზე ფუძისადმი $45^{\\circ}$-იანი კუთხით გავლებულია სიბრტყე, რომელიც კვეთს ფუძის წრეწირის მეოთხედს. კონუსის სიმაღლეა $10$. იპოვეთ კვეთის ფართობი.",
     options: ["$50$", "$50\\sqrt{2}$", "$50\\sqrt{3}$", "$100$", "$100\\sqrt{2}$", "$150$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["cone","cross-sections"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 21
   {
     question: "მოცემულია რიცხვები: $\\sqrt{\\lg a}$ ; $\\sqrt{\\lg b}$ ; $\\lg \\sqrt{a}$ ; $\\lg \\sqrt{b}$. თითოეული მათგანი ნატურალურია და მათი ჯამი $36$-ის ტოლია. იპოვეთ $ab$.",
     options: ["$10^{52}$", "$10^{36}$", "$10^{72}$", "$10^{100}$", "$10^{60}$", "$10^{81}$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["logarithms"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 22
   {
@@ -208,27 +376,59 @@ quizData = [
       "$4\\sqrt{5}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["prism","sphere"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 23
   {
     question: "$f(x) = \\log_3(x + 3)$ ფუნქციის გრაფიკი აბსცისათა და ორდინატთა ღერძებს $A$ და $B$ წერტილებში კვეთს, ხოლო $y = f(x)$-ის შექცეული ფუნქციის გრაფიკი იგივე ღერძებს $C$ და $D$ წერტილებში კვეთს. იპოვეთ $ABCD$ ოთხკუთხედის ფართობი.",
     options: ["$5$", "$3{,}5$", "$3$", "$5{,}5$", "$6{,}5$", "$4{,}5$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-basics","logarithms","cross-sections"],
+    grade: 11,
+    difficulty: 3,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 24
   {
     question: "$\\log_2 x = \\log_y 16$ ; $xy = 64$. რისი ტოლია $\\left(\\log_2 \\frac{x}{y}\\right)^2$?",
     options: ["$\\frac{25}{2}$", "$20$", "$\\frac{45}{2}$", "$25$", "$32$", "$36$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["logarithms"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 25
   {
     question: "$DABC$ პირამიდის ფუძეშია $ABC$ მართკუთხა სამკუთხედი $C$ მართი კუთხით. ამ პირამიდის გვერდითი წიბოები ტოლია. $DB$ გვერდით წიბოზე აღებული $M$ წერტილი ისე, რომ $BM:MD = 1:2$. $AMC$ და $ABC$ სიბრტყეებს შორის კუთხეა $60^{\\circ}$. $AMC$ სამკუთხედის ფართობია $4\\ \\text{სმ}^2$, პირამიდის სიმაღლისა და $ABC$ სამკუთხედის ფართობის ნამრავლი — $3\\ \\text{სმ}^3$. რამდენი სანტიმეტრია პირამიდის სიმაღლე?",
     options: ["$1$", "$2$", "$\\frac{4}{3}$", "$\\frac{5}{4}$", "$\\frac{6}{5}$", "$\\frac{3}{2}$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","right-triangle","angles-space"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

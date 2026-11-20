@@ -11,7 +11,15 @@ quizData = [
       "$1{,}2$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -26,7 +34,15 @@ quizData = [
       "$-\\sqrt{x^3}$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -41,7 +57,15 @@ quizData = [
       "$5$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -56,7 +80,15 @@ quizData = [
       "$\\frac{abc}{m}$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -71,7 +103,15 @@ quizData = [
       "$4$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles","inscribed-circum"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -86,7 +126,15 @@ quizData = [
       "$6$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -101,7 +149,15 @@ quizData = [
       "$5$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -116,7 +172,15 @@ quizData = [
       "$d, b, c, a$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["numeric-ineq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -131,7 +195,15 @@ quizData = [
       "$18$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -146,7 +218,15 @@ quizData = [
       "$1:3{,}5$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["midline","trapezoid","divisibility"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 11
   {
@@ -160,7 +240,15 @@ quizData = [
       "$4$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12
@@ -175,7 +263,15 @@ quizData = [
       "$\\sqrt{5}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -190,7 +286,15 @@ quizData = [
       "$6{,}5$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -206,7 +310,15 @@ quizData = [
       "$16$"
     ],
     correct: [0,1,2,3,4,5],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15
@@ -221,7 +333,15 @@ quizData = [
       "$4$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 16
@@ -236,7 +356,15 @@ quizData = [
       "$ab = bc + 1$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -251,7 +379,15 @@ quizData = [
       "$4$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -266,7 +402,15 @@ quizData = [
       "$-5$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-systems","linear-ineq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -281,7 +425,15 @@ quizData = [
       "$4$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -296,7 +448,15 @@ quizData = [
       "$80^\\circ$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 21
@@ -311,7 +471,15 @@ quizData = [
       "$0$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -326,7 +494,15 @@ quizData = [
       "$199$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -341,7 +517,15 @@ quizData = [
       "$10$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24
@@ -356,7 +540,15 @@ quizData = [
       "$40^\\circ$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["rhombus-rect-sq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25
@@ -371,6 +563,14 @@ quizData = [
       "$80^\\circ$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles","circle-angles","inscribed-circum"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -4,174 +4,374 @@ quizData = [
     question: "რისი ტოლია $10100_2 \\div 101_2$ გამოსახულების მნიშვნელობა ორობით სისტემაში?",
     options: ["$1001_2$", "$100_2$", "$1011_2$", "$110_2$", "$1000_2$", "$111_2$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 2
   {
     question: "$a$, $b$ და $c$ დაალაგეთ ზრდადობით, სადაც $a = 2\\sqrt{10}$ ; $b = \\sqrt{32}$ და $c = \\frac{\\sqrt{225}}{2}$",
     options: ["$a, b, c$", "$a, c, b$", "$b, a, c$", "$b, c, a$", "$c, a, b$", "$c, b, a$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["numeric-ineq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 3
   {
     question: "გამოთვალეთ: $(\\sqrt{18} + \\sqrt{45})\\sqrt{(\\sqrt{2} - \\sqrt{5})^2}$.",
     options: ["$3$", "$2\\sqrt{15} + 3\\sqrt{2}$", "$6$", "$2\\sqrt{15}$", "$9$", "$2\\sqrt{5} - 3\\sqrt{2}$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 4
   {
     question: "მართკუთხა სამკუთხედის მართი კუთხის წვეროდან გავლებული სიმაღლისა და ჰიპოტენუზის სიგრძეთა ნამრავლი $\\sqrt{18}$-ჯერ მეტია ერთ-ერთ კათეტის სიგრძეზე, იპოვეთ მეორე კათეტის სიგრძე.",
     options: ["$4\\sqrt{3}$", "$2\\sqrt{6}$", "$9$", "$3\\sqrt{6}$", "$3\\sqrt{2}$", "$6$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 5
   {
     question: "იპოვეთ სამკუთხედის უმცირესი კუთხის სინუსი, თუ მისი გვერდების სიგრძეები $3$-ის, $2$-ის და $\\sqrt{5}$-ის ტოლია.",
     options: ["$\\frac{1}{\\sqrt{5}}$", "$\\frac{2}{3}$", "$\\frac{\\sqrt{5}}{4}$", "$\\frac{1}{2}$", "$\\frac{2\\sqrt{5}}{5}$", "$\\frac{\\sqrt{5}}{6}$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 6
   {
     question: "რისი ტოლი შესაძლოა იყოს $b$, თუ ცნობილია, რომ $x^2 + 3bx + b^2 + 2 = 0$ განტოლებას ორი ამონახსნი აქვს და აკმაყოფილებენ ტოლობას $x_1 + x_2 + x_1x_2 = 0$.",
     options: ["$0$", "$-1$", "$3$", "$2$", "$9$", "$-3$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["vieta","quadratic-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 7
   {
     question: "გამოთვალეთ: $\\frac{24^{-8} \\cdot 6^{-12}}{18^{-10} \\cdot 8^{-12}}$.",
     options: ["$4^{-6}$", "$6^{4}$", "$9^{-5}$", "$12^3$", "$18^{-2}$", "$4^5$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["powers"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 8
   {
     question: "იპოვეთ $4x - 1 = 3(2\\sqrt{x} - 1)$ განტოლების ამონახსენთა ჯამი.",
     options: ["$\\frac{5}{4}$", "$\\frac{2}{3}$", "$2$", "$\\frac{4}{3}$", "$1$", "$\\frac{3}{2}$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 9
   {
     question: "ორი წრეწირის ცენტრებს შორის მანძილი $10$-ის ტოლია. იპოვეთ საერთო გარე და შიდა მხებების სიგრძეთა კვადრატების შეფარდება, თუ ამ წრეწირების რადიუსთა სიგრძეები $2$-ის და $6$-ის ტოლია.",
     options: ["$2:1$", "$5:1$", "$7:3$", "$9:4$", "$4:1$", "$7:4$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 10
   {
     question: "$ABCD$ რომბის სიმაღლის სიგრძე $8$-ის ტოლია, ხოლო მისი გვერდის სიგრძე $10$-ის. იპოვეთ $\\tan\\left(\\frac{\\angle A}{2}\\right)$, სადაც $\\angle A$ რომბის მახვილი კუთხეა.",
     options: ["$\\frac{1}{2}$", "$\\frac{2}{5}$", "$\\frac{\\sqrt{2}}{5}$", "$\\frac{3}{2}$", "$3$", "$\\frac{\\sqrt{5}}{3}$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["rhombus-rect-sq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 11
   {
     question: "$x$-ის რამდენი მთელი მნიშვნელობისთვისაა სამართლიანია შემდეგი უტოლობა: $\\begin{cases} |x| > \\sqrt{199} \\\\ |x| < \\sqrt{2025} \\end{cases}$",
     options: ["$50$", "$64$", "$55$", "$60$", "$48$", "$63$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-systems","linear-ineq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 12
   {
     question: "$(x_1; y_1)$ და $(x_2; y_2)$ წყვილები $\\begin{cases} y - x^2 = 0 \\\\ x - y = -6 \\end{cases}$ განტოლებათა სისტემის ამონახსნებია. იპოვეთ $x_1 \\cdot y_1 + x_2 \\cdot y_2$.",
     options: ["$12$", "$-3$", "$8$", "$19$", "$-11$", "$17$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["nonlinear-systems","linear-systems","quadratic-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 13
   {
     question: "იპოვეთ $|x - 1| = |x^2 - 3x + 2|$ განტოლების ამონახსენთა ნამრავლი.",
     options: ["$-6$", "$9$", "$4$", "$-2$", "$1$", "$3$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["abs-eq","quadratic-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 14
   {
     question: "ტოლფერდა სამკუთხედში ფუძისადმი გავლებული სიმაღლის სიგრძე მასში ჩახაზული წრეწირის რადიუსის სიგრძეზე $4$-ჯერ მეტია. იპოვეთ ფუძესთან მდებარე კუთხის კოსინუსი.",
     options: ["$\\frac{2\\sqrt{2}}{5}$", "$\\frac{1}{4}$", "$\\frac{2\\sqrt{2}}{3}$", "$\\frac{2}{5}$", "$\\frac{1}{3}$", "$\\frac{\\sqrt{3}}{2}$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles","inscribed-circum"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 15
   {
     question: "$R$ რადიუსიანი წრეწირის ცენტრიდან $7$-ის ტოლი მანძილით დაშორებული წერტილიდან გავლებული მკვეთის გარე ნაწილის სიგრძე შიდა ნაწილის სიგრძეზე $2$-ით ნაკლებია. იპოვეთ მკვეთის შიდა ნაწილის სიგრძე, თუ $R = 5$.",
     options: ["$6$", "$4$", "$5$", "$7$", "$3$", "$8$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 16
   {
     question: "მოტორიანვა ნავმა დინების მიმართულებით $24$ კილომეტრი და დინების საწინააღმდეგო მიმართულებით $8$ კილომეტრი $4$ საათში გაიარა. იპოვეთ ნავის სიჩქარე (მდგარ წყალში), თუ მდინარის სიჩქარე $4$ კმ/სთ ტოლია.",
     options: ["$12$ კმ/სთ", "$8$ კმ/სთ", "$10$ კმ/სთ", "$16$ კმ/სთ", "$5$ კმ/სთ", "$8{,}5$ კმ/სთ"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["word-problems"],
+    grade: 8,
+    difficulty: 2,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 17
   {
     question: "იპოვეთ გამოსახულების მნიშვნელობა: $\\frac{\\frac{x}{x - \\sqrt{2}} - \\frac{\\sqrt{2}}{x + \\sqrt{2}}}{\\frac{x^2 + 2}{x^2 + x\\sqrt{2}}} : \\left( \\frac{\\sqrt{2}}{x} - 1 \\right)^{-1}$.",
     options: ["$x - \\sqrt{2}$", "$1$", "$x^2 + 2$", "$-\\frac{\\sqrt{2}}{x}$", "$x$", "$-1$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 18
   {
     question: "იპოვეთ $\\frac{c + b}{a}$, თუ $a \\left(\\frac{2x}{x + 1}\\right)^2 + b \\left(\\frac{2x}{x + 1}\\right) + c = 0$ განტოლების ფესვები $1$-ისა და $-2$-ის ტოლია.",
     options: ["$-3$", "$5$", "$-1$", "$9$", "$-4$", "$6$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["rational-eq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 19
   {
     question: "$ABC$ ტოლფერდა სამკუთხედში $(AB = BC)$ ფუძესთან მდებარე $A$ &thinsp; წვეროდან გავლებული სხივი $BH$ &thinsp; სიმაღლეს და $BC$ &thinsp; ფერდს შესაბამისად $M$ და $N$ წერტილებში კვეთს. იპოვეთ $BN:NC$, თუ $BM:MH = 3:1$.",
     options: ["$3:1$", "$2:1$", "$8:3$", "$3:2$", "$5:3$", "$7:4$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 20
   {
     question: "სამკუთხედის ერთი გვერდის სიგრძე $7$-ის ტოლია, ხოლო მისი მოპირდაპირე კუთხე $120^\\circ$-ის ტოლია. იპოვეთ დანარჩენი ორი გვერდის სიგრძეთა სხვაობის მოდული, თუ მათი ჯამი $8$-ის ტოლია.",
     options: ["$1$", "$2{,}4$", "$3$", "$2$", "$3{,}6$", "$4$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 21
   {
     question: "იპოვეთ $(x - 2)^2(x^2 - 4x) + 3 = 0$ განტოლების ამონახსნების ჯამი.",
     options: ["$8$", "$-6$", "$4$", "$-10$", "$12$", "$-4$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 22
   {
     question: "$a$ პარამეტრის, რომელი მნიშვნელობისთვის იქნება $x^2 - (a - 1)x - a^2 - a = 0$ ფესვების კვადრატების ჯამი უმცირესი?",
     options: ["$1$", "$0$", "$-2$", "$3$", "$-1$", "$\\,$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["vieta","quadratic-eq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 23
   {
     question: "იპოვეთ $a$ პარამეტრის ყველა მნიშვნელობა, რომელთათვისაც $\\frac{x^2 + (a + 2)x + 2a}{\\sqrt{x - 1}} = 0$ განტოლებას ამონახსნი არ გააჩნია.",
     options: ["$a > -1$", "$a \\leq 1$", "$a \\geq -1$", "$a \\in$ ∅", "$a \\leq 1$", "$a = 0$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-eq","rational-eq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 24
   {
     question: "სამკუთხედის მედიანების სიგრძეები $9$-ის, $12$-ის და $15$-ის ტოლია. იპოვეთ უდიდესი გვერდის სიგრძე.",
     options: ["$17$", "$2\\sqrt{73}$", "$18$", "$4\\sqrt{13}$", "$10$", "$3\\sqrt{37}$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 25
   {
     question: "ორი მკვეთი წრეწირის რადიუსები $R_1$-ისა და $R_2$-ის ტოლია. $AC$ მათი საერთო გარე მხებია, რომელსაც $A$ &thinsp; და $C$ &thinsp; წერტილებში ეხებიან. $B$ &thinsp; წერტილი ამ წრეწირთა კვეთის ერთ-ერთი წერტილია. იპოვეთ $ABC$ &thinsp; სამკუთხედზე შემოხაზული წრეწირის რადიუსი, თუ $R_1 = \\sqrt{8}$ &thinsp; და &thinsp; $R_2 = \\sqrt{18}$.",
     options: ["$6$", "$3\\sqrt{2}$", "$4$", "$2\\sqrt{3}$", "$3$", "$\\sqrt{6}$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum","chords-tangents"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -4,7 +4,15 @@ quizData = [
     question: "ამოხსენით $\\sin x = \ tg x$ განტოლება. (სავარაუდო პასუხებში ყველგან $n \\in \\mathbb{Z}$)",
     options: ["$x = 0$", "$x = \\pi n$", "$x = 2\\pi n$", "$x = \\pi + 2\\pi n$", "$x = \\frac{\\pi}{2} + 2\\pi n$", "$x = \\frac{\\pi}{2} - 2\\pi n$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -12,7 +20,15 @@ quizData = [
     question: "ამოხსენით $\\arcsin\\left(\\frac{2x - 3}{4}\\right) = \\frac{\\pi}{6}$ განტოლება.",
     options: ["$x = \\pi$", "$x = \\frac{\\pi}{4}$", "$x = \\frac{1}{2}$", "$x = \\frac{5}{2}$", "$x = \\frac{2}{3}$", "$x = 2$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["inverse-trig"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -20,7 +36,15 @@ quizData = [
     question: "გამოთვალეთ $\\arcsin(\\sin 7)$ გამოსახულების მნიშვნელობა.",
     options: ["$7$", "$\\cos 7$", "$\\pi$", "$7 - 2\\pi$", "$7 + 2\\pi$", "$\\sin 7 - \\pi$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["inverse-trig"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -28,7 +52,15 @@ quizData = [
     question: "წესიერი სამკუთხა პირამიდის ფუძის გვერდია $6$. იპოვეთ მანძილი გვერდითი წიბოს შუა წერტილიდან პირამიდის სიმაღლემდე.",
     options: ["$3$", "$1$", "$2$", "$\\sqrt{6}$", "$\\sqrt{2}$", "$\\sqrt{3}$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -36,7 +68,15 @@ quizData = [
     question: "პირამიდის წვეროების რაოდენობა $26$-ით ნაკლებია წიბოების რაოდენობაზე. იპოვეთ წახნაგების რაოდენობა.",
     options: ["$26$", "$20$", "$30$", "$32$", "$28$", "$29$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 6
 {
@@ -50,7 +90,15 @@ quizData = [
     "$\\begin{cases} x = \\pm\\frac{\\pi}{6} + \\pi n \\\\ y = (-1)^n \\frac{\\pi}{3} + 2\\pi k \\end{cases}$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","linear-systems"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 7
@@ -58,7 +106,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რისი ტოლია $a$ პარამეტრის მნიშვნელობა, თუ $\\sin x + \\sqrt{3}\\cos x = a$ განტოლების უდიდესი უარყოფითი ამონახსნისა და უმცირესი დადებითი ამონახსნების ჯამი $-\\frac{5\\pi}{3}$ -ის ტოლია.",
   options: ["$\\frac{1}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$-1$", "$1$", "$2$", "$3$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 8
@@ -66,7 +122,15 @@ quizData = [
   question: "გამოთვალეთ $\\cos\\left(2\\arcsin\\frac{1}{3}\\right)$ გამოსახულების მნიშვნელობა.",
   options: ["$\\frac{7}{9}$", "$\\frac{2}{3}$", "$\\frac{2}{9}$", "$\\frac{2\\sqrt{2}}{9}$", "$\\frac{\\sqrt{3}}{6}$", "შეუძლებელია გამოთვლა"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["inverse-trig"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 9
@@ -74,7 +138,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რისი ტოლია წესიერი ექვსკუთხა პირამიდის გვერდითი წახნაგის ფუძესთან მდებარე ბრტყელი კუთხე?",
   options: ["$17^\\circ$", "$27^\\circ$", "$30^\\circ$", "$47^\\circ$", "$60^\\circ$", "$77^\\circ$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 10
@@ -82,7 +154,15 @@ quizData = [
   question: "წესიერი სამკუთხა პირამიდის ყველა წიბო ერთმანეთის ტოლია. იპოვეთ ამ პირამიდის სიმაღლესა და აპოთემას შორის კუთხის სინუსი.",
   options: ["$\\frac{1}{3}$", "$\\frac{1}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{3}}{3}$", "$\\frac{1}{4}$", "$\\frac{\\sqrt{3}}{4}$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 11
 {
@@ -96,7 +176,15 @@ quizData = [
     "$2n$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 12
@@ -111,7 +199,15 @@ quizData = [
     "$x = \\pi n$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","sum-formulas"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 13
@@ -126,7 +222,15 @@ quizData = [
     "$2\\pi$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 14
@@ -141,7 +245,15 @@ quizData = [
     "$24\\sqrt{2}$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid","cross-sections"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 15
@@ -156,7 +268,15 @@ quizData = [
     "ნებისმიერი ამ ოთხიდან"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["prism"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 16
 {
@@ -170,7 +290,15 @@ quizData = [
     "$x = \\frac{\\pi}{8} + \\frac{\\pi n}{4}$"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 17
@@ -185,7 +313,15 @@ quizData = [
     "$x = \\frac{\\pi}{2} + \\pi n$"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","abs-eq","sum-formulas"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: ["absolute"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 18
@@ -200,7 +336,15 @@ quizData = [
     "$60^\\circ$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["inverse-trig"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 19
@@ -208,7 +352,15 @@ quizData = [
   question: "რა მაქსიმალური რაოდენობის წიბო შეიძლება ჰქონდეს $SA_1A_2\\dots A_n$ პირამიდას (ფუძეში $A_1A_2\\dots A_n$ მრავალკუთხედია), თუ $S$ წვეროსთან მდებარე ბრტყელი კუთხეები ადგენენ არითმეტიკულ პროგრესიას, რომლის სხვაობა $10^\\circ$-ია, ხოლო $S$ წვეროსთან მდებარე უმცირესი ბრტყელი კუთხე კი $20^\\circ$-ია?",
   options: ["$8$", "$10$", "$12$", "$14$", "$16$", "$18$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["arithmetic-prog","combinatorics","pyramid"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 20
@@ -223,14 +375,30 @@ quizData = [
     "$\\sqrt{40} + \\sqrt{52} + \\sqrt{10} + 3\\sqrt{6}$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["combinatorics","prism","cross-sections"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 21
 {
   question: "რამდენ განსხვავებულ მნიშვნელობას მიიღებს $\\sin x + \\sin y$ გამოსახულება, თუ სრულდება $(\\sin^4 x + 1)(\\sin^4 y + 1) = 4\\sin^2 x \\sin^2 y$ ტოლობა.",
   options: ["$1$", "$5$", "$2$", "$6$", "$4$", "$3$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["product-sum"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 22
@@ -238,7 +406,15 @@ quizData = [
   question: "რიცხვით ღერძზე მოძრავი წერტილის კოორდინატი დროის $t$ მომენტში გამოითვლება ფორმულით $3\\sin\\left(\\frac{\\pi}{4}t\\right)$. რა მანძილს გაივლის ეს წერტილი დროის $[2;\\ 8]$ შუალედში?",
   options: ["$9$", "$6$", "$3$", "$3\\sqrt{2}$", "$6\\sqrt{2}$", "შეუძლებელია დადგენა"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-identities"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 23
@@ -246,7 +422,15 @@ quizData = [
   question: "რამდენი ამონახსნი აქვს $2\\sin^2 x - 2 = 4\\sin x + \\frac{4}{\\sin^2 x}$ განტოლებას $[-2;\\ 12]$ შუალედში?",
   options: ["$1$", "$2$", "$3$", "$4$", "$5$", "არცერთი"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 24
@@ -261,7 +445,15 @@ quizData = [
     "შეუძლებელია დადგენა"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["pyramid","notable-points"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 25
@@ -276,6 +468,14 @@ quizData = [
     "მხოლოდ $B$ და $C$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["arithmetic-prog","pyramid"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ]

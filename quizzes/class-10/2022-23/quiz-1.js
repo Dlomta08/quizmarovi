@@ -11,7 +11,15 @@ quizData = [
       "$c; b; a$"
     ],
     correct: 2,
-    tags: ["trigonometry", "ordering"]
+    tags: ["trigonometry", "ordering"],
+    area: "algebra",
+    topics: ["numeric-ineq","function-props","reduction"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -19,7 +27,15 @@ quizData = [
     question: "იპოვეთ $y = (2 \\sin^2 3x - 2 \\cos^2 3x)^2$ გამოსახულების უდიდესი შესაძლო მნიშვნელობა?",
     options: ["$0$", "$12$", "$18$", "$4$", "$2$", "$6$"],
     correct: 3,
-    tags: ["functions", "max-value"]
+    tags: ["functions", "max-value"],
+    area: "algebra",
+    topics: ["trig-identities"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -34,7 +50,15 @@ quizData = [
       "$b, a, c$"
     ],
     correct: 5,
-    tags: ["trigonometry", "ordering"]
+    tags: ["trigonometry", "ordering"],
+    area: "algebra",
+    topics: ["numeric-ineq","function-props"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -50,7 +74,15 @@ quizData = [
       "მხოლოდ $h(x)$"
     ],
     correct: [0,1,2],
-    tags: ["functions", "even-odd"]
+    tags: ["functions", "even-odd"],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -58,7 +90,15 @@ quizData = [
     question: "ორი აცდენილი წრფიდან ერთი $\\theta$ სიბრტყის მართობულია. მეორე კი $\\theta$ სიბრტყესთან ადგენს $30^\\circ$-იან კუთხეს. რისი ტოლია ამ აცდენილ წრფეებს შორის კუთხე?",
     options: ["$150^\\circ$", "$30^\\circ$", "$0^\\circ$", "შეუძლებელია განსაზღვრა", "$60^\\circ$", "$45^\\circ$"],
     correct: 4,
-    tags: ["geometry", "spatial"]
+    tags: ["geometry", "spatial"],
+    area: "solid",
+    topics: ["parallel-space","perpendicular-space"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //6
@@ -66,7 +106,15 @@ quizData = [
     question: "სიბრტყიდან $1$ ერთეულით დაშორებული $M$ წერტილიდან სიბრტყისადმი გავლებულია $MA$ და $MB$ დახრილები. პირველი მათგანი $M$ წერტილიდან სიბრტყეზე დაშვებულ მართობთან ადგენს $45^\\circ$-იან კუთხეს, მეორე კი $60^\\circ$ გრადუსიან კუთხეს. ამ დახრილების გეგმილები ერთმანეთთან $90^\\circ$-იან კუთხეს ადგენენ. იპოვეთ $AB$ მონაკვეთის სიგრძე.",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 1,
-    tags: ["spatial geometry"]
+    tags: ["spatial geometry"],
+    area: "solid",
+    topics: [],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -74,7 +122,15 @@ quizData = [
     question: "ცნობილია, რომ $\\sin \\alpha$ ორჯერ ნაკლებია $\\cos \\alpha$-ზე. იპოვეთ $\\sin2 \\alpha$, თუ $\\alpha \\in [0; 90^\\circ]$.",
     options: ["$0{,}2$", "$0{,}4$", "$0{,}5$", "$0{,}6$", "$0{,}7$", "$0{,}8$"],
     correct: 5,
-    tags: ["trigonometry"]
+    tags: ["trigonometry"],
+    area: "algebra",
+    topics: ["sum-formulas"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -82,7 +138,15 @@ quizData = [
     question: "$45^\\circ$-იან ორწახნაგა კუთხის ერთ წახნაგში გავლებული $AB$ მონაკვეთი წიბოს კვეთს $B$ წერტილში და მასთან ადგენს $45^\\circ$-იან კუთხეს. იპოვეთ რა კუთხეს ადგენს $AB$ დახრილი მეორე წახნაგთან.",
     options: ["$15^\\circ$", "$30^\\circ$", "$0^\\circ$", "$75^\\circ$", "$60^\\circ$", "$45^\\circ$"],
     correct: 1,
-    tags: ["spatial geometry"]
+    tags: ["spatial geometry"],
+    area: "solid",
+    topics: ["angles-space","cross-sections"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -97,7 +161,15 @@ quizData = [
       "აუცილებლად ბლაგვია"
     ],
     correct: 3,
-    tags: ["spatial geometry"]
+    tags: ["spatial geometry"],
+    area: "solid",
+    topics: ["stereo-axioms"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -105,14 +177,30 @@ quizData = [
     question: "დახრილი სიბრტყესთან ადგენს კუთხეს, რომლის ტანგენსი $0{,}5\\sqrt{5}$-ის ტოლია. ამ დახრილის გეგმილი სიბრტყეში მდებარე $a$ წრფესთან კი ადგენს კუთხეს, რომლის სინუსი $0{,}25\\sqrt{7}$-ის ტოლია. რისი ტოლია დახრილსა და $a$ წრფეს შორის მდებარე კუთხე?",
     options: ["$15^\\circ$", "$30^\\circ$", "$0^\\circ$", "$75^\\circ$", "$60^\\circ$", "$45^\\circ$"],
     correct: 4,
-    tags: ["spatial geometry"]
+    tags: ["spatial geometry"],
+    area: "solid",
+    topics: ["angles-space"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     //11
   {
     question: "იპოვეთ $f(x)$ ფუნქციის უმცირესი დადებითი პერიოდი, თუ $f(x) = g(0{,}5x) + h(2x)$, სადაც $g(x) = \\sin(4x)$, ხოლო $h(x) = \\cos x$.",
     options: ["$\\dfrac{\\pi}{2}$", "$\\pi$", "$1{,}5\\pi$", "$2\\pi$", "$2{,}5\\pi$", "$3\\pi$"],
     correct: 1,
-    tags: ["periodicity", "functions"]
+    tags: ["periodicity", "functions"],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -120,7 +208,15 @@ quizData = [
     question: "რისი ტოლია $\ tg(-\\pi + 1)\\sin 900^\\circ + \ ctg(-675^\\circ) - \\sin^2\\left(\\dfrac{20\\pi}{7}\\right) - \\cos^2\\left(\\dfrac{6\\pi}{7}\\right)$ გამოსახულების მნიშვნელობა?",
     options: ["$0$", "$1$", "$2$", "$3$", "$4$", "$5$"],
     correct: 0,
-    tags: ["trig identities", "simplification"]
+    tags: ["trig identities", "simplification"],
+    area: "algebra",
+    topics: ["reduction"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -135,7 +231,15 @@ quizData = [
       "$\\cos(\\alpha + \\dfrac{\\pi}{2})$"
     ],
     correct: 4,
-    tags: ["trigonometry", "identity"]
+    tags: ["trigonometry", "identity"],
+    area: "algebra",
+    topics: ["trig-identities"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //14
@@ -143,7 +247,15 @@ quizData = [
     question: "$ABC$ ტოლფერდა სამკუთხედის გვერდებია $6; 6; 3\\sqrt{2}$. სამკუთხედის $BC$ ფერდი $\\alpha$ სიბრტყეშია. $AB$ დახრილი $\\alpha$ სიბრტყესთან $30^\\circ$-იან კუთხეს ადგენს. სიბრტყის გარეთ მდებარე $A$ წერტილიდან $\\alpha$ სიბრტყისადმი გავლებულია $AK$ მართობი. იპოვეთ $BKC$ კუთხის სიდიდე?",
     options: ["$15^\\circ$", "$30^\\circ$", "$90^\\circ$", "$75^\\circ$", "$60^\\circ$", "$45^\\circ$"],
     correct: 2,
-    tags: ["geometry", "triangles"]
+    tags: ["geometry", "triangles"],
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -151,7 +263,15 @@ quizData = [
     question: "$\\dfrac{\\cos\\left(\\dfrac{\\pi}{4} + \\alpha\\right) + \\cos\\left(\\dfrac{\\pi}{4} - \\alpha\\right)}{\\sqrt{2} \\cos \\alpha} + \\sqrt{2} \\cdot \\dfrac{\\sin\\left(\\dfrac{\\pi}{6} - \\alpha\\right) + \\sin\\left(\\dfrac{\\pi}{6} + \\alpha\\right)}{\\sin\\left(\\dfrac{\\pi}{4} - \\alpha\\right) + \\sin\\left(\\dfrac{\\pi}{4} + \\alpha\\right)} =$",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 1,
-    tags: ["trigonometric identities"]
+    tags: ["trigonometric identities"],
+    area: "algebra",
+    topics: ["trig-identities"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //16
@@ -159,7 +279,15 @@ quizData = [
     question: "დათვალეთ $\ tg\\left(\\dfrac{360^\\circ - \\alpha - \\beta}{4}\\right)$, თუ $\\cos\\left(\\dfrac{\\alpha}{4}\\right) = \\dfrac{1}{2}$ და $\\cos\\left(\\dfrac{\\beta}{4}\\right) = -\\dfrac{\\sqrt{2}}{2}$, ხოლო $1080^\\circ < \\alpha < 1440^\\circ; \\quad 720^\\circ < \\beta < 1080^\\circ.$",
     options: ["$\\sqrt{2}$", "$\\sqrt{3}$", "$\\sqrt{2} + \\sqrt{3}$", "$\\sqrt{2} - \\sqrt{3}$", "$-\\sqrt{2} + \\sqrt{3}$", "$-2 - \\sqrt{3}$"],
     correct: 5,
-    tags: ["trig expressions", "range"]
+    tags: ["trig expressions", "range"],
+    area: "algebra",
+    topics: ["trig-ineq","function-basics"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -167,7 +295,15 @@ quizData = [
     question: "$AB$ მონაკვეთი სიბრტყის პარალელურია და დაშორებულია მისგან $\\sqrt{3}$ ერთეულით. სიბრტყეზე დაშვებულია $AA_1$ და $BB_1$ სიმაღლეები. ასევე გავლებულია $AB$ მონაკვეთის მართობულად სიბრტყისადმი $AC$ და $BD$ დახრილები. ერთი მათგანი სიბრტყესთან $60^\\circ$-იან, ხოლო მეორე $30^\\circ$-იან კუთხეებს ადგენენ. იპოვეთ $A_1B_1DC$ ოთხკუთხედის ფართობი, თუ $AB = 3$.",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 5,
-    tags: ["spatial geometry", "area"]
+    tags: ["spatial geometry", "area"],
+    area: "prob-stats",
+    topics: ["combinatorics","parallel-space"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -175,7 +311,15 @@ quizData = [
     question: "იპოვეთ $\\dfrac{\\sqrt{0{,}5 - x^3}}{\\sqrt{0{,}5 + x^3}}$ გამოსახულების მნიშვნელობათა სიმრავლე.",
     options: ["$[0; 1)$", "$[0; 1]$", "$(0; 1)$", "$(0; 1]$", "$[0; +\\infty)$", "$[1; +\\infty)$"],
     correct: 4,
-    tags: ["domain", "inequality"]
+    tags: ["domain", "inequality"],
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -183,7 +327,15 @@ quizData = [
     question: "$90^\\circ$-იანი ორწახნაგა კუთხის თითოეულ წახნაგზე მოცემულია თითო წრფე. თითოეული მათგანი ორწახნაგა კუთხის წიბოს კვეთს $45^\\circ$-იანი კუთხით. რისი ტოლია ამ წრფეებს შორის კუთხე?",
     options: ["$0^\\circ$", "$30^\\circ$", "$45^\\circ$", "$60^\\circ$", "$90^\\circ$", "$180^\\circ$"],
     correct: 3,
-    tags: ["spatial angles"]
+    tags: ["spatial angles"],
+    area: "solid",
+    topics: ["angles-space","cross-sections"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -191,7 +343,15 @@ quizData = [
     question: "$\\dfrac{\ tg \\alpha + \ tg(45^\\circ - \\alpha)}{1 - \ tg \\alpha \\cdot \ tg(45^\\circ - \\alpha)} - \ tg \\alpha \\cdot \ tg \\beta - (\ tg \\alpha + \ tg \\beta) \\cdot \ ctg(\\alpha + \\beta) =$",
     options: ["$0$", "$1$", "$2$", "$3$", "$4$", "$5$"],
     correct: 0,
-    tags: ["identities", "simplification"]
+    tags: ["identities", "simplification"],
+    area: "algebra",
+    topics: ["sum-formulas"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //21
@@ -199,7 +359,15 @@ quizData = [
     question: "იპოვეთ $8\ tg^2 x + 18\ ctg^2(-x)$ გამოსახულების უმცირესი შესაძლო მნიშვნელობა?",
     options: ["$0$", "$36$", "$18$", "$8$", "$28$", "$24$"],
     correct: 5,
-    tags: ["minimum", "expressions"]
+    tags: ["minimum", "expressions"],
+    area: "algebra",
+    topics: [],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //22
@@ -207,7 +375,15 @@ quizData = [
     question: "ცნობილია, რომ $\ ctg\\left(\\dfrac{\\pi}{2} + \\alpha\\right) = 2$. რისი ტოლია $\\sin4 \\alpha$?",
     options: ["$-\\dfrac{24}{25}$", "$-\\dfrac{4}{5}$", "$-\\dfrac{40}{34}$", "$-\\dfrac{2}{5}$", "$\\dfrac{4}{5}$", "$\\dfrac{24}{25}$"],
     correct: 5,
-    tags: ["powers", "trigonometry"]
+    tags: ["powers", "trigonometry"],
+    area: "algebra",
+    topics: ["trig-identities"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //23
@@ -222,7 +398,15 @@ quizData = [
       "შეუძლებელია დადგენა."
     ],
     correct: 4,
-    tags: ["spatial geometry", "distance"]
+    tags: ["spatial geometry", "distance"],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //24
@@ -237,7 +421,15 @@ quizData = [
     "$-\\dfrac{\\sqrt{2 - \\sqrt{2 - 2a}}}{2}$"
   ],
   correct: 0,
-  tags: ["cos identity", "angle reduction"]
+  tags: ["cos identity", "angle reduction"],
+    area: "algebra",
+    topics: ["reduction"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //25
@@ -245,6 +437,14 @@ quizData = [
     question: "სიბრტყის გარეთ აღებულია სამი $A, B$ და $C$ წერტილები (შესაძლოა წერტილები არ იყოს სიბრტყის ერთ მხარეს). ეს წერტილები დაშორებული არიან სიბრტყიდან $1$, $2$ და $3$ ერთეულით. ჩამოთვლილთაგან რისი ტოლი არ შეიძლება იყოს მანძილი $ABC$ სამკუთხედის მედიანების გადაკვეთის წერტილიდან სიბრტყემდე?",
     options: ["$2$", "$\\dfrac{4}{3}$", "$\\dfrac{2}{3}$", "$0$", "$1$", "ყველა წინა პასუხი სწორია და შესაძლებელია."],
     correct: 4,
-    tags: ["spatial geometry", "median"]
+    tags: ["spatial geometry", "median"],
+    area: "geometry",
+    topics: ["notable-points"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -4,7 +4,15 @@ quizData = [
     question: "<strong>(3 ქულა)</strong> ამოხსენით განტოლება ($\\{x\\}$ არის $x$-ის წილადი ნაწილი; $[x]$ არის $x$-ის მთელი ნაწილი): $\\{x + 1\\} = x + [-99{,}9]$.",
     options: [],
     tags: [],
-    solution: "$[-99{,}9] = -100$ და $\\{x + 1\\} = \\{x\\}$. განტოლება: $\\{x\\} = x - 100$.<br><br>ვთქვათ, $x = n + f$, სადაც $n = [x]$, $f = \\{x\\} \\in [0;\\ 1)$. მაშინ $f = n + f - 100$, ე.ი. $n = 100$.<br><br>მაშასადამე, ამონახსნია ნებისმიერი $x$, რომლის მთელი ნაწილი $100$-ია.<br><br><strong>პასუხი:</strong> $x \\in [100;\\ 101)$."
+    solution: "$[-99{,}9] = -100$ და $\\{x + 1\\} = \\{x\\}$. განტოლება: $\\{x\\} = x - 100$.<br><br>ვთქვათ, $x = n + f$, სადაც $n = [x]$, $f = \\{x\\} \\in [0;\\ 1)$. მაშინ $f = n + f - 100$, ე.ი. $n = 100$.<br><br>მაშასადამე, ამონახსნია ნებისმიერი $x$, რომლის მთელი ნაწილი $100$-ია.<br><br><strong>პასუხი:</strong> $x \\in [100;\\ 101)$.",
+    area: "algebra",
+    topics: ["integer-part"],
+    grade: 9,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -12,7 +20,15 @@ quizData = [
     question: "<strong>(3 ქულა)</strong> ცნობილია, რომ $f(x) = -x^2 + x - 1$ ფუნქციის განსაზღვრის არე ემთხვევა $\\dfrac{x^2 + 6x + 8}{-x^2 + x - 9} \\ge 0$ უტოლობის ამონახსენთა სიმრავლეს. იპოვეთ ამ არეზე $f(x)$ ფუნქციის უდიდესი მნიშვნელობა.",
     options: [],
     tags: [],
-    solution: "მნიშვნელი $-x^2 + x - 9 < 0$ ნებისმიერი $x$-ისთვის ($D = 1 - 36 < 0$). ამიტომ წილადი $\\ge 0$, როცა $x^2 + 6x + 8 \\le 0$, ანუ $(x + 2)(x + 4) \\le 0$: $x \\in [-4;\\ -2]$.<br><br>$f(x) = -x^2 + x - 1$ პარაბოლის წვეროა $x = \\dfrac{1}{2}$; $[-4;\\ -2]$ შუალედზე ფუნქცია ზრდადია, ამიტომ უდიდესი მნიშვნელობაა $f(-2) = -4 - 2 - 1 = -7$.<br><br><strong>პასუხი:</strong> $-7$."
+    solution: "მნიშვნელი $-x^2 + x - 9 < 0$ ნებისმიერი $x$-ისთვის ($D = 1 - 36 < 0$). ამიტომ წილადი $\\ge 0$, როცა $x^2 + 6x + 8 \\le 0$, ანუ $(x + 2)(x + 4) \\le 0$: $x \\in [-4;\\ -2]$.<br><br>$f(x) = -x^2 + x - 1$ პარაბოლის წვეროა $x = \\dfrac{1}{2}$; $[-4;\\ -2]$ შუალედზე ფუნქცია ზრდადია, ამიტომ უდიდესი მნიშვნელობაა $f(-2) = -4 - 2 - 1 = -7$.<br><br><strong>პასუხი:</strong> $-7$.",
+    area: "algebra",
+    topics: ["quadratic-ineq","interval-method","max-min"],
+    grade: 9,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -20,7 +36,15 @@ quizData = [
     question: "<strong>(3 ქულა)</strong> $ABCD$ მართკუთხედში $AB$ მცირე გვერდი $4$-ის ტოლია. $A$ კუთხის ბისექტრისა $BC$ გვერდს კვეთს $K$ წერტილში, სადაც $K$ წერტილი $BC$ გვერდის შუაწერტილია. $AK$ და $BD$ მონაკვეთები $M$ წერტილში იკვეთებიან. იპოვეთ:<br>ა) $ABCD$ მართკუთხედის ფართობი;<br>ბ) $ABKD$ ტრაპეციის ფართობი;<br>გ) $AMD$ სამკუთხედის ფართობი.",
     options: [],
     tags: [],
-    solution: "$ABK$ სამკუთხედში $\\angle B = 90^\\circ$, $\\angle BAK = 45^\\circ$, ამიტომ $BK = AB = 4$ და $BC = 2BK = 8$.<br><br>ა) $S_{ABCD} = 4 \\cdot 8 = 32$.<br><br>ბ) $ABKD$ ტრაპეციის ფუძეებია $AD = 8$, $BK = 4$, სიმაღლე $AB = 4$: $S = \\dfrac{8 + 4}{2} \\cdot 4 = 24$.<br><br>გ) $BK \\parallel AD$, ამიტომ $MBK \\sim MDA$ და $\\dfrac{BM}{MD} = \\dfrac{BK}{AD} = \\dfrac{1}{2}$, ე.ი. $MD = \\dfrac{2}{3}BD$. $S_{AMD} = \\dfrac{2}{3}S_{ABD} = \\dfrac{2}{3} \\cdot 16 = \\dfrac{32}{3}$.<br><br><strong>პასუხი:</strong> ა) $32$; ბ) $24$; გ) $\\dfrac{32}{3}$."
+    solution: "$ABK$ სამკუთხედში $\\angle B = 90^\\circ$, $\\angle BAK = 45^\\circ$, ამიტომ $BK = AB = 4$ და $BC = 2BK = 8$.<br><br>ა) $S_{ABCD} = 4 \\cdot 8 = 32$.<br><br>ბ) $ABKD$ ტრაპეციის ფუძეებია $AD = 8$, $BK = 4$, სიმაღლე $AB = 4$: $S = \\dfrac{8 + 4}{2} \\cdot 4 = 24$.<br><br>გ) $BK \\parallel AD$, ამიტომ $MBK \\sim MDA$ და $\\dfrac{BM}{MD} = \\dfrac{BK}{AD} = \\dfrac{1}{2}$, ე.ი. $MD = \\dfrac{2}{3}BD$. $S_{AMD} = \\dfrac{2}{3}S_{ABD} = \\dfrac{2}{3} \\cdot 16 = \\dfrac{32}{3}$.<br><br><strong>პასუხი:</strong> ა) $32$; ბ) $24$; გ) $\\dfrac{32}{3}$.",
+    area: "geometry",
+    topics: ["rhombus-rect-sq","similar-figures","area-ratios"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -28,7 +52,15 @@ quizData = [
     question: "<strong>(4 ქულა)</strong> ტოლფერდა სამკუთხედში ჩახაზული წრეწირის რადიუსი ფუძეზე დაშვებული სიმაღლის $\\dfrac{3}{8}$ ნაწილია. იპოვეთ ამ სამკუთხედის ფართობი და მასზე შემოხაზული წრის რადიუსი, თუ სამკუთხედის პერიმეტრი $16$-ის ტოლია.",
     options: [],
     tags: [],
-    solution: "ვთქვათ, ფუძე $2a$, ფერდი $b$, სიმაღლე $h$, ნახევარპერიმეტრი $p = 8$. ფართობი: $S = ah = rp = \\dfrac{3h}{8} \\cdot 8 = 3h$, საიდანაც $a = 3$, ფუძე $6$.<br><br>$6 + 2b = 16$, $b = 5$; $h = \\sqrt{25 - 9} = 4$, $S = 3 \\cdot 4 = 12$.<br><br>შემოხაზული წრის რადიუსი: $R = \\dfrac{abc}{4S} = \\dfrac{5 \\cdot 5 \\cdot 6}{48} = \\dfrac{25}{8}$.<br><br><strong>პასუხი:</strong> $S = 12$, $R = \\dfrac{25}{8}$."
+    solution: "ვთქვათ, ფუძე $2a$, ფერდი $b$, სიმაღლე $h$, ნახევარპერიმეტრი $p = 8$. ფართობი: $S = ah = rp = \\dfrac{3h}{8} \\cdot 8 = 3h$, საიდანაც $a = 3$, ფუძე $6$.<br><br>$6 + 2b = 16$, $b = 5$; $h = \\sqrt{25 - 9} = 4$, $S = 3 \\cdot 4 = 12$.<br><br>შემოხაზული წრის რადიუსი: $R = \\dfrac{abc}{4S} = \\dfrac{5 \\cdot 5 \\cdot 6}{48} = \\dfrac{25}{8}$.<br><br><strong>პასუხი:</strong> $S = 12$, $R = \\dfrac{25}{8}$.",
+    area: "geometry",
+    topics: ["isosceles","inscribed-circum","area-formulas"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -36,7 +68,15 @@ quizData = [
     question: "<strong>(4 ქულა)</strong> ფუნქცია $f(x)$ არის <strong>კენტი ფუნქცია</strong>, რომლის განსაზღვრის არეა მთელი რიცხვთა ღერძი. არგუმენტის არადადებითი მნიშვნელობებისთვის ($x \\le 0$) ფუნქცია განსაზღვრულია ფორმულით: $f(x) = x^2 + 4x$. ააგეთ $f(x)$ ფუნქციის გრაფიკი.",
     options: [],
     tags: [],
-    solution: "კენტი ფუნქციისთვის $f(-x) = -f(x)$. როცა $x > 0$: $f(x) = -f(-x) = -\\left((-x)^2 + 4(-x)\\right) = -x^2 + 4x$.<br><br>მაშასადამე, $f(x) = \\begin{cases} x^2 + 4x, & x \\le 0 \\\\ -x^2 + 4x, & x > 0 \\end{cases}$<br><br>გრაფიკი: $x \\le 0$-ზე — პარაბოლის ნაწილი წვეროთი $(-2;\\ -4)$, რომელიც $Ox$-ს კვეთს $-4$ და $0$ წერტილებში; $x > 0$-ზე — სიმეტრიული (სათავის მიმართ) ნაწილი წვეროთი $(2;\\ 4)$, რომელიც $Ox$-ს კვეთს $4$-ში. გრაფიკი სიმეტრიულია კოორდინატთა სათავის მიმართ."
+    solution: "კენტი ფუნქციისთვის $f(-x) = -f(x)$. როცა $x > 0$: $f(x) = -f(-x) = -\\left((-x)^2 + 4(-x)\\right) = -x^2 + 4x$.<br><br>მაშასადამე, $f(x) = \\begin{cases} x^2 + 4x, & x \\le 0 \\\\ -x^2 + 4x, & x > 0 \\end{cases}$<br><br>გრაფიკი: $x \\le 0$-ზე — პარაბოლის ნაწილი წვეროთი $(-2;\\ -4)$, რომელიც $Ox$-ს კვეთს $-4$ და $0$ წერტილებში; $x > 0$-ზე — სიმეტრიული (სათავის მიმართ) ნაწილი წვეროთი $(2;\\ 4)$, რომელიც $Ox$-ს კვეთს $4$-ში. გრაფიკი სიმეტრიულია კოორდინატთა სათავის მიმართ.",
+    area: "algebra",
+    topics: ["function-props","quadratic-func"],
+    grade: 9,
+    difficulty: 3,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -44,7 +84,15 @@ quizData = [
     question: "<strong>(4 ქულა)</strong> $ABCD$ პარალელოგრამში $AB$ და $BC$ გვერდებზე აღებულია $M$ და $N$ შუა წერტილები ($AM = MB$ და $BN = NC$). $AN$ და $DM$ მონაკვეთები $K$ წერტილში იკვეთებიან. იპოვეთ $NKD$ სამკუთხედის ფართობი, თუ $AB = 5$, $BC = 13$ და $BD = 12$.",
     options: [],
     tags: [],
-    solution: "$ABD$ სამკუთხედში $AB^2 + BD^2 = 25 + 144 = 169 = AD^2$, ამიტომ $\\angle ABD = 90^\\circ$, $S_{ABD} = 30$, $S_{ABCD} = 60$.<br><br>$DM$ წრფემ $CB$ წრფე გადაკვეთოს $P$ წერტილში. $AMD$ და $BMP$ ტოლია ($AM = MB$), ამიტომ $BP = AD = 13$ და $PN = 13 + 6{,}5 = 19{,}5$.<br><br>$AD \\parallel NP$, ამიტომ $KAD \\sim KNP$: $\\dfrac{AK}{KN} = \\dfrac{AD}{NP} = \\dfrac{13}{19{,}5} = \\dfrac{2}{3}$.<br><br>$S_{AND} = \\dfrac{1}{2}S_{ABCD} = 30$ ($N$ ძევს $BC$-ზე). $S_{NKD} = \\dfrac{KN}{AN} \\cdot S_{AND} = \\dfrac{3}{5} \\cdot 30 = 18$.<br><br><strong>პასუხი:</strong> $18$."
+    solution: "$ABD$ სამკუთხედში $AB^2 + BD^2 = 25 + 144 = 169 = AD^2$, ამიტომ $\\angle ABD = 90^\\circ$, $S_{ABD} = 30$, $S_{ABCD} = 60$.<br><br>$DM$ წრფემ $CB$ წრფე გადაკვეთოს $P$ წერტილში. $AMD$ და $BMP$ ტოლია ($AM = MB$), ამიტომ $BP = AD = 13$ და $PN = 13 + 6{,}5 = 19{,}5$.<br><br>$AD \\parallel NP$, ამიტომ $KAD \\sim KNP$: $\\dfrac{AK}{KN} = \\dfrac{AD}{NP} = \\dfrac{13}{19{,}5} = \\dfrac{2}{3}$.<br><br>$S_{AND} = \\dfrac{1}{2}S_{ABCD} = 30$ ($N$ ძევს $BC$-ზე). $S_{NKD} = \\dfrac{KN}{AN} \\cdot S_{AND} = \\dfrac{3}{5} \\cdot 30 = 18$.<br><br><strong>პასუხი:</strong> $18$.",
+    area: "geometry",
+    topics: ["parallelogram","area-ratios"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["aux-construct"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -52,6 +100,14 @@ quizData = [
     question: "<strong>(4 ქულა)</strong> იპოვეთ $a$ პარამეტრის ყველა ის მნიშვნელობა, რომელთათვისაც $\\left|(x + 1)^2 - 2|x + 1| - 6\\right| = a$ განტოლებას აქვს ოთხი ამონახსნი.",
     options: [],
     tags: [],
-    solution: "აღვნიშნოთ $t = |x + 1| \\ge 0$; $g(t) = t^2 - 2t - 6 = (t - 1)^2 - 7$. ყოველი $t > 0$ იძლევა ორ $x$-ს, $t = 0$ — ერთს.<br><br>$h(t) = |g(t)|$ ($t \\ge 0$): $h(0) = 6$, იზრდება $7$-მდე ($t = 1$), კლებულობს $0$-მდე ($t = 1 + \\sqrt{7}$), შემდეგ უსასრულოდ იზრდება.<br><br>$h(t) = a$ ფესვების რაოდენობა:<br>$0 < a < 6$: ორი დადებითი $t$ → $4$ ამონახსნი ✓;<br>$a = 6$: $t = 0$ და ორი დადებითი → $5$;<br>$6 < a < 7$: სამი დადებითი → $6$;<br>$a = 7$: $t = 1$ და ერთი $t > 1 + \\sqrt{7}$ → $4$ ✓;<br>$a > 7$ ან $a = 0$: ერთი დადებითი $t$ → $2$.<br><br><strong>პასუხი:</strong> $a \\in (0;\\ 6) \\cup \\{7\\}$."
+    solution: "აღვნიშნოთ $t = |x + 1| \\ge 0$; $g(t) = t^2 - 2t - 6 = (t - 1)^2 - 7$. ყოველი $t > 0$ იძლევა ორ $x$-ს, $t = 0$ — ერთს.<br><br>$h(t) = |g(t)|$ ($t \\ge 0$): $h(0) = 6$, იზრდება $7$-მდე ($t = 1$), კლებულობს $0$-მდე ($t = 1 + \\sqrt{7}$), შემდეგ უსასრულოდ იზრდება.<br><br>$h(t) = a$ ფესვების რაოდენობა:<br>$0 < a < 6$: ორი დადებითი $t$ → $4$ ამონახსნი ✓;<br>$a = 6$: $t = 0$ და ორი დადებითი → $5$;<br>$6 < a < 7$: სამი დადებითი → $6$;<br>$a = 7$: $t = 1$ და ერთი $t > 1 + \\sqrt{7}$ → $4$ ✓;<br>$a > 7$ ან $a = 0$: ერთი დადებითი $t$ → $2$.<br><br><strong>პასუხი:</strong> $a \\in (0;\\ 6) \\cup \\{7\\}$.",
+    area: "algebra",
+    topics: ["abs-eq","quadratic-func"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter","absolute","graphical"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

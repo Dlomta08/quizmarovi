@@ -3,60 +3,140 @@ quizData = [
   {
     question: "$y = (2x - 1)^{50}$; $x = 0$, $x = 1$ და $y = 0$ განტოლებებით მოცემული წირებით შემოსაზღვრული ფიგურა ბრუნავს $Ox$ ღერძის გარშემო. იპოვეთ მიღებული სხეულის მოცულობა.",
     options: [],
-    tags: []
+    tags: [],
+    area: "calculus",
+    topics: ["definite-integral","function-props","linear-func"],
+    grade: 11,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //2
   {
     question: "კონსის ფუძის რადიუსია $2$სმ. ამ კონუსში მოიძებნება სამი წყვილ-წყვილად ურთიერთმართობული მსახველი. იპოვეთ მანძილი კონუსის ფუძის ცენტრიდან მსახველამდე.",
     options: [],
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["cone"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //3
   {
     question: "გამოთვალეთ: ა) $\\lim\\limits_{x \\to \\infty} \\frac{\\ln x}{\\sqrt[3]{x}}$ \tბ) $\\lim\\limits_{x \\to \ 1} \\frac{1 - x + \\ln x}{1 + \\cos(\\pi x)}$",
     options: [],
-    tags: []
+    tags: [],
+    area: "calculus",
+    topics: ["func-limit","nth-roots","logarithms"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //4
   {
     question: "მოცემულია $A(1;1;0)$, $B(-1;2;8)$ და $C(0;1;3)$ წერტილები. იპოვეთ $ABC$ სიბრტყეზე მდებარე ერთი რომელიმე წერტილი, რომლის კოორდინატების ჯამი $1$-ის ტოლია.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //5
   {
     question: "$\\frac{x^2}{a^2} + \\frac{y^2}{10} = 1$ და $y^2 = -12x$ ფორმულებით მოცემულ წირებს ერთადერთი საერთო წერტილი აქვთ. იპოვეთ მანძილი ამ პარაბოლის ფოკუსიდან ამ ელიფსის დირექტრისამდე.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["conics","quadratic-func"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //6
   {
     question: "ცილინდრის ზედა ფუძის წრეწირზე აღებულია $A$ წერტილი, ქვედა ფუძის წრეწირზე აღებულია $B$ წერტილი. $AB = 2\\sqrt{3}$სმ. $AB$ წრფე ცილინდრის ფუძესთან ადგენს $60^\\circ$-ის ტოლ კუთხეს. $A$ და $B$ წერტილებზე გავლებულია ცილინდრის ღერძის პარალელური კვეთა. იპოვეთ მანძილი ღერძიდან ამ კვეთამდე, თუ ცილინდრის მოცულობაა $42\\pi$სმ$^3$.",
     options: [],
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["cylinder","cross-sections","volume-surface"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //7
   {
     question: "მოცემულია $A(5;0)$ წერტილი. $B$ წერტილი $y = 2\\sqrt{x}$ ფუნქციის გრაფიკზე მდებარე წერტილებს შორის ისეთი წერტილია, რომ $AB$ მანძილი არის მინიმუმალური შესაძლო. იპოვეთ $B$ წერტილზე გავლებული ამ ფუნქციის გრაფიკის მხების ფორმულა.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 11,
+    difficulty: 3,
+    type: ["graph"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //8
   {
     question: "იპოვეთ: $\\int x^2 e^x dx$",
     options: [],
-    tags: []
+    tags: [],
+    area: "calculus",
+    topics: ["definite-integral"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //9
   {
     question: "$A$ და $B$ წერტილები მდებარეობს $y = \\log_2 x$ ფუნქციის გრაფიკზე. $AB$ მონაკვეთის შუაწერტილის კოორდინატებია $(6;2)$. იპოვეთ $Ox$ ღერძზე $AB$ მონაკვეთის გეგმილის სიგრძე.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["logarithms","lines-angles"],
+    grade: 11,
+    difficulty: 3,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //10
   {
     question: "რისი ტოლი უნდა იყოს ცილინდრის ფუძის რადიუსი, რომლის მოცულობაა $199$მ$^3$ და რომელსაც აქვს მაქსიმალური შესაძლო სრული ზედაპირის ფართობი?",
     options: [],
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["cylinder","max-min","volume-surface"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

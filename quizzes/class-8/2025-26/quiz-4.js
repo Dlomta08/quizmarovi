@@ -5,7 +5,15 @@ quizData = [
     options: ["$2\\sqrt{6}$", "$\\sqrt{26}$", "$\\sqrt{24}$", "$6\\sqrt{2}$", "$7$", "$8$"],
     correct: 1,
     tags: [],
-    solution: "$x^2 = 5x - 6 \\Leftrightarrow x^2 - 5x + 6 = 0 \\Leftrightarrow x = 2$ ან $x = 3$. გადაკვეთის წერტილები: $(2;\\ 4)$ და $(3;\\ 9)$.<br><br>მანძილი: $\\sqrt{(3 - 2)^2 + (9 - 4)^2} = \\sqrt{26}$.<br><br><strong>პასუხი:</strong> ბ) $\\sqrt{26}$."
+    solution: "$x^2 = 5x - 6 \\Leftrightarrow x^2 - 5x + 6 = 0 \\Leftrightarrow x = 2$ ან $x = 3$. გადაკვეთის წერტილები: $(2;\\ 4)$ და $(3;\\ 9)$.<br><br>მანძილი: $\\sqrt{(3 - 2)^2 + (9 - 4)^2} = \\sqrt{26}$.<br><br><strong>პასუხი:</strong> ბ) $\\sqrt{26}$.",
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -14,7 +22,15 @@ quizData = [
     options: ["$1$", "$3$", "$5$", "$6$", "$7$", "$8$"],
     correct: 4,
     tags: [],
-    solution: "ჩავსვათ $x = 1$: $1 - a + 6 = 0$, $a = 7$.<br><br><strong>პასუხი:</strong> ე) $7$."
+    solution: "ჩავსვათ $x = 1$: $1 - a + 6 = 0$, $a = 7$.<br><br><strong>პასუხი:</strong> ე) $7$.",
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -23,7 +39,15 @@ quizData = [
     options: ["$0$", "$1$", "$2$", "$3$", "$5$", "$7$"],
     correct: 0,
     tags: [],
-    solution: "$y^2 = t$: $t^2 - 5t + 1 = 0$, ორივე ფესვი დადებითია ($t_1 + t_2 = 5$, $t_1t_2 = 1$). ყოველი $t$ იძლევა ორ ფესვს: $y = \\pm\\sqrt{t}$, რომელთა ჯამი $0$-ია.<br><br>ფესვების ჯამი: $0$.<br><br><strong>პასუხი:</strong> ა) $0$."
+    solution: "$y^2 = t$: $t^2 - 5t + 1 = 0$, ორივე ფესვი დადებითია ($t_1 + t_2 = 5$, $t_1t_2 = 1$). ყოველი $t$ იძლევა ორ ფესვს: $y = \\pm\\sqrt{t}$, რომელთა ჯამი $0$-ია.<br><br>ფესვების ჯამი: $0$.<br><br><strong>პასუხი:</strong> ა) $0$.",
+    area: "algebra",
+    topics: ["higher-degree"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["substitution"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -32,7 +56,15 @@ quizData = [
     options: ["$-1$", "$0$", "$1$", "$2$", "$30^\\circ$", "$90^\\circ$"],
     correct: 2,
     tags: [],
-    solution: "$\\sin 65^\\circ = \\cos 25^\\circ$, ამიტომ $\\sin^2 25^\\circ + \\sin^2 65^\\circ = \\sin^2 25^\\circ + \\cos^2 25^\\circ = 1$.<br><br><strong>პასუხი:</strong> გ) $1$."
+    solution: "$\\sin 65^\\circ = \\cos 25^\\circ$, ამიტომ $\\sin^2 25^\\circ + \\sin^2 65^\\circ = \\sin^2 25^\\circ + \\cos^2 25^\\circ = 1$.<br><br><strong>პასუხი:</strong> გ) $1$.",
+    area: "geometry",
+    topics: ["acute-trig"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -41,7 +73,15 @@ quizData = [
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$7$"],
     correct: 0,
     tags: [],
-    solution: "მრიცხველი და მნიშვნელი გავყოთ $\\cos\\alpha$-ზე: $\\dfrac{3\\operatorname{tg}\\alpha + 2}{5\\operatorname{tg}\\alpha - 4} = \\dfrac{9 + 2}{15 - 4} = 1$.<br><br><strong>პასუხი:</strong> ა) $1$."
+    solution: "მრიცხველი და მნიშვნელი გავყოთ $\\cos\\alpha$-ზე: $\\dfrac{3\\operatorname{tg}\\alpha + 2}{5\\operatorname{tg}\\alpha - 4} = \\dfrac{9 + 2}{15 - 4} = 1$.<br><br><strong>პასუხი:</strong> ა) $1$.",
+    area: "geometry",
+    topics: ["acute-trig"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -50,7 +90,15 @@ quizData = [
     options: ["$\\dfrac{1}{3}$", "$\\dfrac{3}{7}$", "$\\dfrac{11}{15}$", "$\\dfrac{13}{17}$", "$\\dfrac{7}{9}$", "$\\dfrac{10}{17}$"],
     correct: 2,
     tags: [],
-    solution: "უმცირესი კუთხე უმცირესი გვერდის ($7$) მოპირდაპირეა. კოსინუსების თეორემით: $\\cos\\alpha = \\dfrac{9^2 + 10^2 - 7^2}{2 \\cdot 9 \\cdot 10} = \\dfrac{132}{180} = \\dfrac{11}{15}$.<br><br><strong>პასუხი:</strong> გ) $\\dfrac{11}{15}$."
+    solution: "უმცირესი კუთხე უმცირესი გვერდის ($7$) მოპირდაპირეა. კოსინუსების თეორემით: $\\cos\\alpha = \\dfrac{9^2 + 10^2 - 7^2}{2 \\cdot 9 \\cdot 10} = \\dfrac{132}{180} = \\dfrac{11}{15}$.<br><br><strong>პასუხი:</strong> გ) $\\dfrac{11}{15}$.",
+    area: "geometry",
+    topics: ["law-cos-sin"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -59,7 +107,15 @@ quizData = [
     options: ["$1$", "$2$", "$3$", "$4$", "$6$", "შეუძლებელია განსაზღვრა"],
     correct: 3,
     tags: [],
-    solution: "$3x^2 - 7xy + 4y^2 = (x - y)(3x - 4y) = 0$.<br><br>1) $x = y$: $x^2 = 5$, ორი წყვილი $(\\pm\\sqrt{5};\\ \\pm\\sqrt{5})$.<br>2) $x = \\dfrac{4y}{3}$: $\\dfrac{4y^2}{3} = 5$, $y^2 = \\dfrac{15}{4}$, ორი წყვილი.<br><br>სულ $4$ წყვილი.<br><br><strong>პასუხი:</strong> დ) $4$."
+    solution: "$3x^2 - 7xy + 4y^2 = (x - y)(3x - 4y) = 0$.<br><br>1) $x = y$: $x^2 = 5$, ორი წყვილი $(\\pm\\sqrt{5};\\ \\pm\\sqrt{5})$.<br>2) $x = \\dfrac{4y}{3}$: $\\dfrac{4y^2}{3} = 5$, $y^2 = \\dfrac{15}{4}$, ორი წყვილი.<br><br>სულ $4$ წყვილი.<br><br><strong>პასუხი:</strong> დ) $4$.",
+    area: "algebra",
+    topics: ["nonlinear-systems"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -68,7 +124,15 @@ quizData = [
     options: ["$10$ კმ/სთ", "$16$ კმ/სთ", "$20$ კმ/სთ", "$24$ კმ/სთ", "$30$ კმ/სთ", "$36$ კმ/სთ"],
     correct: 4,
     tags: [],
-    solution: "ვთქვათ, მოტოციკლისტის სიჩქარეა $u$, ველოსიპედისტის $v$, შეხვდნენ $t$ საათში. შეხვედრის შემდეგ მოტოციკლისტმა გაიარა ველოსიპედისტის მიერ უკვე გავლილი გზა: $vt = u \\cdot 1$; ველოსიპედისტმა — მოტოციკლისტის გზა: $ut = 4v$.<br><br>გავყოთ: $\\dfrac{v}{u} = \\dfrac{u}{4v}$, $u^2 = 4v^2$, $u = 2v$; მაშინ $t = \\dfrac{u}{v} = 2$.<br><br>$(u + v) \\cdot 2 = 60$, $u + v = 30$ კმ/სთ.<br><br><strong>პასუხი:</strong> ე) $30$ კმ/სთ."
+    solution: "ვთქვათ, მოტოციკლისტის სიჩქარეა $u$, ველოსიპედისტის $v$, შეხვდნენ $t$ საათში. შეხვედრის შემდეგ მოტოციკლისტმა გაიარა ველოსიპედისტის მიერ უკვე გავლილი გზა: $vt = u \\cdot 1$; ველოსიპედისტმა — მოტოციკლისტის გზა: $ut = 4v$.<br><br>გავყოთ: $\\dfrac{v}{u} = \\dfrac{u}{4v}$, $u^2 = 4v^2$, $u = 2v$; მაშინ $t = \\dfrac{u}{v} = 2$.<br><br>$(u + v) \\cdot 2 = 60$, $u + v = 30$ კმ/სთ.<br><br><strong>პასუხი:</strong> ე) $30$ კმ/სთ.",
+    area: "algebra",
+    topics: ["word-problems"],
+    grade: 8,
+    difficulty: 2,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -77,7 +141,15 @@ quizData = [
     options: ["$0$", "$1$", "$2$", "$\\sin\\alpha$", "$\\cos\\alpha$", "$\\operatorname{tg}\\alpha$"],
     correct: 5,
     tags: [],
-    solution: "$x^2 - x\\cos\\alpha - x\\sin\\alpha + \\sin\\alpha\\cos\\alpha = 0 \\Leftrightarrow (x - \\sin\\alpha)(x - \\cos\\alpha) = 0$.<br><br>ფესვებია $\\sin\\alpha$ და $\\cos\\alpha$, ამიტომ $\\dfrac{x_1}{x_2}$ შეიძლება იყოს $\\dfrac{\\sin\\alpha}{\\cos\\alpha} = \\operatorname{tg}\\alpha$.<br><br><strong>პასუხი:</strong> ვ) $\\operatorname{tg}\\alpha$."
+    solution: "$x^2 - x\\cos\\alpha - x\\sin\\alpha + \\sin\\alpha\\cos\\alpha = 0 \\Leftrightarrow (x - \\sin\\alpha)(x - \\cos\\alpha) = 0$.<br><br>ფესვებია $\\sin\\alpha$ და $\\cos\\alpha$, ამიტომ $\\dfrac{x_1}{x_2}$ შეიძლება იყოს $\\dfrac{\\sin\\alpha}{\\cos\\alpha} = \\operatorname{tg}\\alpha$.<br><br><strong>პასუხი:</strong> ვ) $\\operatorname{tg}\\alpha$.",
+    area: "algebra",
+    topics: ["quadratic-eq","acute-trig"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -86,7 +158,15 @@ quizData = [
     options: ["$\\dfrac{7}{3}$", "$\\dfrac{9}{4}$", "$\\sqrt{2}$", "$\\sqrt{5}$", "$\\sqrt{6}$", "$\\sqrt{7}$"],
     correct: 2,
     tags: [],
-    solution: "მახვილი კუთხეები $\\alpha$ და $90^\\circ - \\alpha$: $\\cos\\alpha + \\cos(90^\\circ - \\alpha) = \\cos\\alpha + \\sin\\alpha$.<br><br>$(\\cos\\alpha + \\sin\\alpha)^2 = 1 + 2\\sin\\alpha\\cos\\alpha \\le 2$ (რადგან $2\\sin\\alpha\\cos\\alpha \\le \\sin^2\\alpha + \\cos^2\\alpha = 1$), ტოლობით, როცა $\\alpha = 45^\\circ$. ამიტომ ჯამი $\\le \\sqrt{2}$, და $\\sqrt{2}$ მიიღწევა; დანარჩენი ვარიანტები $\\sqrt{2}$-ზე მეტია.<br><br><strong>პასუხი:</strong> გ) $\\sqrt{2}$."
+    solution: "მახვილი კუთხეები $\\alpha$ და $90^\\circ - \\alpha$: $\\cos\\alpha + \\cos(90^\\circ - \\alpha) = \\cos\\alpha + \\sin\\alpha$.<br><br>$(\\cos\\alpha + \\sin\\alpha)^2 = 1 + 2\\sin\\alpha\\cos\\alpha \\le 2$ (რადგან $2\\sin\\alpha\\cos\\alpha \\le \\sin^2\\alpha + \\cos^2\\alpha = 1$), ტოლობით, როცა $\\alpha = 45^\\circ$. ამიტომ ჯამი $\\le \\sqrt{2}$, და $\\sqrt{2}$ მიიღწევა; დანარჩენი ვარიანტები $\\sqrt{2}$-ზე მეტია.<br><br><strong>პასუხი:</strong> გ) $\\sqrt{2}$.",
+    area: "geometry",
+    topics: ["acute-trig"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["estimation"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 11
@@ -95,7 +175,15 @@ quizData = [
     options: ["$-3$", "$-2$", "$0$", "$1$", "$2$", "$3$"],
     correct: 4,
     tags: [],
-    solution: "აღვნიშნოთ $t = x^2 + 3x + 2$: $(t - 1)(t + 1) + 1 = t^2 = 0$, ე.ი. $t = 0$.<br><br>$x^2 + 3x + 2 = 0 \\Leftrightarrow x = -1$ ან $x = -2$. ნამრავლი: $2$.<br><br><strong>პასუხი:</strong> ე) $2$."
+    solution: "აღვნიშნოთ $t = x^2 + 3x + 2$: $(t - 1)(t + 1) + 1 = t^2 = 0$, ე.ი. $t = 0$.<br><br>$x^2 + 3x + 2 = 0 \\Leftrightarrow x = -1$ ან $x = -2$. ნამრავლი: $2$.<br><br><strong>პასუხი:</strong> ე) $2$.",
+    area: "algebra",
+    topics: ["higher-degree"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["substitution"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12
@@ -104,7 +192,15 @@ quizData = [
     options: ["$-3$", "$-1$", "$0$", "$1$", "$3$", "$8$"],
     correct: 5,
     tags: [],
-    solution: "$\\dfrac{x^2 - x - 2}{x - 2} = \\dfrac{(x - 2)(x + 1)}{x - 2} = x + 1$, $x \\ne 2$.<br><br>$|x + 1| = |2x + 5|$: $x + 1 = 2x + 5 \\Rightarrow x = -4$; $x + 1 = -2x - 5 \\Rightarrow x = -2$. ორივე დასაშვებია. ნამრავლი: $8$.<br><br><strong>პასუხი:</strong> ვ) $8$."
+    solution: "$\\dfrac{x^2 - x - 2}{x - 2} = \\dfrac{(x - 2)(x + 1)}{x - 2} = x + 1$, $x \\ne 2$.<br><br>$|x + 1| = |2x + 5|$: $x + 1 = 2x + 5 \\Rightarrow x = -4$; $x + 1 = -2x - 5 \\Rightarrow x = -2$. ორივე დასაშვებია. ნამრავლი: $8$.<br><br><strong>პასუხი:</strong> ვ) $8$.",
+    area: "algebra",
+    topics: ["rational-eq","abs-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -113,7 +209,15 @@ quizData = [
     options: ["$-3$", "$-2$", "$-1$", "$1$", "$14$", "$18$"],
     correct: 2,
     tags: [],
-    solution: "$\\sqrt{x^2} = |x|$ და $x^2 = |x|^2$: $4|x|^2 + 3|x| - 7 = 0$, $|x| = 1$ (მეორე ფესვი $-\\dfrac{7}{4} < 0$).<br><br>$x = \\pm 1$, ნამრავლი: $-1$.<br><br><strong>პასუხი:</strong> გ) $-1$."
+    solution: "$\\sqrt{x^2} = |x|$ და $x^2 = |x|^2$: $4|x|^2 + 3|x| - 7 = 0$, $|x| = 1$ (მეორე ფესვი $-\\dfrac{7}{4} < 0$).<br><br>$x = \\pm 1$, ნამრავლი: $-1$.<br><br><strong>პასუხი:</strong> გ) $-1$.",
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute","substitution"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -122,7 +226,15 @@ quizData = [
     options: ["$\\sqrt{26}$", "$12\\sqrt{3}$", "$16\\sqrt{3}$", "$24\\sqrt{2}$", "$3\\sqrt{2}$", "$\\sqrt{24}$"],
     correct: 4,
     tags: [],
-    solution: "$\\angle B = 180^\\circ - 30^\\circ - 15^\\circ = 135^\\circ$. სინუსების თეორემით: $\\dfrac{AB}{\\sin C} = \\dfrac{AC}{\\sin B}$.<br><br>$AB = \\dfrac{6 \\cdot \\sin 30^\\circ}{\\sin 135^\\circ} = \\dfrac{3}{\\frac{\\sqrt{2}}{2}} = 3\\sqrt{2}$.<br><br><strong>პასუხი:</strong> ე) $3\\sqrt{2}$."
+    solution: "$\\angle B = 180^\\circ - 30^\\circ - 15^\\circ = 135^\\circ$. სინუსების თეორემით: $\\dfrac{AB}{\\sin C} = \\dfrac{AC}{\\sin B}$.<br><br>$AB = \\dfrac{6 \\cdot \\sin 30^\\circ}{\\sin 135^\\circ} = \\dfrac{3}{\\frac{\\sqrt{2}}{2}} = 3\\sqrt{2}$.<br><br><strong>პასუხი:</strong> ე) $3\\sqrt{2}$.",
+    area: "geometry",
+    topics: ["law-cos-sin"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15
@@ -131,7 +243,15 @@ quizData = [
     options: ["$4\\sqrt{3}$", "$24\\sqrt{2}$", "$4\\sqrt{7}$", "$18$", "$24$", "$44$"],
     correct: 3,
     tags: [],
-    solution: "პარალელოგრამში $d_1^2 + d_2^2 = 2(a^2 + b^2)$: $21 + 61 = 2(a^2 + (a + 1)^2)$, $41 = 2a^2 + 2a + 1$, $a^2 + a - 20 = 0$, $a = 4$.<br><br>გვერდები $4$ და $5$, პერიმეტრი $18$.<br><br><strong>პასუხი:</strong> დ) $18$."
+    solution: "პარალელოგრამში $d_1^2 + d_2^2 = 2(a^2 + b^2)$: $21 + 61 = 2(a^2 + (a + 1)^2)$, $41 = 2a^2 + 2a + 1$, $a^2 + a - 20 = 0$, $a = 4$.<br><br>გვერდები $4$ და $5$, პერიმეტრი $18$.<br><br><strong>პასუხი:</strong> დ) $18$.",
+    area: "geometry",
+    topics: ["parallelogram","law-cos-sin"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 16
@@ -140,7 +260,15 @@ quizData = [
     options: ["$-100$", "$-72$", "$-49$", "$0$", "$24$", "ასეთი $a$ არ არსებობს"],
     correct: 2,
     tags: [],
-    solution: "ვიეტის თეორემით $x_1 + x_2 = a$, $x_1x_2 = 10$. $(x_1 - x_2)^2 = (x_1 + x_2)^2 - 4x_1x_2 = a^2 - 40 = 9$, $a^2 = 49$, $a = \\pm 7$.<br><br>ნამრავლი: $-49$.<br><br><strong>პასუხი:</strong> გ) $-49$."
+    solution: "ვიეტის თეორემით $x_1 + x_2 = a$, $x_1x_2 = 10$. $(x_1 - x_2)^2 = (x_1 + x_2)^2 - 4x_1x_2 = a^2 - 40 = 9$, $a^2 = 49$, $a = \\pm 7$.<br><br>ნამრავლი: $-49$.<br><br><strong>პასუხი:</strong> გ) $-49$.",
+    area: "algebra",
+    topics: ["vieta"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -149,7 +277,15 @@ quizData = [
     options: ["$-1$", "$0$", "$1$", "$2$", "$3$", "$8$"],
     correct: 4,
     tags: [],
-    solution: "ბეზუს თეორემით $x - 1$-ზე გაყოფის ნაშთი $P(1)$-ის ტოლია: $1 + 1 - 3 + 2 + 1 + 1 = 3$.<br><br><strong>პასუხი:</strong> ე) $3$."
+    solution: "ბეზუს თეორემით $x - 1$-ზე გაყოფის ნაშთი $P(1)$-ის ტოლია: $1 + 1 - 3 + 2 + 1 + 1 = 3$.<br><br><strong>პასუხი:</strong> ე) $3$.",
+    area: "algebra",
+    topics: ["poly-division"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -158,7 +294,15 @@ quizData = [
     options: ["$-3$", "$-2$", "$-1$", "$3$", "$2\\sqrt{5}$", "$4\\sqrt{3}$"],
     correct: 0,
     tags: [],
-    solution: "$x = 2$ ფესვია: $16 - 36 + 14 + 6 = 0$. გავყოთ: $2x^3 - 9x^2 + 7x + 6 = (x - 2)(2x^2 - 5x - 3) = (x - 2)(2x + 1)(x - 3)$.<br><br>ფესვები: $2$, $-\\dfrac{1}{2}$, $3$; ნამრავლი: $-3$.<br><br><strong>პასუხი:</strong> ა) $-3$."
+    solution: "$x = 2$ ფესვია: $16 - 36 + 14 + 6 = 0$. გავყოთ: $2x^3 - 9x^2 + 7x + 6 = (x - 2)(2x^2 - 5x - 3) = (x - 2)(2x + 1)(x - 3)$.<br><br>ფესვები: $2$, $-\\dfrac{1}{2}$, $3$; ნამრავლი: $-3$.<br><br><strong>პასუხი:</strong> ა) $-3$.",
+    area: "algebra",
+    topics: ["higher-degree","vieta"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -167,7 +311,15 @@ quizData = [
     options: ["$1$", "$2$", "$3$", "$6$", "$8$", "ასეთი $a$ არ არსებობს"],
     correct: 5,
     tags: [],
-    solution: "$x_1 + x_2 = 2$, $x_1x_2 = a$. $x_1^3 + x_2^3 = (x_1 + x_2)^3 - 3x_1x_2(x_1 + x_2) = 8 - 6a = -4$, $a = 2$.<br><br>მაგრამ $a = 2$-ზე $x^2 - 2x + 2 = 0$-ის დისკრიმინანტი $4 - 8 < 0$, ნამდვილი ფესვები არ აქვს. ასეთი $a$ არ არსებობს.<br><br><strong>პასუხი:</strong> ვ) ასეთი $a$ არ არსებობს."
+    solution: "$x_1 + x_2 = 2$, $x_1x_2 = a$. $x_1^3 + x_2^3 = (x_1 + x_2)^3 - 3x_1x_2(x_1 + x_2) = 8 - 6a = -4$, $a = 2$.<br><br>მაგრამ $a = 2$-ზე $x^2 - 2x + 2 = 0$-ის დისკრიმინანტი $4 - 8 < 0$, ნამდვილი ფესვები არ აქვს. ასეთი $a$ არ არსებობს.<br><br><strong>პასუხი:</strong> ვ) ასეთი $a$ არ არსებობს.",
+    area: "algebra",
+    topics: ["vieta"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -176,7 +328,15 @@ quizData = [
     options: ["$3$", "$4$", "$6$", "$6\\sqrt{2}$", "$2\\sqrt{5}$", "$4\\sqrt{3}$"],
     correct: 4,
     tags: [],
-    solution: "ქორდები $P$ წერტილში ურთიერთმართობულად იკვეთება. პითაგორას თეორემით: $AC^2 = PA^2 + PC^2$, $BD^2 = PB^2 + PD^2$, $AD^2 = PA^2 + PD^2$, $BC^2 = PB^2 + PC^2$.<br><br>მაშასადამე, $AC^2 + BD^2 = AD^2 + BC^2$: $AD^2 = 36 + 9 - 25 = 20$, $AD = 2\\sqrt{5}$.<br><br><strong>პასუხი:</strong> ე) $2\\sqrt{5}$."
+    solution: "ქორდები $P$ წერტილში ურთიერთმართობულად იკვეთება. პითაგორას თეორემით: $AC^2 = PA^2 + PC^2$, $BD^2 = PB^2 + PD^2$, $AD^2 = PA^2 + PD^2$, $BC^2 = PB^2 + PC^2$.<br><br>მაშასადამე, $AC^2 + BD^2 = AD^2 + BC^2$: $AD^2 = 36 + 9 - 25 = 20$, $AD = 2\\sqrt{5}$.<br><br><strong>პასუხი:</strong> ე) $2\\sqrt{5}$.",
+    area: "geometry",
+    topics: ["chords-tangents","pythagoras"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 21
@@ -185,7 +345,15 @@ quizData = [
     options: ["$-1$", "$0$", "$1$", "$x$", "$x + 1$", "$x + 2$"],
     correct: 5,
     tags: [],
-    solution: "გავყოთ კუთხით:<br>$x^5 - x^4 - x^3 + 5x^2 - 4x + 5 - x^3(x^2 - x + 1) = -2x^3 + 5x^2 - 4x + 5$;<br>$-2x^3 + 5x^2 - 4x + 5 + 2x(x^2 - x + 1) = 3x^2 - 2x + 5$;<br>$3x^2 - 2x + 5 - 3(x^2 - x + 1) = x + 2$.<br><br>ნაშთი: $x + 2$.<br><br><strong>პასუხი:</strong> ვ) $x + 2$."
+    solution: "გავყოთ კუთხით:<br>$x^5 - x^4 - x^3 + 5x^2 - 4x + 5 - x^3(x^2 - x + 1) = -2x^3 + 5x^2 - 4x + 5$;<br>$-2x^3 + 5x^2 - 4x + 5 + 2x(x^2 - x + 1) = 3x^2 - 2x + 5$;<br>$3x^2 - 2x + 5 - 3(x^2 - x + 1) = x + 2$.<br><br>ნაშთი: $x + 2$.<br><br><strong>პასუხი:</strong> ვ) $x + 2$.",
+    area: "algebra",
+    topics: ["poly-division"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -194,7 +362,15 @@ quizData = [
     options: ["$-1$", "$0$", "$1$", "$2$", "$3$", "$8$"],
     correct: 2,
     tags: [],
-    solution: "გამოვიყენოთ $x^3 + x^2 = 1$, ანუ $x^{k+3} + x^{k+2} = x^k$:<br>$x^{10} + 2x^9 + 2x^8 + x^7 = (x^{10} + x^9) + (x^9 + x^8) + (x^8 + x^7) = x^7 + x^6 + x^5$.<br><br>მთელი გამოსახულება: $x^7 + 2x^6 + 2x^5 = (x^7 + x^6) + (x^6 + x^5) + x^5 = x^4 + x^3 + x^5$.<br><br>$x^5 + x^4 + x^3 = x^2(x^3 + x^2) + x^3 = x^2 + x^3 = 1$.<br><br><strong>პასუხი:</strong> გ) $1$."
+    solution: "გამოვიყენოთ $x^3 + x^2 = 1$, ანუ $x^{k+3} + x^{k+2} = x^k$:<br>$x^{10} + 2x^9 + 2x^8 + x^7 = (x^{10} + x^9) + (x^9 + x^8) + (x^8 + x^7) = x^7 + x^6 + x^5$.<br><br>მთელი გამოსახულება: $x^7 + 2x^6 + 2x^5 = (x^7 + x^6) + (x^6 + x^5) + x^5 = x^4 + x^3 + x^5$.<br><br>$x^5 + x^4 + x^3 = x^2(x^3 + x^2) + x^3 = x^2 + x^3 = 1$.<br><br><strong>პასუხი:</strong> გ) $1$.",
+    area: "algebra",
+    topics: ["polynomials"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["substitution"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -203,7 +379,15 @@ quizData = [
     options: ["$0$", "$1$", "$4$", "$8$", "$24$", "$30$"],
     correct: 0,
     tags: [],
-    solution: "მეორე განტოლების ამონახსნები: $(x - 1)(x - 5)(x - 3) = 0$, ანუ $\\{1;\\ 3;\\ 5\\}$.<br><br>$|x - 3| = a - 4$:<br>• $a < 4$: ამონახსნი არ აქვს; ცარიელი სიმრავლე ნებისმიერი სიმრავლის ქვესიმრავლეა, ამიტომ ყველა მთელი $a < 4$ გამოდგება, მათ შორის $a = 0$;<br>• $a = 4$: $x = 3$ — გამოდგება;<br>• $a > 4$: $x = 3 \\pm (a - 4)$, ორივე უნდა იყოს $\\{1;\\ 5\\}$-ში: $a - 4 = 2$, $a = 6$.<br><br>რადგან შესაფერის მნიშვნელობებს შორის არის $a = 0$, ნამრავლი $0$-ის ტოლია.<br><br><strong>პასუხი:</strong> ა) $0$."
+    solution: "მეორე განტოლების ამონახსნები: $(x - 1)(x - 5)(x - 3) = 0$, ანუ $\\{1;\\ 3;\\ 5\\}$.<br><br>$|x - 3| = a - 4$:<br>• $a < 4$: ამონახსნი არ აქვს; ცარიელი სიმრავლე ნებისმიერი სიმრავლის ქვესიმრავლეა, ამიტომ ყველა მთელი $a < 4$ გამოდგება, მათ შორის $a = 0$;<br>• $a = 4$: $x = 3$ — გამოდგება;<br>• $a > 4$: $x = 3 \\pm (a - 4)$, ორივე უნდა იყოს $\\{1;\\ 5\\}$-ში: $a - 4 = 2$, $a = 6$.<br><br>რადგან შესაფერის მნიშვნელობებს შორის არის $a = 0$, ნამრავლი $0$-ის ტოლია.<br><br><strong>პასუხი:</strong> ა) $0$.",
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter","absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24
@@ -212,7 +396,15 @@ quizData = [
     options: ["$10^\\circ$", "$25^\\circ$", "$30^\\circ$", "$40^\\circ$", "$45^\\circ$", "$60^\\circ$"],
     correct: 4,
     tags: [],
-    solution: "ვთქვათ, $BH$ სიმაღლეა, $BL$ ბისექტრისა, $BM$ მედიანა და $\\angle ABH = \\angle HBL = \\angle LBM = \\angle MBC = \\theta$; მაშინ $\\angle A = 90^\\circ - \\theta$ (მახვილი).<br><br>ვთქვათ, $O$ შემოხაზული წრეწირის ცენტრია. $\\angle BOC = 2\\angle A$ და $OB = OC$, ამიტომ $\\angle OBC = 90^\\circ - \\angle A = \\theta = \\angle MBC$. ე.ი. $O$ ძევს $BM$ წრფეზე.<br><br>$O$ ძევს $AC$-ს შუამართობზეც, რომელიც $M$-ზე გადის. თუ $O \\ne M$, მაშინ $BM$ იქნებოდა $AC$-ს მართობი, ანუ დაემთხვეოდა სიმაღლეს — ეს შეუძლებელია. მაშასადამე, $O = M$, $AC$ დიამეტრია და $\\angle B = 90^\\circ$.<br><br>$4\\theta = 90^\\circ$, $\\theta = 22{,}5^\\circ$: $\\angle A = 67{,}5^\\circ$, $\\angle C = 22{,}5^\\circ$, $|\\angle A - \\angle C| = 45^\\circ$.<br><br><strong>პასუხი:</strong> ე) $45^\\circ$."
+    solution: "ვთქვათ, $BH$ სიმაღლეა, $BL$ ბისექტრისა, $BM$ მედიანა და $\\angle ABH = \\angle HBL = \\angle LBM = \\angle MBC = \\theta$; მაშინ $\\angle A = 90^\\circ - \\theta$ (მახვილი).<br><br>ვთქვათ, $O$ შემოხაზული წრეწირის ცენტრია. $\\angle BOC = 2\\angle A$ და $OB = OC$, ამიტომ $\\angle OBC = 90^\\circ - \\angle A = \\theta = \\angle MBC$. ე.ი. $O$ ძევს $BM$ წრფეზე.<br><br>$O$ ძევს $AC$-ს შუამართობზეც, რომელიც $M$-ზე გადის. თუ $O \\ne M$, მაშინ $BM$ იქნებოდა $AC$-ს მართობი, ანუ დაემთხვეოდა სიმაღლეს — ეს შეუძლებელია. მაშასადამე, $O = M$, $AC$ დიამეტრია და $\\angle B = 90^\\circ$.<br><br>$4\\theta = 90^\\circ$, $\\theta = 22{,}5^\\circ$: $\\angle A = 67{,}5^\\circ$, $\\angle C = 22{,}5^\\circ$, $|\\angle A - \\angle C| = 45^\\circ$.<br><br><strong>პასუხი:</strong> ე) $45^\\circ$.",
+    area: "geometry",
+    topics: ["notable-points","cevians"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25
@@ -221,6 +413,14 @@ quizData = [
     options: ["$10^\\circ$", "$25^\\circ$", "$30^\\circ$", "$40^\\circ$", "$45^\\circ$", "$60^\\circ$"],
     correct: 3,
     tags: [],
-    solution: "$BDC$ ტოლფერდაა ($\\angle DBC = \\angle DCB = 20^\\circ$): $BD = DC$, $\\angle BDC = 140^\\circ$ და $BC = 2BD\\cos 20^\\circ$. რადგან $\\angle ADC = 100^\\circ$, $\\angle ADB = 140^\\circ - 100^\\circ = 40^\\circ$.<br><br>$ABD$ სამკუთხედში სინუსების თეორემით ($AB = BC$): $\\dfrac{AB}{\\sin 40^\\circ} = \\dfrac{BD}{\\sin\\angle BAD}$, საიდანაც $\\sin\\angle BAD = \\dfrac{BD\\sin 40^\\circ}{2BD\\cos 20^\\circ} = \\dfrac{2\\sin 20^\\circ\\cos 20^\\circ}{2\\cos 20^\\circ} = \\sin 20^\\circ$.<br><br>$\\angle BAD < 180^\\circ - 40^\\circ$, ამიტომ $\\angle BAD = 20^\\circ$ და $\\angle ABD = 120^\\circ$. მაშინ $\\angle ABC = 120^\\circ - 20^\\circ = 100^\\circ$ და $\\angle BCA = \\dfrac{180^\\circ - 100^\\circ}{2} = 40^\\circ$.<br><br><strong>პასუხი:</strong> დ) $40^\\circ$."
+    solution: "$BDC$ ტოლფერდაა ($\\angle DBC = \\angle DCB = 20^\\circ$): $BD = DC$, $\\angle BDC = 140^\\circ$ და $BC = 2BD\\cos 20^\\circ$. რადგან $\\angle ADC = 100^\\circ$, $\\angle ADB = 140^\\circ - 100^\\circ = 40^\\circ$.<br><br>$ABD$ სამკუთხედში სინუსების თეორემით ($AB = BC$): $\\dfrac{AB}{\\sin 40^\\circ} = \\dfrac{BD}{\\sin\\angle BAD}$, საიდანაც $\\sin\\angle BAD = \\dfrac{BD\\sin 40^\\circ}{2BD\\cos 20^\\circ} = \\dfrac{2\\sin 20^\\circ\\cos 20^\\circ}{2\\cos 20^\\circ} = \\sin 20^\\circ$.<br><br>$\\angle BAD < 180^\\circ - 40^\\circ$, ამიტომ $\\angle BAD = 20^\\circ$ და $\\angle ABD = 120^\\circ$. მაშინ $\\angle ABC = 120^\\circ - 20^\\circ = 100^\\circ$ და $\\angle BCA = \\dfrac{180^\\circ - 100^\\circ}{2} = 40^\\circ$.<br><br><strong>პასუხი:</strong> დ) $40^\\circ$.",
+    area: "geometry",
+    topics: ["isosceles","law-cos-sin"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["aux-construct"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -10,7 +10,15 @@ quizData = [
             "$225$მ²"
         ],
         correct: 4,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "algebra",
+        topics: ["max-min","rhombus-rect-sq"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ განსაზღვრული ინტეგრალის მნიშვნელობა $\\int_{0}^{0{,}5e} \\frac{1}{e-x} dx$",
@@ -24,7 +32,15 @@ quizData = [
         ]
         ,
         correct: 3,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "calculus",
+        topics: ["definite-integral"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან რომელია $f(x) = (\\tan x)^2$ ფუნქციის პირველადი?",
@@ -37,7 +53,15 @@ quizData = [
             "$\\frac{(\\tan x)^3}{3(\\cos x)^4}$"
         ],
         correct: 2,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "calculus",
+        topics: ["antiderivative"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "დაწერეთ იმ სიბრტყის განტოლება, რომელიც გადის სივრცის $(1;2;2)$ წერტილზე და რომლის მართობული ვექტორია $\\vec{m}(2; -3; -1)$.",
@@ -50,7 +74,15 @@ quizData = [
             "$2x + 6 = 3y + z$"
         ],
         correct: 5,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "geometry",
+        topics: ["vectors"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: ["vectors","coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ელიფსის წვეროს კოორდინატებია $(-3;0)$, $(3;0),$ $(0;-2),$ $(0;2).$ ეს ელიფსი გადაიტანეს პარალელურად $\\vec{a}(-2; 3)$ ვექტორის გასწვრივ. დაწერეთ როგორია მიღებული ელიფსის გატოლება?",
@@ -63,7 +95,15 @@ quizData = [
             "$9(x-2)^2 + 4(y+3)^2 = 36$"
         ],
         correct: 0,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "geometry",
+        topics: ["conics","vectors"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: ["vectors","coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი გადაღუნვის წერტილი აქვს $f(x) = x^3 \\cdot e^x$ ფუნქციას?",
@@ -76,7 +116,15 @@ quizData = [
             "$6$"
         ],
         correct: 2,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "calculus",
+        topics: ["convexity"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "სიბრტყეზე დაშტრიხულია $\\begin{cases} y > x^2 \\\\ y < \\sqrt{x} \\end{cases}$ ორ უცნობიან უტოლობათა სისტემის ამონახსნი. იპოვეთ რისი ტოლია დაშტრიხული არის ფართობი?",
@@ -89,7 +137,15 @@ quizData = [
             "$3$"
         ],
         correct: 0,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "algebra",
+        topics: ["nonlinear-systems","quadratic-ineq","linear-systems"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$y = \\frac{\\sqrt{7}x^3}{\\sqrt{\\pi}}$; $y = \\frac{\\sqrt{5}x^2}{\\sqrt{\\pi}}$; $x = 1$; $x = 2$ ფუნქციების გრაფიკებით შემოსაზღვრული ფიგურა ბრუნავს აბცისთა ღერძის გარშემო. იპოვეთ რისი ტოლია ბრუნვით მიღებული სხულის მოცულობა?",
@@ -102,7 +158,15 @@ quizData = [
             "$96$"
         ],
         correct: 5,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "calculus",
+        topics: ["definite-integral","function-props","volume-surface"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჰიპერბოლის ერთერთი ასიმპტოტია $y = 0{,}75x$ წრფე, ხოლო ამ ჰიპერბოლის ერთერთი ფოკუსია $F(-5; 0)$ წერტილი. იპოვეთ, რისი ტოლია ჰიპერბოლის წვეროებს შორის მანძილი?",
@@ -115,7 +179,15 @@ quizData = [
             "$12$"
         ],
         correct: 3,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "calculus",
+        topics: ["curve-sketching","conics"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "პარაბოლის ფოკუსია $F(-2;1)$ წერტილი. ხოლო ამ პარაბოლის დირექტრისაა $x=4$ წრფე. დაწერეთ როგორია ამ პარაბოლის განტოლება?",
@@ -128,7 +200,15 @@ quizData = [
             "$y^2 - 2y + 12x - 13 = 0$"
         ],
         correct: 2,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "geometry",
+        topics: ["conics","quadratic-func"],
+        grade: 11,
+        difficulty: 2,
+        type: ["solve"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "დაადგინეთ $x$-ის რა მნიშვნელობებისთვისაა $f(x) = 2x - \\sin x$ ფუნქცია ზრდადი?",
@@ -141,7 +221,15 @@ quizData = [
             "$x \\in \\mathbb{R}$"
         ],
         correct: 5,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "algebra",
+        topics: ["function-props"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "დაწერეთ იმ წრეწირის განტოლება, რომელიც ჩახაზულია სამკუთხედში, რომლის წვეროები საკოორდინატო სიბრტყის $O(0;0),$ $A(6;0),$ $B(0;8)$ წერტილებია.",
@@ -154,7 +242,15 @@ quizData = [
             "$x^2 + y^2 = 2x + 2y + 2$"
         ],
         correct: 0,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "geometry",
+        topics: ["line-circle-eq","conics"],
+        grade: 11,
+        difficulty: 2,
+        type: ["solve"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "დათვალეთ $\\int_{0}^{\\pi} x \\cdot \\sin x dx$ განსაზღვრული ინტეგრალის მნიშვნელობა?",
@@ -167,7 +263,15 @@ quizData = [
             "$2{,}5\\pi$"
         ],
         correct: 3,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "calculus",
+        topics: ["definite-integral"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$(4m; 1; 3m-1) m \\in \\mathbb{R}$ წარმოადგენს სივრცეში წრფის განტოლებას. იპოვეთ, რისი ტოლია იმ კუთხის კოსინუსი, რომელსაც ადგენს მოცემული წრფე $OX$ საკოორდინატო ღერძთან?",
@@ -180,7 +284,15 @@ quizData = [
             "$1$"
         ],
         correct: 1,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "geometry",
+        topics: ["line-circle-eq"],
+        grade: 11,
+        difficulty: 2,
+        type: ["solve"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "სივრცეში მოცემულია სამი წერტილი $A(1;2;0),$ $B(0;1;2),$ $C(1;0;1).$ დაწერეთ იმ სიბრტყის განტოლება, რომელიც ამ სამ წერტილზე გამავალი სიბრტყის პარალელურია და გადის კოორდინატთა სათავეზე.",
@@ -193,7 +305,15 @@ quizData = [
             "$x + 3y - 4z = 0$"
         ],
         correct: 3,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "solid",
+        topics: ["parallel-space"],
+        grade: 11,
+        difficulty: 2,
+        type: ["solve"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "სად კვეთს ორდინატთა ღერძს $y = 2x + 2 + \\frac{1}{x}$ ფუნქციის დახრილი ასიმპტოტი?",
@@ -206,7 +326,15 @@ quizData = [
             "$(0;0,5)$"
         ],
         correct: 4,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "calculus",
+        topics: ["curve-sketching","linear-func","cross-sections"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ტრაპეცია ჩახაზულია წრეწირში ისე, რომ ტრაპეციის ერთი ფუძე დიამეტრია. იპოვეთ ყველა ასეთი ტრაპეციებიდან უდიდესი ფართობის მქონე ტრაპეციის პართობი, თუ წრეწირის რადიუსია $R = \\sqrt[4]{3}$ მ.",
@@ -219,7 +347,15 @@ quizData = [
             "$2{,}25$მ²"
         ],
         correct: 5,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "geometry",
+        topics: ["trapezoid","inscribed-circum","nth-roots"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "საკოორდინარო სიბრტყეზე მოცემულია ორი ელიფსი: $\\frac{x^2}{25} + \\frac{y^2}{16} = 1$ და $\\frac{x^2}{16} + \\frac{y^2}{25} = 1$. იპოვეთ რისი ტოლია იმ წრეწირის დიამეტრი, რომელიც შემოხაზულია ამ ორი ელიფსის გადაკვეთის წერტილებზე?",
@@ -232,7 +368,15 @@ quizData = [
             "$\\frac{40\\sqrt{2}}{11}$"
         ],
         correct: 3,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "geometry",
+        topics: ["conics"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი $(x; y)$ წყვილია $\\begin{cases} 9(x-1)^2 + 4(y-1)^2 = 36 \\\\ 4(x-4)^2 + 9(y-2)^2 = 36 \\end{cases}$ განტოლებათა სისტემის ამონახსნი?",
@@ -245,7 +389,15 @@ quizData = [
             "$5$"
         ],
         correct: 2,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "algebra",
+        topics: ["linear-systems"],
+        grade: 11,
+        difficulty: 3,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "სივრცეში მოცემულია ორი სიბრტყე $x - y + 5z = 0$ და $2x + 3y + 7z = 10$. იპოვეთ მანძილი ამ ორი სიბრტყის და $XOY$ საკოორდინატო სიბრტყის გადაკვეთის წერტილიდან (სამივე სიბრტყის საერთო წერტილი) კოორდინათთა სათავემდე?",
@@ -258,7 +410,15 @@ quizData = [
             "$\\sqrt{8}$"
         ],
         correct: 5,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "geometry",
+        topics: ["line-circle-eq"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ცილინდრის მოცულობაა $2\\pi$. იპოვეთ რისი ტოლია ყველა ასეთ ცილინდრებს შორის უმცირესი ზედაპირის ფართობის მქონე ცილინდრის სიმაღლე.",
@@ -271,7 +431,15 @@ quizData = [
             "$6$"
         ],
         correct: 1,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "solid",
+        topics: ["cylinder","volume-surface"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ რისი ტოლია $f(x) = \\frac{1}{x-1} + \\frac{1}{2-x}$ ფუნქციის მინიმალური მნიშვნელობა $(1;2)$ შუალედში?",
@@ -284,7 +452,15 @@ quizData = [
             "$6$"
         ],
         correct: 3,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "algebra",
+        topics: ["max-min"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$X$ და $Y$ შემთხვევით შერჩეული (თითოეული თანაბრადაა განაწილებული მთელ მონაკვეთზე) ორი ნამდვილი რიცხვია $[0; e]$ სიმრავლიდან. იპოვეთ რისი ტოლია ალბათობა იმისა, რომ $X \\cdot Y \\leq 1$?",
@@ -297,7 +473,15 @@ quizData = [
             "$\\frac{3}{2e^2}$"
         ],
         correct: 4,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "prob-stats",
+        topics: ["probability","linear-ineq"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რა მაქსიმალური ფართობი შეიძლება ჰქონდეს მართკუთხა სამკუთხედს, რომლის ჰიპოტენუზისა და მასზე დაშვებული სიმაღლის ჯამია $30$მ?",
@@ -310,7 +494,15 @@ quizData = [
             "$225$მ²"
         ],
         correct: 0,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "geometry",
+        topics: ["right-triangle","max-min"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი ამონახსნი აქვს $\\frac{1}{5}x^5 - \\frac{13}{3}x^3 + 36x + 1 = 0$ განტოლებას ნამდვილ რიცხვებში?",
@@ -323,6 +515,14 @@ quizData = [
             "$5$"
         ],
         correct: 1,
-        tags: ["Inequalities", "Exponential"]
+        tags: ["Inequalities", "Exponential"],
+        area: "algebra",
+        topics: ["higher-degree"],
+        grade: 11,
+        difficulty: 3,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     }
 ];

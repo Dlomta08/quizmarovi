@@ -11,7 +11,15 @@ quizData = [
       "მხოლოდ $g(x)$ და $h(x)$"
     ],
     correct: 2,
-    tags: ["functions", "even-odd"]
+    tags: ["functions", "even-odd"],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -19,7 +27,15 @@ quizData = [
     question: "იპოვეთ $\\left[ {\\sqrt[4]{19}} \\right]$. (აქ $[a]$ არის $a$-ს მთელი ნაწილი)",
     options: ["$3$", "$5$", "$4$", "$0$", "$2$", "$1$"],
     correct: 4,
-    tags: ["irrational", "floor function"]
+    tags: ["irrational", "floor function"],
+    area: "algebra",
+    topics: ["integer-part","nth-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -34,7 +50,15 @@ quizData = [
       "$\\sqrt[7]{16}$"
     ],
     correct: 1,
-    tags: ["roots", "simplification"]
+    tags: ["roots", "simplification"],
+    area: "algebra",
+    topics: ["nth-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -49,7 +73,15 @@ quizData = [
       "$\\dfrac{4}{5}$"
     ],
     correct: 3,
-    tags: ["geometry", "trapezoid", "area ratio"]
+    tags: ["geometry", "trapezoid", "area ratio"],
+    area: "geometry",
+    topics: ["trapezoid","midline"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -64,14 +96,30 @@ quizData = [
       "$\\dfrac{4}{5}$"
     ],
     correct: 5,
-    tags: ["geometry", "trapezoid", "parallel line"]
+    tags: ["geometry", "trapezoid", "parallel line"],
+    area: "geometry",
+    topics: ["trapezoid"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     //6
   {
     question: "$f(x)$ ლუწი და პერიოდული ფუნქციაა, რომლის უმცირესი დადებითი პერიოდი $6$-ის ტოლია. იპოვეთ $f(11)$, თუ $f(13) = 19$.",
     options: ["$19$", "$-19$", "$11$", "$-11$", "$13$", "$-13$"],
     correct: 0,
-    tags: ["functions", "periodic", "even"]
+    tags: ["functions", "periodic", "even"],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -79,7 +127,15 @@ quizData = [
     question: "იპოვეთ $y = 1 - \\dfrac{1}{x - 1}$ ფუნქციის გრაფიკის ღერძებთან კვეთის წერტილებს შორის მანძილი.",
     options: ["$2\\sqrt{2}$", "$3$", "$\\sqrt{3}$", "$4$", "$\\sqrt{7}$", "$2$"],
     correct: 0,
-    tags: ["functions", "geometry", "distance"]
+    tags: ["functions", "geometry", "distance"],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -94,7 +150,15 @@ quizData = [
       "$2$"
     ],
     correct: 2,
-    tags: ["expressions", "complex", "radicals"]
+    tags: ["expressions", "complex", "radicals"],
+    area: "algebra",
+    topics: ["square-roots","nth-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -102,7 +166,15 @@ quizData = [
     question: "ტრაპეციის დიაგონალების გატარებით მიღებული ოთხი სამკუთხედიდან რომელიღაც სამის ფართობებია $1$, $3$ და $9$. იპოვეთ ტრაპეციის ფართობი.",
     options: ["$14$", "$14{,}5$", "$15$", "$15{,}5$", "$16$", "$14{,}5$"],
     correct: 4,
-    tags: ["geometry", "trapezoid", "area"]
+    tags: ["geometry", "trapezoid", "area"],
+    area: "geometry",
+    topics: ["trapezoid"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -117,7 +189,15 @@ quizData = [
       "$\\dfrac{2}{7}$"
     ],
     correct: 1,
-    tags: ["geometry", "ratio", "area"]
+    tags: ["geometry", "ratio", "area"],
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //11
   {
@@ -131,7 +211,15 @@ quizData = [
       "$[−3; +\\infty)$"
     ],
     correct: 3,
-    tags: ["functions", "absolute value", "range"]
+    tags: ["functions", "absolute value", "range"],
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -146,7 +234,15 @@ quizData = [
       "$f(17) = f(23)$"
     ],
     correct: 5,
-    tags: ["functions", "symmetry", "properties"]
+    tags: ["functions", "symmetry", "properties"],
+    area: "algebra",
+    topics: [],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -161,7 +257,15 @@ quizData = [
       "$(−1; −1)$"
     ],
     correct: 5,
-    tags: ["functions", "even-odd powers", "graph"]
+    tags: ["functions", "even-odd powers", "graph"],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 9,
+    difficulty: 2,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //14
@@ -176,7 +280,15 @@ quizData = [
       "$\\dfrac{9}{2}$"
     ],
     correct: 0,
-    tags: ["geometry", "trapezoid", "area"]
+    tags: ["geometry", "trapezoid", "area"],
+    area: "geometry",
+    topics: ["trapezoid"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -191,7 +303,15 @@ quizData = [
       "$\\dfrac{15}{\\sqrt{2}}$"
     ],
     correct: 4,
-    tags: ["geometry", "triangle", "area"]
+    tags: ["geometry", "triangle", "area"],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //16
   {
@@ -205,7 +325,15 @@ quizData = [
       "$\\mathbb{R} \\setminus \\left\\{\\dfrac{5}{9}\\right\\}$"
     ],
     correct: 1,
-    tags: ["functions", "rational", "range"]
+    tags: ["functions", "rational", "range"],
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -220,7 +348,15 @@ quizData = [
       "$\\sqrt[20]{a^{9}}$"
     ],
     correct: 3,
-    tags: ["exponents", "roots", "simplification"]
+    tags: ["exponents", "roots", "simplification"],
+    area: "algebra",
+    topics: ["nth-roots"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -228,7 +364,15 @@ quizData = [
     question: "ცნობილია, რომ $x = [x]$, $y = \\{y\\}$ და $x + 3y = 199$. რამდენი განსხვავებული მნიშვნელობის მიღება შეუძლია $xy$ ნამრავლს? (აქ $[a]$ არის $a$-ს მთელი ნაწილი, $\\{a\\} = a − [a]$)",
     options: ["ერთი", "ორი", "სამი", "ოთხი", "ხუთი", "ექვსი"],
     correct: 2,
-    tags: ["number theory", "floor", "fractional"]
+    tags: ["number theory", "floor", "fractional"],
+    area: "algebra",
+    topics: ["integer-part"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -243,7 +387,15 @@ quizData = [
       "$2\\sqrt{6} + 3\\sqrt{2}$"
     ],
     correct: 3,
-    tags: ["geometry", "trapezoid", "circle"]
+    tags: ["geometry", "trapezoid", "circle"],
+    area: "geometry",
+    topics: ["trapezoid"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -251,41 +403,89 @@ quizData = [
     question: "$ABCD$ პარალელოგრამში $M$ არის $AD$ გვერდის შუაწერტილი. იპოვეთ $ABCD$ პარალელოგრამის ფართობი, თუ $CD = 10$, $BD = 24$ და $BM = 13$.",
     options: ["$320$", "$240$", "$260$", "$280$", "$360$", "$390$"],
     correct: 1,
-    tags: ["geometry", "parallelogram", "area"]
+    tags: ["geometry", "parallelogram", "area"],
+    area: "geometry",
+    topics: ["parallelogram"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 //21
   {
     question: "მოცემულია $f(x)$ კენტი ფუნქცია, რომელიც $x \\in [0; 2]$ არგუმენტებისათვის $f(x) = x^2 - 2x$ ფორმულით განისაზღვრება. ეს ფუნქცია აგრეთვე არის პერიოდული, რომლის პერიოდი $4$-ის ტოლია. იპოვეთ $f(x)$ ფუნქციის მნიშვნელობათა სიმრავლე.",
     options: ["$[-1; 0]$", "$[-2; 2]$", "$[-1; 1]$", "$[-2; 1]$", "$[0; 1]$", "$[-1; +\\infty)$"],
     correct: 2,
-    tags: ["geometry", "parallelogram", "area"]
+    tags: ["geometry", "parallelogram", "area"],
+    area: "geometry",
+    topics: ["parallelogram","function-basics","function-props"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //22
   {
     question: "იპოვეთ $k$ პარამეტრის ყველა შესაძლო მნიშვნელობათა სიმრავლე, თუ $b$ პარამეტრის ყოველი მნიშვნელობისათვის $y=kx+b$ ფუნქციის გრაფიკი და მისი შექცეული ფუნქციის გრაფიკი $y$ ღერძს ერთი და იგივე წერტილში გადაკვეთენ.",
     options: ["$\\{-1\\}$", "$\\{1\\}$", "$\\{\\pm 1\\}$", "$\\{\\pm 1; 2\\}$", "$\\{\\pm 1; -2\\}$", "$\\{\\pm 1; \\pm 2\\}$"],
     correct: 0,
-    tags: ["geometry", "parallelogram", "area"]
+    tags: ["geometry", "parallelogram", "area"],
+    area: "geometry",
+    topics: ["parallelogram","function-basics","linear-func"],
+    grade: 9,
+    difficulty: 3,
+    type: ["graph"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //23
   {
     question: "$f(x) = ax^2+bx+c$ კვადრატული ფუნქციაა, $a \\neq 0$, $b$ და $c$ პარამეტრებია და $D=b^2-4ac$. თუ $y=|f(x)|$ და $y=f(|x|)$ ფუნქციების გრაფიკები ერთმანეთს ემთხვევა, მაშინ აუცილებლად...",
     options: ["$a>0, b<0, D≤0$", "$a<0, b<0, D≥0$", "$a>0, b>0, D≤0$", "$a<0, b>0, D≥0$", "$a>0, b=0, D≤0$", "$a<0, b=0, D≥$"],
     correct: 4,
-    tags: ["geometry", "parallelogram", "area"]
+    tags: ["geometry", "parallelogram", "area"],
+    area: "geometry",
+    topics: ["parallelogram"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter","absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //24
   {
     question: "ტრაპეციაში, რომლის დიდი ფუძე მცირე ფუძეზე ორჯერ მეტია, გაატარეს დიაგონალები და შუახაზი. მიღებული შვიდი ნაწილის ფართობები მწკრივში ზრდადობით დალაგებული ამოწერეს. იპოვეთ მწკრივის მეორე რიცხვი, თუ მწკრივის შუა რიცხვი $60$-ის ტოლია.",
     options: ["$30$", "$36$", "$40$", "$42$", "$45$", "$48$"],
     correct: 4,
-    tags: ["geometry", "parallelogram", "area"]
+    tags: ["geometry", "parallelogram", "area"],
+    area: "geometry",
+    topics: ["midline","trapezoid","parallelogram"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //25
   {
     question: "პარალელოგრამის გვერდების სიგრძეებია $1$ და $3$. იპოვეთ ამ პარალელოგრამის დიაგონალებს შორის კუთხის ტანგენსის მაქსიმალური შესაძლო მნიშვნელობა.",
     options: ["$\\frac{5}{3}$", "$\\frac{3}{5}$", "$\\sqrt{3}$", "$\\frac{1}{\\sqrt{3}}$", "$\\frac{4}{3}$", "$\\frac{3}{4}$"],
     correct: 5,
-    tags: ["geometry", "parallelogram", "area"]
+    tags: ["geometry", "parallelogram", "area"],
+    area: "geometry",
+    topics: ["parallelogram"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ]

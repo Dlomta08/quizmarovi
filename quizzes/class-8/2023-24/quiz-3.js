@@ -11,7 +11,15 @@ quizData = [
       "$5$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 2
   {
@@ -25,7 +33,15 @@ quizData = [
       "$0$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["vieta","quadratic-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 3
   {
@@ -39,7 +55,15 @@ quizData = [
       "$2$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 4
   {
@@ -53,7 +77,15 @@ quizData = [
       "$9{,}5$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 5
   {
@@ -67,7 +99,15 @@ quizData = [
       "$6$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 // 6
 {
@@ -81,7 +121,15 @@ quizData = [
     "$6$"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 8,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 7
 {
@@ -95,7 +143,15 @@ quizData = [
     "$x \\in$ ∅"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 8,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 8
 {
@@ -109,7 +165,15 @@ quizData = [
     "$33$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 8,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 9
 {
@@ -123,7 +187,15 @@ quizData = [
     "$1$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["cevians"],
+  grade: 8,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 10
 {
@@ -137,7 +209,15 @@ quizData = [
     "$3R$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["parallel-lines"],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 11
 {
@@ -151,7 +231,15 @@ quizData = [
     "$b, a, c$"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["numeric-ineq"],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 12
 {
@@ -165,7 +253,15 @@ quizData = [
     "$15$"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 13
 {
@@ -179,7 +275,15 @@ quizData = [
     "$x + 3$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["rational-expr"],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 14
 {
@@ -193,7 +297,15 @@ quizData = [
     "$20$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["rhombus-rect-sq"],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 15
 {
@@ -207,7 +319,15 @@ quizData = [
     "$\\sqrt{7}$"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["right-triangle"],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 16
 {
@@ -222,7 +342,15 @@ quizData = [
     "სამივე"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 8,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 17
 {
@@ -236,7 +364,15 @@ quizData = [
     "$1, 1, 1, 2$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 18
 {
@@ -250,7 +386,15 @@ quizData = [
     "$18$"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 8,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 19
 {
@@ -264,7 +408,15 @@ quizData = [
     "$12$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["inscribed-circum"],
+  grade: 8,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 20
 {
@@ -281,7 +433,15 @@ quizData = [
     "სამივე"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["constructions"],
+  grade: 8,
+  difficulty: 3,
+  type: ["construction"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 21
 {
@@ -295,7 +455,15 @@ quizData = [
     "$2$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-eq"],
+  grade: 8,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 22
 {
@@ -309,7 +477,15 @@ quizData = [
     "$17$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-eq","rational-eq"],
+  grade: 8,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 23
 {
@@ -323,7 +499,15 @@ quizData = [
     "$7$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["divisibility","rhombus-rect-sq"],
+  grade: 8,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 24
 {
@@ -339,7 +523,15 @@ quizData = [
     "$42$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["rhombus-rect-sq"],
+  grade: 8,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 25
 {
@@ -353,7 +545,15 @@ quizData = [
     "$20\\sqrt{2}$"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["right-triangle"],
+  grade: 8,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];
 

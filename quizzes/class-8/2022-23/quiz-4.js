@@ -4,119 +4,255 @@ quizData = [
     question: "იპოვეთ $𝒂$ პარამეტრის მნიშვნელობა, რომლისთვისაც $\\frac{1}{16}x^2 + (a - 3)x = 3a - 5$ განტოლების ერთ-ერთი ფესვი $8$-ის ტოლია.",
     options: ["$-2$", "$4$", "$-8$", "$\\frac{1}{8}$", "$3$", "$2$"],
     correct: 4,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 2
   {
     question: "$289$ გადაიყვანეთ ორობით სისტემაში.",
     options: ["$100100001_2$", "$110110001_2$", "$111000011_2$", "$101000011_2$", "$111000011_2$", "$100001111_2$"],
     correct: 0,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 3
   {
     question: "იპოვეთ $𝒂$ პარამეტრის ყველა მნიშვნელობა, რომლისთვისაც $x^4 + 2x^3 - 3x^2 - 5x + a$ მრავალწევრი $x + 1$-ზე გაყოფისას ნაშთს $8$-ს გვაძლევს.",
     options: ["$0$", "$-1$", "$5$", "$-3$", "$6$", "$7$"],
     correct: 5,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["divisibility","polynomials"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 4
   {
     question: "$ABC$ ტოლფერდა სამკუთხედში $BD$ ფუძეზე დაშვებული სიმაღლეა. რისი ტოლია ამ სამკუთხედზე შემოხაზული წრეწირის რადიუსის სიგრძე, თუ $BD = 18$ და $\\sin \\angle BAD = \\frac{3}{5}$.",
     options: ["$20$", "$25$", "$6\\sqrt{10}$", "$15$", "$10\\sqrt{3}$", "$12$"],
     correct: 1,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["isosceles","inscribed-circum"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 5
   {
     question: "სამკუთხედის გვერდებია $5,$ $12$ და $13$. იპოვეთ რისი ტოლია ამ სამკუთხედის საშუალო სიდიდის კუთხის ტანგენსი.",
     options: ["$2{,}6$", "$\\frac{12}{13}$", "$2{,}4$", "$\\frac{5}{13}$", "$2{,}5$", "$\\frac{5}{17}$"],
     correct: 2,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["angle-sum"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 6
   {
     question: "დაჩიმ ანაბარზე შეიტანა $1000$ ლარი და $2$ წლის შემდეგ $440$ ლარით მეტი აიღო. იპოვეთ  ანაბარზე არსებული თანხის რამდენი პროცენტი ერიცხებოდა ყოველწლიურად, თუ ამ ორი წლის განმავლობაში ანაბარზე დანამატი პროცენტულად არ შეცვლილა.",
     options: ["$8\\%$", "$18\\%$", "$16\\%$", "$20\\%$", "$12\\%$", "$15\\%$"],
     correct: 3,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["percent","word-problems"],
+    grade: 8,
+    difficulty: 1,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 7
   {
     question: "იპოვეთ $(8x_1 - 1)(8x_2 - 1)$ გამოსახულების მნიშვნელობა, თუ $x_1$ და $x_2$ არიან $x^2 + 20x + 5 = 0$ კვადრატული განტოლების ფესვები.",
     options: ["$381$", "$259$", "$481$", "$379$", "$-259$", "$401$"],
     correct: 2,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["quadratic-eq","vieta"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 8
   {
     question: "სამკუთხედის გვერდებია $5$, $5$ და $6$. იპოვეთ მასზე შემოხაზული წრეწირის რადიუსი.",
     options: ["$\\frac{25}{8}$", "$\\sqrt{5}$", "$3$", "$\\sqrt{7}$", "$2{,}5$", "$2\\sqrt{2}$"],
     correct: 0,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["inscribed-circum"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 9
   {
     question: "რისი ტოლია $2x^2 + 4x - 3 = 0$ კვადრატული განტოლების ფესვების სხვაობის მოდული.",
     options: ["$3\\sqrt{10}$", "$4\\sqrt{5}$", "$5\\sqrt{2}$", "$\\sqrt{30}$", "$5$", "$\\sqrt{10}$"],
     correct: 5,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 10
   {
     question: "$ABC$ სამკუთხედში კუთხე $C$ მართია, $CD$ სიმაღლეა. იპოვეთ $\\sin \\angle A$, თუ $AD : DB = 3 : 4$.",
     options: ["$\\frac{\\sqrt{21}}{7}$", "$\\frac{3}{7}$", "$\\frac{3\\sqrt{7}}{7}$", "$\\frac{2\\sqrt{3}}{7}$", "$\\frac{2\\sqrt{7}}{7}$", "$\\frac{3}{4}$"],
     correct: 4,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 11
   {
     question: "სამკუთხედის ერთი-ერთი გვერდი $7$-ის, ხოლო მისი მოპირდაპირე კუთხე $120^\\circ$-ის ტოლია. იპოვეთ დანარჩენი ორი გვერდის სიგრძეთა ნამრავლი, თუ მათი ჯამი $8$-ის ტოლია.",
     options: ["$12$", "$7$", "$8\\sqrt{2}$", "$15$", "$13{,}25$", "$16$"],
     correct: 3,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 12
   {
     question: "რამდენი ამონახსენი აქვს $x^2 + \\frac{4x^2}{|x|} - 12 = 0$ განტოლებას?",
     options: ["$1$", "$2$", "$3$", "$4$", "უამრავი", "არცერთი"],
     correct: 1,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["abs-eq","quadratic-eq","rational-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 13
   {
     question: "ქვემოთჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს $\\frac{x}{y}$ შეფარდება, თუ $(x; y)$ წყვილი შემდეგი სისტემის ამონახსნია: $\\begin{cases} x^2 + 2xy = y^2 + 2 \\\\ y^2 - xy = 4 \\end{cases}$",
     options: ["$0$", "$\\frac{3}{2}$", "$-3$", "$1$", "$-2$", "$\\frac{5}{2}$"],
     correct: 2,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["nonlinear-systems","linear-systems"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 14
   {
     question: "რისი ტოლია $\\frac{x^2}{9} + \\frac{36}{x^2} = 5 \\cdot (\\frac{x}{3} - \\frac{6}{x})$ განტოლების ამონახსნთა ჯამი?",
     options: ["$15$", "$-9$", "$12$", "$-6$", "$18$", "$8$"],
     correct: 0,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["quadratic-eq","rational-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 15
   {
     question: "$ABC$ ტოლფერდა სამკუთხედში $BC$ ფუძეა, $O$ წერტილი ჩახაზული წრეწირის ცენტრია. იპოვეთ ფერდის სიგრძე, თუ $\\tan \\angle OBC = \\frac{1}{2}$ ხოლო ჩახაზული წრეწირის რადიუსი $3$-ის ტოლია.",
     options: ["$4\\sqrt{3}$", "$7{,}5$", "$12$", "$6\\sqrt{5}$", "$10$", "$16$"],
     correct: 4,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["isosceles","inscribed-circum"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 16
   {
     question: "იპოვეთ $x$-ის ყველა შესაძლო მნიშვნელობათა სიმრავლე, რომელთათვისაც სამკუთხედი, რომლის გვერდების სიგრძეებია $x$, $4$ და $5$ არ არის ბლაგვკუთხა.",
     options: ["$(1; 3]$", "$[3; \\sqrt{41}]$", "$[3; 5]$", "$[4; 9)$", "$[5; \\sqrt{41}]$", "$[1; 5]$"],
     correct: 1,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 17
   {
     question: "იპოვეთ $b$ პარამეტრის მნიშვნელობა, რომლისთვისაც $x^2 + (b^2 - 2b - 15)x + b = 0$ განტოლების ფესვები მოპირდაპირე (მოდულით ტოლი და ნიშნით მოპირდაპირე) რიცხვებია.",
     options: ["$5$", "$-6$", "$-2$", "$-3$", "$4$", "$0$"],
     correct: 3,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["parameter","absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 18
   {
@@ -124,55 +260,119 @@ quizData = [
     question: "იპოვეთ $\\cos \\alpha$, თუ $\\alpha$ მახვილი კუთხეა და სამართლიანია ტოლობა $2\\tan \\alpha - 2\\cot \\alpha = -3$.",
     options: ["$\\frac{\\sqrt{5}}{5}$", "$\\frac{3}{5}$", "$\\frac{2\\sqrt{5}}{5}$", "$\\frac{2}{3}$", "$\\frac{2\\sqrt{3}}{9}$", "$\\frac{4}{5}$"],
     correct: 2,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 19
   {
     question: "იპოვეთ $\\sqrt{|y - x|}$ გამოსახულების მნიშვნელობა, თუ $(x; y)$ წყვილი ორუცნობიანი სისტემის ამონახსნია: $\\begin{cases} \\sqrt{x} - \\sqrt{y} = 6 \\\\ \\sqrt{xy} = 40 \\end{cases}$ სისტემის ამონახსნია.",
     options: ["$2\\sqrt{21}$", "$4\\sqrt{6}$", "$\\sqrt{39}$", "$4\\sqrt{5}$", "$7$", "$6\\sqrt{2}$"],
     correct: 0,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["linear-systems"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 20
   {
     question: "პარალელოგრამში ბლაგვი კუთხე $120^\\circ$-ის ტოლია. იპოვეთ ამ პარალელოგრამის პერიმეტრი, თუ დიაგონალები $\\sqrt{30}$ და $3\\sqrt{2}$-ის ტოლია.",
     options: ["$12$", "$6\\sqrt{3}$", "$18$", "$16$", "$20$", "$4\\sqrt{15} + 6\\sqrt{3}$"],
     correct: 0,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["parallelogram"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 21
   {
     question: "$ABC$ სამკუთხედის $AB$ და $BC$ გვერდის $CM$ და $AN$ მედიანები შესაბამისად $9$-ისა და $6$-ის ტოლია. $CM$ და $AN$ მედიანები $K$ წერტილში იკვეთებიან. იპოვეთ მესამე მედიანის სიგრძე, თუ $\\angle NKC = 60^\\circ$.",
     options: ["$8$", "$4{,}5\\sqrt{3}$", "$6$", "$2\\sqrt{6}$", "$12$", "$3\\sqrt{7}$"],
     correct: 5,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 22
   {
     question: "$A$ და $B$ ქალაქებიდან, რომელთა შორის მანძილი $120$ კმ-ია, ერთსა და იმავე დროს ერთმანეთის შესახვედრად ორი ავტომობილი გაიგზავნა. მათი შეხვედრის შემდეგ $A$-დან გასული ავტომობილი $B$ ქალაქში ჩავიდა $20$ წთ-ში, ხოლო $B$-დან გამოსული ავტომობილი $A$ ქალაქში ჩავიდა ერთ საათსა და $20$ წთ-ში. იპოვეთ ავტომობილების სიჩქარეების ჯამი.",
     options: ["$160$ კმ/სთ", "$200$ კმ/სთ", "$240$ კმ/სთ", "$160$ კმ/სთ", "$180$ კმ/სთ", "$220$ კმ/სთ"],
     correct: 4,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["word-problems"],
+    grade: 8,
+    difficulty: 3,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 23
   {
     question: "იპოვეთ $a$ პარამეტრის ყველა შესაძლო მნიშვნელობა, რომელთათვისაც შემდეგ განტოლებას ექნება $5$ ამონახსნი: $(|x| + 1)(|x| + 2)(|x| - 3)(|x| - 4) = a^2 - 1$.",
     options: ["$a = \\pm 2\\sqrt{6}$", "$a = \\pm 4$", "$a = \\pm 3$", "$a = \\pm 5$", "$a \\in \\{-1; -2\\}$", "$a \\in \\$∅"],
     correct: 3,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 24
   {
     question: "რისი ტოლია $a + b + c + d + e + f$ ჯამის მნიშვნელობა, თუ ნებისმიერი $x$-სთვის სამართლიანია $(x^2 - 199x + 5)(x^2 + 2023x + 1)(x + 2)^2(x - 1) = x^7 + ax^6 + bx^5 + cx^4 + dx^3 + ex^2 + fx + g$ ტოლობა.",
     options: ["$9$", "$-20$", "$10$", "$-99$", "$7$", "$19$"],
     correct: 5,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 25
   {
     question: "$ABC$ ტოლფერდა სამკუთხედში წვეროსთან მდებარე $B$ კუთხე $36^\\circ$-ის ტოლია. იპოვეთ ფერდის სიგრძის შეფარდება ფუძესთან მდებარე კუთხის ბისექტრისის სიგრძესთან.",
     options: ["$\\frac{4}{\\sqrt{5} + 1}$", "$\\frac{\\sqrt{5}}{\\sqrt{3}}$", "$\\frac{2}{\\sqrt{5} - 1}$", "$\\frac{\\sqrt{7}}{2}$", "$\\frac{\\sqrt{5} + 1}{\\sqrt{5} - 1}$", "$\\frac{1 + \\sqrt{7}}{2}$"],
     correct: 2,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -3,60 +3,140 @@ quizData = [
   {
     question: "იპოვეთ $1; 2; 2; 3; 3; 3; 4; 4; 5$ მონაცემების მოდა, მედიანა, საშუალო, გაბნევის დიაპაზონი, დისპერსია და საშუალო კვადრატული გადახრა.",
     options: [],
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["statistics"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 2
   {
     question: "ვთქვათ, ვაგორებთ ორ იდეალურ კამათელს. $A$ არის ხდომილობა იმისა, რომ ორივე კამათელზე მოსული რიცხვი კენტია, ხოლო $B$ არის ხდომილობა იმისა, რომ ორივე კამათელზე მოსული რიცხვი ლუწია. იპოვეთ $A$, $A \\cdot B$, $A + B$ და $A \\setminus B$ ხდომილობების ალბათობები.",
     options: [],
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability","sets","function-props"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 3
   {
     question: "ვთქვათ, ვაგორებთ ერთ იდეალურ კამათელს. მოცემულია ხდომილობები: \n\n$A = \\{\\text{მოვიდა ლუწი რიცხვი}\\}$, $B = \\{\\text{მოვიდა კენტი რიცხვი}\\}$, $C = \\{\\text{მოვიდა მარტივი რიცხვი}\\}$, $D = \\{\\text{მოვიდა შედგენილი რიცხვი}\\}$, $E = \\{\\text{მოვიდა 3-ის ჯერადი რიცხვი}\\}$.\n\n$A$, $B$, $C$, $D$ და $E$ ხდომილობებიდან იპოვეთ საწინააღმდეგო, არათავსებადი და დამოუკიდებელი ხდომილობების წყვილები (პასუხი დაასაბუთეთ).",
     options: [],
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability","divisibility","prime-factor"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 4
   {
     question: "სამი მსროლელი ერთმანეთისგან დამოუკიდებლად თითოჯერ ესვრის მიზანში. პირველის მიერ მიზანში მოხვედრის ალბათობაა $0{,}6$, მეორის − $0{,}7$, მესამის − $0{,}8$. იპოვეთ ალბათობა იმისა, რომ <br><br> ა) სამივე ააცილებს მიზანს; <br><br> ბ) ერთი მაინც მოახვედრებს მიზანს; <br><br> გ) ზუსტად ერთი მოახვედრებს მიზანს.",
     options: [],
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability","linear-ineq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 5
   {
     question: "ცდას ვატარებთ არასტანდარტული მონეტით, რომელიც ყოველი აგდებისას იცვლის ხასიათს. პირველ აგდებისას საფასურის მოსვლის ალბათობაა $\\frac{1}{2}$, მეორე აგდებისას საფასურის მოსვლის ალბათობაა $\\frac{1}{3}$ და ა.შ. მე-$n$ აგდებისას საფასურის მოსვლის ალბათობა $\\frac{1}{n+1}$-ის ტოლია. ასეთი მონეტის შემთხვევაში აჩვენეთ, რომ ნებისმიერი ნატურალური $n$ რიცხვისათვის მე-$n$ აგდებისას გერბის მოსვლა და პირველ $n$ აგდებაში ერთხელ მაინც საფასურის მოსვლა თანაბრად მოსალოდნელია (ანუ მათი ალბათობები ტოლია).",
     options: [],
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 9,
+    difficulty: 2,
+    type: ["proof"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 6
   {
     question: "აჩვენეთ, რომ ნებისმიერი ნატურალური $n$ რიცხვისათვის $3^{n+1} \\cdot 5^n + 2^{3n+2}$ იყოფა $7$-ზე.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility","powers"],
+    grade: 9,
+    difficulty: 3,
+    type: ["proof"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 7
   {
     question: "$Oxy$ მართკუთხა საკოორდინატო სიბრტყეში მოცემულია $A(1; 1)$, $B(9; 7)$ და $C(1; 7)$ წერტილები. დაწერეთ $ABC$ სამკუთხედზე შემოხაზული წრეწირის განტოლება.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum","line-circle-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 8
   {
     question: "$Oxy$ მართკუთხა საკოორდინატო სიბრტყეში მოცემულია $3x − 2y = 7$ განტოლებით განსაზღვრული $a$ წრფე, $x + 2y = 13$ ტოლობით განსაზღვრული $b$ წრფე და $A(1; 1)$ წერტილი. იპოვეთ <br><br> ა) $a$ და $b$ წრფეების გადაკვეთის $B$ წერტილის კოორდინატები; <br><br> ბ) $a$ და $b$ წრფეებს შორის კუთხის კოსინუსი; <br><br> გ) მანძილი $A$ წერტილიდან $B$ წერტილამდე; <br><br> დ) მანძილი $A$ წერტილიდან $a$ წრფემდე.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["line-circle-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 9
   {
     question: "$Oxy$ მართკუთხა საკოორდინატო სიბრტყეში დაწერეთ $(0; 2)$ წერტილზე გამავალი ორი ისეთი ურთიერთმართობული წრფის განტოლება, რომ ამ წრფეებითა და $Ox$ ღერძით შემოსაზღვრული სამკუთხედის ფართობი $5$-ის ტოლი იყოს.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["line-circle-eq","function-props"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 10
   {
     question: "$Oxy$ მართკუთხა საკოორდინატო სიბრტყეზე მოცემულია $A(2; 1)$, $B(4; 7)$ და $C(8; 3)$ წერტილები. იპოვეთ $ABC$ სამკუთხედის სიმაღლეების გადაკვეთის წერტილის კოორდინატები.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["notable-points","line-circle-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

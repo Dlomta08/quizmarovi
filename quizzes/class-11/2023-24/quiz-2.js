@@ -10,7 +10,15 @@ quizData = [
             "$6$"
         ],
         correct: 2,
-        tags: ["Logarithm", "Inequality"]
+        tags: ["Logarithm", "Inequality"],
+        area: "algebra",
+        topics: ["log-ineq"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია \\(\\sqrt{\\log_{0{,}5}(x + 2)} > 1\\) უტოლობის მთელ ამონახსნთა რაოდენობა?",
@@ -23,7 +31,15 @@ quizData = [
             "$5$"
         ],
         correct: 0,
-        tags: ["Logarithm", "Inequality"]
+        tags: ["Logarithm", "Inequality"],
+        area: "algebra",
+        topics: ["log-ineq","diophantine"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ \\(\\log_{10}(2x + a) \\leq 0\\) უტოლობის უდიდესი ამონახსნი?",
@@ -36,7 +52,15 @@ quizData = [
             "$\\frac{a + 1}{3}$"
         ],
         correct: 4,
-        tags: ["Logarithm", "Inequality"]
+        tags: ["Logarithm", "Inequality"],
+        area: "algebra",
+        topics: ["log-ineq"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ცილინდრი ჩახაზულია ბირთვში. ცილინდრის სიმაღლეა $3$, ხოლო რადიუსია $2$. იპოვეთ, რისი ტოლია ბირთვის რადიუსი?",
@@ -49,7 +73,15 @@ quizData = [
             "$4$"
         ],
         correct: 2,
-        tags: ["Geometry", "Volume"]
+        tags: ["Geometry", "Volume"],
+        area: "solid",
+        topics: ["cylinder","sphere","volume-surface"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ცილინდრის ღერძული კვეთა მართკუთხედია, რომლის დიაგონალია $1$, ხოლო დიაგონალებს შორის კუთხე $60^\\circ$-ია. რისი ტოლია ცილინდრის მოცულობა თუ ფუძის დიამეტრი მეტია სიმაღლეზე?",
@@ -62,7 +94,15 @@ quizData = [
             "$\\frac{3}{32}\\pi$"
         ],
         correct: 5,
-        tags: ["Geometry", "Volume"]
+        tags: ["Geometry", "Volume"],
+        area: "solid",
+        topics: ["volume-surface","cylinder"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია \\((\\log_x(x + 1) - 2)(2x + 3)(|x| + 1) > 0\\) უტოლობის ამონახსნთა სიმრავლე?",
@@ -75,7 +115,15 @@ quizData = [
             "$x \\in (1; \\frac{\\sqrt{5} + 2}{3})$"
         ],
         correct: 4,
-        tags: ["Logarithm", "Inequality"]
+        tags: ["Logarithm", "Inequality"],
+        area: "algebra",
+        topics: ["log-ineq"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ბირთვი გადაკვეთილია ცენტრიდან თანაბარი მანძილით დაშორებული ორი ურთიერთმართობული მკვეთი სიბრტყით. მკვეთი სიბრტყეების საერთო წიბო, ბირთვის ცენტრიდან $12$ ერთეულითაა დაშორებული. ამ წიბოს ბირთვის შიგნით მოქცეული ნაწილის სიგრძეა $18$-ის ტოლია. იპოვეთ რისი ტოლია ბირთვის მოცულობა?",
@@ -88,7 +136,15 @@ quizData = [
             "$4800\\pi$"
         ],
         correct: 1,
-        tags: ["Geometry", "Volume"]
+        tags: ["Geometry", "Volume"],
+        area: "solid",
+        topics: ["volume-surface","sphere"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია \\(\\sqrt{2x + 3} \\leq x\\) უტოლობის $8$-ზე ნაკლები მთელი ამონახსნების რაოდენობა?",
@@ -101,7 +157,15 @@ quizData = [
             "$6$"
         ],
         correct: 4,
-        tags: ["Inequality"]
+        tags: ["Inequality"],
+        area: "algebra",
+        topics: ["square-roots"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "კონუსის ღერძული კვეთა ტოლგვერდა სამკუთხედია $6$-ის ტოლი გვერდით. გავლებულია კონუსის ფუძის პარალელური ორი სიბრტყე, რომლებიც კონუსის სიმაღლეს $3$ ტოლ ნაწილად ყოფენ. იპოვეთ, რისი ტოლია ამ ორ პარალელურ მკვეთ სიბრტყეს შორის მოქცეული კონუსის ნაწილის მოცულობა.",
@@ -114,7 +178,15 @@ quizData = [
             "$\\frac{5 + 6\\sqrt{3}}{2}\\pi$"
         ],
         correct: 3,
-        tags: ["Geometry", "Volume"]
+        tags: ["Geometry", "Volume"],
+        area: "solid",
+        topics: ["volume-surface","cone","isosceles"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "წესიერი წაკვეთილი სამკუთხა პირამიდის გვერდითი წიბოა $4$-ია და იგი ფუძის სიბრტყესთან ადგენს $60^\\circ$-იან კუთხეს. რისი ტოლია წაკვეთილი პირამიდის მოცულობა თუ დიდი ფუძის გვერდია \\(4\\sqrt{3}\\).",
@@ -127,7 +199,15 @@ quizData = [
             "$44$"
         ],
         correct: 4,
-        tags: ["Geometry", "Volume"]
+        tags: ["Geometry", "Volume"],
+        area: "solid",
+        topics: ["volume-surface","pyramid"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი განსხვავებული ამონახსნი აქვს \\((x^2 - x)\\log_2 x - 2^x(x - 1)^2 = (x - 1)\\log_2 x\\) განტოლებას?",
@@ -140,7 +220,15 @@ quizData = [
             "უამრავი"
         ],
         correct: 0,
-        tags: ["Logarithm", "Equation"]
+        tags: ["Logarithm", "Equation"],
+        area: "algebra",
+        topics: ["log-eq"],
+        grade: 11,
+        difficulty: 2,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რომელ მეოთხედს შეიძლება ეკუთვნოდეს \\(\\alpha\\) კუთხე, თუ \\(\\sqrt{\\sin \\alpha} \\geq \\cos \\alpha\\)?",
@@ -153,7 +241,15 @@ quizData = [
             "პირველი ან მეოთხე"
         ],
         correct: 2,
-        tags: ["Trigonometry"]
+        tags: ["Trigonometry"],
+        area: "algebra",
+        topics: ["trig-ineq"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია \\(a\\) თუ \\(4^x - 2^{x+2} + a = 0\\) განტოლების ამონახსნები ორი მოპირდაპირე რიცხვია.",
@@ -166,7 +262,15 @@ quizData = [
             "$6$"
         ],
         correct: 4,
-        tags: ["Exponential", "Equation"]
+        tags: ["Exponential", "Equation"],
+        area: "algebra",
+        topics: ["exp-eq"],
+        grade: 11,
+        difficulty: 2,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "პირამიდას ფუძეში აქვს ტოლფერდა, მართკუთხა სამკუთხედი $6\\sqrt{2}$-ის ტოლი კათეტებით. პირამიდის ყველა გვერდითი წიბო, ასევე $6\\sqrt{2}$-ია. პირამიდის სიმაღლის შუა წერტილზე გავლებულია ფუძის პარალელური სიბრტყე, რომელიც პირამიდას ორ ნაწილად ყოფს. იპოვეთ რისი ტოლია მიღებული წაკვეთილი პირამიდის გვერდითი ზედაპირის ფართობი?",
@@ -179,7 +283,15 @@ quizData = [
             "$22(\\sqrt{2} + 3)$"
         ],
         correct: 0,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","pyramid","isosceles"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "დახრილი ოთხკუთხა პრიზმის თითოეული გვერდითი წახნაგის დიაგონალები ურთიერთმართობულია. ფუძის დიაგონალებია $6$ და $8$. იპოვეთ პრიზმის მოცულობა, თუ თითოეული გვერდითი წიბო ფუძის სიბრტყისადმი $60^\\circ$-იანი კუთხითაა დახრილი.",
@@ -192,7 +304,15 @@ quizData = [
             "$90\\sqrt{3}$"
         ],
         correct: 4,
-        tags: ["Geometry", "Volume"]
+        tags: ["Geometry", "Volume"],
+        area: "solid",
+        topics: ["volume-surface","prism"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია \\(\\log_{10}(2\\sqrt{3} - \\sqrt{2})^x + \\log_{10}(2\\sqrt{3} + \\sqrt{2})^x = x\\) განტოლების ამონახსნთა სიმრავლე?",
@@ -205,7 +325,15 @@ quizData = [
             "$x \\in (-\\infty; +\\infty)$"
         ],
         correct: 5,
-        tags: ["Logarithm", "Equation"]
+        tags: ["Logarithm", "Equation"],
+        area: "algebra",
+        topics: ["log-eq"],
+        grade: 11,
+        difficulty: 2,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {   
         warning: "ორი პასუხია ჩათვლილი",
@@ -219,7 +347,15 @@ quizData = [
             "$6$"
         ],
         correct: [3,5],
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","prism"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია \\(\\log_2(16x^2) + (\\log_2(-8x))^2 - 33 = 0\\) განტოლების ფესვების ნამრავლი?",
@@ -232,7 +368,15 @@ quizData = [
             "$-\\frac{255}{1024}$"
         ],
         correct: 4,
-        tags: ["Logarithm", "Equation"]
+        tags: ["Logarithm", "Equation"],
+        area: "algebra",
+        topics: ["log-eq","vieta"],
+        grade: 11,
+        difficulty: 3,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ორ ერთნაირ კონუსს ღერძული კვეთა ერთნაირი ტოლგვერდა სამკუთხედი აქვს $3$-ის ტოლი გვერდით. ამ კონუსებს ფუძეები ერთმანეთის პარალელურ სიბრტყეებში აქვთ, რომელთა შორის მანძილი \\(2\\sqrt{3}\\)-ია. ამ კონუსების ღერძების შემცველი წრფეები ერთმანეთს ემთხვევა და კონუსები კვეთენ ერთმანეთს. იპოვეთ, რისი ტოლია კონუსების გაერთიანებით მიღებული სხეულის მოცულობა?",
@@ -245,7 +389,15 @@ quizData = [
             "$1{,}5\\sqrt{3}\\pi$"
         ],
         correct: 0,
-        tags: ["Geometry", "Volume"]
+        tags: ["Geometry", "Volume"],
+        area: "solid",
+        topics: ["volume-surface","cone","isosceles"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "წესიერი ოთხკუთხა პირამიდის თითოეული აპოთემა დახრილია ფუძის სიბრტყისადმი $60^\\circ$-იანი კუთხით. რისი ტოლია ამ პირამიდაში ჩახაზული ბირთვის მოცულობა თუ პირამიდის სიმაღლეა $3$?",
@@ -258,7 +410,15 @@ quizData = [
             "$\\frac{5}{6}\\pi$"
         ],
         correct: 2,
-        tags: ["Geometry", "Volume"]
+        tags: ["Geometry", "Volume"],
+        area: "solid",
+        topics: ["volume-surface","pyramid","sphere"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "\\(a\\) პარამეტრის რა მნიშვნელობებისათვის აქვს ამონახსნი \\(a\\cdot49^x + 6\\cdot7^x - 3 \\geq 0\\) უტოლობას?",
@@ -271,7 +431,15 @@ quizData = [
             "$a \\in [0; +\\infty)$"
         ],
         correct: 0,
-        tags: ["Exponential", "Inequality"]
+        tags: ["Exponential", "Inequality"],
+        area: "algebra",
+        topics: ["exp-ineq"],
+        grade: 11,
+        difficulty: 3,
+        type: ["solve"],
+        method: ["parameter"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ \\(b\\) პარამეტრის ყველა მნიშვნელობა, რომლისათვისაც \\((\\log_3 x)^2 + \\log_3 x + b \\geq 0\\) უტოლობას აქვს არა ცარიელი ამონახსნი?",
@@ -284,7 +452,15 @@ quizData = [
             "$b \\in (-\\infty; 0.25]$"
         ],
         correct: 0,
-        tags: ["Logarithm", "Inequality"]
+        tags: ["Logarithm", "Inequality"],
+        area: "algebra",
+        topics: ["log-ineq"],
+        grade: 11,
+        difficulty: 3,
+        type: ["solve"],
+        method: ["parameter"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "კონუსის ღერძული კვეთა მართკუთხა სამკუთხედია. ამ კონუსში ჩახაზულია ორი კუბი ისე, რომ დიდი კუბის ფუძე კონუსის ფუძეშია და კუბის ოთხივე წვერო ეხება კონუსის მსახველებს. რაც შეეხება მცირე კუბს, ქვედა ფუძე დიდი კუბის ზედა ფუძეშია, ხოლო მისი ზედა ფუძის ოთხივე წვერო ეხება კონუსის გვერდით ზედაპირს. რისი ტოლია ამ ორი კუბის წიბოების შეფარდება?",
@@ -297,7 +473,15 @@ quizData = [
             "$2$"
         ],
         correct: 2,
-        tags: ["Geometry", "Ratio"]
+        tags: ["Geometry", "Ratio"],
+        area: "solid",
+        topics: ["prism","cone","right-triangle"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "მოცემულია \\(ABCDA_1B_1C_1D_1\\) მართკუთხა პარალელეპიპედი. იპოვეთ პარალელეპიპედის იმ ნაწილის მოცულობა, რომელიც შემოსაზღვრულია \\(BA_1C_1\\), \\(BC_1D\\) და \\(BA_1D\\) სიბრტყეებით, თუ პარალელეპიპედის მოცულობაა $6$.",
@@ -310,7 +494,15 @@ quizData = [
             "$6$"
         ],
         correct: 2,
-        tags: ["Geometry", "Volume"]
+        tags: ["Geometry", "Volume"],
+        area: "solid",
+        topics: ["volume-surface","combinatorics","prism"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "დადებით წევრებიანი, ზრდადი გეომეტრიული პროგრესიის პირველი სამი წევრის ჯამია $7$. თუ გავალოგარითმებთ $2$-ის ფუძით ამ სამ წევრს და ისე შევკრებთ, ჯამი $3$-ის ტოლი იქნება. რისი ტოლია ამ პროგრესიის მე-$3$ წევრი?",
@@ -323,6 +515,14 @@ quizData = [
             "$6$"
         ],
         correct: 3,
-        tags: ["Geometric Progression", "Logarithm"]
+        tags: ["Geometric Progression", "Logarithm"],
+        area: "algebra",
+        topics: ["geometric-prog","logarithms"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     }
 ];

@@ -22,7 +22,15 @@ quizData = [
     "ყველა წინა პასუხი მცდარია"
   ],
   correct: 0,
-  tags: ["probability", "combinatorics"]
+  tags: ["probability", "combinatorics"],
+  area: "prob-stats",
+  topics: ["probability","combinatorics","dot-product"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 2
@@ -30,7 +38,15 @@ quizData = [
   question: "რამდენნაირად შეიძლება $K$, $M$, $R$, $V$ და $A$ ხუთი ასოს ისე გადანაცვლება, რომ პირველ ადგილზე $A$ ასო იყოს?",
   options: ["$18$", "$2 \\cdot C_5^2$", "$A_5^2$", "$20$", "$25$", "$P_4$"],
   correct: 5,
-  tags: ["permutation", "letters"]
+  tags: ["permutation", "letters"],
+  area: "prob-stats",
+  topics: ["combinatorics"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 3
@@ -45,7 +61,15 @@ quizData = [
     "$90000 - C_5^3 \\cdot C_5^2$"
   ],
   correct: 2,
-  tags: ["number", "counting"]
+  tags: ["number", "counting"],
+  area: "algebra",
+  topics: ["function-props","combinatorics"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 4
@@ -53,7 +77,15 @@ quizData = [
   question: "მართკუთხა საკოორდინატო სივრცის $A(-1; 0; 3)$, $B(2; -3; 0)$ და $C(0; 1; -2)$ წერტილები დაალაგეთ საკოორდინატო სათავემდე დაშორების ზრდის მიხედვით.",
   options: ["$A, B, C$", "$A, C, B$", "$B, A, C$", "$B, C, A$", "$C, A, B$", "$C, B, A$"],
   correct: 4,
-  tags: ["geometry", "distance"]
+  tags: ["geometry", "distance"],
+  area: "algebra",
+  topics: ["numeric-ineq"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 5
@@ -61,7 +93,15 @@ quizData = [
   question: "მართკუთხა საკოორდინატო სიბრტყის $A(1; 1)$, $B(1; 2)$ და $C(2; 1)$ წერტილები საკოორდინატო სათავის მიმართ $k = 2$ კოეფიციენტით ჰომოთეტიისას შესაბამისად $A_1$, $B_1$ და $C_1$ წერტილებში აისახებიან. იპოვეთ $A_1B_1C_1$ სამკუთხედის ფართობი.",
   options: ["$8$", "$4$", "$0{,}5$", "$2$", "$1$", "$0{,}25$"],
   correct: 3,
-  tags: ["geometry", "homothety"]
+  tags: ["geometry", "homothety"],
+  area: "geometry",
+  topics: ["similar-figures","combinatorics","line-circle-eq"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 6
@@ -69,7 +109,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომელია $\\sqrt{x} \\geq x$ და $\\sqrt{x} \\leq x$ უტოლობათა ამონახსნთა სიმრავლეების თანაკვეთა?",
   options: ["\∅", "$\\mathbb{R} \\setminus \\{0\\}$", "$\\{0; -2\\}$", "$\\{0; -1\\}$", "$\\{0; 2\\}$", "$\\{0; 1\\}$"],
   correct: 5,
-  tags: ["inequality", "intersection"]
+  tags: ["inequality", "intersection"],
+  area: "algebra",
+  topics: ["sets"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 7
@@ -77,7 +125,15 @@ quizData = [
   question: "სალომემ და დათომ სტანდარტული კამათელი თითოჯერ გააგორეს და ცნობილია, რომ სალომეს კამათელზე მეტი რიცხვი დაჯდა. იპოვეთ ალბათობა იმისა, რომ სალომეს კამათელზე დაჯდა $6$.",
   options: ["$\\frac{4}{5}$", "$\\frac{3}{5}$", "$\\frac{1}{2}$", "$\\frac{2}{3}$", "$\\frac{1}{3}$", "$1$"],
   correct: 4,
-  tags: ["probability", "dice"]
+  tags: ["probability", "dice"],
+  area: "prob-stats",
+  topics: ["probability"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 8
@@ -85,7 +141,15 @@ quizData = [
   question: "რამდენნაირად შეუძლია $50$ ადამიანს $30$ ერთნაირი ოქროს მონეტის განაწილება ისე, რომ თითოეულს $0$ ან $1$ მონეტა შეხვდეს?",
   options: ["$A_{50}^{30}$", "$C_{50}^{30}$", "$\\frac{50!}{30!}$", "$A_{49}^{29}$", "$C_{49}^{29}$", "$\\frac{49!}{29!}$"],
   correct: 1,
-  tags: ["combinatorics", "distribution"]
+  tags: ["combinatorics", "distribution"],
+  area: "prob-stats",
+  topics: ["combinatorics","probability"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 9
@@ -93,7 +157,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომელი ფუნქციის გრაფიკი აისახება თავის თავში $\\vec{a}(1; 2)$ ვექტორის გასწვრივ პარალელური გადატანისას?",
   options: ["$y = -x$", "$y = -2$", "$y = 2x + 1$", "$y = -x - 2$", "$y = 3$", "$y = x + 2$"],
   correct: 2,
-  tags: ["transformation", "function"]
+  tags: ["transformation", "function"],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 10,
+  difficulty: 1,
+  type: ["graph"],
+  method: ["vectors","coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 10
@@ -101,7 +173,15 @@ quizData = [
   question: "მოცემულია $\\vec{a}(1; 1; 1)$, $\\vec{b}(1; 1; 2)$ და $\\vec{c}(3; 1; 2)$ ვექტორები. იპოვეთ $(\\vec{a} \\times \\vec{b}) \\cdot \\vec{c}$.",
   options: ["$-5$", "$4$", "$-3$", "$2$", "$-1$", "$0$"],
   correct: 3,
-  tags: ["vector", "crossdot"]
+  tags: ["vector", "crossdot"],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: ["vectors","coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 11
@@ -109,7 +189,15 @@ quizData = [
   question: "იპოვეთ დადებითი $x$ რიცხვი, თუ $(3 + 2x)^{25}$ ბინომის განაშალის შუა ორი წევრი ერთმანეთის ტოლია.",
   options: ["$2$", "$\\frac{3}{2}$", "$\\frac{4}{3}$", "$1$", "$\\frac{3}{4}$", "$\\frac{1}{2}$"],
   correct: 1,
-  tags: ["binomial", "algebra"]
+  tags: ["binomial", "algebra"],
+  area: "prob-stats",
+  topics: ["binomial"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 12
@@ -117,7 +205,15 @@ quizData = [
   question: "ალბათობები იმისა, რომ ევროპის ჩემპიონატის ჯგუფურ ეტაპზე საქართველო ჯგუფში გავა პირველ, მეორე, მესამე და მეოთხე ადგილზე შესაბამისად $0{,}3$, $0{,}4$, $0{,}2$-ისა და $0{,}1$-ის ტოლია. ჯგუფში პირველ ან მეორე ადგილზე გასვლის შემთხვევაში საქართველო აუცილებლად ითამაშებს მეორე ეტაპზე, მესამე ადგილზე გასვლის შემთხვევაში $0{,}8$ ალბათობით ითამაშებს მეორე ეტაპზე, ხოლო მეოთხე ადგილზე გასვლის შემთხვევაში აუცილებლად ვერ ითამაშებს მეორე ეტაპზე. იპოვეთ ალბათობა იმისა, რომ საქართველო ითამაშებს მეორე ეტაპზე.",
   options: ["$0{,}78$", "$0{,}81$", "$0{,}86$", "$0{,}89$", "$0{,}91$", "$0{,}99$"],
   correct: 2,
-  tags: ["probability"]
+  tags: ["probability"],
+  area: "prob-stats",
+  topics: ["probability"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 13
@@ -125,7 +221,15 @@ quizData = [
   question: "იპოვეთ $3x + 4y$ გამოსახულების მაქსიმალური შესაძლო მნიშვნელობა, თუ ცნობილია, რომ სრულდება $x + 2y \\leq 15$ და $3x + y \\leq 20$ პირობები.",
   options: ["$35$", "$30$", "$28$", "$40$", "$42$", "$36$"],
   correct: 0,
-  tags: ["inequality", "optimization"]
+  tags: ["inequality", "optimization"],
+  area: "algebra",
+  topics: ["max-min","linear-ineq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 14
@@ -133,7 +237,15 @@ quizData = [
   question: "$k$ და $m$ არანულოვანი პარამეტრებია. ჩამოთვლილთაგან რომელი ფუნქციის გრაფიკია $y = kx + m$ ფუნქციის გრაფიკის სიმეტრიული საკოორდინატო სათავის მიმართ?",
   options: ["$y = kx + m$", "$y = kx - m$", "$y = kx$", "$y = -kx + m$", "$y = -kx - m$", "$y = -kx$"],
   correct: 1,
-  tags: ["geometry", "reflection"]
+  tags: ["geometry", "reflection"],
+  area: "algebra",
+  topics: ["graph-transform"],
+  grade: 10,
+  difficulty: 2,
+  type: ["graph"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 15
@@ -141,7 +253,15 @@ quizData = [
   question: "$\\vec{a}$ და $\\vec{b}$ ვექტორების ვექტორული ნამრავლის სიგრძე $6$-ის ტოლია. იპოვეთ $(\\vec{a} + 2\\vec{b})$ და $(3\\vec{a} + 4\\vec{b})$ ვექტორების ვექტორული ნამრავლის სიგრძე.",
   options: ["$9$", "$18$", "$12$", "$4$", "$3$", "$15$"],
   correct: 2,
-  tags: ["vector", "crossproduct"]
+  tags: ["vector", "crossproduct"],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 16
@@ -149,7 +269,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომელია $\\sqrt{x^2 + x - 12} < x - 2$ უტოლობის ამონახსნი?",
   options: ["$\\pi$", "$2{,}8$", "$2{,}9$", "$3{,}3$", "$2 + \\sqrt{3}$", "$2\\sqrt{3}$"],
   correct: 0,
-  tags: ["inequality", "radicals"]
+  tags: ["inequality", "radicals"],
+  area: "algebra",
+  topics: ["square-roots","quadratic-ineq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 17
@@ -157,7 +285,15 @@ quizData = [
   question: "რომელ ტრიგონომეტრიულ მეოთხედებშია $\\frac{\\tan x}{1 + \\tan x} > 2$ უტოლობის ყველა ამონახსნი?",
   options: ["I და II", "I და III", "I და IV", "II და III", "II და IV", "III და IV"],
   correct: 4,
-  tags: ["trigonometry", "inequality"]
+  tags: ["trigonometry", "inequality"],
+  area: "algebra",
+  topics: ["trig-ineq","interval-method"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 18
@@ -172,7 +308,15 @@ quizData = [
     "$C_{10}^{3} a^7b^4 + C_{10}^{7} a^7b^4$"
   ],
   correct: 0,
-  tags: ["binomial", "algebra"]
+  tags: ["binomial", "algebra"],
+  area: "prob-stats",
+  topics: ["binomial","combinatorics"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 19
@@ -180,7 +324,15 @@ quizData = [
   question: "იპოვეთ $k$ პარამეტრის მნიშვნელობა, თუ $\\vec{a}(k; 1; 2)$, $\\vec{b}(3; 2; 1)$ და $\\vec{c}(1; 1; 0)$ ვექტორები კომპლანარულია.",
   options: ["$-3$", "$3$", "$-2$", "$2$", "$-1$", "$1$"],
   correct: 1,
-  tags: ["vector", "coplanar"]
+  tags: ["vector", "coplanar"],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: ["parameter","vectors","coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 20
@@ -188,7 +340,15 @@ quizData = [
   question: "მართკუთხა საკოორდინატო სივრცეში მოცემულია $ABCD A_1B_1C_1D_1$ პარალელეპიპედი. მისი ოთხი წვეროს კოორდინატებია: $A(1; 1; 2)$, $B(2; 5; 4)$, $D(6; 3; 3)$, $A_1(4; 4; 7)$. იპოვეთ $D_1$ წვეროს კოორდინატები.",
   options: ["$D_1(6; 9; 8)$", "$D_1(6; 8; 9)$", "$D_1(8; 9; 6)$", "$D_1(8; 6; 9)$", "$D_1(9; 8; 6)$", "$D_1(9; 6; 8)$"],
   correct: 5,
-  tags: ["3D", "coordinates"]
+  tags: ["3D", "coordinates"],
+  area: "prob-stats",
+  topics: ["combinatorics","prism"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 21
@@ -196,7 +356,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომელი უტოლობის ამონახსნია $x \\in \\left(\\frac{\\pi k}{2}; \\frac{\\pi}{4} + \\frac{\\pi k}{2}\\right),\\ k \\in \\mathbb{Z}$?",
   options: ["$\\tan^3x < \\tan x$", "$\\sin^2x < \\frac{1}{2}$", "$\\cos^2x > \\frac{1}{2}$", "$\\tan x < 1$", "$|\\sin x| > |\\cos x|$", "$\\sin x > \\cos x$"],
   correct: 0,
-  tags: ["trig", "intervals"]
+  tags: ["trig", "intervals"],
+  area: "algebra",
+  topics: ["linear-ineq"],
+  grade: 10,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 22
@@ -204,7 +372,15 @@ quizData = [
   question: "გვაქვს ათი მონეტა. მათგან ხუთი ჩვეულებრივია, მათ ერთ მხარეზე საფასურია, მეორე მხარეზე − გერბი. დანარჩენი ხუთი ყალბი მონეტიდან სამის ორივე მხარეზე საფასურია და ორის ორივე მხარეზე გერბი. ეს ათი მონეტა აურიეს, შეარჩიეს შემთხვევით ერთი მონეტა, ააგდეს და საფასურზე დაჯდა. იპოვეთ ალბათობა იმისა, რომ ამ მონეტის მეორე გვერდზეც საფასური იქნება.",
   options: ["$\\frac{2}{10}$", "$\\frac{4}{11}$", "$\\frac{7}{10}$", "$\\frac{6}{11}$", "$\\frac{5}{8}$", "$\\frac{6}{8}$"],
   correct: 3,
-  tags: ["probability"]
+  tags: ["probability"],
+  area: "prob-stats",
+  topics: ["probability"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 23
@@ -212,7 +388,15 @@ quizData = [
   question: "$|x| + |y| < a$ უტოლობის ისეთ $(x; y)$ ამონახსნთა რაოდენობა, რომელთაგან $x$-იცა და $y$-იც მთელი რიცხვია არის $K$. ნებისმიერი $2$-ზე მეტი $a$ პარამეტრისათვის $K$ აუცილებლად არის … (იგულისხმება, რომ $(5;7)$ და $(7;5)$ ამონახსნთა სხვადასხვა წყვილია)",
   options: ["ლუწი", "მარტივი", "შედგენილი", "ნატურალური რიცხვის კვადრატი", "$5$-ის ჯერადი ნატურალური რიცხვი", "$4$-ის ჯერადის მომდევნო ნატურალური რიცხვი"],
   correct: 5,
-  tags: ["absolute", "counting"]
+  tags: ["absolute", "counting"],
+  area: "algebra",
+  topics: ["linear-ineq"],
+  grade: 10,
+  difficulty: 3,
+  type: ["solve"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 24
@@ -227,7 +411,15 @@ quizData = [
     "ყველა წინა პასუხი მცდარია"
   ],
   correct: 5,
-  tags: ["function", "rotation"]
+  tags: ["function", "rotation"],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 10,
+  difficulty: 3,
+  type: ["graph"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 25
@@ -242,6 +434,14 @@ quizData = [
     "$(\\vec{a} + \\vec{c}) \\cdot (\\vec{b} + \\vec{d}) = |\\vec{a} + \\vec{c}| \\cdot |\\vec{b} + \\vec{d}|$"
   ],
   correct: 4,
-  tags: ["vector", "geometry"]
+  tags: ["vector", "geometry"],
+  area: "geometry",
+  topics: ["vectors","trapezoid","pyramid"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];

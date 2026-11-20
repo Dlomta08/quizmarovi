@@ -4,7 +4,15 @@ quizData = [
   question: "იპოვეთ $y = x^2 - 4x + 3$, სადაც $x \\in [-1; 1]$ ფუნქციის უდიდესი და უმცირესი მნიშვნელობების ნამრავლი.",
   options: ["$0$", "$1$", "$2$", "$4$", "$-6$", "$-8$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-func","max-min"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //2
@@ -12,7 +20,15 @@ quizData = [
   question: "ამოხსენით $\\frac{3}{(x-2)^3} \\geq 0$ უტოლობა.",
   options: ["$[-3; 2]$", "$(-\\infty; 2)$", "$[2; 3]$", "$(2; \\infty)$", "$(3; \\infty)$", "$(-\\infty; \\infty)$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-ineq","interval-method"],
+  grade: 9,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //3
@@ -20,7 +36,15 @@ quizData = [
   question: "იპოვეთ $y = -x^2 + 6x + 3$ ფუნქციის უდიდესი მნიშვნელობა.",
   options: ["$18$", "$12$", "$10$", "$8$", "$6$", "$3$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-func","max-min"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //4
@@ -28,7 +52,15 @@ quizData = [
   question: "გამოთვალეთ მართკუთხედის ფართობი, თუ მასში ჩახაზული წრეწირის რადიუსია $4$.",
   options: ["$12$", "$16$", "$32$", "$48$", "$64$", "$96$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["inscribed-circum","rhombus-rect-sq"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //5
@@ -37,7 +69,15 @@ quizData = [
   question: "გამოთვალეთ სამკუთხედის ფართობი, თუ მისი გვერდებია $8$, $10$ და $12$, ხოლო კუთხეებია $30^{\\circ}$, $\\alpha$ და $\\beta$ ($30^{\\circ} < \\alpha < \\beta$).",
   options: ["$40$", "$48$", "$30$", "$80$", "$96$", "$70$"],
   correct: [0,1,2,3,4,5],
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-ineq"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //6
@@ -45,7 +85,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რისი ტოლია $a$ და $b$ ნატურალური რიცხვების ნამრავლი, თუ $y = x^2 + ax + b$ კვადრატული ფუნქციის გრაფიკის წვერო აბსცისათა ღერძზე მდებარეობს?",
   options: ["$4$", "$12$", "$16$", "$18$", "$20$", "$24$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-func"],
+  grade: 9,
+  difficulty: 1,
+  type: ["graph"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //7
@@ -53,7 +101,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომელ შუალედს ეკუთვნის $a$ პარამეტრი, თუ $y = -x^2 + 6x + a$ ფუნქციის გრაფიკი მეორე მეოთხედში არ გადის, $a$ პარამეტრი ნებისმიერი მნიშვნელობისთვის ამ შუალედიდან?",
   options: ["$(3; 6)$", "$(6; 12)$", "$(0; 6)$", "$(-3; 6)$", "$(-3; 3)$", "$(-4; -3)$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-func"],
+  grade: 9,
+  difficulty: 1,
+  type: ["graph"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //8
@@ -61,7 +117,15 @@ quizData = [
   question: "მოცემულია $y = f(x)$ ფუნქცია. $f(x) = 0$ განტოლების ამონახსნთა სიმრავლეა $\\{−5; −4; 1; 4\\}.$ რამდენი ელემენტისგან შედგება $|f(x)| \\cdot f(|x|) = 0$ განტოლების ამონახსნთა სიმრავლე?",
   options: ["$8$", "$2$", "$7$", "$4$", "$5$", "$6$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["abs-eq"],
+  grade: 9,
+  difficulty: 1,
+  type: ["solve"],
+  method: ["absolute"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //9
@@ -69,7 +133,15 @@ quizData = [
   question: "მართკუთხა სამკუთხედი ჰიპოტენუზისადმი გავლებული სიმაღლით ორ სამკუთხედად იყოფა, რომელთა პერიმეტრებია $n$ და $m$ ($n < m$). იპოვეთ მათ შორის უდიდესის ფართობი, თუ უმცირესის ფართობია $Q$.",
   options: ["$mn$", "$\\frac{Q^2}{mn}$", "$\\frac{Qm^2}{n^2}$", "$\\frac{Qm}{n}$", "$\\frac{mn}{Q}$", "$\\frac{m^2n^2}{Q}$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["divisibility","right-triangle","linear-ineq"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //10
@@ -77,7 +149,15 @@ quizData = [
   question: "სამკუთხედის სიმაღლეები ისე შეეფარდება ერთმანეთს, როგორც $2:3:4$. იპოვეთ უმცირესი გვერდი, თუ სამკუთხედის პერიმეტრია $39$.",
   options: ["$9$", "$4$", "$2$", "$5$", "$6$", "$10$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["proportion"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //11
@@ -85,7 +165,15 @@ quizData = [
   question: "მოცემულია $A = \\{6; 7; 8; 9; 10; 12\\}$ სიმრავლე. $A$ სიმრავლის ელემენტებიდან აღებული $a$ პარამეტრის რამდენი მნიშვნელობისთვის ეკუთვნის $y = x^2 - ax + 7$ ფუნქციის ზრდადობის შუალედს რიცხვი $7$?",
   options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-props","quadratic-func"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //12
@@ -93,7 +181,15 @@ quizData = [
   question: "რამდენი მთელი მნიშვნელობა აკმაყოფილებს $\\frac{(x^2 - 2x)(x^2 - 4x + 3)}{(x + 4)(x - 7)(x^2 - x - 6)} \\leq 0$ უტოლობას?",
   options: ["$8$", "$7$", "$6$", "$9$", "$5$", "$4$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-ineq","interval-method"],
+  grade: 9,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //13
@@ -101,7 +197,15 @@ quizData = [
   question: "ჩამოთვლილთაგან $x$-ის რომელი მნიშვნელობისთვის ექნება $x^2 - x - 12$ და $3x - 7$ გამოსახულებას ერთნაირი ნიშანი?",
   options: ["$-8$", "$-\\sqrt{17}$", "$-\\frac{16}{3}$", "$\\frac{5}{3}$", "$\\sqrt{10}$", "$3$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //14
@@ -109,7 +213,15 @@ quizData = [
   question: "გამოთვალეთ მართკუთხა სამკუთხედის უმცირესი სიმაღლე, თუ დანარჩენი სიმაღლეებია $6$ და $8$.",
   options: ["$4$", "$3$", "$3{,}6$", "$5{,}4$", "$4{,}8$", "$5$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["right-triangle"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //15
@@ -117,7 +229,15 @@ quizData = [
   question: "გამოთვალეთ მართკუთხა სამკუთხედის ფართობი, თუ ჰიპოტენუზა $15$-ია, ხოლო ჩახაზული წრეწირის რადიუსი $3$.",
   options: ["$45$", "$36$", "$54$", "$64$", "$24$", "$72$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["right-triangle","inscribed-circum"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //16
@@ -125,7 +245,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომელ გამოსახულებაზე უნდა გავამრავლოთ $y = |x - 2|$ ფუნქცია, რომ მივიღოთ ლუწი ფუნქცია? I. $x^2$; II. $x^2 - |x|$; III. $|x + 2|$; IV. $|x - 2|$.",
   options: ["მხოლოდ I", "მხოლოდ II", "მხოლოდ III", "მხოლოდ IV", "მხოლოდ II და IV", "მხოლოდ I და II"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-props"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //17
@@ -133,7 +261,15 @@ quizData = [
   question: "იპოვეთ $x^2 + 4x + 7 + y^2 + 6y + 11 + z^2 + 8z + 17$ გამოსახულების უმცირესი მნიშვნელობა.",
   options: ["$-2$", "$-1$", "$0$", "$6$", "$9$", "$15$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["max-min"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //18
@@ -141,7 +277,15 @@ quizData = [
   question: "მოცემულია $g(x) = 2x$ და $f(x) = x + 1$ ფუნქციები. იპოვეთ $f(x) \\cdot f(g(x))$ ფუნქციის უმცირესი მნიშვნელობა.",
   options: ["$-1$", "$0$", "$-\\frac{1}{8}$", "$-\\frac{1}{16}$", "$\\frac{5}{4}$", "$2$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["max-min"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //19
@@ -149,7 +293,15 @@ quizData = [
   question: "$M$ და $N$ წერტილები $ABCD$ ტრაპეციის შესაბამისად $AC$ და $BD$ დიაგონალების შუაწერტილებია, ხოლო $K$ და $P$ წერტილები შესაბამისად $BC$ და $AD$ ფუძეების შუაწერტილებია. იპოვეთ $MKNP$ ოთხკუთხედის ფართობი, თუ $MN = 5$, $AB = 6$, $DC = 8$.",
   options: ["$18$", "$12$", "$24$", "$36$", "$32$", "$30$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["trapezoid"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //20
@@ -157,14 +309,30 @@ quizData = [
   question: "$M$ და $N$ წერტილები $AB$ დიამეტრზე აგებულ ნახევარწრეწირს სამ ტოლ ნაწილად ყოფენ. გამოთვალეთ $AMN$ სამკუთხედის ფართობი, თუ $AB = 12$.",
   options: ["$9\\sqrt{3}$", "$12\\sqrt{2}$", "$12\\sqrt{6}$", "$24$", "$36$", "შეუძლებელია დადგენა"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["area-formulas"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //21
 {
   question: "$g(x) = x^2 + b \\cdot x + c$ კვადრატულ სამწევრს აქვს დადებითი $D$ დისკრიმინანტი. რამდენი ამონახსნი აქვს $g(x) + g(x + \\sqrt{D}) = 0$ განტოლებას?",
   options: ["$0$", "$1$", "$2$", "$3$", "$4$", "შეუძლებელია დადგენა"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 9,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //22
@@ -172,7 +340,15 @@ quizData = [
   question: "ამოხსენით $\\frac{1}{x^2 - x - 6} \\leq x + 4 - x^2$ უტოლობა.",
   options: ["$1$", "$(-6; 4)$", "$(-6; -4)$", "$(-2; 3)$", "$(2; 4)$", "∅"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-ineq","interval-method"],
+  grade: 9,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //23
@@ -180,7 +356,15 @@ quizData = [
   question: "$f(x) = x^2 - a x + 6$ კვადრატული ფუნქციის გრაფიკი საკოორდინატო ღერძებს გადაკვეთს $A$, $B$ და $C$ წერტილებში. ჩამოთვლილთაგან რისი ტოლია $a$, თუ $ABC$ სამკუთხედის ფართობია $3$.",
   options: ["$3$", "$-4$", "$5$", "$2$", "$6$", "$0$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-func"],
+  grade: 9,
+  difficulty: 3,
+  type: ["graph"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //24
@@ -188,7 +372,15 @@ quizData = [
   question: "ამოზნექილი ოთხკუთხედის ორი გვერდის სიგრძეა $1$ და $4$. ერთ-ერთი დიაგონალი, რომლის სიგრძეა $2$, ყოფს მას ორ ტოლფერდა სამკუთხედად. იპოვეთ ოთხკუთხედის ფართობი.",
   options: ["$8$", "$5$", "$6$", "$4\\sqrt{3}$", "$\\frac{7\\sqrt{5}}{2}$", "$\\frac{5\\sqrt{15}}{4}$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["isosceles","polygon-basics"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //25
@@ -196,6 +388,14 @@ quizData = [
   question: "მახვილკუთხა $ABC$ სამკუთხედში $\\angle B = 60^{\\circ}$. $AM$ და $CN$ სამკუთხედის სიმაღლეებია. $P$ წერტილი $AC$ გვერდის შუა წერტილია. იპოვეთ $MNP$ სამკუთხედის ფართობი, თუ $AC = 12$.",
   options: ["$9$", "$9\\sqrt{3}$", "$18$", "$12\\sqrt{2}$", "$6\\sqrt{2}$", "$6\\sqrt{3}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["cevians"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];

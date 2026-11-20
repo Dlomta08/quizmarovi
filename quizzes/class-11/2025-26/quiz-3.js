@@ -4,7 +4,15 @@ quizData = [
     question: "<strong>(3 ქულა)</strong> გამოთვალეთ მიმდევრობათა ზღვრები:<br>ა) $\\lim\\limits_{n \\to \\infty} \\dfrac{(n + 4)^2 - n^2}{(n - 2)^2 - n^2}$;<br>ბ) $\\lim\\limits_{n \\to \\infty} \\dfrac{\\sqrt{n^2 + 2} + 5n}{3 - 4n}$;<br>გ) $\\lim\\limits_{n \\to \\infty} \\left(\\dfrac{n + 3}{n}\\right)^n$.",
     options: [],
     tags: [],
-    solution: "ა) $\\dfrac{(n + 4)^2 - n^2}{(n - 2)^2 - n^2} = \\dfrac{8n + 16}{-4n + 4} \\to \\dfrac{8}{-4} = -2$.<br><br>ბ) გავყოთ $n$-ზე: $\\dfrac{\\sqrt{1 + 2/n^2} + 5}{3/n - 4} \\to \\dfrac{1 + 5}{-4} = -\\dfrac{3}{2}$.<br><br>გ) $\\left(1 + \\dfrac{3}{n}\\right)^n = \\left(\\left(1 + \\dfrac{3}{n}\\right)^{\\frac{n}{3}}\\right)^3 \\to e^3$.<br><br><strong>პასუხი:</strong> ა) $-2$; ბ) $-\\dfrac{3}{2}$; გ) $e^3$."
+    solution: "ა) $\\dfrac{(n + 4)^2 - n^2}{(n - 2)^2 - n^2} = \\dfrac{8n + 16}{-4n + 4} \\to \\dfrac{8}{-4} = -2$.<br><br>ბ) გავყოთ $n$-ზე: $\\dfrac{\\sqrt{1 + 2/n^2} + 5}{3/n - 4} \\to \\dfrac{1 + 5}{-4} = -\\dfrac{3}{2}$.<br><br>გ) $\\left(1 + \\dfrac{3}{n}\\right)^n = \\left(\\left(1 + \\dfrac{3}{n}\\right)^{\\frac{n}{3}}\\right)^3 \\to e^3$.<br><br><strong>პასუხი:</strong> ა) $-2$; ბ) $-\\dfrac{3}{2}$; გ) $e^3$.",
+    area: "calculus",
+    topics: ["seq-limit"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -12,7 +20,15 @@ quizData = [
     question: "<strong>(3 ქულა)</strong> გამოთვალეთ $\\lim\\limits_{x \\to 0} \\dfrac{e^x \\sin x - 5x}{4x^2 + 9x}$ ზღვარი.",
     options: [],
     tags: [],
-    solution: "გავყოთ მრიცხველი და მნიშვნელი $x$-ზე: $\\dfrac{e^x\\frac{\\sin x}{x} - 5}{4x + 9} \\to \\dfrac{1 \\cdot 1 - 5}{9} = -\\dfrac{4}{9}$ (რადგან $\\dfrac{\\sin x}{x} \\to 1$, $e^x \\to 1$).<br><br><strong>პასუხი:</strong> $-\\dfrac{4}{9}$."
+    solution: "გავყოთ მრიცხველი და მნიშვნელი $x$-ზე: $\\dfrac{e^x\\frac{\\sin x}{x} - 5}{4x + 9} \\to \\dfrac{1 \\cdot 1 - 5}{9} = -\\dfrac{4}{9}$ (რადგან $\\dfrac{\\sin x}{x} \\to 1$, $e^x \\to 1$).<br><br><strong>პასუხი:</strong> $-\\dfrac{4}{9}$.",
+    area: "calculus",
+    topics: ["func-limit"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -20,7 +36,15 @@ quizData = [
     question: "<strong>(3 ქულა)</strong> იპოვეთ მანძილი $f(x) = x^3 - 6x^2 + 9x + 3$ ფუნქციის მხებსა და ამ მხების პარალელურ $y = -3x - 7$ წრფეს შორის.",
     options: [],
     tags: [],
-    solution: "მხების კუთხური კოეფიციენტი $-3$: $f'(x) = 3x^2 - 12x + 9 = -3 \\Leftrightarrow (x - 2)^2 = 0$, $x = 2$, $f(2) = 5$. მხები: $y = -3(x - 2) + 5 = -3x + 11$.<br><br>მანძილი პარალელურ წრფეებს შორის: $\\dfrac{|11 - (-7)|}{\\sqrt{1 + 9}} = \\dfrac{18}{\\sqrt{10}} = \\dfrac{9\\sqrt{10}}{5}$.<br><br><strong>პასუხი:</strong> $\\dfrac{9\\sqrt{10}}{5}$."
+    solution: "მხების კუთხური კოეფიციენტი $-3$: $f'(x) = 3x^2 - 12x + 9 = -3 \\Leftrightarrow (x - 2)^2 = 0$, $x = 2$, $f(2) = 5$. მხები: $y = -3(x - 2) + 5 = -3x + 11$.<br><br>მანძილი პარალელურ წრფეებს შორის: $\\dfrac{|11 - (-7)|}{\\sqrt{1 + 9}} = \\dfrac{18}{\\sqrt{10}} = \\dfrac{9\\sqrt{10}}{5}$.<br><br><strong>პასუხი:</strong> $\\dfrac{9\\sqrt{10}}{5}$.",
+    area: "calculus",
+    topics: ["derivative"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -28,7 +52,15 @@ quizData = [
     question: "<strong>(4 ქულა)</strong> $25$ სმ რადიუსის მქონე ბირთვში ჩახაზულია კონუსი, რომლის მსახველი ფუძის სიბრტყესთან ადგენს $\\alpha$ კუთხეს. იპოვეთ კონუსის სრული ზედაპირის ფართობი, თუ $\\sin\\alpha = \\dfrac{3}{5}$.",
     options: [],
     tags: [],
-    solution: "კონუსის ღერძული კვეთა — ბირთვის დიდ წრეწირში ($R = 25$) ჩახაზული ტოლფერდა სამკუთხედი, ფუძესთან კუთხით $\\alpha$. სინუსების თეორემით: მსახველი $l = 2R\\sin\\alpha = 50 \\cdot \\dfrac{3}{5} = 30$.<br><br>$\\cos\\alpha = \\dfrac{4}{5}$, ფუძის რადიუსი $r = l\\cos\\alpha = 24$.<br><br>$S = \\pi r^2 + \\pi rl = \\pi(576 + 720) = 1296\\pi$.<br><br><strong>პასუხი:</strong> $1296\\pi$ სმ²."
+    solution: "კონუსის ღერძული კვეთა — ბირთვის დიდ წრეწირში ($R = 25$) ჩახაზული ტოლფერდა სამკუთხედი, ფუძესთან კუთხით $\\alpha$. სინუსების თეორემით: მსახველი $l = 2R\\sin\\alpha = 50 \\cdot \\dfrac{3}{5} = 30$.<br><br>$\\cos\\alpha = \\dfrac{4}{5}$, ფუძის რადიუსი $r = l\\cos\\alpha = 24$.<br><br>$S = \\pi r^2 + \\pi rl = \\pi(576 + 720) = 1296\\pi$.<br><br><strong>პასუხი:</strong> $1296\\pi$ სმ².",
+    area: "solid",
+    topics: ["cone","sphere","volume-surface"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -36,7 +68,15 @@ quizData = [
     question: "<strong>(4 ქულა)</strong> წრეწირი, რომლის ცენტრი $XOY$ საკოორდინატო სიბრტყის $O$ წერტილია, I მეოთხედში $f(x) = \\dfrac{1}{x}$ ფუნქციის გრაფიკს ეხება $P$ წერტილში. შეადგინეთ იმ წრფის განტოლება, რომელიც მოცემულ წრეწირს $P$ წერტილში ეხება.",
     options: [],
     tags: [],
-    solution: "წრეწირი გრაფიკს $P(x_0;\\ \\frac{1}{x_0})$-ში ეხება, ამიტომ მათ საერთო მხები აქვთ, ხოლო რადიუსი $OP$ ამ მხების მართობულია.<br><br>მხების კუთხური კოეფიციენტი $-\\dfrac{1}{x_0^2}$, $OP$-ს — $\\dfrac{1}{x_0^2}$. მართობულობა: $-\\dfrac{1}{x_0^4} = -1$, $x_0 = 1$, $P(1;\\ 1)$.<br><br>მხები: $y - 1 = -(x - 1)$, ანუ $x + y - 2 = 0$.<br><br><strong>პასუხი:</strong> $x + y - 2 = 0$."
+    solution: "წრეწირი გრაფიკს $P(x_0;\\ \\frac{1}{x_0})$-ში ეხება, ამიტომ მათ საერთო მხები აქვთ, ხოლო რადიუსი $OP$ ამ მხების მართობულია.<br><br>მხების კუთხური კოეფიციენტი $-\\dfrac{1}{x_0^2}$, $OP$-ს — $\\dfrac{1}{x_0^2}$. მართობულობა: $-\\dfrac{1}{x_0^4} = -1$, $x_0 = 1$, $P(1;\\ 1)$.<br><br>მხები: $y - 1 = -(x - 1)$, ანუ $x + y - 2 = 0$.<br><br><strong>პასუხი:</strong> $x + y - 2 = 0$.",
+    area: "calculus",
+    topics: ["derivative","line-circle-eq"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -44,7 +84,15 @@ quizData = [
     question: "<strong>(4 ქულა)</strong> $R$ რადიუსიან სფეროში ჩახაზულია უდიდესი ზედაპირის ფართობის მქონე ცილინდრი. იპოვეთ ამ ცილინდრის ზედაპირის ფართობი.",
     options: [],
     tags: [],
-    solution: "ცილინდრის ფუძის რადიუსი $r = R\\sin\\theta$, სიმაღლე $h = 2R\\cos\\theta$. სრული ზედაპირი:<br>$S = 2\\pi r^2 + 2\\pi rh = 2\\pi R^2(\\sin^2\\theta + 2\\sin\\theta\\cos\\theta) = \\pi R^2(1 - \\cos 2\\theta + 2\\sin 2\\theta)$.<br><br>$2\\sin 2\\theta - \\cos 2\\theta$-ის უდიდესი მნიშვნელობა $\\sqrt{2^2 + 1^2} = \\sqrt{5}$.<br><br><strong>პასუხი:</strong> $\\pi R^2(1 + \\sqrt{5})$."
+    solution: "ცილინდრის ფუძის რადიუსი $r = R\\sin\\theta$, სიმაღლე $h = 2R\\cos\\theta$. სრული ზედაპირი:<br>$S = 2\\pi r^2 + 2\\pi rh = 2\\pi R^2(\\sin^2\\theta + 2\\sin\\theta\\cos\\theta) = \\pi R^2(1 - \\cos 2\\theta + 2\\sin 2\\theta)$.<br><br>$2\\sin 2\\theta - \\cos 2\\theta$-ის უდიდესი მნიშვნელობა $\\sqrt{2^2 + 1^2} = \\sqrt{5}$.<br><br><strong>პასუხი:</strong> $\\pi R^2(1 + \\sqrt{5})$.",
+    area: "solid",
+    topics: ["cylinder","sphere","monotonic-extrema"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -52,6 +100,14 @@ quizData = [
     question: "<strong>(4 ქულა)</strong> დაწერეთ სიბრტყის განტოლება, რომელიც გადის $A(1;\\ -2;\\ 6)$ და $B(5;\\ -4;\\ -2)$ წერტილებზე და $OX$ და $OY$ ღერძებიდან ტოლ მონაკვეთებს ჩამოკვეთს.",
     options: [],
     tags: [],
-    solution: "ტოლი მონაკვეთები $OX$ და $OY$-ზე: სიბრტყე $x + y + kz = p$ ($p \\ne 0$).<br><br>$A$: $1 - 2 + 6k = p$; $B$: $5 - 4 - 2k = p$. $-1 + 6k = 1 - 2k$, $k = \\dfrac{1}{4}$, $p = \\dfrac{1}{2}$.<br><br>$x + y + \\dfrac{z}{4} = \\dfrac{1}{2}$, ანუ $4x + 4y + z - 2 = 0$ (მონაკვეთები: $\\dfrac{1}{2}$, $\\dfrac{1}{2}$, $2$).<br><br>(თუ მონაკვეთების მხოლოდ სიგრძეები უნდა იყოს ტოლი, სხვადასხვა ნიშნით, დამატებით მიიღება $4x - 4y + 3z - 30 = 0$.)<br><br><strong>პასუხი:</strong> $4x + 4y + z - 2 = 0$."
+    solution: "ტოლი მონაკვეთები $OX$ და $OY$-ზე: სიბრტყე $x + y + kz = p$ ($p \\ne 0$).<br><br>$A$: $1 - 2 + 6k = p$; $B$: $5 - 4 - 2k = p$. $-1 + 6k = 1 - 2k$, $k = \\dfrac{1}{4}$, $p = \\dfrac{1}{2}$.<br><br>$x + y + \\dfrac{z}{4} = \\dfrac{1}{2}$, ანუ $4x + 4y + z - 2 = 0$ (მონაკვეთები: $\\dfrac{1}{2}$, $\\dfrac{1}{2}$, $2$).<br><br>(თუ მონაკვეთების მხოლოდ სიგრძეები უნდა იყოს ტოლი, სხვადასხვა ნიშნით, დამატებით მიიღება $4x - 4y + 3z - 30 = 0$.)<br><br><strong>პასუხი:</strong> $4x + 4y + z - 2 = 0$.",
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

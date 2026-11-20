@@ -5,7 +5,15 @@ quizData = [
     options: ["$\\{a, c, f\\}$", "$\\{b, d\\}$", "$\\{a, b, c, d, f\\}$", "$\\{c, f\\}$", "$\\{a, c, d\\}$", "$\\{a, f\\}$"],
     correct: 0,
     tags: [],
-    solution: "სიმეტრიული სხვაობა შედგება იმ ელემენტებისგან, რომლებიც ზუსტად ერთ სიმრავლეს ეკუთვნის: $M \\triangle N = (M \\setminus N) \\cup (N \\setminus M)$.<br><br>$b$ და $d$ ორივე სიმრავლეშია, ამიტომ $M \\setminus N = \\{a, c\\}$, ხოლო $N \\setminus M = \\{f\\}$.<br><br>მაშასადამე, $M \\triangle N = \\{a, c, f\\}$.<br><br><strong>პასუხი:</strong> ა) $\\{a, c, f\\}$."
+    solution: "სიმეტრიული სხვაობა შედგება იმ ელემენტებისგან, რომლებიც ზუსტად ერთ სიმრავლეს ეკუთვნის: $M \\triangle N = (M \\setminus N) \\cup (N \\setminus M)$.<br><br>$b$ და $d$ ორივე სიმრავლეშია, ამიტომ $M \\setminus N = \\{a, c\\}$, ხოლო $N \\setminus M = \\{f\\}$.<br><br>მაშასადამე, $M \\triangle N = \\{a, c, f\\}$.<br><br><strong>პასუხი:</strong> ა) $\\{a, c, f\\}$.",
+    area: "algebra",
+    topics: ["sets"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -14,7 +22,15 @@ quizData = [
     options: ["$35\\%$", "$30\\%$", "$33{,}(3)\\%$", "$40\\%$", "$20\\%$", "$25\\%$"],
     correct: 5,
     tags: [],
-    solution: "პირველი ქალაქის მოსახლეობა მეორეზე ნაკლებია $60\\,000 - 45\\,000 = 15\\,000$-ით.<br><br>პროცენტს ვითვლით მეორე ქალაქის მოსახლეობის მიმართ, რადგან მას ვადარებთ: $\\dfrac{15\\,000}{60\\,000} \\cdot 100\\% = 25\\%$.<br><br><strong>პასუხი:</strong> ვ) $25\\%$."
+    solution: "პირველი ქალაქის მოსახლეობა მეორეზე ნაკლებია $60\\,000 - 45\\,000 = 15\\,000$-ით.<br><br>პროცენტს ვითვლით მეორე ქალაქის მოსახლეობის მიმართ, რადგან მას ვადარებთ: $\\dfrac{15\\,000}{60\\,000} \\cdot 100\\% = 25\\%$.<br><br><strong>პასუხი:</strong> ვ) $25\\%$.",
+    area: "algebra",
+    topics: ["percent"],
+    grade: 7,
+    difficulty: 1,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -23,7 +39,15 @@ quizData = [
     options: ["$11$", "$6$", "$17$", "$10$", "$7$", "$8$"],
     correct: 1,
     tags: [],
-    solution: "$(-3x^2y^3)^4z^k = 81x^8y^{12}z^k$.<br><br>ერთწევრის ხარისხი მისი ცვლადების ხარისხების ჯამია: $8 + 12 + k = 26$, საიდანაც $k = 6$.<br><br><strong>პასუხი:</strong> ბ) $6$."
+    solution: "$(-3x^2y^3)^4z^k = 81x^8y^{12}z^k$.<br><br>ერთწევრის ხარისხი მისი ცვლადების ხარისხების ჯამია: $8 + 12 + k = 26$, საიდანაც $k = 6$.<br><br><strong>პასუხი:</strong> ბ) $6$.",
+    area: "algebra",
+    topics: ["polynomials","powers"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -32,7 +56,15 @@ quizData = [
     options: ["$20^\\circ$", "$25^\\circ$", "$30^\\circ$", "$35^\\circ$", "$40^\\circ$", "$48^\\circ$"],
     correct: 2,
     tags: [],
-    solution: "აღვნიშნოთ ეს კუთხე $x$-ით. მაშინ მეორე კუთხეა $x - 20^\\circ$, ხოლო მესამე $2x$ (რადგან $x$ მესამის $50\\%$-ია).<br><br>სამკუთხედის კუთხეების ჯამი: $x + (x - 20^\\circ) + 2x = 180^\\circ$, $4x = 200^\\circ$, $x = 50^\\circ$.<br><br>კუთხეებია $50^\\circ$, $30^\\circ$ და $100^\\circ$; უმცირესია $30^\\circ$.<br><br><strong>პასუხი:</strong> გ) $30^\\circ$."
+    solution: "აღვნიშნოთ ეს კუთხე $x$-ით. მაშინ მეორე კუთხეა $x - 20^\\circ$, ხოლო მესამე $2x$ (რადგან $x$ მესამის $50\\%$-ია).<br><br>სამკუთხედის კუთხეების ჯამი: $x + (x - 20^\\circ) + 2x = 180^\\circ$, $4x = 200^\\circ$, $x = 50^\\circ$.<br><br>კუთხეებია $50^\\circ$, $30^\\circ$ და $100^\\circ$; უმცირესია $30^\\circ$.<br><br><strong>პასუხი:</strong> გ) $30^\\circ$.",
+    area: "geometry",
+    topics: ["angle-sum","percent"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -41,7 +73,15 @@ quizData = [
     options: ["$70^\\circ$", "$45^\\circ$", "$80^\\circ$", "$65^\\circ$", "$60^\\circ$", "$55^\\circ$"],
     correct: 5,
     tags: [],
-    solution: "ვთქვათ, $ABC$ სამკუთხედში $AB = BC$, ხოლო $AK$ და $CM$ ფერდებზე დაშვებული სიმაღლეებია ($K \\in BC$, $M \\in AB$), რომლებიც $H$ წერტილში იკვეთება.<br><br>$BKHM$ ოთხკუთხედში $K$ და $M$ კუთხეები მართია, ამიტომ $\\angle KHM = 360^\\circ - 90^\\circ - 90^\\circ - \\angle B = 180^\\circ - \\angle B$. მაშასადამე, სიმაღლეებს შორის კუთხეებია $180^\\circ - \\angle B$ და $\\angle B$.<br><br>სამკუთხედი მახვილკუთხაა, ე.ი. $\\angle B < 90^\\circ$ და $180^\\circ - \\angle B > 90^\\circ$. ამიტომ $70^\\circ$-იანი კუთხე $\\angle B$-ს ტოლია: $\\angle B = 70^\\circ$.<br><br>ფუძესთან მდებარე კუთხე: $\\dfrac{180^\\circ - 70^\\circ}{2} = 55^\\circ$.<br><br><strong>პასუხი:</strong> ვ) $55^\\circ$."
+    solution: "ვთქვათ, $ABC$ სამკუთხედში $AB = BC$, ხოლო $AK$ და $CM$ ფერდებზე დაშვებული სიმაღლეებია ($K \\in BC$, $M \\in AB$), რომლებიც $H$ წერტილში იკვეთება.<br><br>$BKHM$ ოთხკუთხედში $K$ და $M$ კუთხეები მართია, ამიტომ $\\angle KHM = 360^\\circ - 90^\\circ - 90^\\circ - \\angle B = 180^\\circ - \\angle B$. მაშასადამე, სიმაღლეებს შორის კუთხეებია $180^\\circ - \\angle B$ და $\\angle B$.<br><br>სამკუთხედი მახვილკუთხაა, ე.ი. $\\angle B < 90^\\circ$ და $180^\\circ - \\angle B > 90^\\circ$. ამიტომ $70^\\circ$-იანი კუთხე $\\angle B$-ს ტოლია: $\\angle B = 70^\\circ$.<br><br>ფუძესთან მდებარე კუთხე: $\\dfrac{180^\\circ - 70^\\circ}{2} = 55^\\circ$.<br><br><strong>პასუხი:</strong> ვ) $55^\\circ$.",
+    area: "geometry",
+    topics: ["isosceles","cevians"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -50,7 +90,15 @@ quizData = [
     options: ["$4$", "$18$", "$3$", "$8$", "$27$", "$2$"],
     correct: 2,
     tags: [],
-    solution: "ყველა რიცხვი დავშალოთ მარტივ მამრავლებად: $12 = 2^2 \\cdot 3$, $54 = 2 \\cdot 3^3$, $8 = 2^3$, $36 = 2^2 \\cdot 3^2$, $81 = 3^4$.<br><br>მრიცხველი: $12^7 \\cdot 54^4 = 2^{14} \\cdot 3^7 \\cdot 2^4 \\cdot 3^{12} = 2^{18} \\cdot 3^{19}$.<br><br>მნიშვნელი: $8^4 \\cdot 36^3 \\cdot 81^3 = 2^{12} \\cdot 2^6 \\cdot 3^6 \\cdot 3^{12} = 2^{18} \\cdot 3^{18}$.<br><br>მაშასადამე, $\\dfrac{2^{18} \\cdot 3^{19}}{2^{18} \\cdot 3^{18}} = 3$.<br><br><strong>პასუხი:</strong> გ) $3$."
+    solution: "ყველა რიცხვი დავშალოთ მარტივ მამრავლებად: $12 = 2^2 \\cdot 3$, $54 = 2 \\cdot 3^3$, $8 = 2^3$, $36 = 2^2 \\cdot 3^2$, $81 = 3^4$.<br><br>მრიცხველი: $12^7 \\cdot 54^4 = 2^{14} \\cdot 3^7 \\cdot 2^4 \\cdot 3^{12} = 2^{18} \\cdot 3^{19}$.<br><br>მნიშვნელი: $8^4 \\cdot 36^3 \\cdot 81^3 = 2^{12} \\cdot 2^6 \\cdot 3^6 \\cdot 3^{12} = 2^{18} \\cdot 3^{18}$.<br><br>მაშასადამე, $\\dfrac{2^{18} \\cdot 3^{19}}{2^{18} \\cdot 3^{18}} = 3$.<br><br><strong>პასუხი:</strong> გ) $3$.",
+    area: "algebra",
+    topics: ["powers","prime-factor"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -59,7 +107,15 @@ quizData = [
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 3,
     tags: [],
-    solution: "მათემატიკის წრეზე დადის $25 \\cdot 0{,}6 = 15$ მოსწავლე, ფიზიკის წრეზე $25 \\cdot 0{,}4 = 10$.<br><br>ერთ წრეზე მაინც დადის $25 - 6 = 19$ მოსწავლე. თუ ორივე წრეზე დადის $y$ მოსწავლე, მაშინ $15 + 10 - y = 19$, ე.ი. $y = 6$.<br><br>მხოლოდ ფიზიკის წრეზე დადის $10 - 6 = 4$ მოსწავლე.<br><br><strong>პასუხი:</strong> დ) $4$."
+    solution: "მათემატიკის წრეზე დადის $25 \\cdot 0{,}6 = 15$ მოსწავლე, ფიზიკის წრეზე $25 \\cdot 0{,}4 = 10$.<br><br>ერთ წრეზე მაინც დადის $25 - 6 = 19$ მოსწავლე. თუ ორივე წრეზე დადის $y$ მოსწავლე, მაშინ $15 + 10 - y = 19$, ე.ი. $y = 6$.<br><br>მხოლოდ ფიზიკის წრეზე დადის $10 - 6 = 4$ მოსწავლე.<br><br><strong>პასუხი:</strong> დ) $4$.",
+    area: "algebra",
+    topics: ["sets","percent"],
+    grade: 7,
+    difficulty: 2,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -68,7 +124,15 @@ quizData = [
     options: ["$60^\\circ$", "$72^\\circ$", "$64^\\circ$", "$80^\\circ$", "$75^\\circ$", "$50^\\circ$"],
     correct: 1,
     tags: [],
-    solution: "ვთქვათ, $ABC$ სამკუთხედში $A$ და $B$ კუთხეების ბისექტრისები $O$ წერტილში იკვეთება, ხოლო მესამე კუთხეა $\\angle C = \\gamma$.<br><br>$AOB$ სამკუთხედიდან: $\\angle AOB = 180^\\circ - \\dfrac{\\angle A + \\angle B}{2} = 180^\\circ - \\dfrac{180^\\circ - \\gamma}{2} = 90^\\circ + \\dfrac{\\gamma}{2}$. ეს ბლაგვი კუთხეა, ამიტომ ბისექტრისებს შორის მახვილი კუთხეა $180^\\circ - \\left(90^\\circ + \\dfrac{\\gamma}{2}\\right) = 90^\\circ - \\dfrac{\\gamma}{2}$.<br><br>პირობით $90^\\circ - \\dfrac{\\gamma}{2} = 0{,}75\\gamma$, საიდანაც $1{,}25\\gamma = 90^\\circ$, $\\gamma = 72^\\circ$.<br><br><strong>პასუხი:</strong> ბ) $72^\\circ$."
+    solution: "ვთქვათ, $ABC$ სამკუთხედში $A$ და $B$ კუთხეების ბისექტრისები $O$ წერტილში იკვეთება, ხოლო მესამე კუთხეა $\\angle C = \\gamma$.<br><br>$AOB$ სამკუთხედიდან: $\\angle AOB = 180^\\circ - \\dfrac{\\angle A + \\angle B}{2} = 180^\\circ - \\dfrac{180^\\circ - \\gamma}{2} = 90^\\circ + \\dfrac{\\gamma}{2}$. ეს ბლაგვი კუთხეა, ამიტომ ბისექტრისებს შორის მახვილი კუთხეა $180^\\circ - \\left(90^\\circ + \\dfrac{\\gamma}{2}\\right) = 90^\\circ - \\dfrac{\\gamma}{2}$.<br><br>პირობით $90^\\circ - \\dfrac{\\gamma}{2} = 0{,}75\\gamma$, საიდანაც $1{,}25\\gamma = 90^\\circ$, $\\gamma = 72^\\circ$.<br><br><strong>პასუხი:</strong> ბ) $72^\\circ$.",
+    area: "geometry",
+    topics: ["angle-sum","cevians"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -77,7 +141,15 @@ quizData = [
     options: ["$103^\\circ$", "$88^\\circ$", "$89^\\circ$", "$108^\\circ$", "$99^\\circ$", "$76^\\circ$"],
     correct: 4,
     tags: [],
-    solution: "ვთქვათ, $ABC$ სამკუთხედში $\\angle A = 50^\\circ$, $AH$ სიმაღლეა, $AL$ ბისექტრისა. ერთი წვეროდან გამოსულ სიმაღლესა და ბისექტრისას შორის კუთხე დანარჩენი ორი კუთხის სხვაობის ნახევრის ტოლია: $\\angle HAL = \\dfrac{|\\angle B - \\angle C|}{2}$.<br><br>(მართლაც, $\\angle BAL = \\dfrac{\\angle A}{2} = 90^\\circ - \\dfrac{\\angle B + \\angle C}{2}$, ხოლო $ABH$ მართკუთხა სამკუთხედიდან $\\angle BAH = 90^\\circ - \\angle B$; მათი სხვაობაა $\\dfrac{\\angle B - \\angle C}{2}$. ბლაგვი $B$-ს შემთხვევაშიც შედეგი იგივეა.)<br><br>მაშასადამე, $\\angle B - \\angle C = 68^\\circ$ და $\\angle B + \\angle C = 180^\\circ - 50^\\circ = 130^\\circ$. აქედან $\\angle B = 99^\\circ$, $\\angle C = 31^\\circ$.<br><br>უდიდესი კუთხეა $99^\\circ$.<br><br><strong>პასუხი:</strong> ე) $99^\\circ$."
+    solution: "ვთქვათ, $ABC$ სამკუთხედში $\\angle A = 50^\\circ$, $AH$ სიმაღლეა, $AL$ ბისექტრისა. ერთი წვეროდან გამოსულ სიმაღლესა და ბისექტრისას შორის კუთხე დანარჩენი ორი კუთხის სხვაობის ნახევრის ტოლია: $\\angle HAL = \\dfrac{|\\angle B - \\angle C|}{2}$.<br><br>(მართლაც, $\\angle BAL = \\dfrac{\\angle A}{2} = 90^\\circ - \\dfrac{\\angle B + \\angle C}{2}$, ხოლო $ABH$ მართკუთხა სამკუთხედიდან $\\angle BAH = 90^\\circ - \\angle B$; მათი სხვაობაა $\\dfrac{\\angle B - \\angle C}{2}$. ბლაგვი $B$-ს შემთხვევაშიც შედეგი იგივეა.)<br><br>მაშასადამე, $\\angle B - \\angle C = 68^\\circ$ და $\\angle B + \\angle C = 180^\\circ - 50^\\circ = 130^\\circ$. აქედან $\\angle B = 99^\\circ$, $\\angle C = 31^\\circ$.<br><br>უდიდესი კუთხეა $99^\\circ$.<br><br><strong>პასუხი:</strong> ე) $99^\\circ$.",
+    area: "geometry",
+    topics: ["cevians","angle-sum"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -86,7 +158,15 @@ quizData = [
     options: ["$45^\\circ$", "$44^\\circ$", "$36^\\circ$", "$40^\\circ$", "$33^\\circ$", "$54^\\circ$"],
     correct: 1,
     tags: [],
-    solution: "ვთქვათ, $ABC$ სამკუთხედში $AB = BC$, $\\angle A = \\angle C = \\alpha$, ხოლო $\\angle B = 180^\\circ - 2\\alpha$ ბლაგვია, ე.ი. $\\alpha < 45^\\circ$. $AD$ არის $A$ კუთხის ბისექტრისა ($D \\in BC$).<br><br>$ADC$ სამკუთხედის გარე კუთხე: $\\angle ADB = \\angle DAC + \\angle C = \\dfrac{\\alpha}{2} + \\alpha = \\dfrac{3\\alpha}{2}$.<br><br>ბისექტრისა $AB$ ფერდთან ადგენს $\\dfrac{\\alpha}{2} < 22{,}5^\\circ$ კუთხეს, ხოლო $BC$ ფერდთან $\\dfrac{3\\alpha}{2}$ და $180^\\circ - \\dfrac{3\\alpha}{2}$ კუთხეებს. რადგან $\\alpha < 45^\\circ$, მახვილია $\\dfrac{3\\alpha}{2}$, ამიტომ $\\dfrac{3\\alpha}{2} = 66^\\circ$ და $\\alpha = 44^\\circ$.<br><br>კუთხეებია $44^\\circ$, $44^\\circ$ და $92^\\circ$; უმცირესია $44^\\circ$.<br><br><strong>პასუხი:</strong> ბ) $44^\\circ$."
+    solution: "ვთქვათ, $ABC$ სამკუთხედში $AB = BC$, $\\angle A = \\angle C = \\alpha$, ხოლო $\\angle B = 180^\\circ - 2\\alpha$ ბლაგვია, ე.ი. $\\alpha < 45^\\circ$. $AD$ არის $A$ კუთხის ბისექტრისა ($D \\in BC$).<br><br>$ADC$ სამკუთხედის გარე კუთხე: $\\angle ADB = \\angle DAC + \\angle C = \\dfrac{\\alpha}{2} + \\alpha = \\dfrac{3\\alpha}{2}$.<br><br>ბისექტრისა $AB$ ფერდთან ადგენს $\\dfrac{\\alpha}{2} < 22{,}5^\\circ$ კუთხეს, ხოლო $BC$ ფერდთან $\\dfrac{3\\alpha}{2}$ და $180^\\circ - \\dfrac{3\\alpha}{2}$ კუთხეებს. რადგან $\\alpha < 45^\\circ$, მახვილია $\\dfrac{3\\alpha}{2}$, ამიტომ $\\dfrac{3\\alpha}{2} = 66^\\circ$ და $\\alpha = 44^\\circ$.<br><br>კუთხეებია $44^\\circ$, $44^\\circ$ და $92^\\circ$; უმცირესია $44^\\circ$.<br><br><strong>პასუხი:</strong> ბ) $44^\\circ$.",
+    area: "geometry",
+    topics: ["isosceles","cevians"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 11
@@ -95,7 +175,15 @@ quizData = [
     options: ["$6x$", "$x^2 + 6$", "$x^2 - 6x$", "$-6$", "$x^3 - 2x^2$", "$x^3 - 2x^2 + 6x$"],
     correct: 0,
     tags: [],
-    solution: "გავხსნათ ფრჩხილები:<br>$x^2(1 - 2x) = x^2 - 2x^3$;<br>$(x^2 - 3x)(x + 2) = x^3 + 2x^2 - 3x^2 - 6x = x^3 - x^2 - 6x$.<br><br>მაშასადამე, $x^2 - 2x^3 - (x^3 - x^2 - 6x) - (2x^2 - 3x^3) = x^2 - 2x^3 - x^3 + x^2 + 6x - 2x^2 + 3x^3 = 6x$.<br><br><strong>პასუხი:</strong> ა) $6x$."
+    solution: "გავხსნათ ფრჩხილები:<br>$x^2(1 - 2x) = x^2 - 2x^3$;<br>$(x^2 - 3x)(x + 2) = x^3 + 2x^2 - 3x^2 - 6x = x^3 - x^2 - 6x$.<br><br>მაშასადამე, $x^2 - 2x^3 - (x^3 - x^2 - 6x) - (2x^2 - 3x^3) = x^2 - 2x^3 - x^3 + x^2 + 6x - 2x^2 + 3x^3 = 6x$.<br><br><strong>პასუხი:</strong> ა) $6x$.",
+    area: "algebra",
+    topics: ["polynomials"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12
@@ -104,7 +192,15 @@ quizData = [
     options: ["$12$", "$9$", "$10$", "$6$", "$15$", "$8$"],
     correct: 2,
     tags: [],
-    solution: "ვთქვათ, უნდა დავამატოთ $y$ ლიტრი $18\\%$-იანი ხსნარი. ნივთიერება პირველ ხსნარში: $12 \\cdot 0{,}07 = 0{,}84$ ლ, მეორეში: $0{,}18y$ ლ. ნარევის მოცულობაა $(12 + y)$ ლ და მისი $12\\%$ ნივთიერებაა:<br><br>$0{,}84 + 0{,}18y = 0{,}12(12 + y)$,<br>$0{,}84 + 0{,}18y = 1{,}44 + 0{,}12y$,<br>$0{,}06y = 0{,}6$, $y = 10$.<br><br><strong>პასუხი:</strong> გ) $10$."
+    solution: "ვთქვათ, უნდა დავამატოთ $y$ ლიტრი $18\\%$-იანი ხსნარი. ნივთიერება პირველ ხსნარში: $12 \\cdot 0{,}07 = 0{,}84$ ლ, მეორეში: $0{,}18y$ ლ. ნარევის მოცულობაა $(12 + y)$ ლ და მისი $12\\%$ ნივთიერებაა:<br><br>$0{,}84 + 0{,}18y = 0{,}12(12 + y)$,<br>$0{,}84 + 0{,}18y = 1{,}44 + 0{,}12y$,<br>$0{,}06y = 0{,}6$, $y = 10$.<br><br><strong>პასუხი:</strong> გ) $10$.",
+    area: "algebra",
+    topics: ["percent","word-problems"],
+    grade: 7,
+    difficulty: 2,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -113,7 +209,15 @@ quizData = [
     options: ["$A;\\ B;\\ C$", "$B;\\ A;\\ C$", "$C;\\ A;\\ B$", "$A;\\ C;\\ B$", "$B;\\ C;\\ A$", "$C;\\ B;\\ A$"],
     correct: 5,
     tags: [],
-    solution: "როცა $0 < a < 1$, $a$-ს ნებისმიერი ნატურალური ხარისხი $0$-სა და $1$-ს შორისაა.<br><br>$A = a^3 - 2$: რადგან $0 < a^3 < 1$, $-2 < A < -1$.<br>$B = (-a)^5 = -a^5$: $-1 < B < 0$.<br>$C = 1 - a^6$: $0 < C < 1$.<br><br>მაშასადამე, $C > B > A$, ანუ კლების მიხედვით: $C;\\ B;\\ A$.<br><br><strong>პასუხი:</strong> ვ) $C;\\ B;\\ A$."
+    solution: "როცა $0 < a < 1$, $a$-ს ნებისმიერი ნატურალური ხარისხი $0$-სა და $1$-ს შორისაა.<br><br>$A = a^3 - 2$: რადგან $0 < a^3 < 1$, $-2 < A < -1$.<br>$B = (-a)^5 = -a^5$: $-1 < B < 0$.<br>$C = 1 - a^6$: $0 < C < 1$.<br><br>მაშასადამე, $C > B > A$, ანუ კლების მიხედვით: $C;\\ B;\\ A$.<br><br><strong>პასუხი:</strong> ვ) $C;\\ B;\\ A$.",
+    area: "algebra",
+    topics: ["powers"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["estimation"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -122,7 +226,15 @@ quizData = [
     options: ["$37$", "$41$", "$36$", "$31$", "$38$", "დადგენა შეუძლებელია"],
     correct: 4,
     tags: [],
-    solution: "$D$ არის $BC$-ს შუაწერტილი და $AD = DE$, ე.ი. $ABEC$ ოთხკუთხედის დიაგონალები $AE$ და $BC$ გადაკვეთის წერტილით შუაზე იყოფა. მაშასადამე, $ABEC$ პარალელოგრამია და $CE = AB = 8$.<br><br>$AE = 2AD = 18$.<br><br>$ACE$ სამკუთხედის პერიმეტრი: $AC + CE + AE = 12 + 8 + 18 = 38$.<br><br><strong>პასუხი:</strong> ე) $38$."
+    solution: "$D$ არის $BC$-ს შუაწერტილი და $AD = DE$, ე.ი. $ABEC$ ოთხკუთხედის დიაგონალები $AE$ და $BC$ გადაკვეთის წერტილით შუაზე იყოფა. მაშასადამე, $ABEC$ პარალელოგრამია და $CE = AB = 8$.<br><br>$AE = 2AD = 18$.<br><br>$ACE$ სამკუთხედის პერიმეტრი: $AC + CE + AE = 12 + 8 + 18 = 38$.<br><br><strong>პასუხი:</strong> ე) $38$.",
+    area: "geometry",
+    topics: ["cevians","congruence"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["aux-construct"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15
@@ -131,7 +243,15 @@ quizData = [
     options: ["$20\\%$", "$40\\%$", "$36\\%$", "$25\\%$", "$30\\%$", "$32\\%$"],
     correct: 3,
     tags: [],
-    solution: "შუამართობის ყოველი წერტილი თანაბრად არის დაშორებული მონაკვეთის ბოლოებიდან, ამიტომ $DB = DC$.<br><br>$ABD$ სამკუთხედის პერიმეტრი: $AB + BD + AD = AB + DC + AD = AB + AC$.<br><br>პირობით $AC = 3AB$, ამიტომ პერიმეტრი $4AB$-ს ტოლია და $AB$ შეადგენს მის $\\dfrac{1}{4}$-ს, ანუ $25\\%$-ს.<br><br><strong>პასუხი:</strong> დ) $25\\%$."
+    solution: "შუამართობის ყოველი წერტილი თანაბრად არის დაშორებული მონაკვეთის ბოლოებიდან, ამიტომ $DB = DC$.<br><br>$ABD$ სამკუთხედის პერიმეტრი: $AB + BD + AD = AB + DC + AD = AB + AC$.<br><br>პირობით $AC = 3AB$, ამიტომ პერიმეტრი $4AB$-ს ტოლია და $AB$ შეადგენს მის $\\dfrac{1}{4}$-ს, ანუ $25\\%$-ს.<br><br><strong>პასუხი:</strong> დ) $25\\%$.",
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 16
@@ -140,7 +260,15 @@ quizData = [
     options: ["$0$", "$2$", "$6$", "$8$", "$4$", "$3$"],
     correct: 2,
     tags: [],
-    solution: "საკმარისია, ვიპოვოთ თითოეული შესაკრების ბოლო ციფრი.<br><br>$199^{2025}$: $9$-ის ხარისხების ბოლო ციფრები მონაცვლეობს: $9, 1, 9, 1, \\ldots$; $2025$ კენტია, ამიტომ ბოლო ციფრია $9$.<br><br>$7^{102}$: $7$-ის ხარისხების ბოლო ციფრები მეორდება $4$-ის პერიოდით: $7, 9, 3, 1$. $102 = 4 \\cdot 25 + 2$, ამიტომ ბოლო ციფრია $9$.<br><br>$2^{199} \\cdot 3^{200} = (2 \\cdot 3)^{199} \\cdot 3 = 6^{199} \\cdot 3$: $6$-ის ნებისმიერი ხარისხი ბოლოვდება $6$-ით, $6 \\cdot 3 = 18$, ამიტომ ბოლო ციფრია $8$.<br><br>ჯამის ბოლო ციფრი: $9 + 9 + 8 = 26$, ანუ $6$.<br><br><strong>პასუხი:</strong> გ) $6$."
+    solution: "საკმარისია, ვიპოვოთ თითოეული შესაკრების ბოლო ციფრი.<br><br>$199^{2025}$: $9$-ის ხარისხების ბოლო ციფრები მონაცვლეობს: $9, 1, 9, 1, \\ldots$; $2025$ კენტია, ამიტომ ბოლო ციფრია $9$.<br><br>$7^{102}$: $7$-ის ხარისხების ბოლო ციფრები მეორდება $4$-ის პერიოდით: $7, 9, 3, 1$. $102 = 4 \\cdot 25 + 2$, ამიტომ ბოლო ციფრია $9$.<br><br>$2^{199} \\cdot 3^{200} = (2 \\cdot 3)^{199} \\cdot 3 = 6^{199} \\cdot 3$: $6$-ის ნებისმიერი ხარისხი ბოლოვდება $6$-ით, $6 \\cdot 3 = 18$, ამიტომ ბოლო ციფრია $8$.<br><br>ჯამის ბოლო ციფრი: $9 + 9 + 8 = 26$, ანუ $6$.<br><br><strong>პასუხი:</strong> გ) $6$.",
+    area: "algebra",
+    topics: ["divisibility","powers"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -149,7 +277,15 @@ quizData = [
     options: ["$9 : 2$", "$27 : 4$", "$2 : 3$", "$81 : 4$", "$2 : 27$", "$9 : 4$"],
     correct: 0,
     tags: [],
-    solution: "ორივე რიცხვი ჩავწეროთ $3$-ის ხარისხად: $9^9 = (3^2)^9 = 3^{18}$, $27^{27} = (3^3)^{27} = 3^{81}$.<br><br>$(3^{18})^n = (3^{81})^m$, ე.ი. $3^{18n} = 3^{81m}$ და $18n = 81m$.<br><br>$\\dfrac{n}{m} = \\dfrac{81}{18} = \\dfrac{9}{2}$.<br><br><strong>პასუხი:</strong> ა) $9 : 2$."
+    solution: "ორივე რიცხვი ჩავწეროთ $3$-ის ხარისხად: $9^9 = (3^2)^9 = 3^{18}$, $27^{27} = (3^3)^{27} = 3^{81}$.<br><br>$(3^{18})^n = (3^{81})^m$, ე.ი. $3^{18n} = 3^{81m}$ და $18n = 81m$.<br><br>$\\dfrac{n}{m} = \\dfrac{81}{18} = \\dfrac{9}{2}$.<br><br><strong>პასუხი:</strong> ა) $9 : 2$.",
+    area: "algebra",
+    topics: ["powers"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -158,7 +294,15 @@ quizData = [
     options: ["$25$", "$30$", "$15$", "$40$", "$35$", "$20$"],
     correct: 5,
     tags: [],
-    solution: "$60$ კგ ხურმაში წყალი $80\\%$-ია, ხოლო მშრალი ნივთიერება $20\\%$: $60 \\cdot 0{,}2 = 12$ კგ.<br><br>გაშრობისას მხოლოდ წყალი აკლდება, ამიტომ ჩირშიც $12$ კგ მშრალი ნივთიერებაა, რაც ჩირის მასის $100\\% - 40\\% = 60\\%$-ია.<br><br>ჩირის მასა: $12 : 0{,}6 = 20$ კგ.<br><br><strong>პასუხი:</strong> ვ) $20$."
+    solution: "$60$ კგ ხურმაში წყალი $80\\%$-ია, ხოლო მშრალი ნივთიერება $20\\%$: $60 \\cdot 0{,}2 = 12$ კგ.<br><br>გაშრობისას მხოლოდ წყალი აკლდება, ამიტომ ჩირშიც $12$ კგ მშრალი ნივთიერებაა, რაც ჩირის მასის $100\\% - 40\\% = 60\\%$-ია.<br><br>ჩირის მასა: $12 : 0{,}6 = 20$ კგ.<br><br><strong>პასუხი:</strong> ვ) $20$.",
+    area: "algebra",
+    topics: ["percent","word-problems"],
+    grade: 7,
+    difficulty: 2,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -167,7 +311,15 @@ quizData = [
     options: ["$26^\\circ$", "$6^\\circ$", "$14^\\circ$", "$12^\\circ$", "$4^\\circ$", "$8^\\circ$"],
     correct: 1,
     tags: [],
-    solution: "ვთქვათ, $ABC$ სამკუთხედში $\\angle C$ ბლაგვია (ის უდიდესი კუთხეა). $A$ და $B$ კუთხეების მოპირდაპირე გვერდების შემცველ წრფეებზე დაშვებული სიმაღლეებია $AK$ ($K$ მდებარეობს $BC$ წრფეზე) და $BM$ ($M$ მდებარეობს $AC$ წრფეზე). $K$ და $M$ წერტილები გვერდების გაგრძელებებზეა, $C$-ს მიღმა.<br><br>სიმაღლეების წრფეები $H$ წერტილში იკვეთება. $CKHM$ ოთხკუთხედში $K$ და $M$ კუთხეები მართია, ხოლო $C$ წვეროსთან კუთხე $\\angle ACB$-ს ვერტიკალურია, ე.ი. $\\angle C$-ს ტოლია. ამიტომ სიმაღლეებს შორის მახვილი კუთხეა $180^\\circ - \\angle C$.<br><br>პირობით $180^\\circ - \\angle C = \\dfrac{1}{4}\\angle C$, საიდანაც $\\dfrac{5}{4}\\angle C = 180^\\circ$, $\\angle C = 144^\\circ$, ხოლო სიმაღლეებს შორის კუთხეა $36^\\circ$.<br><br>$36^\\circ$ ერთ-ერთ დანარჩენ კუთხეზე $20\\%$-ით მეტია: $36^\\circ = 1{,}2 \\cdot \\angle A$, $\\angle A = 30^\\circ$.<br><br>მესამე კუთხე: $\\angle B = 180^\\circ - 144^\\circ - 30^\\circ = 6^\\circ$; ეს არის უმცირესი კუთხე.<br><br><strong>პასუხი:</strong> ბ) $6^\\circ$."
+    solution: "ვთქვათ, $ABC$ სამკუთხედში $\\angle C$ ბლაგვია (ის უდიდესი კუთხეა). $A$ და $B$ კუთხეების მოპირდაპირე გვერდების შემცველ წრფეებზე დაშვებული სიმაღლეებია $AK$ ($K$ მდებარეობს $BC$ წრფეზე) და $BM$ ($M$ მდებარეობს $AC$ წრფეზე). $K$ და $M$ წერტილები გვერდების გაგრძელებებზეა, $C$-ს მიღმა.<br><br>სიმაღლეების წრფეები $H$ წერტილში იკვეთება. $CKHM$ ოთხკუთხედში $K$ და $M$ კუთხეები მართია, ხოლო $C$ წვეროსთან კუთხე $\\angle ACB$-ს ვერტიკალურია, ე.ი. $\\angle C$-ს ტოლია. ამიტომ სიმაღლეებს შორის მახვილი კუთხეა $180^\\circ - \\angle C$.<br><br>პირობით $180^\\circ - \\angle C = \\dfrac{1}{4}\\angle C$, საიდანაც $\\dfrac{5}{4}\\angle C = 180^\\circ$, $\\angle C = 144^\\circ$, ხოლო სიმაღლეებს შორის კუთხეა $36^\\circ$.<br><br>$36^\\circ$ ერთ-ერთ დანარჩენ კუთხეზე $20\\%$-ით მეტია: $36^\\circ = 1{,}2 \\cdot \\angle A$, $\\angle A = 30^\\circ$.<br><br>მესამე კუთხე: $\\angle B = 180^\\circ - 144^\\circ - 30^\\circ = 6^\\circ$; ეს არის უმცირესი კუთხე.<br><br><strong>პასუხი:</strong> ბ) $6^\\circ$.",
+    area: "geometry",
+    topics: ["angle-sum","cevians"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -176,7 +328,15 @@ quizData = [
     options: ["$10$", "$12$", "$15$", "$6$", "$8$", "$9$"],
     correct: 4,
     tags: [],
-    solution: "$M$ არის $AB$-ს შუაწერტილი. $BCM$ სამკუთხედში $B$ კუთხის ბისექტრისა $CM$-ის მართობულია, ანუ ბისექტრისა ამავდროულად სიმაღლეცაა. მაშასადამე, $BCM$ სამკუთხედი ტოლფერდაა: $BC = BM = \\dfrac{AB}{2}$, ე.ი. $AB = 2BC$.<br><br>პერიმეტრი: $AB + BC + AC = 34$, $3BC + 10 = 34$, $BC = 8$.<br><br><strong>პასუხი:</strong> ე) $8$."
+    solution: "$M$ არის $AB$-ს შუაწერტილი. $BCM$ სამკუთხედში $B$ კუთხის ბისექტრისა $CM$-ის მართობულია, ანუ ბისექტრისა ამავდროულად სიმაღლეცაა. მაშასადამე, $BCM$ სამკუთხედი ტოლფერდაა: $BC = BM = \\dfrac{AB}{2}$, ე.ი. $AB = 2BC$.<br><br>პერიმეტრი: $AB + BC + AC = 34$, $3BC + 10 = 34$, $BC = 8$.<br><br><strong>პასუხი:</strong> ე) $8$.",
+    area: "geometry",
+    topics: ["cevians","isosceles"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 21
@@ -185,7 +345,15 @@ quizData = [
     options: ["$41$", "$35$", "$47$", "$38$", "$51$", "$36$"],
     correct: 3,
     tags: [],
-    solution: "დავთვალოთ $1$-დან $99$-მდე რიცხვები ჩართვა-გამორიცხვის პრინციპით.<br><br>$4$-ზე იყოფა $24$ რიცხვი ($99 : 4 = 24$, ნაშთი $3$), $6$-ზე $16$, $9$-ზე $11$.<br><br>ორზე ერთდროულად: $4$-ზე და $6$-ზე (ე.ი. $12$-ზე) $8$; $4$-ზე და $9$-ზე ($36$-ზე) $2$; $6$-ზე და $9$-ზე ($18$-ზე) $5$.<br><br>სამივეზე ($36$-ზე): $2$.<br><br>სულ: $24 + 16 + 11 - 8 - 2 - 5 + 2 = 38$.<br><br><strong>პასუხი:</strong> დ) $38$."
+    solution: "დავთვალოთ $1$-დან $99$-მდე რიცხვები ჩართვა-გამორიცხვის პრინციპით.<br><br>$4$-ზე იყოფა $24$ რიცხვი ($99 : 4 = 24$, ნაშთი $3$), $6$-ზე $16$, $9$-ზე $11$.<br><br>ორზე ერთდროულად: $4$-ზე და $6$-ზე (ე.ი. $12$-ზე) $8$; $4$-ზე და $9$-ზე ($36$-ზე) $2$; $6$-ზე და $9$-ზე ($18$-ზე) $5$.<br><br>სამივეზე ($36$-ზე): $2$.<br><br>სულ: $24 + 16 + 11 - 8 - 2 - 5 + 2 = 38$.<br><br><strong>პასუხი:</strong> დ) $38$.",
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -194,7 +362,15 @@ quizData = [
     options: ["$1$", "$2{,}5$", "$-\\dfrac{1}{6}$", "$2$", "$\\dfrac{1}{3}$", "$-1$"],
     correct: 4,
     tags: [],
-    solution: "გავამარტივოთ მარცხენა მხარე:<br>$-2kx + 2kx^2 - (2kx^2 - kx + 2x - 1) + 1 = -kx - 2x + 2$.<br><br>მარჯვენა მხარე: $2k - 7kx + 7$.<br><br>$-kx - 2x + 2 = 2k - 7kx + 7$, საიდანაც $6kx - 2x = 2k + 5$, ანუ $x(6k - 2) = 2k + 5$.<br><br>განტოლებას ამონახსნი არ აქვს, როცა $x$-ის კოეფიციენტი $0$-ია, ხოლო მარჯვენა მხარე არ არის $0$: $6k - 2 = 0$, $k = \\dfrac{1}{3}$; მაშინ $2k + 5 = \\dfrac{17}{3} \\ne 0$.<br><br><strong>პასუხი:</strong> ე) $\\dfrac{1}{3}$."
+    solution: "გავამარტივოთ მარცხენა მხარე:<br>$-2kx + 2kx^2 - (2kx^2 - kx + 2x - 1) + 1 = -kx - 2x + 2$.<br><br>მარჯვენა მხარე: $2k - 7kx + 7$.<br><br>$-kx - 2x + 2 = 2k - 7kx + 7$, საიდანაც $6kx - 2x = 2k + 5$, ანუ $x(6k - 2) = 2k + 5$.<br><br>განტოლებას ამონახსნი არ აქვს, როცა $x$-ის კოეფიციენტი $0$-ია, ხოლო მარჯვენა მხარე არ არის $0$: $6k - 2 = 0$, $k = \\dfrac{1}{3}$; მაშინ $2k + 5 = \\dfrac{17}{3} \\ne 0$.<br><br><strong>პასუხი:</strong> ე) $\\dfrac{1}{3}$.",
+    area: "algebra",
+    topics: ["linear-eq"],
+    grade: 7,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -203,7 +379,15 @@ quizData = [
     options: ["$20$", "$24$", "$8$", "$10$", "$12$", "$25$"],
     correct: 2,
     tags: [],
-    solution: "ვთქვათ, ჯგუფში $n$ მოსწავლეა, მათგან $g$ გოგონა. უნდა სრულდებოდეს $0{,}35n < g < 0{,}4n$, სადაც $g$ მთელია.<br><br>შევამოწმოთ $n$-ის მნიშვნელობები:<br>$n = 1$: $0{,}35 < g < 0{,}4$; $n = 2$: $0{,}7 < g < 0{,}8$; $n = 3$: $1{,}05 < g < 1{,}2$; $n = 4$: $1{,}4 < g < 1{,}6$; $n = 5$: $1{,}75 < g < 2$; $n = 6$: $2{,}1 < g < 2{,}4$; $n = 7$: $2{,}45 < g < 2{,}8$ — არცერთ შუალედში მთელი რიცხვი არ არის.<br>$n = 8$: $2{,}8 < g < 3{,}2$, ე.ი. $g = 3$ ($\\dfrac{3}{8} = 37{,}5\\%$).<br><br><strong>პასუხი:</strong> გ) $8$."
+    solution: "ვთქვათ, ჯგუფში $n$ მოსწავლეა, მათგან $g$ გოგონა. უნდა სრულდებოდეს $0{,}35n < g < 0{,}4n$, სადაც $g$ მთელია.<br><br>შევამოწმოთ $n$-ის მნიშვნელობები:<br>$n = 1$: $0{,}35 < g < 0{,}4$; $n = 2$: $0{,}7 < g < 0{,}8$; $n = 3$: $1{,}05 < g < 1{,}2$; $n = 4$: $1{,}4 < g < 1{,}6$; $n = 5$: $1{,}75 < g < 2$; $n = 6$: $2{,}1 < g < 2{,}4$; $n = 7$: $2{,}45 < g < 2{,}8$ — არცერთ შუალედში მთელი რიცხვი არ არის.<br>$n = 8$: $2{,}8 < g < 3{,}2$, ე.ი. $g = 3$ ($\\dfrac{3}{8} = 37{,}5\\%$).<br><br><strong>პასუხი:</strong> გ) $8$.",
+    area: "algebra",
+    topics: ["percent"],
+    grade: 7,
+    difficulty: 3,
+    type: ["word"],
+    method: ["estimation"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24
@@ -212,7 +396,15 @@ quizData = [
     options: ["$75\\%$", "$62{,}5\\%$", "$80\\%$", "$65{,}(6)\\%$", "$70\\%$", "$59{,}(3)\\%$"],
     correct: 0,
     tags: [],
-    solution: "რადგან $MN \\parallel AC$, $\\angle MOA = \\angle OAC$ (შიგა ჯვარედინა კუთხეები), ხოლო $\\angle OAC = \\angle OAM$, რადგან $AO$ ბისექტრისაა. მაშასადამე, $AMO$ სამკუთხედი ტოლფერდაა: $MO = MA$. ანალოგიურად, $NO = NC$.<br><br>$MBN$ სამკუთხედის პერიმეტრი: $BM + MN + NB = BM + MO + ON + NB = (BM + MA) + (NC + NB) = AB + CB = 10 + 8 = 18$.<br><br>$ABC$ სამკუთხედის პერიმეტრია $6 + 8 + 10 = 24$, ამიტომ $\\dfrac{18}{24} = 0{,}75 = 75\\%$.<br><br><strong>პასუხი:</strong> ა) $75\\%$."
+    solution: "რადგან $MN \\parallel AC$, $\\angle MOA = \\angle OAC$ (შიგა ჯვარედინა კუთხეები), ხოლო $\\angle OAC = \\angle OAM$, რადგან $AO$ ბისექტრისაა. მაშასადამე, $AMO$ სამკუთხედი ტოლფერდაა: $MO = MA$. ანალოგიურად, $NO = NC$.<br><br>$MBN$ სამკუთხედის პერიმეტრი: $BM + MN + NB = BM + MO + ON + NB = (BM + MA) + (NC + NB) = AB + CB = 10 + 8 = 18$.<br><br>$ABC$ სამკუთხედის პერიმეტრია $6 + 8 + 10 = 24$, ამიტომ $\\dfrac{18}{24} = 0{,}75 = 75\\%$.<br><br><strong>პასუხი:</strong> ა) $75\\%$.",
+    area: "geometry",
+    topics: ["cevians","parallel-lines","isosceles"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25
@@ -221,6 +413,14 @@ quizData = [
     options: ["$40^\\circ$", "$36^\\circ$", "$45^\\circ$", "$60^\\circ$", "$50^\\circ$", "$75^\\circ$"],
     correct: 4,
     tags: [],
-    solution: "ავიღოთ $AB$-ს შუაწერტილი $E$. მაშინ $AE = 1 = AD$ და $\\angle A = 60^\\circ$, ამიტომ $ADE$ სამკუთხედი ტოლგვერდაა: $DE = 1$. მაშასადამე, $DE = AE = EB$, ანუ $ABD$ სამკუთხედში $DE$ მედიანა $AB$ გვერდის ნახევრის ტოლია. ეს ნიშნავს, რომ $\\angle ADB = 90^\\circ$.<br><br>მაშინ $\\angle BDC = 90^\\circ$. $\\angle C = 180^\\circ - 60^\\circ - 80^\\circ = 40^\\circ$, ამიტომ $BDC$ მართკუთხა სამკუთხედიდან $\\angle DBC = 90^\\circ - 40^\\circ = 50^\\circ$.<br><br><strong>პასუხი:</strong> ე) $50^\\circ$."
+    solution: "ავიღოთ $AB$-ს შუაწერტილი $E$. მაშინ $AE = 1 = AD$ და $\\angle A = 60^\\circ$, ამიტომ $ADE$ სამკუთხედი ტოლგვერდაა: $DE = 1$. მაშასადამე, $DE = AE = EB$, ანუ $ABD$ სამკუთხედში $DE$ მედიანა $AB$ გვერდის ნახევრის ტოლია. ეს ნიშნავს, რომ $\\angle ADB = 90^\\circ$.<br><br>მაშინ $\\angle BDC = 90^\\circ$. $\\angle C = 180^\\circ - 60^\\circ - 80^\\circ = 40^\\circ$, ამიტომ $BDC$ მართკუთხა სამკუთხედიდან $\\angle DBC = 90^\\circ - 40^\\circ = 50^\\circ$.<br><br><strong>პასუხი:</strong> ე) $50^\\circ$.",
+    area: "geometry",
+    topics: ["right-triangle","angle-sum"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["aux-construct"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

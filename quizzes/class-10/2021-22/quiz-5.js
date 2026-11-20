@@ -4,7 +4,15 @@ quizData = [
   question: "იპოვეთ $a$-ს ყველა მნიშვნელობა, რომელთათვისაც $7\\sin x = a - 3$ განტოლებას აქვს ამონახსნი.",
   options: ["$[-4; 10]$", "$[-1; 1]$", "$[3; 7]$", "$(-\\infty; 1]$", "$(0; 3)$", "$(-1; 1)$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 2
@@ -12,7 +20,15 @@ quizData = [
   question: "იპოვეთ $g(x) = 5\\sin(3x + 7) + 11$ ფუნქციის პერიოდი.",
   options: ["$\\frac{2\\pi}{5}$", "$\\frac{2\\pi}{7}$", "$\\frac{\\pi}{5}$", "$\\frac{\\pi}{7}$", "$\\frac{2\\pi}{3}$", "$\\frac{2\\pi}{11}$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-props"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 3
@@ -20,7 +36,15 @@ quizData = [
   question: "იპოვეთ $(2x + 3)^9$ ნიუტონის ბინომის განაშალის მესამე ($T_2$) წევრი.",
   options: ["$6^7x^9$", "$2^33^5x^3$", "$2^93^4x^7$", "$232x^7$", "$124x^5$", "$2^73^5x^7$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["binomial"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 4
@@ -28,7 +52,15 @@ quizData = [
   question: "იპოვეთ იმ კუთხეთა ჯამი, რომელსაც ადგენს წრფე სიბრტყესთან და ამ სიბრტყის მართობულ წრფესთან?",
   options: ["$0^\\circ$", "$30^\\circ$", "$135^\\circ$", "$60^\\circ$", "$90^\\circ$", "$120^\\circ$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["perpendicular-space"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 5
@@ -36,7 +68,15 @@ quizData = [
   question: "ორ $\\alpha$ და $\\beta$ სიბრტყეს შორის კუთხეა $30^\\circ$. იპოვეთ $\\alpha$ სიბრტყეში მდებარე წესიერი ექვსკუთხედის, რომლის გვერდია $1$, ორთოგონალური გეგმილის ფართობი $\\beta$ სიბრტყეზე.",
   options: ["$1$", "$\\frac{9}{4}$", "$\\frac{11}{3}$", "$\\frac{6}{5}$", "$\\frac{2\\sqrt{3}}{4}$", "$\\frac{\\sqrt{3}}{4}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["regular-polygon"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 6
@@ -44,7 +84,15 @@ quizData = [
   question: "გამოთვალეთ $|2\\vec{a} + \\vec{b}|$, თუ $|\\vec{a}| = 2$, $|\\vec{b}| = 1$, ხოლო \\( \\vec{a} \\) და \\( \\vec{b} \\) ვექტორებს შორის კუთხე $60^\\circ$-ია.",
   options: ["$\\frac{11}{2}$", "$4$", "$3$", "$5$", "$\\sqrt{17}$", "$\\sqrt{21}$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 7
@@ -59,7 +107,15 @@ quizData = [
     "$\\frac{3 - \\cos 6\\alpha}{4}$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-identities"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 8
@@ -67,7 +123,15 @@ quizData = [
   question: "იპოვეთ $3\\sin\\alpha + 4\\sin\\left(\\frac{\\pi}{2} + \\alpha\\right) + \\sin\\beta$ გამოსახულების უდიდესი მნიშვნელობა.",
   options: ["$0$", "$-1$", "$7$", "$6$", "$8$", "$5$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["max-min","reduction"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 9
@@ -75,7 +139,15 @@ quizData = [
   question: "$A$ წერტილი დაშორებულია $\\alpha$ სიბრტყიდან $7$-ის ტოლი მანძილით, ხოლო ამ სიბრტყეში მდებარე $a$ წრფიდან $9$-ის ტოლი მანძილით. $AB$ არის $A$ წერტილდან $\\alpha$ სიბრტყეზე დაშვებული მართობი. იპოვეთ მანძილი $B$ წერტილიდან $a$ წრფემდე.",
   options: ["$8$", "$6$", "$2\\sqrt{3}$", "$3\\sqrt{3}$", "$2\\sqrt{5}$", "$4\\sqrt{2}$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 10
@@ -83,7 +155,15 @@ quizData = [
   question: "მაქსიმუმ რამდენი სიმეტრიის ღერძი შეიძლება ჰქონდეს სამკუთხედს?",
   options: ["$0$", "$1$", "$2$", "$3$", "$4$", "$6$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: [],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 11
@@ -98,7 +178,15 @@ quizData = [
     "∅"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 12
@@ -113,7 +201,15 @@ quizData = [
     "ყველა წინა პასუხი მცდარია"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["probability","word-problems"],
+  grade: 10,
+  difficulty: 2,
+  type: ["word"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 13
@@ -128,7 +224,15 @@ quizData = [
     "$(-\\infty; 2\\pi)$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-ineq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 14
@@ -136,7 +240,15 @@ quizData = [
   question: "მოცემულია $\\vec{a}(2; 1; 4)$, $\\vec{b}(3; -2; 1)$ და $\\vec{c}(3; m; n)$ ვექტორები. ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს $m + n$, თუ $\\vec{a} \\times \\vec{b}$ და $\\vec{c}$ ვექტორები კოლინეალურია.",
   options: ["$3$", "$1$", "$9$", "$5$", "$2$", "$8$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: ["vectors","coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 15
@@ -144,7 +256,15 @@ quizData = [
   question: "მართ პარალელეპიპედს ფუძედ აქვს პარალელოგრამი, რომლის გვერდებია $3$ და $4$, მათ შორის კუთხე $60^\\circ$-ია. მცირე დიაგონალური კვეთის ფართობია $\\sqrt{39}$. იპოვეთ პარალელეპიპედის მოცულობა.",
   options: ["$12$", "$24$", "$3\\sqrt{13}$", "$18$", "$32$", "$6$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["parallelogram","prism","cross-sections"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 16
@@ -159,7 +279,15 @@ quizData = [
     "$\\frac{\\pi}{2} + \\frac{\\pi n}{3}$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 17
@@ -174,7 +302,15 @@ quizData = [
     "ყველა წინა პასუხი მცდარია"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["combinatorics"],
+  grade: 10,
+  difficulty: 2,
+  type: ["word"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 18
@@ -189,7 +325,15 @@ quizData = [
     "$4$-ზე მეტი"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-systems"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 19
@@ -197,7 +341,15 @@ quizData = [
   question: "წესიერი მრავალკუთხედი თავისი ცენტრის გარშემო $70^\\circ$-ით მობრუნებით თავის თავში გადადის. რა უმცირესი რაოდენობის წვერო გააჩნია ამ მრავალკუთხედს?",
   options: ["$3$", "$36$", "$70$", "$6$", "$24$", "$12$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["polygon-basics","regular-polygon"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 20
@@ -212,7 +364,15 @@ quizData = [
     "$(\\frac{5}{12}; \\frac{11}{12}; \\frac{31}{12})$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["cevians"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: ["coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 21
@@ -220,7 +380,15 @@ quizData = [
   question: "რამდენ წერტილში გადაიკვეთებიან $f(x) = \\sin x + \\sin |x|$ და $g(x) = x^2 + 3\\pi x + 2\\pi^2$ ფუნქციის გრაფიკები.",
   options: ["არცერთი", "$1$", "$2$", "$3$", "$4$", "$4$-ზე მეტი"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["product-sum"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 22
@@ -228,7 +396,15 @@ quizData = [
   question: "$a$ პარამეტრს შემთხვევით ვირჩევთ $A = \\{-7; -2; -1; 0; 1; 2; 3; 4; 5\\}$ სიმრავლიდან. იპოვეთ ალბათობა იმისა, რომ არჩეული $a$-სთვის $|4x - 1| = a^2 - 4$ განტოლება და $-x^2 + 5x - 7 \\geq \\sqrt{2x - 1}$ უტოლობა იქნება ტოლფასი.",
   options: ["$\\frac{4}{9}$", "$1$", "$\\frac{2}{9}$", "$\\frac{5}{9}$", "$\\frac{3}{9}$", "$\\frac{7}{9}$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["probability","abs-eq"],
+  grade: 10,
+  difficulty: 3,
+  type: ["solve"],
+  method: ["parameter","absolute"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 23
@@ -236,7 +412,15 @@ quizData = [
   question: "რამდენ წერტილში გადაიკვეთებიან $f(x) = \\sqrt{x^3 - 5x^2 - 13x + 9}$ ფუნქციისა და $g(x) = x - 3$ ფუნქციის გრაფიკები?",
   options: ["არცერთი", "$1$", "$2$", "$3$", "$4$", "$4$-ზე მეტი"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 24
@@ -251,7 +435,15 @@ quizData = [
     "$3\\vec{p}$",
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["combinatorics","notable-points","vectors"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 25
@@ -266,6 +458,14 @@ quizData = [
     "$(1; 2; 2)$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["combinatorics","prism","linear-ineq"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];

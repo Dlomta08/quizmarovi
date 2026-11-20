@@ -4,7 +4,15 @@ quizData = [
     question: "გამოთვალეთ $\\dfrac{1}{3} − 0{,}(11) + \\dfrac{7}{9}$.",
     options: ["$\\dfrac{10}{9}$", "$\\dfrac{1}{9}$", "$\\dfrac{2}{3}$", "$\\dfrac{4}{3}$", "$0$", "$1$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -12,7 +20,15 @@ quizData = [
     question: "მოცემულია $A = 0{,}3(12)$, $B = \\dfrac{10}{33}$, $C = \\dfrac{3}{11}$, $D = \\dfrac{19}{55}$ რიცხვები. დაალაგეთ ზრდის მიხედვით (პატარიდან დიდისკენ).",
     options: ["$A, C, B, D$", "$B, A, C, D$", "$C, B, A, D$", "$B, C, A, D$", "$D, C, B, A$", "$A, D, B, C$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -20,7 +36,15 @@ quizData = [
     question: "მოცემულია $a = 81$ და $b = 32$ რიცხვები. $A$ სიმრავლე შედგება $a$ რიცხვის ყველა გამყოფისგან. $B$ სიმრავლე კი $b$ რიცხვის ყველა გამყოფისგან. რამდენი ელემენტია $A \\cup B$ სიმრავლეში?",
     options: ["$7$", "$5$", "$12$", "$10$", "$15$", "$11$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["sets"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -28,7 +52,15 @@ quizData = [
     question: "რა ციფრით ბოლოვდება შემდეგი უარყოფითი რიცხვის მოდული: $2024^8 − 199^{199}$?",
     options: ["$1$", "$9$", "$2$", "$5$", "$8$", "$3$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility","powers"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -36,14 +68,30 @@ quizData = [
     question: "წრფეზე მონიშნულია $A$, $B$, $C$, $D$ წერტილები ისე, რომ $AB = 10$, $BC = 12$, $AD = 6$. რისი ტოლი ვერ იქნება $CD$ მონაკვეთის სიგრძე?",
     options: ["$18$", "$4$", "$8$", "$28$", "$16$", "შეუძლებელია განსაზღვრა"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //6
   {
     question: "რას უდრის $(5 ⊛ 9) ⊛ 7$, თუ $a ⊛ b$ არის $a$ და $b$ რიცხვების ნამრავლის გამყოფთა რაოდენობა?",
     options: ["$3$", "$8$", "$6$", "$10$", "$4$", "$12$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["prime-factor"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -51,7 +99,15 @@ quizData = [
     question: "იპოვეთ $A △ B$ სიმრავლეში ელემენტების რაოდენობა, თუ $A = \\{1; 2; 4; 8\\}$ და $B = \\{2; 4; 6; 7; 9; 11\\}$. (სიმეტრიული სხვაობა: $A △ B = (A\\backslash B) \\cup (B\\backslash A)$)",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["sets"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -59,7 +115,15 @@ quizData = [
     question: "კლასში ლიკაზე მაღალი თანაკლასელთა $\\dfrac{4}{9}$ ნაწილია, ხოლო მასზე დაბალი $\\dfrac{1}{2}$ ნაწილია, მისი სიმაღლის კი არავინაა. იპოვეთ ამ კლასის მოსწავლეთა რაოდენობის გამომსახველი რიცხვის ციფრთა ჯამი.",
     options: ["$9$", "$7$", "$11$", "$5$", "$8$", "$4$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 7,
+    difficulty: 1,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -67,7 +131,15 @@ quizData = [
     question: "$A$, $B$, $C$, $D$ წერტილები ამ თანმიმდევრობით წრფეზე ისეა აღებული, რომ $AB = 6$, $BC = 7$, $CD = 8$. იპოვეთ $AB$ და $CD$ მონაკვეთების შუა წერტილებს შორის მანძილი.",
     options: ["$11$", "$14$", "$10$", "$15$", "$13$", "$17$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -75,7 +147,15 @@ quizData = [
     question: "იპოვეთ მოსაზღვრე კუთხეების სხვაობა, თუ ერთი მათგანი მეორის $\\dfrac{2}{3}$-ია.",
     options: ["$18^\\circ$", "$30^\\circ$", "$36^\\circ$", "$45^\\circ$", "$64^\\circ$", "$72^\\circ$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["angle-pairs"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //11
@@ -83,7 +163,15 @@ quizData = [
     question: "$a$, $b$, $c$, $d$, $e$, $f$ ერთმანეთისგან განსხვავებული ექვსი ისეთი ნატურალური რიცხვია, რომ $a \\cdot b = c$; $d = \\dfrac{a}{3}$; $b = 5 \\cdot e$; $2 \\cdot f = d$. ამ რიცხვებიდან რომელი იყოფა უნაშთოთ დანარჩენ ხუთივე რიცხვზე?",
     options: ["$a$", "$b$", "$c$", "$d$", "$f$", "არცერთი"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -91,7 +179,15 @@ quizData = [
     question: "$A$, $B$, $C$ განსხვავებული, არა ცარიელი სიმრავლეებია. ჩამოთვლილთაგან რომელია $A$ სიმრავლის ქვესიმრავლე?",
     options: ["$(A \\cup B) \\backslash (B \\cap C)$", "$(B \\cup A) \\cup (C \\cap A)$", "$A \\backslash (A \\cup B \\cup C)$", "$(A \\cup B) \\backslash C$", "$(A \\cup C) \\backslash (B \\cap C)$", "$(C \\cup A) \\cup (C \\cap B)$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["sets"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -99,7 +195,15 @@ quizData = [
     question: "რიცხვით ღერძზე $A$, $C$, $D$, $B$ წერტილები ამ თანმიმდევრობით ისეა აღებული, რომ $AC = CD = DB$. იპოვეთ $C$ წერტილის კოორდინატი, თუ $A$ წერტილის კოორდინატია $a$, ხოლო $B$ წერტილის კოორდინატია $b$.",
     options: ["$2a$", "$\\dfrac{a + b}{2}$", "$\\dfrac{2a + b}{3}$", "$\\dfrac{b - a}{2}$", "$\\dfrac{b - a}{3}$", "$\\dfrac{a + b}{4}$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //14
@@ -107,7 +211,15 @@ quizData = [
     question: "სკოლაში მეშვიდე კლასელთა $\\dfrac{1}{3}$ მათემატიკაში შეფასდა $8$ ქულით, $\\dfrac{1}{4}$ შეფასდა $9$ ქულით, ხოლო $\\dfrac{1}{7}$ შეფასდა $10$ ქულით. რამდენი მეშვიდე კლასელია სკოლაში თუ მათი რაოდენობა რიცხობრივად ტოლია $a$ და $b$ წრფეებს შორის კუთხის გრადუსული ზომის?",
     options: ["$35$", "$68$", "$168$", "$120$", "$84$", "$90$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -115,7 +227,15 @@ quizData = [
     question: "ორი პარალელური $a$ და $b$ წრფე გადაკვეთილია მესამე წრფით. მიღებული შიგა ცალმხრივი კუთხეების ბისექტრისებიდან ერთი $a$ წრფესთან ქმნის $\\alpha$ მახვილ კუთხეს, მეორე $b$ წრფესთან ქმნის $\\beta$ მახვილ კუთხეს. ამ კუთხეების სხვაობა $20^\\circ$-ია. იპოვეთ მათ შორის უმცირესი.",
     options: ["$10^\\circ$", "$35^\\circ$", "$40^\\circ$", "$45^\\circ$", "$30^\\circ$", "$25^\\circ$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //16
@@ -123,7 +243,15 @@ quizData = [
     question: "გამოთვალეთ $1 − (2 − (3 − (4 − (5 − (6 − 7)))))$.",
     options: ["$−1$", "$−2$", "$−6$", "$4$", "$6$", "$11$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -131,7 +259,15 @@ quizData = [
     question: "სახლში ორი ისრებიანი საათია. ერთი ჩამორჩება დღე-ღამეში $15$ წუთით, მეორე წინ მიდის $10$ წუთით. დღეს დღის $12$ საათზე ორივე საათი სწორ დროს აჩვენებს. ჩამოთვლილთაგან რამდენი დღე-ღამის შემდეგ აჩვენებენ ორივე საათი ერთდროულად კიდევ სწორ დროს?",
     options: ["$24$", "$36$", "$96$", "$144$", "$196$", "$240$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -139,7 +275,15 @@ quizData = [
     question: "მაქსიმუმ რომელ რიცხვზე გაიყოფა $2 \\cdot 3 \\cdot n \\cdot (n + 1) \\cdot (n + 2)$ ნამრავლი ნებისმიერი ნატურალური $n$ რიცხვისთვის?",
     options: ["$3$", "$6$", "$12$", "$36$", "$72$", "$108$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -147,7 +291,15 @@ quizData = [
     question: "თუ ორი ნებისმიერი წრფე გადაკვეთილია მესამე წრფით, მაშინ მიღებული კუთხეების სიდიდეებისთვის ჩამოთვლითაგან რომელი გამონათქვამია აუცილებლად ჭეშმარიტი? <br><br> $(𝑎)$ რომელიმე ორი კუთხის ჯამი $120^\\circ$-ია $\\quad$ $(𝑏)$ რომელიმე ექვსი კუთხე ტოლია <br><br> $(𝑐)$ რომელიმე სამი კუთხე ტოლია $\\quad$ $(𝑑)$ შიგა ცალმხრივი რომელიმე ორი კუთხის ჯამი $180^\\circ$-ია <br><br> $(𝑒)$ შიგა ჯვარედინი რომელიმე ორი კუთხე ტოლია",
     options: ["მხოლოდ $a$", "მხოლოდ $b$", "მხოლოდ $d$ და $c$", "მხოლოდ $d$ და $e$", "მხოლოდ $e$ და $b$", "არცერთი ჩამოთვლილთაგან"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["parallel-lines"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -155,7 +307,15 @@ quizData = [
     question: "სამი განსხვავებული $a$, $b$ და $c$ წრფე ერთ წერტილში იკვეთება. მიღებული ექვსი კუთხიდან სამი ისე შეეფარდება ერთმანეთს როგორც $2:3:4$. იპოვეთ ამ ექვსი კუთხიდან უდიდესისა და უმცირესის სხვაობა.",
     options: ["$10^\\circ$", "$24^\\circ$", "$30^\\circ$", "$36^\\circ$", "$40^\\circ$", "$80^\\circ$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //21
@@ -163,7 +323,15 @@ quizData = [
     question: "რამდენი ქვესიმრავლე გააჩნია სიმრავლეს, რომელიც შედგება $420$-ის ყველა მარტივი გამყოფისგან?",
     options: ["$12$", "$16$", "$24$", "$8$", "$6$", "$32$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["prime-factor","sets"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //22
@@ -171,7 +339,15 @@ quizData = [
     question: "რა ნაშთს გვაძლევს $17 \\cdot 48 \\cdot (9n + 4) \\cdot (18m + 7) \\cdot (23k + 2) \\cdot (45p + 18)$ რიცხვი $9$-ზე გაყოფისას? ($n$, $m$, $k$, $p$ - ნებისმიერი ნატურალური რიცხვებია)",
     options: ["$0$", "$1$", "$3$", "$4$", "$5$", "$6$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //23
@@ -179,7 +355,15 @@ quizData = [
     question: "რიცხვით ღერძზე მოცემულია $A$, $B$, $C$ განსხვავებული წერტილები ამ თანმიმდევრობით (მარცხნიდან მარჯვნივ). $A$ წერტილის კოორდინატია $|a|$, $B$ წერტილის კოორდინატია $|b|$, $C$ წერტილის კოორდინატია $|a − b|$, $D$ წერტილის კოორდინატია $|a + b|$, $M$ წერტილის კოორდინატია $\\dfrac{|a|}{3}$, $N$ წერტილის კოორდინატია $\\dfrac{|b|}{7}$ ($a, b, c$ მთელი რიცხვებია). ჩამოთვლილთაგან რომელი განლაგებაა შეუძლებელი მოცემული თანმიმდევრობით? <br><br> (I) $M,N,A,D,B,C$ $\\quad$ (II) $M,A,N,D,B,C$ $\\quad$ (III) $M,A,N,B,D,C$ $\\quad$ (IV) $D,N,M,A,B,C$",
     options: ["მხოლოდ I", "მხოლოდ II", "მხოლოდ III", "მხოლოდ IV", "მხოლოდ I და II", "მხოლოდ III და IV"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //24
@@ -187,7 +371,15 @@ quizData = [
     question: "სიბრტყეზე მოცემულია ორი პარალელური წრფე. სულ მათზე მონიშნულია $8$ წერტილი. ჩამოთვლილთაგან მაქსიმუმ რამდენი სამკუთხედი მიიღება წვეროებით მონიშნულ წერტილებში?",
     options: ["$32$", "$36$", "$42$", "$45$", "$48$", "$54$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["parallel-lines"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //25
@@ -195,6 +387,14 @@ quizData = [
     question: "$\\angle ABC$ კუთხის ბისექტრისის მიერ $BC$ გვერდის პარალელურ წრფესთან შექმნილი კუთხის ბისექტრისა და $BC$ წრფესთან ადგენს $20^\\circ$-იან კუთხეს. ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს $\\angle ABC$ კუთხის სიდიდე?",
     options: ["$80^\\circ$", "$40^\\circ$", "$120^\\circ$", "$30^\\circ$", "$140^\\circ$", "$60^\\circ$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["parallel-lines"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

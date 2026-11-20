@@ -4,7 +4,15 @@ quizData = [
   question: "$𝛼$-სა და $𝛽$-ს დასაშვები ყველა მნიშვნელობისათვის ჩამოთვლილთაგან რომლის ტოლია $\\frac{\\sin\\alpha + \\sin\\beta}{\\cos\\alpha + \\cos\\beta}$ გამოსახულების მნიშვნელობა?",
   options: ["$\\tan(\\alpha + \\beta)$", "$\\tan\\left(\\frac{\\alpha + \\beta}{2}\\right)$", "$\\tan\\alpha + \\tan\\beta$", "$\\tan\\left(\\frac{\\alpha + \\beta}{2}\\right) \\cdot \\cot\\left(\\frac{\\alpha - \\beta}{2}\\right)$", "$\\tan\\alpha \\cdot \\tan\\beta$", "ყველა წინა პასუხი მცდარია"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["product-sum"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 2
@@ -12,7 +20,15 @@ quizData = [
   question: "$𝛼$-ს დასაშვები ყველა მნიშვნელობისათვის ჩამოთვლილთაგან რომლის ტოლია $\\frac{\\sin\\alpha + \\sin3\\alpha + \\sin5\\alpha}{\\cos\\alpha + \\cos3\\alpha + \\cos5\\alpha}$ გამოსახულების მნიშვნელობა?",
   options: ["$\\tan4\\alpha$", "$\\tan6\\alpha$", "$\\tan8\\alpha$", "$\\tan\\alpha$", "$\\tan3\\alpha$", "$\\tan5\\alpha$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["product-sum"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 3
@@ -20,7 +36,15 @@ quizData = [
   question: "$a(x) = 3\\tan4x + 1$, $b(x) = 5|\\cot8x| + 1$, $c(x) = \\cos4x + 2$, $d(x) = 2|\\sin4x| + 1$ ოთხი ფუნქციიდან რომელ ორს აქვს ერთნაირი უმცირესი დადებითი პერიოდი?",
   options: ["$a(x)$ და $b(x)$", "$a(x)$ და $c(x)$", "$a(x)$ და $d(x)$", "$b(x)$ და $c(x)$", "$b(x)$ და $d(x)$", "$c(x)$ და $d(x)$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-props"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["absolute"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 4
@@ -28,7 +52,15 @@ quizData = [
   question: "წესიერი ექვსკუთხა პრიზმის $18$-ვე წიბო $1$-ის ტოლია. იპოვეთ მისი სრული ზედაპირის ფართობი.",
   options: ["$6 + 3\\sqrt{3}$", "$9\\sqrt{3}$", "$12$", "$15$", "$6 + 6\\sqrt{3}$", "$8$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["prism"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 5
@@ -36,7 +68,15 @@ quizData = [
   question: "მართკუთხა პარალელეპიპედის თითოეული წიბოს სიგრძის $10\\%$-ით შემცირებისას, მისი სრული ზედაპირის ფართობი შემცირდება ...",
   options: ["$9\\%$-ით", "$10\\%$-ით", "$11\\%$-ით", "$19\\%$-ით", "$21\\%$-ით", "არ შემცირდება"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["prism","percent"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 6
@@ -44,7 +84,15 @@ quizData = [
   question: "$a(x) = 3\\tan4x + 1$, $b(x) = 5|\\cot8x| + 1$, $c(x) = \\cos4x + 2$, $d(x) = 2|\\sin4x| + 1$ ოთხი ფუნქციიდან რომელ ორს აქვს ერთნაირი მნიშვნელობათა სიმრავლე?",
   options: ["$a(x)$ და $b(x)$", "$a(x)$ და $c(x)$", "$a(x)$ და $d(x)$", "$b(x)$ და $c(x)$", "$b(x)$ და $d(x)$", "$c(x)$ და $d(x)$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-basics"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["absolute"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 7
@@ -59,7 +107,15 @@ quizData = [
     "$\\cos\\alpha - \\cos\\beta = 2\\sin\\left(\\frac{\\alpha + \\beta}{2}\\right) \\sin\\left(\\frac{\\alpha - \\beta}{2}\\right)$"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["sum-formulas"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 8
@@ -67,7 +123,15 @@ quizData = [
   question: "გამოთვალეთ $\\frac{44(\\cos\\alpha - \\cos3\\alpha)}{\\sin2\\alpha \\cdot \\sin3\\alpha}$ გამოსახულების მნიშვნელობა, თუ $\\cos^2\\alpha = 0{,}8$.",
   options: ["$22$", "$33$", "$35$", "$36$", "$40$", "$55$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","sum-formulas","product-sum"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 9
@@ -75,7 +139,15 @@ quizData = [
   question: "$ABC$ სამკუთხედის $A, B$ და $C$ წვეროებიდან სამკუთხედის არაგადამკვეთ $\\omega$ სიბრტყემდე მანძილები შესაბამისად $5$-ის, $12$-ისა და $7$-ის ტოლია. იპოვეთ მანძილი $\\omega$ სიბრტყემდე სამკუთხედის $BM$ მედიანის შუაწერტილიდან.",
   options: ["$7$", "$8$", "$9$", "$10$", "$11$", "$12$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["cevians"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 10
@@ -83,7 +155,15 @@ quizData = [
   question: "მართი პრიზმის სიმაღლე $2\\sqrt{5}$-ის ტოლია. ზედა ფუძის შიგნით მდებარე რაღაც წერტილი ქვედა ფუძის ყველა გვერდიდან თანაბრადაა დაშორებული. ზედა ფუძის შიგნით მდებარე სხვა რაღაც წერტილი კი ქვედა ფუძის ყველა წვეროდანაა თანაბრად დაშორებული. იპოვეთ პრიზმის დიაგონალი, თუ მისი ფუძე $6$-ისა და $10$-ის ტოლი ფუძეების მქონე ტრაპეციაა.",
   options: ["$9$", "$10$", "$11$", "$12$", "$13$", "$14$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["trapezoid","prism"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 11
@@ -98,7 +178,15 @@ quizData = [
     "$\\sqrt{2}$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["product-sum"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 12
@@ -113,7 +201,15 @@ quizData = [
     "$\\tan\\alpha$-ჯერ მეტია"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-identities"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 13
@@ -121,7 +217,15 @@ quizData = [
   question: "იპოვეთ $6\\sin x \\cdot \\cos x + 9\\cos^2 x + \\sin^2 x$ გამოსახულების მაქსიმალური მნიშვნელობა.",
   options: ["$4\\sqrt{5}$", "$9$", "$10$", "$12$", "$15$", "$16$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["max-min"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 14
@@ -136,7 +240,15 @@ quizData = [
     "$\\cos\\alpha = \\cos4\\beta$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["prism"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 15
@@ -144,7 +256,15 @@ quizData = [
   question: "წესიერი $8$-კუთხა პრიზმის უმცირესი სიგრძის დიაგონალსა და მისი ფუძის უდიდესი სიგრძის დიაგონალს ტოლი სიგრძეები აქვთ. იპოვეთ პრიზმის გვერდითი წიბოსა და ფუძის წიბოს სიგრძეთა კვადრატების შეფარდება.",
   options: ["$1$", "$\\sqrt{2}$", "$\\sqrt{3}$", "$3$", "$2 + \\sqrt{2}$", "$3 + \\sqrt{3}$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["prism"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 16
@@ -152,7 +272,15 @@ quizData = [
   question: "ცნობილია $\\alpha$ ისეთი რიცხვია, რომ $\\sin2\\alpha$, $\\sin7\\alpha$ და $\\sin12\\alpha$ არანულოვანი რაციონალური რიცხვებია. შემდეგი სამი დებულებიდან რომელია ჭეშმარიტი?\n$(A)$ ყველა ასეთი $\\alpha$-სთვის $\\cos5\\alpha$ აუცილებლად რაციონალური რიცხვია.\n$(B)$ ყველა ასეთი $\\alpha$-სთვის $\\cos5\\alpha$ აუცილებლად ირაციონალური რიცხვია.\n$(C)$ ზოგიერთი ასეთი $\\alpha$-სთვის $\\cos5\\alpha$ რაციონალური რიცხვია, ზოგიერთისთის კი — ირაციონალური.",
   options: ["არცერთი", "მხოლოდ $A$", "მხოლოდ $B$", "მხოლოდ $C$", "მხოლოდ $A$ და $C$", "მხოლოდ $B$ და $C$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["sum-formulas"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 17
@@ -167,7 +295,15 @@ quizData = [
     "$\\frac{1}{2} + \\frac{\\sqrt{2}}{2} + \\frac{\\sqrt{3}}{2}$"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["product-sum"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 18
@@ -175,7 +311,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომელი $f(x)$ ფუნქციისთვის არ სრულდება $f(x + y) \\cdot f(x - y) = f^2(x) - f^2(y)$ ტოლობა $x$ და $y$ ცვლადების ყველა დასაშვები მნიშვნელობისთვის? $f(x)=$...",
   options: ["$x$", "$2x$", "$-x$", "$\\cos x$", "$\\sin x$", "$-3\\sin x$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-identities"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 19
@@ -183,7 +327,15 @@ quizData = [
   question: "პარალელეპიპედის $6$-ვე წახნაგი წარმოადგენს $2$-ის ტოლი გვერდისა და $60^{\\circ}$-ის ტოლი კუთხის მქონე რომბს. თითოეულ გვერდით წიბოზე თითო $M$, $N$, $K$ და $T$ წერტილი ისეა აღებული, რომ ისინი გვერდითი წიბოების მართობულ ერთ სიბრტყეში მდებარეობენ. იპოვეთ $MNKT$ ოთხკუთხედის ფართობი.",
   options: ["$2$", "$2\\sqrt{2}$", "$2\\sqrt{3}$", "$3$", "$3\\sqrt{2}$", "$3\\sqrt{3}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["prism","rhombus-rect-sq"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 20
@@ -191,7 +343,15 @@ quizData = [
   question: "პარალელეპიპედის ზედა ფუძის ერთ-ერთი წვერო ქვედა ფუძის ოთხივე გვერდიდან $5$-ის ტოლი მანძილითაა დაშორებული. იპოვეთ პარალელეპიპედის სრული ზედაპირის ფართობი, თუ ფუძის დიაგონალების სიგრძეები $6$-ისა და $8$-ის ტოლია.",
   options: ["$132$", "$136$", "$140$", "$144$", "$148$", "$152$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["prism"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 21
@@ -199,7 +359,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომელი განტოლებით მოცემული წრფე კვეთს $y = \\sin x$, $y = \\frac{\\sin x + |\\sin x|}{2}$, $y = \\sqrt{\\sin^2 x}$ და $y = \\sqrt{\sinx}^2$ ოთხი ფუნქციის გრაფიკიდან ზუსტად სამს?",
   options: ["$y = 0{,}5$", "$y = 2$", "$y = -0{,}5$", "$x = 0{,}5\\pi$", "$x = 0{,}7\\pi$", "$x = 1{,}2\\pi$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","cross-sections"],
+  grade: 10,
+  difficulty: 3,
+  type: ["graph"],
+  method: ["absolute"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 22
@@ -207,7 +375,15 @@ quizData = [
   question: "იპოვეთ $y = \\sin(|x| - \\frac{\\pi}{5})$ ფუნქციის გრაფიკის $Ox$ ღერძთან გადაკვეთის წერტილებიდან ორ უახლოესს შორის მანძილი.",
   options: ["$\\frac{2\\pi}{5}$", "$\\frac{\\pi}{10}$", "$\\frac{\\pi}{5}$", "$\\frac{\\pi}{2}$", "$\\frac{2\\pi}{3}$", "$\\pi$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-identities"],
+  grade: 10,
+  difficulty: 3,
+  type: ["graph"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 23
@@ -215,7 +391,15 @@ quizData = [
   question: "რამდენ ცალ არედ გაიყოფა მართკუთხა საკოორდინატო სიბრტყის $\\frac{\\pi}{6} \\leq x \\leq \\frac{\\pi}{3}$ პირობით განსაზღვრული ზოლი $y = \\sin x$, $y = \\tan x$ და $y = 1$ ფუნქციების გრაფიკებით?",
   options: ["$8$", "$7$", "$6$", "$5$", "$4$", "$3$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-ineq","divisibility","line-circle-eq"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 24
@@ -230,7 +414,15 @@ quizData = [
     "ნებისმიერი პარალელეპიპედისთვის"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["prism"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 25
@@ -238,6 +430,14 @@ quizData = [
   question: "$ABCDA_1B_1C_1D_1$ მართი პარალელეპიპედის ფუძის გვერდების სიგრძეებია $AB = 3$ და $AD = 5$, სიმაღლე $AA_1 = 4$. ჩამოთვლილთაგან რომლის ტოლი შეიძლება იყოს პარალელეპიპედის $A_1C$ და $B_1D$ დიაგონალებს შორის მახვილი კუთხის კოსინუსი?",
   options: ["$0{,}4$", "$0{,}5$", "$0{,}6$", "$0{,}7$", "$0{,}8$", "$0{,}9$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["combinatorics","prism","acute-trig"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];

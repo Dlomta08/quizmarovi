@@ -3,150 +3,350 @@ quizData = [
     question: "რამდენი ნამდვილი ამონახსნი აქვს \\( \\ln(x^4) - 2\\ln(-x) = 1 \\) განტოლებას?",
     options: ["$0$", "$1$", "$2$", "$3$", "$4$", "$5$"],
     correct: 1,
-    tags: ["Logarithmic Equations"]
+    tags: ["Logarithmic Equations"],
+    area: "algebra",
+    topics: ["log-eq"],
+    grade: 11,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "რამდენი მთელი ამონახსნი აქვს \\( 2^{2x} - 3 \\cdot 2^{x+1} + 5 \\leq 0 \\) უტოლობას?",
     options: ["$0$", "$1$", "$2$", "$3$", "$4$", "$5$"],
     correct: 3,
-    tags: ["Inequalities", "Exponential"]
+    tags: ["Inequalities", "Exponential"],
+    area: "algebra",
+    topics: ["exp-ineq"],
+    grade: 11,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "კონუსის გვერდითი ზედაპირის ფართობი $2$-ჯერ მეტია მისი ფუძის ფართობზე. იპოვეთ რისი ტოლია კონუსის სრული ზედაპირის ფართობი, თუ სიმაღლეა \\( 2\\sqrt{3} \\).",
     options: ["$2π$", "$4π$", "$8π$", "$12π$", "$16π$", "$20π$"],
     correct: 3,
-    tags: ["Geometry", "Surface Area"]
+    tags: ["Geometry", "Surface Area"],
+    area: "solid",
+    topics: ["volume-surface","cone"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "ბირთვში ჩახაზულია კონუსი ისე, რომ კონუსის ფუძის წრეწირი და წვერო ეხება სფეროს ზედაპირს. იპოვეთ ბირთვის მოცულობა თუ კონუსის ღერძული კვეთა ისეთი მართკუთხა სამკუთხედია, რომლის ფართობია $9$.",
     options: ["$12π$", "$21π$", "$36π$", "$24π$", "$42π$", "$72π$"],
     correct: 2,
-    tags: ["Solid Geometry"]
+    tags: ["Solid Geometry"],
+    area: "solid",
+    topics: ["cone","sphere","right-triangle"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ რისი ტოლია \\( \\sqrt{\\log_2 x} \\geq \\log_2 x \\) უტოლობის ამონახსნთა სიმრავლე.",
     options: ["$x ∈ (1; 2)$", "$x ∈ (−∞; 2)$", "$x ∈ (0; 2]$", "$x ∈ [0; 2)$", "$x ∈ [0; 2]$", "$x ∈ [1; 2]$"],
     correct: 5,
-    tags: ["Logarithmic Inequalities"]
+    tags: ["Logarithmic Inequalities"],
+    area: "algebra",
+    topics: ["log-ineq"],
+    grade: 11,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "რისი ტოლია \\( \\lim\\limits_{n \\to \\infty} {\\left(\\frac{\\log_7(7n)}{\\log_7 n}\\right)}^ {\\log_7 n} \\) , \\(n>1\\) მიმდევრობის ზღვრის მნიშვნელობა?",
     options: ["$7e$", "$e$", "$0{,}1e$", "$\\frac{1}{2}e$", "$\\frac{1}{7}e$", "$2e$"],
     correct: 1,
-    tags: ["Limits", "Logarithms"]
+    tags: ["Limits", "Logarithms"],
+    area: "calculus",
+    topics: ["seq-limit","log-ineq","func-limit"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "რამდენ განსხვავებულ წერტილში კვეთს \\( y = |\\log_3 |x|| \\) და \\( y = {3}^{|x|} \\) ფუნქციების გრაფიკები ერთმანეთს?",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 1,
-    tags: ["Graphing", "Functions"]
+    tags: ["Graphing", "Functions"],
+    area: "algebra",
+    topics: ["abs-eq","logarithms","cross-sections"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ რისი ტოლია \\( y = 3x - 4 \\) და \\( y = 2x + 5 \\) წრფეებს შორის კუთხის ტანგენსის მნიშვნელობა?",
     options: ["$\\frac{1}{7}$", "$\\frac{1}{5}$", "$\\frac{1}{3}$", "$\\frac{1}{2}$", "$\\frac{1}{4}$", "$\\frac{1}{6}$"],
     correct: 0,
-    tags: ["Trigonometry", "Lines"]
+    tags: ["Trigonometry", "Lines"],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "ცილინდრის ერთ-ერთი კვეთაა ელიფსი, რომლის მცირე ნახევარღერძია $1$. იპოვეთ რისი ტოლია ცილინდრის მოცულობა თუ მისი ღერძული კვეთა კვადრატია?",
     options: ["$2π$", "$4π$", "$8π$", "$12π$", "$16π$", "$20π$"],
     correct: 0,
-    tags: ["Solid Geometry", "Volume"]
+    tags: ["Solid Geometry", "Volume"],
+    area: "solid",
+    topics: ["volume-surface","conics","cylinder"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "მოცემულია \\( y = \\sin x \\), ფუნქცია \\( x ∈ [0; \\pi] \\)  სიმრავლეზე. იპოვეთ რისი ტოლია იმ ფიგურის ფართობი,რომელიც შემოსაზღვრულია ამ ფუნქციის გრაფიკით და აბცისათა ღერძით? ",
     options: ["$0{,}5$", "$1$", "$1{,}5$", "$2$", "$2{,}5$", "$3$"],
     correct: 3,
-    tags: ["Integration", "Area"]
+    tags: ["Integration", "Area"],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 11,
+    difficulty: 2,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "დათვალეთ \\( x^2 - y^2 = 2 \\) ჰიპერბოლის ფოკუსებს შორის მანძილი.",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 3,
-    tags: ["Conic Sections"]
+    tags: ["Conic Sections"],
+    area: "geometry",
+    topics: ["conics"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "დათვალეთ რისი ტოლია მანძილი \\(M(10; 5; 0)\\) წერტილიდან \\( 2x - 3y + 2\\sqrt{3}z + 5 = 0 \\) სიბრტყემდე.",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 1,
-    tags: ["3D Geometry"]
+    tags: ["3D Geometry"],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "რისი ტოლია \\( y^2 = -4x \\) და \\( y^2 = 8x \\) პარაბოლის დირექტრისებს შორის მანძილი?",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 2,
-    tags: ["Conic Sections"]
+    tags: ["Conic Sections"],
+    area: "geometry",
+    topics: ["conics"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "\\( y = \\frac{\\sqrt{3}}{x^2}, y = 0, x = \\sqrt[3]{\\pi}, x = \\sqrt[3]{2\\pi} \\) გრაფიკებით შემოსაზღვრული ფიგურა ბრუნავს აბცისთა ღერძის გარშემო. დათვალეთ რისი ტოლია ბრუნვით მიღებული სხეულის მოცულობა?",
     options: ["$\\frac{2}{\\sqrt[3]{3}}$", "$\\frac{2}{\\sqrt[3]{2}}$", "$\\frac{1}{\\sqrt[3]{3}}$", "$\\frac{2}{\\sqrt{3}}$", "$\\frac{1}{2}$", "$\\frac{1}{\\sqrt{2}}$"],
     correct: 4,
-    tags: ["Solids of Revolution"]
+    tags: ["Solids of Revolution"],
+    area: "calculus",
+    topics: ["definite-integral","nth-roots","function-props"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ, რისი ტოლია კუთხის კოსინუსი სივრცეში \\( 2x - 3y + 2z + 1 = 0 \\) და \\( 3x + 2y + 2z + 5 = 0 \\) განტოლებებით მოცემულ სიბრტყეებს შორის?",
     options: ["$\\frac{10}{21}$", "$\\frac{6}{19}$", "$\\frac{4}{17}$", "$\\sqrt{\\frac{6}{13}}$", "$\\frac{\\sqrt{5}}{8}$", "$\\frac{\\sqrt{7}}{23}$"],
     correct: 2,
-    tags: ["3D Geometry"]
+    tags: ["3D Geometry"],
+    area: "solid",
+    topics: ["stereo-axioms"],
+    grade: 11,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "\\( f(x) \\) ლუწი ფუნქციის მხები, რომელიც გრაფიკს ეხება წერტილში, რომლის აბსცისაა \\( x_0 \\) არის \\( y = -3x + 5 \\) წრფე. იპოვეთ იმ წრფის განტოლება, რომელიც \\(y = f(x)\\) ფუნქციის გრაფიკს ეხება ისეთ წერტილში, რომლის აბსცისაც \\(x_0\\)-ის მოპირდაპირე რიცხვია.",
     options: ["$y = -5x + 3$", "$y = -3x - 5$", "$y = 3x + 5$", "$y = -3x + 5$", "$y = 5x + 3$", "$y = -5x - 3$"],
     correct: 2,
-    tags: ["Functions"]
+    tags: ["Functions"],
+    area: "calculus",
+    topics: ["derivative","line-circle-eq","function-props"],
+    grade: 11,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question:  "\\( x = -5 \\), \\( x = 15 \\), \\( y = -6 \\) და \\( y = 10 \\) წრფეებით შემოსაზღვრულ მართკუთხედში ჩახაზულია ელიფსი ისე, რომ ელიფსი ეხება მართკუთხედის ოთხივე გვერდს. დათვალეთ ფოკუსებს შორის მანძილი?",
     options: ["$8$", "$14$", "$12$", "$16$", "$10$", "$4\\sqrt{41}$"],
     correct: 2,
-    tags: ["Conic Sections"]
+    tags: ["Conic Sections"],
+    area: "geometry",
+    topics: ["conics"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "\\( y = ax^2 + 7x + 2 \\) პარაბოლის \\( x = 3 \\) წერტილში გავლებული მხები ორდინატთა ღერძს კვეთს $(0;11)$ წერტილში. იპოვეთ \\( a \\) პარამეტრი?",
     options: ["$a = 2$", "$a = 3$", "$a = -3$", "$a = -1$", "$a = 1$", "$a = -2$"],
     correct: 3,
-    tags: ["Derivatives"]
+    tags: ["Derivatives"],
+    area: "calculus",
+    topics: ["derivative","quadratic-func","cross-sections"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "დათვალეთ იმ სხეულის მოცულობა, რომელიც შემოსაზღვრულია \\( XOY \\), \\( YOZ \\), \\( XOZ \\) სიბრტყეებით და \\( 2x + 3y + z = 6 \\) სიბრტყით?",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 5,
-    tags: ["3D Geometry"]
+    tags: ["3D Geometry"],
+    area: "algebra",
+    topics: ["function-props","volume-surface"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "გამოთვალეთ რისი ტოლია \\( \\int_{\\ln 2}^{\\ln 3} x \\cdot e^x dx \\) განსაზღვრული ინტეგრალის მნიშვნელობა?",
     options: ["$ln\\frac{27}{4e}$", "$ln\\frac{41}{5e}$", "$ln\\frac{37}{2e}$", "$ln\\frac{31}{3e}$", "$ln\\frac{15}{e}$", "$ln\\frac{33}{2e}$"],
     correct: 0,
-    tags: ["Integration"]
+    tags: ["Integration"],
+    area: "calculus",
+    topics: ["definite-integral","logarithms"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "ცნობილია, რომ \\( f(0) = 3 \\) და \\( f'(0) \\neq 0 \\). გამოთვალეთ \\( \\lim\\limits_{x \\to 0} \\frac{3 \\log_3 f(x) - 3}{(f(x))^2 - 9} \\) ზღვრის მნიშვნელობა?",
     options: ["$ln 3$", "$\\frac{1}{6ln 3}$", "$\\frac{1}{ln 3}$", "$3 ln 3$", "$3 ln 6$", "$6 ln 3$"],
     correct: 1,
-    tags: ["Limits"]
+    tags: ["Limits"],
+    area: "calculus",
+    topics: ["func-limit","derivative"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "დათვალეთ რისი ტოლია ფუნქციის \\( y = x^2 - 2|x| + 4 \\) მაქსიმალური და მინიმალური მნიშვნელობების სხვაობა თუ \\( x ∈ [-2; 3] \\)?",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 3,
-    tags: ["Piecewise Functions"]
+    tags: ["Piecewise Functions"],
+    area: "algebra",
+    topics: ["quadratic-func","max-min"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "დათვალეთ რისი ტოლია \\( y = \\log_{(x^2 + 1)}{(x^2)} \\) ფუნქციის წარმოებულის მნიშვნელობა \\( x_0 = 1 \\) წერტილში?",
     options: ["$2log_{2}{1}$", "$log_{2}{3}$", "$1$", "$2log_{2}{e}$", "$2$", "$3$"],
     correct: 3,
-    tags: ["Derivatives"]
+    tags: ["Derivatives"],
+    area: "calculus",
+    topics: ["derivative"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "პირამიდის ფუძეა კვადრატი, ხოლო მისი სიმაღლე გადის კვადრატის ერთ-ერთ წვეროზე. დათვალეთ სრული ზედაპირის ფართობი, თუ ორი განსხვავებული გვერდითი წახნაგის ფართობებია $2$ და $2{,}5$?",
     options: ["$10$", "$11$", "$12$", "$13$", "$14$", "$15$"],
     correct: 2,
-    tags: ["Geometry"]
+    tags: ["Geometry"],
+    area: "solid",
+    topics: ["pyramid","rhombus-rect-sq","volume-surface"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "სიბრტყეზე განვიხილოთ ყველა ტოლფერდა ტრაპეცია, რომელთა მახვილი კუთხეა \\( \\alpha \\) და ფართობია $10$. ამ ტრაპეციების პერიმეტრებს შორის იპოვეთ უმცირესი, თუ \\( \\sin \\alpha = \\frac{1}{5} \\)?",
     options: ["$15\\sqrt{5}$", "$12\\sqrt{6}$", "$7\\sqrt{10}$", "$11\\sqrt{7}$", "$20\\sqrt{2}$", "$10\\sqrt{3}$"],
     correct: 4,
-    tags: ["Optimization", "Trigonometry"]
+    tags: ["Optimization", "Trigonometry"],
+    area: "geometry",
+    topics: ["trapezoid","isosceles"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

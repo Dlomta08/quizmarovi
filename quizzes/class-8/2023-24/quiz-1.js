@@ -11,7 +11,15 @@ quizData = [
       "$\\frac{16}{3}a^{15}b^{21}$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -21,7 +29,15 @@ quizData = [
       "$12$", "$16$", "$15$", "$13$", "$10$", "$9$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["word-problems"],
+    grade: 8,
+    difficulty: 1,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -31,7 +47,15 @@ quizData = [
       "$265$", "$2025$", "$675$", "$1065$", "$525$", "$1275$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -41,7 +65,15 @@ quizData = [
       "$149\\text{კმ}$", "$159\\text{კმ}$", "$169\\text{კმ}$", "$179\\text{კმ}$", "$189\\text{კმ}$", "$199\\text{კმ}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -51,7 +83,15 @@ quizData = [
       "$20^\\circ$", "$30^\\circ$", "$40^\\circ$", "$45^\\circ$", "$60^\\circ$", "$70^\\circ$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["parallelogram"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -61,7 +101,15 @@ quizData = [
       "$2 < k < 14$", "$-3 < k < 12$", "$-6 < k < 15$", "$7 < k < 19$", "$8 < k < 17$", "$12 < k < 21$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -71,7 +119,15 @@ quizData = [
       "$-2$", "$-1$", "$0$", "$9$", "$-5$", "$4$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-eq","rational-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -81,7 +137,15 @@ quizData = [
       "$0$", "$1$", "$3$", "$a + b + c$", "$abc$", "$\\frac{1}{abc}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -95,7 +159,15 @@ quizData = [
       "მხოლოდ $A$", "მხოლოდ $B$", "მხოლოდ $C$", "მხოლოდ $B,C$", "მხოლოდ $A,B,C$", "ყველა"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -105,7 +177,15 @@ quizData = [
       "$24\\text{სმ}$", "$32\\text{სმ}$", "$36\\text{სმ}$", "$18\\text{სმ}$", "$22\\text{სმ}$", "შეუძლებელია"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 11
@@ -115,7 +195,15 @@ quizData = [
       "$-3$", "$-9$", "$-45$", "$6$", "$12$", "$36$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12
@@ -125,7 +213,15 @@ quizData = [
       "$26$", "$9$", "$17$", "$25$", "$23$", "$11$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["powers","linear-ineq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -135,7 +231,15 @@ quizData = [
       "$2$", "$3$", "$4$", "$2022$", "$2023$", "$2024$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -145,7 +249,15 @@ quizData = [
       "$20^\\circ$", "$30^\\circ$", "$40^\\circ$", "$45^\\circ$", "$60^\\circ$", "$70^\\circ$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15
@@ -155,7 +267,15 @@ quizData = [
       "$12$", "$6$", "$3$", "$4$", "$8$", "$24$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 16
@@ -165,7 +285,15 @@ quizData = [
       "$n > m$", "$m = \\frac{n}{5}$", "$m = 3n$", "$n - m > 5$", "$m - n < 7$", "$m + n = 11$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -175,7 +303,15 @@ quizData = [
       "$4$", "$5$", "$11$", "$14$", "$7$", "$8$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility","abs-eq","quadratic-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -185,7 +321,15 @@ quizData = [
       "$16$", "$2$", "$12$", "$10$", "$8$", "$14$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -195,7 +339,15 @@ quizData = [
       "$2$", "$6$", "$5$", "$3$", "$1$", "$4$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["midline","trapezoid","inscribed-circum"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -205,7 +357,15 @@ quizData = [
       "$6$", "$8$", "$12$", "$16$", "$18$", "$24$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 21
@@ -215,7 +375,15 @@ quizData = [
       "$8{,}55$", "$8{,}66$", "$8{,}77$", "$8{,}88$", "$8{,}99$", "$9{,}11$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -225,7 +393,15 @@ quizData = [
       "$9y - x$", "$2x + 5y$", "$3x - 4y$", "$2y - 7x$", "$5x + y$", "$y + 6x$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -235,7 +411,15 @@ quizData = [
       "$7$", "$9$", "$11$", "$-5$", "$-8$", "$15$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["nonlinear-systems","special-products","linear-systems"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24
@@ -245,7 +429,15 @@ quizData = [
       "$25^\\circ$", "$30^\\circ$", "$45^\\circ$", "$36^\\circ$", "$48^\\circ$", "$72^\\circ$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid","isosceles"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25
@@ -255,6 +447,14 @@ quizData = [
       "$1:3$", "$2:3$", "$1:2$", "$3:5$", "$1:1$", "$2:5$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -11,14 +11,30 @@ quizData = [
       "$32𝑎^5 − 160𝑎^4𝑏 + 80𝑎^3𝑏^2 + 10𝑎𝑏^4$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 2
   {
     question: "სივრცეში მოცემულია სამი წერტილი $𝐴(−1; 2; 4)$, $𝐵(2;−3; 0)$ და $𝐶(0; 0; −1)$. იპოვეთ სკალარული ნამრავლი $(\\vec{𝐴𝐵} + \\vec{𝐵𝐶}) \\cdot \\vec{𝐵𝐶}$.",
     options: ["$2$", "$-2$", "$0$", "$-3$", "$-1$", "$3$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["dot-product","vectors"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors","coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 3
   {
@@ -32,21 +48,45 @@ quizData = [
       "$𝑦 = −𝑥 + 2$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 10,
+    difficulty: 1,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 4
   {
     question: "სივრცეში მოცემულია სამი წერტილი $𝐴(−1; 2; 4)$, $𝐵(2;−3; 0)$ და $𝐶(0; 0; −1)$. იპოვეთ კუთხის კოსინუსი $\\vec{𝐵𝐴}$ და $\\vec{𝑂𝐶}$ ვექტორებს შორის. ($𝑂$ კოორდინატთა სათავეა)",
     options: ["$−0{,}4\\sqrt{3}$", "$0{,}4\\sqrt{3}$", "$−0{,}2\\sqrt{2}$", "$0{,}2\\sqrt{3}$", "$0{,}4$", "$−0{,}4\\sqrt{2}$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors","coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 5
   {
     question: "ვაგორებთ ორ სტანდარტულ კამათელს. იპოვეთ პირობითი ალბათობა იმისა, რომ მოსული ქულების ჯამი $3$-ის ჯერადია, თუ ცნობილია, რომ მოსული ქულები ერთმანეთისგან $1$-ით განსხვავდება?",
     options: ["$0{,}1$", "$0{,}2$", "$0{,}3$", "$0{,}5$", "$0{,}4$", "$0{,}6$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability","divisibility"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 6
   {
@@ -60,7 +100,15 @@ quizData = [
       "$(-17; -11; -1)$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors","coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 7
   {
@@ -74,84 +122,180 @@ quizData = [
       "$\\frac{101}{2001}$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 8
   {
     question: "მოცემულია $ABC A_1B_1C_1$ სამკუთხა პრიზმი ($𝐴𝐵𝐶$ ფუძით). ცნობილია, რომ ამ პრიზმის სიმაღლე $𝐴𝐴_1 = 2$. ასევე ცნობილია, რომ ვექტორული ნამრავლი $[\\vec{𝐴𝐵} × \\vec{𝐴𝐶}]$ ტოლია $\\vec{𝐴𝐴_1}$ ვექტორის. იპოვეთ პრიზმის მოცულობა.",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["combinatorics","prism","vectors"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 9
   {
     question: "იპოვეთ $\\sqrt{4𝑥 − 4} > 𝑥$ უტოლობის ამონახსნთა სიმრავლე.",
     options: ["$(0; 1)$", "$(−∞; 0)$", "$(−∞; 0]$", "$(0; 4)$", "$(−1; 0)$", "∅"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 10,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 10
   {
     question: "$ABCD$ ტრაპეციაში დიდი $AD$ ფუძე $2$-ჯერ მეტია სიგრძით მცირე $BC$ ფუძეზე. $M$ წერტილი $AC$ დიაგონალის შუა წერტილია, ხოლო $N$ წერტილი კი $BD$ დიაგონალის შუა წერტილი. გამოსახეთ $\\vec{MN}$ ვექტორი $\\vec{AD} = 𝑎$ ვექტორის საშუალებით.",
     options: ["$0{,}2𝑎$", "$0{,}5𝑎$", "$0{,}25𝑎$", "$−0{,}2𝑎$", "$−0{,}5𝑎$", "$−0{,}25𝑎$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid","vectors"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 11
   {
     question: "დაადგინეთ $\\frac{1}{𝑥} > \\sqrt{𝑥}$ უტოლობის ამონახსნთა სიმრავლე.",
     options: ["$(0; 1)$", "$(−∞; 0)$", "$(−∞; 0]$", "$(0; 4)$", "$(−1; 0)$", "∅"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["interval-method"],
+    grade: 10,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 12
   {
     question: "იპოვეთ სივრცეში მოცემული $\\vec{v} = 2\\vec{i} − 3\\vec{j} + \\vec{k}$ ვექტორის სიგრძე, თუ $\\vec{i}, \\vec{j}$ და $\\vec{k}$ ვექტორები შესაბამისად $OX$, $OY$ და $OZ$ ღერძების მიმმართველი ერთეულოვანი ვექტორებია.",
     options: ["$\\sqrt{10}$", "$\\sqrt{8}$", "$\\sqrt{14}$", "$\\sqrt{13}$", "$\\sqrt{15}$", "$2\\sqrt{3}$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 13
   {
     question: "ცნობილია, რომ $x \\in [0; 5]$, $y \\in [0; 5]$. ასევე ვიცით, რომ $x + y \\in [3; 7]$. იპოვეთ $2x + 4y$ გამოსახულების მაქსიმალური შესაძლო მნიშვნელობა.",
     options: ["$30$", "$12$", "$10$", "$18$", "$20$", "$24$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["max-min"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 14
   {
     question: "$\\vec{a}$ და $\\vec{b}$ ურთიერთმართობული ვექტორებია. თითოეულის სიგრძე ერთის ტოლია. იპოვეთ $2\\vec{a} + \\vec{b}$ და $\\vec{b} − \\vec{a}$ ვექტორებს შორის კუთხის კოსინუსი.",
     options: ["$0{,}2\\sqrt{5}$", "$−0{,}2\\sqrt{5}$", "$0{,}2\\sqrt{3}$", "$−0{,}2\\sqrt{3}$", "$−0{,}1\\sqrt{10}$", "$0{,}2\\sqrt{10}$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 15
   {
     question: "რამდენი განსხვავებული გზითაა შესაძლებელი ერთ მწკრივში ჩამოწერილი $6$ სიმბოლოს გადანაცვლებით განსხვავებული წყობების მიღება, თუ ეს სიმბოლოებია: $A; A; B; B; B; C$. (ერთნაირი სიმბოლოების ერთმანეთთან გადანაცვლება არ გვაძლევს ახალ წყობას)",
     options: ["$60$", "$120$", "$360$", "$240$", "$600$", "$720$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["combinatorics"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 16
   {
     question: "$y = −2x + 6$ ფუნქციის გრაფიკი მოაბრუნეს საათის ისრის მოძრაობის მიმართულებით $(3; 0)$ წერტილის ირგვლივ $45^{\\circ}$-იანი კუთხით. რომელი ფუნქციის გრაფიკი მიიღება?",
     options: ["$y = 2x − 8$", "$y = x − 1$", "$y = 4x − 10$", "$y = 3x − 9$", "$y = 4x − 16$", "$y = 4x − 12$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 10,
+    difficulty: 2,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 17
   {
     question: "რამდენი ოთხნიშნა რიცხვი შედგება მხოლოდ კენტი ციფრებით, თუ ცნობილია, რომ რიცხვში ციფრები არა კლებადობითაა დალაგებული. (ნებისმიერი მომდევნო ციფრი წინაზე არა ნაკლებია).",
     options: ["$100$", "$45$", "$60$", "$105$", "$55$", "$70$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 18
   {
     question: "რამდენი ამონახსნი აქვს $[−10; 10]$ სიმრავლეში $\\sqrt{\\cos x} = \\sqrt{2} \\cdot \\cos x$ განტოლებას?",
     options: ["$2$", "$4$", "$6$", "$8$", "$10$", "$12$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 19
   {
@@ -165,14 +309,30 @@ quizData = [
       "$\\frac{12}{24}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability","divisibility"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 20
   {
     question: "გამოთვალეთ $C_{10}^{0} − 2 \\cdot C_{10}^{1} + 4 \\cdot C_{10}^{2} − 8 \\cdot C_{10}^{3} + \\cdots + 2^{10} \\cdot C_{10}^{10}$ გამოსახულების მნიშვნელობა.",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["combinatorics","powers"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 21
   {
@@ -186,7 +346,15 @@ quizData = [
       "$\\frac{6}{7}$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 22
   {
@@ -200,27 +368,59 @@ quizData = [
       "$y = −1{,}5x^2$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["similar-figures","quadratic-func"],
+    grade: 10,
+    difficulty: 3,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 23
   {
     question: "რამდენი ამონახსნი აქვს $\\sqrt{4 − x^2} \\cdot (2x^2 + 4x + 1) \\cdot \\sin(2x) = 0$ განტოლებას?",
     options: ["$3$", "$5$", "$7$", "$9$", "$11$", "$13$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["trig-eq"],
+    grade: 10,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 24
   {
     question: "ტოლფერდა სამკუთხედის სიმაღლეა $4$, ხოლო მისი ფუძეა $6$. სიმაღლის შუა წერტილზე და ფუძის ერთ-ერთ წვეროზე გავლებული წრფე რა შეფარდებით გადაკვეთს სამკუთხედის ფერდს ფუძის მხრიდან?",
     options: ["$1:3$", "$2:3$", "$2:5$", "$7:3$", "$5:2$", "$2:1$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 25
   {
     question: "სივრცეში მოცემულია ორი წერტილი $A(\\sqrt{x}; 0; 5)$ და $B(0; \\frac{2}{\\sqrt{x}}; 5)$. მინიმუმ რა მანძილი შეიძლება იყოს ამ ორ წერტილს შორის?",
     options: ["$2$", "$4$", "$6$", "$8$", "$10$", "$12$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

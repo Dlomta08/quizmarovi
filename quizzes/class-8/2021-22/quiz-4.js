@@ -4,21 +4,45 @@ quizData = [
   question: "ქვემოთ ჩამოთვლილი წერტილებიდან რომელი მდებარეობს $y = x^2$ ფუნქციის გრაფიკზე?",
   options: ["$(1; 2)$", "$(3; \\sqrt{3})$", "$(\\sqrt{3} − 1; 4 − 2\\sqrt{3})$", "$(\\sqrt{2} + \\sqrt{3}; 5)$", "$(\\sqrt{2} − 1; \\sqrt{8} − 3)$", "$(-2; \\sqrt{2})$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 8,
+  difficulty: 1,
+  type: ["graph"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 2
 {
   question: "ქვემოთ ჩამოთვლილი წრფეებიდან რომელი გადაკვეთს $y = x^2$ ფუნქციის გრაფიკს?",
   options: ["$y = -x - 1$", "$y = -x - 3$", "$y = -2x - 5$", "$y = x + 6$", "$y = x - 9$", "$y = x - 199$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-func"],
+  grade: 8,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 3
 {
   question: "$y = x^2$ განტოლებით მოცემულ პარაბოლაზე აღებულია $A$ და $B$ წერტილი, რომელთა აბცისების ჯამია $6$, ხოლო ორდინატების ჯამია $26$. იპოვეთ $A$ და $B$ წერტილების ორდინატებს შორის განსხვავება.",
   options: ["$24$", "$25$", "$32$", "$26$", "$62$", "$31$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 8,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 4
 {
@@ -28,7 +52,15 @@ II. მოცემული გვაქვს სამკუთხედი�
 III. მოცემული გვაქვს სამკუთხედის ერთი გვერდის სიგრძე და ამ გვერდთან მდებარე ორი კუთხე;`,
   options: ["არცერთი", "მხოლოდ I", "მხოლოდ II", "მხოლოდ III", "მხოლოდ II და III", "სამივე"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["constructions"],
+  grade: 8,
+  difficulty: 1,
+  type: ["construction"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 5
 {
@@ -38,21 +70,45 @@ III. მოცემული გვაქვს სამკუთხედი�
   III. \\( \\sqrt{a^2 + b^2} \\);`,
   options: ["არცერთი", "მხოლოდ I", "მხოლოდ II", "მხოლოდ III", "მხოლოდ II და III", "სამივე"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["constructions"],
+  grade: 8,
+  difficulty: 1,
+  type: ["construction"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 6
 {
   question: "იპოვეთ $|x − 3| = 11$ განტოლების ამონახსნთა ჯამი.",
   options: ["$6$", "$11$", "$22$", "$3$", "$5{,}5$", "$12$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["abs-eq"],
+  grade: 8,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 7
 {
   question: "ვთქვათ $x_1$ და $x_2$ არის $x^2 − 2x − 13 = 0$ განტოლების ფესვები. იპოვეთ $x_1^2 + x_2^2$.",
   options: ["$6$", "$12$", "$20$", "$30$", "$42$", "$56$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["vieta","quadratic-eq"],
+  grade: 8,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 8
 { 
@@ -61,21 +117,45 @@ III. მოცემული გვაქვს სამკუთხედი�
   question: "$2$, $3$, $4$ და $5$ სიგრძის მონაკვეთებით შეადგინეს ყველა შესაძლო სამკუთხედი. რამდენი იქნება მათ შორის სხვადასხვაგვერდა ბლაგვკუთხა?",
   options: ["არცერთი", "ერთი", "ორი", "სამი", "ოთხი", "ყველა წინა პასუხი მცდარია"],
   correct: [2,3],
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: [],
+  grade: 8,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 9
 {
   question: "ქვემოთჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს $a$, რომ სამკუთხედი, რომლის გვერდების სიგრძეებია $6$, $10$ და $a$ იყოს მახვილკუთხა?",
   options: ["$5$", "$6$", "$7$", "$11$", "$12$", "$13$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: [],
+  grade: 8,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 10
 {
   question: "ქვემოთ მოცემული მრავალწევრებიდან რომელი იყოფა $(x − 2)$-ზე?",
   options: ["$x^2 + 2x$", "$x^3 + x + 4$", "$x^4 − 3x^3 + 4$", "$x^3 − 8x$", "$(x − 2)^{199} − 3(x − 2)^{13} + (x + 2)^3$", "$x^4 − 8x$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["divisibility","polynomials"],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 11
 {
@@ -89,105 +169,225 @@ III. მოცემული გვაქვს სამკუთხედი�
     "ყველა წინა პასუხი მცდარია"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 12
 {
   question: "იპოვეთ $p + q$, თუ ნებისმიერი $x$-თვის სრულდება $(x - 5)(x - p) = (x + 3)(x + q)$ ტოლობა.",
   options: ["$-12$", "$-10$", "$-8$", "$6$", "$8$", "$14$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 13
 {
   question: "იპოვეთ $ABC$ სამკუთხედში $\\angle B$ კუთხის კოსინუსი , თუ ამ სამკუთხედში $CM$ მედიანაა და სრულდება $\\frac{CA}{6} = \\frac{CB}{8} = \\frac{CM}{5}$ პირობა.",
   options: ["$\\frac{2}{3}$", "$\\frac{1}{3}$", "$\\frac{4}{5}$", "$\\frac{2\\sqrt{2}}{5}$", "$\\frac{2}{5}$", "$\\frac{1}{5}$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["cevians"],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 14
 {
   question: "საკოორდინატო სიბრტყეზე მოცემულია სამი წერტილი $A(3; 0)$, $B(5; 0)$ და $C(5; 4)$. იპოვეთ $BAC$ კუთხის კოსინუსი.",
   options: ["$\\frac{1}{\\sqrt{2}}$", "$\\frac{1}{\\sqrt{3}}$", "$\\frac{1}{\\sqrt{5}}$", "$\\frac{1}{\\sqrt{6}}$", "$\\frac{1}{\\sqrt{7}}$", "$\\frac{1}{\\sqrt{8}}$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 8,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 15
 {
   question: "ქვემოთჩამოთვლილთაგან $a$ პარამეტრის რომელი მნიშვნელობისთვის აქვს $x^2 + ax − 2 = 0$ განტოლებას მთელი ფესვები?",
   options: ["$6$", "$5$", "$4$", "$3$", "$2$", "$1$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-eq"],
+  grade: 8,
+  difficulty: 2,
+  type: ["solve"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 16
 {
   question: "იპოვეთ $a$ პარამეტრის მნიშვნელობა,რომლისთვისაც $x^2 - 3x + a = 0$ განტოლების $x_1$ და $x_2$ ფესვები აკმაყოფილებენ $x_1x_2 + 3x_1 + 3x_2 = 5$ პირობას.",
   options: ["$3$", "$2$", "$11$", "$0$", "$-1$", "$-4$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["vieta","quadratic-eq"],
+  grade: 8,
+  difficulty: 2,
+  type: ["solve"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 17
 {
   question: "იპოვეთ $x^2 + x + \\frac{1}{x} + \\frac{1}{x^2} = 4$ განტოლების ფესვთა ნამრავლი.",
   options: ["$3$", "$2$", "$1$", "$0$", "$-1$", "$-2$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-eq","rational-eq"],
+  grade: 8,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 18
 {
   question: "პარალელოგრამის მცირე დიაგონალი მცირე გვერდზე $\\sqrt{2}$-ჯერ დიდია. რას უდრის დიდი დიაგონალის სიგრძის შეფარდება დიდი გვერდის სიგრძესთან?",
   options: ["$1$", "$\\sqrt{2}$", "$\\sqrt{3}$", "$2$", "$\\sqrt{6}$", "$\\sqrt{8}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["parallelogram"],
+  grade: 8,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 19
 { 
   question: "სხვადასხვაგვერდა $ABC$ სამკუთხედის $AC$ გვერდზე აღებულია $L$ წერტილი ისე, რომ სრულდება $BL^2 = AB \\cdot BC - AL \\cdot LC$ ტოლობა. ქვემოთ ჩამოთვლილი პირობებიდან რომელი არის აუცილებლად მართალი? I. $BL$ სამკუთხედის მედიანაა; II. $BL$ სამკუთხედის ბისექტრისაა; III. $BL$ სამკუთხედის სიმაღლეა;",
   options: ["არცერთი", "მხოლოდ I", "მხოლოდ II", "მხოლოდ III", "მხოლოდ I და III", "სამივე"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["cevians"],
+  grade: 8,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 20
 {
   question: "ქალაქიდან სოფლამდე მანძილი $120$კმ-ია. ველოსიპედისტმა გზის პირველი ნახევარი მუდმივი სიჩქარით გაიარა, ხოლო მეორე ნახევარზე სიჩქარე შეამცირა $3$კმ/სთ-ით და მთელ გზაზე $9$სთ დახარჯა. იპოვეთ ველოსიპედისტის სიჩქარე გზის პირველ ნახევარზე.",
   options: ["$18$კმ/სთ", "$15$კმ/სთ", "$16$კმ/სთ", "$15{,}2$კმ/სთ", "$14{,}2$კმ/სთ", "$14$კმ/სთ"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["word-problems"],
+  grade: 8,
+  difficulty: 3,
+  type: ["word"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 21
 {
   question: "წრფეზე აღებულია $A$, $B$, $C$ წერტილები ამ თანმიმდევრობით. ცნობილია, რომ $BC = 1$ და $\\frac{AB}{BC} = \\frac{BC}{AC}$. იპოვეთ $AB$.",
   options: ["$\\frac{\\sqrt{5}}{2}$", "$\\frac{\\sqrt{2} - 1}{2}$", "$\\frac{\\sqrt{3} - 1}{2}$", "$\\frac{1}{2}$", "$\\frac{\\sqrt{5} - 1}{2}$", "$\\frac{\\sqrt{6} - 1}{2}$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 8,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 22
 {
   question: "რამდენი ამონახსნი აქვს $x^2 - 4x + 4 = |x - 2|$ განტოლებას?",
   options: ["ექვსი", "ხუთი", "სამი", "ორი", "ერთი", "არც ერთი"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-eq"],
+  grade: 8,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 23
 {
   question: "სამკუთხედის გვერდებია $6$, $10$, და $8$. იპოვეთ შემოხაზული წრეწირის დიამეტრი.",
   options: ["$6$", "$8$", "$16$", "$10$", "$18$", "$9$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["inscribed-circum"],
+  grade: 8,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 24
 {
   question: "სამკუთხედში ერთი წვეროდან გავლებული სიმაღლე $1$-ის ტოლია და დანარჩენ ორ წვეროსთან მდებარე კუთხეები კი უდრის $30^\\circ$-სა და $45^\\circ$-ს. იპოვეთ ამ სამკუთხედზე შემოხაზული წრეწირის რადიუსი.",
   options: ["$\\sqrt{2}$", "$\\sqrt{3}$", "$1$", "$\\frac{1}{\\sqrt{2}} + 1$", "$\\frac{1}{\\sqrt{3}} + 1$", "$\\frac{1}{\\sqrt{2}} + \\frac{1}{\\sqrt{3}}$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["inscribed-circum"],
+  grade: 8,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 25
 {
   question: "ვთქვათ $m^2 - 8m - 7 = 0$. იპოვეთ $\\frac{m^2 + 2m - 1}{m^2 - 3m - 4}$ გამოსახულების მნიშნველობა.",
   options: ["$-3$", "$-2$", "$-1$", "$0$", "$1$", "$2$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 8,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];
 

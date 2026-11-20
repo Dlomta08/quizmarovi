@@ -4,28 +4,60 @@ quizData = [
     question: "$3^\\sqrt{x} < 3^{x - 2}$ უტოლობის ამონახსნთა სიმრავლეა:",
     options: ["$(−\\infty; 1)$", "$(2; +\\infty)$", "$[0; 4)$", "$[3; +\\infty)$", "$(4; +\\infty)$", "$[0; 1) \\cup (4; +\\infty)$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["exp-ineq"],
+    grade: 11,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 2
   {
     question: "წესიერი ექვსკუთხა პირამიდის ფუძის გვერდის სიგრძეა $2$, ხოლო გვერდითი წიბოს სიგრძეა $3$. იპოვეთ პირამიდის მოცულობა.",
     options: ["$2\\sqrt{15}$", "$3\\sqrt{5}$", "$\\sqrt{30}$", "$\\frac{4\\sqrt{10}}{3}$", "$6\\sqrt{5}$", "$2\\sqrt{30}$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","volume-surface"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 3
   {
     question: "თუ $\\log_{3x}{4} = \\log_{2x}{8}$ განტოლების ამონახსნია $\\frac{a}{b}$, სადაც $a$ და $b$ ურთიერთმარტივი ნატურალური რიცხვებია. ქვემოთჩამოთვლილთაგან, რისი ტოლია $a + b$?",
     options: ["$5$", "$13$", "$17$", "$31$", "$35$", "$39$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["log-eq"],
+    grade: 11,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 4
   {
     question: "$(\\sqrt{5} − 2)^{x−2} > (\\sqrt{5} + 2)^{1−2x}$ უტოლობის ამონახსნთა სიმრავლეა:",
     options: ["$(−\\infty; −1)$", "$(−1; +\\infty)$", "$(−\\infty; 1)$", "$(−1; 1)$", "$(1; +\\infty)$", "∅"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["exp-ineq"],
+    grade: 11,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 5
   {
@@ -39,28 +71,60 @@ quizData = [
       "$24\\sqrt{7}$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["parallelogram","pyramid","volume-surface"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 6
   {
     question: "ცილინდრის ღერძის პარალელური კვეთის ფართობი $3$-ჯერ ნაკლებია ცილინდრის ღერძული კვეთის ფართობზე. რამდენი სანტიმეტრია მანძილი ცილინდრის ღერძიდან ამ კვეთამდე, თუ ცილინდრის სიმაღლის სიგრძეა $\\frac{1}{\\pi}$ სმ. ცილინდრის მოცულობაა $9$ სმ³?",
     options: ["$1$", "$3$", "$2$", "$2\\sqrt{2}$", "$\\pi$", "$2\\sqrt{3}$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["cylinder","cross-sections","volume-surface"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 7
   {
     question: "იპოვეთ $f(x) = \\frac{12}{1 + \\lg(100 + x^2)} - 2$ ფუნქციის მნიშვნელობათა სიმრავლე.",
     options: ["$(−2; ∞)$", "$(−∞; 2]$", "$(−2; 2)$", "$[2; 3)$", "$(−2; 2]$", "$(−2; 6)$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-basics","logarithms"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 8
   {
     question: "$\\lg(a^3b^7)$, $\\lg(a^5b^{12})$ და $\\lg(a^8b^{15})$ არამუდმივი არითმეტიკული პროგრესიის პირველი სამი წევრია. ამ პროგრესიის მე-$12$ წევრია $\\lg(b^n)$. რისი ტოლია $n$?",
     options: ["$40$", "$56$", "$76$", "$112$", "$143$", "$199$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["arithmetic-prog"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 9
   {
@@ -74,14 +138,30 @@ quizData = [
       "ოთხივე მეოთხედში"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["log-ineq","line-circle-eq"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 10
   {
     question: "იპოვეთ საკოორდინატო სიბრტყეზე $|\\log_3(y − x)| + 1 > 0$, $|\\log_3(10 − x − y)| + 2 > 0$, $(\\log_{0{,}3} x)^2 ≥ 0$ უტოლობების ამონახსნებით მიღებული ფიგურის ფართობი.",
     options: ["$20$", "$25$", "$5$", "$36$", "$40$", "$32$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["log-ineq","line-circle-eq"],
+    grade: 11,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 11
   {
@@ -95,21 +175,45 @@ quizData = [
       "შეუძლებელია დადგენა"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["cone","sphere","volume-surface"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 12
   {
     question: "კონუსის წვეროდან ორ მსახველზე ფუძისადმი $45^{\\circ}$-იანი კუთხით გავლებულია სიბრტყე, რომელიც კვეთს ფუძის წრეწირის მეოთხედს. კონუსის სიმაღლეა $6$. იპოვეთ კონუსის მოცულობა.",
     options: ["$24\\pi$", "$120\\pi$", "$72\\pi$", "$144\\pi$", "$96\\pi$", "$48\\pi$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["cone","cross-sections","volume-surface"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 13
   {
     question: "ქვემოთჩამოთვლილთაგან, რისი ტოლი შეიძლება იყოს $k$, რომ $4^x - k \\cdot 2^x \\leq 0$ უტოლობის ამონახსნთა სიმრავლეში იყოს რიცხვი $1$?",
     options: ["$-2{,}2$", "$-1{,}8$", "$-0{,}3$", "$0{,}4$", "$1{,}8$", "$2{,}1$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["exp-ineq"],
+    grade: 11,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 14
   {
@@ -123,35 +227,75 @@ quizData = [
       "$C, B, A$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["numeric-ineq"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 15
   {
     question: "$f(x) = \\log_{0{,}5}\\left(\\log_4\\left(\\log_{\\frac{1}{4}}(\\log_{16} x)\\right)\\right)$ ფუნქციის განსაზღვრის არეა ინტერვალი, რომლის სიგრძეა:",
     options: ["$1$", "$1{,}25$", "$1{,}5$", "$2$", "$2{,}5$", "$3$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-basics","logarithms"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 16
   {
     question: "წესიერ ოთხკუთხა პირამიდაზე შემოხაზულ და მასში ჩახაზულ სფეროებს საერთო ცენტრი აქვთ. ქვემოთჩამოთვლილთაგან, რისი ტოლი შეიძლება იყოს ამ სფეროების რადიუსების შეფარდება?",
     options: ["$\\sqrt{2}$", "$2$", "$3$", "$4$", "$\\sqrt{2} - 1$", "$\\sqrt{3} - 1$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","sphere"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 17
   {
     question: "ცნობილია, რომ $\\lg(x + y) = z$, $\\lg(x^2 + y^2) = z + 1$. ნებისმიერი ასეთი $x, y, z$ რიცხვებისთვის არსებობს $a$ და $b$, რომ ჭეშმარიტია ტოლობა: $x^3 + y^3 = a \\cdot 10^{3z} + b \\cdot 10^{2z}$. რისი ტოლია $a + b$?",
     options: ["$7{,}5$", "$14{,}5$", "$15$", "$19{,}5$", "$24$", "$26{,}5$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["line-circle-eq","logarithms"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 18
   {
     question: "რამდენი მთელი ამონახსნი აქვს $\\lg(x - 40) + \\lg(60 - x) < 2$ უტოლობას?",
     options: ["$10$", "$11$", "$18$", "$20$", "$21$", "უამრავი"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["log-ineq"],
+    grade: 11,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 19
   {
@@ -165,35 +309,75 @@ quizData = [
       "∅"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["log-eq","abs-eq","function-basics"],
+    grade: 11,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 20
   {
     question: "მართკუთხა პარალელეპიპედზე შემოხაზულია სფერო (ყველა წვერო ამ სფეროზეა). პარალელეპიპედის თორმეტივე წიბოს სიგრძეების ჯამია $112$ სმ. პარალელეპიპედის სრული ზედაპირის ფართობია $384\\ \\text{სმ}^2$. რამდენი სანტიმეტრია სფეროს რადიუსი?",
     options: ["$8$", "$10$", "$12$", "$14$", "$16$", "$18$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["prism","sphere","volume-surface"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 21
   {
     question: "მოცემულია: $a \\geq 2$, $b \\geq 1$, $c \\geq 0$ მთელი რიცხვებია და $\\log_a b = c$, ხოლო $a + b + c = 2025$. ქვემოთჩამოთვლილთაგან, რისი ტოლი შეიძლება იყოს $2a + b + c$?",
     options: ["$3037$", "$2026$", "$4048$", "$4050$", "$2700$", "$2701$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["log-ineq"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 22
   {
     question: "სამკუთხა პირამიდის ყველა გვერდითი წიბო $3$-ის ტოლია. ამ წიბოებს შორის კუთხეებია $90^{\\circ}$, $90^{\\circ}$ და $60^{\\circ}$ შესაბამისად. იპოვეთ პირამიდის მოცულობა.",
     options: ["$3\\sqrt{3}$", "$2{,}25\\sqrt{3}$", "$1{,}5\\sqrt{3}$", "$4{,}5$", "$4\\sqrt{3}$", "$3\\sqrt{6}$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","volume-surface"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 23
   {
     question: "განსხვავებულ მთელ $x, y, z, t$ რიცხვთა რამდენი ოთხეული არსებობს, რომელთათვისაც $x\\lg 2 + y\\lg 3 + z\\lg 5 + t\\lg 7 = 2024$?",
     options: ["არცერთი", "$2$", "$3$", "$4$", "$5$", "უამრავი"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["logarithms"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 24
   {
@@ -207,13 +391,29 @@ quizData = [
       "მხოლოდ II და III"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["log-ineq"],
+    grade: 11,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 25
   {
     question: "$DABC$ წესიერი ტეტრაედრის (ექვისვე წიბო ტოლია) წიბოს სიგრძეა $\\log_{199} a$. ამ ტეტრაედრზე შემოხაზული სფეროს რადიუსია $\\log_{199} b$. იპოვეთ $(\\log_a b)^2$",
     options: ["$\\frac{1}{3}$", "$\\frac{5}{6}$", "$\\frac{3}{8}$", "$\\frac{101}{199}$", "$\\frac{2}{3}$", "$\\frac{7}{12}$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["pyramid","sphere","logarithms"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

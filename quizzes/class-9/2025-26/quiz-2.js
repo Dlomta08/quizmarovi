@@ -5,7 +5,15 @@ quizData = [
     options: ["$10002$", "$9998$", "$10198$", "$9900$", "$9898$", "დადგენა შეუძლებელია"],
     correct: 3,
     tags: [],
-    solution: "ფიქსირებული ჯამის დროს ნამრავლი უდიდესია, როცა რიცხვები ერთმანეთთან რაც შეიძლება ახლოსაა: $199 = 99 + 100$.<br><br>$99 \\cdot 100 = 9900$ (მართლაც, $x(199 - x)$ პარაბოლის წვერო $x = 99{,}5$-ზეა).<br><br><strong>პასუხი:</strong> დ) $9900$."
+    solution: "ფიქსირებული ჯამის დროს ნამრავლი უდიდესია, როცა რიცხვები ერთმანეთთან რაც შეიძლება ახლოსაა: $199 = 99 + 100$.<br><br>$99 \\cdot 100 = 9900$ (მართლაც, $x(199 - x)$ პარაბოლის წვერო $x = 99{,}5$-ზეა).<br><br><strong>პასუხი:</strong> დ) $9900$.",
+    area: "algebra",
+    topics: ["max-min"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -14,7 +22,15 @@ quizData = [
     options: ["$9$", "$11$", "$3$", "$10$", "$-1$", "$8$"],
     correct: 0,
     tags: [],
-    solution: "$f(x) = x^2 + 2x + 10 = (x + 1)^2 + 9 \\ge 9$.<br><br><strong>პასუხი:</strong> ა) $9$."
+    solution: "$f(x) = x^2 + 2x + 10 = (x + 1)^2 + 9 \\ge 9$.<br><br><strong>პასუხი:</strong> ა) $9$.",
+    area: "algebra",
+    topics: ["quadratic-func"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["full-square"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -23,7 +39,15 @@ quizData = [
     options: ["$y = 1$", "$x = 2$", "$y = -x$", "$x = -1$", "$y = 2$", "ასეთი წრფე არ არსებობს"],
     correct: 3,
     tags: [],
-    solution: "$Oy$ ღერძის პარალელური წრფეებია $x = c$. ფუნქცია განსაზღვრული არ არის, როცა $x + 1 = 0$, ამიტომ გრაფიკი არ კვეთს $x = -1$ წრფეს (ვერტიკალური ასიმპტოტი).<br><br><strong>პასუხი:</strong> დ) $x = -1$."
+    solution: "$Oy$ ღერძის პარალელური წრფეებია $x = c$. ფუნქცია განსაზღვრული არ არის, როცა $x + 1 = 0$, ამიტომ გრაფიკი არ კვეთს $x = -1$ წრფეს (ვერტიკალური ასიმპტოტი).<br><br><strong>პასუხი:</strong> დ) $x = -1$.",
+    area: "algebra",
+    topics: ["function-basics","graph-transform"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -32,7 +56,15 @@ quizData = [
     options: ["$2$", "$\\dfrac{2\\sqrt{3}}{3}$", "$\\dfrac{\\pi}{\\sqrt{3}}$", "$1{,}5$", "$\\sqrt{3}$", "$0{,}5\\sqrt{3}$"],
     correct: 1,
     tags: [],
-    solution: "წესიერი ექვსკუთხედის გვერდი $a$: $R = a$, $r = \\dfrac{a\\sqrt{3}}{2}$. წრეწირების სიგრძეების შეფარდება: $\\dfrac{R}{r} = \\dfrac{2}{\\sqrt{3}} = \\dfrac{2\\sqrt{3}}{3}$.<br><br><strong>პასუხი:</strong> ბ) $\\dfrac{2\\sqrt{3}}{3}$."
+    solution: "წესიერი ექვსკუთხედის გვერდი $a$: $R = a$, $r = \\dfrac{a\\sqrt{3}}{2}$. წრეწირების სიგრძეების შეფარდება: $\\dfrac{R}{r} = \\dfrac{2}{\\sqrt{3}} = \\dfrac{2\\sqrt{3}}{3}$.<br><br><strong>პასუხი:</strong> ბ) $\\dfrac{2\\sqrt{3}}{3}$.",
+    area: "geometry",
+    topics: ["regular-polygon"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -41,7 +73,15 @@ quizData = [
     options: ["$3\\pi$", "$2\\sqrt{3}\\pi$", "$2\\pi$", "$\\sqrt{3}\\pi$", "$1{,}5\\pi$", "$0{,}5\\sqrt{3}\\pi$"],
     correct: 2,
     tags: [],
-    solution: "$\\dfrac{\\sqrt{3}}{4}a^2 = 6\\sqrt{3}$, $a^2 = 24$. ჩახაზული წრის რადიუსი $r = \\dfrac{a}{2\\sqrt{3}}$, $r^2 = \\dfrac{a^2}{12} = 2$.<br><br>ფართობი: $\\pi r^2 = 2\\pi$.<br><br><strong>პასუხი:</strong> გ) $2\\pi$."
+    solution: "$\\dfrac{\\sqrt{3}}{4}a^2 = 6\\sqrt{3}$, $a^2 = 24$. ჩახაზული წრის რადიუსი $r = \\dfrac{a}{2\\sqrt{3}}$, $r^2 = \\dfrac{a^2}{12} = 2$.<br><br>ფართობი: $\\pi r^2 = 2\\pi$.<br><br><strong>პასუხი:</strong> გ) $2\\pi$.",
+    area: "geometry",
+    topics: ["inscribed-circum","circle-length-area"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -50,7 +90,15 @@ quizData = [
     options: ["$-1$", "$5$", "$-2$", "$-6$", "$0$", "$-4$"],
     correct: 3,
     tags: [],
-    solution: "$x^2 - 6x + 10 = (x - 3)^2 + 1 \\ge 1$, ამიტომ $y = -\\left((x - 3)^2 + 1\\right) - 5 \\le -6$; ტოლობა $x = 3$-ზე.<br><br><strong>პასუხი:</strong> დ) $-6$."
+    solution: "$x^2 - 6x + 10 = (x - 3)^2 + 1 \\ge 1$, ამიტომ $y = -\\left((x - 3)^2 + 1\\right) - 5 \\le -6$; ტოლობა $x = 3$-ზე.<br><br><strong>პასუხი:</strong> დ) $-6$.",
+    area: "algebra",
+    topics: ["quadratic-func","max-min"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["absolute","full-square"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -59,7 +107,15 @@ quizData = [
     options: ["$(0{,}5;\\ 0{,}5)$", "$(2;\\ 1)$", "$(0{,}5;\\ -1)$", "$(2;\\ 0{,}5)$", "$(0{,}5;\\ 1{,}5)$", "$(-0{,}5;\\ 0{,}5)$"],
     correct: 0,
     tags: [],
-    solution: "$y = \\dfrac{x + 1}{2x - 1} = \\dfrac{1}{2} + \\dfrac{3/2}{2x - 1} = \\dfrac{1}{2} + \\dfrac{3/4}{x - \\frac{1}{2}}$.<br><br>ეს არის $y = \\dfrac{k}{x}$ ჰიპერბოლა, გადატანილი $\\left(\\dfrac{1}{2};\\ \\dfrac{1}{2}\\right)$ ვექტორით; სიმეტრიის ცენტრია $\\left(\\dfrac{1}{2};\\ \\dfrac{1}{2}\\right)$.<br><br><strong>პასუხი:</strong> ა) $(0{,}5;\\ 0{,}5)$."
+    solution: "$y = \\dfrac{x + 1}{2x - 1} = \\dfrac{1}{2} + \\dfrac{3/2}{2x - 1} = \\dfrac{1}{2} + \\dfrac{3/4}{x - \\frac{1}{2}}$.<br><br>ეს არის $y = \\dfrac{k}{x}$ ჰიპერბოლა, გადატანილი $\\left(\\dfrac{1}{2};\\ \\dfrac{1}{2}\\right)$ ვექტორით; სიმეტრიის ცენტრია $\\left(\\dfrac{1}{2};\\ \\dfrac{1}{2}\\right)$.<br><br><strong>პასუხი:</strong> ა) $(0{,}5;\\ 0{,}5)$.",
+    area: "algebra",
+    topics: ["graph-transform"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -68,7 +124,15 @@ quizData = [
     options: ["$a = -1$", "$a = 3$", "$a = 0$", "$a = 1$", "$a = -3$", "ასეთი $a$ არ არსებობს"],
     correct: 3,
     tags: [],
-    solution: "ფესვები მოდულით ტოლია და ნიშნით განსხვავებული, ამიტომ მათი ჯამი $0$-ია: $a^2 - 1 = 0$, $a = \\pm 1$. ფესვები ნამდვილი უნდა იყოს, ე.ი. ნამრავლი უარყოფითი: $a^2 - 3a < 0$.<br><br>$a = 1$: $1 - 3 = -2 < 0$ ✓ ($x^2 - 2 = 0$, $x = \\pm\\sqrt{2}$).<br>$a = -1$: $1 + 3 = 4 > 0$ — $x^2 + 4 = 0$ ფესვები არ აქვს.<br><br><strong>პასუხი:</strong> დ) $a = 1$."
+    solution: "ფესვები მოდულით ტოლია და ნიშნით განსხვავებული, ამიტომ მათი ჯამი $0$-ია: $a^2 - 1 = 0$, $a = \\pm 1$. ფესვები ნამდვილი უნდა იყოს, ე.ი. ნამრავლი უარყოფითი: $a^2 - 3a < 0$.<br><br>$a = 1$: $1 - 3 = -2 < 0$ ✓ ($x^2 - 2 = 0$, $x = \\pm\\sqrt{2}$).<br>$a = -1$: $1 + 3 = 4 > 0$ — $x^2 + 4 = 0$ ფესვები არ აქვს.<br><br><strong>პასუხი:</strong> დ) $a = 1$.",
+    area: "algebra",
+    topics: ["vieta"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -77,7 +141,15 @@ quizData = [
     options: ["$1 : 4$", "$2 : 5$", "$1 : 3$", "$3 : 5$", "$2 : 3$", "$1 : 5$"],
     correct: 1,
     tags: [],
-    solution: "ტრაპეციის დიაგონალები ქმნის ოთხ სამკუთხედს: ფერდებთან მდებარე ორი ტოლდიდია ($10$ და $10$), ხოლო ფუძეებთან მდებარე $S_1$ და $S_2$ აკმაყოფილებს $S_1 \\cdot S_2 = 10^2 = 100$.<br><br>$S_1 = 25 \\Rightarrow S_2 = 4$. ფუძეებთან მდებარე სამკუთხედები მსგავსია, ფართობების შეფარდება მსგავსების კოეფიციენტის კვადრატია: $\\dfrac{a}{b} = \\sqrt{\\dfrac{4}{25}} = \\dfrac{2}{5}$.<br><br><strong>პასუხი:</strong> ბ) $2 : 5$."
+    solution: "ტრაპეციის დიაგონალები ქმნის ოთხ სამკუთხედს: ფერდებთან მდებარე ორი ტოლდიდია ($10$ და $10$), ხოლო ფუძეებთან მდებარე $S_1$ და $S_2$ აკმაყოფილებს $S_1 \\cdot S_2 = 10^2 = 100$.<br><br>$S_1 = 25 \\Rightarrow S_2 = 4$. ფუძეებთან მდებარე სამკუთხედები მსგავსია, ფართობების შეფარდება მსგავსების კოეფიციენტის კვადრატია: $\\dfrac{a}{b} = \\sqrt{\\dfrac{4}{25}} = \\dfrac{2}{5}$.<br><br><strong>პასუხი:</strong> ბ) $2 : 5$.",
+    area: "geometry",
+    topics: ["trapezoid","area-ratios"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -86,7 +158,15 @@ quizData = [
     options: ["$40^\\circ$", "$45^\\circ$", "$36^\\circ$", "$80^\\circ$", "$60^\\circ$", "$72^\\circ$"],
     correct: 4,
     tags: [],
-    solution: "წესიერი ცხრაკუთხედის ყოველი გვერდი $40^\\circ$-იან რკალს ჭიმავს. $A_1A_5$ და $A_3A_9$ წრის შიგნით იკვეთება; მათ შორის კუთხე მოჭიმული რკალების ჯამის ნახევარია:<br><br>$\\dfrac{\\overset{\\frown}{A_3A_5} + \\overset{\\frown}{A_9A_1}}{2} = \\dfrac{80^\\circ + 40^\\circ}{2} = 60^\\circ$.<br><br><strong>პასუხი:</strong> ე) $60^\\circ$."
+    solution: "წესიერი ცხრაკუთხედის ყოველი გვერდი $40^\\circ$-იან რკალს ჭიმავს. $A_1A_5$ და $A_3A_9$ წრის შიგნით იკვეთება; მათ შორის კუთხე მოჭიმული რკალების ჯამის ნახევარია:<br><br>$\\dfrac{\\overset{\\frown}{A_3A_5} + \\overset{\\frown}{A_9A_1}}{2} = \\dfrac{80^\\circ + 40^\\circ}{2} = 60^\\circ$.<br><br><strong>პასუხი:</strong> ე) $60^\\circ$.",
+    area: "geometry",
+    topics: ["regular-polygon","circle-angles"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 11
@@ -95,7 +175,15 @@ quizData = [
     options: ["$a > -1$", "$a < 1$", "$a < 0$", "$a > -2$", "$a < 2$", "$a = 0$"],
     correct: 2,
     tags: [],
-    solution: "$x^2 - (a + 1)x + a = (x - 1)(x - a) = 0$: ფესვები $1$ და $a$. $1 > 0$, ამიტომ მეორე ფესვი უარყოფითი უნდა იყოს: $a < 0$.<br><br><strong>პასუხი:</strong> გ) $a < 0$."
+    solution: "$x^2 - (a + 1)x + a = (x - 1)(x - a) = 0$: ფესვები $1$ და $a$. $1 > 0$, ამიტომ მეორე ფესვი უარყოფითი უნდა იყოს: $a < 0$.<br><br><strong>პასუხი:</strong> გ) $a < 0$.",
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12 (options ა and გ are both 4 in the original)
@@ -104,7 +192,15 @@ quizData = [
     options: ["$4$", "$9$", "$4$", "$1{,}8$", "$5$", "დადგენა შეუძლებელია"],
     correct: 4,
     tags: [],
-    solution: "$t = x^2 - 4x + 5 = (x - 2)^2 + 1 \\ge 1$. $f = \\dfrac{t + 4}{t} = 1 + \\dfrac{4}{t} \\le 1 + 4 = 5$; ტოლობა $x = 2$-ზე.<br><br><strong>პასუხი:</strong> ე) $5$."
+    solution: "$t = x^2 - 4x + 5 = (x - 2)^2 + 1 \\ge 1$. $f = \\dfrac{t + 4}{t} = 1 + \\dfrac{4}{t} \\le 1 + 4 = 5$; ტოლობა $x = 2$-ზე.<br><br><strong>პასუხი:</strong> ე) $5$.",
+    area: "algebra",
+    topics: ["max-min"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["full-square"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -113,7 +209,15 @@ quizData = [
     options: ["არცერთი", "$1$", "$2$", "$3$", "$4$", "უამრავი"],
     correct: 1,
     tags: [],
-    solution: "$x < 0$-სთვის მარჯვენა მხარე უარყოფითია, მარცხენა დადებითი — ამონახსნი არ არის. $x > 0$-ზე $x^2 + 1$ ზრდადია, $\\dfrac{1}{x}$ კლებადი, ამიტომ მათი გრაფიკები მაქსიმუმ ერთხელ იკვეთება; $x \\to 0^+$-ზე მარჯვენა მეტია, $x = 1$-ზე მარცხენა ($2 > 1$) — ზუსტად ერთი ამონახსნია.<br><br><strong>პასუხი:</strong> ბ) $1$."
+    solution: "$x < 0$-სთვის მარჯვენა მხარე უარყოფითია, მარცხენა დადებითი — ამონახსნი არ არის. $x > 0$-ზე $x^2 + 1$ ზრდადია, $\\dfrac{1}{x}$ კლებადი, ამიტომ მათი გრაფიკები მაქსიმუმ ერთხელ იკვეთება; $x \\to 0^+$-ზე მარჯვენა მეტია, $x = 1$-ზე მარცხენა ($2 > 1$) — ზუსტად ერთი ამონახსნია.<br><br><strong>პასუხი:</strong> ბ) $1$.",
+    area: "algebra",
+    topics: ["higher-degree"],
+    grade: 9,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["graphical"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -122,7 +226,15 @@ quizData = [
     options: ["$1 : 2\\sqrt{2}$", "$2 : 5$", "$1 : 2$", "$1 : \\sqrt{2}$", "$1 : 4$", "$1 : 4\\sqrt{2}$"],
     correct: 3,
     tags: [],
-    solution: "წრეწირის რადიუსი $r$, კვადრატის გვერდი $2r$, ფართობი $4r^2$. $r$ რადიუსიან წრეწირში ჩახაზული წესიერი რვაკუთხედის ფართობი: $8 \\cdot \\dfrac{1}{2}r^2\\sin 45^\\circ = 2\\sqrt{2}r^2$.<br><br>შეფარდება: $\\dfrac{2\\sqrt{2}}{4} = \\dfrac{1}{\\sqrt{2}}$.<br><br><strong>პასუხი:</strong> დ) $1 : \\sqrt{2}$."
+    solution: "წრეწირის რადიუსი $r$, კვადრატის გვერდი $2r$, ფართობი $4r^2$. $r$ რადიუსიან წრეწირში ჩახაზული წესიერი რვაკუთხედის ფართობი: $8 \\cdot \\dfrac{1}{2}r^2\\sin 45^\\circ = 2\\sqrt{2}r^2$.<br><br>შეფარდება: $\\dfrac{2\\sqrt{2}}{4} = \\dfrac{1}{\\sqrt{2}}$.<br><br><strong>პასუხი:</strong> დ) $1 : \\sqrt{2}$.",
+    area: "geometry",
+    topics: ["regular-polygon"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15
@@ -131,7 +243,15 @@ quizData = [
     options: ["$\\pi$", "$1{,}44\\pi$", "$3\\pi$", "$0{,}64\\pi$", "$2{,}56\\pi$", "$0{,}36\\pi$"],
     correct: 1,
     tags: [],
-    solution: "დიაგონალები $3k$ და $4k$: $\\dfrac{3k \\cdot 4k}{2} = 6$, $k = 1$. დიაგონალები $3$ და $4$, გვერდი $\\sqrt{1{,}5^2 + 2^2} = 2{,}5$.<br><br>სიმაღლე $h = \\dfrac{S}{a} = \\dfrac{6}{2{,}5} = 2{,}4$, ჩახაზული წრის რადიუსი $r = \\dfrac{h}{2} = 1{,}2$. ფართობი: $1{,}44\\pi$.<br><br><strong>პასუხი:</strong> ბ) $1{,}44\\pi$."
+    solution: "დიაგონალები $3k$ და $4k$: $\\dfrac{3k \\cdot 4k}{2} = 6$, $k = 1$. დიაგონალები $3$ და $4$, გვერდი $\\sqrt{1{,}5^2 + 2^2} = 2{,}5$.<br><br>სიმაღლე $h = \\dfrac{S}{a} = \\dfrac{6}{2{,}5} = 2{,}4$, ჩახაზული წრის რადიუსი $r = \\dfrac{h}{2} = 1{,}2$. ფართობი: $1{,}44\\pi$.<br><br><strong>პასუხი:</strong> ბ) $1{,}44\\pi$.",
+    area: "geometry",
+    topics: ["rhombus-rect-sq","inscribed-circum"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 16
@@ -140,7 +260,15 @@ quizData = [
     options: ["$(9;\\ +\\infty)$", "$(6;\\ 9)$", "$(-1;\\ +\\infty)$", "$(-\\infty;\\ 6)$", "$(-\\infty;\\ -9)$", "$(-6;\\ +\\infty)$"],
     correct: 0,
     tags: [],
-    solution: "$-x^2 + 6x - k < 0 \\Leftrightarrow x^2 - 6x + k > 0$ ყველა $x$-ისთვის, ე.ი. დისკრიმინანტი უარყოფითია: $36 - 4k < 0$, $k > 9$.<br><br><strong>პასუხი:</strong> ა) $(9;\\ +\\infty)$."
+    solution: "$-x^2 + 6x - k < 0 \\Leftrightarrow x^2 - 6x + k > 0$ ყველა $x$-ისთვის, ე.ი. დისკრიმინანტი უარყოფითია: $36 - 4k < 0$, $k > 9$.<br><br><strong>პასუხი:</strong> ა) $(9;\\ +\\infty)$.",
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -149,7 +277,15 @@ quizData = [
     options: ["$22$", "$9$", "$21$", "$19$", "$27$", "$25$"],
     correct: 5,
     tags: [],
-    solution: "დავაჯგუფოთ: $x(x - 2) = x^2 - 2x$, $(x + 2)(x - 4) = x^2 - 2x - 8$. აღვნიშნოთ $t = x^2 - 2x$: $f = -t(t - 8) + 9 = -(t - 4)^2 + 25$.<br><br>$t = 4$ მიიღწევა ($x = 1 \\pm \\sqrt{5}$), ამიტომ უდიდესი მნიშვნელობა $25$-ია.<br><br><strong>პასუხი:</strong> ვ) $25$."
+    solution: "დავაჯგუფოთ: $x(x - 2) = x^2 - 2x$, $(x + 2)(x - 4) = x^2 - 2x - 8$. აღვნიშნოთ $t = x^2 - 2x$: $f = -t(t - 8) + 9 = -(t - 4)^2 + 25$.<br><br>$t = 4$ მიიღწევა ($x = 1 \\pm \\sqrt{5}$), ამიტომ უდიდესი მნიშვნელობა $25$-ია.<br><br><strong>პასუხი:</strong> ვ) $25$.",
+    area: "algebra",
+    topics: ["max-min"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["substitution"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -158,7 +294,15 @@ quizData = [
     options: ["$[2 - \\sqrt{3};\\ 2 + \\sqrt{3}]$", "$\\varnothing$", "$[-1;\\ 5]$", "$[\\sqrt{2};\\ 4 - \\sqrt{2}]$", "$[-2{,}5;\\ 4{,}5]$", "$\\{2\\}$"],
     correct: 4,
     tags: [],
-    solution: "$x^2 - 4x + a \\le 0$-ის ამონახსნთა სიმრავლე არის $\\varnothing$, $\\{2\\}$ ან $x = 2$-ის მიმართ სიმეტრიული შუალედი $[2 - d;\\ 2 + d]$.<br><br>$[-2{,}5;\\ 4{,}5]$-ის შუაწერტილია $1$, არა $2$ — ასეთი სიმრავლე ვერ იქნება. დანარჩენი ვარიანტების შუაწერტილი $2$-ია.<br><br><strong>პასუხი:</strong> ე) $[-2{,}5;\\ 4{,}5]$."
+    solution: "$x^2 - 4x + a \\le 0$-ის ამონახსნთა სიმრავლე არის $\\varnothing$, $\\{2\\}$ ან $x = 2$-ის მიმართ სიმეტრიული შუალედი $[2 - d;\\ 2 + d]$.<br><br>$[-2{,}5;\\ 4{,}5]$-ის შუაწერტილია $1$, არა $2$ — ასეთი სიმრავლე ვერ იქნება. დანარჩენი ვარიანტების შუაწერტილი $2$-ია.<br><br><strong>პასუხი:</strong> ე) $[-2{,}5;\\ 4{,}5]$.",
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -167,7 +311,15 @@ quizData = [
     options: ["$4\\sqrt{2}$", "$6$", "$2\\sqrt{6}$", "$4\\sqrt{3}$", "$4$", "$3\\sqrt{2}$"],
     correct: 2,
     tags: [],
-    solution: "გვერდების შუაწერტილებით მიღებული ოთხკუთხედის გვერდები დიაგონალების პარალელურია და მათი ნახევარია; კვადრატის შემთხვევაში ტრაპეციის დიაგონალები ტოლი და ურთიერთმართობულია.<br><br>ტრაპეციის შუახაზი აერთებს ფერდების შუაწერტილებს, ე.ი. კვადრატის დიაგონალია: $a\\sqrt{2}$, სადაც $a^2 = 12$. შუახაზი: $\\sqrt{12} \\cdot \\sqrt{2} = 2\\sqrt{6}$.<br><br><strong>პასუხი:</strong> გ) $2\\sqrt{6}$."
+    solution: "გვერდების შუაწერტილებით მიღებული ოთხკუთხედის გვერდები დიაგონალების პარალელურია და მათი ნახევარია; კვადრატის შემთხვევაში ტრაპეციის დიაგონალები ტოლი და ურთიერთმართობულია.<br><br>ტრაპეციის შუახაზი აერთებს ფერდების შუაწერტილებს, ე.ი. კვადრატის დიაგონალია: $a\\sqrt{2}$, სადაც $a^2 = 12$. შუახაზი: $\\sqrt{12} \\cdot \\sqrt{2} = 2\\sqrt{6}$.<br><br><strong>პასუხი:</strong> გ) $2\\sqrt{6}$.",
+    area: "geometry",
+    topics: ["trapezoid","midline"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -176,7 +328,15 @@ quizData = [
     options: ["$20\\pi$", "$24\\pi$", "$30\\pi$", "$18\\pi$", "$36\\pi$", "$40\\pi$"],
     correct: 4,
     tags: [],
-    solution: "მართი კუთხის წვეროდან კათეტების გაგრძელებებზე გავლებული მხებების სიგრძე ნახევარპერიმეტრის ტოლია: $p = \\dfrac{3 + 4 + 5}{2} = 6$. მართ კუთხესთან წვერო, შეხების ორი წერტილი და ცენტრი ქმნის კვადრატს, ამიტომ რადიუსი $r = p = 6$.<br><br>ფართობი: $36\\pi$.<br><br><strong>პასუხი:</strong> ე) $36\\pi$."
+    solution: "მართი კუთხის წვეროდან კათეტების გაგრძელებებზე გავლებული მხებების სიგრძე ნახევარპერიმეტრის ტოლია: $p = \\dfrac{3 + 4 + 5}{2} = 6$. მართ კუთხესთან წვერო, შეხების ორი წერტილი და ცენტრი ქმნის კვადრატს, ამიტომ რადიუსი $r = p = 6$.<br><br>ფართობი: $36\\pi$.<br><br><strong>პასუხი:</strong> ე) $36\\pi$.",
+    area: "geometry",
+    topics: ["inscribed-circum","right-triangle"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 21
@@ -185,7 +345,15 @@ quizData = [
     options: ["$5$", "$1$", "$7$", "$3$", "$6$", "$8$"],
     correct: 2,
     tags: [],
-    solution: "$f(x) = x^2 + (a - 5)x - a - 1$, შტოები ზემოთ. $[0;\\ 2]$-ზე $f < 0$, თუ $f(0) < 0$ და $f(2) < 0$:<br>$f(0) = -a - 1 < 0 \\Rightarrow a > -1$;<br>$f(2) = a - 7 < 0 \\Rightarrow a < 7$.<br><br>მთელი $a$: $0, 1, \\ldots, 6$ — $7$ მნიშვნელობა.<br><br><strong>პასუხი:</strong> გ) $7$."
+    solution: "$f(x) = x^2 + (a - 5)x - a - 1$, შტოები ზემოთ. $[0;\\ 2]$-ზე $f < 0$, თუ $f(0) < 0$ და $f(2) < 0$:<br>$f(0) = -a - 1 < 0 \\Rightarrow a > -1$;<br>$f(2) = a - 7 < 0 \\Rightarrow a < 7$.<br><br>მთელი $a$: $0, 1, \\ldots, 6$ — $7$ მნიშვნელობა.<br><br><strong>პასუხი:</strong> გ) $7$.",
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -194,7 +362,15 @@ quizData = [
     options: ["$[-2;\\ +\\infty)$", "$(-\\infty;\\ 4]$", "$[-16;\\ +\\infty)$", "$[-1;\\ +\\infty)$", "$[2;\\ +\\infty)$", "დადგენა შეუძლებელია"],
     correct: 3,
     tags: [],
-    solution: "ფესვები $m - 1$ და $m + 1$: $f(x) = (x - m + 1)(x - m - 1) = (x - m)^2 - 1$. უმცირესი მნიშვნელობა $-1$-ია.<br><br>მნიშვნელობათა სიმრავლე: $[-1;\\ +\\infty)$.<br><br><strong>პასუხი:</strong> დ) $[-1;\\ +\\infty)$."
+    solution: "ფესვები $m - 1$ და $m + 1$: $f(x) = (x - m + 1)(x - m - 1) = (x - m)^2 - 1$. უმცირესი მნიშვნელობა $-1$-ია.<br><br>მნიშვნელობათა სიმრავლე: $[-1;\\ +\\infty)$.<br><br><strong>პასუხი:</strong> დ) $[-1;\\ +\\infty)$.",
+    area: "algebra",
+    topics: ["quadratic-func"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -203,7 +379,15 @@ quizData = [
     options: ["$10$", "$12$", "$0$", "$7$", "$8$", "$15$"],
     correct: 1,
     tags: [],
-    solution: "$ax^2 + 2ax + a + 16 = a(x + 1)^2 + 16 > 0$. თუ $a \\ge 0$, უტოლობა ყველა $x$-ისთვის სრულდება (უამრავი მთელი ამონახსნი). თუ $a < 0$: $(x + 1)^2 < \\dfrac{16}{|a|}$.<br><br>$u = x + 1$-ის ზუსტად სამი მთელი მნიშვნელობა ($-1, 0, 1$): $1 < \\dfrac{16}{|a|} \\le 4$, ანუ $4 \\le |a| < 16$.<br><br>$a \\in \\{-15, \\ldots, -4\\}$ — $12$ მნიშვნელობა.<br><br><strong>პასუხი:</strong> ბ) $12$."
+    solution: "$ax^2 + 2ax + a + 16 = a(x + 1)^2 + 16 > 0$. თუ $a \\ge 0$, უტოლობა ყველა $x$-ისთვის სრულდება (უამრავი მთელი ამონახსნი). თუ $a < 0$: $(x + 1)^2 < \\dfrac{16}{|a|}$.<br><br>$u = x + 1$-ის ზუსტად სამი მთელი მნიშვნელობა ($-1, 0, 1$): $1 < \\dfrac{16}{|a|} \\le 4$, ანუ $4 \\le |a| < 16$.<br><br>$a \\in \\{-15, \\ldots, -4\\}$ — $12$ მნიშვნელობა.<br><br><strong>პასუხი:</strong> ბ) $12$.",
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24
@@ -212,7 +396,15 @@ quizData = [
     options: ["$5\\pi$", "$2\\sqrt{2}\\,\\pi$", "$3\\pi$", "$2\\sqrt{3}\\,\\pi$", "$20\\pi$", "$2\\sqrt{5}\\,\\pi$"],
     correct: 5,
     tags: [],
-    solution: "გვერდები $a$ და $b$: $2a + 2b - a = 10$, ანუ $a = 10 - 2b$ ($0 < b < 5$).<br><br>დიაგონალის კვადრატი: $a^2 + b^2 = (10 - 2b)^2 + b^2 = 5b^2 - 40b + 100 = 5(b - 4)^2 + 20 \\ge 20$, ტოლობით $b = 4$, $a = 2$.<br><br>შემოხაზული წრეწირის დიამეტრი — დიაგონალი: $2\\sqrt{5}$; სიგრძე $2\\sqrt{5}\\pi$.<br><br><strong>პასუხი:</strong> ვ) $2\\sqrt{5}\\,\\pi$."
+    solution: "გვერდები $a$ და $b$: $2a + 2b - a = 10$, ანუ $a = 10 - 2b$ ($0 < b < 5$).<br><br>დიაგონალის კვადრატი: $a^2 + b^2 = (10 - 2b)^2 + b^2 = 5b^2 - 40b + 100 = 5(b - 4)^2 + 20 \\ge 20$, ტოლობით $b = 4$, $a = 2$.<br><br>შემოხაზული წრეწირის დიამეტრი — დიაგონალი: $2\\sqrt{5}$; სიგრძე $2\\sqrt{5}\\pi$.<br><br><strong>პასუხი:</strong> ვ) $2\\sqrt{5}\\,\\pi$.",
+    area: "algebra",
+    topics: ["max-min","rhombus-rect-sq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["word"],
+    method: ["full-square"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25
@@ -221,6 +413,14 @@ quizData = [
     options: ["$72$", "$80$", "$168$", "$60$", "$144$", "$25$"],
     correct: 0,
     tags: [],
-    solution: "ვთქვათ, $O$ დიაგონალების გადაკვეთაა: $AO = 9$, $BO = 5$. $ABD$ სამკუთხედში $AO$ და $BM$ მედიანებია, მათი გადაკვეთა $G$ მედიანებს $2 : 1$ ყოფს: $AG = 6$, $GO = 3$, $BG = 4$.<br><br>$BGO$-ში $3^2 + 4^2 = 5^2$, ამიტომ $\\angle BGO = 90^\\circ$, ე.ი. $BG \\perp AO$.<br><br>$S_{ABO} = \\dfrac{1}{2} \\cdot AO \\cdot BG = \\dfrac{1}{2} \\cdot 9 \\cdot 4 = 18$. პარალელოგრამის ფართობი: $4 \\cdot 18 = 72$.<br><br><strong>პასუხი:</strong> ა) $72$."
+    solution: "ვთქვათ, $O$ დიაგონალების გადაკვეთაა: $AO = 9$, $BO = 5$. $ABD$ სამკუთხედში $AO$ და $BM$ მედიანებია, მათი გადაკვეთა $G$ მედიანებს $2 : 1$ ყოფს: $AG = 6$, $GO = 3$, $BG = 4$.<br><br>$BGO$-ში $3^2 + 4^2 = 5^2$, ამიტომ $\\angle BGO = 90^\\circ$, ე.ი. $BG \\perp AO$.<br><br>$S_{ABO} = \\dfrac{1}{2} \\cdot AO \\cdot BG = \\dfrac{1}{2} \\cdot 9 \\cdot 4 = 18$. პარალელოგრამის ფართობი: $4 \\cdot 18 = 72$.<br><br><strong>პასუხი:</strong> ა) $72$.",
+    area: "geometry",
+    topics: ["parallelogram","cevians","area-formulas"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["aux-construct"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -10,7 +10,15 @@ quizData = [
             "$3$"
         ],
         correct: 4,
-        tags: ["Calculus", "Limits"]
+        tags: ["Calculus", "Limits"],
+        area: "calculus",
+        topics: ["func-limit"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $\\lim\\limits_{n\\to\\infty}\\frac{5+9+13+\\cdots+(4n+1)}{n^2}$ ზღვარი.",
@@ -23,7 +31,15 @@ quizData = [
             "$6$"
         ],
         correct: 2,
-        tags: ["Calculus", "Series"]
+        tags: ["Calculus", "Series"],
+        area: "calculus",
+        topics: ["seq-limit","func-limit"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $\\lim\\limits_{x\\to 0}\\frac{2\\sin 7x}{3x}$ ზღვარი.",
@@ -36,7 +52,15 @@ quizData = [
             "$7$"
         ],
         correct: 3,
-        tags: ["Trigonometry", "Limits"]
+        tags: ["Trigonometry", "Limits"],
+        area: "calculus",
+        topics: ["func-limit"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$1)$ მართკუთხა სამკუთხედი; $2)$ წრეწირი; $3)$ ტოლგვერდა სამკუთხედი; $4)$ ტოლფერდა სამკუთხედი; $5)$ სხვადასხვაგვერდა სამკუთხედი; $6)$ ბლაგვკუთხა სამკუთხედი. ჩამოთვლილი $6$ ცალი ფიგურიდან რამდენის მიიღებაა შეუძლებელი კონუსის და სიბრტყის გადაკვეთის შედეგად?",
@@ -49,7 +73,15 @@ quizData = [
             "$6$"
         ],
         correct: 0,
-        tags: ["Geometry", "Conic Sections"]
+        tags: ["Geometry", "Conic Sections"],
+        area: "solid",
+        topics: ["cone","isosceles","right-triangle"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ მანძილი $A(1;3)$ წერტილსა და $3x-2y=4$ წრფეს შორის.",
@@ -62,7 +94,15 @@ quizData = [
             "$\\frac{7}{\\sqrt{13}}$"
         ],
         correct: 5,
-        tags: ["Geometry", "Distance"]
+        tags: ["Geometry", "Distance"],
+        area: "algebra",
+        topics: ["square-roots"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $\\lim\\limits_{x\\to+\\infty}\\left(\\frac{x+2}{x-3}\\right)^x$ ზღვარი.",
@@ -75,7 +115,15 @@ quizData = [
             "$1$"
         ],
         correct: 0,
-        tags: ["Calculus", "Limits"]
+        tags: ["Calculus", "Limits"],
+        area: "calculus",
+        topics: ["func-limit"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $\\lim\\limits_{x\\to1^+} \\arctan\\frac{1}{1-x}$ მარჯვენა ზღვარი ($x$ მიისწრაფის $1$-სკენ მარჯვნიდან).",
@@ -88,7 +136,15 @@ quizData = [
             "$+\\infty$"
         ],
         correct: 1,
-        tags: ["Trigonometry", "Limits"]
+        tags: ["Trigonometry", "Limits"],
+        area: "calculus",
+        topics: ["func-limit","inverse-trig"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $\\lim\\limits_{n\\to\\infty}\\frac{(n+5)!-(n+2)!}{n^3(n+2)!}$ ზღვარი.",
@@ -101,7 +157,15 @@ quizData = [
             "$-2$"
         ],
         correct: 0,
-        tags: ["Calculus", "Factorials"]
+        tags: ["Calculus", "Factorials"],
+        area: "calculus",
+        topics: ["seq-limit","func-limit"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "კონუსის გვერდითი ზედაპირის ფართობი უდრის $20$სმ²-ს. მისი გვერდითი ზედაპირის (სექტორის) შლილის ცენტრალური კუთხე $72°$-ია. იპოვეთ კონუსის სრული ზედაპირის ფართობი.",
@@ -114,7 +178,15 @@ quizData = [
             "$32$"
         ],
         correct: 1,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","cone","circle-angles"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ სფეროზე შემოხაზული წაკვეთილი კონუსის გვერდითი ზედაპირის ფართობი, თუ მისი მსახველი $13$სმ-ია, სფეროს რადიუსი კი $6$სმ-ია.",
@@ -127,7 +199,15 @@ quizData = [
             "$210\\pi$"
         ],
         correct: 4,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","cone","sphere"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $f'\\left(\\frac{\\pi}{12}\\right)$, თუ $f(x) = \\sin^3\\left(4x+\\frac{\\pi}{3}\\right)$.",
@@ -140,7 +220,15 @@ quizData = [
             "$1$"
         ],
         correct: 1,
-        tags: ["Trigonometry", "Derivatives"]
+        tags: ["Trigonometry", "Derivatives"],
+        area: "calculus",
+        topics: ["derivative"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $\\lim\\limits_{x\\to0^+} \\left(\\frac{1}{x}\\right)^{\\sin x}$ მარჯვენა ზღვარი ($x$ მიისწრაფის $0$-სკენ მარჯვნიდან).",
@@ -153,7 +241,15 @@ quizData = [
             "$-\\pi$"
         ],
         correct: 1,
-        tags: ["Calculus", "Limits"]
+        tags: ["Calculus", "Limits"],
+        area: "calculus",
+        topics: ["func-limit"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ $f'(1)$, თუ $f(x) = (3x^4-10x+8)^3 + x^5$.",
@@ -166,7 +262,15 @@ quizData = [
             "$11$"
         ],
         correct: 5,
-        tags: ["Calculus", "Derivatives"]
+        tags: ["Calculus", "Derivatives"],
+        area: "calculus",
+        topics: ["derivative"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ ზედაპირის ფართობი სხეულისა, რომელიც მიღებულია $a$-გვერდიანი წესიერი ექვსკუთხედის ბრუნვით დიდი დიაგონალის გარშემო.",
@@ -179,7 +283,15 @@ quizData = [
             "$\\frac{4\\pi a^2\\sqrt{3}}{3}$"
         ],
         correct: 1,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","definite-integral","regular-polygon"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $ABC$ სამკუთხედის ფართობი, თუ მისი წვეროების კოორდინატებია $A(3;5)$, $B(7;8)$ და $C(6;1)$.",
@@ -192,7 +304,15 @@ quizData = [
             "$12{,}5$"
         ],
         correct: 5,
-        tags: ["Geometry", "Area"]
+        tags: ["Geometry", "Area"],
+        area: "geometry",
+        topics: ["area-formulas"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $\\lim\\limits_{n\\to\\infty} \\frac{\\sqrt{n}\\cdot\\cos n}{n+1}$ ზღვარი.",
@@ -205,7 +325,15 @@ quizData = [
             "$1$"
         ],
         correct: 4,
-        tags: ["Calculus", "Limits"]
+        tags: ["Calculus", "Limits"],
+        area: "calculus",
+        topics: ["func-limit","seq-limit"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ $f'(1)$, თუ $f(x) = \\arctan\\sqrt{4x-1}$.",
@@ -218,7 +346,15 @@ quizData = [
             "$\\sqrt{3}$"
         ],
         correct: 3,
-        tags: ["Trigonometry", "Derivatives"]
+        tags: ["Trigonometry", "Derivatives"],
+        area: "calculus",
+        topics: ["derivative","inverse-trig"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "თუ $1000^2$, $1001^2$, $1002^2$, ... მიმდევრობის ყოველი წევრის ბოლო ორ ციფრს წავშლით მივიღებთ მიმდევრობას, რომლის პირველი $n$ წევრი წარმოადგენს არითმეტიკულ პროგრესიას. იპოვეთ $n$-ის უდიდესი მნიშვნელობა.",
@@ -231,7 +367,15 @@ quizData = [
             "$1000$-ზე მეტი"
         ],
         correct: 2,
-        tags: ["Algebra", "Sequences"]
+        tags: ["Algebra", "Sequences"],
+        area: "algebra",
+        topics: ["arithmetic-prog"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ კუთხე $y=5-3x$ და $y=2x-1$ წრფეებს შორის.",
@@ -244,7 +388,15 @@ quizData = [
             "$\\frac{\\pi}{4}$"
         ],
         correct: 5,
-        tags: ["Geometry", "Angles"]
+        tags: ["Geometry", "Angles"],
+        area: "algebra",
+        topics: ["linear-func","inverse-trig"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$XOY$ საკოორდინატო სიბრტყეზე მოცემულია $A(0;0)$, $B(5;1)$, $C(6;3)$ და $D(-1;4)$ ოთხი წერტილი. იპოვეთ ამ სიბრტყეზე მდებარე ისეთი $K$ წერტილის კოორდინატები, რომ $K$ წერტილიდან $A$, $B$, $C$ და $D$ წერტილებამდე მანძილების ჯამი იყოს მინიმალური.",
@@ -257,7 +409,15 @@ quizData = [
             "$(-\\frac{12}{5};\\frac{5}{4})$"
         ],
         correct: 3,
-        tags: ["Geometry", "Optimization"]
+        tags: ["Geometry", "Optimization"],
+        area: "geometry",
+        topics: ["line-circle-eq","max-min"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ჩამოთვლილთაგან რისი ტოლია $a$ და $b$ პარამეტრების ჯამი, თუ $f(x) = \\begin{cases} \\frac{x^4-x^2}{x^2-1}, & x\\neq\\pm1 \\\\ \\log_3 a, & x=1 \\\\ \\sqrt{b}, & x=-1 \\end{cases}$ ფუნქცია უწყვეტია მთელ რიცხვთა ღერძზე.",
@@ -270,7 +430,15 @@ quizData = [
             "შეუძლებელია განსაზღვრა"
         ],
         correct: 1,
-        tags: ["Calculus", "Continuity"]
+        tags: ["Calculus", "Continuity"],
+        area: "calculus",
+        topics: ["continuity","nonlinear-systems","linear-systems"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: ["parameter"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$f'(x)=0$ გატოლების ფესვებია $a$, $b$ და $c$. იპოვეთ $a-b+c$ გამოსახულების უდიდესი შესაძლო მნიშვნელობა, თუ $f(x)=\\frac{x^4}{4}+2x^3+\\frac{3}{2}x^2-10x$.",
@@ -283,7 +451,15 @@ quizData = [
             "$7$"
         ],
         correct: 4,
-        tags: ["Calculus", "Extrema"]
+        tags: ["Calculus", "Extrema"],
+        area: "calculus",
+        topics: ["derivative","monotonic-extrema"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს $x+y$, თუ $x = \log_{\log_{\log ... 27} 27} 27$, ხოლო $y=\\log_2 8$.",
@@ -296,7 +472,15 @@ quizData = [
             "$3 + e^{27}$"
         ],
         correct: 4,
-        tags: ["Algebra", "Logarithms"]
+        tags: ["Algebra", "Logarithms"],
+        area: "algebra",
+        topics: ["logarithms"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "კონუსის ღერძული კვეთა წესიერი სამკუთხედია, რომლის გვერდია $6$სმ. სფერო ეხება კონუსის გვერდით ზედაპირს, ხოლო კონუსის ფუძის სიბრტყეს ეხება $A$ წერტილში, რომელიც $4$სმ-ით არის დაშორებული კონუსის ღერძიდან. იპოვეთ კონუსის ზედაპირის ფართობის შეფარდება სფეროს ზედაპრის ფართობთან.",
@@ -309,7 +493,15 @@ quizData = [
             "2"
         ],
         correct: 2,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","cone","sphere"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ორი ტოლი $R$ რადიუსიანი სფერო და სხვა ორი ტოლი $r$ რადიუსიანი სფერო ისე არიან განლაგებულები, რომ ყოველი მათგანი ეხება დანარჩენ სამს და $\\alpha$ სიბრტყეს. იპოვეთ დიდი სფეროს ზედაპირის ფართობის შეფარდება პატარა სფეროს ზედაპირის ფართობთან.",
@@ -322,6 +514,14 @@ quizData = [
             "$5 + 2\\sqrt{2}$"
         ],
         correct: 3,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","sphere"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     }
 ];

@@ -5,7 +5,15 @@ quizData = [
     options: ["$\\dfrac{1}{3}$", "$\\dfrac{3}{5}$", "$\\dfrac{3}{4}$", "$\\dfrac{2}{5}$", "$\\dfrac{2}{3}$", "$\\dfrac{1}{2}$"],
     correct: 5,
     tags: [],
-    solution: "$(A \\setminus B) \\cup (B \\setminus A)$ — ხდება ზუსტად ერთი ხდომილება: $P = P(A) + P(B) - 2P(A \\cap B) = 0{,}6 + 0{,}5 - 0{,}6 = 0{,}5$.<br><br><strong>პასუხი:</strong> ვ) $\\dfrac{1}{2}$."
+    solution: "$(A \\setminus B) \\cup (B \\setminus A)$ — ხდება ზუსტად ერთი ხდომილება: $P = P(A) + P(B) - 2P(A \\cap B) = 0{,}6 + 0{,}5 - 0{,}6 = 0{,}5$.<br><br><strong>პასუხი:</strong> ვ) $\\dfrac{1}{2}$.",
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -14,7 +22,15 @@ quizData = [
     options: ["$22$", "$24$", "$18$", "$33$", "$11$", "$24{,}2$"],
     correct: 0,
     tags: [],
-    solution: "$a_8 - a_3 = 5d = 2$, $d = 0{,}4$; $a_1 = a_3 - 2d = 0{,}4$.<br><br>$S_{10} = \\dfrac{2a_1 + 9d}{2} \\cdot 10 = (0{,}8 + 3{,}6) \\cdot 5 = 22$.<br><br><strong>პასუხი:</strong> ა) $22$."
+    solution: "$a_8 - a_3 = 5d = 2$, $d = 0{,}4$; $a_1 = a_3 - 2d = 0{,}4$.<br><br>$S_{10} = \\dfrac{2a_1 + 9d}{2} \\cdot 10 = (0{,}8 + 3{,}6) \\cdot 5 = 22$.<br><br><strong>პასუხი:</strong> ა) $22$.",
+    area: "algebra",
+    topics: ["arithmetic-prog"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -23,7 +39,15 @@ quizData = [
     options: ["$3$", "$-2$", "$5$", "$6$", "$1{,}5$", "$-3$"],
     correct: 3,
     tags: [],
-    solution: "$a_n = S_n - S_{n-1} = 3n^2 + 5n - 3(n - 1)^2 - 5(n - 1) = 6n + 2$. სხვაობა: $d = 6$.<br><br><strong>პასუხი:</strong> დ) $6$."
+    solution: "$a_n = S_n - S_{n-1} = 3n^2 + 5n - 3(n - 1)^2 - 5(n - 1) = 6n + 2$. სხვაობა: $d = 6$.<br><br><strong>პასუხი:</strong> დ) $6$.",
+    area: "algebra",
+    topics: ["arithmetic-prog"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -32,7 +56,15 @@ quizData = [
     options: ["$10$", "$9$", "$12$", "$6$", "$15$", "$18$"],
     correct: 1,
     tags: [],
-    solution: "$\\vec{a} = k\\vec{b} = (-k;\\ 2k)$. $\\vec{a} \\cdot \\vec{b} = k + 4k = 5k = 45$, $k = 9$: $\\vec{a}(-9;\\ 18)$.<br><br>კოორდინატების ჯამი: $9$.<br><br><strong>პასუხი:</strong> ბ) $9$."
+    solution: "$\\vec{a} = k\\vec{b} = (-k;\\ 2k)$. $\\vec{a} \\cdot \\vec{b} = k + 4k = 5k = 45$, $k = 9$: $\\vec{a}(-9;\\ 18)$.<br><br>კოორდინატების ჯამი: $9$.<br><br><strong>პასუხი:</strong> ბ) $9$.",
+    area: "geometry",
+    topics: ["vectors","dot-product"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -41,7 +73,15 @@ quizData = [
     options: ["$4$", "$3\\sqrt{2}$", "$6$", "$4\\sqrt{2}$", "$5$", "$4\\sqrt{3}$"],
     correct: 4,
     tags: [],
-    solution: "$\\vec{a}(1;\\ 2)$, $\\vec{b}(-1;\\ 3)$: $\\vec{c} = \\vec{a} - 2\\vec{b} = (3;\\ -4)$, $|\\vec{c}| = \\sqrt{9 + 16} = 5$.<br><br><strong>პასუხი:</strong> ე) $5$."
+    solution: "$\\vec{a}(1;\\ 2)$, $\\vec{b}(-1;\\ 3)$: $\\vec{c} = \\vec{a} - 2\\vec{b} = (3;\\ -4)$, $|\\vec{c}| = \\sqrt{9 + 16} = 5$.<br><br><strong>პასუხი:</strong> ე) $5$.",
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -50,7 +90,15 @@ quizData = [
     options: ["$0$", "$\\sqrt{5}$", "$2$", "$\\sqrt{3}$", "$1$", "$\\sqrt{2}$"],
     correct: 5,
     tags: [],
-    solution: "დალაგებული მონაცემები: $-1, 0, ?, 2, 3$ — მედიანა შუა რიცხვია, ამიტომ $x = 1$.<br><br>საშუალო: $\\dfrac{1 + 2 - 1 + 3 + 0}{5} = 1$. გადახრები: $0, 1, -2, 2, -1$; დისპერსია: $\\dfrac{0 + 1 + 4 + 4 + 1}{5} = 2$; სტანდარტული გადახრა: $\\sqrt{2}$.<br><br><strong>პასუხი:</strong> ვ) $\\sqrt{2}$."
+    solution: "დალაგებული მონაცემები: $-1, 0, ?, 2, 3$ — მედიანა შუა რიცხვია, ამიტომ $x = 1$.<br><br>საშუალო: $\\dfrac{1 + 2 - 1 + 3 + 0}{5} = 1$. გადახრები: $0, 1, -2, 2, -1$; დისპერსია: $\\dfrac{0 + 1 + 4 + 4 + 1}{5} = 2$; სტანდარტული გადახრა: $\\sqrt{2}$.<br><br><strong>პასუხი:</strong> ვ) $\\sqrt{2}$.",
+    area: "prob-stats",
+    topics: ["statistics"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -59,7 +107,15 @@ quizData = [
     options: ["$1$", "$13$", "$-2$", "$9$", "$15$", "$10$"],
     correct: 1,
     tags: [],
-    solution: "გეომეტრიული პროგრესიისთვის $a^2 = (a + 6) \\cdot \\dfrac{2}{3}a$, $3a^2 = 2a^2 + 12a$, $a^2 = 12a$, $a = 12$ ($a \\ne 0$). პროგრესია: $18, 12, 8$ — კლებადია.<br><br>$12$-ზე მეტი უმცირესი მთელი რიცხვი: $13$.<br><br><strong>პასუხი:</strong> ბ) $13$."
+    solution: "გეომეტრიული პროგრესიისთვის $a^2 = (a + 6) \\cdot \\dfrac{2}{3}a$, $3a^2 = 2a^2 + 12a$, $a^2 = 12a$, $a = 12$ ($a \\ne 0$). პროგრესია: $18, 12, 8$ — კლებადია.<br><br>$12$-ზე მეტი უმცირესი მთელი რიცხვი: $13$.<br><br><strong>პასუხი:</strong> ბ) $13$.",
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -68,7 +124,15 @@ quizData = [
     options: ["$\\dfrac{2}{3}$", "$\\dfrac{3}{4}$", "$\\dfrac{11}{12}$", "$\\dfrac{13}{18}$", "$\\dfrac{5}{6}$", "$\\dfrac{7}{9}$"],
     correct: 4,
     tags: [],
-    solution: "სულ $36$ შედეგი. ჯამი $9$-ზე მეტია: $10$ ($3$ შედეგი), $11$ ($2$), $12$ ($1$) — $6$ შედეგი.<br><br>$P = 1 - \\dfrac{6}{36} = \\dfrac{5}{6}$.<br><br><strong>პასუხი:</strong> ე) $\\dfrac{5}{6}$."
+    solution: "სულ $36$ შედეგი. ჯამი $9$-ზე მეტია: $10$ ($3$ შედეგი), $11$ ($2$), $12$ ($1$) — $6$ შედეგი.<br><br>$P = 1 - \\dfrac{6}{36} = \\dfrac{5}{6}$.<br><br><strong>პასუხი:</strong> ე) $\\dfrac{5}{6}$.",
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -77,7 +141,15 @@ quizData = [
     options: ["$6$", "$-2$", "$5$", "$-6$", "$1{,}5$", "$-3$"],
     correct: 5,
     tags: [],
-    solution: "თანამიმართულობა: $\\vec{a} = k\\vec{b}$, $k > 0$. $p = -6k$ და $-6 = 4pk = -24k^2$, $k = \\dfrac{1}{2}$, $p = -3$.<br><br><strong>პასუხი:</strong> ვ) $-3$."
+    solution: "თანამიმართულობა: $\\vec{a} = k\\vec{b}$, $k > 0$. $p = -6k$ და $-6 = 4pk = -24k^2$, $k = \\dfrac{1}{2}$, $p = -3$.<br><br><strong>პასუხი:</strong> ვ) $-3$.",
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -86,7 +158,15 @@ quizData = [
     options: ["$\\vec{a} + 2\\vec{b}$", "$2\\vec{b} - 2\\vec{a}$", "$2\\vec{a} + \\vec{b}$", "$4\\vec{b} - 3\\vec{a}$", "$\\vec{a} + \\vec{b}$", "$4\\vec{b} + 3\\vec{a}$"],
     correct: 1,
     tags: [],
-    solution: "$\\overrightarrow{BC} = \\overrightarrow{AC} - \\overrightarrow{AB} = \\vec{b} - \\vec{a}$, $\\overrightarrow{AD} = 3\\overrightarrow{BC} = 3(\\vec{b} - \\vec{a})$.<br><br>$MN$ შუახაზია: $\\overrightarrow{MN} = \\dfrac{1}{2}(\\overrightarrow{BC} + \\overrightarrow{AD}) = \\dfrac{1}{2} \\cdot 4(\\vec{b} - \\vec{a}) = 2\\vec{b} - 2\\vec{a}$.<br><br><strong>პასუხი:</strong> ბ) $2\\vec{b} - 2\\vec{a}$."
+    solution: "$\\overrightarrow{BC} = \\overrightarrow{AC} - \\overrightarrow{AB} = \\vec{b} - \\vec{a}$, $\\overrightarrow{AD} = 3\\overrightarrow{BC} = 3(\\vec{b} - \\vec{a})$.<br><br>$MN$ შუახაზია: $\\overrightarrow{MN} = \\dfrac{1}{2}(\\overrightarrow{BC} + \\overrightarrow{AD}) = \\dfrac{1}{2} \\cdot 4(\\vec{b} - \\vec{a}) = 2\\vec{b} - 2\\vec{a}$.<br><br><strong>პასუხი:</strong> ბ) $2\\vec{b} - 2\\vec{a}$.",
+    area: "geometry",
+    topics: ["vectors","trapezoid"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 11
@@ -95,7 +175,15 @@ quizData = [
     options: ["$\\dfrac{1}{4}$", "$\\dfrac{3}{5}$", "$\\dfrac{3}{4}$", "$\\dfrac{2}{5}$", "$\\dfrac{1}{3}$", "$\\dfrac{1}{2}$"],
     correct: 4,
     tags: [],
-    solution: "$S = \\dfrac{b_1}{1 - q}$, ლუწნომრიანი წევრები ($b_1q, b_1q^3, \\ldots$) ქმნიან პროგრესიას მნიშვნელით $q^2$: $S_{\\text{ლუწ}} = \\dfrac{b_1q}{1 - q^2}$.<br><br>$\\dfrac{b_1}{1 - q} = \\dfrac{4b_1q}{1 - q^2} \\Rightarrow 1 + q = 4q \\Rightarrow q = \\dfrac{1}{3}$.<br><br><strong>პასუხი:</strong> ე) $\\dfrac{1}{3}$."
+    solution: "$S = \\dfrac{b_1}{1 - q}$, ლუწნომრიანი წევრები ($b_1q, b_1q^3, \\ldots$) ქმნიან პროგრესიას მნიშვნელით $q^2$: $S_{\\text{ლუწ}} = \\dfrac{b_1q}{1 - q^2}$.<br><br>$\\dfrac{b_1}{1 - q} = \\dfrac{4b_1q}{1 - q^2} \\Rightarrow 1 + q = 4q \\Rightarrow q = \\dfrac{1}{3}$.<br><br><strong>პასუხი:</strong> ე) $\\dfrac{1}{3}$.",
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12
@@ -104,7 +192,15 @@ quizData = [
     options: ["$8$", "$15$", "$12$", "$10$", "$16$", "$20$"],
     correct: 1,
     tags: [],
-    solution: "ფარდობითი სიხშირე: თავდაპირველად $\\dfrac{3}{n}$, წაშლის შემდეგ $\\dfrac{3}{n - 5}$.<br><br>$\\dfrac{3}{n - 5} - \\dfrac{3}{n} = \\dfrac{15}{n(n - 5)} = \\dfrac{1}{10}$, $n(n - 5) = 150$, $n = 15$.<br><br><strong>პასუხი:</strong> ბ) $15$."
+    solution: "ფარდობითი სიხშირე: თავდაპირველად $\\dfrac{3}{n}$, წაშლის შემდეგ $\\dfrac{3}{n - 5}$.<br><br>$\\dfrac{3}{n - 5} - \\dfrac{3}{n} = \\dfrac{15}{n(n - 5)} = \\dfrac{1}{10}$, $n(n - 5) = 150$, $n = 15$.<br><br><strong>პასუხი:</strong> ბ) $15$.",
+    area: "prob-stats",
+    topics: ["statistics"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -113,7 +209,15 @@ quizData = [
     options: ["$-3$", "$4$", "$-5$", "$6$", "$-2$", "$10$"],
     correct: 0,
     tags: [],
-    solution: "$a_{10} = 1 + d$, $a_8 = 1 - d$, $a_6 = 1 - 3d$.<br><br>$a_{10}a_8 + a_6(a_8 + a_{10}) = (1 - d^2) + 2(1 - 3d) = -d^2 - 6d + 3 = 12 - (d + 3)^2$ — უდიდესია, როცა $d = -3$.<br><br><strong>პასუხი:</strong> ა) $-3$."
+    solution: "$a_{10} = 1 + d$, $a_8 = 1 - d$, $a_6 = 1 - 3d$.<br><br>$a_{10}a_8 + a_6(a_8 + a_{10}) = (1 - d^2) + 2(1 - 3d) = -d^2 - 6d + 3 = 12 - (d + 3)^2$ — უდიდესია, როცა $d = -3$.<br><br><strong>პასუხი:</strong> ა) $-3$.",
+    area: "algebra",
+    topics: ["arithmetic-prog","max-min"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -122,7 +226,15 @@ quizData = [
     options: ["$180^\\circ$", "$120^\\circ$", "$90^\\circ$", "$60^\\circ$", "$45^\\circ$", "$30^\\circ$"],
     correct: 0,
     tags: [],
-    solution: "$(\\vec{a} + 2\\vec{b})(\\vec{b} - \\vec{a}) = \\vec{a}\\cdot\\vec{b} - |\\vec{a}|^2 + 2|\\vec{b}|^2 - 2\\vec{a}\\cdot\\vec{b} = 7 - \\vec{a}\\cdot\\vec{b} = 9$, ე.ი. $\\vec{a}\\cdot\\vec{b} = -2$.<br><br>$\\cos\\varphi = \\dfrac{-2}{1 \\cdot 2} = -1$, $\\varphi = 180^\\circ$.<br><br><strong>პასუხი:</strong> ა) $180^\\circ$."
+    solution: "$(\\vec{a} + 2\\vec{b})(\\vec{b} - \\vec{a}) = \\vec{a}\\cdot\\vec{b} - |\\vec{a}|^2 + 2|\\vec{b}|^2 - 2\\vec{a}\\cdot\\vec{b} = 7 - \\vec{a}\\cdot\\vec{b} = 9$, ე.ი. $\\vec{a}\\cdot\\vec{b} = -2$.<br><br>$\\cos\\varphi = \\dfrac{-2}{1 \\cdot 2} = -1$, $\\varphi = 180^\\circ$.<br><br><strong>პასუხი:</strong> ა) $180^\\circ$.",
+    area: "geometry",
+    topics: ["dot-product"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15 (the answer sheet marks all six options as correct)
@@ -131,7 +243,15 @@ quizData = [
     options: ["$\\dfrac{1}{2}$", "$\\dfrac{3}{4}$", "$\\dfrac{\\sqrt{3}}{3}$", "$\\dfrac{1}{4}$", "$\\dfrac{1}{3}$", "$\\dfrac{\\sqrt{3}}{6}$"],
     correct: [0, 1, 2, 3, 4, 5],
     tags: [],
-    solution: "<strong>ამ ამოცანაში ყველა პასუხი ჩაითვალა სწორად.</strong><br><br>ამოხსნა: დიდი ექვსკუთხედის გვერდი $a$; მასში ჩახაზული წრეწირის რადიუსია $\\dfrac{a\\sqrt{3}}{2}$, ამ წრეწირში ჩახაზული ექვსკუთხედის გვერდიც $\\dfrac{a\\sqrt{3}}{2}$-ია. მსგავსების კოეფიციენტი $\\dfrac{\\sqrt{3}}{2}$, ფართობების შეფარდება (ალბათობა) $\\dfrac{3}{4}$.<br><br><strong>პასუხი:</strong> $\\dfrac{3}{4}$ (ჩაითვალა ნებისმიერი პასუხი)."
+    solution: "<strong>ამ ამოცანაში ყველა პასუხი ჩაითვალა სწორად.</strong><br><br>ამოხსნა: დიდი ექვსკუთხედის გვერდი $a$; მასში ჩახაზული წრეწირის რადიუსია $\\dfrac{a\\sqrt{3}}{2}$, ამ წრეწირში ჩახაზული ექვსკუთხედის გვერდიც $\\dfrac{a\\sqrt{3}}{2}$-ია. მსგავსების კოეფიციენტი $\\dfrac{\\sqrt{3}}{2}$, ფართობების შეფარდება (ალბათობა) $\\dfrac{3}{4}$.<br><br><strong>პასუხი:</strong> $\\dfrac{3}{4}$ (ჩაითვალა ნებისმიერი პასუხი).",
+    area: "geometry",
+    topics: ["regular-polygon","probability"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 16
@@ -140,7 +260,15 @@ quizData = [
     options: ["$65$", "$20$", "$84$", "$48$", "$91$", "$105$"],
     correct: 2,
     tags: [],
-    solution: "არითმეტიკული: $(n - 9)d = (5 - m)d$, $d \\ne 0$, ამიტომ $n + m = 14$.<br>გეომეტრიული: $\\dfrac{b_m}{b_n} = q^{m - n}$, $\\dfrac{b_5}{b_{11}} = q^{-6}$, ამიტომ $m - n = -6$, ე.ი. $n - m = 6$.<br><br>$n^2 - m^2 = (n - m)(n + m) = 6 \\cdot 14 = 84$.<br><br><strong>პასუხი:</strong> გ) $84$."
+    solution: "არითმეტიკული: $(n - 9)d = (5 - m)d$, $d \\ne 0$, ამიტომ $n + m = 14$.<br>გეომეტრიული: $\\dfrac{b_m}{b_n} = q^{m - n}$, $\\dfrac{b_5}{b_{11}} = q^{-6}$, ამიტომ $m - n = -6$, ე.ი. $n - m = 6$.<br><br>$n^2 - m^2 = (n - m)(n + m) = 6 \\cdot 14 = 84$.<br><br><strong>პასუხი:</strong> გ) $84$.",
+    area: "algebra",
+    topics: ["arithmetic-prog","geometric-prog"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -149,7 +277,15 @@ quizData = [
     options: ["$-0{,}125$", "$27$", "$-64$", "$8$", "$-27$", "$64$"],
     correct: 3,
     tags: [],
-    solution: "$b_5 - b_6 - b_3 = q(b_4 - b_5 - b_2) = -q(b_2 + b_5 - b_4) = -12q$. პირობით $-12q = -6$, $q = \\dfrac{1}{2}$.<br><br>$b_9 : b_{12} = \\dfrac{1}{q^3} = 8$.<br><br><strong>პასუხი:</strong> დ) $8$."
+    solution: "$b_5 - b_6 - b_3 = q(b_4 - b_5 - b_2) = -q(b_2 + b_5 - b_4) = -12q$. პირობით $-12q = -6$, $q = \\dfrac{1}{2}$.<br><br>$b_9 : b_{12} = \\dfrac{1}{q^3} = 8$.<br><br><strong>პასუხი:</strong> დ) $8$.",
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -158,7 +294,15 @@ quizData = [
     options: ["$1$", "$5$", "$3$", "$2$", "$4$", "$10$"],
     correct: 2,
     tags: [],
-    solution: "$x - 2y = 1 \\Leftrightarrow y = \\dfrac{x}{2} - \\dfrac{1}{2}$, კუთხური კოეფიციენტი $\\dfrac{1}{2}$, ამიტომ მართობულისთვის $k = -2$.<br><br>$y = -2x + b \\Leftrightarrow 2x + y - b = 0$; მანძილი სათავიდან: $\\dfrac{|b|}{\\sqrt{5}} = \\sqrt{5}$, $|b| = 5$.<br><br>$\\sqrt{b^2 - 4k^2} = \\sqrt{25 - 16} = 3$.<br><br><strong>პასუხი:</strong> გ) $3$."
+    solution: "$x - 2y = 1 \\Leftrightarrow y = \\dfrac{x}{2} - \\dfrac{1}{2}$, კუთხური კოეფიციენტი $\\dfrac{1}{2}$, ამიტომ მართობულისთვის $k = -2$.<br><br>$y = -2x + b \\Leftrightarrow 2x + y - b = 0$; მანძილი სათავიდან: $\\dfrac{|b|}{\\sqrt{5}} = \\sqrt{5}$, $|b| = 5$.<br><br>$\\sqrt{b^2 - 4k^2} = \\sqrt{25 - 16} = 3$.<br><br><strong>პასუხი:</strong> გ) $3$.",
+    area: "algebra",
+    topics: ["linear-func","line-circle-eq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -167,7 +311,15 @@ quizData = [
     options: ["$90^\\circ$", "$120^\\circ$", "$30^\\circ$", "$180^\\circ$", "$60^\\circ$", "$150^\\circ$"],
     correct: 3,
     tags: [],
-    solution: "$\\overrightarrow{DA} = 0{,}1\\overrightarrow{DC} + 0{,}9\\overrightarrow{DB}$ და $0{,}1 + 0{,}9 = 1$, ამიტომ $A$ ძევს $BC$ მონაკვეთზე ($A = 0{,}1C + 0{,}9B$, ე.ი. $BA : AC = 1 : 9$).<br><br>$A$ არის $B$-სა და $C$-ს შორის, ამიტომ $\\overrightarrow{CA}$ და $\\overrightarrow{BA}$ საპირისპიროდაა მიმართული: კუთხე $180^\\circ$.<br><br><strong>პასუხი:</strong> დ) $180^\\circ$."
+    solution: "$\\overrightarrow{DA} = 0{,}1\\overrightarrow{DC} + 0{,}9\\overrightarrow{DB}$ და $0{,}1 + 0{,}9 = 1$, ამიტომ $A$ ძევს $BC$ მონაკვეთზე ($A = 0{,}1C + 0{,}9B$, ე.ი. $BA : AC = 1 : 9$).<br><br>$A$ არის $B$-სა და $C$-ს შორის, ამიტომ $\\overrightarrow{CA}$ და $\\overrightarrow{BA}$ საპირისპიროდაა მიმართული: კუთხე $180^\\circ$.<br><br><strong>პასუხი:</strong> დ) $180^\\circ$.",
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -176,7 +328,15 @@ quizData = [
     options: ["$\\dfrac{1}{\\sqrt{65}}$", "$\\dfrac{1}{3}$", "$\\dfrac{\\sqrt{2}}{10}$", "$\\dfrac{2}{5}$", "$\\dfrac{8}{\\sqrt{65}}$", "$\\dfrac{\\sqrt{3}}{6}$"],
     correct: 2,
     tags: [],
-    solution: "$A(0;\\ 0)$, $B(2;\\ 0)$, $C(2;\\ 2)$, $D(0;\\ 2)$; $M(1;\\ 2)$, $K\\left(2;\\ \\dfrac{2}{3}\\right)$.<br><br>$\\overrightarrow{AK} = \\left(2;\\ \\dfrac{2}{3}\\right)$, $\\overrightarrow{BM} = (-1;\\ 2)$. $\\overrightarrow{AK}\\cdot\\overrightarrow{BM} = -2 + \\dfrac{4}{3} = -\\dfrac{2}{3}$; $|\\overrightarrow{AK}| = \\dfrac{2\\sqrt{10}}{3}$, $|\\overrightarrow{BM}| = \\sqrt{5}$.<br><br>მახვილი კუთხის კოსინუსი: $\\dfrac{2/3}{\\frac{2\\sqrt{10}}{3}\\sqrt{5}} = \\dfrac{1}{\\sqrt{50}} = \\dfrac{\\sqrt{2}}{10}$.<br><br><strong>პასუხი:</strong> გ) $\\dfrac{\\sqrt{2}}{10}$."
+    solution: "$A(0;\\ 0)$, $B(2;\\ 0)$, $C(2;\\ 2)$, $D(0;\\ 2)$; $M(1;\\ 2)$, $K\\left(2;\\ \\dfrac{2}{3}\\right)$.<br><br>$\\overrightarrow{AK} = \\left(2;\\ \\dfrac{2}{3}\\right)$, $\\overrightarrow{BM} = (-1;\\ 2)$. $\\overrightarrow{AK}\\cdot\\overrightarrow{BM} = -2 + \\dfrac{4}{3} = -\\dfrac{2}{3}$; $|\\overrightarrow{AK}| = \\dfrac{2\\sqrt{10}}{3}$, $|\\overrightarrow{BM}| = \\sqrt{5}$.<br><br>მახვილი კუთხის კოსინუსი: $\\dfrac{2/3}{\\frac{2\\sqrt{10}}{3}\\sqrt{5}} = \\dfrac{1}{\\sqrt{50}} = \\dfrac{\\sqrt{2}}{10}$.<br><br><strong>პასუხი:</strong> გ) $\\dfrac{\\sqrt{2}}{10}$.",
+    area: "geometry",
+    topics: ["dot-product"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates","vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 21
@@ -185,7 +345,15 @@ quizData = [
     options: ["არცერთი", "$1$", "$2$", "$3$", "$4$", "$4$-ზე მეტი"],
     correct: 3,
     tags: [],
-    solution: "ფესვები სიმეტრიულია ($\\pm u$, $\\pm v$); $u^2 + v^2 = 2m + 4$, $u^2v^2 = m^2$.<br><br>1) ოთხი ფესვი $-v, -u, u, v$ არითმეტიკულ პროგრესიაშია: $v = 3u$. $10u^2 = 2m + 4$ და $9u^4 = m^2$, $m = \\pm 3u^2$:<br>$m = 3u^2$: $u^2 = 1$, $m = 3$; $m = -3u^2$: $u^2 = \\dfrac{1}{4}$, $m = -\\dfrac{3}{4}$.<br>2) სამი ფესვი: $0$ ფესვია, $m = 0$: $x^4 - 4x^2 = 0$, ფესვები $-2, 0, 2$ — პროგრესიაა.<br><br>სულ $3$ მნიშვნელობა: $m \\in \\left\\{3;\\ -\\dfrac{3}{4};\\ 0\\right\\}$.<br><br><strong>პასუხი:</strong> დ) $3$."
+    solution: "ფესვები სიმეტრიულია ($\\pm u$, $\\pm v$); $u^2 + v^2 = 2m + 4$, $u^2v^2 = m^2$.<br><br>1) ოთხი ფესვი $-v, -u, u, v$ არითმეტიკულ პროგრესიაშია: $v = 3u$. $10u^2 = 2m + 4$ და $9u^4 = m^2$, $m = \\pm 3u^2$:<br>$m = 3u^2$: $u^2 = 1$, $m = 3$; $m = -3u^2$: $u^2 = \\dfrac{1}{4}$, $m = -\\dfrac{3}{4}$.<br>2) სამი ფესვი: $0$ ფესვია, $m = 0$: $x^4 - 4x^2 = 0$, ფესვები $-2, 0, 2$ — პროგრესიაა.<br><br>სულ $3$ მნიშვნელობა: $m \\in \\left\\{3;\\ -\\dfrac{3}{4};\\ 0\\right\\}$.<br><br><strong>პასუხი:</strong> დ) $3$.",
+    area: "algebra",
+    topics: ["higher-degree","arithmetic-prog"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -194,7 +362,15 @@ quizData = [
     options: ["$1$", "$\\dfrac{1}{3}$", "$\\dfrac{5}{6}$", "$\\dfrac{1}{2}$", "$\\dfrac{1}{9}$", "$\\dfrac{1}{6}$"],
     correct: 4,
     tags: [],
-    solution: "$f(x) = x^2 - ax - 2$ (შტოები ზემოთ). ერთი ფესვი $\\le -1$, მეორე $\\ge 1$ მაშინ და მხოლოდ მაშინ, როცა $f(-1) \\le 0$ და $f(1) \\le 0$:<br>$f(-1) = a - 1 \\le 0$, $f(1) = -a - 1 \\le 0$, ე.ი. $a \\in [-1;\\ 1]$.<br><br>ალბათობა: $\\dfrac{2}{18} = \\dfrac{1}{9}$.<br><br><strong>პასუხი:</strong> ე) $\\dfrac{1}{9}$."
+    solution: "$f(x) = x^2 - ax - 2$ (შტოები ზემოთ). ერთი ფესვი $\\le -1$, მეორე $\\ge 1$ მაშინ და მხოლოდ მაშინ, როცა $f(-1) \\le 0$ და $f(1) \\le 0$:<br>$f(-1) = a - 1 \\le 0$, $f(1) = -a - 1 \\le 0$, ე.ი. $a \\in [-1;\\ 1]$.<br><br>ალბათობა: $\\dfrac{2}{18} = \\dfrac{1}{9}$.<br><br><strong>პასუხი:</strong> ე) $\\dfrac{1}{9}$.",
+    area: "prob-stats",
+    topics: ["probability","quadratic-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -203,7 +379,15 @@ quizData = [
     options: ["$26$", "$16$", "$18$", "$15$", "$22$", "$32$"],
     correct: 3,
     tags: [],
-    solution: "რიცხვები $x, xq, xq^2$ ($q \\ge 2$ ნატურალური): $\\dfrac{x(1 + q + q^2)}{3} = xq + 3$, ე.ი. $x(q - 1)^2 = 9$.<br><br>$(q - 1)^2 \\in \\{1;\\ 9\\}$:<br>$q = 2$, $x = 9$: $9, 18, 36$ — დიაპაზონი $27$;<br>$q = 4$, $x = 1$: $1, 4, 16$ — დიაპაზონი $15$.<br><br>ვარიანტებში არის $15$.<br><br><strong>პასუხი:</strong> დ) $15$."
+    solution: "რიცხვები $x, xq, xq^2$ ($q \\ge 2$ ნატურალური): $\\dfrac{x(1 + q + q^2)}{3} = xq + 3$, ე.ი. $x(q - 1)^2 = 9$.<br><br>$(q - 1)^2 \\in \\{1;\\ 9\\}$:<br>$q = 2$, $x = 9$: $9, 18, 36$ — დიაპაზონი $27$;<br>$q = 4$, $x = 1$: $1, 4, 16$ — დიაპაზონი $15$.<br><br>ვარიანტებში არის $15$.<br><br><strong>პასუხი:</strong> დ) $15$.",
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24
@@ -212,7 +396,15 @@ quizData = [
     options: ["$0$", "$1$", "$1{,}2$", "$2$", "$2{,}4$", "$3$"],
     correct: 1,
     tags: [],
-    solution: "$(x + 3)^2 + (y - 4)^2 = 25$: ცენტრი $(-3;\\ 4)$, $R = 5$. წრფე: $4x - 3y - 6 = 0$.<br><br>მანძილი ცენტრიდან წრფემდე: $\\dfrac{|-12 - 12 - 6|}{5} = 6 > 5$ — წრფე წრეწირს არ კვეთს. $AB$-ს უმცირესი სიგრძე: $6 - 5 = 1$.<br><br><strong>პასუხი:</strong> ბ) $1$."
+    solution: "$(x + 3)^2 + (y - 4)^2 = 25$: ცენტრი $(-3;\\ 4)$, $R = 5$. წრფე: $4x - 3y - 6 = 0$.<br><br>მანძილი ცენტრიდან წრფემდე: $\\dfrac{|-12 - 12 - 6|}{5} = 6 > 5$ — წრფე წრეწირს არ კვეთს. $AB$-ს უმცირესი სიგრძე: $6 - 5 = 1$.<br><br><strong>პასუხი:</strong> ბ) $1$.",
+    area: "geometry",
+    topics: ["line-circle-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25
@@ -221,6 +413,14 @@ quizData = [
     options: ["$12$", "$9{,}8$", "$11$", "$10{,}4$", "$8$", "$12{,}2$"],
     correct: 2,
     tags: [],
-    solution: "$\\overrightarrow{AB} = (8;\\ 6)$, $|\\overrightarrow{AB}| = 10$; $\\overrightarrow{BC} = (5;\\ -10)$.<br><br>$S_{ABC} = \\dfrac{1}{2}|8 \\cdot (-10) - 6 \\cdot 5| = 55$. $CH = \\dfrac{2S}{AB} = \\dfrac{110}{10} = 11$.<br><br><strong>პასუხი:</strong> გ) $11$."
+    solution: "$\\overrightarrow{AB} = (8;\\ 6)$, $|\\overrightarrow{AB}| = 10$; $\\overrightarrow{BC} = (5;\\ -10)$.<br><br>$S_{ABC} = \\dfrac{1}{2}|8 \\cdot (-10) - 6 \\cdot 5| = 55$. $CH = \\dfrac{2S}{AB} = \\dfrac{110}{10} = 11$.<br><br><strong>პასუხი:</strong> გ) $11$.",
+    area: "geometry",
+    topics: ["vectors","area-formulas"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

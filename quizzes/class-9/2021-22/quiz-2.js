@@ -3,61 +3,141 @@ quizData = [
   {
     question: "ამოხსენით უტოლობა: $\\frac{{(x - 2x^2)}^3{(3x + 9)}}{- x^2 + 5x - 6} \\leq 0 $",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 2
   {
     question: "სამკუთხედის სამი გვერდის სიგრძეა $13$სმ, $14$სმ და $15$სმ. იპოვეთ ამ სამკუთხედზე შემოხაზული და ამ სამკუთხედში ჩახაზული წრეწირების რადიუსები.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 3
   {
     question: "ამოზნექილ $ABCD$ ოთხკუთხედში $AC$ და $BD$ დიაგონალები $O$ წერტილში იკვეთებიან. \nდაამტკიცეთ, რომ $AOB$ და $COD$ სამკუთხედების ფართობების ნამრავლი უდრის $BOC$ და $AOD$ სამკუთხედების ფართობების ნამრავლს.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["area-formulas"],
+    grade: 9,
+    difficulty: 2,
+    type: ["proof"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 4
   {
     question: "$a$ პარამეტრის რა მნიშვნელობებისათვის იქნება $ y = (x - 2a)^2 - 3a + 1 $ პარაბოლის წვერო მეორე მეოთხედში?",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["special-products","linear-func","quadratic-func"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 5
   {
     question: "ტრაპეციის დიაგონალი ამ ტრაპეციის ფართობს ყოფს შეფარდებით $3:5$. იპოვეთ რა შეფარდებით გაყოფს ამ ტრაპეციის ფართობს შუა ხაზი?",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 6
   {
     question: "იპოვეთ ცვლადის ყველა მნიშვნელობა, რომლისთვისაც სამართლიანია: <br><br> ა) $|x - 3| + |x + 2| = 5$ <br><br> ბ) $|x - 1| + |x - 8| > 9$",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 7
   {
   image: "quizzes/class-9/images/image2.png",
     question: "სამკუთხედის ფერდი დაყოფილია $4$ ტოლ ნაწილად და დაყოფის წერტილებიდან გავლებულია ფუძის პარალელური მონაკვეთები ისე, როგორც ნახაზზეა ნაჩვენები. \nრას უდრის სამკუთხედის გამუქებული და გაუმუქებული ნაწილების ფართობების შეფარდება?",
     options: [],
-    tags: []
+    tags: [],
+  area: "geometry",
+  topics: ["area-ratios"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
   },
   // 8
   {
     question: "მოცემულია $ x^2 + 2ax - 7a = 0$ კვადრატული განტოლება, რომლის ამონახსნებია $x_1$ და $x_2$. იპოვეთ $ x_1^2 + x_2^2 + x_1x_2$ გამოსახულების მინიმალური მნიშვნელობა.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-eq","vieta"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 9
   {
     question: "$ABC$ სამკუთხედის $AB$ გვერდზე აღებულია $D$ წერტილი და $BC$ გვერდზე $E$ წერტილი ისე, რომ $AD:DB = 2:1$ და $BE:EC = 1:3$. $AE$ და $DC$ იკვეთება $K$ წერტილში. იპოვეთ $AKC$ და $ABC$ სამკუთხედების ფართობების შეფარდება.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["area-ratios"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 10
   {
     question: "იპოვეთ $a$ პარამეტრის ყველა მნიშვნელობა, რომლისთვისაც $ ax^2 + (2a - 1)x + a + 1 = 0 $ განტოლების ერთი ფესვი იქნება $(-1; 0)$ შუალედში, ხოლო მეორე ფესვი $(0; 1)$ შუალედში.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

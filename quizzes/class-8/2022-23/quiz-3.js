@@ -4,63 +4,135 @@ quizData = [
     question: "ჩამოთვლილთაგან რომელია $x^2 + 2x - 8 = 0$ კვადრატული განტოლების ამონახსნთა შეფარდების მოდული?",
     options: ["$\\sqrt{3}$", "$\\frac{3}{2}$", "$3$", "$2$", "$\\sqrt{2}$", "$4$"],
     correct: 3,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 2
   {
     question: "ტრაპეციაში ფუძეები $3$-ისა და $9$-ის  ტოლია. იპოვეთ ტრაპეციის დიაგონალების გადაკვეთის წერტილზე გამავალი ფუძეების პარალელური წრფის იმ ნაწილის სიგრძე, რომელიც ფერდებს შორისაა მოქცეული.",
     options: ["$5$", "$2\\sqrt{5}$", "$3{,}25\\sqrt{2}$", "$4$", "$2\\sqrt{5}$", "$4{,}5$"],
     correct: 5,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["trapezoid","parallel-lines"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 3
   {
     question: "რისი ტოლია $(x^2 + 13x)(199 - x^2) \\cdot \\sqrt{14 - x} = 0$ განტოლების ფესვთა რაოდენობა?",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$0$"],
     correct: 3,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["quadratic-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 4
   {
     question: "პარალელოგრამის დიაგონალები $8$-ისა და $10$-ის ტოლია. რისი ტოლია პარალელოგრამის უდიდესი გვერდის სიგრძე, თუ ერთ-ერთი დიაგონალი პარალელოგრამის გვერდის მართობულია.",
     options: ["$2\\sqrt{37}$", "$7$", "$16$", "$3\\sqrt{15}$", "$12$", "$\\sqrt{73}$"],
     correct: 5,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["parallelogram"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 5
   {
     question: "$ABCD$ მართკუთხედში გვერდი $AB = 4$. რისი ტოლია ამ მართკუთხედის პერიმეტრი, თუ მანძილი $A$ წერტილიდან $BD$ დიაგონალამდე $2{,}4$-ის ტოლია?",
     options: ["$16$", "$4\\sqrt{6} + 8$", "$18$", "$15$", "$8 + 4\\sqrt{3}$", "$14$"],
     correct: 5,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["rhombus-rect-sq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 6
   {
     question: "$y = x^2$ და $y = x + 3$ ფუნქციების გრაფიკებს რამდენი საერთო წერტილი აქვთ?",
     options: ["არცერთი", "$1$", "$2$", "$3$", "$4$", "უამრავი"],
     correct: 2,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 7
   {
     question: "გამოითვალეთ: $\\frac{2}{\\sqrt{18} + 4} + \\frac{2}{4 - 3\\sqrt{2}}$.",
     options: ["$8 - 3\\sqrt{2}$", "$-3\\sqrt{2}$", "$-\\sqrt{18}$", "$16$", "$3\\sqrt{2} - 8$", "$-8$"],
     correct: 5,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 8
   {
     question: "$a = 2 + \\sqrt{3};\\quad b = 2\\sqrt{2};\\quad c = 4$; &emsp; სიდიდეები დაალაგეთ ზრდის მიხედვით.",
     options: ["$c; b; a$", "$b; a; c$", "$a; b; c$", "$a; c; b$", "$c; a; b$", "$b; c; a$"],
     correct: 1,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["numeric-ineq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 9
   {
     question: "იპოვეთ მართკუთხა სამკუთხედში კათეტების შეფარდება, თუ ერთ-ერთი კათეტის გეგმილის სიგრძე ჰიპოტენუზის მესამედია.",
     options: ["$1:2$", "$\\sqrt{2} : \\sqrt{3}$", "$1:3$", "$1: \\sqrt{2}$", "$2:3$", "$1: \\sqrt{3}$"],
     correct: 3,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["right-triangle"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 10
   {
@@ -69,21 +141,45 @@ quizData = [
     question: "მათემატიკის მასწავლებელმა მე-$8$ კლასის მოსწავლეებს დაავალა დაფაზე ცენტრის გარეშე დახაზული წრეწირის ცენტრის ზუსტად დაფიქსირება. ამისათვის მათ დაფის ფარგალი და ერთი მხრიდან სწორი დანაყოფების გარშე სახაზავი მისცა. მარიამმა ეს პრობლემა მარტივად გადაწყვიტა. ამისათვის მას მინიმუმ რამდენი წრეწირის (ან წრეწირის ნაწილის) დახაზვა მოუწევდა?",
     options: ["არცერთის", "$1$", "$2$", "$3$", "$4$", "$5$"],
     correct: [0,1,2,3,4,5],
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["constructions"],
+    grade: 8,
+    difficulty: 2,
+    type: ["construction","word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 11
   {
     question: "გამოთვალეთ: $(\\sqrt{3} - 1) \\left( \\frac{1}{\\sqrt{2} - 1} + \\frac{1}{\\sqrt{2} + \\sqrt{3}} \\right)$.",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 1,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 12
   {
     question: "გაამარტივეთ $\\frac{a\\sqrt{a} + 27}{\\sqrt{a} - \\sqrt{b}} \\cdot \\left( \\frac{\\sqrt{a} - 3}{a - 3\\sqrt{a} + 9} - \\frac{\\sqrt{ab} - 9}{a\\sqrt{a} + 27} \\right)$ გამოსახულება და იპოვეთ მის მნიშვნელობა, თუ $a = 8$ და $b = 199$.",
     options: ["$2\\sqrt{2} + \\sqrt{199}$", "$3\\sqrt{3}$", "$8$", "$\\sqrt{199}$", "$191$", "$2\\sqrt{2}$"],
     correct: 5,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["rational-expr"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 13
   {
@@ -92,42 +188,90 @@ quizData = [
     question: "იპოვეთ $x$-ის ყველა იმ მნიშვნელობათა ჯამი, რომელთათვისაც $\\frac{\\sqrt{x^2 - 2x}}{5} + \\frac{3}{\\sqrt{x^2 - 2x}}$ გამოსახულება მინიმალურ მნიშვნელობას იღებს.",
     options: ["$5$", "$-2$", "$8$", "$15$", "$2$", "$4$"],
     correct: [0,1,2,3,4,5],
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 14
   {
     question: "რომბის სიმაღლე $8$-ის ტოლია. რისი ტოლია რომბის გვერდის სიგრძე, თუ უმცირესი დიაგონალის სიგრძე $4\\sqrt{5}$-ის ტოლია",
     options: ["$3\\sqrt{5}$", "$12$", "$2\\sqrt{10}$", "$10$", "$5\\sqrt{2}$", "$8$"],
     correct: 3,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["rhombus-rect-sq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 15
   {
     question: "ორი წრეწირი გარედან ეხება ერთმანეთს. ამ წრეწირების რადიუსების ნამრავლი $8$-ის ტოლია. იპოვეთ მათი საერთო გარე მხების სიგრძე.",
     options: ["$2\\sqrt{3}$", "$4$", "$4\\sqrt{2}$", "$4\\sqrt{3}$", "$2 + \\sqrt{2}$", "$3 + \\sqrt{3}$"],
     correct: 2,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 16
   {
     question: "იპოვეთ $a$ პარამეტრის ყველა მნიშვნელობა, რომლისთვისაც $\\frac{x - a}{\\sqrt{x - 1}} = 0$ განტოლებას ერთი ამონახსნი გააჩნია.",
     options: ["$a \\ge 0$", "$a > -1$", "$a = 1$", "$a \\in$ ∅", "$a > 1$", "$a \\in \\mathbb{R}$"],
     correct: 4,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["rational-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 17
   {
     question: "იპოვეთ $a$ პარამეტრის ყველა მნიშვნელობა, რომლისთვისაც $\\frac{2x^2 - 5x + 2}{\\sqrt{x - a}} = 0$ განტოლებას ამონახსნი არ გააჩნია.",
     options: ["$a \\ge 0$", "$a \\le 0$", "$a = 2$", "$a \\in \\emptyset$", "$a \\le \\frac{1}{2}$", "$a \\ge 2$"],
     correct: 5,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["quadratic-eq","rational-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 18
   {
     question: "იპოვეთ $\\sqrt{2a - 1} + \\sqrt{2b - 1}$ გამოსახულების უდიდესი მნიშვნელობა, თუ $a + b = 5$ და $a > \\frac{1}{2}$; &nbsp; $b > \\frac{1}{2}$.",
     options: ["$2\\sqrt{5}$", "$4$", "$\\sqrt{10}$", "$5$", "$5\\sqrt{2}$", "$2\\sqrt{2}$"],
     correct: 1,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 19
   {
@@ -137,48 +281,104 @@ quizData = [
     III. ააგეთ ტოლფერდა სამკუთხედი ფუძით და შემოხაზული წრეწირის რადიუსით.`,
     options: ["მხოლოდ I", "მხოლოდ II", "მხოლოდ III", "I და II", "II და III", "I და III"],
     correct: 2,
-    tag: ""
+    tag: "",
+    area: "prob-stats",
+    topics: ["statistics","isosceles","right-triangle"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 20
   {
     question: "$AB$ მონაკვეთის ბოლოები $a$ წრფის მიმართ სხვადასხვა ნახევარსიბრტყეშია. რისი ტოლია $AB$ მონაკვეთის სიგრძე, თუ $A$ და $B$ წერტილებიდან $a$ წრფისადმი დაშვებული მართობთა სიგრძეები შესაბამისად $3$-ისა და $5$-ის ტოლია, ხოლო დაშვებულ მართობთა ფუძეებს შორის მანძილი $6$-ის ტოლია.",
     options: ["$10$", "$9$", "$4\\sqrt{5}$", "$5$", "$15$", "$5\\sqrt{3}$"],
     correct: 0,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 21
   {
     question: "იპოვეთ $\\frac{4x + 9}{\\sqrt{x}}$ გამოსახულების უმცირესი მნიშვნელობა.",
     options: ["$6$", "$10$", "$12$", "$14$", "$7{,}5$", "$9$"],
     correct: 2,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 22
   {
     question: "რისი ტოლია $\\frac{\\sqrt{x - 2\\sqrt{x - 1}} + \\sqrt{x + 2\\sqrt{x - 1}}}{\\sqrt{x^2 - 4x + 4}}$ გამოსახულების <b>მნიშვნელობა</b>, თუ $x = \\sqrt{2}$.",
     options: ["$2 + \\sqrt{2}$", "$\\frac{1}{\\sqrt{2}}$", "$2 - \\sqrt{2}$", "$\\frac{2}{\\sqrt{2} - 2}$", "$2\\sqrt{2}$", "$1$"],
     correct: 0,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 23
   {
     question: "გამოითვალეთ: $\\frac{1}{5\\sqrt{4} + 4\\sqrt{5}} + \\frac{1}{6\\sqrt{5} + 5\\sqrt{6}} + \\frac{1}{7\\sqrt{6} + 6\\sqrt{7}} + \\frac{1}{8\\sqrt{7} + 7\\sqrt{8}} + \\frac{1}{9\\sqrt{8} + 8\\sqrt{9}}$.",
     options: ["$\\frac{1}{6}$", "$\\frac{\\sqrt{10} - \\sqrt{2}}{5\\sqrt{2}}$", "$\\frac{2}{3}$", "$\\frac{\\sqrt{10} - \\sqrt{2}}{2}$", "$\\frac{1}{2}$", "$\\frac{3 - \\sqrt{5}}{6}$"],
     correct: 0,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 24
   {
     question: "ორი წრეწირის ცენტრების შემაერთებელი მონაკვეთი საერთო შიგა მხებით $4:11$ შეფარდებით იყოფა. რისი ტოლია ცენტრებს შორის მანძილი, თუ შიდა და გარე მხებების სიგრძეები შესაბამისად $20$-ისა და $24$-ის ტოლია.",
     options: ["$30$", "$11\\sqrt{8}$", "$33$", "$26$", "$5\\sqrt{11}$", "$25$"],
     correct: 5,
-    tag: ""
+    tag: "",
+    area: "algebra",
+    topics: ["divisibility","chords-tangents"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 25
   {
     question: "მართკუთხა ტრაპეციაში დიაგონალები ურთიერთმართობულია. რისი ტოლია დიდი ფერდის სიგრძე, თუ ფუძეთა სიგრძეები $1$-ისა და $4$-ის ტოლია.",
     options: ["$3\\sqrt{2}$", "$\\sqrt{15}$", "$3$", "$\\sqrt{13}$", "$4$", "$2\\sqrt{3}$"],
     correct: 3,
-    tag: ""
+    tag: "",
+    area: "geometry",
+    topics: ["trapezoid"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

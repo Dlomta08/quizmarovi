@@ -3,7 +3,15 @@ quizData = [
     question: "\\( y = f(x) \\) ფუნქციის გრაფიკზე მდებარე \\((a; f(a))\\) წერტილზე გავლებული ამ ფუნქციის მხები \\(x\\) ღერძის დადებით მიმართულებასთან ადგენს \\(60^\\circ\\)-ს. იპოვეთ \\(f'(a)\\).",
     options: ["$1$", "$\\sqrt{2}$", "$\\sqrt{3}$", "$2$", "$\\sqrt{5}$", "$\\sqrt{6}$"],
     correct: 2,
-    tags: ["\\text{Derivatives}"]
+    tags: ["\\text{Derivatives}"],
+    area: "calculus",
+    topics: ["derivative"],
+    grade: 11,
+    difficulty: 1,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ \\( f(x) = \\cos x \\) ფუნქციის ის პირველადი ფუნქცია, რომლის გრაფიკიც \\( K\\left(\\frac{\\pi}{6}; \\frac{5}{2}\\right) \\) წერტილზე გადის.",
@@ -16,7 +24,15 @@ quizData = [
       "$F(x) = -\\sin x$"
     ],
     correct: 1,
-    tags: ["\\text{Integrals}"]
+    tags: ["\\text{Integrals}"],
+    area: "calculus",
+    topics: ["antiderivative","definite-integral"],
+    grade: 11,
+    difficulty: 1,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "მუდმივამდე სიზუსტით იპოვეთ \\( \\int e^{\\sin x} \\cdot \\cos x \\, dx \\) ინტეგრალი.",
@@ -24,7 +40,15 @@ quizData = [
       "$-\\cos x$", "$\\sin x$", "$\\sin x \\cdot \\cos x$", "$e^{\\sin x}$", "$e^{\\sin x} \\cdot \\cos x$", "$e^x$"
     ],
     correct: 3,
-    tags: ["\\text{Integrals}"]
+    tags: ["\\text{Integrals}"],
+    area: "calculus",
+    topics: ["definite-integral"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ იმ ოთხკუთხედის ფართობი, რომლის ორი წვერო ემთხვევა \\( x^2 + 2y^2 = 32 \\) ტოლობით მოცემულ ელიფსის ფოკუსებს, ორი კი — ამ ელიფსის მცირე ღერძის ბოლოებს.",
@@ -32,7 +56,15 @@ quizData = [
       "$32$", "$\\frac{16}{\\sqrt{3}}$", "$8\\sqrt{2}$", "$16\\sqrt{3}$", "$5\\sqrt{2}$", "$16$"
     ],
     correct: 0,
-    tags: ["\\text{Conic Sections}"]
+    tags: ["\\text{Conic Sections}"],
+    area: "geometry",
+    topics: ["conics"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "\\( Oxy \\) მართკუთხა საკოორდინატო სიბრტყეზე იპოვეთ \\(A\\) წერტილის კოორდინატები, თუ ცნობილია, რომ \\( y = x^2 \\) ფუნქციის გრაფიკზე მდებარე ყველა წერტილი თანაბრადაა დაშორებული \\(A\\) წერტილიდან და \\( y = -\\frac{1}{4} \\) წრფიდან.",
@@ -45,7 +77,15 @@ quizData = [
       "$\\left(0; \\frac{1}{4}\\right)$"
     ],
     correct: 5,
-    tags: ["\\text{Geometry}"]
+    tags: ["\\text{Geometry}"],
+    area: "geometry",
+    topics: ["line-circle-eq","quadratic-func"],
+    grade: 11,
+    difficulty: 1,
+    type: ["graph"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ \\( f(x) = x^4 - 4x^3 + 4x^2 \\) ფუნქციის მაქსიმალური მნიშვნელობა \\([0; 2]\\) შუალედში.",
@@ -53,7 +93,15 @@ quizData = [
       "$0{,}5$", "$12 - 8\\sqrt{2}$", "$3 - \\sqrt{3}$", "$1{,}5$", "$1$", "$21 - 3\\sqrt{3}$"
     ],
     correct: 4,
-    tags: ["\\text{Extrema}"]
+    tags: ["\\text{Extrema}"],
+    area: "algebra",
+    topics: ["max-min"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ \\( \\int \\cos^2 x \\, dx \\) ინტეგრალი.",
@@ -66,7 +114,15 @@ quizData = [
       "$\\frac{x + \\sin x}{2} + c$"
     ],
     correct: 0,
-    tags: ["\\text{Integrals}"]
+    tags: ["\\text{Integrals}"],
+    area: "calculus",
+    topics: ["definite-integral"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ \\( y = x^2 \\) და \\( y = 4 \\) ფუნქციების გრაფიკებით შემოსაზღვრული ფიგურის ფართობი.",
@@ -74,7 +130,15 @@ quizData = [
       "$11$", "$\\frac{32}{3}$", "$\\frac{21}{2}$", "$\\frac{8}{3}$", "$10$", "$\\frac{10}{3}$"
     ],
     correct: 1,
-    tags: ["\\text{Area}"]
+    tags: ["\\text{Area}"],
+    area: "algebra",
+    topics: ["function-props","quadratic-func"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "\\( Oxy \\) მართკუთხა საკოორდინატო სიბრტყეზე ჰომოთეტიას, ცენტრით \\( M \\) წერტილში და \\(\\frac{3}{2}\\)-ის ტოლი კოეფიციენტით, \\( A(5; -3) \\) წერტილი გადაყავს \\( B(-2; 4) \\) წერტილში. იპოვეთ \\( M \\) წერტილის კოორდინატები.",
@@ -82,7 +146,15 @@ quizData = [
       "$(18; -18)$", "$(19; -17)$", "$(17; -18)$", "$(12; -10)$", "$(21; -19)$", "$(26; -24)$"
     ],
     correct: 1,
-    tags: ["\\text{Transformations}"]
+    tags: ["\\text{Transformations}"],
+    area: "geometry",
+    topics: ["similar-figures","line-circle-eq"],
+    grade: 11,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ ფუნქცია, რომლის გრაფიკიც \\( y = -x - 2 \\) ფუნქციის გრაფიკის სიმეტრიულია \\( A(5; 3) \\) წერტილის მიმართ.",
@@ -90,96 +162,224 @@ quizData = [
       "$y = -x + 18$", "$y = x - 2$", "$y = x + 8$", "$y = -x + 20$", "$y = x - 18$", "$y = -x + 8$"
     ],
     correct: 0,
-    tags: ["\\text{Symmetry}"]
+    tags: ["\\text{Symmetry}"],
+    area: "algebra",
+    topics: ["linear-func","graph-transform"],
+    grade: 11,
+    difficulty: 2,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "ორი დადებითი \\(a\\) და \\(b\\) რიცხვის ჯამი $4$-ის ტოლია. იპოვეთ \\(a\\)-ს რომელი მნიშვნელობისათვის იქნება \\(a^3 + b^2\\) გამოსახულების მნიშვნელობა უმცირესი.",
     options: ["$\\frac{2}{3}$", "$1$", "$\\frac{4}{3}$", "$\\frac{5}{3}$", "$2$", "$\\frac{7}{3}$"],
     correct: 2,
-    tags: ["Optimization"]
+    tags: ["Optimization"],
+    area: "algebra",
+    topics: [],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "\\(Oxy\\) მართკუთხა საკოორდინატო სიბრტყეზე \\( y = \\frac{1}{x} \\), \\( y = 0 \\), \\( x = 1 \\) და \\( x = 3 \\) წირებით შემოსაზღვრული მრუდწირული ტრაპეციის ფართობი და \\( y = \\frac{1}{x} \\), \\( y = 0 \\), \\( x = 3 \\) და \\( x = a \\) წირებით შემოსაზღვრული მრუდწირული ტრაპეციის ფართობი ტოლია. იპოვეთ $1$-სგან განსხვავებული \\( a \\) პარამეტრი.",
     options: ["$a = 2$", "$a = \\ln 10$", "$a = \\ln 100$", "$a = 9$", "$a = 9 \\ln 10$", "$a = 27$"],
     correct: 3,
-    tags: ["Area"]
+    tags: ["Area"],
+    area: "calculus",
+    topics: ["definite-integral","trapezoid","line-circle-eq"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "გამოთვალეთ \\(\\int_{-2}^{2} |x + 1| \\, dx\\) ინტეგრალი.",
     options: ["$4$", "$3\\sqrt{2}$", "$2\\sqrt{6}$", "$5$", "$2\\sqrt{7}$", "$4\\sqrt{2}$"],
     correct: 3,
-    tags: ["Integrals"]
+    tags: ["Integrals"],
+    area: "calculus",
+    topics: ["definite-integral"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "ჩამოთვლილთაგან რომელი ვექტორის გასწვრივ პარალელური გადატანით აისახება \\(3x + 4y = 5\\) განტოლებით მოცემული წრფე თავის თავში?",
     options: ["$\\vec{a}(3; 4)$", "$\\vec{b}(8; 6)$", "$\\vec{c}(8; -6)$", "$\\vec{d}(-3; 4)$", "$\\vec{e}(4; 3)$", "$\\vec{f}(-8; -6)$"],
     correct: 2,
-    tags: ["Vectors"]
+    tags: ["Vectors"],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 11,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "რომელ \\(M_1\\) წერტილში აისახება \\(M(a, b)\\) წერტილი კოორდინატთა სათავის მიმართ საათის ისრის საწინააღმდეგო მიმართულებით \\(90^\\circ\\)-იანი კუთხით მობრუნებისას?",
     options: ["$M_1(-a; b)$", "$M_1(a; -b)$", "$M_1(-a; -b)$", "$M_1(b; a)$", "$M_1(-b; a)$", "$M_1(-b; -a)$"],
     correct: 4,
-    tags: ["Transformations"]
+    tags: ["Transformations"],
+    area: "geometry",
+    topics: [],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ წრფივი ფუნქცია, რომლის გრაფიკი არის \\( y = x^3 + 2x - 2 \\) ფუნქციის მხები და \\( y = x + 3 \\) ფუნქციის გრაფიკის პარალელური.",
     options: ["$y = x$", "$y = x + 1$", "$y = x - 1$", "$y = x + 2$", "$y = x - 2$", "ასეთი არ არსებობს"],
     correct: 5,
-    tags: ["Derivatives"]
+    tags: ["Derivatives"],
+    area: "calculus",
+    topics: ["derivative"],
+    grade: 11,
+    difficulty: 2,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ \\( y = \\frac{1}{\\cos x} \\), \\( y = 0 \\), \\( x = \\frac{\\pi}{6} \\) და \\( x = \\frac{\\pi}{3} \\) წირებით შემოსაზღვრული მრუდწირული ტრაპეციის \\(x\\) ღერძის გარშემო ბრუნვით მიღებული სივრცული სხეულის მოცულობა.",
     options: ["$3\\pi$", "$\\frac{3\\pi}{\\sqrt{2}}$", "$\\pi\\sqrt{3}$", "$2\\pi$", "$\\frac{3\\pi}{2}$", "$\\frac{2\\pi}{\\sqrt{3}}$"],
     correct: 5,
-    tags: ["Volumes"]
+    tags: ["Volumes"],
+    area: "calculus",
+    topics: ["definite-integral","trapezoid","trig-eq"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ \\( x^2 + 2y^2 = 4 \\) განტოლებით მოცემული ელიფსის \\(x\\) ღერძის გარშემო ბრუნვით მიღებული სივრცული სხეულის მოცულობა.",
     options: ["$4\\pi$", "$16\\pi$", "$\\frac{15\\pi}{2}$", "$\\frac{11\\pi}{2}$", "$\\frac{16\\pi}{3}$", "$8\\pi$"],
     correct: 4,
-    tags: ["Volumes"]
+    tags: ["Volumes"],
+    area: "calculus",
+    topics: ["definite-integral","conics","volume-surface"],
+    grade: 11,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "სავარაუდო პასუხებში ჩამოთვლილთაგან, რომელი განტოლებით მოცემული წირის ასიმპტოტები არ არიან ურთიერთმართობული?",
     options: ["$xy = 2$", "$x^2 - 2y^2 = 1$", "$y = \\frac{1}{x}$", "$x^2 - y^2 = 2$", "$y = -\\frac{3}{x}$", "$x^2 - y^2 = -2$"],
     correct: 1,
-    tags: ["Asymptotes"]
+    tags: ["Asymptotes"],
+    area: "calculus",
+    topics: ["curve-sketching"],
+    grade: 11,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "მართკუთხა საკოორდინატო სივრცეში მოცემულია \\( A(1; 0; 3) \\), \\( B(3; -2; 1) \\) და \\( C(5; 1; 4) \\) წერტილები და \\( x - 2y + 3z = 10 \\) განტოლებით განსაზღვრული \\(\\omega\\) სიბრტყე. \\( AB \\), \\( AC \\) და \\( BC \\) მონაკვეთებიდან რომელი მდებარეობს სრულად \\(\\omega\\) სიბრტყეზე?",
     options: ["მხოლოდ \\(AB\\)", "მხოლოდ \\(AC\\)", "მხოლოდ \\(BC\\)", "მხოლოდ \\(AB\\) და \\(AC\\)", "არცერთი", "სამივე"],
     correct: 0,
-    tags: ["Planes and Geometry"]
+    tags: ["Planes and Geometry"],
+    area: "solid",
+    topics: ["stereo-axioms"],
+    grade: 11,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ \\( A(0; -1) \\) წერტილში გავლებული \\( y = x^2 \\) ფუნქციის გრაფიკის მხებებს შორის კუთხე.",
     options: ["$\\arctan 2$", "$45^\\circ$", "$\\arctan \\sqrt{2}$", "$\\arctan \\frac{4}{3}$", "$2 \\arctan \\frac{1}{4}$", "$60^\\circ$"],
     correct: 3,
-    tags: ["Geometry"]
+    tags: ["Geometry"],
+    area: "algebra",
+    topics: ["quadratic-func","inverse-trig","chords-tangents"],
+    grade: 11,
+    difficulty: 3,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: " \\( A = \\int_{-1}^{1} \\frac{x + 3}{2} dx \\), \\( B = \\int_{-1}^{1} e^x dx \\) და \\( C = \\int_{-1}^{1} \\frac{dx}{\\sqrt{1 - x^2}} \\) სიდიდეები დაალაგეთ ზრდადობით.",
     options: ["$A, B, C$", "$A, C, B$", "$B, A, C$", "$B, C, A$", "$C, A, B$", "$C, B, A$"],
     correct: 2,
-    tags: ["Integrals", "Ordering"]
+    tags: ["Integrals", "Ordering"],
+    area: "calculus",
+    topics: ["definite-integral"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ \\( a \\) პარამეტრის მნიშვნელობა, რომლისთვისაც \\( \\int_0^2 (x - a)^2 dx \\) ინტეგრალის მნიშვნელობა იქნება მინიმალური.",
     options: ["$a = 1$", "$a = \\sqrt{2}$", "$a = \\frac{3}{2}$", "$a = \\sqrt{3}$", "$a = 2$", "$a = \\frac{5}{2}$"],
     correct: 0,
-    tags: ["Optimization", "Integrals"]
+    tags: ["Optimization", "Integrals"],
+    area: "calculus",
+    topics: ["definite-integral"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "\\(Oxyz\\) საკოორდინატო სივრცეში მოცემულია \\( A(3, 0, 0) \\), \\( B(0, 3, 0) \\), \\( C(0, 0, 4) \\) და \\( D(0, 0, 0) \\) წერტილები. იპოვეთ \\(ABCD\\) პირამიდის მოცულობა.",
     options: ["$12$", "$6\\sqrt{3}$", "$6\\sqrt{2}$", "$15$", "$6\\sqrt{6}$", "$6$"],
     correct: 5,
-    tags: ["Volumes", "3D Geometry"]
+    tags: ["Volumes", "3D Geometry"],
+    area: "solid",
+    topics: ["pyramid","volume-surface"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "\\( \\frac{x^2}{2} - \\frac{y^2}{3} = 1 \\) (I), \\( \\frac{x^2}{2} - \\frac{y^2}{3} = -1 \\) (II) და \\( 3x^2 - 2y^2 = 7 \\) (III) განტოლებებით მოცემული ჰიპერბოლებიდან რომლებია საერთო ფოკუსების მქონე?",
     options: ["არცერთი", "მხოლოდ I და II", "მხოლოდ I და III", "მხოლოდ II და III", "სამივე", "ყველა წინა პასუხი მცდარია"],
     correct: 0,
-    tags: ["Conic Sections"]
+    tags: ["Conic Sections"],
+    area: "geometry",
+    topics: ["conics"],
+    grade: 11,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

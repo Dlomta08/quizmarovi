@@ -4,7 +4,15 @@ quizData = [
     question: "იპოვეთ $f(x) = 3 - \\dfrac{2}{2 + \\sqrt{x - 5}}$ ფუნქციის უმცირესი მნიშვნელობა.",
     options: ["$0$", "$1$", "$2$", "$3$", "$-1$", "$-3$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["max-min"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -12,7 +20,15 @@ quizData = [
     question: "იპოვეთ არითმეტიკული პროგრესიის უდიდესი უარყოფითი წევრი, თუ $a_1 = 7{,}5$, $d = -0{,}3$.",
     options: ["$-2$", "$-1{,}6$", "$-1{,}2$", "$-0{,}9$", "$-0{,}3$", "$-0{,}1$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["arithmetic-prog"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -20,7 +36,15 @@ quizData = [
     question: "ჩამოთვლითაგან რისი ტოლია $\\sqrt[8]{\\sqrt{3}+\\sqrt{2}} \\cdot \\sqrt[16]{5-2\\sqrt{6}}$ გამოსახულების მნიშვნელობა?",
     options: ["$0$", "$1$", "$2$", "$3$", "$12\\sqrt{2}$", "$24\\sqrt{3}$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["nth-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -28,7 +52,15 @@ quizData = [
     question: "რას უდრის წესიერი მრავალკუთხედის ერთი შიგა კუთხის გრადუსული ზომა, თუ მისი დიაგონალების რაოდენობა $20$-ის ტოლია?",
     options: ["$60^\\circ$", "$80^\\circ$", "$90^\\circ$", "$120^\\circ$", "$135^\\circ$", "$150^\\circ$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["polygon-basics","regular-polygon"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -36,7 +68,15 @@ quizData = [
     question: "რომბში ჩახაზული წრეწირის რადიუსია $3$, ხოლო დიდი დიაგონალის სიგრძეა $12$. იპოვეთ რომბის ფართობი.",
     options: ["$24\\sqrt{3}$", "$36\\sqrt{2}$", "$18\\sqrt{3}$", "$32$", "$48$", "$60$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum","rhombus-rect-sq"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //6
@@ -44,7 +84,15 @@ quizData = [
     question: "მიმდევრობა მოცემულია $c_n = 5 \\cdot 2^n$ ფორმულით. იპოვეთ პირველი $8$ წევრის ჯამი.",
     options: ["$2550$", "$2400$", "$1440$", "$2620$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["powers"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -59,7 +107,15 @@ quizData = [
       "$a,\\ c,\\ d,\\ b$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["numeric-ineq","nth-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -67,7 +123,15 @@ quizData = [
     question: "გამოთვალეთ $\\left\\{ \\dfrac{1}{1 \\cdot 2} + \\dfrac{1}{2 \\cdot 3} + \\cdots + \\dfrac{1}{19 \\cdot 20} \\right\\}$. ($\\{a\\}$ — $a$ რიცხვის წილადი ნაწილია)",
     options: ["$0{,}3$", "$0{,}45$", "$0{,}05$", "$0{,}7$", "$0{,}85$", "$0{,}95$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["integer-part","linear-systems"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -75,7 +139,15 @@ quizData = [
     question: "სიბრტყეზე მოცემული სამი ვექტორიდან ნებისმიერი ორის ჯამის მოდული $1$-ის ტოლია, ხოლო სამივე ვექტორის ჯამი ნულოვანი ვექტორია. ეს ვექტორები ერთმანეთთან წყვილ-წყვილად ადგენენ $x^\\circ$-იან კუთხეს. ჩამოთვლილთაგან რისი ტოლია $x$?",
     options: ["$30^\\circ$", "$45^\\circ$", "$60^\\circ$", "$90^\\circ$", "$120^\\circ$", "$150^\\circ$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["absolute","vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -83,14 +155,30 @@ quizData = [
     question: "ჩამოთვლილთაგან რისი ტოლია $n$, თუ $\\vec{a}(n+1;\\ 3-n)$ ვექტორი $\\vec{b} = 5\\vec{i} + 7\\vec{j}$ ვექტორის მართობულია? ($\\vec{i}$ და $\\vec{j}$ ბაზის ვექტორებია)",
     options: ["$4$", "$13$", "$3$", "$16$", "$6$", "$10$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //11
   {
     question: "ცნობილია, რომ გეომეტრიულ პროგრესიაში $b_7 = 12$, ჩამოთვლილთაგან რისი ტოლია $\\dfrac{b_{17}}{b_{15}} - 6 \\cdot \\dfrac{b_{11}}{b_{10}} + b_7$ გამოსახულების უმცირესი მნიშვნელობა?",
     options: ["$-7$", "$-12$", "$0$", "$3$", "$6$", "$13$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -98,7 +186,15 @@ quizData = [
     question: "ჩამოთვლილთაგან ცვლადის რომელი მნიშვნელობა აკმაყოფილებს $12x \\equiv 39 \\pmod{15}$ განტოლებას?",
     options: ["$13$", "$18$", "$25$", "$29$", "$32$", "$41$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 9,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -106,7 +202,15 @@ quizData = [
     question: "რამდენი მთელი რიცხვი აკმაყოფილებს $(x^2 - 12x + 27)\\sqrt{x^2 - 7x + 10} \\leq 0$ უტოლობას?",
     options: ["$3$", "$4$", "$6$", "$7$", "$10$", "$11$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //14
@@ -121,7 +225,15 @@ quizData = [
       "$\\dfrac{13}{14}$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability","circle-angles","circle-segments"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -136,7 +248,15 @@ quizData = [
       "$2\\sin^2 \\alpha + 2\\tan^2 \\alpha$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["rhombus-rect-sq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //16
@@ -144,7 +264,15 @@ quizData = [
     question: "მოცემულია $g(x) = x^2$ და $f(x) = 2x - 1$ ფუნქციები. იპოვეთ $2f(x) + f(g(x))$ ფუნქციის უმცირესი მნიშვნელობა.",
     options: ["$-7$", "$-5$", "$-2$", "$0$", "$5$", "$7$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["max-min"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -159,7 +287,15 @@ quizData = [
       "$(2; \\infty)$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-ineq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -174,7 +310,15 @@ quizData = [
       "$\\dfrac{48}{75}$"
     ],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -182,7 +326,15 @@ quizData = [
     question: "წრეწირი, რომლის ცენტრია $(3; -2)$ და რადიუსი $\\sqrt{10}$, ეხება $y = -\\dfrac{x}{3} + \\dfrac{7}{3}$ წრფეს. იპოვეთ შეხების წერტილის კოორდინატების ჯამი.",
     options: ["$-1$", "$-5$", "$4$", "$5$", "$7$", "$12$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -197,7 +349,15 @@ quizData = [
       "$\\dfrac{3}{2}$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["dot-product","regular-polygon","vectors"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //21
@@ -205,7 +365,15 @@ quizData = [
     question: "მოცემულია ნატურალურ რიცხვთა მიმდევრობა $a, b, c, d, 7, 2, 9$. ჩამოთვლილთაგან რისი ტოლია მოდისა და მედიანის ჯამი თუ ცნობილია, რომ მოდა $2$-ით ნაკლებია მედიანაზე?",
     options: ["$5$", "$6$", "$7$", "$14$", "$18$", "$20$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["statistics"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //22
@@ -220,7 +388,15 @@ quizData = [
       "$\\dfrac{2}{7}$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "prob-stats",
+    topics: ["probability","word-problems"],
+    grade: 9,
+    difficulty: 3,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //23
@@ -228,7 +404,15 @@ quizData = [
     question: "ჩამოთვლილთაგან $a$ პარამეტრის რომელი მნიშვნელობისთვის ექნება $|x^2 - 6x + 5| = a$ განტოლებას სამი ამონახსნი?",
     options: ["$16$", "$2$", "$3$", "$4$", "$5$", "$12$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["abs-eq","quadratic-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter","absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //24
@@ -236,7 +420,15 @@ quizData = [
     question: "$45^\\circ$-იან $AOB$ სექტორში ჩახაზულია $FEMN$ მართკუთხედი ისე, რომ გვერდი $FE$ მდებარეობს $AO$ მონაკვეთზე, $M$ წვერო მდებარეობს $AB$ რკალზე, ხოლო $N$ წვერო $OB$ მონაკვეთზე. იპოვეთ მართკუთხედის პერიმეტრი, თუ $FE = 2FN$, $AO = 2\\sqrt{5}$.",
     options: ["$4 + 4\\sqrt{5}$", "$6\\sqrt{2}$", "$4\\sqrt{5}$", "$14$", "$16$", "$18$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles","circle-segments","rhombus-rect-sq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //25
@@ -244,6 +436,14 @@ quizData = [
     question: "მოცემულია ამოზნექილი ხუთკუთხედი. ამ ხუთკუთხედის შიგნით აღებულია $O$ წერტილი, რომლიდანაც თითოეული გვერდის შემცველი წრფის მიმართულებით გავლებულია შესაბამისად ამ წრფის მართობული $\\vec{a},\\ \\vec{b},\\ \\vec{c},\\ \\vec{d},\\ \\vec{e}$ ვექტორი, რომელთა სიგრძე შესაბამისი გვერდის სიგრძის ტოლია, $|\\vec{a}| = 5$, $|\\vec{b}| = 6$, $|\\vec{c}| = 5$, $|\\vec{d}| = 9$, $|\\vec{e}| = 9$. იპოვეთ $|\\vec{a} + \\vec{b} + \\vec{c} + \\vec{d} + \\vec{e}|$.",
     options: ["$0$", "$6$", "$12$", "$17$", "$34$", "$45$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["polygon-basics","vectors"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -4,7 +4,15 @@ quizData = [
     question: "გამოთვალეთ  $\\dfrac{3^5 \\cdot 6^8}{9^6 \\cdot 4^4}$.",
     options: ["$1$", "$2$", "$3$", "$4$", "$6$", "$9$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["powers"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -12,7 +20,15 @@ quizData = [
     question: "იპოვეთ  $|2𝑥 − 3| = 11$ განტოლების ამონახსნთა ჯამი.",
     options: ["$1$", "$2$", "$3$", "$4$", "$6$", "$9$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 7,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -20,7 +36,15 @@ quizData = [
     question: "იპოვეთ $𝑥^3 + 2𝑥^2𝑦 − 4𝑥 − 8𝑦$ გამოსახულების მნიშვნელობა, თუ $𝑥 = −2𝑦$.",
     options: ["$𝑥$", "$𝑦$", "$−1$", "$0$", "$1$", "$2$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -28,7 +52,15 @@ quizData = [
     question: "$𝐴𝐵𝐶$ სამკუთხედში $\\angle A = 30^\\circ$ და $𝐵𝐶 = 12$. იპოვეთ ამ სამკუთხედზე შემოხაზული წრეწირის დიამეტრი.",
     options: ["$15$", "$18$", "$20$", "$24$", "$32$", "$36$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -36,7 +68,15 @@ quizData = [
     question: "წრეწირის შიგნით აღებულ წერტილზე გავლებული ორი წრფით შედგენილი ერთ-ერთი კუთხეა $50^\\circ$. ამ კუთხესა და მის ვერტიკალურ კუთხეში მოქცეული რკალებიდან ერთი მეორეზე $10^\\circ$-ით მეტია. რას უდრის ამ რკალებიდან უდიდესი?",
     options: ["$50^\\circ$", "$55^\\circ$", "$60^\\circ$", "$75^\\circ$", "$90^\\circ$", "$115^\\circ$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //6
@@ -44,7 +84,15 @@ quizData = [
     question: "შვიდი რიცხვის საშუალო $10$-ის ტოლია. თუ მათ დავუმატებთ მერვე რიცხვს, მაშინ ამ რვა რიცხვის საშუალო $12$-ის ტოლი გახდება. რისი ტოლია ეს მერვე რიცხვი?",
     options: ["$12$", "$14$", "$16$", "$24$", "$26$", "$32$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -52,7 +100,15 @@ quizData = [
     question: "იპოვეთ კუთხე საათისა და წუთების მაჩვენებელ ისრებს შორის $19$ საათსა და $22$ წუთზე?",
     options: ["$89^\\circ$", "$66^\\circ$", "$90^\\circ$", "$108^\\circ$", "$120^\\circ$", "$132^\\circ$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["lines-angles"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -60,7 +116,15 @@ quizData = [
     question: "სამკუთხედის კუთხეები $3$-ის, $4$-ის და $6$-ის უკუპროპორციულია. იპოვეთ უდიდესი და უმცირესი კუთხეების სხვაობა.",
     options: ["$10^\\circ$", "$16^\\circ$", "$24^\\circ$", "$30^\\circ$", "$36^\\circ$", "$40^\\circ$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -68,7 +132,15 @@ quizData = [
     question: "ორი წრეწირი $𝐴$ და $𝐵$ წერტილებში იკვეთება. გავლებულია $𝐶𝐷$ საერთო გარე მხები ($𝐶$ და $𝐷$ შეხების წერტილებია). ცნობილია, რომ $\\angle BCD = 30^\\circ$ და $\\angle BDC = 20^\\circ$. იპოვეთ $\\angle CAD$, თუ $\\angle CAD <  \\angle CBD$.",
     options: ["$90^\\circ$", "$50^\\circ$", "$30^\\circ$", "$60^\\circ$", "$100^\\circ$", "$120^\\circ$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -76,7 +148,15 @@ quizData = [
     question: "იპოვეთ $A(4; −7)$ და $B(−2; 5)$ წერტილებზე გამავალი წრფის განტოლება.",
     options: ["$y = -2x - 1$", "$y = 2x - 1$", "$y = 3x - 1$", "$y = -3x + 1$", "$y = -2x + 1$", "$y = 3x + 1$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 7,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //11
@@ -84,7 +164,15 @@ quizData = [
     question: "მოცემულია  $a = 7 \\cdot 11^3 \\cdot 13^4$ და  $b = 2^3 \\cdot 3^4 \\cdot 5^7$. რამდენი პროცენტითაა ნაკლები $a$ რიცხვის გამყოფთა რაოდენობა $b$ რიცხვის გამყოფთა რაოდენობაზე?",
     options: ["$10\\%$", "$20\\%$", "$25\\%$", "$30\\%$", "$45\\%$", "$75\\%$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["prime-factor","percent"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -92,7 +180,15 @@ quizData = [
     question: "გამოთვალეთ $1 + \\dfrac{1}{2} + \\left(\\dfrac{1}{2}\\right)^2 + \\left(\\dfrac{1}{2}\\right)^3 + \\cdots + \\left(\\dfrac{1}{2}\\right)^{12}$.",
     options: ["$\\left(\\dfrac{1}{2}\\right)^{12} − 1$", "$\\left(\\dfrac{1}{2}\\right)^{12} − 2$", "$\\left(\\dfrac{1}{2}\\right)^{12} + 1$", "$2 − \\left(\\dfrac{1}{2}\\right)^{12}$", "$2 + \\left(\\dfrac{1}{2}\\right)^{12}$", "$4 − \\left(\\dfrac{1}{2}\\right)^{12}$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -100,7 +196,15 @@ quizData = [
     question: "$(2a + b)^2 + (a − 3b)^2$ გამოსახულება გარდაქმნეს სტანდარტულ მრავალწევრად. იპოვეთ ამ მრავალწევრის კოეფიციენტების ჯამი.",
     options: ["$9$", "$17$", "$29$", "$13$", "$42$", "$43$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["polynomials","special-products"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //14
@@ -108,7 +212,15 @@ quizData = [
     question: "მართკუთხა სამკუთხედზე შემოხაზული და მასში ჩახაზული წრეწირების რადიუსები შესაბამისად $10\\text{სმ}$ და $4\\text{სმ}$-ია. იპოვეთ სამკუთხედის პერიმეტრი.",
     options: ["$28\\text{სმ}$", "$32\\text{სმ}$", "$36\\text{სმ}$", "$42\\text{სმ}$", "$48\\text{სმ}$", "$60\\text{სმ}$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle","inscribed-circum"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -116,14 +228,30 @@ quizData = [
     question: "$ABC$ ტოლფერდა სამკუთხედში $\\angle B = 140^\\circ$. იპოვეთ $CK$ ბისექტრისის სიგრძე, თუ მანძილი $C$ წერტილიდან $AB$ წრფემდე $3\\text{სმ}$-ია.",
     options: ["$8\\text{სმ}$", "$6\\text{სმ}$", "$4\\text{სმ}$", "$10\\text{სმ}$", "$12\\text{სმ}$", "$15\\text{სმ}$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     //16
   {
     question: "$ABC$ სამკუთხედში $AB = BC$. $A$ წერტილის კოორდინატებია $(3; 1)$, $C$ წერტილის კი − $(7; 1)$. დაწერეთ $B$ წერტილზე გავლებული $ABC$ სამკუთხედის სიმაღლის შემცველი წრფის განტოლება.",
     options: ["$y = x + 3$", "$y = x - 7$", "$y = 3$", "$y = 9$", "$x = 5$", "$x = 9$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 7,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -131,7 +259,15 @@ quizData = [
     question: "წრეწირი ეხება $y = 6$, $y = 2$, $x = 1$ და $x = −3$ წრფეებს. ჩამოთვლილთაგან რომელ წერტილშია მისი ცენტრი?",
     options: ["$(-1; 2)$", "$(-2; 4)$", "$(-1; 4)$", "$(1; 3)$", "$(1{,}5; 5)$", "$(2; 3)$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -139,7 +275,15 @@ quizData = [
     question: "ამოხსენით $f(x + 4) = f(2x − 1) + 5$ განტოლება, თუ $f(x) = 5x + 1$.",
     options: ["$x = -3$", "$x = -1$", "$x = 0$", "$x = 1$", "$x = 3$", "$x = 4$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-eq"],
+    grade: 7,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -147,7 +291,15 @@ quizData = [
     question: "თუ სამკუთხედის ორი გვერდის სიგრძეებია $6\\text{სმ}$ და $10\\text{სმ}$, მაშინ რისი ტოლი არ შეიძლება იყოს მისი პერიმეტრი?",
     options: ["$19\\text{სმ}$", "$21\\text{სმ}$", "$25\\text{სმ}$", "$29\\text{სმ}$", "$30\\text{სმ}$", "$31\\text{სმ}$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -155,7 +307,15 @@ quizData = [
     question: "მართკუთხა სამკუთხედის ჰიპოტენუზაზე დაშვებულ სიმაღლესა და მედიანას შორის კუთხეა $10^\\circ$. რას უდრის ამ სამკუთხედის უმცირესი კუთხე?",
     options: ["$10^\\circ$", "$15^\\circ$", "$20^\\circ$", "$30^\\circ$", "$40^\\circ$", "$45^\\circ$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //21
@@ -163,7 +323,15 @@ quizData = [
     question: "იპოვეთ $a$ პარამეტრის უდიდესი მნიშვნელობა, თუ $a^2 − 3a − ax − |2x^2 − 24| = 0$ განტოლების ამონახსნია $x = 4$.",
     options: ["$3$", "$6$", "$8$", "$9$", "$12$", "$14$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 7,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter","absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //22
@@ -171,7 +339,15 @@ quizData = [
     question: "დაწერეთ წრფის განტოლება, რომელიც გადის $Ox$ ღერძის მიმართ $A(−3; 5)$ წერტილის სიმეტრიულ წერტილზე $y = 4x − 7$ წრფის პარალელურად.",
     options: ["$y = 4x − 3$", "$y = 4x + 6$", "$y = 4x − 1$", "$y = 4x + 7$", "$y = 4x − 5$", "$y = 4x + 3$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 7,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //23
@@ -179,7 +355,15 @@ quizData = [
     question: "ჩამოთვლილთაგან რისი ტოლია $n$, თუ მოიძებნება $(x; y)$ ამონახსნთა ოთხი წყვილი, რომლებიც დაკმაყოფილებენ განტოლებათა სისტემას: $\\begin{cases} 2x − 1 = nx + 5y \\\\ 3x − 15y = 3 \\end{cases}$",
     options: ["$−4$", "$−3$", "$−1$", "$0$", "$1$", "$5$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-systems"],
+    grade: 7,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //24
@@ -187,7 +371,15 @@ quizData = [
     question: "$ABC$ მართკუთხა სამკუთხედის $AB$ ჰიპოტენუზაზე აგებულია $AOB$ ტოლფერდა მართკუთხა სამკუთხედი ისე, რომ $O$ წერტილი და $C$ წერტილი $AB$ ჰიპოტენუზის სხვადასხვა მხარესაა. იპოვეთ $\\dfrac{\\angle BCO}{\\angle ACO}$.",
     options: ["$1:1$", "$1:2$", "$2:1$", "$4:5$", "$5:4$", "$2:7$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles","right-triangle"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //25
@@ -195,6 +387,14 @@ quizData = [
     question: "მახვილკუთხა $ABC$ სამკუთხედის $A$, $B$ და $C$ წვეროებიდან გავლებული სიმაღლეების გაგრძელებები შემოხაზულ წრეწირს შესაბამისად $A_1$, $B_1$ და $C_1$ წერტილებში კვეთენ. იპოვეთ $\\angle C_1A_1B_1$, თუ $\\angle A = 60^\\circ$.",
     options: ["$60^\\circ$", "$90^\\circ$", "$30^\\circ$", "$45^\\circ$", "$120^\\circ$", "$150^\\circ$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

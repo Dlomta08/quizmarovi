@@ -11,7 +11,15 @@ quizData = [
       "$\\cot \\alpha$"
     ],
     correct: 0,
-    tags: ["trigonometry", "sum identity"]
+    tags: ["trigonometry", "sum identity"],
+    area: "algebra",
+    topics: ["sum-formulas","product-sum"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -26,7 +34,15 @@ quizData = [
       "$3$"
     ],
     correct: 1,
-    tags: ["trigonometry", "product-to-sum"]
+    tags: ["trigonometry", "product-to-sum"],
+    area: "algebra",
+    topics: ["sum-formulas"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -41,7 +57,15 @@ quizData = [
       "$2 \\sin\\left(\\dfrac{\\alpha - \\beta}{2}\\right) \\cdot \\sin\\left(\\dfrac{\\alpha + \\beta}{2}\\right)$"
     ],
     correct: 4,
-    tags: ["trigonometry", "difference identity"]
+    tags: ["trigonometry", "difference identity"],
+    area: "algebra",
+    topics: ["product-sum"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -56,7 +80,15 @@ quizData = [
       "$\ ctg \\alpha + \ ctg \\beta$"
     ],
     correct: 0,
-    tags: ["trigonometry", "identity"]
+    tags: ["trigonometry", "identity"],
+    area: "algebra",
+    topics: ["sum-formulas"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -71,7 +103,15 @@ quizData = [
       "$1{,}4$"
     ],
     correct: 0,
-    tags: ["geometry", "surface area"]
+    tags: ["geometry", "surface area"],
+    area: "solid",
+    topics: ["prism","rhombus-rect-sq","cross-sections"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
 
@@ -80,7 +120,15 @@ quizData = [
     question: "რისი ტოლია $3\\sin x + 4\\cos x$ გამოსახულების მაქსიმალური მნიშვნელობა?",
     options: ["$3$", "$4$", "$5$", "$6$", "$7$", "$8$"],
     correct: 2,
-    tags: ["trigonometry", "maximum"]
+    tags: ["trigonometry", "maximum"],
+    area: "algebra",
+    topics: ["max-min"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -95,7 +143,15 @@ quizData = [
       "$4\\sin\\left(\\dfrac{y}{2}\\right) \\cos\\left(\\dfrac{y}{2}\\right)$"
     ],
     correct: 1,
-    tags: ["trigonometry", "factoring"]
+    tags: ["trigonometry", "factoring"],
+    area: "algebra",
+    topics: ["factoring","product-sum"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -103,7 +159,15 @@ quizData = [
     question: "$ABCA_1B_1C_1$ მართი სამკუთხა პრიზმის ფუძეა $ABC$ მართკუთხა სამკუთხედი, რომლის $AC$ კათეტია $1$, ხოლო $BC$ კათეტია $1{,}5$. იპოვეთ $ACB_1$ სამკუთხედის ფართობი, თუ პრიზმის სიმაღლეა $\\dfrac{\\sqrt{3}}{2}$.",
     options: ["$\\dfrac{1}{2}$", "$\\dfrac{2}{3}$", "$1{,}5$", "$\\dfrac{\\sqrt{3}}{2}$", "$1$", "$1{,}4$"],
     correct: 3,
-    tags: ["geometry", "area"]
+    tags: ["geometry", "area"],
+    area: "prob-stats",
+    topics: ["combinatorics","prism","right-triangle"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -111,7 +175,15 @@ quizData = [
     question: "წესიერი ექვსკუთხა პრიზმის თითოეული წიბოს სიგრძეა $b$. რისი ტოლია ამ ექვსკუთხა პრიზმის ყველა დიაგონალის სიგრძეთა ჯამი?",
     options: ["$18b$", "$6\\sqrt{5}b$", "$24b$", "$7\\sqrt{5}b + 14b$", "$6\\sqrt{5}b + 24b$", "$4\\sqrt{7}b + 28b$"],
     correct: 4,
-    tags: ["geometry", "diagonals"]
+    tags: ["geometry", "diagonals"],
+    area: "solid",
+    topics: ["prism"],
+    grade: 10,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -119,7 +191,15 @@ quizData = [
     question: "პატარა გიგიმ სხვადასხვა ფიგურებით ააგო სასახლე ისე, რომ მიიღო სივრცული მრავალწახნაგა სხეული, რომელსაც ჰქონდა $20$ წვერო და $36$ წიბო. რამდენი წახნაგი აქვს ამ სხეულს?",
     options: ["$10$", "$14$", "$12$", "$16$", "$20$", "$18$"],
     correct: 5,
-    tags: ["geometry", "polyhedra"]
+    tags: ["geometry", "polyhedra"],
+    area: "geometry",
+    topics: [],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //11
@@ -127,7 +207,15 @@ quizData = [
     question: "რა მრავალკუთხედი შეიძლება მივიღოთ ტრაპეციის რაიმე სიბრტყეზე პარალელური დაგეგმილებით?",
     options: ["სამკუთხედი", "კვადრატი", "მართკუთხედი", "პარალელოგრამი", "რომბი", "ტრაპეცია"],
     correct: 5,
-    tags: ["geometry", "cross-section"]
+    tags: ["geometry", "cross-section"],
+    area: "geometry",
+    topics: ["trapezoid","polygon-basics","parallelogram"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -135,7 +223,15 @@ quizData = [
     question: "იპოვეთ $y = 2\\cos\\left(2x - \\dfrac{\\pi}{4}\\right) + 1$ ფუნქციის გრაფიკის ორდინატათა ღერძთან კვეთის წერტილის ორდინატა.",
     options: ["$2$", "$3$", "$-\\sqrt{2} + 1$", "$-\\sqrt{2} - 1$", "$\\sqrt{2} + 1$", "$\\sqrt{2} - 1$"],
     correct: 4,
-    tags: ["functions", "graph"]
+    tags: ["functions", "graph"],
+    area: "solid",
+    topics: ["cross-sections"],
+    grade: 10,
+    difficulty: 2,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -143,7 +239,15 @@ quizData = [
     question: "მართი პრიზმის ფუძეა პარალელოგრამი $1$ და $2$-ის ტოლი გვერდებით. პრიზმის სიმაღლეა $3$, ხოლო მცირე დიაგონალი დახრილია ფუძის სიბრტყისადმი $60^\\circ$-იანი კუთხით. იპოვეთ პრიზმის სრული ზედაპირის ფართობი?",
     options: ["$\\sqrt{5} + 38$", "$\\sqrt{15} + 18$", "$\\sqrt{35} + 8$", "$2\\sqrt{3} + 18$", "$\\sqrt{7{,}5} + 18$", "$\\sqrt{35} + 9$"],
     correct: 3,
-    tags: ["geometry", "surface area"]
+    tags: ["geometry", "surface area"],
+    area: "geometry",
+    topics: ["parallelogram","prism"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //14
@@ -151,7 +255,15 @@ quizData = [
     question: "დაადგინეთ $y = |2\\sin(3x - 7) - 1| + 1$ ფუნქციის მნიშვნელობათა სიმრავლე.",
     options: ["$[1; 4]$", "$[1; 5]$", "$[1; 3]$", "$[1; 4{,}5]$", "$[0; 4]$", "$\\mathbb{R}$"],
     correct: 0,
-    tags: ["functions", "range"]
+    tags: ["functions", "range"],
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -166,7 +278,15 @@ quizData = [
       "$g$ და $h$ კენტია, $f$ ნებისმიერია"
     ],
     correct: 1,
-    tags: ["even/odd", "functions"]
+    tags: ["even/odd", "functions"],
+    area: "algebra",
+    topics: ["function-props","sum-formulas"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //16
@@ -181,7 +301,15 @@ quizData = [
       "$\\dfrac{\\sqrt{3}}{2}$"
     ],
     correct: 4,
-    tags: ["trigonometry", "product"]
+    tags: ["trigonometry", "product"],
+    area: "algebra",
+    topics: ["product-sum"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -196,7 +324,15 @@ quizData = [
       "$-\\dfrac{1}{8}$"
     ],
     correct: 0,
-    tags: ["trigonometry", "product"]
+    tags: ["trigonometry", "product"],
+    area: "algebra",
+    topics: ["trig-identities"],
+    grade: 10,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -204,7 +340,15 @@ quizData = [
     question: "ჩამოთვლილთაგან რისი ტოლი უნდა იყოს $k$ პარამეტრი, რომ $f(x) = \\sin(\\sqrt{2}x) + \\sin(kx)$ ფუნქცია იყოს პერიოდული?",
     options: ["$k = 1$", "$k = 2$", "$k = \\sqrt{3}$", "$k = \\dfrac{1}{\\sqrt{2}}$", "$k \\in \\mathbb{R}$", "$k \\in \\mathbb{R} \\setminus \\{0\\}$"],
     correct: 3,
-    tags: ["periodicity", "parameters"]
+    tags: ["periodicity", "parameters"],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -212,7 +356,15 @@ quizData = [
     question: "წესიერი ოთხკუთხა პრიზმის დიაგონალური კვეთა კვადრატია. იპოვეთ იმ კუთხის კოსინუსი, რომელსაც პრიზმის დიაგონალი ადგენს გვერდით წახნაგთან.",
     options: ["$\\dfrac{\\sqrt{3}}{2}$", "$\\dfrac{\\sqrt{3}}{\\sqrt{7}}$", "$\\dfrac{2\\sqrt{3}}{3}$", "$\\dfrac{\\sqrt{3}}{4}$", "$\\dfrac{\\sqrt{3}}{\\sqrt{5}}$", "$\\dfrac{0{,}3\\sqrt{3}}{2}$"],
     correct: 0,
-    tags: ["geometry", "cosine"]
+    tags: ["geometry", "cosine"],
+    area: "solid",
+    topics: ["prism","cross-sections"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -220,7 +372,15 @@ quizData = [
     question: "პირველი მართი ოთხკუთხა პრიზმის სიმაღლეა $4$, ხოლო ფუძეში მყოფი ოთხკუთხედის დიაგონალების ჯამია $10$. მეორე ოთხკუთხა პრიზმის წვეროები ემთხვევა პირველის ფუძეების გვერდების შუაწერტილებს. იპოვეთ მეორე პრიზმის გვერდითი ზედაპირის ფართობი.",
     options: ["$20$", "$24$", "$28$", "$32$", "$36$", "$40$"],
     correct: 5,
-    tags: ["geometry", "surface area"]
+    tags: ["geometry", "surface area"],
+    area: "solid",
+    topics: ["prism"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
     //21
@@ -228,7 +388,15 @@ quizData = [
     question: "იპოვეთ $a$ პარამეტრის ყველა შესაძლო მნიშვნელობა, თუ ცნობილია, რომ $y = |a \\cdot \\cos x + 3|$ ფუნქციის მნიშვნელობათა სიმრავლეა $[0; a + 3]$.",
     options: ["$a < 0$", "$a \\geq 3$", "$a \\leq 0$", "$a \\geq 0$", "$a \\in [2{,}5; 15]$", "$a \\in [2{,}5; 27{,}5]$"],
     correct: 1,
-    tags: ["functions", "range", "parameters"]
+    tags: ["functions", "range", "parameters"],
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter","absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //22
@@ -243,7 +411,15 @@ quizData = [
       "$y \\in \\left[ -\\dfrac{3}{2}; -\\dfrac{3}{8} \\right]$"
     ],
     correct: 5,
-    tags: ["functions", "domain", "range"]
+    tags: ["functions", "domain", "range"],
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //23
@@ -251,7 +427,15 @@ quizData = [
     question: "რამდენი წყვეტის წერტილი ექნება $y = 3 \ tg(2x + 3)$ ფუნქციას, როცა $x \\in [0; 2\\pi]$?",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 3,
-    tags: ["functions", "discontinuity", "tangent"]
+    tags: ["functions", "discontinuity", "tangent"],
+    area: "algebra",
+    topics: ["trig-identities"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //24
@@ -266,7 +450,15 @@ quizData = [
       "$\\dfrac{5\\sqrt{26}a^2}{5}$"
     ],
     correct: 1,
-    tags: ["geometry", "surface area"]
+    tags: ["geometry", "surface area"],
+    area: "solid",
+    topics: ["prism","isosceles","rhombus-rect-sq"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //25
@@ -281,6 +473,14 @@ quizData = [
       "$11\\sqrt{8}$"
     ],
     correct: 0,
-    tags: ["geometry", "spatial", "area"]
+    tags: ["geometry", "spatial", "area"],
+    area: "geometry",
+    topics: ["rhombus-rect-sq"],
+    grade: 10,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

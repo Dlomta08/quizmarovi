@@ -5,7 +5,15 @@ quizData = [
     options: ["$2$", "$3$", "$5$", "$8$", "$35$", "$48$"],
     correct: 3,
     tags: [],
-    solution: "ფესვები $x$ და $2x$. ვიეტის თეორემით $x + 2x = 6$, $x = 2$; ფესვებია $2$ და $4$, ნამრავლი $8$.<br><br><strong>პასუხი:</strong> დ) $8$."
+    solution: "ფესვები $x$ და $2x$. ვიეტის თეორემით $x + 2x = 6$, $x = 2$; ფესვებია $2$ და $4$, ნამრავლი $8$.<br><br><strong>პასუხი:</strong> დ) $8$.",
+    area: "algebra",
+    topics: ["vieta"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -14,7 +22,15 @@ quizData = [
     options: ["$1101;\\ 10111;\\ 1110$", "$111;\\ 1000;\\ 1010$", "$11100;\\ 11101;\\ 11111$", "$10111;\\ 11000;\\ 11001$", "$10011;\\ 11001;\\ 11100$", "$111001;\\ 111010;\\ 111111$"],
     correct: 3,
     tags: [],
-    solution: "გადავიყვანოთ ათობითში: $10111_2 = 23$, $11000_2 = 24$, $11001_2 = 25$ — სამი მომდევნო რიცხვი.<br><br>(დანარჩენი: ა) $13, 23, 14$; ბ) $7, 8, 10$; გ) $28, 29, 31$; ე) $19, 25, 28$; ვ) $57, 58, 63$.)<br><br><strong>პასუხი:</strong> დ) $10111;\\ 11000;\\ 11001$."
+    solution: "გადავიყვანოთ ათობითში: $10111_2 = 23$, $11000_2 = 24$, $11001_2 = 25$ — სამი მომდევნო რიცხვი.<br><br>(დანარჩენი: ა) $13, 23, 14$; ბ) $7, 8, 10$; გ) $28, 29, 31$; ე) $19, 25, 28$; ვ) $57, 58, 63$.)<br><br><strong>პასუხი:</strong> დ) $10111;\\ 11000;\\ 11001$.",
+    area: "algebra",
+    topics: ["powers"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -23,7 +39,15 @@ quizData = [
     options: ["$1$", "$3$", "$5$", "$10$", "$16$", "$25$"],
     correct: 2,
     tags: [],
-    solution: "$\\sqrt{20} = 2\\sqrt{5}$, $\\sqrt{80} = 4\\sqrt{5}$, $\\sqrt{125} = 5\\sqrt{5}$. ფრჩხილებში: $2\\sqrt{5} + 4\\sqrt{5} - 5\\sqrt{5} = \\sqrt{5}$, კვადრატი $5$.<br><br><strong>პასუხი:</strong> გ) $5$."
+    solution: "$\\sqrt{20} = 2\\sqrt{5}$, $\\sqrt{80} = 4\\sqrt{5}$, $\\sqrt{125} = 5\\sqrt{5}$. ფრჩხილებში: $2\\sqrt{5} + 4\\sqrt{5} - 5\\sqrt{5} = \\sqrt{5}$, კვადრატი $5$.<br><br><strong>პასუხი:</strong> გ) $5$.",
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -32,7 +56,15 @@ quizData = [
     options: ["$4$", "$12$", "$6$", "$8$", "$16$", "$32$"],
     correct: 5,
     tags: [],
-    solution: "მახვილი კუთხეა $180^\\circ - 150^\\circ = 30^\\circ$. ჩახაზული წრეწირის დიამეტრი ტრაპეციის სიმაღლის ტოლია: $h = 4$. ფერდი: $c = \\dfrac{h}{\\sin 30^\\circ} = 8$.<br><br>შემოხაზულ ოთხკუთხედში ფუძეების ჯამი ფერდების ჯამის ტოლია: $16$. პერიმეტრი: $16 + 16 = 32$.<br><br><strong>პასუხი:</strong> ვ) $32$."
+    solution: "მახვილი კუთხეა $180^\\circ - 150^\\circ = 30^\\circ$. ჩახაზული წრეწირის დიამეტრი ტრაპეციის სიმაღლის ტოლია: $h = 4$. ფერდი: $c = \\dfrac{h}{\\sin 30^\\circ} = 8$.<br><br>შემოხაზულ ოთხკუთხედში ფუძეების ჯამი ფერდების ჯამის ტოლია: $16$. პერიმეტრი: $16 + 16 = 32$.<br><br><strong>პასუხი:</strong> ვ) $32$.",
+    area: "geometry",
+    topics: ["trapezoid","inscribed-circum"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -41,7 +73,15 @@ quizData = [
     options: ["$5$", "$16$", "$25$", "$35$", "$45$", "$80$"],
     correct: 3,
     tags: [],
-    solution: "მეორე განტოლების ამონახსნებია $\\{1;\\ 3;\\ 5\\}$. თანაკვეთა არაცარიელია, თუ $|x - 3| = a - 5$-ის ერთ-ერთი ამონახსნი ამ სიმრავლეშია:<br>$x = 3$: $a - 5 = 0$, $a = 5$;<br>$x = 1$ ან $x = 5$: $a - 5 = 2$, $a = 7$.<br><br>ნამრავლი: $5 \\cdot 7 = 35$.<br><br><strong>პასუხი:</strong> დ) $35$."
+    solution: "მეორე განტოლების ამონახსნებია $\\{1;\\ 3;\\ 5\\}$. თანაკვეთა არაცარიელია, თუ $|x - 3| = a - 5$-ის ერთ-ერთი ამონახსნი ამ სიმრავლეშია:<br>$x = 3$: $a - 5 = 0$, $a = 5$;<br>$x = 1$ ან $x = 5$: $a - 5 = 2$, $a = 7$.<br><br>ნამრავლი: $5 \\cdot 7 = 35$.<br><br><strong>პასუხი:</strong> დ) $35$.",
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["parameter","absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -50,7 +90,15 @@ quizData = [
     options: ["$3$", "$5$", "$8$", "$10$", "$35$", "$45$"],
     correct: 3,
     tags: [],
-    solution: "$|x - 5|^2 = (x - 5)^2 = 9$, $x - 5 = \\pm 3$, $x = 8$ ან $x = 2$. ჯამი: $10$.<br><br><strong>პასუხი:</strong> დ) $10$."
+    solution: "$|x - 5|^2 = (x - 5)^2 = 9$, $x - 5 = \\pm 3$, $x = 8$ ან $x = 2$. ჯამი: $10$.<br><br><strong>პასუხი:</strong> დ) $10$.",
+    area: "algebra",
+    topics: ["abs-eq","quadratic-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -59,7 +107,15 @@ quizData = [
     options: ["$1$", "$\\dfrac{4}{3}$", "$\\dfrac{\\sqrt{2}}{2}$", "$\\dfrac{2}{\\sqrt{3}}$", "$\\dfrac{\\sqrt{3}}{2}$", "$\\dfrac{3}{\\sqrt{2}}$"],
     correct: 1,
     tags: [],
-    solution: "$\\dfrac{5}{\\sqrt{18}} = \\dfrac{5}{3\\sqrt{2}} = \\dfrac{5\\sqrt{2}}{6}$;<br>$\\dfrac{1}{6 - 3\\sqrt{2}} = \\dfrac{6 + 3\\sqrt{2}}{36 - 18} = \\dfrac{1}{3} + \\dfrac{\\sqrt{2}}{6}$;<br>$\\dfrac{1}{\\sqrt{2} + 1} = \\sqrt{2} - 1$.<br><br>ჯამი: $\\dfrac{5\\sqrt{2}}{6} + \\dfrac{1}{3} + \\dfrac{\\sqrt{2}}{6} - \\sqrt{2} + 1 = \\dfrac{4}{3}$.<br><br><strong>პასუხი:</strong> ბ) $\\dfrac{4}{3}$."
+    solution: "$\\dfrac{5}{\\sqrt{18}} = \\dfrac{5}{3\\sqrt{2}} = \\dfrac{5\\sqrt{2}}{6}$;<br>$\\dfrac{1}{6 - 3\\sqrt{2}} = \\dfrac{6 + 3\\sqrt{2}}{36 - 18} = \\dfrac{1}{3} + \\dfrac{\\sqrt{2}}{6}$;<br>$\\dfrac{1}{\\sqrt{2} + 1} = \\sqrt{2} - 1$.<br><br>ჯამი: $\\dfrac{5\\sqrt{2}}{6} + \\dfrac{1}{3} + \\dfrac{\\sqrt{2}}{6} - \\sqrt{2} + 1 = \\dfrac{4}{3}$.<br><br><strong>პასუხი:</strong> ბ) $\\dfrac{4}{3}$.",
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -68,7 +124,15 @@ quizData = [
     options: ["$-24$", "$-18$", "$-12$", "$-2$", "$1$", "$2$"],
     correct: 2,
     tags: [],
-    solution: "$c > 0$, ამიტომ $\\dfrac{ab}{c}$ უმცირესია, როცა $ab$ უარყოფითი და მოდულით უდიდესია, ხოლო $c$ უმცირესი.<br><br>$ab$-ს უმცირესი მნიშვნელობა: $6 \\cdot (-4) = -24$; $c = 2$. $\\dfrac{-24}{2} = -12$.<br><br><strong>პასუხი:</strong> გ) $-12$."
+    solution: "$c > 0$, ამიტომ $\\dfrac{ab}{c}$ უმცირესია, როცა $ab$ უარყოფითი და მოდულით უდიდესია, ხოლო $c$ უმცირესი.<br><br>$ab$-ს უმცირესი მნიშვნელობა: $6 \\cdot (-4) = -24$; $c = 2$. $\\dfrac{-24}{2} = -12$.<br><br><strong>პასუხი:</strong> გ) $-12$.",
+    area: "algebra",
+    topics: ["numeric-ineq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["estimation"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -77,7 +141,15 @@ quizData = [
     options: ["$12$", "$16$", "$18$", "$20$", "$25$", "$28$"],
     correct: 0,
     tags: [],
-    solution: "$d_1^2 + d_2^2 = 2(a^2 + b^2) = 2(12 + 28) = 80$. თუ $d_1 = d$, $d_2 = d + 4$: $d^2 + (d + 4)^2 = 80$, $d^2 + 4d - 32 = 0$, $d = 4$.<br><br>დიაგონალები $4$ და $8$, ჯამი $12$.<br><br><strong>პასუხი:</strong> ა) $12$."
+    solution: "$d_1^2 + d_2^2 = 2(a^2 + b^2) = 2(12 + 28) = 80$. თუ $d_1 = d$, $d_2 = d + 4$: $d^2 + (d + 4)^2 = 80$, $d^2 + 4d - 32 = 0$, $d = 4$.<br><br>დიაგონალები $4$ და $8$, ჯამი $12$.<br><br><strong>პასუხი:</strong> ა) $12$.",
+    area: "geometry",
+    topics: ["parallelogram"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -86,7 +158,15 @@ quizData = [
     options: ["$2 : 3$", "$1 : 4$", "$3 : 4$", "$2 : 5$", "$3 : 5$", "$1 : 3$"],
     correct: 0,
     tags: [],
-    solution: "$C$-ზე გავავლოთ $AB$-ს პარალელური წრფე; ის $MN$-ს $P$-ში, $AD$-ს $Q$-ში კვეთს. $MP = AQ = BC = 6$, ამიტომ $PN = 4$, $QD = 10$.<br><br>$CPN \\sim CQD$: $\\dfrac{CN}{CD} = \\dfrac{PN}{QD} = \\dfrac{4}{10} = \\dfrac{2}{5}$, ე.ი. $CN : ND = 2 : 3$.<br><br><strong>პასუხი:</strong> ა) $2 : 3$."
+    solution: "$C$-ზე გავავლოთ $AB$-ს პარალელური წრფე; ის $MN$-ს $P$-ში, $AD$-ს $Q$-ში კვეთს. $MP = AQ = BC = 6$, ამიტომ $PN = 4$, $QD = 10$.<br><br>$CPN \\sim CQD$: $\\dfrac{CN}{CD} = \\dfrac{PN}{QD} = \\dfrac{4}{10} = \\dfrac{2}{5}$, ე.ი. $CN : ND = 2 : 3$.<br><br><strong>პასუხი:</strong> ა) $2 : 3$.",
+    area: "geometry",
+    topics: ["trapezoid","similar-figures"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["aux-construct"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 11
@@ -95,7 +175,15 @@ quizData = [
     options: ["$-3$", "$-1$", "$0$", "$1$", "$2$", "$3$"],
     correct: 3,
     tags: [],
-    solution: "$\\dfrac{1}{1 + \\operatorname{tg}^2 47^\\circ} = \\cos^2 47^\\circ = \\sin^2 43^\\circ$. მაშინ $\\sin^2 43^\\circ + \\cos^2 43^\\circ = 1$.<br><br><strong>პასუხი:</strong> დ) $1$."
+    solution: "$\\dfrac{1}{1 + \\operatorname{tg}^2 47^\\circ} = \\cos^2 47^\\circ = \\sin^2 43^\\circ$. მაშინ $\\sin^2 43^\\circ + \\cos^2 43^\\circ = 1$.<br><br><strong>პასუხი:</strong> დ) $1$.",
+    area: "geometry",
+    topics: ["acute-trig"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12
@@ -104,7 +192,15 @@ quizData = [
     options: ["$-3 < x < 3$", "$-4 < x < 12$", "$-1 < x < 5$", "$1 < x < 13$", "$0 < x < 10$", "$2 < x < 11$"],
     correct: 1,
     tags: [],
-    solution: "აღვნიშნოთ $t = |x - 4|$: $t - \\dfrac{2t - 1}{3} < 3 \\Leftrightarrow 3t - 2t + 1 < 9 \\Leftrightarrow t < 8$.<br><br>$|x - 4| < 8 \\Leftrightarrow -4 < x < 12$.<br><br><strong>პასუხი:</strong> ბ) $-4 < x < 12$."
+    solution: "აღვნიშნოთ $t = |x - 4|$: $t - \\dfrac{2t - 1}{3} < 3 \\Leftrightarrow 3t - 2t + 1 < 9 \\Leftrightarrow t < 8$.<br><br>$|x - 4| < 8 \\Leftrightarrow -4 < x < 12$.<br><br><strong>პასუხი:</strong> ბ) $-4 < x < 12$.",
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -113,7 +209,15 @@ quizData = [
     options: ["$-3$", "$-2$", "$0$", "$1$", "$3$", "$5$"],
     correct: 2,
     tags: [],
-    solution: "$x^2 - 5 = x - 3 \\Leftrightarrow x^2 - x - 2 = 0$: $x = 2$, $x = -1$.<br>$x^2 - 5 = -(x - 3) \\Leftrightarrow x^2 + x - 8 = 0$: ორი ფესვი ($D = 33 > 0$), ჯამი $-1$.<br><br>ყველა ფესვის ჯამი: $2 - 1 - 1 = 0$.<br><br><strong>პასუხი:</strong> გ) $0$."
+    solution: "$x^2 - 5 = x - 3 \\Leftrightarrow x^2 - x - 2 = 0$: $x = 2$, $x = -1$.<br>$x^2 - 5 = -(x - 3) \\Leftrightarrow x^2 + x - 8 = 0$: ორი ფესვი ($D = 33 > 0$), ჯამი $-1$.<br><br>ყველა ფესვის ჯამი: $2 - 1 - 1 = 0$.<br><br><strong>პასუხი:</strong> გ) $0$.",
+    area: "algebra",
+    topics: ["abs-eq","quadratic-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -122,7 +226,15 @@ quizData = [
     options: ["$8$", "$12$", "$16$", "$24$", "$10$", "$15$"],
     correct: 1,
     tags: [],
-    solution: "$MN \\parallel AC$, $\\dfrac{BN}{BC} = \\dfrac{4}{9}$, ამიტომ $MN = 27 \\cdot \\dfrac{4}{9} = 12$.<br><br><strong>პასუხი:</strong> ბ) $12$."
+    solution: "$MN \\parallel AC$, $\\dfrac{BN}{BC} = \\dfrac{4}{9}$, ამიტომ $MN = 27 \\cdot \\dfrac{4}{9} = 12$.<br><br><strong>პასუხი:</strong> ბ) $12$.",
+    area: "geometry",
+    topics: ["similar-figures"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15
@@ -131,7 +243,15 @@ quizData = [
     options: ["$8$", "$12$", "$16$", "$24$", "$10$", "$15$"],
     correct: 3,
     tags: [],
-    solution: "მართკუთხა სამკუთხედში ჰიპოტენუზაზე დაშვებული სიმაღლე: $CD^2 = AD \\cdot BD = ab$, ამიტომ $\\sqrt{ab} = CD$.<br><br>$AB = 10$, $CD = \\dfrac{AC \\cdot BC}{AB} = \\dfrac{48}{10} = 4{,}8$. $5\\sqrt{ab} = 24$.<br><br><strong>პასუხი:</strong> დ) $24$."
+    solution: "მართკუთხა სამკუთხედში ჰიპოტენუზაზე დაშვებული სიმაღლე: $CD^2 = AD \\cdot BD = ab$, ამიტომ $\\sqrt{ab} = CD$.<br><br>$AB = 10$, $CD = \\dfrac{AC \\cdot BC}{AB} = \\dfrac{48}{10} = 4{,}8$. $5\\sqrt{ab} = 24$.<br><br><strong>პასუხი:</strong> დ) $24$.",
+    area: "geometry",
+    topics: ["right-triangle"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 16
@@ -140,7 +260,15 @@ quizData = [
     options: ["$a = 2b$", "$b = c$", "$a^2 = 2b^2$", "$a = 3c$", "$a - c = 0$", "$a^2 + b^2 = 0$"],
     correct: 4,
     tags: [],
-    solution: "ვიეტის თეორემით $x_1x_2 = \\dfrac{c}{a}$. $\\operatorname{tg}\\alpha \\cdot \\operatorname{ctg}\\alpha = 1$, ამიტომ $\\dfrac{c}{a} = 1$, ანუ $a - c = 0$.<br><br><strong>პასუხი:</strong> ე) $a - c = 0$."
+    solution: "ვიეტის თეორემით $x_1x_2 = \\dfrac{c}{a}$. $\\operatorname{tg}\\alpha \\cdot \\operatorname{ctg}\\alpha = 1$, ამიტომ $\\dfrac{c}{a} = 1$, ანუ $a - c = 0$.<br><br><strong>პასუხი:</strong> ე) $a - c = 0$.",
+    area: "algebra",
+    topics: ["vieta","acute-trig"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -149,7 +277,15 @@ quizData = [
     options: ["$2$", "$5$", "$6$", "$8$", "$9$", "$12$"],
     correct: 3,
     tags: [],
-    solution: "$2x - 1 \\le 12 \\Leftrightarrow x \\le 6{,}5$; $4x + 3 \\ge -1 \\Leftrightarrow x \\ge -1$. მთელი რიცხვები: $-1, 0, 1, \\ldots, 6$ — სულ $8$.<br><br><strong>პასუხი:</strong> დ) $8$."
+    solution: "$2x - 1 \\le 12 \\Leftrightarrow x \\le 6{,}5$; $4x + 3 \\ge -1 \\Leftrightarrow x \\ge -1$. მთელი რიცხვები: $-1, 0, 1, \\ldots, 6$ — სულ $8$.<br><br><strong>პასუხი:</strong> დ) $8$.",
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -158,7 +294,15 @@ quizData = [
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 4,
     tags: [],
-    solution: "1) $\\dfrac{2\\cos^2\\alpha + 1}{\\cos^2\\alpha} = 2 + \\dfrac{1}{\\cos^2\\alpha} = 3 + \\operatorname{tg}^2\\alpha$ — იგივეობაა.<br>2) $3\\operatorname{tg}\\alpha \\cdot 4\\operatorname{ctg}\\alpha = 12$ — იგივეობაა.<br>3) იგივეობაა.<br>4) როცა $\\alpha = 45^\\circ$, მნიშვნელი $0$-ია — <strong>არ არის</strong> იგივეობა ყველა მახვილი კუთხისთვის.<br>5) და 6) იგივეობებია.<br><br>იგივეობაა $5$ ტოლობა.<br><br><strong>პასუხი:</strong> ე) $5$."
+    solution: "1) $\\dfrac{2\\cos^2\\alpha + 1}{\\cos^2\\alpha} = 2 + \\dfrac{1}{\\cos^2\\alpha} = 3 + \\operatorname{tg}^2\\alpha$ — იგივეობაა.<br>2) $3\\operatorname{tg}\\alpha \\cdot 4\\operatorname{ctg}\\alpha = 12$ — იგივეობაა.<br>3) იგივეობაა.<br>4) როცა $\\alpha = 45^\\circ$, მნიშვნელი $0$-ია — <strong>არ არის</strong> იგივეობა ყველა მახვილი კუთხისთვის.<br>5) და 6) იგივეობებია.<br><br>იგივეობაა $5$ ტოლობა.<br><br><strong>პასუხი:</strong> ე) $5$.",
+    area: "geometry",
+    topics: ["acute-trig"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -167,7 +311,15 @@ quizData = [
     options: ["სამკუთხედი ბლაგვკუთხაა", "სამკუთხედი ტოლფერდაა", "სამკუთხედი მართკუთხაა", "$a = b$", "$a > b$", "$a < b$"],
     correct: 0,
     tags: [],
-    solution: "უდიდესი გვერდია $5a + 5b$. შევადაროთ: $(5a + 5b)^2 = 25a^2 + 50ab + 25b^2$ და $(3a + 2b)^2 + (2a + 4b)^2 = 13a^2 + 28ab + 20b^2$.<br><br>სხვაობა: $12a^2 + 22ab + 5b^2 > 0$, ე.ი. უდიდესი გვერდის კვადრატი დანარჩენების კვადრატების ჯამზე მეტია — სამკუთხედი ბლაგვკუთხაა.<br><br><strong>პასუხი:</strong> ა) სამკუთხედი ბლაგვკუთხაა."
+    solution: "უდიდესი გვერდია $5a + 5b$. შევადაროთ: $(5a + 5b)^2 = 25a^2 + 50ab + 25b^2$ და $(3a + 2b)^2 + (2a + 4b)^2 = 13a^2 + 28ab + 20b^2$.<br><br>სხვაობა: $12a^2 + 22ab + 5b^2 > 0$, ე.ი. უდიდესი გვერდის კვადრატი დანარჩენების კვადრატების ჯამზე მეტია — სამკუთხედი ბლაგვკუთხაა.<br><br><strong>პასუხი:</strong> ა) სამკუთხედი ბლაგვკუთხაა.",
+    area: "geometry",
+    topics: ["triangle-ineq","law-cos-sin"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -176,7 +328,15 @@ quizData = [
     options: ["$4$", "$8$", "$10$", "$17$", "$16$", "$24$"],
     correct: 3,
     tags: [],
-    solution: "განტოლების ფესვები: $3, 5$ ($x^2 - 8x + 15 = 0$), $7$ და $1$ ($(x - 1)^2 = 0$). სამკუთხედის გვერდები ამ რიცხვებიდანაა (შეიძლება განმეორდეს).<br><br>ყველა ფესვი კენტია, ხოლო სამი კენტი რიცხვის ჯამი კენტია, ამიტომ ლუწი ვარიანტები ($4, 8, 10, 16, 24$) გამოირიცხება. $17$ მიიღება, მაგალითად, $3, 7, 7$ ან $5, 5, 7$ გვერდებით.<br><br><strong>პასუხი:</strong> დ) $17$."
+    solution: "განტოლების ფესვები: $3, 5$ ($x^2 - 8x + 15 = 0$), $7$ და $1$ ($(x - 1)^2 = 0$). სამკუთხედის გვერდები ამ რიცხვებიდანაა (შეიძლება განმეორდეს).<br><br>ყველა ფესვი კენტია, ხოლო სამი კენტი რიცხვის ჯამი კენტია, ამიტომ ლუწი ვარიანტები ($4, 8, 10, 16, 24$) გამოირიცხება. $17$ მიიღება, მაგალითად, $3, 7, 7$ ან $5, 5, 7$ გვერდებით.<br><br><strong>პასუხი:</strong> დ) $17$.",
+    area: "geometry",
+    topics: ["triangle-ineq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 21
@@ -185,7 +345,15 @@ quizData = [
     options: ["$-8$", "$-5$", "$0$", "$1$", "$3$", "$4$"],
     correct: 1,
     tags: [],
-    solution: "განტოლება ტოლფასია: $x^2 - 4x + a = 0$, $x \\ne \\pm 1$. ერთი ამონახსნი იქნება, თუ:<br>1) $D = 16 - 4a = 0$, $a = 4$ (ფესვი $2$);<br>2) ერთ-ერთი ფესვია $1$: $a = 3$ (ფესვები $1$, $3$);<br>3) ერთ-ერთი ფესვია $-1$: $1 + 4 + a = 0$, $a = -5$ (ფესვები $-1$, $5$).<br><br>უმცირესი: $a = -5$.<br><br><strong>პასუხი:</strong> ბ) $-5$."
+    solution: "განტოლება ტოლფასია: $x^2 - 4x + a = 0$, $x \\ne \\pm 1$. ერთი ამონახსნი იქნება, თუ:<br>1) $D = 16 - 4a = 0$, $a = 4$ (ფესვი $2$);<br>2) ერთ-ერთი ფესვია $1$: $a = 3$ (ფესვები $1$, $3$);<br>3) ერთ-ერთი ფესვია $-1$: $1 + 4 + a = 0$, $a = -5$ (ფესვები $-1$, $5$).<br><br>უმცირესი: $a = -5$.<br><br><strong>პასუხი:</strong> ბ) $-5$.",
+    area: "algebra",
+    topics: ["rational-eq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -194,7 +362,15 @@ quizData = [
     options: ["$1$", "$3$", "$4$", "$2x + 1$", "$2x - 4$", "$x - 1$"],
     correct: 5,
     tags: [],
-    solution: "გავყოთ კუთხით:<br>$x^4 - x^3 + 6x - 4 - x^2(x^2 - 2x + 3) = x^3 - 3x^2 + 6x - 4$;<br>$x^3 - 3x^2 + 6x - 4 - x(x^2 - 2x + 3) = -x^2 + 3x - 4$;<br>$-x^2 + 3x - 4 + (x^2 - 2x + 3) = x - 1$.<br><br><strong>პასუხი:</strong> ვ) $x - 1$."
+    solution: "გავყოთ კუთხით:<br>$x^4 - x^3 + 6x - 4 - x^2(x^2 - 2x + 3) = x^3 - 3x^2 + 6x - 4$;<br>$x^3 - 3x^2 + 6x - 4 - x(x^2 - 2x + 3) = -x^2 + 3x - 4$;<br>$-x^2 + 3x - 4 + (x^2 - 2x + 3) = x - 1$.<br><br><strong>პასუხი:</strong> ვ) $x - 1$.",
+    area: "algebra",
+    topics: ["poly-division"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -203,7 +379,15 @@ quizData = [
     options: ["$-2$", "$-1$", "$0$", "$2$", "$3$", "$5$"],
     correct: 4,
     tags: [],
-    solution: "პირველის ამონახსნები: $x^2 - 5x + 6 = 0$ ($2$, $3$) და $x^2 - 5x = 0$ ($0$, $5$): $\\{0;\\ 2;\\ 3;\\ 5\\}$.<br><br>მეორე ($a \\ge 0$): $x^2 - 5x + a = \\pm a$, ანუ $x^2 - 5x = 0$ ($0$, $5$) ან $x^2 - 5x + 2a = 0$. ტოლფასობისთვის მეორე უნდა იძლეოდეს $2$ და $3$-ს: $2a = 6$, $a = 3$.<br><br><strong>პასუხი:</strong> ე) $3$."
+    solution: "პირველის ამონახსნები: $x^2 - 5x + 6 = 0$ ($2$, $3$) და $x^2 - 5x = 0$ ($0$, $5$): $\\{0;\\ 2;\\ 3;\\ 5\\}$.<br><br>მეორე ($a \\ge 0$): $x^2 - 5x + a = \\pm a$, ანუ $x^2 - 5x = 0$ ($0$, $5$) ან $x^2 - 5x + 2a = 0$. ტოლფასობისთვის მეორე უნდა იძლეოდეს $2$ და $3$-ს: $2a = 6$, $a = 3$.<br><br><strong>პასუხი:</strong> ე) $3$.",
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter","absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24
@@ -212,7 +396,15 @@ quizData = [
     options: ["$2\\dfrac{1}{3}$", "$\\dfrac{\\sqrt{15} - 1}{2}$", "$3\\dfrac{1}{3}$", "$\\dfrac{\\sqrt{17} - 1}{2}$", "$5\\dfrac{1}{3}$", "$\\dfrac{\\sqrt{19} - 1}{2}$"],
     correct: 2,
     tags: [],
-    solution: "$\\angle DAE = 90^\\circ$, ამიტომ $DE$ წრეწირის დიამეტრია და $\\angle DCE = 90^\\circ$. ვთქვათ, $AD = p$, $BC = q$.<br><br>$DE^2 = 36 + p^2$, $CE^2 = 4 + q^2$, $DE^2 = CD^2 + CE^2$: $36 + p^2 = 104 + q^2$, ე.ი. $p^2 - q^2 = 68$.<br><br>$CD^2 = AB^2 + (p - q)^2$: $100 = 64 + (p - q)^2$, $p - q = 6$. მაშინ $p + q = \\dfrac{68}{6} = \\dfrac{34}{3}$, $q = \\dfrac{8}{3}$.<br><br>$CE = \\sqrt{4 + \\dfrac{64}{9}} = \\dfrac{10}{3} = 3\\dfrac{1}{3}$.<br><br><strong>პასუხი:</strong> გ) $3\\dfrac{1}{3}$."
+    solution: "$\\angle DAE = 90^\\circ$, ამიტომ $DE$ წრეწირის დიამეტრია და $\\angle DCE = 90^\\circ$. ვთქვათ, $AD = p$, $BC = q$.<br><br>$DE^2 = 36 + p^2$, $CE^2 = 4 + q^2$, $DE^2 = CD^2 + CE^2$: $36 + p^2 = 104 + q^2$, ე.ი. $p^2 - q^2 = 68$.<br><br>$CD^2 = AB^2 + (p - q)^2$: $100 = 64 + (p - q)^2$, $p - q = 6$. მაშინ $p + q = \\dfrac{68}{6} = \\dfrac{34}{3}$, $q = \\dfrac{8}{3}$.<br><br>$CE = \\sqrt{4 + \\dfrac{64}{9}} = \\dfrac{10}{3} = 3\\dfrac{1}{3}$.<br><br><strong>პასუხი:</strong> გ) $3\\dfrac{1}{3}$.",
+    area: "geometry",
+    topics: ["trapezoid","inscribed-circum","pythagoras"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25
@@ -221,6 +413,14 @@ quizData = [
     options: ["$2\\dfrac{1}{3}$", "$\\dfrac{\\sqrt{17} - 1}{2}$", "$3\\dfrac{1}{3}$", "$\\dfrac{\\sqrt{15} - 1}{2}$", "$5\\dfrac{1}{3}$", "$\\dfrac{\\sqrt{19} - 1}{2}$"],
     correct: 1,
     tags: [],
-    solution: "ვთქვათ, $AC = x$. $BD$ მედიანაცაა, $AD = \\dfrac{x}{2}$. ბისექტრისის თვისებით $\\dfrac{BF}{FA} = \\dfrac{BC}{CA} = \\dfrac{1}{x}$, ამიტომ $AF = \\dfrac{x}{1 + x}$ (ანალოგიურად $BE = BF$).<br><br>სიმეტრიის გამო წრეწირის ცენტრი $BD$-ზეა, $AC \\perp BD$, ამიტომ $AC$ წრეწირს $D$ წერტილში ეხება. $A$ წერტილის ხარისხი: $AD^2 = AF \\cdot AB$.<br><br>$\\dfrac{x^2}{4} = \\dfrac{x}{1 + x}$, $x(1 + x) = 4$, $x^2 + x - 4 = 0$, $x = \\dfrac{\\sqrt{17} - 1}{2}$.<br><br><strong>პასუხი:</strong> ბ) $\\dfrac{\\sqrt{17} - 1}{2}$."
+    solution: "ვთქვათ, $AC = x$. $BD$ მედიანაცაა, $AD = \\dfrac{x}{2}$. ბისექტრისის თვისებით $\\dfrac{BF}{FA} = \\dfrac{BC}{CA} = \\dfrac{1}{x}$, ამიტომ $AF = \\dfrac{x}{1 + x}$ (ანალოგიურად $BE = BF$).<br><br>სიმეტრიის გამო წრეწირის ცენტრი $BD$-ზეა, $AC \\perp BD$, ამიტომ $AC$ წრეწირს $D$ წერტილში ეხება. $A$ წერტილის ხარისხი: $AD^2 = AF \\cdot AB$.<br><br>$\\dfrac{x^2}{4} = \\dfrac{x}{1 + x}$, $x(1 + x) = 4$, $x^2 + x - 4 = 0$, $x = \\dfrac{\\sqrt{17} - 1}{2}$.<br><br><strong>პასუხი:</strong> ბ) $\\dfrac{\\sqrt{17} - 1}{2}$.",
+    area: "geometry",
+    topics: ["isosceles","cevians","chords-tangents"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

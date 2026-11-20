@@ -10,7 +10,15 @@ quizData = [
             "$y= 2x^3 + 1$"
         ],
         correct: 3,
-        tags: ["Functions", "Inverse Functions"]
+        tags: ["Functions", "Inverse Functions"],
+        area: "algebra",
+        topics: ["nth-roots","function-basics"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი მთელი რიცხვი ეკუთვნის $[2^{\\sqrt{2}-1}; 3^{1{,}5}]$ სეგმენტს?",
@@ -23,7 +31,15 @@ quizData = [
             "$6$"
         ],
         correct: 3,
-        tags: ["Algebra", "Intervals"]
+        tags: ["Algebra", "Intervals"],
+        area: "geometry",
+        topics: ["circle-segments"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ცნობილია, რომ $y= 9 \\cdot a^x$ და $y= a^{x+2}$ მაჩვენებლიანი ფუნქციები ერთმანეთს კვეთენ ორდინატთა ღერძზე. იპოვეთ $y= 2 \\cdot a^{x+1}$ ფუნქციის $OY$ ღერძთან გადაკვეთის წერტილის კოორდინატები.",
@@ -36,7 +52,15 @@ quizData = [
             "$(0;6)$"
         ],
         correct: 5,
-        tags: ["Exponential Functions", "Coordinate Geometry"]
+        tags: ["Exponential Functions", "Coordinate Geometry"],
+        area: "algebra",
+        topics: [],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ცილინდრის სიმაღლე $4$-ჯერ მეტია მის რადიუსზე. რისი ტოლია ამ ცილინდრის ღერძული კვეთის დიაგონალებს შორის კუთხის სინუსი?",
@@ -49,7 +73,15 @@ quizData = [
             "$0{,}6$"
         ],
         correct: 1,
-        tags: ["Geometry", "Cylinder"]
+        tags: ["Geometry", "Cylinder"],
+        area: "solid",
+        topics: ["cylinder"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ბირთვი გადაკვეთილია სიბრტყით და კვეთაში მიღებული წრის დიამეტრის და ბირთვის დიამეტრის ჯამია $32$, ხოლო ბირთვის რადიუსისა და კვეთის რადიუსის სხვაობაა $4$. რა მანძილითაა დაშორებული მკვეთი სიბრტყე ბირთვის ცენტრიდან?",
@@ -62,7 +94,15 @@ quizData = [
             "$8$"
         ],
         correct: 5,
-        tags: ["Geometry", "Sphere"]
+        tags: ["Geometry", "Sphere"],
+        area: "solid",
+        topics: ["sphere"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია $(\\sqrt{2} -1)^{2x-1} -(\\sqrt{2} + 1)^{1-2x}$ გამოსახულების მნიშვნელობა?",
@@ -75,7 +115,15 @@ quizData = [
             "არცერთი წინა პასუხი არაა სწორი."
         ],
         correct: 0,
-        tags: ["Algebra", "Exponents"]
+        tags: ["Algebra", "Exponents"],
+        area: "algebra",
+        topics: ["square-roots"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "დაალაგეთ ზრდადობით $a= \\log_2(\\sqrt{2} + 1); b= \\log_3(2^{-1}); c= \\log_{\\sqrt{3}}(\\sqrt{6} -2)$",
@@ -88,7 +136,15 @@ quizData = [
             "$c; a; b$"
         ],
         correct: 4,
-        tags: ["Logarithms", "Comparison"]
+        tags: ["Logarithms", "Comparison"],
+        area: "algebra",
+        topics: ["logarithms","numeric-ineq"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "მოცემულია $x+ 3 + \\log_2 x= 0$ განტოლება. ჩამოთვლილთაგან რომელი წინადადებაა სამართლიანი?",
@@ -101,7 +157,15 @@ quizData = [
             "განტოლებას აქვს ორი სხვადასხვა ნიშნიანი ამონახსნი."
         ],
         correct: 1,
-        tags: ["Logarithmic Equations"]
+        tags: ["Logarithmic Equations"],
+        area: "algebra",
+        topics: ["log-eq"],
+        grade: 11,
+        difficulty: 1,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "მართი სამკუთხა პრიზმის ფუძეა მართკუთხა სამკუთხედი $12$-ის ტოლი ჰიპოტენუზით და $60^\\circ$-იანი მახვილი კუთხით. რისი ტოლია პრიზმის მოცულობა, თუ მისი სიმაღლეა $5$.",
@@ -114,7 +178,15 @@ quizData = [
             "$70$"
         ],
         correct: 1,
-        tags: ["Geometry", "Prism"]
+        tags: ["Geometry", "Prism"],
+        area: "solid",
+        topics: ["prism"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "პრიზმის ფუძეა მართკუთხა ტრაპეცია, რომელშიც ჩახაზული წრეწირის რადიუსია $1$ და მახვილი კუთხე კი $30^\\circ$-ია. რისი ტოლია პრიზმის მოცულობა, თუ მისი სიმაღლეა $5$.",
@@ -127,7 +199,15 @@ quizData = [
             "$35$"
         ],
         correct: 4,
-        tags: ["Geometry", "Prism"]
+        tags: ["Geometry", "Prism"],
+        area: "solid",
+        topics: ["prism","trapezoid"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია $(\\log_a b + \\log_b a + 2) \\cdot (\\log_a b - \\log_{a \\cdot b} b) \\cdot \\log_b a$ გამოსახულება?",
@@ -140,7 +220,15 @@ quizData = [
             "$\\log_b a + 2 \\log_a b$"
         ],
         correct: 2,
-        tags: ["Logarithms", "Algebra"]
+        tags: ["Logarithms", "Algebra"],
+        area: "algebra",
+        topics: ["logarithms"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ცნობილია, რომ $(a; b)$ წყვილი, წარმოადგენს $2 \\log_a b + 0{,}5 \\cdot \\log_b a = 2$ განტოლების ამონახსნთა წყვილს. რისი ტოლია $b^2 - a$ გამოსახულების მნიშვნელობა?",
@@ -153,7 +241,15 @@ quizData = [
             "$0$"
         ],
         correct: 5,
-        tags: ["Logarithmic Equations"]
+        tags: ["Logarithmic Equations"],
+        area: "algebra",
+        topics: ["log-eq"],
+        grade: 11,
+        difficulty: 2,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია $3^{2x-15} = 9 \\cdot 3^{x-10} + 2$ განტოლების ამონახსნის $6$-ზე გაყოფის ნაშთი?",
@@ -166,7 +262,15 @@ quizData = [
             "$5$"
         ],
         correct: 2,
-        tags: ["Exponential Equations"]
+        tags: ["Exponential Equations"],
+        area: "algebra",
+        topics: ["exp-eq","divisibility"],
+        grade: 11,
+        difficulty: 2,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "წესიერი ოთხკუთხა პრიზმის ყველა წვერო სფეროს ზედაპირზე მდებარეობს. რისი ტოლია ამ პრიზმის მოცულობა, თუ მისი სიმაღლეა $4\\sqrt{17}$ და სფეროს რადიუსია $10$?",
@@ -179,7 +283,15 @@ quizData = [
             "$234\\sqrt{17}$"
         ],
         correct: 3,
-        tags: ["Geometry", "Prism"]
+        tags: ["Geometry", "Prism"],
+        area: "solid",
+        topics: ["prism","sphere"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$ABCDEFA_1B_1C_1D_1E_1F_1$ წარმოადგენს წესიერ ექვსკუთხა პრიზმას, რომლის თითოეული წიბო $1$-ის ტოლია. რისი ტოლია მანძილი $F_1D$ და $AC$ აცდენილ წრფეებს შორის.",
@@ -192,7 +304,15 @@ quizData = [
             "$\\sqrt{3}-\\sqrt{2}$"
         ],
         correct: 1,
-        tags: ["Geometry", "Prism"]
+        tags: ["Geometry", "Prism"],
+        area: "solid",
+        topics: ["prism","combinatorics"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია $\\log_{(\\sqrt{3}-1)} 7 \\cdot \\log_7 (4 -2\\sqrt{3}) - \\log_{(\\sqrt{3}-\\sqrt{2})}(\\sqrt{3} + \\sqrt{2})$ გამოსახულება?",
@@ -205,7 +325,15 @@ quizData = [
             "$6$"
         ],
         correct: 0,
-        tags: ["Logarithms", "Algebra"]
+        tags: ["Logarithms", "Algebra"],
+        area: "algebra",
+        topics: ["logarithms"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია $\log_{10} 56$, თუ ცნობილია, რომ $\\log_{10} 2 = a$ და $\\log_2 7 = b$?",
@@ -218,7 +346,15 @@ quizData = [
             "$2ab + 3b$"
         ],
         correct: 2,
-        tags: ["Logarithms", "Algebra"]
+        tags: ["Logarithms", "Algebra"],
+        area: "algebra",
+        topics: ["logarithms"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {   
         warning: "ორი პასუხია ჩათვლილი",
@@ -232,7 +368,15 @@ quizData = [
             "$1$"
         ],
         correct: [1,3],
-        tags: ["Geometry", "Parallelepiped"]
+        tags: ["Geometry", "Parallelepiped"],
+        area: "solid",
+        topics: ["prism"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "წესიერი სამკუთხა პირამიდის თითოეული გვერდითი წახნაგი ტოლგვერდა სამკუთხედია $4$-ის ტოლი გვერდით. იპოვეთ იმ სიბრტყით მიღებული კვეთის ფართობი, რომელიც გავლებულია პირამიდის ფუძის გვერდზე და პირამიდის სიმაღლის შუა წერტილზე.",
@@ -245,7 +389,15 @@ quizData = [
             "$12$"
         ],
         correct: 2,
-        tags: ["Geometry", "Pyramid"]
+        tags: ["Geometry", "Pyramid"],
+        area: "solid",
+        topics: ["pyramid","isosceles","cross-sections"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "კონუსის ფუძის რადიუსია $6$, ხოლო მისი სიმაღლეა $4$. იპოვეთ მანძილი კონუსის ფუძის ცენტრიდან იმ სიბრტყემდე, რომელიც გადის კონუსის წვეროზე და ფუძის წრეწირიდან ჩამოკვეთს $120^\\circ$-იან რკალს.",
@@ -258,7 +410,15 @@ quizData = [
             "$2{,}6$"
         ],
         correct: 1,
-        tags: ["Geometry", "Cone"]
+        tags: ["Geometry", "Cone"],
+        area: "solid",
+        topics: ["cone"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია $4 \\cdot 9^{\\sqrt[6]{x}} - 9 \\cdot 4^{\\sqrt[6]{x}} = 5 \\cdot 6^{\\sqrt[6]{x}}$ განტოლების ამონახსნის ციფრთა ჯამი?",
@@ -271,7 +431,15 @@ quizData = [
             "$6$"
         ],
         correct: 4,
-        tags: ["Exponential Equations"]
+        tags: ["Exponential Equations"],
+        area: "algebra",
+        topics: ["divisibility","nth-roots"],
+        grade: 11,
+        difficulty: 3,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $(\\log_{10}(x-1)^2)^4 + (\\log_{10}(x-1)^3)^2 = 25$ განტოლების ნამდვილი ამონახსნების ჯამი?",
@@ -284,7 +452,15 @@ quizData = [
             "$18$"
         ],
         correct: 3,
-        tags: ["Logarithmic Equations"]
+        tags: ["Logarithmic Equations"],
+        area: "algebra",
+        topics: ["log-eq"],
+        grade: 11,
+        difficulty: 3,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია $a \\cdot b$ ნამრავლი, თუ $(a; b)$ წარმოადგენს $\\begin{cases} 8 \\cdot (\\sqrt{2})^{x+3} = 0{,}5^{y-3} \\\\ \\log_3(x-2y) + \\log_3(3x+2y) = 3 \\end{cases}$ სისტემის ამონახსნს?",
@@ -297,7 +473,15 @@ quizData = [
             "$-9$"
         ],
         correct: 5,
-        tags: ["System of Equations", "Logarithms"]
+        tags: ["System of Equations", "Logarithms"],
+        area: "algebra",
+        topics: ["log-eq","linear-systems"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$ABCDA_1B_1C_1D_1$ კუბია. $M$ წერტილი $AD$ წიბოს შუაწერტილია, ხოლო $N$ კი $DD_1$ წიბოს შუაწერტილი. რისი ტოლია ორწახნაგა კუთხის კოსინუსი $MNC$ სიბრტყესა და $A_1B_1C_1D_1$ სიბრტყეს შორის?",
@@ -310,7 +494,15 @@ quizData = [
             "$\\frac{\\sqrt{3}}{2}$"
         ],
         correct: 3,
-        tags: ["Geometry", "Cube"]
+        tags: ["Geometry", "Cube"],
+        area: "prob-stats",
+        topics: ["combinatorics","angles-space"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "დახრილი სამკუთხა პრიზმის ფუძე ტოლგვერდა სამკუთხედია $4$-ის ტოლი გვერდით. გვერდითი წიბოები ფუძის სიბრტყესთან $60^\\circ$-იან კუთხეს ადგენენ და თითოეული მათგანი $\\sqrt{13}$-ის ტოლია. ერთ-ერთი გვერდითი წახნაგი მართკუთხედს წარმოადგენს. დათვალეთ რისი ტოლია დანარჩენი ორი გვერდითი წახნაგის ფართობების ჯამი.",
@@ -323,6 +515,14 @@ quizData = [
             "$52$"
         ],
         correct: 4,
-        tags: ["Geometry", "Prism", "Surface Area"]
+        tags: ["Geometry", "Prism", "Surface Area"],
+        area: "solid",
+        topics: ["prism"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     }
 ];

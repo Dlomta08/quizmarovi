@@ -4,7 +4,15 @@ quizData = [
     question: "ჩამოთვლილთაგან $𝑎$-ს რომელი მნიშვნელობისთვის იქნება $𝑦 = \\sqrt{𝑥+a}  + 4𝑎 + 5$ ფუნქციის გრაფიკი მხოლოდ პირველ მეოთხედში?",
     options: ["$-1$", "$-2$", "$-3$", "$1$", "$2$", "$3$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -19,7 +27,15 @@ quizData = [
       "$|a^2|b^3c^4\\sqrt{-ab}$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -34,7 +50,15 @@ quizData = [
       "$y = \\sqrt{x + 2}$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-basics","quadratic-func"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -42,7 +66,15 @@ quizData = [
     question: "პარალელოგრამის დიაგონალებია $6$ და $8$, ხოლო ერთ-ერთი გვერდი $5$. იპოვეთ პარალელოგრამის ფართობი.",
     options: ["$4$", "$12$", "$16$", "$24$", "$30$", "$60$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["parallelogram"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -50,7 +82,15 @@ quizData = [
     question: "ტრაპეციის ფუძეები $2$-ის და $8$-ის ტოლია, ხოლო ფერდები $5$-ის. იპოვეთ ტრაპეციის ფართობი.",
     options: ["$12$", "$16$", "$20$", "$25$", "$30$", "$32$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     //6
   {
@@ -64,7 +104,15 @@ quizData = [
       "$xy = -1$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["integer-part"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -72,7 +120,15 @@ quizData = [
     question: "$\\dfrac{2}{\\sqrt{7} - \\sqrt{5}} - \\sqrt{7} = $",
     options: ["$\\sqrt{5}$", "$\\sqrt{7}$", "$\\sqrt{35}$", "$1$", "$3$", "$5$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -80,7 +136,15 @@ quizData = [
     question: "რამდენი გადაკვეთის წერტილი აქვთ $y = x^4$ და $y = \\sqrt{x + 1}$ ფუნქციის გრაფიკებს?",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -88,7 +152,15 @@ quizData = [
     question: "იპოვეთ $ABCD$ ტრაპეციის ($BC \\parallel AD$) ფართობი, თუ $BC = 1$, $AD = 5$, ხოლო $BOC$ სამკუთხედის ფართობია $4$, სადაც $O$ წერტილი დიაგონალების გადაკვეთის წერტილია.",
     options: ["$20$", "$50$", "$64$", "$144$", "$196$", "$224$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -96,7 +168,15 @@ quizData = [
     question: "$ABC$ სამკუთხედში $A$ და $C$ კუთხიდან გავლებული მედიანები $AC$ გვერდთან ქმნიან $17^\\circ$ და $13^\\circ$-იან კუთხეებს. იპოვეთ $ABC$ სამკუთხედის ფართობი, თუ ამ მედიანების სიგრძეებია $6$ და $12$.",
     options: ["$12$", "$24$", "$28$", "$32$", "$36$", "$48$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //11
   {
@@ -110,7 +190,15 @@ quizData = [
       "$[\\dfrac{1}{3}; \\dfrac{2}{3}]$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -118,7 +206,15 @@ quizData = [
     question: "რამდენი გადაკვეთის წერტილი აქვთ $y = x^3 - 1$ და $y = \\dfrac{1}{x} + 2$ ფუნქციის გრაფიკებს?",
     options: ["$2$", "$3$", "$1$", "$4$", "$5$", "$6$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -126,7 +222,15 @@ quizData = [
     question: "ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს $a$-ს მნიშვნელობა, რომ $\\dfrac{3x - 17}{x + a}$ ფუნქცია $[-8; 4]$ შუალედზე იყოს ზრდადი?",
     options: ["$-7$", "$-6$", "$-5$", "$-3$", "$-2$", "$-1$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-props"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //14
@@ -134,7 +238,15 @@ quizData = [
     question: "პარალელოგრამის მახვილი კუთხის წვეროებიდან გავლებული სიმაღლეები $4$-ის და $6$-ის ტოლია, მათ შორის კუთხე $150^\\circ$-ია. იპოვეთ პარალელოგრამის ფართობი.",
     options: ["$12$", "$24$", "$36$", "$48$", "$32$", "$20$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["parallelogram"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -142,7 +254,15 @@ quizData = [
     question: "$ABC$ სამკუთხედის $AD$ მედიანაზე აღებულია $M$ წერტილი. იპოვეთ $AM : AD$, თუ $S_{\\triangle ABM} = 8$ და $S_{\\triangle DCM} = 6$.",
     options: ["$3 : 7$", "$3 : 2$", "$4 : 3$", "$4 : 7$", "$2 : 5$", "$1 : 2$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //16
   {
@@ -156,7 +276,15 @@ quizData = [
       "რომბს"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["integer-part","line-circle-eq"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -171,7 +299,15 @@ quizData = [
       "$\\dfrac{\\sqrt[3]{2} + 1}{1 - \\sqrt[3]{2}}$"
     ],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["nth-roots"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -186,7 +322,15 @@ quizData = [
       "$b + a$"
     ],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["square-roots"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -201,7 +345,15 @@ quizData = [
       "შეუძლებელია დადგენა"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["parallelogram"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -209,14 +361,30 @@ quizData = [
     question: "$ABC$ სამკუთხედში $\\angle B = 90^\\circ$ გავლებულია $BM$ მედიანა. $ABM$ და $BMC$ სამკუთხედებში გავლებულია შესაბამისად $MD$ და $ME$ ბისექტრისები. $DE$ მონაკვეთი $BM$ მედიანას $K$ წერტილში გადაკვეთს. იპოვეთ $ABC$ სამკუთხედის ფართობი, თუ $S_{\\triangle DBK} = 8$.",
     options: ["$16$", "$24$", "$32$", "$48$", "$56$", "$64$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["cevians"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //21
   {
     question: "მოცემულია $f_1(x) = a_1\\sqrt[3]{x^2} + b_1\\sqrt[4]{x^3} + c_1\\sqrt{x}$ და $f_2(x) = a_2\\sqrt[3]{x} + b_2\\sqrt[4]{x}$ ფუნქციები, $a_1; b_1; c_1; a_2; b_2$ რაციონალურ რიცხვებს ვუწოდოთ ფუნქციის კოეფიციენტები. ცნობილია, რომ $a_1 + b_1 + c_1 = 1$ და $a_2 + b_2 = 1$. იპოვეთ $f(x) = f_1(x) \\cdot f_2(x)$ ფუნქციის კოეფიციენტების ჯამი.",
     options: ["$0$", "$1$", "$2$", "$3$", "$8$", "$27$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["nth-roots"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //22
@@ -231,7 +399,15 @@ quizData = [
       "$2y - x = 1$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-ineq","quadratic-func"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //23
@@ -239,7 +415,15 @@ quizData = [
     question: "იპოვეთ $|2x^2 + 1 - x^4| + |x^4 - 2x^2 + 2| = 7$ განტოლების ამონახსნთა ნამრავლი.",
     options: ["$12$", "$-14$", "$-3$", "$4$", "$-7$", "$8$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["abs-eq","quadratic-eq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //24
@@ -247,7 +431,15 @@ quizData = [
     question: "$ABCD$ მართკუთხა ტრაპეციაში $AB$ სიმაღლე $BC$ და $AD$ ფუძეების ჯამის ტოლია. $ABC$ კუთხის ბისექტრისა $AD$ გვერდის გაგრძელებას $N$ წერტილში გადაკვეთს. იპოვეთ $ABCD$ ტრაპეციისა და $ABN$ სამკუთხედის ფართობების შეფარდება.",
     options: ["$1 : 2$", "$2 : 1$", "$3 : 2$", "$4 : 1$", "$2 : 3$", "$1 : 1$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid","area-ratios"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //25
@@ -255,6 +447,14 @@ quizData = [
     question: "ამოზნექილ $ABCD$ ოთკუთხედში $K$ დიაგონალების გადაკვეთის წერტილია. ცნობილია, რომ $S_{\\triangle ABK} = S_{\\triangle DCK} = 1$, $S_{ABCD} \\leq 4$, $AD = 6$. გამოთვალეთ $BC$.",
     options: ["$2$", "$2{,}5$", "$3$", "$4$", "$4{,}5$", "$6$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -4,7 +4,15 @@ quizData = [
     question: "ქვემოთ ჩამოთვლილთაგან, რომელი გამოსახულება უნდა ავიყვანოთ კუბში, რომ მივიღოთ $8𝑎^3 − 12𝑎^2𝑦 + 6𝑎𝑦^2 − 𝑦^3$ გამოსახულება?",
     options: ["$𝑎 - 2𝑦$", "$2𝑎 - 𝑦$", "$𝑎 + 2𝑦$", "$2𝑎 - 2𝑦$", "$2𝑎 + 𝑦$", "არცერთი წინა ჩამოთვლილი"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -12,7 +20,15 @@ quizData = [
     question: "გამოთვალეთ $\\dfrac{199^2 - 1}{149^2 - 49^2}$",
     options: ["$2$", "$3$", "$4$", "$5$", "$7$", "$1$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["special-products"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -20,7 +36,15 @@ quizData = [
     question: "იპოვეთ მეორე მეოთხედში მდებარე $𝑀(𝑎 - 1; 𝑎 + 4)$ წერტილის კოორდინატების ჯამი, თუ მანძილი $M$ წერტილიდან $oy$ ღერძამდე $2$-ის ტოლია.",
     options: ["$-2$", "$3$", "$-4$", "$2$", "$-3$", "$1$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -28,7 +52,15 @@ quizData = [
     question: "ცნობილია, რომ $A(1;-3)$ წერტილი $y=𝑓(𝑥)$ ფუნქციის გრაფიკზე მდებარეობს. იპოვეთ $k$ თუ $𝑓(𝑥) = 𝑘𝑥 + 2𝑘$.",
     options: ["$-2$", "$3$", "$-1$", "$2$", "$-3$", "$1$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -36,7 +68,15 @@ quizData = [
     question: "$𝑘$ პარამეტრის რომელი მნიშვნელობისთვის არ გააჩნია $(𝑘 − 1)(𝑘 − 2)𝑥 = 𝑘 − 1$ განტოლებას ამონახსნი?",
     options: ["$-2$", "$3$", "$-1$", "$2$", "$-3$", "$1$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-eq"],
+    grade: 7,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //6
@@ -44,7 +84,15 @@ quizData = [
     question: "იპოვეთ $𝑦 = 5𝑥 − 7$ და $𝑦 = 2𝑥 − 1$ ფუნქციათა გრაფიკების გადაკვეთის წერტილის კოორდინატების სხვაობის მოდული:",
     options: ["$-2$", "$3$", "$-1$", "$2$", "$-3$", "$1$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -52,7 +100,15 @@ quizData = [
     question: "იპოვეთ $𝑎$ პარამეტრის ის მნიშვნელობა, რომლისთვისაც $𝑎𝑥 + 𝑏𝑦 = 1$ განტოლების გრაფიკი გადის $A(2;3)$ და $B(5;6)$ წერტილებზე.",
     options: ["$-2$", "$3$", "$-1$", "$2$", "$-3$", "$1$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["graph"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -60,7 +116,15 @@ quizData = [
     question: "ორი რიცხვის ჯამია $14$. ერთი რიცხვის მესამედი უდრის მეორე რიცხვის $25\\%$-ს. იპოვეთ ამ რიცხვების ნამრავლი.",
     options: ["$42$", "$44$", "$46$", "$48$", "$50$", "$52$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["percent"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -68,7 +132,15 @@ quizData = [
     question: "მოცემულია $y=𝑓(𝑥)$ ფუნქცია, სადაც $𝑓(𝑥) = 2𝑥 + 2$. იპოვეთ $𝑓(−2) \\cdot 𝑓(−0{,}5)$.",
     options: ["$-2$", "$3$", "$-1$", "$2$", "$-3$", "$1$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -76,14 +148,30 @@ quizData = [
     question: "იპოვეთ $𝑥^2 − 2𝑥 − 3𝑥 + 6 = 0$ განტოლების ამონახსნებს შორის უდიდესი:",
     options: ["$0$", "$-1$", "$1$", "$2$", "$-2$", "$3$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     //11
   {
     question: "იპოვეთ $|𝑥 − 3|=|3𝑥 − 1|$ განტოლების ფესვთა ჯამი.",
     options: ["$0$", "$-1$", "$1$", "$2$", "$-2$", "$3$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 7,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -91,7 +179,15 @@ quizData = [
     question: "ორი წრფე ეხება $𝑂$ ცენტრის მქონე წრეწირს $𝐴$ და $𝐵$ წერტილებში და იკვეთებიან $𝐶$ წერტილში. იპოვეთ კუთხე $𝐴𝐶𝐵$, თუ $\\angle 𝐴𝐵𝑂 = 38°$.",
     options: ["$58^\\circ$", "$84^\\circ$", "$36^\\circ$", "$76^\\circ$", "$78^\\circ$", "$66^\\circ$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -99,7 +195,15 @@ quizData = [
     question: "$𝐴𝐵𝐶$ სამკუთხედის კუთხეები ისე შეეფარდება ერთმანეთს როგორც $3:4:2$-ს. ამ სამკუთხედში ჩახაზული წრეწირი სამკუთხედის გვერდებს ეხება $𝐾, 𝑀$ და $𝑁$ წერტილებში. იპოვეთ $𝐾𝑀𝑁$ სამკუთხედის უმცირესი კუთხე.",
     options: ["$20^\\circ$", "$30^\\circ$", "$40^\\circ$", "$50^\\circ$", "$60^\\circ$", "$70^\\circ$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //14
@@ -108,7 +212,15 @@ quizData = [
     question: "$𝐴𝐵𝐶$ სამკუთხედში ჩახაზული წრეწირის მხები სამკუთხედს ჩამოჭრის სამ ცალ სამკუთხედს, რომელთა პერიმეტრებია $6$სმ, $8$სმ და $10$სმ. იპოვეთ ამ სამკუთხედის უდიდესი და უმცირესი გვერდების კვადრატების სხვაობა.",
     options: ["$30$", "$31$", "$32$", "$33$", "$34$", "$35$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum","chords-tangents"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -116,7 +228,15 @@ quizData = [
     question: "$(4𝑎^2𝑏^{3𝑘}𝑐^{7𝑛})^3$ ერთწევრის ხარისხი $90$-ის ტოლია. იპოვეთ $k+n$-ის მნიშვნელობა ($k$ და $n$ ნატურალური რიცხვებია).",
     options: ["$5$", "$6$", "$7$", "$8$", "$9$", "$10$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["polynomials"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //16
@@ -124,7 +244,15 @@ quizData = [
     question: "ტოლფერდა სამკუთხედში ფუძისადმი გავლებულ მედიანასა და ფერდისადმი გავლებულ ბისექტრისას შორის კუთხე $70°$-ის ტოლია. იპოვეთ სამკუთხედის უდიდესი კუთხე.",
     options: ["$120^\\circ$", "$110^\\circ$", "$100^\\circ$", "$90^\\circ$", "$80^\\circ$", "$70^\\circ$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -132,7 +260,15 @@ quizData = [
     question: "ცნობილია, რომ $\\begin{cases} 𝑥 − 3𝑦 = 5 \\\\ 2𝑥 + 3𝑦 = 10 \\end{cases}$ იპოვეთ $𝑥^2 − 𝑦^2$.",
     options: ["$0$", "$5$", "$6$", "$15$", "$18$", "$25$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-systems"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -141,7 +277,15 @@ quizData = [
     question: "ორი ტოლი წრეწირი რომელთა ცენტრებს შორის მანძილი $4{,}8$სმ-ია ეხება $3$სმ რადიუსის მქონე წრეწირს, ერთი გარედან, მეორე შიგნიდან. იპოვეთ სამივე ცენტრის შეერთებით მიღებული სამკუთხედის პერიმეტრი.",
     options: ["$12{,}4$", "$12{,}5$", "$10{,}6$", "$13$", "$10{,}8$", "$15$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -149,7 +293,15 @@ quizData = [
     question: "ცნობილია, რომ $(𝑎 + 1)𝑥 − 2𝑏 = 𝑏𝑥 + 8$ განტოლებას აქვს უამრავი ამონახსნი. იპოვეთ $𝑏 − 𝑎$.",
     options: ["$0$", "$-1$", "$1$", "$2$", "$-2$", "შეუძლებელია დადგენა"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-eq"],
+    grade: 7,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -157,7 +309,15 @@ quizData = [
     question: "$𝑦 = 2𝑥 + 8$ ფორმულით მოცემული წრფე $ox$ ღერძს კვეთს $𝐴$ წერტილში, $oy$ ღერძს კვეთს $𝐵$ წერტილში. დაწერეთ იმ წრფის განტოლება, რომელიც $oy$ ღერძს კვეთს იმავე $B$ წერტილში, $ox$ ღერძს კვეთს $C$ წერტილში და ამასთან $𝐴𝐵 = 𝐵𝐶$.",
     options: ["$𝑦 = 2𝑥 − 8$", "$𝑦 = −2𝑥 − 8$", "$𝑦 = 𝑥 + 4$", "$𝑦 = 8 − 𝑥$", "$𝑦 = −𝑥 + 8$", "$𝑦 = −2𝑥 + 8$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 7,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //21
@@ -166,7 +326,15 @@ quizData = [
     question: "$A, B, C$ და $D$ წერტილები წრეწირზე მდებარეობენ (იხ. ნახაზი). $A$ წერტილზე გავლებული წრეწირის მხები $BC$ წრფეს $M$ წერტილში კვეთს. იპოვეთ $BC$ რკალის გრადუსული ზომა, თუ $\\angle MAB = 42°$ და $\\angle MBA = 82°$.",
     options: ["$120^\\circ$", "$110^\\circ$", "$100^\\circ$", "$90^\\circ$", "$80^\\circ$", "$70^\\circ$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles","chords-tangents"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //22
@@ -174,7 +342,15 @@ quizData = [
     question: "წრეწირის $𝐴𝐵$ დიამეტრი $𝐶𝐷$ ქორდას $E$ წერტილში კვეთს. $𝐴𝐶$ რკალის გრადუსული ზომა $90°$-ის ტოლია, ხოლო $𝐶𝐵𝐷$ რკალის გრადუსული ზომაა $150°$. იპოვეთ $\\angle 𝐶𝐸𝐴$.",
     options: ["$55^\\circ$", "$45^\\circ$", "$80^\\circ$", "$65^\\circ$", "$60^\\circ$", "$75^\\circ$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles","chords-tangents"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //23
@@ -182,7 +358,15 @@ quizData = [
     question: "$𝐴𝐵$ და $𝐶𝐷$ ქორდები $M$ წერტილში იკვეთებიან, ისე რომ $\\angle AMD = 50°$. იპოვეთ $BD$ რკალის გრადუსული ზომა, თუ ის $AC$ რკალის გრადუსულ ზომაზე $10^\\circ$-ით მეტია.",
     options: ["$95^\\circ$", "$105^\\circ$", "$115^\\circ$", "$125^\\circ$", "$135^\\circ$", "$145^\\circ$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles","chords-tangents"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //24
@@ -190,7 +374,15 @@ quizData = [
     question: "კუთხეში ჩახაზული წრეწირის ცენტრი შეერთებულია კუთხის წვეროსთან. მოცემული მონაკვეთი წრეწირთან გადაკვეთის წერტილით ორ ტოლ ნაწილად იყოფა. იპოვეთ კუთხის სიდიდე.",
     options: ["$15^\\circ$", "$30^\\circ$", "$45^\\circ$", "$60^\\circ$", "$75^\\circ$", "$90^\\circ$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility","inscribed-circum"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //25
@@ -199,6 +391,14 @@ quizData = [
     question: "ცნობილია, რომ $\\angle A = 46°$, $\\angle B = 68°$, $\\angle DEC = 120°$ (იხ. ნახაზი). იპოვეთ $\\angle AFD$.",
     options: ["$5^\\circ$", "$6^\\circ$", "$30^\\circ$", "$18^\\circ$", "$9^\\circ$", "$15^\\circ$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

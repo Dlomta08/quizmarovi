@@ -4,7 +4,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომლის ტოლია $\\sqrt[16]{8^{12}}$ გამოსახულების მნიშვნელობა?",
   options: ["$4^{\\frac{3}{4}}$", "$2^{\\frac{9}{4}}$", "$8^{\\frac{1}{4}}$", "$2^{\\frac{3}{4}}$", "$8^{\\frac{1}{2}}$", "ყველა წინა პასუხი მცდარია"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["powers","nth-roots"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //2
@@ -19,7 +27,15 @@ quizData = [
     "ყველა წინა პასუხი მცდარია"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["probability","sets"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //3
@@ -34,7 +50,15 @@ quizData = [
     "ყველა წინა პასუხი მცდარია"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["probability","sets"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //4
@@ -49,7 +73,15 @@ quizData = [
     "$\\frac{12}{\\sin \\alpha}$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["parallelogram"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //5
@@ -57,7 +89,15 @@ quizData = [
   question: "იპოვეთ $\\vec{a}(\\sqrt[3]{5^7}; 2^{\\frac{5}{6}})$ და $\\vec{b}(-\\sqrt[6]{2^5}; 5^{\\frac{7}{3}})$ ვექტორებს შორის კუთხე.",
   options: ["$180^{\\circ}$", "$150^{\\circ}$", "$135^{\\circ}$", "$120^{\\circ}$", "$90^{\\circ}$", "$60^{\\circ}$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors","nth-roots"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //6
@@ -66,7 +106,15 @@ quizData = [
   question: "კამათელი გააგორეს $10$-ჯერ. მოცემულია მიღებული შედეგების ფარდობითი სიხშირეთა ცხრილი. ამ მონაცემების მიხედვით იპოვეთ შედეგების მოდის, მედიანისა და საშუალოს ჯამი.",
   options: ["$10$", "$9$", "$11$", "$10{,}5$", "$9{,}5$", "$11{,}5$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["probability","statistics"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //7
@@ -74,7 +122,15 @@ quizData = [
   question: "მიმდევრობა, რომელიც $a_{n} = (-2)^{n}$ ზოგადი წევრის ფორმულით მოიცემა, არის ...",
   options: ["ზრდადი", "კლებადი", "შემოსაზღვრული", "მუდმივი", "არითმეტიკული პროგრესია", "ყველა წინა პასუხი მცდარია"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["arithmetic-prog"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //8
@@ -89,7 +145,15 @@ quizData = [
     "$\\mathbb{R} \\setminus (\\frac{3}{5})$"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-basics"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //9
@@ -97,7 +161,15 @@ quizData = [
   question: "ტრაპეციაში დიაგონალების გატარებით მიღებული ოთხი სამკუთხედის ფართობებიდან უმცირესი $2$-ის, უდიდესი კი $3$-ის ტოლია. იპოვეთ ტრაპეციის ფართობი.",
   options: ["$4\\sqrt{5}$", "$4\\sqrt{6}$", "$9$", "$10$", "$(\\sqrt{2} + \\sqrt{3})^{2}$", "$7{,}5$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["trapezoid"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //10
@@ -112,14 +184,30 @@ quizData = [
     "$3\\pi + 5 + 6\\sqrt{3}$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["chords-tangents"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //11
 {
   question: "დადებითწევრებიანი, უსასრულოდ კლებადი გეომეტრული პროგრესიის წევრთა ჯამი $4$-ჯერ მეტია მისი პირველი და მეორე წევრის ჯამზე. იპოვეთ ამ პროგრესიის მნიშვნელი.",
   options: ["$\\frac{1}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{1}{3}$", "$\\frac{\\sqrt{2}}{3}$", "$\\frac{\\sqrt{3}}{3}$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-props"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //12
@@ -127,7 +215,15 @@ quizData = [
   question: "იპოვეთ ყველა დადებითი, უკვეცი, $10$-ზე ნაკლები წილადის ჯამი, რომელთა მნიშვნელი $3$-ის ტოლია.",
   options: ["$100$", "$70$", "$105$", "$90$", "$85$", "$115$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //13
@@ -135,7 +231,15 @@ quizData = [
   question: "იპოვეთ $[ \\{ x \\} ] = [ \\{ x \\} ]$ განტოლების ამონახსნთა სიმრავლე ($[\\ldots]$ მთელი ნაწილი, $\\{\\ldots\\}$ წილადი ნაწილი).",
   options: ["$\\mathbb{R}$", "∅", "$\\{0; 1\\}$", "$(0; 1)$", "$[0; 1]$", "ყველა წინა პასუხი მცდარია"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["integer-part"],
+  grade: 9,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //14
@@ -143,7 +247,15 @@ quizData = [
   question: "სამკუთხედის გვერდების სიგრძეებია $13$, $14$ და $15$. ამ სამკუთხედის სიმაღლეების სიგრძეებია $m$, $n$ და $k$. იპოვეთ $\\frac{1}{m} + \\frac{1}{n} + \\frac{1}{k}$ ჯამის მნიშვნელობა.",
   options: ["$\\frac{6}{19}$", "$\\frac{5}{16}$", "$\\frac{4}{13}$", "$\\frac{3}{10}$", "$\\frac{2}{7}$", "$\\frac{1}{4}$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["cevians"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //15
@@ -158,7 +270,15 @@ quizData = [
     "$\\frac{2}{\\pi}$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["regular-polygon","inscribed-circum"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //16
@@ -166,7 +286,15 @@ quizData = [
   question: "ექვს წევრიანი გეომეტრული პროგრესიის წევრების ჯამი $28$-ჯერ მეტია ბოლო სამი წევრის ჯამზე. იპოვეთ ამ პროგრესიის მნიშვნელი.",
   options: ["$-\\frac{1}{2}$", "$-\\frac{1}{3}$", "$-\\frac{1}{4}$", "$\\frac{1}{2}$", "$\\frac{1}{3}$", "$\\frac{1}{4}$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //17
@@ -174,7 +302,15 @@ quizData = [
   question: "ნებისმიერი ნატურალური $n$ რიცხვისათვის $a_{n}$ მიმდევრობის პირველი $n$ წევრის საშუალო არითმეტიკული $2n - 1$-ის ტოლია. იპოვეთ $a_{1} + a_{4} + a_{7}$.",
   options: ["$12$", "$36$", "$39$", "$48$", "$60$", "$65$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["statistics"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //18
@@ -182,7 +318,15 @@ quizData = [
   question: "იპოვეთ $a$ პარამეტრის ყველა იმ დადებითი მნიშვნელობათა სიმრავლე, რომელთათვისაც $\\frac{x - 1}{x - a} < 0$ უტოლობას ექნება ორი მთელი ამონახსნი.",
   options: ["$(0; 1)$", "$[1; 2]$", "$[2; 3)$", "$(3; 4]$", "$[4; 5]$", "$(5; 6)$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-basics","linear-ineq","interval-method"],
+  grade: 9,
+  difficulty: 3,
+  type: ["solve"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //19
@@ -190,7 +334,15 @@ quizData = [
   question: "$ABC$ სამკუთხედის ფართობი $1$-ის ტოლია. $N$ წერტილი $AC$ გვერდის შუაწერტილია, ხოლო $BC$ გვერდზე აღებულია ისეთი $M$ წერტილი, რომ $BM : MC = 1:2$. $AM$ და $BN$ მონაკვეთები $O$ წერტილში იკვეთებიან. იპოვეთ $OMCN$ ოთხკუთხედის ფართობი.",
   options: ["$\\frac{9}{20}$", "$\\frac{11}{20}$", "$\\frac{7}{16}$", "$\\frac{9}{16}$", "$\\frac{5}{12}$", "$\\frac{7}{12}$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["proportion"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //20
@@ -198,7 +350,15 @@ quizData = [
   question: "იპოვეთ მანძილი $A(-1;5)$ წერტილიდან $B(3;2)$ და $C(1;-2)$ წერტილებზე გამავალ წრფემდე.",
   options: ["$\\frac{11}{\\sqrt{5}}$", "$5$", "$2\\sqrt{6}$", "$\\frac{14}{3}$", "$\\frac{24}{5}$", "$\\frac{12\\sqrt{5}}{5}$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //21
@@ -213,7 +373,15 @@ quizData = [
     "$(3; 4)$"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-basics","quadratic-func"],
+  grade: 9,
+  difficulty: 3,
+  type: ["graph"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //22
@@ -221,7 +389,15 @@ quizData = [
   question: "$y = f(x)$ კვადრატული ფუნქციისათვის ცნობილია, რომ $f(50) < 0$, $f(100) > 0$, $f(150) > 0$ და $f(200) < 0$. ჩამოთვლილთაგან რომელი აუცილებლად ჭეშმარიტია?",
   options: ["$f(75) = 0$", "$f(125) > 0$", "$f(175) < 0$", "$f(75) < 0$", "$f(125) = 0$", "$f(175) > 0$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-ineq"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //23
@@ -229,7 +405,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომელი მარტივი რიცხვი შეიძლება იყოს $p$, თუ რომელიღაც $a$, $b$ და $c$ ნატურალური რიცხვებისათვის სრულდება $a \\equiv b - 5~(mod~p)$, $b \\equiv c - 15~(mod~p)$ და $c \\equiv a - 7~(mod~p)$ სადარობები?",
   options: ["$p = 2$", "$p = 3$", "$p = 5$", "$p = 7$", "$p = 11$", "$p = 13$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["divisibility","prime-factor"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //24
@@ -237,7 +421,15 @@ quizData = [
   question: "$n$ კენტი რიცხვია. წესიერ $n$-კუთხედში ერთი წვეროდან გავლებულ ყველაზე პატარა სიგრძის და ყველაზე დიდი სიგრძის მქონე დიაგონალებს შორის კუთხე $199$-ჯერ მეტია იმავე წვეროდან გავლებულ ორ ყველაზე დიდი სიგრძის დიაგონალს შორის. ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს $n$?",
   options: ["$199$", "$203$", "$403$", "$207$", "$397$", "$197$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-props"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //25
@@ -252,6 +444,14 @@ quizData = [
     "$\\frac{\\vec{x} + \\vec{y}}{3}$"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["notable-points","vectors"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];

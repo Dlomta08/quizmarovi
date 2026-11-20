@@ -4,69 +4,149 @@ quizData = [
     image: "quizzes/class-7/images/image6.png",
     question: "ნახაზზე მოცემულია $y = f(x)$ ფუნქციის გრაფიკი. გრაფიკის მიხედვით უპასუხეთ შეკითხვებს: <br><br> ა) იპოვეთ ფუნქციის განსაზღვრის არე. <br><br> ბ) იპოვეთ ფუნქციის მნიშვნელობათა სიმრავლე. <br><br> გ) იპოვეთ ფუნქციის კლებადობის შუალედები.<br><br> დ) რამდენი ამონახსნი გააჩნია $f(x) = 0$ განტოლებას?",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["function-basics"],
+    grade: 7,
+    difficulty: 2,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
   {
     question: "ამოხსენით განტოლებათა სისტემა:\n$\\left\\{\\begin{aligned} \\dfrac{x + 1}{3} - \\dfrac{y + 2}{4} &= \\frac{2(x - y)}{5} \\\\ \\dfrac{x - 3}{4} - \\dfrac{y - 3}{3} &= 2y - x \\end{aligned}\\right.$",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-systems"],
+    grade: 7,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
   {
     question: "$ABCD$ მართკუთხედში $A$ წერტილის კოორდინატებია $(-2; 3)$, $B$ წერტილის $(-2; -1)$, $C$ წერტილის კი $(5; -1)$. იპოვეთ მართკუთხედის $D$ წვეროს კოორდინატები, მართკუთხედის პერიმეტრი და ფართობი.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["rhombus-rect-sq"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
   {
     question: "ორი გადამკვეთი ქორდის  ბოლოები წრეწირს  ყოფენ $4$ რკალად, რომელთა გრადუსული ზომები ისე შეეფარდება ერთმანეთს, როგორც $1:4:3:10$. იპოვეთ ქორდებს შორის კუთხე.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles","chords-tangents"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
   {
     question: "$A(2a − 1; 3a + 4)$ წერტილი $y = 2x − 6$ წრფეზე მდებარეობს. იპოვეთ $A$ წერტილის კოორდინატები.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
   {
     question: "მოცემულია საერთო ცენტრის მქონე ორი წრეწირი. დიდი წრეწირის ორი ურთიერთმართობული ქორდა მცირე წრეწირის მხებებს წარმოადგენს. იპოვეთ მცირე წრეწირის რადიუსი, თუ ქორდები გადაკვეთის წერტილით იყოფა მონაკვეთებად სიგრძეებით $4$ და $10$.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility","chords-tangents"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
   {
     question: "მართკუთხა სამკუთხედზე შემოხაზული და ჩახაზული წრეწირების რადიუსთა ჯამი ამ სამკუთხედის ერთ-ერთი კათეტის ტოლია. იპოვეთ სამკუთხედის კუთხეები.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle","inscribed-circum"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
   {
     question: "$b$ პარამეტრის რა მნიშვნელობისათვის იქნება $y = \\dfrac{2}{3}x + 12$ და $y = (b − 2) \\cdot x + 3$ ფუნქციების გრაფიკები\nა) პარალელური?\nბ) ურთიერთმართობული?",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
   {
     question: "ცნობილია, რომ $f(x) = 3x − 2$. ამოხსენით $f(f(x)) + 2f(x) = 8$ განტოლება.",
     options: [],
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-eq"],
+    grade: 7,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
   {
     question: "$ABC$ მართკუთხა სამკუთხედის $AC$ კათეტზე როგორც დიამეტრზე აგებული წრეწირი $AB$ ჰიპოტენუზას კვეთს $A$ და $E$ წერტილებში. $E$ წერტილზე გავლებული წრეწირის მხები $BC$ კათეტს კვეთს $D$ წერტილში. დაამტკიცეთ, რომ $BDE$ სამკუთხედი ტოლფერდაა.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles","right-triangle","chords-tangents"],
+    grade: 7,
+    difficulty: 3,
+    type: ["proof"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

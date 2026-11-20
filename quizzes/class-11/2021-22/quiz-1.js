@@ -3,73 +3,169 @@ quizData = [
             question: "გამოთვალეთ $\\log_5 7 \\cdot \\log_{49} 125$.",
             options: ["$\\frac{3}{2}$", "$5$", "$7$", "$\\frac{5}{2}$", "$3$", "$35$"],
             correct: 0,
-            tag: "logarithms"
+            tag: "logarithms",
+            area: "algebra",
+            topics: ["logarithms"],
+            grade: 11,
+            difficulty: 1,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "გამოთვალეთ $\\log_{7+4\\sqrt{3}}(7-4\\sqrt{3})$.",
             options: ["$2$", "$1$", "$7$", "$-2$", "$-1$", "$3$"],
             correct: 4,
-            tag: "logarithms"
+            tag: "logarithms",
+            area: "algebra",
+            topics: ["logarithms"],
+            grade: 11,
+            difficulty: 1,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "რომელ მეოთხედშია $f(x) = \\log_{x^9}(x^2)$ ფუნქციის გრაფიკი?",
             options: ["II", "III", "I-II", "I", "III-IV", "II-IV"],
             correct: 3,
-            tag: "functions"
+            tag: "functions",
+            area: "algebra",
+            topics: ["logarithms"],
+            grade: 11,
+            difficulty: 1,
+            type: ["graph"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "იპოვეთ წესიერი სამკუთხა პირამიდის აპოთემა, თუ მისი ფუძის გვერდის სიგრძეა $6$, ხოლო პირამიდის სიმაღლის სიგრძეა $7$.",
             options: ["$\\sqrt{43}$", "$\\sqrt{52}$", "$\\sqrt{42}$", "$9$", "$8$", "$\\sqrt{61}$"],
             correct: 1,
-            tag: "geometry"
+            tag: "geometry",
+            area: "solid",
+            topics: ["pyramid"],
+            grade: 11,
+            difficulty: 1,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "დახრილი ოთხკუთხა პრიზმის მოცულობა $72$-ის, ხოლო გვერდითი წიბო $4$-ის ტოლია. რისი ტოლია იმ ოთხკუთხედის ფართობი, რომელიც მიიღება პრიზმის წიბოს მართობული სიბრტყის კვეთით?",
             options: ["$12$", "$4\\sqrt{6}$", "$18$", "$9$", "$8$", "$36$"],
             correct: 2,
-            tag: "geometry"
+            tag: "geometry",
+            area: "solid",
+            topics: ["prism","volume-surface"],
+            grade: 11,
+            difficulty: 1,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "ამოხსენით $\\log_{19}x + \\log_{19}(x^2) = 3$ განტოლება.",
             options: ["$19$", "$361$", "$3$", "$2$", "$9{,}5$", "$4$"],
             correct: 0,
-            tag: "logarithms"
+            tag: "logarithms",
+            area: "algebra",
+            topics: ["log-eq"],
+            grade: 11,
+            difficulty: 1,
+            type: ["solve"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "გამოთვალეთ $\\frac{1}{\\log_{\\sqrt{2}}\\sin\\frac{\\pi}{4}} + \\frac{1}{\\log_{\\sqrt{4}}\\sin\\frac{\\pi}{4}} + \\frac{1}{\\log_{\\sqrt{8}}\\sin\\frac{\\pi}{4}} + \\frac{1}{\\log_{\\sqrt{16}}\\sin\\frac{\\pi}{4}}$.",
             options: ["$-10$", "$6$", "$\\sqrt{2}$", "$\\sqrt{8}$", "$2$", "$4$"],
             correct: 0,
-            tag: "logarithms"
+            tag: "logarithms",
+            area: "algebra",
+            topics: ["logarithms"],
+            grade: 11,
+            difficulty: 1,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "ამოხსენით $\\log_2(\\cos 2x) = \\sin 8x$ განტოლება. $x\\in\\cdots$",
             options: ["$\\{0\\}$", "$\\emptyset$", "$\\{\\log_2 \\pi\\}$", "$\\{\\pi n\\}, n\\in\\mathbb{Z}$", "$\\left\\{\\frac{\\pi n}{2}\\right\\}, n\\in\\mathbb{Z}$", "$\\{1\\}$"],
             correct: 3,
-            tag: "trigonometry"
+            tag: "trigonometry",
+            area: "algebra",
+            topics: ["trig-eq","log-eq","sum-formulas"],
+            grade: 11,
+            difficulty: 1,
+            type: ["solve"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "ცნობილია, რომ $\\log_{10}3 = 0{,}4771\\ldots$. რამდენ ციფრს შეიცავს $3^{100}$ რიცხვის ათობითი ჩანაწერი?",
             options: ["$100$", "$99$", "$477$", "$47$", "$48$", "$49$"],
             correct: 4,
-            tag: "logarithms"
+            tag: "logarithms",
+            area: "algebra",
+            topics: ["log-eq","powers"],
+            grade: 11,
+            difficulty: 1,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "მართი პარალელეპიპედში ფუძის გვერდებია $2$ და $6$, ხოლო მახვილი კუთხე $60^\\circ$. პარალელეპიპედის მცირე დიაგონალი უდრის $\\sqrt{31}$. იპოვეთ პარალელეპიპედის მოცულობა.",
             options: ["$8\\sqrt{3}$", "$12$", "$18$", "$6\\sqrt{3}$", "$9$", "$24$"],
             correct: 2,
-            tag: "geometry"
+            tag: "geometry",
+            area: "solid",
+            topics: ["prism","volume-surface"],
+            grade: 11,
+            difficulty: 2,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "ამოხსენით $x^{\\log_3 7} + 7^{\\log_3 x} = 14$ განტოლება.",
             options: ["$3^7$", "$3$", "$5$", "$7$", "$7^{\\log_3 5}$", "$7^5$"],
             correct: 1,
-            tag: "logarithms"
+            tag: "logarithms",
+            area: "algebra",
+            topics: ["log-eq"],
+            grade: 11,
+            difficulty: 2,
+            type: ["solve"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "გამოთვალეთ $\\log_4 15$, თუ $\\log_2 3 = a$, $\\log_2 5 = b$.",
             options: ["$a + b$", "$2a + 3b$", "$ab$", "$\\frac{a+b}{5}$", "$\\frac{3a+5b}{3}$", "$\\frac{a+b}{2}$"],
             correct: 5,
-            tag: "logarithms"
+            tag: "logarithms",
+            area: "algebra",
+            topics: ["logarithms"],
+            grade: 11,
+            difficulty: 2,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "თუ $f(x) = 3^x$ მაშინ, ქვემოთ მოცემულთაგან, ნებისმიერი $x$ და $y$ რიცხვებისათვის რომელია სამართლიანი?",
@@ -82,55 +178,127 @@ quizData = [
                 "$(x+y)(f(x) + f(y)) = 0$"
             ],
             correct: 3,
-            tag: "functions"
+            tag: "functions",
+            area: "algebra",
+            topics: ["two-var-ineq"],
+            grade: 11,
+            difficulty: 2,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "წაკვეთილი კონუსის ფუძეების რადიუსებია $12$სმ და $7$სმ, მსახველი დახრილია ფუძისადმი $45^\\circ$-იანი კუთხით. იპოვეთ ღერძული კვეთის ფართობი.",
             options: ["$75$ სმ$^2$", "$80$ სმ$^2$", "$60$ სმ$^2$", "$100$ სმ$^2$", "$95$ სმ$^2$", "$70$ სმ$^2$"],
             correct: 4,
-            tag: "geometry"
+            tag: "geometry",
+            area: "solid",
+            topics: ["cone","cross-sections"],
+            grade: 11,
+            difficulty: 2,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "წესიერი წაკვეთილი ოთკუთხა პირამიდის ფუძის გვერდებია $7$სმ და $1$სმ. გვერდითი წიბო დახრილია ფუძისადმი $45^\\circ$-იანი კუთხით. იპოვეთ ამ პირამიდაზე შემოხაზული სფეროს რადიუსი.",
             options: ["$4$", "$5$", "$3$", "$\\sqrt{5}$", "$\\sqrt{7}$", "$2\\sqrt{3}$"],
             correct: 1,
-            tag: "geometry"
+            tag: "geometry",
+            area: "solid",
+            topics: ["pyramid","sphere"],
+            grade: 11,
+            difficulty: 2,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "ამოხსენით $\\begin{cases} \\log_y x + \\log_x y = 2 \\\\ x^2 - y = 20 \\end{cases}$ განტოლებათა სისტემა.",
             options: ["$(6;16)$", "$(5;5)$", "$(7; 2)$", "$(4;-2)$", "$(8;7)$", "$(5;7)$"],
             correct: 1,
-            tag: "systems"
+            tag: "systems",
+            area: "algebra",
+            topics: ["log-eq","nonlinear-systems","linear-systems"],
+            grade: 11,
+            difficulty: 2,
+            type: ["solve"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "იპოვეთ $\\log_2(7 + 2x - x^2) = 4 + x^4 - 2x^2$ განტოლების ამონახსნთა რაოდენობა.",
             options: ["$0$", "$1$", "$2$", "$3$", "$4$", "$4$-ზე მეტი"],
             correct: 1,
-            tag: "equations"
+            tag: "equations",
+            area: "algebra",
+            topics: ["log-eq"],
+            grade: 11,
+            difficulty: 2,
+            type: ["solve"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "რამდენ წერტილში იკვეთებიან $f(x) = -2x^2 + x - 1$ და $g(x) = 6^{-x} $ ფუნქციის გრაფიკები?",
             options: ["არცერთი", "$1$", "$2$", "$3$", "$4$", "$4$-ზე მეტი"],
             correct: 0,
-            tag: "functions"
+            tag: "functions",
+            area: "algebra",
+            topics: ["quadratic-func"],
+            grade: 11,
+            difficulty: 3,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "$ABCA_1B_1C_1$ ($AA_1$, $BB_1$, $CC_1$ გვერდითი წიბოებია) წესიერი სამკუთხა პრიზმის ფუძის გვერდი $8$სმ-ია. ხოლო გვერდითი წიბო $4$სმ. იპოვეთ $AB_1C$ სამკუთხედის ფართობი.",
             options: ["$64$", "$48$", "$32$", "$16\\sqrt{3}$", "$12\\sqrt{3}$", "$6\\sqrt{3}$"],
             correct: 2,
-            tag: "geometry"
+            tag: "geometry",
+            area: "prob-stats",
+            topics: ["combinatorics","prism"],
+            grade: 11,
+            difficulty: 3,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "ცილინდრის ღერძული კვეთა კვადრატია, რომლის ფართობი $16$სმ$^2$-ია. იპოვეთ იმ კვეთის ფართობი რომელიც ღერძის პარალელურია და მისგან დაშორებულია $1$სმ-ით.",
             options: ["$10$ სმ$^2$", "$14$ სმ$^2$", "$12$ სმ$^2$", "$6\\sqrt{3}$ სმ$^2$", "$8\\sqrt{2}$ სმ$^2$", "$8\\sqrt{3}$ სმ$^2$"],
             correct: 5,
-            tag: "geometry"
+            tag: "geometry",
+            area: "solid",
+            topics: ["cylinder","cross-sections"],
+            grade: 11,
+            difficulty: 3,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "ჩამოთვლილთაგან რას უდრის $m + k$, თუ $2^m + 4^k = n^2$, სადაც $m, n, k \\in \\mathbb{N}$, ($m > 2k$)",
             options: ["$7$", "$14$", "$8$", "$12$", "$10$", "$13$"],
             correct: 3,
-            tag: "number theory"
+            tag: "number theory",
+            area: "algebra",
+            topics: ["linear-ineq"],
+            grade: 11,
+            difficulty: 3,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "იპოვეთ $f(x) = \\log_3\\frac{x+9}{|x|-3}$ ფუნქციის განსაზღვრის არე.",
@@ -143,25 +311,57 @@ quizData = [
                 "$(-9; 3)$"
             ],
             correct: 0,
-            tag: "functions"
+            tag: "functions",
+            area: "algebra",
+            topics: ["function-basics","logarithms"],
+            grade: 11,
+            difficulty: 3,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "ამოხსენით $\\frac{(\\log_2 x)^3}{\\sqrt{18 - (\\log_2 x)^2}} + (\\log_2 x)^2 - 18 = 0$ განტოლება.",
             options: ["$3$", "$\\frac{1}{3}$", "$8$", "$\\frac{1}{8}$", "$8; \\frac{1}{8}$", "$3; -\\log_2 3$"],
             correct: 2,
-            tag: "logarithms"
+            tag: "logarithms",
+            area: "algebra",
+            topics: ["log-eq"],
+            grade: 11,
+            difficulty: 3,
+            type: ["solve"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             warning: "ყველა პასუხი ჩათვლილია",
             question: "კონუსში ჩახაზულია ბირთვი. ბირთვის ზედაპირის ფართობი ისე შეეფარდება კონუსის ფუძის ფართობს, როგორც $4:3$. იპოვეთ კონუსის მსახველსა და ფუძის სიბრტყეს შორის კუთხის კოსინუსი.",
             options: ["$\\frac{\\sqrt{3}}{2}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{1}{3}$", "$\\frac{1}{2}$", "$\\frac{2}{3}$", "$\\frac{1}{4}$"],
             correct: [0,1,2,3,4,5],
-            tag: "geometry"
+            tag: "geometry",
+            area: "solid",
+            topics: ["cone","sphere","volume-surface"],
+            grade: 11,
+            difficulty: 3,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         },
         {
             question: "სამკუთხა პირამიდის ფუძის გვერდებია $7$, $8$, $9$. პირამიდის სიმაღლეა $5$. რომელიღაც სფერო ეხება პირამიდის ყველა გვერდით წახნაგს წერტილებში, რომლებიც ფუძის გვერდებზე მდებარეობენ. იპოვეთ სფეროს რადიუსი.",
             options: ["$5$", "$\\sqrt{6}$", "$\\sqrt{5}$", "$\\sqrt{7}$", "$6$", "$7$"],
             correct: 1,
-            tag: "geometry"
+            tag: "geometry",
+            area: "solid",
+            topics: ["pyramid","sphere"],
+            grade: 11,
+            difficulty: 3,
+            type: ["compute"],
+            method: [],
+            source: {"book":"","section":"","number":null},
+            tagsReviewed: false
         }
     ];

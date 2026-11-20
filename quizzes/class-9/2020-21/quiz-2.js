@@ -4,14 +4,30 @@ quizData = [
     question: "იპოვეთ ოთხი წევრისგან შედგენილი გეომეტრიული პროგრესიის მნიშვნელი, თუ პირველი სამი წევრის ჯამი $29$-ის ტოლია, ხოლო ბოლო სამი წევრის ჯამი ტოლია $58$-ის.",
     options: ["$\\frac{58}{3}$", "$-1$", "$2$", "$\\frac{29}{3}$", "$-\\frac{3}{58}$", "$-\\sqrt[3]{2}$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //2
   {
     question: "გეომეტრიულ პროგრესიაში $b_1 = 1$ და $b_2 = 2$. გამოთვალეთ $\\frac{b_{2021} + b_{2019}}{b_{2021} - b_{2019}}$.",
     options: ["$\\frac{5}{3}$", "$2020$", "$1{,}5$", "$\\frac{7}{4}$", "$1010$", "დადგენა შეუძლებელია"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //3
   {
@@ -25,98 +41,210 @@ quizData = [
       "$a_n = 3^{(-1)^n}$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //4
   {
     question: "$ABC$ სამკუთხედის $AC$ გვერდზე აღებულია $M$ წერტილი ისე, რომ $AM:MC = 1:4$. იპოვეთ $x - y$, თუ $\\overrightarrow{BM} = x \\cdot \\overrightarrow{BA} + y \\cdot \\overrightarrow{BC}$.",
     options: ["$\\frac{3}{4}$", "$\\frac{3}{5}$", "$\\frac{7}{5}$", "$\\frac{4}{5}$", "$\\frac{1}{4}$", "$\\frac{5}{4}$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //5
   {
     question: "$ABCD$ პარალელოგრამია, რომელიც მართკუთხედი არაა. იპოვეთ $\\frac{\\overrightarrow{AB} \\cdot \\overrightarrow{BC}}{\\overrightarrow{AD} \\cdot \\overrightarrow{DC}}$.",
     options: ["$2$", "$-2$", "$\\frac{1}{2}$", "$-\\frac{1}{2}$", "$1$", "დადგენა შეუძლებელია"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["parallelogram","vectors","rhombus-rect-sq"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //6
   {
     question: "არამუდმივ არითმეტიკულ პროგრესიაში $a_3 + a_n = a_1 + a_{11}$. იპოვეთ $n$.",
     options: ["$9$", "$8$", "$13$", "$12$", "$10$", "$11$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["arithmetic-prog"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //7
   {
     question: "გეომეტრიული პროგრესიის პირველი $n$ წევრის ჯამი მოიცემა $S_n = 3^n - 1$ ფორმულით. რისი ტოლია ამ პროგრესიის მნიშვნელი?",
     options: ["$2$", "$2{,}5$", "$3$", "$3{,}5$", "$4$", "$4{,}5$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //8
   {
     question: "რამდენი ორნიშნა ნატურალური რიცხვი არსებობს, რომლებიც $7$-ზე გაყოფისას ნაშთს $2$-ს ტოვებს?",
     options: ["$8$", "$9$", "$10$", "$11$", "$12$", "$13$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //9
   {
     question: "გამოთვალეთ $\\vec{a} + 2\\vec{b}$ და $2\\vec{a} + \\vec{b}$ ვექტორების სკალარული ნამრავლი, თუ $|\\vec{a}| = |\\vec{b}| = 1$ და $\\vec{a}$ და $\\vec{b}$ ვექტორებს შორის კუთხე $60°$-ია.",
     options: ["$5$", "$5{,}5$", "$6$", "$6{,}5$", "$7$", "$7{,}5$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["dot-product","vectors"],
+    grade: 9,
+    difficulty: 1,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //10
   {
     question: "მოცემულია $\\vec{a} (1; 2)$, $\\vec{b} (2; 1)$ და $\\vec{c} (2; 2)$ ვექტორები. ცნობილია, რომ $\\vec{c} = x \\cdot \\vec{a} + y \\cdot \\vec{b}$. იპოვეთ $x + y$.",
     options: ["$3$", "$\\frac{4}{3}$", "$3{,}5$", "$\\frac{5}{3}$", "$1$", "$\\frac{3}{5}$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors","coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //11
   {
     question: "არითმეტიკულ პროგრესიაში $a_1 = 7$. იპოვეთ ამ პროგრესიის სხვაობა, თუ $a_{10} = -a_{20}$.",
     options: ["$\\frac{1}{4}$", "$\\frac{10}{7}$", "$\\frac{7}{30}$", "$-\\frac{7}{10}$", "$\\frac{1}{7}$", "$-\\frac{1}{2}$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["arithmetic-prog"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //12
   {
     question: "მიმდევრობა $a_n = (n - 19{,}9)^2 + 199$ ფორმულით მოიცემა. ჩამოთვლილთაგან რომელია უმცირესი?",
     options: ["$a_1$", "$a_9$", "$a_{19}$", "$a_{20}$", "$a_{99}$", "$a_{199}$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //13
   {
     question: "$b_1, b_2, b_3, \\dots, b_{60}$ გეომეტრიული პროგრესიის პირველი წევრი $3$-ის, ხოლო მნიშვნელი $\\frac{1}{4}$-ის ტოლია. ჩამოთვლილთაგან რომელ შუალედს ეკუთვნის ამ პროგრესიის სამოცივე წევრის ჯამი?",
     options: ["$(1; 2)$", "$(2; 3)$", "$(3; 4)$", "$(4; 5)$", "$(5; 6)$", "$(6; 7)$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //14
   {
     question: "$\\vec{a} (x; -8)$ და $\\vec{b} (2; 4)$ ვექტორებს შორის კუთხე $90°$-ია. იპოვეთ $\\vec{a}$ ვექტორის სიგრძე.",
     options: ["$8\\sqrt{5}$", "$19$", "$\\sqrt{35}$", "$18$", "$18{,}5$", "$3\\sqrt{35}$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors","coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //15
   {
     question: "მოცემულია $\\vec{a} (1; 0)$ და $\\vec{b} (0; 1)$ ვექტორები. იპოვეთ $2\\vec{a} + \\vec{b}$ და $\\vec{a} + 3\\vec{b}$ ვექტორებს შორის კუთხის კოსინუსი.",
     options: ["$\\frac{1}{3}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{1}{2}$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{2}{3}$", "$\\frac{\\sqrt{3}}{4}$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["vectors","coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     //16
   {
     question: "$b_1, b_2, b_3, \\dots, b_{200}$ გეომეტრიული პროგრესიის პირველი წევრი $1$-ის, ხოლო მნიშვნელი $3$-ის ტოლია. იპოვეთ ამ პროგრესიის ორასივე წევრის ნამრავლი.",
     options: ["$3^{100}$", "$3^{199}$", "$3^{200}$", "$3^{19900}$", "$3^{199199}$", "$3^{3199}$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //17
   {
@@ -130,62 +258,134 @@ quizData = [
       "$-\\left(\\frac{7}{3}\\right)^{\\frac{1}{9}}$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["geometric-prog"],
+    grade: 9,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //18
   {
     question: "$a_1, a_2, a_3, \\dots, a_{10}$ რიცხვები $2, 3, 4, \\dots, 11$ რიცხვების პროპორციულია, შესაბამისად. იპოვეთ $a_4$, თუ ცნობილია, რომ $a_1, a_2, a_3, \\dots, a_{10}$ რიცხვების ჯამი $13$-ის ტოლია.",
     options: ["$\\frac{8}{13}$", "$\\frac{3}{5}$", "$\\frac{13}{8}$", "$\\frac{5}{3}$", "$1$", "$\\frac{8}{5}$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //19
   {
     question: "$ABCD$ ტრაპეციაში $BC$ და $AD$ ფუძეების სიგრძეები შესაბამისად $3$-ისა და $6$-ის ტოლია. აგრეთვე, ცნობილია, რომ $\\overrightarrow{BC} = \\vec{a}$. იპოვეთ $\\overrightarrow{AB} + \\overrightarrow{CD}$.",
     options: ["$\\vec{a}$", "$2\\vec{a}$", "$-2\\vec{a}$", "$\\frac{1}{2}\\vec{a}$", "$-\\frac{1}{2}\\vec{a}$", "$-\\frac{3}{2}\\vec{a}$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["trapezoid","vectors"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //20
   {
     question: "იპოვეთ $2\\vec{a} + 3\\vec{b}$ ვექტორის სიგრძე, თუ $|\\vec{a}| = 1$, $|\\vec{b}| = 2$ და კუთხე მათ შორის $60°$-ია.",
     options: ["$8$", "$3\\sqrt{5}$", "$4\\sqrt{3}$", "$3\\sqrt{6}$", "$7$", "$\\sqrt{52}$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["vectors"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //21
   {
     question: "იპოვეთ $y = 2(x - 3)^2 + 4$ პარაბოლის წვეროს კოორდინატები.",
     options: ["$(2; 4)$", "$(3; 4)$", "$(3; 2)$", "$(-3; 2)$", "$(2; -4)$", "$(-3; -4)$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-func"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //22
   {
     question: "რა უდიდესი ფართობი შეიძლება ჰქონდეს მართკუთხა სამკუთხედს, რომლის კათეტების სიგრძეთა ჯამი $14$-ის ტოლია?",
     options: ["$6{,}5$", "$22{,}5$", "$24$", "$24{,}25$", "$24{,}5$", "$25{,}25$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //23
   {
     question: "იპოვეთ $\\frac{x^2 - 5x + 4}{x^2 - 5x + 6} < 0$ უტოლობის ამონახსნთა სიმრავლე.",
     options: ["∅", "$(2; 3)$", "$(1; 2) \\cup (3; 4)$", "$(1; 4)$", "$(-\\infty; 2) \\cup (3; +\\infty)$", "$\\mathbb{R}$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["quadratic-ineq","interval-method"],
+    grade: 9,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //24
   {
     question: "$ABCD$ პარალელოგრამში $K$ არის $BC$ გვერდის შუაწერტილი. ცნობილია, რომ $\\overrightarrow{AB} = \\vec{b}$ და $\\overrightarrow{AK} = \\vec{k}$. იპოვეთ $\\overrightarrow{DK}$.",
     options: ["$2\\vec{b} + \\vec{k}$", "$\\vec{b} + \\vec{k}$", "$\\vec{b} + 2\\vec{k}$", "$2\\vec{b} - \\vec{k}$", "$\\vec{b} - \\vec{k}$", "$\\vec{b} - 2\\vec{k}$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["parallelogram","vectors"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["vectors"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   //25
   {
     question: "$ABCD$ კვადრატის გვერდის სიგრძე $1$-ის ტოლია. $M$ წერტილი არის $AD$ გვერდის შუაწერტილი, ხოლო $N$ წერტილი კი $BM$ მონაკვეთის შუაწერტილია. იპოვეთ $CDMN$ ოთხკუთხედის ფართობი.",
     options: ["$\\frac{1}{2}$", "$\\frac{3}{7}$", "$\\frac{4}{7}$", "$\\frac{4}{9}$", "$\\frac{5}{9}$", "$\\frac{\\sqrt{2}}{3}$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["lines-angles","rhombus-rect-sq"],
+    grade: 9,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

@@ -4,7 +4,15 @@ quizData = [
   question: "დაალგეთ ზრდადობის მიხედვით $a = \\tan 280^\\circ$, $b = \\sin 18^\\circ$, $c = \\cos 18^\\circ$.",
   options: ["$a, c, b$", "$c, b, a$", "$a, b, c$", "$b, c, a$", "$b, a, c$", "$c, a, b$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-props","reduction"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 2
@@ -12,7 +20,15 @@ quizData = [
   question: "რა მინიმალური მნიშვნელობის მიღება შეუძლია $\\sin^2(x^2 - \\pi x + 3)$ გამოსახულებას?",
   options: ["შეუძლებელია დადგენა", "$-1$", "$\\frac{\\pi}{6}$", "$\\frac{1}{3}$", "$\\frac{\\sqrt{5}}{3}$", "$0$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["max-min"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 3
@@ -20,7 +36,15 @@ quizData = [
   question: "იპოვეთ $x$-ის ყველა იმ მნიშვნელობათა სიმრავლე, რომლებიც აკმაყოფილებენ $2\\sin x \\cos x = \\frac{1}{x} + x$ ტოლობას.",
   options: ["$\\pi + 2\\pi n,\\ n \\in \\mathbb{Z}$", "$\\pi n,\\ n \\in \\mathbb{Z}$", "$1$", "$2\\pi$", "\∅", "$-1$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-basics"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 4
@@ -28,7 +52,15 @@ quizData = [
   question: "სივრცეში $5$ წერტილი ისეა აღებული, რომ $4$ მათგანი ერთ $\\omega$ სიბრტყეში მდებარეობს და მე-$5$ წერტილი $\\omega$ სიბრტყეში არ მდებარეობს. ყოველ ორ მათგანზე გავლებულია წრფე. აცდენილი წრფეების რამდენი წყვილი მიიღება?",
   options: ["$4$", "$8$", "$6$", "$9$", "$10$", "$12$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["parallel-space"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 5
@@ -36,7 +68,15 @@ quizData = [
   question: "იპოვეთ $R = \\sqrt{2}$ რადიუსიანი წრის სექტორის ფართობი, თუ შესაბამისი ცენტრალური კუთხის რადიანული ზომა არის $\\alpha$ $(\\alpha < \\pi)$.",
   options: ["$2$", "$2\\alpha$", "$\\frac{\\alpha}{2}$", "$\\alpha$", "$\\frac{2\\pi}{360^\\circ} \\cdot \\alpha$", "$4$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["radians","circle-angles","circle-segments"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 6
@@ -44,7 +84,15 @@ quizData = [
   question: "იპოვეთ $\\sin2 a$, თუ $\\tan a = 5$.",
   options: ["$1$", "$\\frac{5}{13}$", "$\\frac{2}{5}$", "$\\frac{3}{5}$", "$2$", "$-1$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["sum-formulas"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 7
@@ -52,7 +100,15 @@ quizData = [
   question: "თუ $\\sin 3\\alpha > 0$, მაშინ რომელ ტრიგონომეტრიულ მეოთხედში შესაძლებელია იყოს $\\alpha$?",
   options: ["მხოლოდ I და II", "მხოლოდ I, II და III", "მხოლოდ I და III", "მხოლოდ II და III", "I, II, III და IV", "მხოლოდ III და IV"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-ineq"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 8
@@ -60,7 +116,15 @@ quizData = [
   question: "ჩამოთვლილთაგან $y = \\sin^2 x$; $y = \\cos 5x$; $y = \\frac{x^4}{|x + 2|}$; $y = \\cos^3 x$; $y = -\\cos x$; $y = (\\tan x + \\sin x)^2$ — რამდენია ლუწი ფუნქცია?",
   options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-props"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 9
@@ -75,7 +139,15 @@ quizData = [
     "მხოლოდ სამკუთხედი და ექვსკუთხედი"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["prism","polygon-basics","regular-polygon"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 10
@@ -90,7 +162,15 @@ quizData = [
     "ყველა პასუხი სწორია"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 11
@@ -105,7 +185,15 @@ quizData = [
     "$6\\pi$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-props"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 12
@@ -120,7 +208,15 @@ quizData = [
     "$\\frac{1}{8}$"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-identities"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 13
@@ -135,7 +231,15 @@ quizData = [
     "$\\frac{8}{15}$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-ineq","sum-formulas"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 14
@@ -143,7 +247,15 @@ quizData = [
   question: "$\\alpha$ და $\\beta$ სიბრტყეები იკვეთება $b$ წრფეზე. $\\alpha$ სიბრტყეში მდებარე $A$ წერტილიდან მანძილი $b$ წრფემდე $5$სმ-ია, ხოლო $\\beta$ სიბრტყეში მდებარე $B$ წერტილიდან $b$ წრფემდე $7$სმ. {$10; 12; 14; 15; 16; 17$} სიმრავლის რამდენი ელემენტი შეიძლება იყოს მანძილი $A$ და $B$ წერტილებს შორის?",
   options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 15
@@ -151,7 +263,15 @@ quizData = [
   question: "სივრცეში მოცემულია $15$ სიბრტყე. მათი გადაკვეთის მაქსიმუმ რამდენი წრფე არსებობს?",
   options: ["$15$", "$125$", "$225$", "$0$", "$105$", "$14$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["stereo-axioms"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 16
@@ -166,7 +286,15 @@ quizData = [
     "$x \\in (0; 1)$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 17
@@ -174,7 +302,15 @@ quizData = [
   question: "რამდენ წერტილში იკვეთებიან $y = \\sin4 \\cdot x^2 + \\sin4 \\cdot x - 1$ და $y = \\cos 56^\\circ \\cdot \\sin 31^\\circ + \\sin 56^\\circ \\cdot \\sin 34^\\circ$ ფუნქციების გრაფიკები?",
   options: ["არცერთი", "$1$", "$2$", "$3$", "$4$", "$4$-ზე მეტი"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["product-sum"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 18
@@ -189,7 +325,15 @@ quizData = [
     "არ არის ეს ფუნქცია პერიოდული"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-props"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 19
@@ -197,7 +341,15 @@ quizData = [
   question: "ცნობილია, რომ $a$ წრფე $\\beta$ სიბრტყის პარალელურია. რამდენი წრფე არსებობს $\\beta$ სიბრტყეში, რომელიც $a$ წრფის მართობულია?",
   options: ["არცერთი", "$1$", "$2$", "$4$", "$8$", "$10$-ზე მეტი"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["parallel-space"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 20
@@ -205,7 +357,15 @@ quizData = [
   question: "$AB$ მონაკვეთი არ კვეთს $\\beta$ სიბრტყეს. მანძილი $A$ წერტილიდან $\\beta$ სიბრტყემდე $10$სმ-ია, ხოლო $B$ წერტილიდან $\\beta$ სიბრტყემდე $22$სმ. $K$ წერტილი $AB$ მონაკვეთზე მდებარეობს ისე, რომ $AK : KB = 1 : 3$. იპოვეთ მანძილი $K$ წერტილიდან $\\beta$ სიბრტყემდე.",
   options: ["$16$", "$12$", "$18$", "$13$", "$11$", "$15$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["cross-sections"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 21
@@ -213,7 +373,15 @@ quizData = [
   question: "გამოთვალეთ $\\tan 199^\\circ \\cdot \\sin 720^\\circ + \\tan 1990^\\circ \\cdot \\cos 450^\\circ + \\sin 810^\\circ$.",
   options: ["$0$", "$\\frac{\\pi}{2}$", "$2$", "$-1$", "$-\\pi$", "$1$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["reduction"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 22
@@ -221,7 +389,15 @@ quizData = [
   question: "რა მნიშვნელობისათვის იქნება $f(x) = \\frac{\\sin x}{a - \\cos x}$ ფუნქციის პერიოდი რიცხვი $\\pi$.",
   options: ["$\\pi$", "$\\frac{\\pi}{2}$", "$0$", "$2\\pi$", "∅", "ნებისმიერი $a$-სთვის"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["function-props"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 23
@@ -236,7 +412,15 @@ quizData = [
     "$-\\frac{\\pi}{4}$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["trig-eq","product-sum"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 24
@@ -251,7 +435,15 @@ quizData = [
     "$\\tan \\alpha = \\frac{1}{5}$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["combinatorics","prism"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 25
@@ -266,6 +458,14 @@ quizData = [
     "$\\cos \\beta = \\sin \\alpha \\cdot \\cos \\varphi$"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["stereo-axioms"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];

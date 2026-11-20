@@ -4,7 +4,15 @@ quizData = [
     question: "გამოთვალეთ:  $28 − 4 \\cdot (25 − 33 + (−100))$",
     options: ["$-404$", "$-340$", "$376$", "$-400$", "$460$", "$550$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -12,7 +20,15 @@ quizData = [
     question: "გამოთვალეთ:  $18{,}5^2 − 6{,}5^2$",
     options: ["$300$", "$250$", "$225$", "$200$", "$175$", "$150$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["special-products"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -20,7 +36,15 @@ quizData = [
     question: "გამოთვალეთ: $\\dfrac{15 \\cdot 3^{13}+4 \\cdot 27^5}{17 \\cdot 9^7}$",
     options: ["$\\dfrac{1}{3}$", "$\\dfrac{5}{9}$", "$\\dfrac{5}{6}$", "$\\dfrac{2}{27}$", "$\\dfrac{2}{17}$", "$1$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["powers"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -28,7 +52,15 @@ quizData = [
     question: "მამრავლებად დაშლის მეთოდით ამოხსენით $5𝑥^2 − 8𝑥 = 0$ განტოლება და დაასახელეთ ამ განტოლების უდიდესი ფესვი.",
     options: ["$-1{,}2$", "$-0{,}8$", "$0$", "$1{,}6$", "$2$", "$2{,}1$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["factoring"],
+    grade: 7,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -37,7 +69,15 @@ quizData = [
     question: "$AB$ წრეწირის მხებია, ხოლო $𝐴𝐶$ წრფე წრეწირის ცენტრზე გადის. იპოვეთ $∠𝐵𝐴𝐶$ თუ $BC$ რკალის გრადუსული ზომა $110^\\circ$-ია.",
     options: ["$15^\\circ$", "$18^\\circ$", "$20^\\circ$", "$24^\\circ$", "$25^\\circ$", "$26^\\circ$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles","chords-tangents"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     // 6
   {
@@ -51,7 +91,15 @@ quizData = [
       "$(𝑥 + 𝑦)(𝑛 − 𝑚)$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["factoring"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -66,7 +114,15 @@ quizData = [
       "არცერთი წინა პასუხი სწორი არ არის."
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["factoring"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -74,7 +130,15 @@ quizData = [
     question: "$60^\\circ$-ის ტოლ კუთხეში ჩახაზულია ორი წრეწირი, რომლებიც გარედან ეხება ერთმანეთს. მცირე წრეწირის რადიუსია $4$სმ, იპოვეთ დიდი წრეწირის რადიუსი.",
     options: ["$12$სმ", "$9$სმ", "$10$სმ", "$6$სმ", "$8$სმ", "$11$სმ"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -82,7 +146,15 @@ quizData = [
     question: "იპოვეთ, $−81𝑥^2 + 3(1 + 3𝑥)(9𝑥 − 3)$ თუ $𝑥 = 80$.",
     options: ["$-48$", "$80$", "$0$", "$-9$", "$-16$", "$21$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -90,7 +162,15 @@ quizData = [
     question: "$𝐴𝐵$ და $𝐶𝐷$ ქორდები $𝐾$ წერტილში იკვეთებიან. იპოვეთ მცირე $𝐴𝐷$ რკალის გრადუსული ზომა, თუ იგი მცირე $𝐵𝐶$ რკალის გრადუსული ზომის $20\\%$-ია და $∠𝐴𝐾𝐷 =$ $57^\\circ$.",
     options: ["$17^\\circ$", "$19^\\circ$", "$21^\\circ$", "$23^\\circ$", "$25^\\circ$", "$27^\\circ$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles","percent","chords-tangents"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 11
   {
@@ -98,7 +178,15 @@ quizData = [
     question: "$𝐴𝐵$ და $𝐶𝐷$ ურთიერთპარალელური ქორდებია. იპოვეთ $𝐶𝐾𝐷$ რკალის გრადუსული ზომა, თუ ∠𝐴𝐶𝐷 = $27^\\circ$ და ∠𝐴𝐶𝐵 = $39^\\circ$.",
     options: ["$174^\\circ$", "$192^\\circ$", "$204^\\circ$", "$128^\\circ$", "$144^\\circ$", "$166^\\circ$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles","chords-tangents"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12
@@ -106,7 +194,15 @@ quizData = [
     question: "თუ მართკუთხა სამკუთხედის პერიმეტრი $30$-ის, ხოლო ჩახაზული წრეწირის რადიუსი $3$-ის ტოლია, მაშინ კათეტების ჯამი ტოლი იქნება:",
     options: ["$12$", "$15$", "$16$", "$18$", "$20$", "$21$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["right-triangle","inscribed-circum"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -115,7 +211,15 @@ quizData = [
     question: "$ABC$ მახვილკუთხა სამკუთხედში $O$ ჩახაზული წრეწირის ცენტრია, ხოლო $I$ შემოხაზული წრეწირის ცენტრი. ცნობილია, რომ $∠𝐴𝑂𝐶$ = $140^\\circ$,  იპოვეთ $∠𝐴𝐼𝐶$.",
     options: ["$124^\\circ$", "$125^\\circ$", "$128^\\circ$", "$130^\\circ$", "$135^\\circ$", "$140^\\circ$"],
     correct: [0,1,2,3,4,5],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -123,7 +227,15 @@ quizData = [
     question: "იპოვეთ $a^3 − b^3 − 3ab(a − b)$ მნიშვნელობა თუ $a = 1\\dfrac{1}{6}$ და $b = −1\\dfrac{1}{3}$.",
     options: ["$−\\dfrac{1}{2}$", "$\\dfrac{125}{8}$", "$\\dfrac{25}{6}$", "$\\dfrac{6}{25}$", "$\\dfrac{27}{8}$", "$−\\dfrac{1}{9}$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15
@@ -131,7 +243,15 @@ quizData = [
     question: "რამდენი განსხვავებული $(𝑥;𝑦)$ მთელ რიცხვთა წყვილი არსებობს, რომელიც წარმოადგენს $𝑥^2 − 𝑦^2 = 26$ განტოლების ამონახსნს?",
     options: ["$1$", "$3$", "$4$", "$5$", "არცერთი", "უამრავი"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["diophantine"],
+    grade: 7,
+    difficulty: 2,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 16
   {
@@ -145,7 +265,15 @@ quizData = [
       "$𝑥^2 + 𝑥 + 1$"
     ],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["factoring"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -153,7 +281,15 @@ quizData = [
     question: "ცნობილია, რომ $𝑥 + 3𝑦 = 8$. იპოვეთ $(0{,}25𝑥^2 − 2{,}25𝑦^2) : (2𝑥 − 6𝑦)$",
     options: ["$1$", "$2$", "$4$", "$\\dfrac{1}{2}$", "$\\dfrac{1}{4}$", "$\\dfrac{1}{8}$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -168,7 +304,15 @@ quizData = [
       "$𝑥^2 − 2𝑥 + 1$"
     ],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["divisibility","polynomials"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -176,7 +320,15 @@ quizData = [
     question: "რამდენი მთელი $n$ რიცხვი არსებობს, რომლისთვისაც $(n + 6) : (n + 1)$ გამოსახულების მნიშვნელობა მთელი რიცხვია?",
     options: ["$1$", "$3$", "$4$", "$6$", "არცერთი", "უამრავი"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -191,14 +343,30 @@ quizData = [
       "$(3𝑥 + 3𝑦)(2𝑥 + 2𝑦)$"
     ],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["special-products"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   // 21
   {
     question: "$ABC$ სამკუთხედის $B$ წვეროსთან მდებარე კუთხე $88^{\\circ}$-ის ტოლია. $O$ ცენტრის მქონე წრეწირი ეხება $AC$ გვერდს და $AB$ და $BC$ გვერდების გაგრძელებებს. იპოვეთ $AOC$ კუთხის სიდიდე.",
     options: ["$28^\\circ$", "$32^\\circ$", "$44^\\circ$", "$46^\\circ$", "$48^\\circ$", "$52^\\circ$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -207,7 +375,15 @@ quizData = [
     question: "ნახაზის მიხედვით იპოვეთ $∠𝐴𝐶𝐵$, თუ $∠𝐴𝐸𝐵$ = $80^\\circ$, $∠𝐶𝐴𝐵$ = $30^\\circ$, ხოლო $𝐶𝐵$ წრეწირის მხებს წარმოადგენს.",
     options: ["$60^\\circ$", "$65^\\circ$", "$70^\\circ$", "$75^\\circ$", "$80^\\circ$", "$85^\\circ$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -215,7 +391,15 @@ quizData = [
     question: "წრეწირი $𝐴𝐵𝐶$ სამკუთხედში $𝐴𝐵$, $𝐵𝐶$ და $𝐴𝐶$ გვერდებს ეხება შესაბამისად $𝑀$, $𝑁$ და $𝐾$ წერტილებში ისე, რომ $𝐴𝑀:𝑀𝐵 = 3:2$, $𝐵𝑁:𝑁𝐶 = 3:4$. იპოვეთ $𝐶𝐾:𝐾𝐴$ შეფარდება.",
     options: ["$\\dfrac{1}{2}$", "$\\dfrac{3}{4}$", "$\\dfrac{5}{6}$", "$\\dfrac{6}{7}$", "$\\dfrac{7}{8}$", "$\\dfrac{8}{9}$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24
@@ -224,7 +408,15 @@ quizData = [
     question: "ნახაზის მიხედვით იპოვეთ $∠𝐵𝐴𝐷$, თუ $∠𝐶𝐸𝐵$ = $18^\\circ$, $∠𝐴𝐷𝐶$ = $46^\\circ$, ხოლო $𝑂$ წერტილი წრეწირის ცენტრია.",
     options: ["$62^\\circ$", "$64^\\circ$", "$66^\\circ$", "$68^\\circ$", "$70^\\circ$", "$72^\\circ$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25
@@ -232,6 +424,14 @@ quizData = [
     question: "თუ $𝑎(𝑎 + 𝑏) = 31$ და $𝑏(𝑎 + 𝑏) = 33$ მაშინ ქვემოთ ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს $𝑎 + 𝑏$ ჯამის მნიშვნელობა?",
     options: ["$12$", "$9$", "$4$", "$6$", "$8$", "$11$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

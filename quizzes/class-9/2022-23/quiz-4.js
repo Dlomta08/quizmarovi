@@ -4,7 +4,15 @@ quizData = [
   question: "გეომეტრიული პროგრესიის მნიშვნელი $\\sqrt[3]{3}$-ის ტოლია. იპოვეთ მე-$200$ და $182$-ე წევრების შეფარდება.",
   options: ["$3^6$", "$81\\sqrt{3}$", "$81\\sqrt[3]{3}$", "$81\\sqrt[3]{9}$", "$3^5 \\cdot \\sqrt[3]{3}$", "$3^5 \\cdot \\sqrt[3]{9}$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["geometric-prog"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //2
@@ -12,7 +20,15 @@ quizData = [
   question: "შვიდი ცალი რიცხვისგან შემდგარი რიცხვითი მონაცემების ზრდადობით გადალაგებისას ყოველი მომდევნო წინასთან შედარებით $2$-ით მეტი გამოვიდა. იპოვეთ ამ მონაცემების საშუალო, თუ მედიანა $20$-ია.",
   options: ["$\\frac{154}{7}$", "$\\frac{142}{7}$", "$\\frac{141}{7}$", "$\\frac{140}{7}$", "$\\frac{138}{7}$", "$\\frac{126}{7}$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["statistics","function-props"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //3
@@ -20,7 +36,15 @@ quizData = [
   question: "რიცხვითი მონაცემებიდან თითოეულის $25$-ით გაზრდით საწყისთან შედარებით ჩამოთვლილთაგან რომელი მახასიათებელი არ შეიცვლება?",
   options: ["უმცირესი რიცხვი", "მოდა", "მედიანა", "საშუალო", "გაბნევის დიაპაზონი", "ყველა შეიცვლება"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["statistics"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //4
@@ -28,7 +52,15 @@ quizData = [
   question: "მართკუთხა საკოორდინატო სიბრტყეზე მოცემულია $A(5;6)$ და $B(1;10)$ წერტილები. იპოვეთ $AB$ მონაკვეთზე მდებარე $M$ წერტილის კოორდინატები, თუ ცნობილია, რომ $AM:MB = 2:3$.",
   options: ["$M(3;\\frac{36}{5})$", "$M(\\frac{19}{5};8)$", "$M(\\frac{19}{5};\\frac{36}{5})$", "$M(\\frac{18}{5};\\frac{37}{5})$", "$M(3;8)$", "$M(\\frac{17}{5};\\frac{38}{5})$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["line-circle-eq"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //5
@@ -36,7 +68,15 @@ quizData = [
   question: "მართკუთხა საკოორდინატო სიბრტყეზე მოცემულია $A(5;7)$, $B(3;1)$, $C(11;4)$ და $D(0;0)$ წერტილები. ჩამოთვლილთაგან რომელია $\\vec{a}(-4;2)$ ვექტორის კოლინეარული?",
   options: ["$\\vec{AB}$", "$\\vec{AC}$", "$\\vec{AD}$", "$\\vec{BC}$", "$\\vec{BD}$", "$\\vec{CD}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors","line-circle-eq"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["vectors","coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //6
@@ -44,7 +84,15 @@ quizData = [
   question: "კლასის $24$ მოსწავლიდან შემაჯამებელ წერაში $6$-მა მოსწავლემ „რვიანი“ მიიღო, $8$ მოსწავლემ − „ცხრიანი“, დანარჩენებმა კი − „ათიანი“. მასწავლებელმა ეს მონაცემები წრიულ დიაგრამაზე გადაიტანა. რამდენ გრადუსიანია „ათიანის“ შესაბამისი სექტორი?",
   options: ["$120^{\\circ}$", "$130^{\\circ}$", "$140^{\\circ}$", "$150^{\\circ}$", "$160^{\\circ}$", "$170^{\\circ}$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["statistics","circle-segments"],
+  grade: 9,
+  difficulty: 1,
+  type: ["word"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //7
@@ -52,7 +100,15 @@ quizData = [
   question: "იპოვეთ ალბათობა იმისა, რომ ორი კამათლის ერთდროულად გაგორებისას ერთ-ერთზე მოსული რიცხვი გაიყოფა მეორეზე მოსულ რიცხვზე.",
   options: ["$\\frac{25}{36}$", "$\\frac{22}{36}$", "$\\frac{19}{36}$", "$\\frac{16}{36}$", "$\\frac{13}{36}$", "$\\frac{10}{36}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["probability","divisibility"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //8
@@ -60,7 +116,15 @@ quizData = [
   question: "არითმეტიკულ პროგრესიაში $a_{1} = 15$ და $d = -0{,}5$. იპოვეთ ამ პროგრესიის დადებითი წევრების ჯამი.",
   options: ["$15 \\cdot 30$", "$\\frac{15 \\cdot 29}{2}$", "$\\frac{15 \\cdot 31}{2}$", "$15^2$", "$15 \\cdot 16$", "$\\frac{15 \\cdot 17}{2}$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["arithmetic-prog"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //9
@@ -68,7 +132,15 @@ quizData = [
   question: "$OAB$ სამკუთხედის $AB$ გვერდზე $C$ წერტილი ისეა აღებული, რომ $AC:BC = 2:1$. $K$ წერტილი $OC$ მონაკვეთის შუაწერტილია. გამოსახეთ $\\vec{OK}$ ვექტორი $\\vec{OA} = \\vec{a}$ და $\\vec{OB} = \\vec{b}$ ვექტორების საშუალებით.",
   options: ["$\\vec{OK} = \\frac{1}{6}\\vec{a} + \\frac{1}{3}\\vec{b}$", "$\\vec{OK} = \\frac{1}{5}\\vec{a} + \\frac{1}{4}\\vec{b}$", "$\\vec{OK} = \\frac{1}{2}\\vec{a} + \\frac{1}{3}\\vec{b}$", "$\\vec{OK} = \\frac{1}{5}\\vec{a} + \\frac{1}{2}\\vec{b}$", "$\\vec{OK} = \\frac{1}{3}\\vec{a} + \\frac{1}{2}\\vec{b}$", "$\\vec{OK} = \\frac{1}{4}\\vec{a} + \\frac{1}{4}\\vec{b}$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors","lines-angles"],
+  grade: 9,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //10
@@ -76,7 +148,15 @@ quizData = [
   question: "$\\vec{a}$ და $\\vec{b}$ ურთიერთმართობული ვექტორებია და ორივე მათგანის სიგრძე $1$-ის ტოლია. იპოვეთ $4\\vec{a} + 3\\vec{b}$ და $12\\vec{a} - 5\\vec{b}$ ვექტორებს შორის კუთხის კოსინუსი.",
   options: ["$\\frac{1}{2}$", "$\\frac{33}{65}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{67}{130}$", "$\\frac{\\sqrt{3}}{2}$", "$\\frac{17}{33}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //11
 {
@@ -90,7 +170,15 @@ quizData = [
     "$100 \\cdot (1 + 37^{199})$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["powers"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //12
@@ -98,7 +186,15 @@ quizData = [
   question: "$n$-კუთხედის შიგა კუთხეების გრადუსული ზომები ისეთ არითმეტიკულ პროგრესიას ადგენენ, რომლის სხვაობა $2^{\\circ}$-ის ტოლია. იპოვეთ $n$, თუ ამ $n$-კუთხედის უდიდესი შიგა კუთხე $170^{\\circ}$-ის ტოლია.",
   options: ["$34$", "$30$", "$37$", "$17$", "$15$", "$20$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["arithmetic-prog"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //13
@@ -106,7 +202,15 @@ quizData = [
   question: "მოცემულია $b_{n}$ მიმდევრობა, რომლის ზოგადი წევრი $b_{n} = (-\\frac{1}{2})^{n}$ ფორმულით მოიცემა $(n = 1, 2, 3, ...)$. იპოვეთ ამ მიმდევრობის წევრების ჯამი.",
   options: ["$-1$", "$-\\frac{1}{2}$", "$-\\frac{1}{3}$", "$-\\frac{1}{4}$", "$-\\frac{1}{5}$", "$-\\frac{1}{6}$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //14
@@ -114,7 +218,15 @@ quizData = [
   question: "იპოვეთ $y = \\sqrt{3} \\cdot x$ და $y = \\frac{x}{\\sqrt{3}}$ წრფეებს შორის კუთხის კოსინუსი.",
   options: ["$\\frac{1}{4}$", "$\\frac{1}{2}$", "$\\frac{\\sqrt{2}}{4}$", "$\\frac{\\sqrt{2}}{2}$", "$\\frac{\\sqrt{3}}{4}$", "$\\frac{\\sqrt{3}}{2}$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //15
@@ -122,7 +234,15 @@ quizData = [
   question: "იპოვეთ უსასრულო კლებადი გეომეტრიული პროგრესიის მნიშვნელი $(|q| < 1)$, თუ ყველა წევრის ჯამი ისე შეეფარდება პირველი სამი წევრის ჯამს, როგორც $8:7$.",
   options: ["$\\frac{1}{4}$", "$\\frac{3}{8}$", "$\\frac{1}{2}$", "$\\frac{5}{8}$", "$\\frac{3}{4}$", "$\\frac{7}{8}$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["geometric-prog"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //16
@@ -130,7 +250,15 @@ quizData = [
   question: "ნებისმიერი ორი $A$ და $B$ ხდომილებისთვის შემდეგი სამი ტოლობიდან რომელია აუცილებლად ჭეშმარიტი? ( $A + B = A \\cup B$, $A \\cdot B = A \\cap B$, $A - B = A \\backslash B$ ) <br><br> I. $A + (B \\cdot A) = (A + B) \\cdot A \\qquad $ II. $A − (B \\cdot A) = (A − B) \\cdot A \\qquad $  III. $A + (B − A) = (A + B) − A$",
   options: ["მხოლოდ I და II", "მხოლოდ I და III", "მხოლოდ II და III", "მხოლოდ I", "მხოლოდ II", "მხოლოდ III"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["sets","linear-ineq"],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //17
@@ -138,7 +266,15 @@ quizData = [
   question: "მოცემულია $f(x) = \\frac{x+2}{3}$. გამოთვალეთ $f(1) + f(2) + f(3) + \\dots + f(100)$ ჯამი.",
   options: ["$1783$", "$1986$", "$1089$", "$1121$", "$2020$", "$1750$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 9,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //18
@@ -146,7 +282,15 @@ quizData = [
   question: "იპოვეთ $R$ პარამეტრის დადებითი მნიშვნელობა, თუ ცნობილია, რომ $5x + 12y + 8 = 0$ განტოლების შესაბამისი წრფე ეხება $(x - 2)^{2} + (y - 5)^{2} = R^{2}$ წრეწირს.",
   options: ["$6$", "$2\\sqrt{10}$", "$4\\sqrt{2}$", "$2\\sqrt{7}$", "$3\\sqrt{3}$", "$2\\sqrt{6}$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 9,
+  difficulty: 3,
+  type: ["solve"],
+  method: ["parameter"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //19
@@ -154,7 +298,15 @@ quizData = [
   question: "მართკუთხა საკოორდინატო სიბრტყეზე მოცემულია $A(2;5)$ წერტილი. ჩამოთვლილთაგან რომელი $B$ წერტილისთვის იქნება $AB$ მონაკვეთის შუამართობი $y = x$ წრფე?",
   options: ["$B(5{,}5; 2{,}5)$", "$B(4{,}5; 1{,}5)$", "$B(6; 3)$", "$B(7; 4)$", "$B(4; 1)$", "$B(5; 2)$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["line-circle-eq"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: ["coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //20
@@ -169,7 +321,15 @@ quizData = [
     "$\\frac{11^{101} - 101}{10}$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["powers"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //21
@@ -177,7 +337,15 @@ quizData = [
   question: "ორი დამოუკიდებელი $A$ და $B$ ხდომილებების ჯამი აუცილებელი ხდომილებაა. იპოვეთ $A$-ს მოხდენის ალბათობა, თუ ის $B$-ს მოხდენის ალბათობაზე $0{,}2$-ით ნაკლებია.",
   options: ["$0{,}4$", "$0{,}5$", "$0{,}6$", "$0{,}7$", "$0{,}8$", "$0{,}9$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["probability"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //22
@@ -185,7 +353,15 @@ quizData = [
   question: "იპოვეთ ალბათობა იმისა, რომ $[0;3]$ შუალედიდან შემთხვევით შერჩეული ორი $x$ და $y$ რიცხვისთვის სრულდება $x > y$ უტოლობა.",
   options: ["$\\frac{1}{8}$", "$\\frac{2}{8}$", "$\\frac{3}{8}$", "$\\frac{4}{8}$", "$\\frac{5}{8}$", "$\\frac{6}{8}$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["probability","linear-ineq"],
+  grade: 9,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //23
@@ -193,7 +369,15 @@ quizData = [
   question: "მოცემულია $\\vec{m}(1;0)$ და $\\vec{n}(0;1)$ საბაზისო ვექტორები და $\\vec{a}$ ნებისმიერი ვექტორი. იპოვეთ კუთხე $\\vec{a}$ ვექტორსა და $(\\vec{n} \\cdot \\vec{a})\\vec{m} - (\\vec{m} \\cdot \\vec{a})\\vec{n}$ ვექტორს შორის.",
   options: ["$60^{\\circ}$", "$90^{\\circ}$", "$135^{\\circ}$", "$45^{\\circ}$", "$180^{\\circ}$", "$0^{\\circ}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: ["vectors","coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //24
@@ -201,7 +385,15 @@ quizData = [
   question: "$M$ წერტილი $ABCD$ კვადრატის $AD$ გვერდის შუაწერტილია. $CD$ მონაკვეთზე აღებულია $N$ წერტილი და $BM$ მონაკვეთზე აღებულია $P$ წერტილი ისე, რომ $\\frac{CN}{ND} = k$ და $\\frac{BP}{PM} = 3k$. იპოვეთ $k$, თუ ცნობილია, რომ $A$, $P$ და $N$ წერტილები ერთ წრფეზეა.",
   options: ["$1$", "$\\sqrt{5} - 1$", "$\\sqrt{2}$", "$\\sqrt{3}$", "$2$", "$\\sqrt{5}$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["rhombus-rect-sq"],
+  grade: 9,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //25
@@ -209,6 +401,14 @@ quizData = [
   question: "იპოვეთ $5x + 2y + 9 = 0$ განტოლების შესაბამისი წრფისა და $(x + 1)^{2} + (y + 2)^{2} = 5$ წრეწირის საერთო წერტილებს შორის მანძილი.",
   options: ["$2{,}5$", "$\\sqrt{5}$", "$5$", "$2\\sqrt{5}$", "$10$", "მათ საერთო წერტილები არ აქვთ"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 9,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];

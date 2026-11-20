@@ -4,7 +4,15 @@ quizData = [
     question: "დაწერეთ იმ წრფის განტოლება, რომელიც $𝑦 = 7𝑥 − 8$ წრფის პარალელურია და $𝐴(2; 15)$ წერტილზე გადის.",
     options: ["$𝑦 = 7𝑥 + 8$", "$𝑦 = 7𝑥 + 1$", "$𝑦 = −7𝑥 + 2$", "$𝑦 = −7𝑥 − 8$", "$𝑦 = 0{,}7𝑥 − 1$", "$𝑦 = 0{,}1𝑥 − 3$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 7,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //2
@@ -12,7 +20,15 @@ quizData = [
     question: "დაწერეთ იმ წრფის განტოლება, რომელიც $𝑦 = 5𝑥 + 4$ წრფის მართობულია და კოორდინატთა სათავეზე გადის.",
     options: ["$𝑦 = −5𝑥 + 3$", "$𝑦 = 5𝑥 + 1$", "$𝑦 = 5𝑥$", "$𝑦 = 0{,}2𝑥 − 2$", "$𝑦 = −0{,}2𝑥$", "$𝑦 = −5𝑥$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 7,
+    difficulty: 1,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //3
@@ -20,7 +36,15 @@ quizData = [
     question: "მოცემულია $g(x) = 4x + 8$ ფუნქცია. გამოთვალეთ $g(2) + g(−3)$.",
     options: ["$12$", "$8$", "$4$", "$15$", "$5$", "$17$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //4
@@ -28,7 +52,15 @@ quizData = [
     question: "პარალელური გადატანისას $𝐴(3; 7)$ წერტილი გადავიდა $𝐵(−1; 8)$ წერტილში, რომელი წერტილი გადავა იგივე პარალელური გადატანისას $𝐶(−9; 5)$ წერტილში?",
     options: ["$(−7; 3)$", "$(−5; 4)$", "$(6; 3)$", "$(−13; 3)$", "$(0; 1)$", "$(7; 1)$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //5
@@ -36,7 +68,15 @@ quizData = [
     question: "წრეწირში გავლებულია $𝐴𝐵$ დიამეტრი, ხოლო $𝐴𝐶$ და $𝐶𝐷$ ქორდები ისე, რომ $𝐴𝐶 = 12$, $∠𝐵𝐴𝐶 = 30°$, $𝐶𝐷 ⊥ 𝐴𝐵$. იპოვეთ $𝐶𝐷$ ქორდის სიგრძე.",
     options: ["$12$", "$6$", "$8$", "$18$", "$24$", "$16$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //6
@@ -44,7 +84,15 @@ quizData = [
     question: "იპოვეთ $y + x$, თუ $x$ და $y$ აკმაყოფილებენ $\\begin{cases} 3x − y = 7 \\\\ 2x + 3y = 12 \\end{cases}$ სისტემას.",
     options: ["$7$", "$10$", "$2$", "$5$", "$11$", "$1$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-systems"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //7
@@ -52,7 +100,15 @@ quizData = [
     question: "რამდენი წევრისგან შედგება განაყოფში მიღებული სტანდარტული მრავალწევრი, თუ $a^7 + 1$ მრავალწევრს გავყოფთ $a + 1$ მრავალწევრზე?",
     options: ["$2$", "$3$", "$5$", "$7$", "$8$", "$9$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["poly-division","polynomials"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //8
@@ -60,7 +116,15 @@ quizData = [
     question: "მოცემულია, რომ $y = ax + b$ და $y = cx + d$ წრფეები $(1; 1)$ წერტილში იკვეთებიან. იპოვეთ $|M − N|$, სადაც $M = (a + b)^3$ და $N = (c + d)^2$.",
     options: ["$0$", "$7$", "$1$", "$5$", "$4$", "$2$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["special-products"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //9
@@ -68,7 +132,15 @@ quizData = [
     question: "$M$ წერტილიდან $O$ ცენტრის მქონე წრეწირისადმი გავლებულია $MA$ და $MB$ მხებები ($A$ და $B$ შეხების წერტილებია). ცნობილია, რომ $∠OMA = 30°$ და $MA + MB = 18$. იპოვეთ $AB$ ქორდის სიგრძე.",
     options: ["$6$", "$18$", "$12$", "$9$", "$36$", "$24$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 7,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //10
@@ -76,7 +148,15 @@ quizData = [
     question: "$60°$-იან კუთხეში ჩახაზულია ორი წრეწირი, რომლებიც გარედან ეხებიან ერთმანეთს. ერთი-ერთი მათგანის რადიუსია $12$. ქვემოთ ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს მეორე წრეწირის რადიუსი?",
     options: ["$3$", "$6$", "$24$", "$30$", "$36$", "$60$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["inscribed-circum"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //11
@@ -84,7 +164,15 @@ quizData = [
     question: "იპოვეთ $m$ და $n$ პარამეტრების ნამრავლი, თუ $\\begin{cases} mx + 3y = 8 \\\\ 5x + ny = 4 \\end{cases}$ განტოლებათა სისტემას აქვს უამრავი ამონახსნი.",
     options: ["$60$", "$45$", "$32$", "$24$", "$15$", "$12$"],
     correct: 4,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-systems"],
+    grade: 7,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //12
@@ -92,7 +180,15 @@ quizData = [
     question: "მოცემული ტოლობებიდან რამდენი ტოლობა შეიძლება იყოს ჭეშმარიტი, თუ $a, b, c$ სამკუთხედის გვერდებია? <br><br> $a)$ $a^3 + b^3 = c(a^2 − ab + b^2)$ $\\quad$ $b)$ $a^2 + 4ab + 4b^2 = c^2$ $\\quad$ $c)$ $4a + 5b = 4c$ $\\quad$ $d)$ $a^2 − b^2 = c(a + b)$ $\\quad$ $e)$ $ab + ac = c^2 − b^2$ $\\quad$ $f)$ $abc + bc^2 = 2b^2c$",
     options: ["$1$", "$2$", "$3$", "$4$", "$5$", "$6$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //13
@@ -100,14 +196,30 @@ quizData = [
     question: "ჩამოთვლილთაგან რისი ტოლია $m^3 + n^3$, თუ $m$ და $n$ ნატურალური რიცხვებისთვის სამართლიანია $(−2a^nb^n)^m + (3a^mb^m)^n = a^6b^6$ იგივეობა?",
     options: ["$2$", "$9$", "$17$", "$35$", "$43$", "$52$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["identities"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
     //14
   {
     question: "წრეწირის $MN$ და $MK$ რკალების გრადუსული ზომებია შესაბამისად $72°$ და $32°$. ჩამოთვლილთაგან რისი ტოლი შეიძლება იყოს $KMN$ კუთხე?",
     options: ["$72°$", "$32°$", "$122°$", "$16°$", "$280°$", "$20°$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["circle-angles"],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //15
@@ -115,7 +227,15 @@ quizData = [
     question: "მოცემული ორი წრეწირი, რომელთა რადიუსებია $5$ და $7$, გარედან ეხება ერთმანეთს. $A$ წერტილი მდებარეობს პირველ წრეწირზე, ხოლო $B$ წერტილი მეორე წრეწირზე. იპოვეთ $AB$ მონაკვეთის სიგრძის უდიდესი შესაძლო მნიშვნელობა.",
     options: ["$24$", "$27$", "$29$", "$32$", "$35$", "$39$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //16
@@ -123,7 +243,15 @@ quizData = [
     question: "რომელი წრფივი ფუნქციის გრაფიკზე მდებარეობს $A(−1; 3)$ და $B(1; 9)$ წერტილების სიმეტრიული წერტილები $OX$ ღერძის მიმართ?",
     options: ["$y = −6x − 4$", "$y = −6x + 3$", "$y = 6x + 3$", "$y = −3x + 6$", "$y = 3x − 6$", "$y = −3x − 6$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-func"],
+    grade: 7,
+    difficulty: 2,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //17
@@ -131,7 +259,15 @@ quizData = [
     question: "დადებითი $a$ რიცხვისთვის ცნობილია, რომ $a^2 + 4a − 21 = 0$. იპოვეთ $a$.",
     options: ["$3$", "$7$", "$1$", "$5$", "$4$", "$2$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //18
@@ -139,7 +275,15 @@ quizData = [
     question: "ორ მუშას ერთად მუშაობით მოსავლის აღება უნდა დაემთავრებინა $12$ დღეში. $8$ დღის ერთად მუშაობის შემდეგ ერთი მუშა სხვა სამუშაოზე გადაიყვანეს, ამიტომ მეორემ დარჩენილი სამუშაო $7$ დღეში დაამთავრა. რამდენ დღეში შეეძლო თითოეულ მუშას ცალკ-ცალკე მოსავლის აღება?",
     options: ["$10$ და $12$", "$8$ და $15$", "$28$ და $21$", "$20$ და $24$", "$18$ და $24$", "$16$ და $21$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["word-problems"],
+    grade: 7,
+    difficulty: 3,
+    type: ["word"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //19
@@ -147,7 +291,15 @@ quizData = [
     question: "$ABC$ ტოლფერდა სამკუთხედის $AB$ ფერდზე, როგორც დიამეტრზე შემოხაზული წრეწირი $AC$ ფუძეს $M$ წერტილში კვეთს. იპოვეთ $AM$, თუ $MC = 8$.",
     options: ["$8$", "$4$", "$6$", "$12$", "$9$", "$15$"],
     correct: 0,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles","inscribed-circum"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //20
@@ -155,7 +307,15 @@ quizData = [
     question: "მოცემული $y_1 = 4x + 12$ წრფე $OX$ ღერძს $A$ წერტილში კვეთს. $y_2 = ax + b$ წრფე $OX$ ღერძს $B(4; 0)$ წერტილში კვეთს. $AB$ მონაკვეთზე როგორც დიამეტრზე აგებულია წრეწირი, რომელზეც მდებარეობს $y_1$ და $y_2$ წრფეების გადაკვეთის წერტილი. იპოვეთ $a + b$.",
     options: ["$8$", "$\\dfrac{3}{4}$", "$0$", "$\\dfrac{1}{2}$", "$6$", "$2$"],
     correct: 1,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //21
@@ -163,7 +323,15 @@ quizData = [
     question: "მოცემულია რამდენიმე მომდევნო ნატურალური რიცხვი, მათ შორის $52\\%$ ლუწია. იპოვეთ ლუწი რიცხვების რაოდენობა.",
     options: ["$24$", "$9$", "$17$", "$32$", "$27$", "$13$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["percent"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //22
@@ -171,7 +339,15 @@ quizData = [
     question: "იპოვეთ $m$ პარამეტრის ყველა იმ მნიშვნელობათა ნამრავლი, რომელთათვისაც $\\begin{cases} |m − 7|x + 2y = m − 5 \\\\ 2x + y = 30 \\end{cases}$ განტოლებათა სისტემას არ აქვს ამონახსნი.",
     options: ["$14$", "$3$", "$11$", "$33$", "$15$", "$21$"],
     correct: 3,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: ["linear-systems"],
+    grade: 7,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //23
@@ -179,7 +355,15 @@ quizData = [
     question: "$a$ და $b$ განსხვავებული რიცხვებისთვის ცნობილია, რომ $\\dfrac{a}{b} + a = \\dfrac{b}{a} + b$. იპოვეთ $\\dfrac{1}{a} + \\dfrac{1}{b}$.",
     options: ["$−3$", "$−2$", "$−1$", "$1$", "$2$", "$3$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "algebra",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //24
@@ -187,7 +371,15 @@ quizData = [
     question: "ორი წრეწირი ერთმანეთს $D$ წერტილში გარედან ეხება. ეს ორივე წრეწირი ჩახაზულია $S$ კუთხეში. ეს წრეწირები კუთხის ერთ გვერდს $A$ და $B$ წერტილებში ეხებიან ($B$ მდებარეობს $A$ და $S$ წერტილებს შორის). $BD$ წრფე დიდ წრეწირს კვეთს $D$-სგან განსხვავებულ $C$ წერტილში. იპოვეთ $∠ACB$, თუ ის თავდაპირველი $S$ კუთხის ტოლია.",
     options: ["$60°$", "$30°$", "$36°$", "$48°$", "$45°$", "$24°$"],
     correct: 2,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: [],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   //25
@@ -195,6 +387,14 @@ quizData = [
     question: "$ABC$ ტოლგვერდა სამკუთხედში ორი წრეწირი ისეა მოთავსებული, რომ ორივე მათგანი ეხება $AC$ გვერდს და ერთმანეთს გარედან ეხებიან $K$ წერტილში. ერთ-ერთი წრეწირი $AB$ გვერდს $M$ წერტილში ეხება, მეორე წრეწირი კი $BC$ გვერდს $N$ წერტილში ეხება. იპოვეთ $∠MKN$ კუთხის სიდიდე.",
     options: ["$160°$", "$135°$", "$90°$", "$100°$", "$120°$", "$150°$"],
     correct: 5,
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["isosceles"],
+    grade: 7,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

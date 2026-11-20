@@ -5,7 +5,15 @@ quizData = [
     options: ["$2$", "$3$", "$4$", "$5$", "$6$", "$7$"],
     correct: 5,
     tags: [],
-    solution: "$|x| \\le 3 \\Leftrightarrow -3 \\le x \\le 3$. მთელი რიცხვები: $-3, -2, -1, 0, 1, 2, 3$ — სულ $7$.<br><br><strong>პასუხი:</strong> ვ) $7$."
+    solution: "$|x| \\le 3 \\Leftrightarrow -3 \\le x \\le 3$. მთელი რიცხვები: $-3, -2, -1, 0, 1, 2, 3$ — სულ $7$.<br><br><strong>პასუხი:</strong> ვ) $7$.",
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 2
@@ -14,7 +22,15 @@ quizData = [
     options: ["$-2$", "$1$", "$0$", "$2$", "$7$", "$9$"],
     correct: 1,
     tags: [],
-    solution: "$2x - 1 = 7$ ან $2x - 1 = -7$, ანუ $x = 4$ ან $x = -3$. ჯამი: $1$.<br><br><strong>პასუხი:</strong> ბ) $1$."
+    solution: "$2x - 1 = 7$ ან $2x - 1 = -7$, ანუ $x = 4$ ან $x = -3$. ჯამი: $1$.<br><br><strong>პასუხი:</strong> ბ) $1$.",
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 3
@@ -23,7 +39,15 @@ quizData = [
     options: ["$(-9;\\ 25]$", "$(-3;\\ 5]$", "$[1;\\ 26)$", "$(9;\\ 25)$", "$(1;\\ 5)$", "$(10;\\ 26)$"],
     correct: 2,
     tags: [],
-    solution: "როცა $-3 < a < 5$, $a^2$ იღებს მნიშვნელობებს $[0;\\ 25)$ შუალედიდან ($0$ — როცა $a = 0$; $25$ არ მიიღწევა). მაშასადამე, $a^2 + 1 \\in [1;\\ 26)$.<br><br><strong>პასუხი:</strong> გ) $[1;\\ 26)$."
+    solution: "როცა $-3 < a < 5$, $a^2$ იღებს მნიშვნელობებს $[0;\\ 25)$ შუალედიდან ($0$ — როცა $a = 0$; $25$ არ მიიღწევა). მაშასადამე, $a^2 + 1 \\in [1;\\ 26)$.<br><br><strong>პასუხი:</strong> გ) $[1;\\ 26)$.",
+    area: "algebra",
+    topics: ["numeric-ineq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 4
@@ -32,7 +56,15 @@ quizData = [
     options: ["$9$", "$10$", "$12$", "$15$", "$16$", "$18$"],
     correct: 0,
     tags: [],
-    solution: "ვთქვათ, $AB = BC = b$, $AC = 12$, $P$ და $Q$ ფერდებთან შეხების წერტილებია. $A$-დან მხებები: $AP = \\dfrac{AC}{2} = 6$, ამიტომ $BP = BQ = b - 6$.<br><br>$PQ \\parallel AC$ და $\\dfrac{PQ}{AC} = \\dfrac{BP}{BA}$: $\\dfrac{4}{12} = \\dfrac{b - 6}{b}$, საიდანაც $b = 3b - 18$, $b = 9$.<br><br><strong>პასუხი:</strong> ა) $9$."
+    solution: "ვთქვათ, $AB = BC = b$, $AC = 12$, $P$ და $Q$ ფერდებთან შეხების წერტილებია. $A$-დან მხებები: $AP = \\dfrac{AC}{2} = 6$, ამიტომ $BP = BQ = b - 6$.<br><br>$PQ \\parallel AC$ და $\\dfrac{PQ}{AC} = \\dfrac{BP}{BA}$: $\\dfrac{4}{12} = \\dfrac{b - 6}{b}$, საიდანაც $b = 3b - 18$, $b = 9$.<br><br><strong>პასუხი:</strong> ა) $9$.",
+    area: "geometry",
+    topics: ["isosceles","inscribed-circum","similar-figures"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 5
@@ -41,7 +73,15 @@ quizData = [
     options: ["$4$", "$11$", "$23$", "$5$", "$6$", "$26$"],
     correct: 2,
     tags: [],
-    solution: "თუ $A$ წრეწირის გარეთაა, მაშინ უახლოეს წერტილამდე მანძილი $15 - R = 8$, $R = 7$ — ეს ვარიანტებში არ არის.<br><br>თუ $A$ წრეწირის შიგნითაა, მაშინ უახლოეს წერტილამდე მანძილი $R - 15 = 8$, $R = 23$.<br><br><strong>პასუხი:</strong> გ) $23$."
+    solution: "თუ $A$ წრეწირის გარეთაა, მაშინ უახლოეს წერტილამდე მანძილი $15 - R = 8$, $R = 7$ — ეს ვარიანტებში არ არის.<br><br>თუ $A$ წრეწირის შიგნითაა, მაშინ უახლოეს წერტილამდე მანძილი $R - 15 = 8$, $R = 23$.<br><br><strong>პასუხი:</strong> გ) $23$.",
+    area: "geometry",
+    topics: ["chords-tangents"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 6
@@ -50,7 +90,15 @@ quizData = [
     options: ["$0$", "$1$", "$2$", "$3$", "$4$", "$5$"],
     correct: 3,
     tags: [],
-    solution: "მოდული უარყოფითი ვერ იქნება, ამიტომ უტოლობა სრულდება მხოლოდ მაშინ, როცა გამოსახულება $0$-ის ტოლია. დასაშვებია $x \\ne -3$, $x \\ne 2$.<br><br>მრიცხველის ნულები: $x = \\pm 3$, $x = -4$, $x = -1$. $x = -3$ აკრძალულია. რჩება $\\{3;\\ -4;\\ -1\\}$ — სამი ელემენტი.<br><br><strong>პასუხი:</strong> დ) $3$."
+    solution: "მოდული უარყოფითი ვერ იქნება, ამიტომ უტოლობა სრულდება მხოლოდ მაშინ, როცა გამოსახულება $0$-ის ტოლია. დასაშვებია $x \\ne -3$, $x \\ne 2$.<br><br>მრიცხველის ნულები: $x = \\pm 3$, $x = -4$, $x = -1$. $x = -3$ აკრძალულია. რჩება $\\{3;\\ -4;\\ -1\\}$ — სამი ელემენტი.<br><br><strong>პასუხი:</strong> დ) $3$.",
+    area: "algebra",
+    topics: ["rational-expr"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 7
@@ -59,7 +107,15 @@ quizData = [
     options: ["$-3$", "$-2$", "$2$", "$3$", "$7$", "$9$"],
     correct: 2,
     tags: [],
-    solution: "$3x - 1 = x + 5 \\Rightarrow x = 3$; $3x - 1 = -(x + 5) \\Rightarrow x = -1$. ჯამი: $2$.<br><br><strong>პასუხი:</strong> გ) $2$."
+    solution: "$3x - 1 = x + 5 \\Rightarrow x = 3$; $3x - 1 = -(x + 5) \\Rightarrow x = -1$. ჯამი: $2$.<br><br><strong>პასუხი:</strong> გ) $2$.",
+    area: "algebra",
+    topics: ["abs-eq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 8
@@ -68,7 +124,15 @@ quizData = [
     options: ["$\\dfrac{27}{5}$", "$\\dfrac{3}{4}$", "$\\dfrac{25}{3}$", "$10$", "$13$", "$24$"],
     correct: 1,
     tags: [],
-    solution: "გამოვიტანოთ $5^n$: $\\dfrac{5^n(25 - 1)}{5^n(25 + 5 + 2)} = \\dfrac{24}{32} = \\dfrac{3}{4}$ — შედეგი $n$-ზე არ არის დამოკიდებული.<br><br><strong>პასუხი:</strong> ბ) $\\dfrac{3}{4}$."
+    solution: "გამოვიტანოთ $5^n$: $\\dfrac{5^n(25 - 1)}{5^n(25 + 5 + 2)} = \\dfrac{24}{32} = \\dfrac{3}{4}$ — შედეგი $n$-ზე არ არის დამოკიდებული.<br><br><strong>პასუხი:</strong> ბ) $\\dfrac{3}{4}$.",
+    area: "algebra",
+    topics: ["powers"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 9
@@ -77,7 +141,15 @@ quizData = [
     options: ["გაიზარდოს $400\\%$-ით", "შემცირდეს $80\\%$-ით", "გაიზარდოს $60\\%$-ით", "გაიზარდოს $100\\%$-ით", "შემცირდეს $25\\%$-ით", "შეუძლებელია განსაზღვრა"],
     correct: 0,
     tags: [],
-    solution: "პირველი: $\\dfrac{(a - 3)(a + 3)a^3b^7c^4}{a + 3} = (a - 3)a^3b^7c^4$.<br>მეორე: $\\dfrac{5(a - 3)a^7b^9c^4}{a^4b^2} = 5(a - 3)a^3b^7c^4$.<br><br>მეორე რიცხვი პირველზე $5$-ჯერ მეტია, ანუ $400\\%$-ით მეტი.<br><br><strong>პასუხი:</strong> ა) გაიზარდოს $400\\%$-ით."
+    solution: "პირველი: $\\dfrac{(a - 3)(a + 3)a^3b^7c^4}{a + 3} = (a - 3)a^3b^7c^4$.<br>მეორე: $\\dfrac{5(a - 3)a^7b^9c^4}{a^4b^2} = 5(a - 3)a^3b^7c^4$.<br><br>მეორე რიცხვი პირველზე $5$-ჯერ მეტია, ანუ $400\\%$-ით მეტი.<br><br><strong>პასუხი:</strong> ა) გაიზარდოს $400\\%$-ით.",
+    area: "algebra",
+    topics: ["rational-expr","percent"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 10
@@ -86,7 +158,15 @@ quizData = [
     options: ["$5$", "$2$", "$\\dfrac{27}{5}$", "$\\dfrac{25}{3}$", "$\\dfrac{5}{9}$", "$\\dfrac{3}{4}$"],
     correct: 2,
     tags: [],
-    solution: "$AA_1C$ მართკუთხა სამკუთხედიდან $\\cos C = \\dfrac{CA_1}{AC} = \\dfrac{6}{10} = \\dfrac{3}{5}$.<br><br>$A_1B_1C$ სამკუთხედი $ABC$-ს მსგავსია $\\cos C$ კოეფიციენტით ($CA_1 = AC\\cos C$, $CB_1 = BC\\cos C$, კუთხე $C$ საერთოა).<br><br>$A_1B_1 = AB \\cdot \\cos C = 9 \\cdot \\dfrac{3}{5} = \\dfrac{27}{5}$.<br><br><strong>პასუხი:</strong> გ) $\\dfrac{27}{5}$."
+    solution: "$AA_1C$ მართკუთხა სამკუთხედიდან $\\cos C = \\dfrac{CA_1}{AC} = \\dfrac{6}{10} = \\dfrac{3}{5}$.<br><br>$A_1B_1C$ სამკუთხედი $ABC$-ს მსგავსია $\\cos C$ კოეფიციენტით ($CA_1 = AC\\cos C$, $CB_1 = BC\\cos C$, კუთხე $C$ საერთოა).<br><br>$A_1B_1 = AB \\cdot \\cos C = 9 \\cdot \\dfrac{3}{5} = \\dfrac{27}{5}$.<br><br><strong>პასუხი:</strong> გ) $\\dfrac{27}{5}$.",
+    area: "geometry",
+    topics: ["similar-figures"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 11
@@ -95,7 +175,15 @@ quizData = [
     options: ["$2a + 3b$", "$3a + 2b$", "$3a + b$", "$\\dfrac{2b^2 + ab}{b}$", "$\\dfrac{b^2 + 2ab}{b}$", "შეუძლებელია განსაზღვრა"],
     correct: 1,
     tags: [],
-    solution: "$\\angle A = \\angle C = 72^\\circ$, $AD$ ბისექტრისაა: $\\angle BAD = \\angle DAC = 36^\\circ$.<br><br>$ADC$ სამკუთხედში $\\angle ADC = 180^\\circ - 36^\\circ - 72^\\circ = 72^\\circ = \\angle C$, ამიტომ $AC = AD = a$.<br>$ABD$ სამკუთხედში $\\angle B = \\angle BAD = 36^\\circ$, ამიტომ $BD = AD = a$.<br><br>$AB = BC = BD + DC = a + b$. პერიმეტრი: $2(a + b) + a = 3a + 2b$.<br><br><strong>პასუხი:</strong> ბ) $3a + 2b$."
+    solution: "$\\angle A = \\angle C = 72^\\circ$, $AD$ ბისექტრისაა: $\\angle BAD = \\angle DAC = 36^\\circ$.<br><br>$ADC$ სამკუთხედში $\\angle ADC = 180^\\circ - 36^\\circ - 72^\\circ = 72^\\circ = \\angle C$, ამიტომ $AC = AD = a$.<br>$ABD$ სამკუთხედში $\\angle B = \\angle BAD = 36^\\circ$, ამიტომ $BD = AD = a$.<br><br>$AB = BC = BD + DC = a + b$. პერიმეტრი: $2(a + b) + a = 3a + 2b$.<br><br><strong>პასუხი:</strong> ბ) $3a + 2b$.",
+    area: "geometry",
+    topics: ["isosceles","cevians"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 12 (the answer sheet marks ა, ბ and გ as correct)
@@ -104,7 +192,15 @@ quizData = [
     options: ["$-1{,}3$", "$-0{,}3$", "$0{,}3$", "$1{,}3$", "$2{,}3$", "$3{,}3$"],
     correct: [0, 1, 2],
     tags: [],
-    solution: "ამონახსნებია $a < x < 9$. $9$-ზე ნაკლები ნატურალური რიცხვებია $1, 2, \\ldots, 8$ — ზუსტად $8$, ამიტომ ყველა უნდა შედიოდეს: $a < 1$. ($0$ ნატურალური არ არის, ამიტომ ქვედა შეზღუდვა არ არის.)<br><br>$-1{,}3$, $-0{,}3$ და $0{,}3$ სამივე ნაკლებია $1$-ზე, ამიტომ სამივე პასუხი სწორია.<br><br><strong>პასუხი:</strong> ა), ბ) და გ)."
+    solution: "ამონახსნებია $a < x < 9$. $9$-ზე ნაკლები ნატურალური რიცხვებია $1, 2, \\ldots, 8$ — ზუსტად $8$, ამიტომ ყველა უნდა შედიოდეს: $a < 1$. ($0$ ნატურალური არ არის, ამიტომ ქვედა შეზღუდვა არ არის.)<br><br>$-1{,}3$, $-0{,}3$ და $0{,}3$ სამივე ნაკლებია $1$-ზე, ამიტომ სამივე პასუხი სწორია.<br><br><strong>პასუხი:</strong> ა), ბ) და გ).",
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 1,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 13
@@ -113,7 +209,15 @@ quizData = [
     options: ["$6$", "$7$", "$8$", "$\\dfrac{32}{5}$", "$\\dfrac{27}{5}$", "$\\dfrac{28}{3}$"],
     correct: 3,
     tags: [],
-    solution: "$ABD$ და $ACB$ სამკუთხედები მსგავსია: $\\angle A$ საერთოა და $\\angle ABD = \\angle ACB$.<br><br>$\\dfrac{AD}{AB} = \\dfrac{AB}{AC}$, $AD = \\dfrac{AB^2}{AC} = \\dfrac{64}{10} = \\dfrac{32}{5}$.<br><br><strong>პასუხი:</strong> დ) $\\dfrac{32}{5}$."
+    solution: "$ABD$ და $ACB$ სამკუთხედები მსგავსია: $\\angle A$ საერთოა და $\\angle ABD = \\angle ACB$.<br><br>$\\dfrac{AD}{AB} = \\dfrac{AB}{AC}$, $AD = \\dfrac{AB^2}{AC} = \\dfrac{64}{10} = \\dfrac{32}{5}$.<br><br><strong>პასუხი:</strong> დ) $\\dfrac{32}{5}$.",
+    area: "geometry",
+    topics: ["similar-figures"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 14
@@ -122,7 +226,15 @@ quizData = [
     options: ["$7$", "$10$", "$9$", "$6$", "$12$", "$2$"],
     correct: 3,
     tags: [],
-    solution: "$MN \\parallel AC$, ამიტომ $MBN \\sim ABC$ და $\\dfrac{MN}{AC} = \\dfrac{BN}{BC} = \\dfrac{3}{10}$.<br><br>$MN = 20 \\cdot \\dfrac{3}{10} = 6$.<br><br><strong>პასუხი:</strong> დ) $6$."
+    solution: "$MN \\parallel AC$, ამიტომ $MBN \\sim ABC$ და $\\dfrac{MN}{AC} = \\dfrac{BN}{BC} = \\dfrac{3}{10}$.<br><br>$MN = 20 \\cdot \\dfrac{3}{10} = 6$.<br><br><strong>პასუხი:</strong> დ) $6$.",
+    area: "geometry",
+    topics: ["thales","similar-figures"],
+    grade: 8,
+    difficulty: 1,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 15
@@ -131,7 +243,15 @@ quizData = [
     options: ["$6$", "$-33$", "$-10$", "$-45$", "$-13$", "$0$"],
     correct: 1,
     tags: [],
-    solution: "$ab - c$ უმცირესია, როცა $ab$ უმცირესია და $c$ უდიდესი.<br><br>$ab$-ს უმცირესი მნიშვნელობა მიიღწევა საზღვრებზე: $6 \\cdot (-4) = -24$ ($(-3) \\cdot 5 = -15$ მეტია). $c$-ს უდიდესი: $9$.<br><br>$-24 - 9 = -33$.<br><br><strong>პასუხი:</strong> ბ) $-33$."
+    solution: "$ab - c$ უმცირესია, როცა $ab$ უმცირესია და $c$ უდიდესი.<br><br>$ab$-ს უმცირესი მნიშვნელობა მიიღწევა საზღვრებზე: $6 \\cdot (-4) = -24$ ($(-3) \\cdot 5 = -15$ მეტია). $c$-ს უდიდესი: $9$.<br><br>$-24 - 9 = -33$.<br><br><strong>პასუხი:</strong> ბ) $-33$.",
+    area: "algebra",
+    topics: ["numeric-ineq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["estimation"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 16
@@ -140,7 +260,15 @@ quizData = [
     options: ["$1$", "$2$", "$3$", "$4$", "$6$", "შეუძლებელია განსაზღვრა"],
     correct: 1,
     tags: [],
-    solution: "$|x + 1| \\le 6 \\Leftrightarrow -7 \\le x \\le 5$ (სიგრძე $12$), $|y| \\le a \\Leftrightarrow -a \\le y \\le a$ (სიგრძე $2a$). ფიგურა მართკუთხედია.<br><br>პერიმეტრი: $2(12 + 2a) = 32$, $a = 2$.<br><br><strong>პასუხი:</strong> ბ) $2$."
+    solution: "$|x + 1| \\le 6 \\Leftrightarrow -7 \\le x \\le 5$ (სიგრძე $12$), $|y| \\le a \\Leftrightarrow -a \\le y \\le a$ (სიგრძე $2a$). ფიგურა მართკუთხედია.<br><br>პერიმეტრი: $2(12 + 2a) = 32$, $a = 2$.<br><br><strong>პასუხი:</strong> ბ) $2$.",
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 17
@@ -149,7 +277,15 @@ quizData = [
     options: ["$d,\\ c,\\ b,\\ a$", "$b,\\ c,\\ d,\\ a$", "$b,\\ a,\\ d,\\ c$", "$b,\\ d,\\ c,\\ a$", "$a,\\ b,\\ c,\\ d$", "შეუძლებელია განსაზღვრა"],
     correct: 5,
     tags: [],
-    solution: "$a = x$, $b = x^3$, $c = x^6$, $d = x^{14}$.<br><br>თუ $0 < x < 1$, მაშინ $d < c < b < a$; თუ $1 < x < 7$, მაშინ $a < b < c < d$; თუ $x = 1$, ყველა ტოლია. რიგი $x$-ზეა დამოკიდებული, ამიტომ ცალსახად ვერ დადგინდება.<br><br><strong>პასუხი:</strong> ვ) შეუძლებელია განსაზღვრა."
+    solution: "$a = x$, $b = x^3$, $c = x^6$, $d = x^{14}$.<br><br>თუ $0 < x < 1$, მაშინ $d < c < b < a$; თუ $1 < x < 7$, მაშინ $a < b < c < d$; თუ $x = 1$, ყველა ტოლია. რიგი $x$-ზეა დამოკიდებული, ამიტომ ცალსახად ვერ დადგინდება.<br><br><strong>პასუხი:</strong> ვ) შეუძლებელია განსაზღვრა.",
+    area: "algebra",
+    topics: ["powers","numeric-ineq"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 18
@@ -158,7 +294,15 @@ quizData = [
     options: ["$12$", "$15$", "$6$", "$24$", "$38$", "შეუძლებელია განსაზღვრა"],
     correct: 1,
     tags: [],
-    solution: "$AB \\parallel CD$, ამიტომ $OAB \\sim ODC$ და $\\dfrac{OB}{OC} = \\dfrac{AB}{DC} = \\dfrac{5}{20}$.<br><br>$OC = 4 \\cdot OB = 12$, $BC = OB + OC = 15$.<br><br><strong>პასუხი:</strong> ბ) $15$."
+    solution: "$AB \\parallel CD$, ამიტომ $OAB \\sim ODC$ და $\\dfrac{OB}{OC} = \\dfrac{AB}{DC} = \\dfrac{5}{20}$.<br><br>$OC = 4 \\cdot OB = 12$, $BC = OB + OC = 15$.<br><br><strong>პასუხი:</strong> ბ) $15$.",
+    area: "geometry",
+    topics: ["similar-figures"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 19
@@ -167,7 +311,15 @@ quizData = [
     options: ["$10$", "$12$", "$16$", "$18$", "$28$", "$32$"],
     correct: 4,
     tags: [],
-    solution: "$BM : MA = 2 : 9$, ამიტომ $\\dfrac{BM}{BA} = \\dfrac{2}{11}$ და $MN = 44 \\cdot \\dfrac{2}{11} = 8$.<br><br>$BK : KA = 5 : 6$, ამიტომ $KP = 44 \\cdot \\dfrac{5}{11} = 20$.<br><br>ჯამი: $28$.<br><br><strong>პასუხი:</strong> ე) $28$."
+    solution: "$BM : MA = 2 : 9$, ამიტომ $\\dfrac{BM}{BA} = \\dfrac{2}{11}$ და $MN = 44 \\cdot \\dfrac{2}{11} = 8$.<br><br>$BK : KA = 5 : 6$, ამიტომ $KP = 44 \\cdot \\dfrac{5}{11} = 20$.<br><br>ჯამი: $28$.<br><br><strong>პასუხი:</strong> ე) $28$.",
+    area: "geometry",
+    topics: ["similar-figures"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 20
@@ -176,7 +328,15 @@ quizData = [
     options: ["$7$", "$10$", "$11$", "$9$", "$6$", "შეუძლებელია განსაზღვრა"],
     correct: 1,
     tags: [],
-    solution: "ორივე მხარე არაუარყოფითია, ავიყვანოთ კვადრატში: $(x + 1)^2 < (2x - 5)^2 \\Leftrightarrow (2x - 5 - x - 1)(2x - 5 + x + 1) > 0 \\Leftrightarrow (x - 6)(3x - 4) > 0$.<br><br>$x < \\dfrac{4}{3}$ ან $x > 6$. $|x| \\le 7$ პირობით მთელი რიცხვები: $-7, \\ldots, 1$ ($9$ რიცხვი) და $7$ — სულ $10$.<br><br><strong>პასუხი:</strong> ბ) $10$."
+    solution: "ორივე მხარე არაუარყოფითია, ავიყვანოთ კვადრატში: $(x + 1)^2 < (2x - 5)^2 \\Leftrightarrow (2x - 5 - x - 1)(2x - 5 + x + 1) > 0 \\Leftrightarrow (x - 6)(3x - 4) > 0$.<br><br>$x < \\dfrac{4}{3}$ ან $x > 6$. $|x| \\le 7$ პირობით მთელი რიცხვები: $-7, \\ldots, 1$ ($9$ რიცხვი) და $7$ — სულ $10$.<br><br><strong>პასუხი:</strong> ბ) $10$.",
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["absolute"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 21
@@ -185,7 +345,15 @@ quizData = [
     options: ["$(3;\\ 4)$", "$(4;\\ 5)$", "$(5;\\ 6)$", "$(6;\\ 7)$", "$(7;\\ 8)$", "შეუძლებელია განსაზღვრა"],
     correct: 3,
     tags: [],
-    solution: "$0{,}(3) = \\dfrac{1}{3}$, ამიტომ $\\dfrac{1}{1 + \\frac{1}{3}} = \\dfrac{3}{4}$: $a = \\dfrac{3}{4}m$, $b = \\dfrac{3}{4}n$, $c = \\dfrac{3}{4}k$.<br><br>$a + b + c = \\dfrac{3}{4}(m + n + k)$, ამიტომ $\\dfrac{5(m + n + k)}{a + b + c} = 5 \\cdot \\dfrac{4}{3} = \\dfrac{20}{3} = 6\\dfrac{2}{3} \\in (6;\\ 7)$.<br><br><strong>პასუხი:</strong> დ) $(6;\\ 7)$."
+    solution: "$0{,}(3) = \\dfrac{1}{3}$, ამიტომ $\\dfrac{1}{1 + \\frac{1}{3}} = \\dfrac{3}{4}$: $a = \\dfrac{3}{4}m$, $b = \\dfrac{3}{4}n$, $c = \\dfrac{3}{4}k$.<br><br>$a + b + c = \\dfrac{3}{4}(m + n + k)$, ამიტომ $\\dfrac{5(m + n + k)}{a + b + c} = 5 \\cdot \\dfrac{4}{3} = \\dfrac{20}{3} = 6\\dfrac{2}{3} \\in (6;\\ 7)$.<br><br><strong>პასუხი:</strong> დ) $(6;\\ 7)$.",
+    area: "algebra",
+    topics: ["proportion"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 22
@@ -194,7 +362,15 @@ quizData = [
     options: ["$24$", "$33$", "$10$", "$32$", "$13$", "შეუძლებელია განსაზღვრა"],
     correct: 0,
     tags: [],
-    solution: "უტოლობები განსაზღვრავს სამკუთხედს. მისი წვეროები — წრფეების გადაკვეთები:<br>$y = -2x + 3$ და $y = x - 9$: $(4;\\ -5)$;<br>$y = -2x + 3$ და $y = -x + 11$: $(-8;\\ 19)$;<br>$y = x - 9$ და $y = -x + 11$: $(10;\\ 1)$.<br><br>$y$-ის უდიდესი მნიშვნელობა $19$-ია, უმცირესი $-5$. $y_1 - y_2$-ის უდიდესი მნიშვნელობა: $19 - (-5) = 24$.<br><br><strong>პასუხი:</strong> ა) $24$."
+    solution: "უტოლობები განსაზღვრავს სამკუთხედს. მისი წვეროები — წრფეების გადაკვეთები:<br>$y = -2x + 3$ და $y = x - 9$: $(4;\\ -5)$;<br>$y = -2x + 3$ და $y = -x + 11$: $(-8;\\ 19)$;<br>$y = x - 9$ და $y = -x + 11$: $(10;\\ 1)$.<br><br>$y$-ის უდიდესი მნიშვნელობა $19$-ია, უმცირესი $-5$. $y_1 - y_2$-ის უდიდესი მნიშვნელობა: $19 - (-5) = 24$.<br><br><strong>პასუხი:</strong> ა) $24$.",
+    area: "algebra",
+    topics: ["linear-ineq","linear-func"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["graphical"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 23
@@ -203,7 +379,15 @@ quizData = [
     options: ["$a = -13$", "$a \\le -13$", "$a \\ge -13$", "$a = 2$", "$a \\le 2$", "$a \\ge 2$"],
     correct: 1,
     tags: [],
-    solution: "$5 - 4x$ კლებადია, ამიტომ $(-\\infty;\\ 4]$ შუალედზე მისი უმცირესი მნიშვნელობაა $5 - 16 = -11$ ($x = 4$).<br><br>უტოლობა ყველა $x$-ისთვის სრულდება, თუ $-11 \\ge a + 2$, ანუ $a \\le -13$.<br><br><strong>პასუხი:</strong> ბ) $a \\le -13$."
+    solution: "$5 - 4x$ კლებადია, ამიტომ $(-\\infty;\\ 4]$ შუალედზე მისი უმცირესი მნიშვნელობაა $5 - 16 = -11$ ($x = 4$).<br><br>უტოლობა ყველა $x$-ისთვის სრულდება, თუ $-11 \\ge a + 2$, ანუ $a \\le -13$.<br><br><strong>პასუხი:</strong> ბ) $a \\le -13$.",
+    area: "algebra",
+    topics: ["linear-ineq"],
+    grade: 8,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["parameter"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 24 (every option is accepted as correct)
@@ -212,7 +396,15 @@ quizData = [
     options: ["$\\dfrac{25}{3}$", "$\\dfrac{28}{3}$", "$\\dfrac{27}{5}$", "$\\dfrac{28}{9}$", "$6$", "$10$"],
     correct: [0, 1, 2, 3, 4, 5],
     tags: [],
-    solution: "<strong>ამ ამოცანაში ყველა პასუხი ჩაითვალა სწორად</strong>, რადგან სწორი მნიშვნელობა ვარიანტებში არ არის.<br><br>$AKC$ და $DKB$ სამკუთხედები მსგავსია: $\\angle AKC = \\angle DKB$ (ვერტიკალური), $\\angle CAB = \\angle CDB$ (ერთსა და იმავე რკალზე დაყრდნობილი ჩახაზული კუთხეები). ამიტომ $\\dfrac{AC}{DB} = \\dfrac{AK}{DK}$.<br><br>$\\dfrac{AK}{DK} = \\dfrac{AK}{KB} : \\dfrac{DK}{KB} = \\dfrac{2}{9} : \\dfrac{1}{8} = \\dfrac{16}{9}$, $AC = 7 \\cdot \\dfrac{16}{9} = \\dfrac{112}{9}$.<br><br><strong>პასუხი:</strong> $\\dfrac{112}{9}$ (ჩაითვალა ნებისმიერი პასუხი)."
+    solution: "<strong>ამ ამოცანაში ყველა პასუხი ჩაითვალა სწორად</strong>, რადგან სწორი მნიშვნელობა ვარიანტებში არ არის.<br><br>$AKC$ და $DKB$ სამკუთხედები მსგავსია: $\\angle AKC = \\angle DKB$ (ვერტიკალური), $\\angle CAB = \\angle CDB$ (ერთსა და იმავე რკალზე დაყრდნობილი ჩახაზული კუთხეები). ამიტომ $\\dfrac{AC}{DB} = \\dfrac{AK}{DK}$.<br><br>$\\dfrac{AK}{DK} = \\dfrac{AK}{KB} : \\dfrac{DK}{KB} = \\dfrac{2}{9} : \\dfrac{1}{8} = \\dfrac{16}{9}$, $AC = 7 \\cdot \\dfrac{16}{9} = \\dfrac{112}{9}$.<br><br><strong>პასუხი:</strong> $\\dfrac{112}{9}$ (ჩაითვალა ნებისმიერი პასუხი).",
+    area: "geometry",
+    topics: ["similar-figures","chords-tangents"],
+    grade: 8,
+    difficulty: 3,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
 
   // 25
@@ -221,6 +413,14 @@ quizData = [
     options: ["$24$", "$16$", "$6$", "$8$", "$9$", "$10$"],
     correct: 4,
     tags: [],
-    solution: "$BM = 4AM$, ამიტომ $AM : MB = 1 : 4$ და $M = A + \\dfrac{1}{5}(B - A)$.<br><br>$M = \\left(7 + \\dfrac{-3 - 7}{5};\\ 2 + \\dfrac{12 - 2}{5}\\right) = (5;\\ 4)$. კოორდინატების ჯამი: $9$.<br><br><strong>პასუხი:</strong> ე) $9$."
+    solution: "$BM = 4AM$, ამიტომ $AM : MB = 1 : 4$ და $M = A + \\dfrac{1}{5}(B - A)$.<br><br>$M = \\left(7 + \\dfrac{-3 - 7}{5};\\ 2 + \\dfrac{12 - 2}{5}\\right) = (5;\\ 4)$. კოორდინატების ჯამი: $9$.<br><br><strong>პასუხი:</strong> ე) $9$.",
+    area: "geometry",
+    topics: ["thales"],
+    grade: 8,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

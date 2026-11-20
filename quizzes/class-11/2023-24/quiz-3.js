@@ -10,7 +10,15 @@ quizData = [
             "$X_n$ მიმდევრობას არ აქვს ზღვარი"
         ],
         correct: 5,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","seq-limit","linear-systems"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "დაალაგეთ ზრდადობით $a=e^{-2}$; $b=\\log_{0{,}1} e$; $c=e-4$. სადაც $e=\\lim\\limits_{n\\to\\infty}\\left(1+\\frac{1}{n}\\right)^n$",
@@ -23,7 +31,15 @@ quizData = [
             "$c; b; a$"
         ],
         correct: 5,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "calculus",
+        topics: ["seq-limit","numeric-ineq","volume-surface"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ცნობილია, რომ $\\lim_{n\\to\\infty}|X_n|=5$. განვიხილოთ $Y_n=2\\cdot X_n$ მიმდევრობა. ჩამოთვლილთაგან რომელი წინადადებაა აუცილებლად სამართლიანი?",
@@ -36,7 +52,15 @@ quizData = [
             "$\\lim\\limits_{n\\to\\infty}Y_n=-10$"
         ],
         correct: 2,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "calculus",
+        topics: ["seq-limit","volume-surface"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "საკოორდინატო სიბრტყეზე მოცემულია ორი წრფის გრაფიკი $5x+3y-2=0$; $\\sqrt{17}x-\\sqrt{17}y+5=0$. იპოვეთ რისი ტოლია ამ წრფეებს შორის კუთხის კოსინუსი.",
@@ -49,7 +73,15 @@ quizData = [
             "$\\frac{1}{2}$"
         ],
         correct: 1,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "geometry",
+        topics: ["line-circle-eq","volume-surface"],
+        grade: 11,
+        difficulty: 1,
+        type: ["graph"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "საკოორდინატო სიბრტყეზე დახაზულია $y=-3x$ წრფის გრაფიკი. ამავე სიბრტყეზე მონიშნულია ორი განსხვავებული $A(-1;a)$ და $B(-1;b)$ წერტილი. რისი ტოლია ამ წერტილებს შორის მანძილი თუ თითოეული მათგანი წრფის გრაფიკიდან $\\sqrt{10}$-ის ტოლი მანძილითაა დაშორებული?",
@@ -62,7 +94,15 @@ quizData = [
             "$14$"
         ],
         correct: 4,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "geometry",
+        topics: ["line-circle-eq","volume-surface"],
+        grade: 11,
+        difficulty: 1,
+        type: ["graph"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ, რისი ტოლია $\\lim\\limits_{n\\to\\infty} \\left(1+\\frac{3}{n}\\right)^{2n+1}$ ზღვრის მნიშვნელობა?",
@@ -75,7 +115,15 @@ quizData = [
             "$e^{-3}$"
         ],
         correct: 1,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "calculus",
+        topics: ["seq-limit","volume-surface"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ, რისი ტოლია $\\lim\\limits_{n\\to\\infty} \\frac{3n^3+8n^2-6}{-n^3+2n^2+n}$ ზღვრის მნიშვნელობა?",
@@ -88,7 +136,15 @@ quizData = [
             "$3$"
         ],
         correct: 2,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "calculus",
+        topics: ["seq-limit","volume-surface"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ $f(x)=(x^2+1)^{2x}$. რისი ტოლია $f'(0)$ გამოსახულების მნიშვნელობა?",
@@ -101,7 +157,15 @@ quizData = [
             "$3$"
         ],
         correct: 0,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "calculus",
+        topics: ["derivative","volume-surface"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "მოცემულია $f(x)=\\begin{cases} a & x\\in[-0{,}5;0{,}5] \\\\ \\frac{1}{x^2} & x\\notin[-0{,}5;0{,}5] \\end{cases}$ რისი ტოლი უნდა იყოს $a$, რომ ფუნქცია იყოს უწყვეტი?",
@@ -114,7 +178,15 @@ quizData = [
             "$4$"
         ],
         correct: 5,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "calculus",
+        topics: ["continuity","nonlinear-systems","volume-surface"],
+        grade: 11,
+        difficulty: 1,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "ცილინდრის ღერძული კვეთა კვადრატია. ამ ცილინდრზე შემოხაზულია სფერო ისე, რომ ცილინდრის ფუძეების წრეწირები ეხება სფეროს ზედაპირს. ამავე ცილინდრში ჩახაზულია კონუსი ისე, რომ კონუსს და ცილინდრს საერთო ფუძე აქვთ და კონუსის წვერო ცილინდრის მეორე ფუძის ცენტრშია. იპოვეთ რისი ტოლია კონუსის გვერდითი ზედაპირის, ცილინდრის გვერდითი ზედაპირის და სფეროს სრული ზედაპირების ფართობების შეფარდება.",
@@ -127,7 +199,15 @@ quizData = [
             "$\\sqrt{5}:5:9$"
         ],
         correct: 2,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["cylinder","cone","sphere"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "გამოთვალეთ რისი ტოლია $\\lim\\limits_{x\\to+\\infty}\\frac{\\ln(\\frac{1}{x})}{e^x\\cdot \\frac{1}{x}}$ ზღვრის მნიშვნელობა?",
@@ -140,7 +220,15 @@ quizData = [
             "$5$"
         ],
         correct: 0,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "calculus",
+        topics: ["func-limit","volume-surface","logarithms"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რამდენი ამონახსნი აქვს $f'(x)=0$ განტოლებას, სადაც $f(x)=\\arctan(x)+\\arccos(x)$",
@@ -153,7 +241,15 @@ quizData = [
             "უამრავი"
         ],
         correct: 1,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "algebra",
+        topics: ["inverse-trig","derivative","volume-surface"],
+        grade: 11,
+        difficulty: 2,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "მოცემულია, რომ $f'(x)=2x+2$ და $g'(x)=3-x$. რისი ტოლია $\\lim\\limits_{a\\to0}\\frac{f(x+a)+2g(x+a)-f(x)-2g(x)}{a}$?",
@@ -166,7 +262,15 @@ quizData = [
             "$0$"
         ],
         correct: 1,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "calculus",
+        topics: ["derivative","volume-surface"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია იმ წაკვეთილი კონუსის გვერდითი ზედაპირის ფართობი, რომლის ფუძის რადიუსებია $1$ და $4$ ხოლო სიმაღლე კი $4$-ია?",
@@ -179,7 +283,15 @@ quizData = [
             "$22{,}5\\pi$"
         ],
         correct: 0,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","cone"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "დათვალეთ რისი ტოლია $\\lim\\limits_{x\\to0}\\frac{(\\sin x)^2}{e^x-x-1}$ ზღვრის მნიშვნელობა?",
@@ -192,7 +304,15 @@ quizData = [
             "$5$"
         ],
         correct: 2,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "calculus",
+        topics: ["func-limit","volume-surface"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია იმ სამკუთხედის ფართობი, რომელიც შემოსაზღვრულია $y=x+2$; $y=-2x+5$ და $y=-0{,}5x+2$ წრფეებით?",
@@ -205,7 +325,15 @@ quizData = [
             "$3$"
         ],
         correct: 2,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","function-props","linear-func"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია $y=x-3$ წრფიდან $y=x^2$ პარაბოლამდე უმცირესი მანძილი?",
@@ -218,7 +346,15 @@ quizData = [
             "$\\frac{3}{\\sqrt{2}}$"
         ],
         correct: 4,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","linear-func","quadratic-func"],
+        grade: 11,
+        difficulty: 2,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "მოცემულია $f(x)=(\\sin\\sqrt{1-x^2})^2$ ფუნქცია. რამდენი ამონახსნი აქვს $f'(x)=0$ განტოლებას?",
@@ -231,7 +367,15 @@ quizData = [
             "არცერთი წინა პასუხი არაა სწორი"
         ],
         correct: 1,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "algebra",
+        topics: ["trig-eq","derivative","volume-surface"],
+        grade: 11,
+        difficulty: 3,
+        type: ["solve"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რომელ წერტილში კვეთს აბცისთა ღერძს $y=2^x$ ფუნქციის $(1;2)$ წერტილზე გამავალი მხები?",
@@ -244,7 +388,15 @@ quizData = [
             "$(-1; 0)$"
         ],
         correct: 1,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","chords-tangents","cross-sections"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "კონუსის სიმაღლეა $9$, ხოლო მისი ფუძის რადიუსია $12$. ამ კონუსში ჩახაზულია ბირთვი (ბირთვი ეხება კონუსის ფუძეს ცენტრში და ეხება კონუსის გვერდით ზედაპირს). იპოვეთ რისი ტოლია ბირთვის მოცულობისა და კონუსის მოცულობების შეფარდება.",
@@ -257,7 +409,15 @@ quizData = [
             "$49:100$"
         ],
         correct: 0,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","cone","sphere"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "იპოვეთ რისი ტოლია $(0; -16)$ წერტილზე გამავალი $y=x^3$ ფუნქციის მხების შეხების წერტილის კოორდინატების ჯამი?",
@@ -270,7 +430,15 @@ quizData = [
             "$16$"
         ],
         correct: 3,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","chords-tangents"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: ["coordinates"],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "რისი ტოლია $f'\\left(\\frac{\\pi}{4}\\right)$ თუ $f(x)=\\frac{(\\tan x)^2}{\\cos x}$?",
@@ -283,7 +451,15 @@ quizData = [
             "$4\\sqrt{2}$"
         ],
         correct: 0,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$A(3;a)$ წერტილზე გავლებულია ორი ურთიერთმართობული წრფე $y=k_1x+b_1$ და $y=k_2x+b_2$ რომლებიც $OY$ ღერძს კვეთენ ისეთ წერტილებში, რომელთა შორის მანძილია $9$. რისი ტოლია $|k_1 + k_2|$?",
@@ -296,7 +472,15 @@ quizData = [
             "$1{,}5$"
         ],
         correct: 1,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "სფეროში ჩახაზულია ცილინდრი ისე, რომ ცილინდრის ორივე ფუძე სფეროს ზედაპირზეა. იპოვეთ მოცემული ცილინდრის ფუძის დიამეტრის შეფარდება ცილინდრის სიმაღლესთან თუ სფეროს სრული ზედაპირის ფართობი ცილინდრის სრული ზედაპირის ფართობზე ორჯერ მეტია.",
@@ -309,7 +493,15 @@ quizData = [
             "$\\sqrt{5}-2$"
         ],
         correct: 0,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","cylinder","sphere"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     },
     {
         question: "$y=kx+k$ წრფე ეხება $y=x^2+2x+3$ და $y=-x^2-2x-3$ პარაბოლებს. იპოვეთ რისი ტოლია შეხების წერტილებს შორის მანძილი.",
@@ -322,6 +514,14 @@ quizData = [
             "$\\frac{\\sqrt{77}}{2}$"
         ],
         correct: 2,
-        tags: ["Geometry", "Surface Area"]
+        tags: ["Geometry", "Surface Area"],
+        area: "solid",
+        topics: ["volume-surface","quadratic-func"],
+        grade: 11,
+        difficulty: 3,
+        type: ["compute"],
+        method: [],
+        source: {"book":"","section":"","number":null},
+        tagsReviewed: false
     }
 ];

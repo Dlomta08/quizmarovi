@@ -4,7 +4,15 @@ quizData = [
   question: "ამოხსენით $\\sqrt{x + 5} \\geq -5$ უტოლობა.",
   options: ["\∅", "$[-5; +\\infty)$", "$(-\\infty; 5]$", "$[-5; 20]$", "$[20; +\\infty)$", "$\\mathbb{R}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 2
@@ -12,7 +20,15 @@ quizData = [
   question: "რამდენი ოთხნიშნა რიცხვი არსებობს, რომელიც იყოფა $5$-ზე.",
   options: ["$2450$", "$1800$", "$1600$", "$9000$", "$3000$", "$1500$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["divisibility"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 3
@@ -20,7 +36,15 @@ quizData = [
   question: "რა მიიღება $\\sqrt{x^2 - 2x - 2} = \\sqrt{2x^2 - 7x + 4}$ განტოლების ყველა ამონახსნი რომ შევკრიბოთ?",
   options: ["$1$", "$2$", "$9$", "$3$", "$5$", "$6$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-eq"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 4
@@ -28,7 +52,15 @@ quizData = [
   question: "მოცემულია $|\\vec{a}| = 7$, $|\\vec{b}| = 11$, $|\\vec{a} - \\vec{b}| = 14$. იპოვეთ $|\\vec{a} + \\vec{b}|$.",
   options: ["$18$", "$14$", "$12$", "$21$", "$3$", "$23$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 5
@@ -36,7 +68,15 @@ quizData = [
   question: "რომელ წერტილში გადაიყვანს $B(1; 3)$ წერტილს ჰომოთეტია, რომლის ცენტრია $O(2; 7)$ წერტილი და რომლის კოეფიციენტია $k = 3$?",
   options: ["$(-1; -5)$", "$(6; 21)$", "$(-6; -21)$", "$(3; 10)$", "$(-2; 9)$", "$(4; -6)$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["similar-figures"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 6
@@ -44,7 +84,15 @@ quizData = [
   question: "გამოთვალეთ $\\frac{C_{16}^{6}}{C_{14}^{5} + C_{14}^{6} + C_{15}^{5}}$ გამოსახულების მნიშვნელობა.",
   options: ["$2$", "$1$", "$5$", "$6$", "$3$", "$15$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["combinatorics"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 7
@@ -59,7 +107,15 @@ quizData = [
     "$(4; 5; 10)$"
   ],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["proportion"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 8
@@ -74,7 +130,15 @@ quizData = [
     "$(-2.5; -1)$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 10,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 9
@@ -89,7 +153,15 @@ quizData = [
     "$(5; 7; 9)$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 10,
+  difficulty: 1,
+  type: ["compute"],
+  method: ["vectors","coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 10
@@ -104,7 +176,15 @@ quizData = [
     "$32$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["prism"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 11
@@ -119,14 +199,30 @@ quizData = [
     "$42x^5$"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["binomial"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 12
 {
   question: "ამოხსენით $\\frac{A_{x}^{4} \\cdot {P_{x - 4}}}{P_{x - 2}} = 42$ განტოლება $(P_n = n!)$.",
   options: ["$1$", "$2$", "$9$", "$7$", "$5$", "$13$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 13
@@ -141,7 +237,15 @@ quizData = [
     "$(3; 12)$"
   ],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 14
@@ -156,7 +260,15 @@ quizData = [
     "$(12; 6; 4)$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: ["vectors","coordinates"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 15
@@ -164,7 +276,15 @@ quizData = [
   question: "მოცემულია $\\vec{a}$, $\\vec{b}$ და $\\vec{c}$ სამი კოლინეარული ვექტორი. ჩამოთვლილთაგან, რისი ტოლი შეიძლება იყოს $\\vec{a} + 2\\vec{b} + 3\\vec{c}$ ვექტორის სიგრძე, თუ $|\\vec{a}| = 199$, $|\\vec{b}| = 19$, $|\\vec{c}| = 9$?",
   options: ["$124$", "$254$", "$211$", "$188$", "$227$", "$199$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 10,
+  difficulty: 2,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 16
@@ -172,7 +292,15 @@ quizData = [
   question: "იპოვეთ ალბათობა იმისა, რომ $A = \\{2; 4; 7; 1; 3; 8; -2; -6\\}$ სიმრავლიდან შემთხვევით არჩეული ერთი ელემენტი $(x - 3)\\sqrt{x^2 - 5x + 4} = 0$ განტოლების ფესვია.",
   options: ["$\\frac{1}{8}$", "$\\frac{2}{8}$", "$\\frac{\\sqrt{5}}{8}$", "$\\frac{4}{8}$", "$\\frac{5}{8}$", "$\\frac{6}{8}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["probability","quadratic-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 17
 {
@@ -186,7 +314,15 @@ quizData = [
     "$2\\sqrt[3]{2};\\ 4\\sqrt[6]{3};\\ 4$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["quadratic-eq"],
+  grade: 10,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 18
@@ -194,7 +330,15 @@ quizData = [
   question: "$(\\sqrt[3]{4} + \\sqrt[5]{3})^{50}$ ნიუტონის ბინომის განაშალის $51$ შესაკრებიდან რამდენია ნატურალური?",
   options: ["$3$", "$4$", "$5$", "$7$", "$8$", "$9$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["binomial"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 19
@@ -209,7 +353,15 @@ quizData = [
     "$\\pm 1$"
   ],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["vectors"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 20
@@ -217,7 +369,15 @@ quizData = [
   question: "დახრილი სამკუთხა პრიზმის გვერდითი წიბო $8$-ის ტოლია. ამ წიბოს მართობული კვეთა სამკუთხედია, რომლის ფართობი $5$-ის ტოლია. იპოვეთ პრიზმის მოცულობა.",
   options: ["$16$", "$20$", "$10$", "$40$", "$24$", "$8\\sqrt{3}$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "solid",
+  topics: ["prism","cross-sections"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 21
@@ -232,14 +392,30 @@ quizData = [
     "სამივე"
   ],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["square-roots"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 // 22
 {
   question: "ქვიზისთვის გვაქვს $6$ განსხვავებული საკითხი. ქვიზის ბილეთი შეიძლება შედგებოდეს ერთი ან რამდენიმე საკითხისგან. ამ $6$ საკითხისგან სულ რამდენი განსხვავებული ბილეთის შედგენაა შესაძლებელი, თუ საკითხების გადანაცვლებით ბილეთები არ განსხვავდებიან?",
   options: ["$6$", "$32$", "$33$", "$720$", "$63$", "$65$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["combinatorics"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 23
@@ -254,7 +430,15 @@ quizData = [
     "$\\frac{3}{5}$"
   ],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "prob-stats",
+  topics: ["probability","percent"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 24
@@ -269,7 +453,15 @@ quizData = [
     "$y = \\frac{1}{2}x$"
   ],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["line-circle-eq"],
+  grade: 10,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 // 25
@@ -277,6 +469,14 @@ quizData = [
   question: "$O$ არის $ABCD$ პარალელოგრამის დიაგონალების გადაკვეთის წერტილი. $M$ არის $O$-სგან განსხვავებული სივრცის ნებისმიერი წერტილი. იპოვეთ ისეთი $k$ რიცხვი, რომლისთვისაც სამართლიანია ტოლობა $\\vec{MA} + \\vec{MB} + \\vec{MC} + \\vec{MD} = k \\cdot \\vec{MO}.$",
   options: ["$1$", "$4$", "$2$", "$3$", "$\\frac{4}{3}$", "$\\frac{16}{5}$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["parallelogram","vectors"],
+  grade: 10,
+  difficulty: 3,
+  type: ["compute"],
+  method: ["vectors"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];

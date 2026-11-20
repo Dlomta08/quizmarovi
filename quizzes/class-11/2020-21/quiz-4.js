@@ -2,51 +2,131 @@ quizData = [
   {
     question: "იპოვეთ შემდეგი ინტეგრალები: ა) $\\int\\left(x^{-0{,}5} + \\sin x - \\frac{2}{x}\\right) dx$   ბ) $\\int\\left(\\frac{1}{\\cos^2x} + \\frac{2}{\\sqrt{1-x^2}} - 2^x\\right) dx$   გ) $\\int\\frac{2x dx}{1+x^4}$",
     options: [],
-    tags: []
+    tags: [],
+    area: "calculus",
+    topics: ["definite-integral"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "გამოთვალეთ შემდეგი ინტეგრალები: \n\nა) $\\int_1^2 \\frac{4x^4 + 3x^3 + 2x^2 + x + 1}{x}\\,dx$\n\nბ) $\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{4}} \\cos^3 x\\,dx$\n\nგ) $\\int_0^1 \\frac{3\\,dx}{x^2 + 11x + 28}$",
     options: [],
-    tags: []
+    tags: [],
+    area: "calculus",
+    topics: ["definite-integral","real-exponent"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "გამოიკვლიეთ $f(x) = x + \\frac{4}{x} + 2$ ფუნქცია და ააგეთ მისი გრაფიკი.\n(იპოვეთ: განსაზღვრის არე, მნიშვნელობათა სიმრავლე, ღერძებთან კვეთის წერტილის კოორდინატები, ზრდადობისა და კლებადობის შუალედები, ექსტრემუმის წერტილები, ნიშანმუდმივობის შუალედები, დახრილი და ვერტიკალური ასიმპტოტები)",
     options: [],
-    tags: []
+    tags: [],
+    area: "calculus",
+    topics: ["monotonic-extrema","curve-sketching","function-basics"],
+    grade: 11,
+    difficulty: 2,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "$Oxy$ მართკუთხა საკოორდინატო სიბრტყეზე იპოვეთ $f(x) = x^2 - 10x + 12$ და $g(x) = -x^2 + 4x - 8$ ფუნქციების გრაფიკებით შემოსაზღვრული არის ფართობი.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["line-circle-eq","function-props","quadratic-func"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "გამოთვალეთ ინტეგრალი:\n\n$\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}} \\frac{dx}{\\sin^2 x \\cdot \\cos^2 x}$",
     options: [],
-    tags: []
+    tags: [],
+    area: "calculus",
+    topics: ["definite-integral","real-exponent"],
+    grade: 11,
+    difficulty: 2,
+    type: ["compute"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "იპოვეთ $f(x) = e^x$ ფუნქციის გრაფიკით, $Ox$ და $Oy$ ღერძებითა და $x = 2$ წრფით შემოსაზღვრული ფიგურის $Ox$ ღერძის გარშემო ბრუნვით მიღებული სივრცული სხეულის მოცულობა.",
     options: [],
-    tags: []
+    tags: [],
+    area: "calculus",
+    topics: ["definite-integral","function-props","volume-surface"],
+    grade: 11,
+    difficulty: 3,
+    type: ["graph"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: `$Oxyz$ მართკუთხა საკოორდინატო სივრცეში მოცემულია $3x - 2y + z = 2$ ტოლობით განსაზღვრული $\\omega$ სიბრტყე, $2x + 6y - 3z = 6$ ტოლობით განსაზღვრული $\\varphi$ სიბრტყე და $A(1; 1; 2)$ წერტილი. იპოვეთ:\n\nა) $\\omega$ სიბრტყეზე მდებარე რომელიმე წერტილის კოორდინატები;\n\nბ) $\\omega$ და $\\varphi$ სიბრტყეებს შორის კუთხის კოსინუსი;\n\nგ) მანძილი $A$ წერტილიდან $\\omega$ სიბრტყემდე;\n\nდ) $A$ წერტილზე გამავალი $\\omega$ სიბრტყის პარალელური სიბრტყის განტოლება.`,
   options: [],
-    tags: []
+    tags: [],
+    area: "solid",
+    topics: ["parallel-space","angles-space"],
+    grade: 11,
+    difficulty: 3,
+    type: ["solve"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "$Oxy$ მართკუთხა საკოორდინატო სიბრტყეზე იპოვეთ $A$ წერტილის კოორდინატები და $b$ წრფის განტოლება, თუ ცნობილია, რომ $y = x^2$ ფუნქციის გრაფიკზე მდებარე ყველა წერტილი თანაბრადაა დაშორებული $A$ წერტილიდან და $b$ წრფიდან.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["line-circle-eq","quadratic-func"],
+    grade: 11,
+    difficulty: 3,
+    type: ["graph"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "შეადგინეთ იმ ჰიპერბოლის განტოლება, რომლის ფოკუსები ემთხვევა $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$ ელიფსის ფოკუსებს და რომლის ექსცენტრისიტეტი $2$-ის ტოლია.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["conics","quadratic-eq"],
+    grade: 11,
+    difficulty: 3,
+    type: ["solve"],
+    method: [],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   },
   {
     question: "$Oxy$ მართკუთხა საკოორდინატო სიბრტყეში $\\frac{x^2}{16} - \\frac{y^2}{9} = 1$ ტოლობით განსაზღვრულ ჰიპერბოლაზე აღებულია ისეთი $A$ წერტილი, რომელიც ამ ჰიპერბოლის ერთი ფოკუსიდან დაშორებულია $3$-ჯერ მეტი მანძილით, ვიდრე მეორე ფოკუსიდან. იპოვეთ $A$ წერტილიდან ფოკუსებამდე მანძილები და $A$ წერტილის აბსცისის შესაძლო დადებითი მნიშვნელობა.",
     options: [],
-    tags: []
+    tags: [],
+    area: "geometry",
+    topics: ["conics","line-circle-eq"],
+    grade: 11,
+    difficulty: 3,
+    type: ["compute"],
+    method: ["coordinates"],
+    source: {"book":"","section":"","number":null},
+    tagsReviewed: false
   }
 ];

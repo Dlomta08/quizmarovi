@@ -4,7 +4,15 @@ quizData = [
   question: "გამოთვალეთ: $\\dfrac{7{,}3^3 + 3 \\cdot 7{,}3^2 \\cdot 2{,}7 + 3 \\cdot 7{,}3 \\cdot 2{,}7^2 + 2{,}7^3}{5{,}5^2 − 4{,}5^2}$",
   options: ["$0{,}5$", "$25$", "$60$", "$100$", "$1$", "$125$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["special-products"],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //2
@@ -13,7 +21,15 @@ quizData = [
   question: "სიბრტყეზე მოცემულია წრფე და ორი მართკუთხედი, რომლის თითო წვერო ამ წრფეზე მდებარეობს (იხ. ნახაზი). იპოვეთ უცნობი კუთხის სიდიდე.",
   options: ["$135^\\circ$", "$110^\\circ$", "$120^\\circ$", "$140^\\circ$", "$130^\\circ$", "$115^\\circ$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["rhombus-rect-sq"],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //3
@@ -21,7 +37,15 @@ quizData = [
   question: "ნინომ კვირის დასაწყისში რამდენიმე კილოგრამი ვაშლი იყიდა, რაშიც სულ $10$ ლარი გადაიხადა. კვირის ბოლოს ვაშლი $20\\%$-ით იაფი ღირდა. ამიტომ ნინომ $30\\%$-ით მეტი წონის ვაშლის ყიდვა გადაწყვიტა. რამდენი ლარის გადახდა მოუწევს ნინოს?",
   options: ["$9{,}5$", "$10{,}2$", "$10{,}4$", "$10{,}6$", "$10{,}8$", "$11$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["percent","word-problems"],
+  grade: 7,
+  difficulty: 1,
+  type: ["word"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //4
@@ -29,7 +53,15 @@ quizData = [
   question: "რამდენი ამონახსნი აქვს $||x - 6| - 6| = 4$ განტოლებას?",
   options: ["$0$", "$1$", "$3$", "$2$", "$4$", "$5$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["abs-eq"],
+  grade: 7,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //5
@@ -37,7 +69,15 @@ quizData = [
   question: "იპოვეთ მანძილი $y = 4x - 8$ და $3x - 2y = 1$ განტოლებით მოცემული წრფეების გადაკვეთის წერტილიდან აბსცისათა ღერძამდე მანძილი.",
   options: ["$10$", "$6$", "$8$", "$12$", "$4$", "$5$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-func"],
+  grade: 7,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //6
@@ -46,7 +86,15 @@ quizData = [
   question: "$24$სმ-იანი მონაკვეთი წრეწირთან გადაკვეთის წერტილებით იყოფა შეფარდებით $1:2:3$. მიღებული ქორდა წრეწირის ცენტრიდან $60^\\circ$-იანი კუთხით ჩანს. რას უდრის წრეწირის დიამეტრი?",
   options: ["$10$", "$12$", "$16$", "$15$", "$14$", "$18$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["divisibility","chords-tangents"],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //7
@@ -54,7 +102,15 @@ quizData = [
   question: "$y = 2x - 3$ ფუნქციის გრაფიკზე იპოვეთ წერტილი, რომლის ორდინატა $7$-ით ნაკლებია აბსცისაზე.",
   options: ["$(1; 8)$", "$(-1; 6)$", "$(-4; -11)$", "$(4; -1)$", "$(-5; 7)$", "$(5; -2)$"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-func"],
+  grade: 7,
+  difficulty: 1,
+  type: ["graph"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //8
@@ -62,7 +118,15 @@ quizData = [
   question: "ცნობილია, რომ $x^2 - 8x + 15$ გამოსახულება იშლება მამრავლებად:  $x^2 - 8x + 15 = (x + a)(x + b)$. იპოვეთ $|a + b|$ გამოსახულების მნიშვნელობა:",
   options: ["$8$", "$6$", "$10$", "$12$", "$4$", "$5$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["factoring"],
+  grade: 7,
+  difficulty: 1,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //9
@@ -70,7 +134,15 @@ quizData = [
   question: "ცნობილია, რომ $f(x) = 4x - 7$. იპოვეთ $f(2x - 1) = f(x + 5)$ განტოლების ამონახსნი.",
   options: ["$6$", "$-4$", "$3$", "$-3$", "$4$", "$8$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-eq"],
+  grade: 7,
+  difficulty: 1,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //10
@@ -78,7 +150,15 @@ quizData = [
   question: "ცნობილია, რომ $a$ წრფის განტოლებაა $3x - 5y + 7 = 0$; $b$ წრფე პარალელურია $a$ წრფის და $oy$ ღერძს კვეთს $y = -3$ წერტილში. დაწერეთ $b$ წრფის განტოლება.",
   options: ["$y = -0{,}6x - 3$", "$y = 0{,}6x + 3$", "$y = 0{,}2x - 3$", "$y = 0{,}6x - 3$", "$y = 0{,}3x + 6$", "$y = -0{,}6x + 3$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 7,
+  difficulty: 2,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //11
@@ -86,7 +166,15 @@ quizData = [
   question: "იპოვეთ $\\dfrac{14}{9x^2 - 12xy + 4y^2 + 7} + \\dfrac{12}{|5x - 3y - 1| + 3}$ გამოსახულების უდიდესი მნიშვნელობა.",
   options: ["$10$", "$6$", "$8$", "$12$", "$4$", "$5$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: ["absolute"],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //12
@@ -94,7 +182,15 @@ quizData = [
   question: "$ABC$ სამკუთხედში ჩახაზული წრეწირი $AB$ გვერდს ეხება $M$ წერტილში. იპოვეთ $AC$ გვერდის სიგრძე, თუ $MB = 6$ $P_{ABC} = 42$.",
   options: ["$10$", "$13$", "$8$", "$12$", "$11$", "$15$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["inscribed-circum"],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //13
@@ -102,7 +198,15 @@ quizData = [
   question: "წრეწირზე აღებულია სამი წერტილი $A$, $B$ და $C$ ისე, რომ $AB : BC : AC = 1 : 5 : 6$ (რკალის სიგრძეების შეფარდება). იპოვეთ $AQC$ კუთხის სიდიდე სადაც $Q$ არის $ABC$ სამკუთხედში ჩახაზული წრეწირის ცენტრი.",
   options: ["$135^\\circ$", "$110^\\circ$", "$120^\\circ$", "$140^\\circ$", "$130^\\circ$", "$115^\\circ$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["circle-angles","inscribed-circum"],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 //14
 {
@@ -112,7 +216,15 @@ quizData = [
   question: "",
   options: ["$62^\\circ$", "$54^\\circ$", "$44^\\circ$", "$36^\\circ$", "$48^\\circ$", "$52^\\circ$"],
   correct: 1,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["circle-angles"],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //15
@@ -121,7 +233,15 @@ quizData = [
   question: "",
   options: ["$56^\\circ$", "$60^\\circ$", "$58^\\circ$", "$50^\\circ$", "$70^\\circ$", "$84^\\circ$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //16
@@ -130,7 +250,15 @@ quizData = [
   question: "",
   options: ["$60^\\circ$", "$40^\\circ$", "$30^\\circ$", "$70^\\circ$", "$50^\\circ$", "$80^\\circ$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //17
@@ -139,7 +267,15 @@ quizData = [
   question: "",
   options: ["$28^\\circ$", "$24^\\circ$", "$58^\\circ$", "$34^\\circ$", "$36^\\circ$", "$28^\\circ$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 7,
+  difficulty: 2,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //18
@@ -147,7 +283,15 @@ quizData = [
   question: "მართკუთხა სამკუთხედში მართი კუთხის წვეროდან გავლებულ ბისექტრისასა და მედიანას შორის კუთხე $23^\\circ$-ია. იპოვეთ ამ სამკუთხედის მახვილი კუთხეებიდან უდიდესი.",
   options: ["$68^\\circ$", "$56^\\circ$", "$64^\\circ$", "$70^\\circ$", "$80^\\circ$", "$82^\\circ$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["right-triangle"],
+  grade: 7,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //19
@@ -155,7 +299,15 @@ quizData = [
   question: "თუთიისა და სპილენძის ორი შენადნობიდან, პირველში მათი მასები ისე შეეფარდება ერთმანეთს, შესაბამისად, როგორც $5:2$, ხოლო მეორეში - $3:4$. რამდენი კილოგრამი უნდა ავიღოთ პირველი შენადნობი, რომ მივიღოთ $28$ კგ ახალი შენადნობი, რომელშიც თუთია და სპილენძი ტოლად იქნება.",
   options: ["$5$კგ", "$6$კგ", "$7$კგ", "$8$კგ", "$10$კგ", "$5{,}5$კგ"],
   correct: 2,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["word-problems"],
+  grade: 7,
+  difficulty: 3,
+  type: ["word"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //20
@@ -163,7 +315,15 @@ quizData = [
   question: "ჩამოთვლილთაგან რომელი ფუნქციის გრაფიკი არის მართკუთხა საკოორდინატო სიბრტყის $A(1; 4)$ და $B(-3; 0)$ წერტილებზე გამავალი წრფის პარალელური?",
   options: ["$y = x - 2$", "$y = -2x + 2$", "$y = 2x + 3$", "$y = -0{,}5x - 3$", "$y = -x + 7$", "$y = 1{,}2x - 3$"],
   correct: 0,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-func"],
+  grade: 7,
+  difficulty: 3,
+  type: ["graph"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //21
@@ -171,7 +331,15 @@ quizData = [
   question: "სამკუთხედის კუთხეები ისე შეეფარდება ერთმანეთს, როგორც $2:7:9$. იპოვეთ ამ სამკუთხედზე შემოხაზული წრეწირის რადიუსი, თუ მისი უდიდესი გვერდი $8$-ის ტოლია.",
   options: ["$2$", "$2{,}5$", "$3$", "$3{,}5$", "$4$", "$4{,}5$"],
   correct: 4,
-  tags: []
+  tags: [],
+  area: "geometry",
+  topics: ["inscribed-circum"],
+  grade: 7,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //22
@@ -179,7 +347,15 @@ quizData = [
   question: "მათემატიკის ოლიმპიადაზე გოგონების საშუალო ქულა $20\\%$-ით მეტია ბიჭების საშუალო ქულაზე. მაგრამ ბიჭების ჯამური ქულა $60\\%$-ით მეტია გოგონების ჯამურ ქულაზე. რამდენი პროცენტით მეტი ბიჭი მონაწილეობდა ოლიმპიადაზე, ვიდრე გოგო?",
   options: ["$20\\%$-ით", "$35\\%$-ით", "$43\\%$-ით", "$92\\%$-ით", "$57\\%$-ით", "$72\\%$-ით"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["percent"],
+  grade: 7,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //23
@@ -187,7 +363,15 @@ quizData = [
   question: "იპოვეთ უმცირესი რიცხვი, რომელიც შეიძლება წარმოვადგინოთ სამი განსხვავებული ნატურალური შედგენილი რიცხვის ჯამად.",
   options: ["$12$", "$15$", "$16$", "$18$", "$20$", "$22$"],
   correct: 3,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 7,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //24
@@ -195,7 +379,15 @@ quizData = [
   question: "ქვემოთ ჩამოთვლილთაგან რისი ტოლია $x + y$, თუ $x$ და $y$ ნატურალური რიცხვებია, ამასთან: $xy + 200 = (y + 1)^2$.",
   options: ["$200$", "$37$", "$199$", "$178$", "$402$", "$399$"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: [],
+  grade: 7,
+  difficulty: 3,
+  type: ["compute"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 },
 
 //25
@@ -203,6 +395,14 @@ quizData = [
   question: "იპოვეთ $k$-ს მნიშვნელობები, რომლისთვისაც სისტემას აქვს ამონახსნთა უსასრულო სიმრავლე. <br><br> $\\begin{cases} 4x - 3y = 15 + kx \\\\ x + 2y = 5k - kx \\end{cases}$",
   options: ["$2$", "$3$", "$-1$", "$-3$", "$5$", "ასეთი $k$ არ არსებობს"],
   correct: 5,
-  tags: []
+  tags: [],
+  area: "algebra",
+  topics: ["linear-systems"],
+  grade: 7,
+  difficulty: 3,
+  type: ["solve"],
+  method: [],
+  source: {"book":"","section":"","number":null},
+  tagsReviewed: false
 }
 ];
