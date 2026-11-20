@@ -4,8 +4,9 @@
  * The quiz list pages, the quiz page and the random quiz generator all read it,
  * so empty or missing quiz files never show up as cards.
  *
- * Run it after adding, removing or emptying a quiz file:
+ * Run it after adding, removing or emptying a quiz file, or after changing tags:
  *     node tools/build-quiz-index.js
+ * It also rebuilds data/problems.json (the problem browser's data).
  *
  * Output shape:
  * {
@@ -85,3 +86,7 @@ for (const [subject, classes] of Object.entries(index)) {
   console.log(`  ${subject}: classes ${Object.keys(classes).join(", ")}`);
 }
 if (skipped.length) console.log(`  skipped (empty): ${skipped.join(", ")}`);
+
+// Also rebuild the problem browser's data (data/problems.json) from the same quiz files.
+const problems = require("./build-problem-index").build();
+console.log(`data/problems.json: ${problems.count} problems, ${(problems.bytes / 1024).toFixed(0)} KB`);
