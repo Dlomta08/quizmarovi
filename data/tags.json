@@ -1,0 +1,207 @@
+{
+  "_info": "Tag system for komaroviqvizebi.ge. Each problem gets: 1 area, 1+ topics (most specific level), 1 grade, 1 difficulty, 0+ types, 0+ methods, 1 source.",
+
+  "area": [
+    { "id": "algebra",     "ka": "ალგებრა" },
+    { "id": "geometry",    "ka": "გეომეტრია (პლანიმეტრია)" },
+    { "id": "solid",       "ka": "სტერეომეტრია" },
+    { "id": "calculus",    "ka": "ანალიზის საწყისები" },
+    { "id": "prob-stats",  "ka": "კომბინატორიკა, ალბათობა, სტატისტიკა" }
+  ],
+
+  "topics": [
+    { "id": "numbers", "ka": "რიცხვები და არითმეტიკა", "area": "algebra", "children": [
+      { "id": "divisibility",     "ka": "გაყოფადობა, ნაშთები",                    "grades": [7, 8, 9] },
+      { "id": "gcd-lcm",          "ka": "უსგ და უსჯ, ევკლიდეს ალგორითმი",          "grades": [7] },
+      { "id": "prime-factor",     "ka": "მარტივ მამრავლებად დაშლა, გამყოფთა რაოდენობა", "grades": [7] },
+      { "id": "percent",          "ka": "პროცენტი",                                "grades": [7] },
+      { "id": "proportion",       "ka": "პროპორცია, პირდაპირ- და უკუპროპორციულობა", "grades": [7] },
+      { "id": "negative-abs",     "ka": "უარყოფითი რიცხვები, რიცხვის მოდული",       "grades": [7] },
+      { "id": "sets",             "ka": "სიმრავლეები და მოქმედებები",              "grades": [7] },
+      { "id": "new-operations",   "ka": "ახალი ოპერაციები",                        "grades": [7] },
+      { "id": "powers",           "ka": "ხარისხი (ნატურალური, მთელი მაჩვენებელი)",  "grades": [7, 8] },
+      { "id": "integer-part",     "ka": "მთელი და წილადი ნაწილი",                   "grades": [9] }
+    ]},
+    { "id": "expressions", "ka": "გამოსახულებები", "area": "algebra", "children": [
+      { "id": "polynomials",      "ka": "ერთწევრი და მრავალწევრი",                 "grades": [7] },
+      { "id": "special-products", "ka": "შემოკლებული გამრავლების ფორმულები",        "grades": [7] },
+      { "id": "factoring",        "ka": "მამრავლებად დაშლა",                        "grades": [7, 8] },
+      { "id": "poly-division",    "ka": "მრავალწევრის გაყოფა, ბეზუს თეორემა",        "grades": [7, 8] },
+      { "id": "identities",       "ka": "იგივეობის დამტკიცება",                     "grades": [7] },
+      { "id": "rational-expr",    "ka": "რაციონალური გამოსახულებები, ალგებრული წილადები", "grades": [8] },
+      { "id": "square-roots",     "ka": "კვადრატული ფესვი და მისი თვისებები",        "grades": [8] },
+      { "id": "nth-roots",        "ka": "n-ური ხარისხის ფესვი, რაციონალური მაჩვენებელი", "grades": [9] }
+    ]},
+    { "id": "equations", "ka": "განტოლებები", "area": "algebra", "children": [
+      { "id": "linear-eq",        "ka": "წრფივი განტოლება",                        "grades": [7] },
+      { "id": "abs-eq",           "ka": "მოდულიანი განტოლება",                     "grades": [7, 8, 9] },
+      { "id": "linear-systems",   "ka": "წრფივ განტოლებათა სისტემა",               "grades": [7] },
+      { "id": "diophantine",      "ka": "განტოლებები მთელ რიცხვებში",               "grades": [7, 8] },
+      { "id": "rational-eq",      "ka": "რაციონალური განტოლება",                    "grades": [8] },
+      { "id": "quadratic-eq",     "ka": "კვადრატული განტოლება",                     "grades": [8] },
+      { "id": "vieta",            "ka": "ვიეტის თეორემა",                           "grades": [8] },
+      { "id": "higher-degree",    "ka": "მაღალი ხარისხის განტოლებები",               "grades": [8, 9] },
+      { "id": "irrational-eq",    "ka": "ირაციონალური განტოლება",                    "grades": [8, 9] },
+      { "id": "nonlinear-systems","ka": "არაწრფივი სისტემები",                       "grades": [8, 9] },
+      { "id": "word-problems",    "ka": "ტექსტური ამოცანები (მოძრაობა, სამუშაო, ნარევი, პროცენტი)", "grades": [7, 8, 9] }
+    ]},
+    { "id": "inequalities", "ka": "უტოლობები", "area": "algebra", "children": [
+      { "id": "numeric-ineq",     "ka": "რიცხვითი უტოლობები, შეფასება",              "grades": [8] },
+      { "id": "linear-ineq",      "ka": "წრფივი უტოლობა და სისტემები",               "grades": [8] },
+      { "id": "quadratic-ineq",   "ka": "კვადრატული უტოლობა",                       "grades": [9] },
+      { "id": "interval-method",  "ka": "ინტერვალთა მეთოდი, რაციონალური უტოლობა",     "grades": [9] },
+      { "id": "ineq-proofs",      "ka": "უტოლობების დამტკიცება",                     "grades": [8, 9] },
+      { "id": "means",            "ka": "უტოლობები საშუალოებს შორის",                "grades": [8] },
+      { "id": "two-var-ineq",     "ka": "ორუცნობიანი უტოლობები და სისტემები",        "grades": [11] }
+    ]},
+    { "id": "functions", "ka": "ფუნქციები", "area": "algebra", "children": [
+      { "id": "function-basics",  "ka": "ფუნქციის ცნება, განსაზღვრის არე, მნიშვნელობათა სიმრავლე", "grades": [7, 9] },
+      { "id": "function-props",   "ka": "მონოტონურობა, ლუწ-კენტობა, პერიოდულობა",   "grades": [9, 10] },
+      { "id": "linear-func",      "ka": "წრფივი ფუნქცია",                           "grades": [7] },
+      { "id": "quadratic-func",   "ka": "კვადრატული ფუნქცია",                       "grades": [9] },
+      { "id": "graph-transform",  "ka": "გრაფიკები და მათი გარდაქმნა",               "grades": [9] },
+      { "id": "max-min",          "ka": "უდიდესი და უმცირესი მნიშვნელობა",           "grades": [9, 11] }
+    ]},
+    { "id": "sequences", "ka": "მიმდევრობები", "area": "algebra", "children": [
+      { "id": "arithmetic-prog",  "ka": "არითმეტიკული პროგრესია",                    "grades": [9] },
+      { "id": "geometric-prog",   "ka": "გეომეტრიული პროგრესია",                     "grades": [9] },
+      { "id": "induction",        "ka": "მათემატიკური ინდუქცია",                     "grades": [9] }
+    ]},
+    { "id": "trigonometry", "ka": "ტრიგონომეტრია", "area": "algebra", "children": [
+      { "id": "radians",          "ka": "მობრუნების კუთხე, რადიანი",                 "grades": [10] },
+      { "id": "trig-identities",  "ka": "ტრიგონომეტრიული იგივეობები",                "grades": [10] },
+      { "id": "reduction",        "ka": "დაყვანის ფორმულები",                        "grades": [10] },
+      { "id": "sum-formulas",     "ka": "ჯამის, ორმაგი კუთხის ფორმულები",             "grades": [10] },
+      { "id": "product-sum",      "ka": "ნამრავლის ჯამად გარდაქმნა და პირიქით",      "grades": [10] },
+      { "id": "inverse-trig",     "ka": "არკსინუსი, არკკოსინუსი, არკტანგენსი",       "grades": [10] },
+      { "id": "trig-eq",          "ka": "ტრიგონომეტრიული განტოლებები",               "grades": [10] },
+      { "id": "trig-ineq",        "ka": "ტრიგონომეტრიული უტოლობები",                 "grades": [10] }
+    ]},
+    { "id": "exp-log", "ka": "მაჩვენებლიანი და ლოგარითმული", "area": "algebra", "children": [
+      { "id": "real-exponent",    "ka": "ირაციონალურმაჩვენებლიანი ხარისხი",          "grades": [11] },
+      { "id": "exp-eq",           "ka": "მაჩვენებლიანი განტოლებები",                 "grades": [11] },
+      { "id": "exp-ineq",         "ka": "მაჩვენებლიანი უტოლობები",                   "grades": [11] },
+      { "id": "logarithms",       "ka": "ლოგარითმი და ლოგარითმული ფუნქცია",          "grades": [11] },
+      { "id": "log-eq",           "ka": "ლოგარითმული განტოლებები",                   "grades": [11] },
+      { "id": "log-ineq",         "ka": "ლოგარითმული უტოლობები",                     "grades": [11] }
+    ]},
+    { "id": "calc", "ka": "ანალიზი", "area": "calculus", "children": [
+      { "id": "seq-limit",        "ka": "მიმდევრობის ზღვარი, რიცხვი e",               "grades": [11] },
+      { "id": "func-limit",       "ka": "ფუნქციის ზღვარი, შესანიშნავი ზღვრები",       "grades": [11] },
+      { "id": "continuity",       "ka": "უწყვეტობა",                                "grades": [11] },
+      { "id": "derivative",       "ka": "წარმოებული და გაწარმოების წესები",           "grades": [11] },
+      { "id": "lhopital",         "ka": "ლოპიტალის წესი",                            "grades": [11] },
+      { "id": "monotonic-extrema","ka": "ზრდადობა-კლებადობა, ექსტრემუმი",             "grades": [11] },
+      { "id": "convexity",        "ka": "ამოზნექილობა, გადაღუნვა, ასიმპტოტები",       "grades": [11] },
+      { "id": "curve-sketching",  "ka": "ფუნქციის გამოკვლევა და გრაფიკის აგება",      "grades": [11] },
+      { "id": "antiderivative",   "ka": "პირველადი, ინტეგრების ხერხები",               "grades": [11] },
+      { "id": "definite-integral","ka": "განსაზღვრული ინტეგრალი, ფართობი",            "grades": [11] }
+    ]},
+    { "id": "prob", "ka": "კომბინატორიკა, ალბათობა, სტატისტიკა", "area": "prob-stats", "children": [
+      { "id": "statistics",       "ka": "სტატისტიკა: საშუალო, მედიანა, მოდა, დიაგრამები", "grades": [7, 9] },
+      { "id": "combinatorics",    "ka": "კომბინატორიკა",                             "grades": [10] },
+      { "id": "binomial",         "ka": "ნიუტონის ბინომი",                           "grades": [10] },
+      { "id": "probability",      "ka": "ალბათობა",                                 "grades": [9, 10] }
+    ]},
+
+    { "id": "plane-basics", "ka": "საწყისი ცნებები", "area": "geometry", "children": [
+      { "id": "lines-angles",     "ka": "წრფე, სხივი, მონაკვეთი, კუთხე",              "grades": [7] },
+      { "id": "angle-pairs",      "ka": "მოსაზღვრე და ვერტიკალური კუთხეები",          "grades": [7] },
+      { "id": "parallel-lines",   "ka": "პარალელური წრფეები",                       "grades": [7] }
+    ]},
+    { "id": "triangles", "ka": "სამკუთხედი", "area": "geometry", "children": [
+      { "id": "angle-sum",        "ka": "კუთხეების ჯამი, გარე კუთხე",                 "grades": [7] },
+      { "id": "congruence",       "ka": "სამკუთხედების ტოლობის ნიშნები",             "grades": [7] },
+      { "id": "isosceles",        "ka": "ტოლფერდა სამკუთხედი",                       "grades": [7] },
+      { "id": "triangle-ineq",    "ka": "სამკუთხედის უტოლობა",                       "grades": [7] },
+      { "id": "right-triangle",   "ka": "მართკუთხა სამკუთხედი",                      "grades": [7, 8] },
+      { "id": "cevians",          "ka": "მედიანა, ბისექტრისა, სიმაღლე; ბისექტრისის თვისება", "grades": [7] },
+      { "id": "midline",          "ka": "შუახაზი",                                  "grades": [8] },
+      { "id": "pythagoras",       "ka": "პითაგორას თეორემა",                         "grades": [8] },
+      { "id": "acute-trig",       "ka": "მახვილი კუთხის ტრიგონომეტრიული ფუნქციები",   "grades": [8] },
+      { "id": "law-cos-sin",      "ka": "კოსინუსების და სინუსების თეორემები",         "grades": [8] },
+      { "id": "notable-points",   "ka": "შესანიშნავი წერტილები",                     "grades": [8] },
+      { "id": "menelaus-ceva",    "ka": "მენელაოსის და ჩევას თეორემები",              "grades": [8] }
+    ]},
+    { "id": "polygons", "ka": "ოთხკუთხედები და მრავალკუთხედები", "area": "geometry", "children": [
+      { "id": "polygon-basics",   "ka": "მრავალკუთხედი",                             "grades": [8] },
+      { "id": "parallelogram",    "ka": "პარალელოგრამი",                             "grades": [7, 8] },
+      { "id": "rhombus-rect-sq",  "ka": "რომბი, მართკუთხედი, კვადრატი",               "grades": [7, 8] },
+      { "id": "trapezoid",        "ka": "ტრაპეცია",                                 "grades": [8] },
+      { "id": "regular-polygon",  "ka": "წესიერი მრავალკუთხედი",                     "grades": [9] }
+    ]},
+    { "id": "circle", "ka": "წრეწირი", "area": "geometry", "children": [
+      { "id": "chords-tangents",  "ka": "ქორდა, მხები, ორი წრეწირი",                  "grades": [7, 8] },
+      { "id": "circle-angles",    "ka": "ცენტრალური და ჩახაზული კუთხეები",           "grades": [7] },
+      { "id": "inscribed-circum", "ka": "ჩახაზული და შემოხაზული ფიგურები",           "grades": [7, 8] },
+      { "id": "circle-segments",  "ka": "პროპორციული მონაკვეთები წრეში",             "grades": [8] },
+      { "id": "circle-length-area","ka": "წრეწირის სიგრძე და წრის ფართობი",           "grades": [9] }
+    ]},
+    { "id": "similarity", "ka": "მსგავსება", "area": "geometry", "children": [
+      { "id": "thales",           "ka": "თალესის თეორემა",                           "grades": [8] },
+      { "id": "similar-figures",  "ka": "ფიგურათა მსგავსება",                         "grades": [8] }
+    ]},
+    { "id": "area", "ka": "ფართობი", "area": "geometry", "children": [
+      { "id": "area-formulas",    "ka": "სამკუთხედის, პარალელოგრამის, ტრაპეციის ფართობი", "grades": [9] },
+      { "id": "heron",            "ka": "ჰერონის ფორმულა",                            "grades": [9] },
+      { "id": "area-ratios",      "ka": "ფართობთა შეფარდება, ტოლდიდი ნაწილები",        "grades": [9] }
+    ]},
+    { "id": "vectors-coords", "ka": "ვექტორები და კოორდინატები", "area": "geometry", "children": [
+      { "id": "vectors",          "ka": "ვექტორები, მოქმედებები ვექტორებზე",          "grades": [9] },
+      { "id": "dot-product",      "ka": "სკალარული ნამრავლი",                        "grades": [9] },
+      { "id": "line-circle-eq",   "ka": "წრფის და წრეწირის განტოლება",               "grades": [9] },
+      { "id": "conics",           "ka": "ელიფსი, ჰიპერბოლა, პარაბოლა",               "grades": [11] }
+    ]},
+    { "id": "constructions", "ka": "აგების ამოცანები", "area": "geometry", "children": [] },
+
+    { "id": "space-basics", "ka": "წრფეები და სიბრტყეები სივრცეში", "area": "solid", "children": [
+      { "id": "stereo-axioms",    "ka": "სტერეომეტრიის აქსიომები",                   "grades": [10] },
+      { "id": "parallel-space",   "ka": "წრფეთა და სიბრტყეთა პარალელურობა",           "grades": [10] },
+      { "id": "perpendicular-space","ka": "მართობულობა, მართობი და დახრილი",          "grades": [10] },
+      { "id": "angles-space",     "ka": "კუთხეები სივრცეში, ორწახნაგა კუთხე",         "grades": [10] },
+      { "id": "distances-space",  "ka": "მანძილები სივრცეში",                        "grades": [10] }
+    ]},
+    { "id": "polyhedra", "ka": "მრავალწახნაგები", "area": "solid", "children": [
+      { "id": "prism",            "ka": "პრიზმა, პარალელეპიპედი, კუბი",               "grades": [10] },
+      { "id": "pyramid",          "ka": "პირამიდა, წაკვეთილი პირამიდა",               "grades": [10] },
+      { "id": "cross-sections",   "ka": "კვეთები, მკვეთი სიბრტყის აგება",            "grades": [10, 11] }
+    ]},
+    { "id": "solids-revolution", "ka": "ბრუნვითი სხეულები", "area": "solid", "children": [
+      { "id": "cylinder",         "ka": "ცილინდრი",                                 "grades": [11] },
+      { "id": "cone",             "ka": "კონუსი",                                   "grades": [11] },
+      { "id": "sphere",           "ka": "სფერო და ბირთვი",                           "grades": [11] },
+      { "id": "volume-surface",   "ka": "მოცულობა და ზედაპირის ფართობი",              "grades": [11] }
+    ]}
+  ],
+
+  "grade": [7, 8, 9, 10, 11],
+
+  "difficulty": [
+    { "id": 1, "ka": "მარტივი" },
+    { "id": 2, "ka": "საშუალო" },
+    { "id": 3, "ka": "რთული" }
+  ],
+
+  "type": [
+    { "id": "compute",      "ka": "გამოთვლა / გამარტივება" },
+    { "id": "solve",        "ka": "ამოხსნა (განტოლება, უტოლობა)" },
+    { "id": "proof",        "ka": "დამტკიცება" },
+    { "id": "word",         "ka": "ტექსტური ამოცანა" },
+    { "id": "construction", "ka": "აგება" },
+    { "id": "graph",        "ka": "გრაფიკის აგება / წაკითხვა" }
+  ],
+
+  "method": [
+    { "id": "parameter",     "ka": "პარამეტრი" },
+    { "id": "absolute",      "ka": "მოდული" },
+    { "id": "substitution",  "ka": "ცვლადის შემოტანა" },
+    { "id": "graphical",     "ka": "გრაფიკული მეთოდი" },
+    { "id": "estimation",    "ka": "შეფასება" },
+    { "id": "full-square",   "ka": "სრული კვადრატის გამოყოფა" },
+    { "id": "aux-construct", "ka": "დამხმარე აგება" },
+    { "id": "coordinates",   "ka": "კოორდინატთა მეთოდი" },
+    { "id": "vectors",       "ka": "ვექტორული მეთოდი" }
+  ],
+
+  "source_format": "author, book, section, problem number, e.g. { \"book\": \"jincharadze-geometry-8\", \"section\": \"XV\", \"number\": 12 }"
+}
