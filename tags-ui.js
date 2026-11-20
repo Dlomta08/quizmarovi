@@ -31,6 +31,53 @@
       return tags;
     });
 
+  /* Icons (Font Awesome) — areas color and mark topic chips; types/methods get their own icon. */
+  const AREA_ICON = {
+    algebra: "fa-square-root-variable", geometry: "fa-draw-polygon", solid: "fa-cube",
+    calculus: "fa-wave-square", "prob-stats": "fa-dice",
+  };
+  const TYPE_ICON = {
+    compute: "fa-calculator", solve: "fa-equals", proof: "fa-scroll", word: "fa-book-open",
+    construction: "fa-compass-drafting", graph: "fa-chart-line",
+  };
+  const METHOD_ICON = {
+    parameter: "fa-sliders", absolute: "fa-grip-lines-vertical", substitution: "fa-right-left",
+    graphical: "fa-chart-area", estimation: "fa-scale-balanced", "full-square": "fa-square",
+    "aux-construct": "fa-pen-ruler", coordinates: "fa-crosshairs", vectors: "fa-arrow-right-long",
+  };
+
+  /** The area a tag belongs to (topics and areas only) — used for its color. */
+  function areaOf(kind, id) {
+    if (kind === "area") return String(id);
+    if (kind === "topic") return state.topic.has(id) ? state.topic.get(id).area : null;
+    return null;
+  }
+
+  /** Font Awesome icon class for a tag, or "" if it has none. */
+  function icon(kind, id) {
+    if (kind === "area" || kind === "topic") return AREA_ICON[areaOf(kind, id)] || "";
+    if (kind === "type") return TYPE_ICON[id] || "";
+    if (kind === "method") return METHOD_ICON[id] || "";
+    return "";
+  }
+
+  /** Small visual for a tag: an icon, or 3 bars for difficulty. Returns an element or null. */
+  function marker(kind, id) {
+    if (kind === "difficulty") {
+      const bars = document.createElement("span");
+      bars.className = `tag-bars tag-bars--d${id}`;
+      bars.setAttribute("aria-hidden", "true");
+      bars.innerHTML = "<i></i><i></i><i></i>";
+      return bars;
+    }
+    const cls = icon(kind, id);
+    if (!cls) return null;
+    const i = document.createElement("i");
+    i.className = `fas ${cls} tag-icon`;
+    i.setAttribute("aria-hidden", "true");
+    return i;
+  }
+
   function label(kind, id) {
     if (kind === "topic") return state.topic.has(id) ? state.topic.get(id).ka : id;
     if (kind === "grade") return Number(id) === 1 ? "1-ელი კლასი" : `მე-${id} კლასი`;
@@ -63,8 +110,14 @@
     chipsFor(p).forEach(({ kind, id }) => {
       const a = document.createElement("a");
       a.className = `tag-chip tag-chip--${kind}` + (kind === "difficulty" ? ` tag-chip--d${id}` : "");
+      const area = areaOf(kind, id);
+      if (area) a.dataset.area = area;
       a.href = filterUrl(kind, id);
-      a.textContent = label(kind, id);
+      const m = marker(kind, id);
+      if (m) a.appendChild(m);
+      const text = document.createElement("span");
+      text.textContent = label(kind, id);
+      a.appendChild(text);
       a.title = { topic: "თემა", difficulty: "სირთულე", type: "ტიპი", method: "მეთოდი" }[kind] + ": " + a.textContent;
       if (opts.onClick) {
         a.addEventListener("click", e => {
@@ -78,5 +131,5 @@
     return container;
   }
 
-  window.TagUI = { ready, label, filterUrl, chipsFor, renderChips, state };
+  window.TagUI = { ready, label, filterUrl, chipsFor, renderChips, areaOf, icon, marker, state };
 })();

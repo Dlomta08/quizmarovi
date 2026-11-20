@@ -82,25 +82,52 @@
 }
 
 .pb-active-chip {
+    /* color: the tag's area / difficulty color, otherwise the site blue */
+    --chip-rgb: var(--tag-rgb, var(--primary-rgb));
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    border: none;
+    gap: 0.45rem;
+    border: 1px solid rgba(var(--chip-rgb), 0.9);
     border-radius: 9999px;
-    padding: 0.3rem 0.75rem;
-    background: var(--primary-color);
+    padding: 0.32rem 0.8rem;
+    background: rgb(var(--chip-rgb));
     color: #fff;
     font-size: 0.82rem;
+    font-weight: 600;
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(var(--chip-rgb), 0.3);
+    transition: filter 0.15s ease, transform 0.15s ease;
 }
 
 .pb-active-chip i {
-    font-size: 0.75rem;
-    opacity: 0.85;
+    font-size: 0.72rem;
+    opacity: 0.9;
+}
+
+.pb-active-chip .tag-bars {
+    color: #fff;
 }
 
 .pb-active-chip:hover {
-    background: var(--secondary-color);
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* filter panel cues */
+.pb-option .tag-dot {
+    margin-left: -0.1rem;
+}
+
+.pb-option-icon {
+    width: 1rem;
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.pb-option .tag-bars {
+    width: 1rem;
+    justify-content: center;
 }
 
 /* ---- layout ---- */

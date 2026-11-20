@@ -124,8 +124,35 @@
     const num = document.createElement("span");
     num.className = "pb-option-count";
     num.textContent = count;
-    label.append(input, span, num);
+    label.append(input);
+    const m = optionMarker(kind, id, opts);
+    if (m) label.append(m);
+    label.append(span, num);
     return label;
+  }
+
+  /** Visual cue next to an option: area color dot, difficulty bars, or the type/method icon. */
+  function optionMarker(kind, id, opts) {
+    if (kind === "area" || (kind === "topic" && !opts.child)) {
+      const area = TagUI.areaOf(kind, String(id));
+      if (!area) return null;
+      const dot = document.createElement("span");
+      dot.className = "tag-dot";
+      dot.dataset.area = area;
+      dot.setAttribute("aria-hidden", "true");
+      return dot;
+    }
+    if (kind === "difficulty") {
+      const bars = TagUI.marker("difficulty", id);
+      bars.style.color = `var(--diff-${id}-fg)`;
+      return bars;
+    }
+    if (kind === "type" || kind === "method") {
+      const i = TagUI.marker(kind, String(id));
+      if (i) i.classList.add("pb-option-icon");
+      return i;
+    }
+    return null;
   }
 
   function section(kind, body, open) {
@@ -246,9 +273,16 @@
       total++;
       const b = document.createElement("button");
       b.type = "button";
-      b.className = "pb-active-chip";
-      b.innerHTML = `<span></span><i class="fas fa-xmark" aria-hidden="true"></i>`;
-      b.firstChild.textContent = TagUI.label(kind, id);
+      b.className = `pb-active-chip pb-active-chip--${kind}`;
+      const area = TagUI.areaOf(kind, id);
+      if (area) b.dataset.area = area;
+      if (kind === "difficulty") b.style.setProperty("--chip-rgb", `var(--diff-${id})`);
+      const m = kind === "difficulty" ? null : TagUI.marker(kind, id);
+      if (m) b.appendChild(m);
+      const text = document.createElement("span");
+      text.textContent = TagUI.label(kind, id);
+      b.appendChild(text);
+      b.insertAdjacentHTML("beforeend", `<i class="fas fa-xmark" aria-hidden="true"></i>`);
       b.title = `${KIND_TITLES[kind]}: ${TagUI.label(kind, id)} — მოხსნა`;
       b.addEventListener("click", () => { selected[kind].delete(id); update(); });
       el.active.appendChild(b);
