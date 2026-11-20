@@ -193,15 +193,17 @@ function restoreSimAnswers() {
 }
 
 // If the page was refreshed during a simulation, continue it automatically.
-// "load" waits for the quiz data script (added dynamically in quiz.html / physics-game.html).
-window.addEventListener("load", () => {
+// Called when the page has loaded (random-quiz.html, where quizData is set inline) and by
+// quiz.html right after its quiz data file arrives. Safe to call more than once.
+function resumeSavedSimulation() {
   const saved = loadSimState();
   if (!saved || typeof quizData === "undefined" || !Array.isArray(quizData)) return;
   const modeSel = document.getElementById("mode-selection");
   const form = document.getElementById("quizForm");
   if (!modeSel || !form || form.style.display === "block") return;
   startQuiz(true, saved);
-});
+}
+window.addEventListener("load", resumeSavedSimulation);
 
 function startQuiz(withTimer, savedState) {
   simulationMode = withTimer;
@@ -559,7 +561,7 @@ function renderQuiz(){
   const number = urlParams.get("number");
   const classNum = urlParams.get("class");
 
-  // Physics pages set window.QUIZ_SUBJECT = "physics" so their progress doesn't collide with math.
+  // subjects.js sets window.QUIZ_SUBJECT = "physics" on physics pages so their progress doesn't collide with math.
   // Math keeps the original key format so existing saved progress still shows.
   const subjectPrefix = window.QUIZ_SUBJECT ? `${window.QUIZ_SUBJECT}-` : "";
   const doneKey = `done-${subjectPrefix}${classNum}-${year}-${number}`;

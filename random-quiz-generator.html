@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="random-quiz-generator.css">
     <link rel="icon" type="image/png" href="paper.png">
     <script src="darkmode.js"></script>
+    <script src="subjects.js"></script>
     <script src="feedback.js" defer></script>
 </head>
 <body>
@@ -79,44 +80,35 @@
     </style>
     </footer>
     <script>
-        // ?subject=physics switches the generator to physics (classes 8–11).
-        const isPhysics = new URLSearchParams(window.location.search).get('subject') === 'physics';
-        const firstClass = isPhysics ? 8 : 7;
-        if (isPhysics) {
-            document.title = 'ფიზიკის შემთხვევითი ქვიზის გენერატორი';
-            document.querySelector('.generator-title').textContent = 'ფიზიკის შემთხვევითი ქვიზის გენერატორი';
-            document.querySelector('.main-nav .logo').href = 'physics.html';
-        }
+        // The subject (?subject=physics) and the available classes come from subjects.js / quizzes.json.
+        (function () {
+            const { subject, pageUrl, loadQuizIndex, ordinal } = window.QuizSite;
+            const title = `${subject.genitive} შემთხვევითი ქვიზის გენერატორი`;
+            document.title = title;
+            document.querySelector('.generator-title').textContent = title;
+            document.querySelector('.main-nav .logo').href = pageUrl('classes.html');
 
-        const classContainer = document.getElementById('classCheckboxes');
-        for (let i = firstClass; i <= 11; i++) {
-            const label = document.createElement('label');
-            label.className = 'checkbox-label';
-            if (i === firstClass) label.classList.add('checked');
-            label.innerHTML = `
-                <input type="checkbox" name="class" value="${i}" ${i === firstClass ? 'checked' : ''}>
-                <span>${i} კლასი</span>
-            `;
-            classContainer.appendChild(label);
-        }
+            function addCheckbox(container, name, value, text, checked) {
+                const label = document.createElement('label');
+                label.className = 'checkbox-label' + (checked ? ' checked' : '');
+                label.innerHTML = `<input type="checkbox" name="${name}" value="${value}" ${checked ? 'checked' : ''}><span>${text}</span>`;
+                label.querySelector('input').addEventListener('change', function () {
+                    label.classList.toggle('checked', this.checked);
+                });
+                container.appendChild(label);
+            }
 
-        const quizContainer = document.getElementById('quizCheckboxes');
-        for (let i = 1; i <= 5; i++) {
-            const label = document.createElement('label');
-            label.className = 'checkbox-label checked';
-            label.innerHTML = `
-                <input type="checkbox" name="quiz" value="${i}" checked>
-                <span>${i === 1 ? '1-ელი' : `მე-${i}`} ქვიზი</span>
-            `;
-            quizContainer.appendChild(label);
-        }
+            function render(classes) {
+                const classContainer = document.getElementById('classCheckboxes');
+                classes.forEach((c, i) => addCheckbox(classContainer, 'class', c, `${c} კლასი`, i === 0));
+                const quizContainer = document.getElementById('quizCheckboxes');
+                for (let i = 1; i <= 5; i++) addCheckbox(quizContainer, 'quiz', i, `${ordinal(i)} ქვიზი`, true);
+            }
 
-        document.querySelectorAll('.checkbox-label input[type="checkbox"]').forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const label = this.closest('.checkbox-label');
-                label.classList.toggle('checked', this.checked);
-            });
-        });
+            loadQuizIndex()
+                .then(index => render(Object.keys(index).map(Number).sort((a, b) => a - b)))
+                .catch(() => render(subject.id === 'physics' ? [8, 9, 10, 11] : [7, 8, 9, 10, 11]));
+        })();
     </script>
     <script src="rand.js"></script>
     <script>

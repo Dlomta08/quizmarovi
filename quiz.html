@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=yes">
-  <meta name="description" content="კომაროვის სკოლის მათემატიკის ქვიზი: ამოხსენით ამოცანები, შეამოწმეთ პასუხები ან გაიარეთ ტაიმერიანი სიმულაცია.">
+  <meta name="description" content="კომაროვის სკოლის მათემატიკისა და ფიზიკის ქვიზი: ამოხსენით ამოცანები, შეამოწმეთ პასუხები, ნახეთ ამოხსნები ან გაიარეთ ტაიმერიანი სიმულაცია.">
 
-  <title>მათემატიკის ქვიზი</title>
+  <title>ქვიზი</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="quiz-style.css">
@@ -18,6 +18,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" async></script>
   <script src="darkmode.js"></script>
+  <script src="subjects.js"></script>
   <script src="feedback.js" defer></script>
 </head>
 <body>
@@ -72,28 +73,50 @@
     </footer>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const classNum = params.get("class");
-    const year = params.get("year");
-    const number = params.get("number");
-    
-    if (classNum && year && number) {
-      const numShow = (number == 1 ? '1-ელი' : `მე-${number}`);
-      const title = `მათემატიკის ${numShow} ქვიზი — ${classNum} კლასი, ${year.replace("-","/")} წელი.`;
-      
-      document.title = `${numShow} ქვიზი - ${classNum} კლასი`;
-      document.getElementById("quiz-title").textContent = title;
-      document.getElementById("back-link").href = `class-quizzes.html?class=${classNum}`;
+    (function () {
+      const { subject, pageUrl, loadQuizIndex, ordinal } = window.QuizSite;
+      const params = new URLSearchParams(window.location.search);
+      const classNum = params.get("class");
+      const year = params.get("year");
+      const number = params.get("number");
+      const main = document.querySelector(".quiz-card-main");
+      const showMessage = text => { main.innerHTML = `<h1>${text}</h1>`; };
 
-      const script = document.createElement("script");
-      script.src = `quizzes/class-${classNum}/${year}/quiz-${number}.js`;
-      script.onerror = () => {
-        document.querySelector(".quiz-card-main").innerHTML = "<h1>ქვიზი არ ჩატარებულა.</h1>";
-      };
-      document.head.appendChild(script);
-    } else {
-      document.querySelector(".quiz-card-main").innerHTML = "<h1>არასწორი ბმული.</h1>";
-    }
+      // Only digits / "2025-26" are accepted, so the URL can never point at another file.
+      if (!/^\d{1,2}$/.test(classNum || "") || !/^\d{4}-\d{2}$/.test(year || "") || !/^\d{1,2}$/.test(number || "")) {
+        showMessage("არასწორი ბმული.");
+        return;
+      }
+
+      const numShow = ordinal(number);
+      document.title = `${subject.genitive} ${numShow} ქვიზი - ${classNum} კლასი`;
+      document.getElementById("quiz-title").textContent =
+        `${subject.genitive} ${numShow} ქვიზი — ${classNum} კლასი, ${year.replace("-", "/")} წელი.`;
+      document.getElementById("back-link").href = pageUrl("class-quizzes.html", { class: classNum });
+
+      function loadQuizData() {
+        const script = document.createElement("script");
+        script.src = `${subject.dir}/class-${classNum}/${year}/quiz-${number}.js`;
+        script.onload = () => {
+          if (typeof quizData === "undefined" || !Array.isArray(quizData) || !quizData.length) {
+            showMessage("ქვიზი არ ჩატარებულა.");
+            return;
+          }
+          if (typeof resumeSavedSimulation === "function") resumeSavedSimulation();
+        };
+        script.onerror = () => showMessage("ქვიზი არ ჩატარებულა.");
+        document.head.appendChild(script);
+      }
+
+      loadQuizIndex()
+        .then(index => {
+          const exists = ((index[classNum] || {})[year] || []).includes(Number(number));
+          if (exists) loadQuizData();
+          else showMessage("ქვიზი არ ჩატარებულა.");
+        })
+        // If the quiz list itself can't be loaded, still try the file directly.
+        .catch(loadQuizData);
+    })();
   </script>
   
   <script src="quiz.js"></script>

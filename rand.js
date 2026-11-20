@@ -19,9 +19,9 @@ function toggleAllQuizzes() {
     });
 }
 
-// Subject comes from the URL: random-quiz-generator.html?subject=physics
-const RANDOM_SUBJECT = new URLSearchParams(window.location.search).get('subject') === 'physics' ? 'physics' : 'math';
-const QUIZ_BASE_DIR = RANDOM_SUBJECT === 'physics' ? 'physics-quizzes' : 'quizzes';
+// Subject comes from the URL (?subject=physics) via subjects.js.
+const RANDOM_SUBJECT = window.QuizSite.subject.id;
+const QUIZ_BASE_DIR = window.QuizSite.subject.dir;
 
 // Loads one quiz file and returns its quizData array (or null).
 // Files are fetched and run in their own scope instead of being added as <script> tags,
@@ -72,12 +72,15 @@ async function generateQuiz() {
     loadingDiv.style.display = 'block';
     generateBtn.disabled = true;
 
-    const years = ['2020-21', '2021-22', '2022-23', '2023-24', '2024-25', '2025-26'];
-    
+    // Only request quiz files that exist (listed in quizzes.json).
+    let index = {};
+    try { index = await window.QuizSite.loadQuizIndex(); } catch (err) { console.warn('quizzes.json not loaded', err); }
+
     const paths = [];
-    for (const year of years) {
-        for (const classNum of classes) {
+    for (const classNum of classes) {
+        for (const [year, numbers] of Object.entries(index[classNum] || {})) {
             for (const quizNum of quizNumbers) {
+                if (!numbers.includes(Number(quizNum))) continue;
                 paths.push({
                     path: `${QUIZ_BASE_DIR}/class-${classNum}/${year}/quiz-${quizNum}.js`,
                     meta: { class: classNum, year: year, quiz: quizNum }

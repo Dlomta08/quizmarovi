@@ -1,174 +1,23 @@
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="კომაროვის სკოლის ფიზიკის ქვიზები სასწავლო წლების მიხედვით, პასუხების შემოწმებით და ტაიმერიანი სიმულაციით.">
-    <title>ფიზიკის ქვიზები</title> <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="quiz-pages.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="paper.png">
-    <script src="darkmode.js"></script>
-    <script src="feedback.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ფიზიკის ქვიზები</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="paper.png">
+  <!-- Old physics address. Math and physics now share one set of pages (class-quizzes.html?subject=physics);
+       this page forwards old links and bookmarks there, keeping class/year/number. -->
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search);
+      q.set("subject", "physics");
+      location.replace("class-quizzes.html?" + q.toString());
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=class-quizzes.html?subject=physics"></noscript>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-content">
-            <a href="physics.html" class="logo">
-                <i class="fas fa-arrow-left"></i>
-                <span>უკან დაბრუნება</span>
-            </a>
-            <button id="toggle-dark" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-            </button>
-        </div>
-    </nav>
-    
-    <div class="quiz-container">
-        <div class="page-header">
-            <h1 class="text-title"></h1>
-        </div>
-
-        <div class="years-grid" id="yearsGrid">
-            <script>
-            function isDone(prefix){
-              return localStorage.getItem(prefix) === 'true';
-            }
-            // Best score is saved by quiz.js under the same key with "best-" instead of "done-".
-            function getBest(prefix){
-              try {
-                const b = JSON.parse(localStorage.getItem(prefix.replace(/^done-/, 'best-')));
-                return b && typeof b.score === 'number' ? b : null;
-              } catch { return null; }
-            }
-            function renderBest(el, prefix){
-              const b = getBest(prefix);
-              el.textContent = b ? `${b.score}/${b.total}` : '';
-              el.title = b ? 'საუკეთესო შედეგი' : '';
-              el.hidden = !b;
-            }
-            function refreshAllStatusIcons(){
-              document.querySelectorAll('.status-icon[data-keyprefix]').forEach(icon=>{
-                const prefix = icon.getAttribute('data-keyprefix');
-                const done = isDone(prefix);
-                icon.classList.toggle('done', done);
-                icon.title = done ? 'დასრულებულია' : 'არ არის დასრულებული';
-                icon.setAttribute('aria-label', icon.title);
-              });
-              document.querySelectorAll('.best-score[data-keyprefix]').forEach(el=>{
-                renderBest(el, el.getAttribute('data-keyprefix'));
-              });
-            }
-            const urlParams = new URLSearchParams(window.location.search);
-            const classNum = parseInt(urlParams.get('class')) || 7;
-            document.title = `მე-${classNum} კლასის ქვიზები`;
-            document.querySelector('.text-title').textContent = `მე-${classNum} კლასის ქვიზები`;
-            
-            const startYear = 2020; const endYear = 2024; const quizzesPerYear = 5;
-            const yearsGrid = document.getElementById("yearsGrid");  
-            for (let y = endYear; y >= startYear; y--) {
-                const academicYear = `${y}/${(y + 1).toString().slice(-2)}`;
-                const yearFolderForKey = academicYear.replace("/", "-");
-                const yearSection = document.createElement("div");
-                yearSection.className = "year-section";
-                
-                const yearHeader = document.createElement("div");
-                yearHeader.className = "year-header";
-                const yearIcon = document.createElement("i");
-                yearIcon.className = "fas fa-calendar-alt";
-                const yearTitle = document.createElement("h2");
-                yearTitle.textContent = `${academicYear} სასწავლო წელი`;
-                yearHeader.appendChild(yearIcon);
-                yearHeader.appendChild(yearTitle);
-                
-                const quizzesGrid = document.createElement("div");
-                quizzesGrid.className = "quizzes-grid";
-                for (let q = 1; q <= quizzesPerYear; q++) {
-                    // A real link, so it works with Tab/Enter and "open in new tab".
-                    const quizCard = document.createElement("a");
-                    quizCard.className = "quiz-card";
-                    quizCard.href = `physics-game.html?class=${classNum}&year=${yearFolderForKey}&number=${q}`;
-                    
-                    const quizIcon = document.createElement("i");
-                    quizIcon.className = "fas fa-file-alt quiz-icon";
-                    
-                    const quizNumber = document.createElement("span");
-                    quizNumber.className = "quiz-number";
-                    quizNumber.textContent = q;
-                    
-                    const quizTitle = document.createElement("h3");
-                    quizTitle.className = "quiz-title";
-                    quizTitle.textContent = q === 1 ? `1-ელი ქვიზი` : `მე-${q} ქვიზი`;
-
-                    const statusIcon = document.createElement("i");
-                    statusIcon.className = "fas fa-circle status-icon";
-                    const keyPrefix = `done-physics-${classNum}-${yearFolderForKey}-${q}`;
-                    statusIcon.setAttribute('data-keyprefix', keyPrefix);
-
-                    if (isDone(keyPrefix)) {
-                        statusIcon.classList.add('done');
-                        statusIcon.title = 'დასრულებულია';
-                        statusIcon.setAttribute('aria-label', 'დასრულებულია');
-                    } else {
-                        statusIcon.title = 'არ არის დასრულებული';
-                        statusIcon.setAttribute('aria-label', 'არ არის დასრულებული');
-                    }
-                    
-                    quizCard.appendChild(quizIcon);
-                    quizCard.appendChild(quizNumber);
-                    quizCard.appendChild(quizTitle);
-                    quizCard.appendChild(statusIcon);
-
-                    const bestScore = document.createElement("span");
-                    bestScore.className = "best-score";
-                    bestScore.setAttribute('data-keyprefix', keyPrefix);
-                    renderBest(bestScore, keyPrefix);
-                    quizCard.appendChild(bestScore);
-                    quizzesGrid.appendChild(quizCard);
-                }
-                
-                yearSection.appendChild(yearHeader);
-                yearSection.appendChild(quizzesGrid);
-                yearsGrid.appendChild(yearSection);
-            }
-            window.addEventListener('pageshow', (e)=>{ if (e.persisted) refreshAllStatusIcons(); });
-            window.addEventListener('storage', (e)=>{
-              if (e.key && (e.key.startsWith('done-') || e.key.startsWith('best-'))) {
-                refreshAllStatusIcons();
-              }
-            });
-            </script>
-        </div>
-    </div>
-
-    <footer class="main-footer">
-        <p>&copy; 2026 სსიპ ვლადიმირ კომაროვის თბილისის ფიზიკა-მათემატიკის N199 საჯარო სკოლა. ყველა უფლება დაცულია.</p>
-        <p>საკონტაქტო ინფორმაცია:
-        <a href="mailto:komaroviqvizebi@gmail.com" class="email-link">komaroviqvizebi@gmail.com</a>
-        </p>
-
-        <style>
-        .email-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: text-decoration 0.2s ease;
-        }
-
-    .email-link:hover {
-        text-decoration: underline;
-    }
-    </style>
-    </footer>
-
-    
-    <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-    <script>
-    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>
-    
+  <p><a href="class-quizzes.html?subject=physics">ფიზიკის ქვიზები</a></p>
 </body>
 </html>

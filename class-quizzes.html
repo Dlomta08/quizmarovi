@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="კომაროვის სკოლის მათემატიკის ქვიზები სასწავლო წლების მიხედვით, პასუხების შემოწმებით და ტაიმერიანი სიმულაციით.">
+    <meta name="description" content="კომაროვის სკოლის მათემატიკისა და ფიზიკის ქვიზები სასწავლო წლების მიხედვით, პასუხების შემოწმებით, ამოხსნებით და ტაიმერიანი სიმულაციით.">
     <title>კლასის ქვიზები</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="quiz-pages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="paper.png">
     <script src="darkmode.js"></script>
+    <script src="subjects.js"></script>
     <script src="feedback.js" defer></script>
 </head>
 <body>
     <nav class="main-nav">
         <div class="nav-content">
-            <a href="classes.html" class="logo">
+            <a href="classes.html" class="logo" id="back-link">
                 <i class="fas fa-arrow-left"></i>
                 <span>უკან დაბრუნება</span>
             </a>
@@ -24,122 +25,14 @@
             </button>
         </div>
     </nav>
-    
+
     <div class="quiz-container">
         <div class="page-header">
             <h1 class="text-title"></h1>
         </div>
 
-        <div class="years-grid" id="yearsGrid">
-            <script>
-            function isDone(prefix){
-              return localStorage.getItem(prefix) === 'true';
-            }
-            // Best score is saved by quiz.js under the same key with "best-" instead of "done-".
-            function getBest(prefix){
-              try {
-                const b = JSON.parse(localStorage.getItem(prefix.replace(/^done-/, 'best-')));
-                return b && typeof b.score === 'number' ? b : null;
-              } catch { return null; }
-            }
-            function renderBest(el, prefix){
-              const b = getBest(prefix);
-              el.textContent = b ? `${b.score}/${b.total}` : '';
-              el.title = b ? 'საუკეთესო შედეგი' : '';
-              el.hidden = !b;
-            }
-            function refreshAllStatusIcons(){
-              document.querySelectorAll('.status-icon[data-keyprefix]').forEach(icon=>{
-                const prefix = icon.getAttribute('data-keyprefix');
-                const done = isDone(prefix);
-                icon.classList.toggle('done', done);
-                icon.title = done ? 'დასრულებულია' : 'არ არის დასრულებული';
-                icon.setAttribute('aria-label', icon.title);
-              });
-              document.querySelectorAll('.best-score[data-keyprefix]').forEach(el=>{
-                renderBest(el, el.getAttribute('data-keyprefix'));
-              });
-            }
-            const urlParams = new URLSearchParams(window.location.search);
-            const classNum = parseInt(urlParams.get('class')) || 7;
-            document.title = `მე-${classNum} კლასის ქვიზები`;
-            document.querySelector('.text-title').textContent = `მე-${classNum} კლასის ქვიზები`;
-            
-            const startYear = 2020; const endYear = 2025; const quizzesPerYear = 5;
-            const yearsGrid = document.getElementById("yearsGrid");  
-            for (let y = endYear; y >= startYear; y--) {
-                const academicYear = `${y}/${(y + 1).toString().slice(-2)}`;
-                const yearFolderForKey = academicYear.replace("/", "-");
-                const yearSection = document.createElement("div");
-                yearSection.className = "year-section";
-                
-                const yearHeader = document.createElement("div");
-                yearHeader.className = "year-header";
-                const yearIcon = document.createElement("i");
-                yearIcon.className = "fas fa-calendar-alt";
-                const yearTitle = document.createElement("h2");
-                yearTitle.textContent = `${academicYear} სასწავლო წელი`;
-                yearHeader.appendChild(yearIcon);
-                yearHeader.appendChild(yearTitle);
-                
-                const quizzesGrid = document.createElement("div");
-                quizzesGrid.className = "quizzes-grid";
-                for (let q = 1; q <= quizzesPerYear; q++) {
-                    // A real link, so it works with Tab/Enter and "open in new tab".
-                    const quizCard = document.createElement("a");
-                    quizCard.className = "quiz-card";
-                    quizCard.href = `quiz.html?class=${classNum}&year=${yearFolderForKey}&number=${q}`;
-                    
-                    const quizIcon = document.createElement("i");
-                    quizIcon.className = "fas fa-file-alt quiz-icon";
-                    
-                    const quizNumber = document.createElement("span");
-                    quizNumber.className = "quiz-number";
-                    quizNumber.textContent = q;
-                    
-                    const quizTitle = document.createElement("h3");
-                    quizTitle.className = "quiz-title";
-                    quizTitle.textContent = q === 1 ? `1-ელი ქვიზი` : `მე-${q} ქვიზი`;
-
-                    const statusIcon = document.createElement("i");
-                    statusIcon.className = "fas fa-circle status-icon";
-                    const keyPrefix = `done-${classNum}-${yearFolderForKey}-${q}`;
-                    statusIcon.setAttribute('data-keyprefix', keyPrefix);
-
-                    if (isDone(keyPrefix)) {
-                        statusIcon.classList.add('done');
-                        statusIcon.title = 'დასრულებულია';
-                        statusIcon.setAttribute('aria-label', 'დასრულებულია');
-                    } else {
-                        statusIcon.title = 'არ არის დასრულებული';
-                        statusIcon.setAttribute('aria-label', 'არ არის დასრულებული');
-                    }
-                    
-                    quizCard.appendChild(quizIcon);
-                    quizCard.appendChild(quizNumber);
-                    quizCard.appendChild(quizTitle);
-                    quizCard.appendChild(statusIcon);
-
-                    const bestScore = document.createElement("span");
-                    bestScore.className = "best-score";
-                    bestScore.setAttribute('data-keyprefix', keyPrefix);
-                    renderBest(bestScore, keyPrefix);
-                    quizCard.appendChild(bestScore);
-                    quizzesGrid.appendChild(quizCard);
-                }
-                
-                yearSection.appendChild(yearHeader);
-                yearSection.appendChild(quizzesGrid);
-                yearsGrid.appendChild(yearSection);
-            }
-            window.addEventListener('pageshow', (e)=>{ if (e.persisted) refreshAllStatusIcons(); });
-            window.addEventListener('storage', (e)=>{
-              if (e.key && (e.key.startsWith('done-') || e.key.startsWith('best-'))) {
-                refreshAllStatusIcons();
-              }
-            });
-            </script>
-        </div>
+        <!-- Years and quiz cards are added from quizzes.json, so only existing quizzes appear. -->
+        <div class="years-grid" id="yearsGrid"></div>
     </div>
 
     <footer class="main-footer">
@@ -161,7 +54,121 @@
     </style>
     </footer>
 
-    
+    <script>
+    (function () {
+        const { subject, pageUrl, loadQuizIndex, ordinal } = window.QuizSite;
+        const classNum = parseInt(new URLSearchParams(location.search).get("class"), 10) || 7;
+
+        const heading = `${ordinal(classNum)} კლასის ${subject.genitive} ქვიზები`;
+        document.title = heading;
+        document.querySelector(".text-title").textContent = heading;
+        document.getElementById("back-link").href = pageUrl("classes.html");
+
+        const yearsGrid = document.getElementById("yearsGrid");
+
+        /* ---- progress saved by quiz.js in localStorage ---- */
+        function safeGet(key) {
+            try { return localStorage.getItem(key); } catch { return null; }
+        }
+        function isDone(prefix) {
+            return safeGet(prefix) === "true";
+        }
+        // Best score is saved by quiz.js under the same key with "best-" instead of "done-".
+        function getBest(prefix) {
+            try {
+                const b = JSON.parse(safeGet(prefix.replace(/^done-/, "best-")));
+                return b && typeof b.score === "number" ? b : null;
+            } catch { return null; }
+        }
+        function renderStatus(icon, prefix) {
+            const done = isDone(prefix);
+            icon.classList.toggle("done", done);
+            icon.title = done ? "დასრულებულია" : "არ არის დასრულებული";
+            icon.setAttribute("aria-label", icon.title);
+        }
+        function renderBest(el, prefix) {
+            const b = getBest(prefix);
+            el.textContent = b ? `${b.score}/${b.total}` : "";
+            el.title = b ? "საუკეთესო შედეგი" : "";
+            el.hidden = !b;
+        }
+        function refreshAll() {
+            document.querySelectorAll(".status-icon[data-keyprefix]").forEach(el => renderStatus(el, el.dataset.keyprefix));
+            document.querySelectorAll(".best-score[data-keyprefix]").forEach(el => renderBest(el, el.dataset.keyprefix));
+        }
+
+        function quizCard(year, q) {
+            // A real link, so it works with Tab/Enter and "open in new tab".
+            const card = document.createElement("a");
+            card.className = "quiz-card";
+            card.href = pageUrl("quiz.html", { class: classNum, year, number: q });
+
+            const icon = document.createElement("i");
+            icon.className = "fas fa-file-alt quiz-icon";
+
+            const num = document.createElement("span");
+            num.className = "quiz-number";
+            num.textContent = q;
+
+            const title = document.createElement("h3");
+            title.className = "quiz-title";
+            title.textContent = `${ordinal(q)} ქვიზი`;
+
+            const keyPrefix = `done-${subject.keyPrefix}${classNum}-${year}-${q}`;
+            const status = document.createElement("i");
+            status.className = "fas fa-circle status-icon";
+            status.dataset.keyprefix = keyPrefix;
+            renderStatus(status, keyPrefix);
+
+            const best = document.createElement("span");
+            best.className = "best-score";
+            best.dataset.keyprefix = keyPrefix;
+            renderBest(best, keyPrefix);
+
+            card.append(icon, num, title, status, best);
+            return card;
+        }
+
+        function render(years) {
+            const entries = Object.entries(years);
+            if (!entries.length) {
+                yearsGrid.innerHTML = "<p>ამ კლასისთვის ქვიზები ჯერ არ არის დამატებული.</p>";
+                return;
+            }
+            entries.forEach(([year, numbers]) => {
+                const section = document.createElement("div");
+                section.className = "year-section";
+
+                const header = document.createElement("div");
+                header.className = "year-header";
+                const icon = document.createElement("i");
+                icon.className = "fas fa-calendar-alt";
+                const h2 = document.createElement("h2");
+                h2.textContent = `${year.replace("-", "/")} სასწავლო წელი`;
+                header.append(icon, h2);
+
+                const grid = document.createElement("div");
+                grid.className = "quizzes-grid";
+                numbers.forEach(q => grid.appendChild(quizCard(year, q)));
+
+                section.append(header, grid);
+                yearsGrid.appendChild(section);
+            });
+        }
+
+        loadQuizIndex()
+            .then(index => render(index[classNum] || {}))
+            .catch(() => {
+                yearsGrid.innerHTML = "<p>ქვიზების სია ვერ ჩაიტვირთა. სცადეთ გვერდის განახლება.</p>";
+            });
+
+        window.addEventListener("pageshow", e => { if (e.persisted) refreshAll(); });
+        window.addEventListener("storage", e => {
+            if (e.key && (e.key.startsWith("done-") || e.key.startsWith("best-"))) refreshAll();
+        });
+    })();
+    </script>
+
     <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -170,6 +177,5 @@
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/speed-insights/script.js"></script>
-    
 </body>
 </html>

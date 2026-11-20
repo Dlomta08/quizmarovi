@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="კომაროვის სკოლის მათემატიკის ქვიზები 7–11 კლასებისთვის. აირჩიეთ კლასი ან შექმენით შემთხვევითი ქვიზი.">
+    <meta name="description" content="კომაროვის სკოლის მათემატიკისა და ფიზიკის ქვიზები 7–11 კლასებისთვის. აირჩიეთ კლასი ან შექმენით შემთხვევითი ქვიზი.">
     <title>მათემატიკის ქვიზები</title>
 
     <link rel="stylesheet" href="style.css">
@@ -12,14 +12,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="paper.png">
     <script src="darkmode.js"></script>
+    <script src="subjects.js"></script>
     <script src="feedback.js" defer></script>
 </head>
 <body>
     <nav class="main-nav">
         <div class="nav-content">
             <a href="index.html" class="logo">
-                <i class="fas fa-square-root-variable"></i>
-                <span>მათემატიკის ქვიზები</span>
+                <i class="fas fa-square-root-variable" id="subject-icon"></i>
+                <span id="subject-name">მათემატიკის ქვიზები</span>
             </a>
             <button id="toggle-dark" aria-label="Toggle dark mode">
                 <i class="fas fa-moon"></i>
@@ -32,51 +33,8 @@
             <h1 class="text-title">აირჩიეთ <span class="highlight">კლასი</span></h1>
         </div>
 
-        <div class="grade-grid">
-            <a href="class-quizzes.html?class=7" class="grade-card">
-                <div class="shine"></div>
-                <div class="grade-content">
-                    <span class="grade-number">7</span>
-                    <h2>მე-7 კლასი</h2>
-                </div>
-            </a>
-            <a href="class-quizzes.html?class=8" class="grade-card">
-                <div class="shine"></div>
-                <div class="grade-content">
-                    <span class="grade-number">8</span>
-                    <h2>მე-8 კლასი</h2>
-                </div>
-            </a>
-            <a href="class-quizzes.html?class=9" class="grade-card">
-                <div class="shine"></div>
-                <div class="grade-content">
-                    <span class="grade-number">9</span>
-                    <h2>მე-9 კლასი</h2>
-                </div>
-            </a>
-            <a href="class-quizzes.html?class=10" class="grade-card">
-                <div class="shine"></div>
-                <div class="grade-content">
-                    <span class="grade-number">10</span>
-                    <h2>მე-10 კლასი</h2>
-                </div>
-            </a>
-            <a href="class-quizzes.html?class=11" class="grade-card">
-                <div class="shine"></div>
-                <div class="grade-content">
-                    <span class="grade-number">11</span>
-                    <h2>მე-11 კლასი</h2>
-                </div>
-            </a>
-            <a href="random-quiz-generator.html" class="grade-card special">
-                <div class="shine"></div>
-                <div class="grade-content">
-                    <i class="fas fa-dice-five grade-icon"></i>
-                    <h2>შემთხვევითი ქვიზის გენერირება</h2>
-                </div>
-            </a>
-
-        </div>
+        <!-- Grade cards are added from quizzes.json, so only grades with quizzes appear. -->
+        <div class="grade-grid" id="gradeGrid"></div>
     </div>
 
     <footer class="main-footer">
@@ -97,6 +55,44 @@
     }
     </style>
     </footer>
+
+    <script>
+    (function () {
+        const { subject, pageUrl, loadQuizIndex, ordinal } = window.QuizSite;
+        const heading = `${subject.genitive} ქვიზები`;
+        document.title = heading;
+        document.getElementById("subject-name").textContent = heading;
+        document.getElementById("subject-icon").className = `fas ${subject.icon}`;
+
+        const grid = document.getElementById("gradeGrid");
+
+        function card(href, inner, extraClass) {
+            const a = document.createElement("a");
+            a.href = href;
+            a.className = "grade-card" + (extraClass ? " " + extraClass : "");
+            a.innerHTML = `<div class="shine"></div><div class="grade-content">${inner}</div>`;
+            return a;
+        }
+
+        function render(grades) {
+            grades.forEach(g => {
+                grid.appendChild(card(
+                    pageUrl("class-quizzes.html", { class: g }),
+                    `<span class="grade-number">${g}</span><h2>${ordinal(g)} კლასი</h2>`
+                ));
+            });
+            grid.appendChild(card(
+                pageUrl("random-quiz-generator.html"),
+                `<i class="fas fa-dice-five grade-icon"></i><h2>შემთხვევითი ქვიზის გენერირება</h2>`,
+                "special"
+            ));
+        }
+
+        loadQuizIndex()
+            .then(index => render(Object.keys(index).map(Number).sort((a, b) => a - b)))
+            .catch(() => render(subject.id === "physics" ? [8, 9, 10, 11] : [7, 8, 9, 10, 11]));
+    })();
+    </script>
 
     <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
