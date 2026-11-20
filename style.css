@@ -1,5 +1,5 @@
-/* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* fonts — Noto Sans Georgian covers Georgian, Latin and digits, so all text uses one font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap');
 
 
 * {
@@ -26,14 +26,20 @@
 }
 
 [data-theme="dark"] {
-  --background-light: #1a1b1e;
-  --text-primary: #f8f9fa;
-  --text-secondary: #ced4da;
-  --box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-  --nav-bg: #2d2d2d;
-  --card-bg: #2d2d2d;
-  --card-bg-secondary: #363636;
-  --border-color: rgba(255, 255, 255, 0.1);
+  /* blue-tinted dark greys so cards stand out and match the blue accent */
+  --background-light: #11141c;
+  --text-primary: #eef1f7;
+  --text-secondary: #a9b1c3;
+  --box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  --nav-bg: #171b26;
+  --card-bg: #1b2030;
+  --card-bg-secondary: #232a3d;
+  --border-color: rgba(148, 163, 214, 0.14);
+}
+
+/* Form controls don't inherit the page font by default */
+button, input, select, textarea {
+  font-family: inherit;
 }
 
 #toggle-dark {
@@ -71,7 +77,7 @@ html, body {
   background-color: var(--background-light);
   color: var(--text-primary);
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Noto Sans Georgian', system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   transition: all var(--transition-speed) ease;
@@ -101,7 +107,7 @@ html, body {
 
 
 .text-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: inherit;
     font-size: 3.5rem;
     font-weight: 700;
     text-align: center;
@@ -471,10 +477,15 @@ html, body {
     .grade-number {
         font-size: 3rem;
     }
+
+    .text-title {
+        font-size: 2.2rem;
+        letter-spacing: 0.5px;
+    }
 }
 
 [data-theme="dark"] .main-nav {
-    background: rgba(26, 27, 30, 0.8);
+    background: rgba(23, 27, 38, 0.85);
 }
 
 [data-theme="dark"] .card {
@@ -527,10 +538,9 @@ html, body {
 .email-link:focus {
     color: var(--accent-color);
     text-decoration: underline;
-    outline: none; /* optional, but consider adding a visible outline for keyboard users */
 }
 [data-theme="dark"] .email-link {
-    color: #6e47ee; /* soft lavender-blue */
+    color: var(--accent-color); /* lighter blue reads better on the dark footer */
 }
 
 

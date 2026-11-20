@@ -239,9 +239,9 @@
     }
 
     .grade-grid {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 420px;
+        gap: 1rem;
     }
 
     .grade-card {
@@ -253,14 +253,14 @@
     }
 }
 .grade-card.special {
-  background: linear-gradient(135deg, #6a5acd, #8a2be2);
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
   color: white;
-  box-shadow: 0 0 15px rgba(138,43,226,0.4);
+  box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.35);
 }
 
 .grade-card.special:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(138,43,226,0.6);
+  box-shadow: 0 12px 30px rgba(var(--primary-rgb), 0.5);
 }
 
 .grade-icon {
@@ -268,13 +268,5 @@
   margin-bottom: 10px;
 }
 
-:root[data-theme="light"] .grade-card.special {
-    background: #799be5; 
-    box-shadow: 0 0 15px rgba(70, 164, 195, 0.4);
-}
 
-:root[data-theme="light"] .grade-card.special:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(173, 216, 230, 0.6);
-}
 

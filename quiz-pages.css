@@ -178,5 +178,42 @@ a.quiz-card {
   .quiz-icon, .quiz-title{
     display: none !important;
   }
+
+  .quiz-container {
+    padding: 5.5rem 1rem 3rem;
+  }
+
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  .year-section {
+    padding: 1rem;
+  }
+
+  .quizzes-grid {
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .quiz-card {
+    padding: 0.9rem 0.25rem 0.6rem;
+    gap: 0.35rem;
+  }
+
+  .quiz-number {
+    font-size: 1.5rem;
+  }
+
+  .quiz-card .status-icon {
+    top: 5px;
+    right: 5px;
+    font-size: 0.5rem;
+  }
+
+  .quiz-card .best-score {
+    font-size: 0.65rem;
+    padding: 0.05rem 0.35rem;
+  }
 }
 
