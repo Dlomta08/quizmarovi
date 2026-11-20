@@ -373,6 +373,13 @@ function renderQuiz(){
 
     fieldset.appendChild(contentWrapper);
 
+    // Tag chips (math only): topics, difficulty, type, method — each links to the problem browser.
+    if (Array.isArray(q.topics) && window.TagUI) {
+      const chips = document.createElement("div");
+      fieldset.appendChild(chips);
+      TagUI.ready.then(() => TagUI.renderChips(chips, q)).catch(() => chips.remove());
+    }
+
     const feedback = document.createElement("div");
     feedback.className = "feedback";
 
