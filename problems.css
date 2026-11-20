@@ -82,8 +82,8 @@
 }
 
 .pb-active-chip {
-    /* color: the tag's area / difficulty color, otherwise the site blue */
-    --chip-rgb: var(--tag-rgb, var(--primary-rgb));
+    /* color: the tag's area / difficulty color, otherwise neutral slate */
+    --chip-rgb: var(--tag-rgb, 100, 116, 139);
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;

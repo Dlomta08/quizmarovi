@@ -560,22 +560,23 @@ html, body {
 /* Area colors: topic chips, filter dots and active filters use the color of their area.
    --tag-rgb is the base color (for tints), --tag-fg the readable text color. */
 :root {
-    --area-algebra: 59, 108, 246;      --area-algebra-fg: #2f5bd8;
-    --area-geometry: 13, 148, 136;     --area-geometry-fg: #0f766e;
-    --area-solid: 124, 58, 237;        --area-solid-fg: #6d28d9;
-    --area-calculus: 234, 88, 12;      --area-calculus-fg: #c2410c;
-    --area-prob-stats: 219, 39, 119;   --area-prob-stats-fg: #be185d;
+    /* no blue: the site's own accent is blue, so area colors stay clearly different from it */
+    --area-algebra: 139, 92, 246;      --area-algebra-fg: #6d28d9;   /* violet */
+    --area-geometry: 20, 184, 166;     --area-geometry-fg: #0f766e;  /* teal */
+    --area-solid: 236, 72, 153;        --area-solid-fg: #be185d;     /* pink */
+    --area-calculus: 249, 115, 22;     --area-calculus-fg: #c2410c;  /* orange */
+    --area-prob-stats: 132, 204, 22;   --area-prob-stats-fg: #4d7c0f; /* lime */
     --diff-1: 34, 197, 94;             --diff-1-fg: #15803d;
     --diff-2: 245, 158, 11;            --diff-2-fg: #b45309;
     --diff-3: 239, 68, 68;             --diff-3-fg: #b91c1c;
 }
 
 [data-theme="dark"] {
-    --area-algebra-fg: #8fb0ff;
-    --area-geometry-fg: #2dd4bf;
-    --area-solid-fg: #b69cff;
+    --area-algebra-fg: #c4b5fd;
+    --area-geometry-fg: #5eead4;
+    --area-solid-fg: #f9a8d4;
     --area-calculus-fg: #fdba74;
-    --area-prob-stats-fg: #f9a8d4;
+    --area-prob-stats-fg: #bef264;
     --diff-1-fg: #4ade80;
     --diff-2-fg: #fbbf24;
     --diff-3-fg: #f87171;
@@ -591,13 +592,13 @@ html, body {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.22rem 0.7rem;
+    padding: 0.25rem 0.75rem;
     border-radius: 9999px;
-    font-size: 0.8rem;
+    font-size: 0.84rem;
     font-weight: 500;
     line-height: 1.45;
     text-decoration: none;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     background: var(--card-bg-secondary);
     border: 1px solid var(--border-color);
     transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
@@ -606,8 +607,8 @@ html, body {
 
 .tag-chip:hover,
 .tag-chip:focus-visible {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
     transform: translateY(-1px);
     outline: none;
 }
@@ -619,35 +620,30 @@ html, body {
 
 /* topics: tinted with their area color */
 .tag-chip--topic {
-    color: var(--tag-fg, var(--primary-color));
-    background: rgba(var(--tag-rgb, var(--primary-rgb)), 0.12);
-    border-color: rgba(var(--tag-rgb, var(--primary-rgb)), 0.32);
+    color: var(--tag-fg, var(--text-primary));
+    background: rgba(var(--tag-rgb, 148, 163, 184), 0.16);
+    border-color: rgba(var(--tag-rgb, 148, 163, 184), 0.45);
     font-weight: 600;
 }
 
 .tag-chip--topic:hover,
 .tag-chip--topic:focus-visible {
-    color: var(--tag-fg, var(--primary-color));
-    background: rgba(var(--tag-rgb, var(--primary-rgb)), 0.22);
-    border-color: rgba(var(--tag-rgb, var(--primary-rgb)), 0.65);
+    color: var(--tag-fg, var(--text-primary));
+    background: rgba(var(--tag-rgb, 148, 163, 184), 0.26);
+    border-color: rgba(var(--tag-rgb, 148, 163, 184), 0.8);
 }
 
-/* difficulty: 3-bar meter + label, green / amber / red */
+/* difficulty: neutral chip, only the 3-bar meter is colored green / amber / red */
 .tag-chip--d1 { --d-rgb: var(--diff-1); --d-fg: var(--diff-1-fg); }
 .tag-chip--d2 { --d-rgb: var(--diff-2); --d-fg: var(--diff-2-fg); }
 .tag-chip--d3 { --d-rgb: var(--diff-3); --d-fg: var(--diff-3-fg); }
 
 .tag-chip--difficulty {
-    color: var(--d-fg);
-    background: rgba(var(--d-rgb), 0.1);
-    border-color: rgba(var(--d-rgb), 0.32);
     font-weight: 600;
 }
 
-.tag-chip--difficulty:hover,
-.tag-chip--difficulty:focus-visible {
+.tag-chip--difficulty .tag-bars {
     color: var(--d-fg);
-    border-color: rgba(var(--d-rgb), 0.7);
 }
 
 .tag-bars {
