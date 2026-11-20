@@ -1,0 +1,375 @@
+/* Problem browser (problems.html). Uses the site variables from style.css. */
+
+.pb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6.5rem 1.5rem 4rem;
+}
+
+.pb-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pb-subtitle {
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+}
+
+/* ---- toolbar: count, clear, mobile filter button ---- */
+.pb-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.pb-count {
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+}
+
+.pb-clear,
+.pb-filter-toggle,
+.pb-more {
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    padding: 0.5rem 0.9rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.pb-clear:hover,
+.pb-filter-toggle:hover,
+.pb-more:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.pb-filter-toggle {
+    display: none;   /* shown on small screens */
+}
+
+.pb-badge {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    padding: 0 0.45rem;
+    min-width: 1.3rem;
+    text-align: center;
+}
+
+/* ---- active filters ---- */
+.pb-active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.pb-active:empty {
+    display: none;
+}
+
+.pb-active-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.3rem 0.75rem;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 0.82rem;
+    cursor: pointer;
+}
+
+.pb-active-chip i {
+    font-size: 0.75rem;
+    opacity: 0.85;
+}
+
+.pb-active-chip:hover {
+    background: var(--secondary-color);
+}
+
+/* ---- layout ---- */
+.pb-layout {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* ---- filter panel ---- */
+.pb-filters {
+    position: sticky;
+    top: 5.5rem;
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.pb-section + .pb-section {
+    border-top: 1px solid var(--border-color);
+}
+
+.pb-section > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 0.7rem 0.6rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    user-select: none;
+}
+
+.pb-section > summary::-webkit-details-marker {
+    display: none;
+}
+
+.pb-section > summary::after {
+    content: "\f078";                 /* Font Awesome chevron-down */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 0.75rem;
+    margin-left: auto;
+    color: var(--text-secondary);
+    transition: transform 0.2s ease;
+}
+
+.pb-section[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+.pb-section-badge {
+    background: rgba(var(--primary-rgb), 0.15);
+    color: var(--primary-color);
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    padding: 0 0.45rem;
+}
+
+.pb-options {
+    padding: 0 0.3rem 0.6rem;
+}
+
+.pb-option {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.32rem 0.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    line-height: 1.35;
+    flex: 1;
+    min-width: 0;
+}
+
+.pb-option:hover {
+    background: rgba(var(--primary-rgb), 0.08);
+}
+
+.pb-option input {
+    accent-color: var(--primary-color);
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.pb-option input:disabled {
+    cursor: default;
+}
+
+.pb-option-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.pb-option-count {
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.pb-option.is-empty {
+    opacity: 0.45;
+}
+
+.pb-option.is-child {
+    padding-left: 1.9rem;
+    font-size: 0.86rem;
+}
+
+.pb-group-head {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.pb-group-head .pb-option-text {
+    font-weight: 500;
+}
+
+.pb-expand {
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.pb-expand:hover {
+    background: rgba(var(--primary-rgb), 0.08);
+    color: var(--primary-color);
+}
+
+.pb-expand i {
+    transition: transform 0.2s ease;
+    font-size: 0.75rem;
+}
+
+.pb-group.is-open .pb-expand i {
+    transform: rotate(180deg);
+}
+
+/* ---- results ---- */
+.pb-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pb-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.1rem 1.25rem;
+    box-shadow: var(--box-shadow);
+    min-width: 0;
+}
+
+.pb-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.6rem;
+}
+
+.pb-open {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.pb-open:hover {
+    text-decoration: underline;
+}
+
+.pb-question {
+    line-height: 1.7;
+    overflow-x: auto;   /* wide formulas scroll instead of breaking the layout */
+}
+
+.pb-intro {
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+}
+
+.pb-image {
+    display: block;
+    max-width: 100%;
+    max-height: 320px;
+    margin: 0.75rem 0;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.pb-options-list {
+    list-style: none;
+    margin: 0.6rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+    font-size: 0.95rem;
+    overflow-x: auto;
+}
+
+.pb-letter {
+    color: var(--text-secondary);
+}
+
+.pb-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem;
+}
+
+/* ---- small screens: filters become a collapsible panel above the results ---- */
+@media (max-width: 900px) {
+    .pb-container {
+        padding: 5.5rem 1rem 3rem;
+    }
+
+    .pb-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pb-filter-toggle {
+        display: inline-flex;
+    }
+
+    .pb-filters {
+        display: none;
+        position: static;
+        max-height: none;
+    }
+
+    .pb-filters.is-open {
+        display: block;
+    }
+
+    .pb-count {
+        flex-basis: 100%;
+        order: 3;
+        font-size: 0.95rem;
+    }
+
+    .pb-card {
+        padding: 0.9rem 1rem;
+    }
+}
+
+/* the hidden attribute must win over the display rules above */
+.pb-container [hidden] {
+    display: none !important;
+}

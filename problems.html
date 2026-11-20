@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="კომაროვის სკოლის მათემატიკის ამოცანების ბაზა: მოძებნეთ ამოცანები თემის, კლასის, სირთულის, ტიპისა და მეთოდის მიხედვით.">
+    <title>ამოცანების ბაზა</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="problems.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="paper.png">
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" async></script>
+    <script src="darkmode.js"></script>
+    <script src="tags-ui.js"></script>
+    <script src="feedback.js" defer></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="classes.html" class="logo">
+                <i class="fas fa-arrow-left"></i>
+                <span>უკან დაბრუნება</span>
+            </a>
+            <button id="toggle-dark" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="pb-container">
+        <header class="pb-header">
+            <h1 class="text-title">ამოცანების ბაზა</h1>
+            <p class="pb-subtitle">მათემატიკის ამოცანები თემის, კლასის, სირთულისა და მეთოდის მიხედვით</p>
+        </header>
+
+        <div class="pb-toolbar">
+            <button type="button" class="pb-filter-toggle" id="filterToggle" aria-expanded="false" aria-controls="filters">
+                <i class="fas fa-sliders"></i> ფილტრები <span class="pb-badge" id="filterBadge" hidden></span>
+            </button>
+            <p class="pb-count" id="resultCount" role="status" aria-live="polite">იტვირთება...</p>
+            <button type="button" class="pb-clear" id="clearFilters" hidden>
+                <i class="fas fa-xmark"></i> გასუფთავება
+            </button>
+        </div>
+
+        <div class="pb-active" id="activeFilters"></div>
+
+        <div class="pb-layout">
+            <aside class="pb-filters" id="filters" aria-label="ფილტრები"></aside>
+            <section class="pb-results" aria-label="ამოცანები">
+                <ol class="pb-list" id="problemList"></ol>
+                <div class="pb-more-wrap">
+                    <button type="button" class="pb-more" id="showMore" hidden>მეტის ჩვენება</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 სსიპ ვლადიმირ კომაროვის თბილისის ფიზიკა-მათემატიკის N199 საჯარო სკოლა. ყველა უფლება დაცულია.</p>
+        <p>საკონტაქტო ინფორმაცია:
+        <a href="mailto:komaroviqvizebi@gmail.com" class="email-link">komaroviqvizebi@gmail.com</a>
+        </p>
+    </footer>
+
+    <script src="problems.js"></script>
+    <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>

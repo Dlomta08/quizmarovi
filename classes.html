@@ -64,6 +64,15 @@
         document.getElementById("subject-name").textContent = heading;
         document.getElementById("subject-icon").className = `fas ${subject.icon}`;
 
+        // Math has a tagged problem bank: link to the problem browser under the title.
+        if (subject.id === "math") {
+            const link = document.createElement("a");
+            link.href = "problems.html";
+            link.className = "problem-bank-link";
+            link.innerHTML = '<i class="fas fa-magnifying-glass" aria-hidden="true"></i> ამოცანების ბაზა — ძიება თემების მიხედვით';
+            document.querySelector(".subject-header").appendChild(link);
+        }
+
         const grid = document.getElementById("gradeGrid");
 
         function card(href, inner, extraClass) {
