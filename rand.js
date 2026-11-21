@@ -94,9 +94,10 @@ async function generateQuiz() {
             try {
                 const data = await loadQuizScript(path);
                 if (data) {
-                    return data.map(p => ({
+                    return data.map((p, k) => ({
                         ...p,
                         source: meta,
+                        origin: { ...meta, n: k + 1 },   // problem number too, for saved results (progress.js)
                         intro: p.random == 1 ? "" : p.intro,
                         task: p.random == 1 ? "" : p.task
                     })).filter(p => p.options && p.options.length);

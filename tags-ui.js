@@ -101,7 +101,8 @@
 
   /**
    * Fills `container` with chips. By default each chip is a link to problems.html filtered by that tag;
-   * pass { onClick(kind, id) } to handle clicks in the page instead (used by the problem browser).
+   * pass { onClick(kind, id) } to handle clicks in the page instead (used by the problem browser),
+   * or { newTab: true } to open the links in a new tab (used in quizzes).
    */
   function renderChips(container, p, opts) {
     opts = opts || {};
@@ -113,6 +114,7 @@
       const area = areaOf(kind, id);
       if (area) a.dataset.area = area;
       a.href = filterUrl(kind, id);
+      if (opts.newTab) { a.target = "_blank"; a.rel = "noopener"; }
       const m = marker(kind, id);
       if (m) a.appendChild(m);
       const text = document.createElement("span");

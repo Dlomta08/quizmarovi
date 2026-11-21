@@ -112,7 +112,7 @@ body {
     line-height: 1.5;
 }
 
-#quizForm fieldset > div:not(.feedback):not(.warning):not(.introduction):not(.task) {
+#quizForm fieldset > div:not(.feedback):not(.warning):not(.introduction):not(.task):not(.tag-hint) {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -356,7 +356,7 @@ body {
     overflow-wrap: break-word;
   }
 
-  #quizForm fieldset > div:not(.feedback):not(.warning):not(.introduction):not(.task) {
+  #quizForm fieldset > div:not(.feedback):not(.warning):not(.introduction):not(.task):not(.tag-hint) {
     flex-direction: column;
     gap: 8px;
   }
@@ -480,4 +480,120 @@ fieldset:not(.answered) .solution[data-after-answer] {
 .solution-body {
     padding: 0 1rem 1rem;
     line-height: 1.7;
+}
+
+/* ===== Hints (tag chips) and results by topic — see quiz.js ===== */
+/* step 1 of the hint shows topic + difficulty; type + method only at step 2 */
+.tag-hint[data-level="1"] .tag-chip--type,
+.tag-hint[data-level="1"] .tag-chip--method {
+    display: none;
+}
+
+.hint-used-mark {
+    color: var(--diff-2-fg);
+    font-size: 0.85em;
+}
+
+.hint-score-line {
+    margin-top: 0.6rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.hint-score-line .fa-lightbulb {
+    color: var(--diff-2-fg);
+}
+
+.topic-stats {
+    margin: 1.25rem auto 0;
+    max-width: 560px;
+    text-align: left;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+.topic-stats-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.topic-stats ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.topic-stat {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 90px 3rem auto;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 10px;
+    color: var(--text-primary);
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.topic-stat:hover,
+.topic-stat:focus-visible {
+    background: rgba(var(--tag-rgb, 148, 163, 184), 0.12);
+    border-color: rgba(var(--tag-rgb, 148, 163, 184), 0.45);
+    outline: none;
+}
+
+.topic-stat-name {
+    color: var(--tag-fg, var(--text-primary));
+    font-weight: 600;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.topic-stat-bar {
+    height: 6px;
+    border-radius: 9999px;
+    background: var(--border-color);
+    overflow: hidden;
+}
+
+.topic-stat-bar span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: rgb(var(--diff-1));
+}
+
+.topic-stat.is-weak .topic-stat-bar span {
+    background: rgb(var(--diff-3));
+}
+
+.topic-stat-num {
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    color: var(--text-secondary);
+}
+
+.topic-stat-practice {
+    font-size: 0.8rem;
+    color: var(--diff-3-fg);
+    white-space: nowrap;
+}
+
+.topic-stat-practice i {
+    font-size: 0.7rem;
+}
+
+@media (max-width: 640px) {
+    .topic-stat {
+        grid-template-columns: minmax(0, 1fr) 60px 2.6rem;
+    }
+    .topic-stat-practice {
+        display: none;
+    }
 }

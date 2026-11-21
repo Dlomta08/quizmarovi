@@ -176,9 +176,13 @@ function clearSimState() {
   try { sessionStorage.removeItem(SIM_STATE_KEY); } catch {}
 }
 
-// Re-select saved answers after the quiz has been rendered.
+// Re-select saved answers (and re-open used hints) after the quiz has been rendered.
 function restoreSimAnswers() {
-  if (!simState || !simState.answers) return;
+  if (!simState) return;
+  Object.entries(simState.hints || {}).forEach(([qi, level]) => {
+    if (hintControls[Number(qi)]) hintControls[Number(qi)].restore(level);
+  });
+  if (!simState.answers) return;
   const form = document.getElementById("quizForm");
   const fieldsets = form.querySelectorAll("fieldset");
   Object.entries(simState.answers).forEach(([qi, optIdx]) => {
@@ -286,6 +290,87 @@ function addRipple(el, x, y, color){
   r.addEventListener('animationend', () => r.remove());
 }
 
+/* ===== Hints, per-problem results and the topic breakdown (math problems with tags) ===== */
+
+// Per question: the hint control (see renderQuiz) and the deepest hint level opened before answering.
+let hintControls = [];
+let hintUsed = [];
+
+function isAnswerCorrect(q, idx) {
+  if (idx == null) return false;
+  return Array.isArray(q.correct) ? q.correct.includes(idx) : idx === q.correct;
+}
+
+// Id for QuizProgress, or null when the problem can't be identified (physics, untagged, old random quiz).
+function problemIdFor(q, i) {
+  if (!window.QuizProgress || !Array.isArray(q.topics)) return null;
+  // random quizzes: rand.js / problems.js add `origin` (problems' own `source` is the book reference)
+  const o = q.origin;
+  if (o && o.n) return QuizProgress.id(o.class, o.year, o.quiz, o.n);
+  if (window.QUIZ_SUBJECT) return null;
+  const p = new URLSearchParams(location.search);
+  const g = p.get("class"), y = p.get("year"), n = p.get("number");
+  return g && y && n ? QuizProgress.id(g, y, n, i + 1) : null;
+}
+
+// Results by topic group, e.g. "ტრიგონომეტრია 2/4", weakest first; each row links to the problem browser.
+function renderTopicStats(box, rows) {
+  const groups = new Map();
+  rows.forEach(({ q, correct }) => {
+    const ids = new Set((q.topics || []).map(t => {
+      const info = TagUI.state.topic.get(t);
+      return info && info.parent ? info.parent : t;
+    }));
+    ids.forEach(id => {
+      const g = groups.get(id) || { id, right: 0, total: 0 };
+      g.total++;
+      if (correct) g.right++;
+      groups.set(id, g);
+    });
+  });
+  if (!groups.size) return;
+
+  const list = [...groups.values()].sort((a, b) =>
+    a.right / a.total - b.right / b.total || b.total - a.total);
+
+  const wrap = document.createElement("div");
+  wrap.className = "topic-stats";
+  const h = document.createElement("div");
+  h.className = "topic-stats-title";
+  h.textContent = "შედეგი თემების მიხედვით";
+  wrap.appendChild(h);
+
+  const ul = document.createElement("ul");
+  list.forEach(g => {
+    const pct = Math.round((g.right / g.total) * 100);
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.className = "topic-stat" + (pct < 60 ? " is-weak" : "");
+    a.href = TagUI.filterUrl("topic", g.id);
+    a.target = "_blank";
+    a.rel = "noopener";
+    const area = TagUI.areaOf("topic", g.id);
+    if (area) a.dataset.area = area;
+    a.title = "ამ თემის ამოცანები ამოცანების ბაზაში";
+
+    const name = document.createElement("span");
+    name.className = "topic-stat-name";
+    name.textContent = TagUI.label("topic", g.id);
+    const bar = document.createElement("span");
+    bar.className = "topic-stat-bar";
+    bar.innerHTML = `<span style="width:${pct}%"></span>`;
+    const num = document.createElement("span");
+    num.className = "topic-stat-num";
+    num.textContent = `${g.right}/${g.total}`;
+    a.append(name, bar, num);
+    if (pct < 60) a.insertAdjacentHTML("beforeend", `<span class="topic-stat-practice">ივარჯიშე <i class="fas fa-arrow-right" aria-hidden="true"></i></span>`);
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+  wrap.appendChild(ul);
+  box.appendChild(wrap);
+}
+
 function revealAllAnswers(form){
   const fieldsets = form.querySelectorAll("fieldset");
   let score = 0, minpt = -1;
@@ -329,6 +414,8 @@ function revealAllAnswers(form){
 function renderQuiz(){
   const form = document.getElementById("quizForm");
   form.innerHTML = "";
+  hintControls = [];
+  hintUsed = [];
 
   quizData.forEach((q, i) => {
     const fieldset = document.createElement("fieldset");
@@ -373,26 +460,62 @@ function renderQuiz(){
 
     fieldset.appendChild(contentWrapper);
 
-    // Tag chips (math only): topics, difficulty, type, method — hidden until the "hint" button is clicked.
+    // Tag chips (math only), hidden behind a hint button that opens in steps:
+    // 1st click: topic + difficulty, 2nd click: type + method (these give away more), then "hide".
     if (Array.isArray(q.topics) && window.TagUI) {
+      const maxLevel = (q.type || []).length || (q.method || []).length ? 2 : 1;
+      let level = 0;
+      hintUsed[i] = 0;
+
       const hint = document.createElement("div");
       hint.className = "tag-hint";
+      hint.dataset.level = "0";
       const hintBtn = document.createElement("button");
       hintBtn.type = "button";
       hintBtn.className = "tag-hint-btn";
       hintBtn.setAttribute("aria-expanded", "false");
-      hintBtn.innerHTML = '<i class="fas fa-lightbulb" aria-hidden="true"></i><span>მინიშნება</span>';
+      hintBtn.innerHTML = '<i class="fas fa-lightbulb" aria-hidden="true"></i><span></span>';
+      const btnText = hintBtn.querySelector("span");
       const chips = document.createElement("div");
-      chips.hidden = true;
+
+      const show = l => {
+        level = l;
+        hint.dataset.level = String(l);
+        chips.hidden = l === 0;
+        btnText.textContent = l === 0 ? "მინიშნება" : l < maxLevel ? "მეტი მინიშნება" : "დამალვა";
+        hintBtn.setAttribute("aria-expanded", String(l > 0));
+        hintBtn.classList.toggle("is-open", l > 0);
+      };
+      // A hint counts only if it was opened before the problem was answered / the quiz was finished.
+      const markUsed = l => {
+        if (l <= hintUsed[i]) return;
+        hintUsed[i] = l;
+        fieldset.classList.add("used-hint");
+        if (!legend.querySelector(".hint-used-mark")) {
+          legend.querySelector("strong").insertAdjacentHTML("afterend",
+            ' <i class="fas fa-lightbulb hint-used-mark" title="მინიშნება გამოყენებულია" aria-label="მინიშნება გამოყენებულია"></i>');
+        }
+      };
+      show(0);
+
       hintBtn.addEventListener("click", () => {
-        const show = chips.hidden;
-        chips.hidden = !show;
-        hintBtn.setAttribute("aria-expanded", String(show));
-        hintBtn.classList.toggle("is-open", show);
+        const next = level >= maxLevel ? 0 : level + 1;
+        show(next);
+        const finished = form.classList.contains("finished") || fieldset.classList.contains("answered");
+        if (next > 0 && !finished) {
+          markUsed(next);
+          if (simState) {
+            (simState.hints = simState.hints || {})[i] = hintUsed[i];
+            saveSimState();
+          }
+        }
       });
+      hintControls[i] = { restore: l => { markUsed(l); show(Math.min(l, maxLevel)); } };
+
       hint.append(hintBtn, chips);
       fieldset.appendChild(hint);
-      TagUI.ready.then(() => TagUI.renderChips(chips, q)).catch(() => hint.remove());
+      // chips open in a new tab so clicking one doesn't leave the quiz
+      TagUI.ready.then(() => TagUI.renderChips(chips, q, { newTab: true })).catch(() => hint.remove());
     }
 
     const feedback = document.createElement("div");
@@ -437,6 +560,8 @@ function renderQuiz(){
       }
 
       fieldset.classList.add("answered");
+      // standard mode: the first answer is the one that counts (the question is locked after it)
+      if (window.QuizProgress) QuizProgress.record(problemIdFor(q, i), isCorrect);
     }
 
     function selectPersistent(selectedIdx, clickEvent){
@@ -650,6 +775,35 @@ function renderQuiz(){
     resultBox.innerHTML = `<strong>ქულა: ${score} / ${gradedCount}</strong><br>`;
     resultBox.appendChild(message);
 
+    // Per-question results for tagged (math) problems: hint use, saved progress, topic breakdown.
+    const tagged = [];
+    quizData.forEach((q, i) => {
+      if (!q.options || !q.options.length || !Array.isArray(q.topics)) return;
+      const sel = form.querySelector(`input[name="question${i}"]:checked`);
+      const idx = sel ? parseInt(sel.value, 10) : null;
+      const correct = isAnswerCorrect(q, idx);
+      tagged.push({ q, correct, hint: hintUsed[i] > 0 });
+      // simulation: record every answered question now (standard mode recorded them on answer)
+      if (simulationMode && idx != null && window.QuizProgress) QuizProgress.record(problemIdFor(q, i), correct);
+    });
+
+    const withHint = tagged.filter(r => r.hint);
+    if (withHint.length) {
+      const hintLine = document.createElement("div");
+      hintLine.className = "hint-score-line";
+      const rightNoHint = tagged.filter(r => !r.hint && r.correct).length;
+      const rightHint = withHint.filter(r => r.correct).length;
+      hintLine.innerHTML = `<i class="fas fa-lightbulb" aria-hidden="true"></i> ` +
+        `მინიშნებით: ${withHint.length} ამოცანა (სწორი ${rightHint}) · მინიშნების გარეშე სწორი: ${rightNoHint}`;
+      resultBox.appendChild(hintLine);
+    }
+
+    if (tagged.length && window.TagUI) {
+      const statsBox = document.createElement("div");
+      resultBox.appendChild(statsBox);
+      TagUI.ready.then(() => renderTopicStats(statsBox, tagged)).catch(() => {});
+    }
+
     // Keep the best score for regular quizzes (random quizzes have no class/year/number).
     // Key matches the "done" key with "best-" instead of "done-"; the quiz list pages read it.
     if (classNum && year && number && gradedCount > 0) {
@@ -663,7 +817,7 @@ function renderQuiz(){
       const bestLine = document.createElement("div");
       bestLine.className = "best-score-line";
       bestLine.textContent = `საუკეთესო შედეგი: ${best.score} / ${best.total}`;
-      resultBox.appendChild(bestLine);
+      message.after(bestLine);   // right under the score, above the hint line / topic breakdown
     }
 
     clearSimState();

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="შემთხვევითი ქვიზი კომაროვის სკოლის წინა წლების ამოცანებიდან.">
     <title>შემთხვევითი ქვიზი</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="quiz-style.css?v=3">
+    <link rel="stylesheet" href="quiz-style.css?v=4">
     <link rel="icon" type="image/png" href="paper.png">
     <script>
         
@@ -19,7 +19,8 @@
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" async></script>
     <script src="darkmode.js"></script>
     <script src="subjects.js"></script>
-  <script src="tags-ui.js?v=3"></script>
+  <script src="tags-ui.js?v=4"></script>
+  <script src="progress.js?v=4"></script>
     <script src="feedback.js" defer></script>
 </head>
 <body>
@@ -95,6 +96,10 @@
             if (config && config.subject === 'physics') {
                 document.getElementById('back-link').href = 'random-quiz-generator.html?subject=physics';
             }
+            // quiz made in the problem browser (problems.js): go back to the same filters
+            if (config && typeof config.back === 'string' && config.back.startsWith('problems.html')) {
+                document.getElementById('back-link').href = config.back;
+            }
             
             document.getElementById("quiz-title").textContent = `შემთხვევითი ქვიზი (${window.quizData.length} ამოცანა)`;
             
@@ -113,7 +118,7 @@
         }
     </script>
          
-    <script src="quiz.js?v=3"></script>
+    <script src="quiz.js?v=4"></script>
     <script>
     document.addEventListener("DOMContentLoaded", () => {
         const hideButton = () => {

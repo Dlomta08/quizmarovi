@@ -69,6 +69,73 @@
     text-align: center;
 }
 
+/* ---- "make a quiz" from the current results ---- */
+.pb-practice {
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid var(--primary-color);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.pb-practice-size select {
+    height: 100%;
+    border: none;
+    border-right: 1px solid rgba(var(--primary-rgb), 0.4);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    font: inherit;
+    font-size: 0.9rem;
+    padding: 0 0.4rem 0 0.8rem;
+    cursor: pointer;
+}
+
+.pb-make-quiz {
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: background 0.15s ease;
+}
+
+.pb-make-quiz:hover:not(:disabled) {
+    background: var(--secondary-color);
+}
+
+.pb-make-quiz:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* ---- saved result on a problem card ---- */
+.pb-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-right: 0.5rem;
+    padding: 0.05rem 0.55rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.78rem;
+}
+
+.pb-status--right {
+    color: var(--diff-1-fg);
+    background: rgba(var(--diff-1), 0.14);
+}
+
+.pb-status--wrong {
+    color: var(--diff-3-fg);
+    background: rgba(var(--diff-3), 0.14);
+}
+
 /* ---- active filters ---- */
 .pb-active {
     display: flex;

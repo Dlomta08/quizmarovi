@@ -5,15 +5,38 @@
  * - Within one filter the choices are combined with OR, across filters with AND.
  * - Choosing a topic group (e.g. "ტრიგონომეტრია") includes all its subtopics.
  * - The filter state lives in the URL, e.g. problems.html?topic=trig-eq,log-eq&grade=10,11&difficulty=3
+ * - "ჩემი შედეგი" (status) filters by the results saved in this browser (progress.js).
+ * - "ქვიზის შედგენა" turns the current results into a random quiz (random-quiz.html).
  */
 (function () {
   "use strict";
 
   const PAGE_SIZE = 20;
-  const KINDS = ["area", "topic", "grade", "difficulty", "type", "method"];
+  const KINDS = ["status", "area", "topic", "grade", "difficulty", "type", "method"];
   const KIND_TITLES = {
+    status: "ჩემი შედეგი",
     area: "სფერო", topic: "თემა", grade: "კლასი", difficulty: "სირთულე", type: "ამოცანის ტიპი", method: "მეთოდი",
   };
+  // status of a problem = result of its last attempt in this browser
+  const STATUS = [
+    { id: "wrong", ka: "შეცდომით ამოხსნილი", icon: "fa-xmark", rgb: "var(--diff-3)", fg: "var(--diff-3-fg)" },
+    { id: "right", ka: "სწორად ამოხსნილი", icon: "fa-check", rgb: "var(--diff-1)", fg: "var(--diff-1-fg)" },
+    { id: "new", ka: "ჯერ არ ამომიხსნია", icon: "fa-circle-question", rgb: null, fg: "var(--text-secondary)" },
+  ];
+  const STATUS_BY_ID = Object.fromEntries(STATUS.map(s => [s.id, s]));
+
+  function labelOf(kind, id) {
+    return kind === "status" ? (STATUS_BY_ID[id] || {}).ka || id : TagUI.label(kind, id);
+  }
+
+  function statusIcon(id) {
+    const s = STATUS_BY_ID[id];
+    if (!s) return null;
+    const i = document.createElement("i");
+    i.className = `fas ${s.icon} tag-icon`;
+    i.setAttribute("aria-hidden", "true");
+    return i;
+  }
   const LETTERS = ["ა", "ბ", "გ", "დ", "ე", "ვ"];
 
   const el = {
@@ -25,12 +48,15 @@
     active: document.getElementById("activeFilters"),
     toggle: document.getElementById("filterToggle"),
     badge: document.getElementById("filterBadge"),
+    practice: document.getElementById("makeQuiz"),
+    practiceSize: document.getElementById("makeQuizSize"),
   };
 
   let problems = [];      // entries of data/problems.json
   let tags = null;        // data/tags.json
   let shown = 0;          // how many results are rendered
   let results = [];
+  let hasProgress = false;  // any saved results in this browser (opens the "ჩემი შედეგი" section)
   const selected = Object.fromEntries(KINDS.map(k => [k, new Set()]));
 
   /* ---------------------------------------------------------------- URL state */
@@ -61,6 +87,7 @@
       case "difficulty": return [String(p.d)];
       case "type": return p.ty;
       case "method": return p.m;
+      case "status": return [p.st];
     }
     return [];
   }
@@ -133,6 +160,12 @@
 
   /** Visual cue next to an option: area color dot, difficulty bars, or the type/method icon. */
   function optionMarker(kind, id, opts) {
+    if (kind === "status") {
+      const i = statusIcon(id);
+      i.classList.add("pb-option-icon");
+      i.style.color = STATUS_BY_ID[id].fg;
+      return i;
+    }
     if (kind === "area" || (kind === "topic" && !opts.child)) {
       const area = TagUI.areaOf(kind, String(id));
       if (!area) return null;
@@ -188,6 +221,8 @@
       return box;
     };
 
+    el.filters.appendChild(section("status", simple("status", STATUS.map(s => [s.id, s.ka])),
+      first ? hasProgress : openSections.has("status")));
     el.filters.appendChild(section("area", simple("area", tags.area.map(a => [a.id, a.ka])),
       first ? true : openSections.has("area")));
 
@@ -277,13 +312,14 @@
       const area = TagUI.areaOf(kind, id);
       if (area) b.dataset.area = area;
       if (kind === "difficulty") b.style.setProperty("--chip-rgb", `var(--diff-${id})`);
-      const m = kind === "difficulty" ? null : TagUI.marker(kind, id);
+      if (kind === "status" && STATUS_BY_ID[id] && STATUS_BY_ID[id].rgb) b.style.setProperty("--chip-rgb", STATUS_BY_ID[id].rgb);
+      const m = kind === "difficulty" ? null : kind === "status" ? statusIcon(id) : TagUI.marker(kind, id);
       if (m) b.appendChild(m);
       const text = document.createElement("span");
-      text.textContent = TagUI.label(kind, id);
+      text.textContent = labelOf(kind, id);
       b.appendChild(text);
       b.insertAdjacentHTML("beforeend", `<i class="fas fa-xmark" aria-hidden="true"></i>`);
-      b.title = `${KIND_TITLES[kind]}: ${TagUI.label(kind, id)} — მოხსნა`;
+      b.title = `${KIND_TITLES[kind]}: ${labelOf(kind, id)} — მოხსნა`;
       b.addEventListener("click", () => { selected[kind].delete(id); update(); });
       el.active.appendChild(b);
     }));
@@ -306,6 +342,14 @@
     meta.className = "pb-meta";
     const where = document.createElement("span");
     where.textContent = `${TagUI.label("grade", p.g)} · ${p.y.replace("-", "/")} · ${p.q === 1 ? "1-ელი" : "მე-" + p.q} ქვიზი · №${p.n}`;
+    if (p.st !== "new") {
+      const st = document.createElement("span");
+      st.className = `pb-status pb-status--${p.st}`;
+      st.appendChild(statusIcon(p.st));
+      st.append(p.st === "right" ? "სწორი" : "შეცდომა");
+      st.title = "ბოლო მცდელობის შედეგი";
+      where.prepend(st);
+    }
     const open = document.createElement("a");
     open.className = "pb-open";
     open.href = `quiz.html?class=${p.g}&year=${p.y}&number=${p.q}`;
@@ -363,6 +407,11 @@
     el.count.textContent = results.length
       ? `ნაპოვნია ${results.length} ამოცანა`
       : "ამ ფილტრებით ამოცანა ვერ მოიძებნა";
+    const quizable = results.filter(p => p.o && p.o.length).length;
+    el.practice.disabled = !quizable;
+    el.practice.title = quizable
+      ? `შემთხვევითი ქვიზი ამ ${quizable} ტესტური ამოცანიდან`
+      : "ამ ფილტრებით ტესტური ამოცანა არ არის";
     el.list.textContent = "";
     shown = 0;
     renderFilters();
@@ -370,9 +419,79 @@
     renderMore();
   }
 
+  /* ---------------------------------------------------------------- quiz from the current results */
+
+  // Loads one quiz file and returns its quizData array (or null). Same approach as rand.js.
+  async function loadQuizScript(path) {
+    try {
+      const res = await fetch(path);
+      if (!res.ok) return null;
+      const source = (await res.text())
+        .replace(/^﻿/, "")
+        .replace(/^\s*(?:const|let|var)\s+quizData\s*=/m, "quizData =");
+      const data = new Function("let quizData;\n" + source + "\n;return quizData;")();
+      return Array.isArray(data) ? data : null;
+    } catch (err) {
+      console.warn(`Failed to load ${path}:`, err);
+      return null;
+    }
+  }
+
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  async function makeQuiz() {
+    const pool = results.filter(p => p.o && p.o.length);
+    if (!pool.length) return;
+    const size = Math.min(Number(el.practiceSize.value) || 10, pool.length);
+    const pick = shuffle(pool.slice()).slice(0, size);
+
+    const label = el.practice.innerHTML;
+    el.practice.disabled = true;
+    el.practice.textContent = "იტვირთება...";
+    try {
+      const pathOf = p => `quizzes/class-${p.g}/${p.y}/quiz-${p.q}.js`;
+      const files = new Map(pick.map(p => [pathOf(p), null]));
+      await Promise.all([...files.keys()].map(async path => files.set(path, await loadQuizScript(path))));
+      const quiz = pick.map(p => {
+        const src = (files.get(pathOf(p)) || [])[p.n - 1];
+        if (!src || !src.options || !src.options.length) return null;
+        return {
+          ...src,
+          origin: { class: String(p.g), year: p.y, quiz: String(p.q), n: p.n },
+          intro: src.random == 1 ? "" : src.intro,
+          task: src.random == 1 ? "" : src.task,
+        };
+      }).filter(Boolean);
+      if (!quiz.length) throw new Error("no problems loaded");
+
+      // same storage as rand.js, plus where to go back to
+      Object.keys(sessionStorage).filter(k => k.startsWith("sim-state:/random-quiz")).forEach(k => sessionStorage.removeItem(k));
+      sessionStorage.setItem("randomQuizData", JSON.stringify(quiz));
+      sessionStorage.setItem("randomQuizConfig", JSON.stringify({
+        subject: "math",
+        classes: [...new Set(quiz.map(q => Number(q.origin.class)))].sort((a, b) => a - b),
+        totalAvailable: pool.length,
+        back: "problems.html" + location.search,
+      }));
+      location.href = "random-quiz.html";
+    } catch (err) {
+      console.error(err);
+      alert("ქვიზის შედგენა ვერ მოხერხდა. სცადეთ თავიდან.");
+      el.practice.innerHTML = label;
+      el.practice.disabled = false;
+    }
+  }
+
   /* ---------------------------------------------------------------- start */
 
   el.more.addEventListener("click", renderMore);
+  el.practice.addEventListener("click", makeQuiz);
   el.clear.addEventListener("click", () => { KINDS.forEach(k => selected[k].clear()); update(); });
   el.toggle.addEventListener("click", () => {
     const open = el.filters.classList.toggle("is-open");
@@ -386,6 +505,11 @@
   ])
     .then(([, data]) => {
       problems = data;
+      const progress = window.QuizProgress ? QuizProgress.all() : {};
+      hasProgress = Object.keys(progress).length > 0;
+      problems.forEach(p => {
+        p.st = window.QuizProgress ? QuizProgress.status(QuizProgress.id(p.g, p.y, p.q, p.n), progress) : "new";
+      });
       readUrl();
       update();
     })
