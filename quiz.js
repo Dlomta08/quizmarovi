@@ -373,11 +373,26 @@ function renderQuiz(){
 
     fieldset.appendChild(contentWrapper);
 
-    // Tag chips (math only): topics, difficulty, type, method — each links to the problem browser.
+    // Tag chips (math only): topics, difficulty, type, method — hidden until the "hint" button is clicked.
     if (Array.isArray(q.topics) && window.TagUI) {
+      const hint = document.createElement("div");
+      hint.className = "tag-hint";
+      const hintBtn = document.createElement("button");
+      hintBtn.type = "button";
+      hintBtn.className = "tag-hint-btn";
+      hintBtn.setAttribute("aria-expanded", "false");
+      hintBtn.innerHTML = '<i class="fas fa-lightbulb" aria-hidden="true"></i><span>მინიშნება</span>';
       const chips = document.createElement("div");
-      fieldset.appendChild(chips);
-      TagUI.ready.then(() => TagUI.renderChips(chips, q)).catch(() => chips.remove());
+      chips.hidden = true;
+      hintBtn.addEventListener("click", () => {
+        const show = chips.hidden;
+        chips.hidden = !show;
+        hintBtn.setAttribute("aria-expanded", String(show));
+        hintBtn.classList.toggle("is-open", show);
+      });
+      hint.append(hintBtn, chips);
+      fieldset.appendChild(hint);
+      TagUI.ready.then(() => TagUI.renderChips(chips, q)).catch(() => hint.remove());
     }
 
     const feedback = document.createElement("div");

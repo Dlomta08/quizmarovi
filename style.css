@@ -557,6 +557,48 @@ html, body {
     margin: 0.6rem 0 0.2rem;
 }
 
+/* quiz.html: chips stay hidden behind a "hint" button */
+.tag-hint {
+    margin-top: 0.6rem;
+}
+
+.tag-hint-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font: inherit;
+    font-size: 0.84rem;
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px dashed var(--border-color);
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tag-hint-btn:hover,
+.tag-hint-btn:focus-visible,
+.tag-hint-btn.is-open {
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+    outline: none;
+}
+
+.tag-hint-btn.is-open .fa-lightbulb {
+    color: var(--diff-2-fg);
+}
+
+.tag-hint .tag-chips {
+    margin-top: 0.4rem;
+}
+
+.tag-chips[hidden] {
+    display: none;
+}
+
 /* Area colors: topic chips, filter dots and active filters use the color of their area.
    --tag-rgb is the base color (for tints), --tag-fg the readable text color. */
 :root {
