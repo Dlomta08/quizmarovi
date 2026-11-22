@@ -1,0 +1,270 @@
+/* account.css — styles for the student account pages: mistakes.html and my-progress.html.
+   Uses only the color tokens from theme.css, so dark mode works automatically. */
+
+.acc-page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 110px 16px 48px;
+    color: var(--text-primary);
+}
+
+.acc-page h1 {
+    font-size: 2rem;
+    margin: 0 0 0.3rem;
+}
+
+.acc-lead {
+    color: var(--text-secondary);
+    margin: 0 0 1.4rem;
+}
+
+.acc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.95rem;
+    border-radius: 10px;
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+    font: 600 0.9rem 'Noto Sans Georgian', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.acc-btn:hover {
+    background: rgba(var(--primary-rgb), 0.08);
+}
+
+.acc-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* message box: loading / not logged in / empty / error */
+.acc-note {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.4rem 1.3rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.acc-note p {
+    margin: 0 0 0.9rem;
+}
+
+.acc-note p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---- mistakes notebook ---- */
+.acc-toolbar {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.acc-count {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    margin-right: auto;
+}
+
+.mistake-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mistake {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.mistake-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.mistake-tag {
+    padding: 0.12rem 0.55rem;
+    border-radius: 6px;
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.mistake-q {
+    line-height: 1.65;
+    margin: 0 0 0.7rem;
+    overflow-x: auto;
+}
+
+.mistake-q img {
+    display: block;
+    max-width: 100%;
+    max-height: 260px;
+    margin-top: 0.6rem;
+}
+
+.mistake-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.mistake-row > i {
+    color: var(--bad-fg);
+}
+
+.mistake-row .acc-btn {
+    margin-left: auto;
+}
+
+/* ---- progress page ---- */
+.acc-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 1.6rem;
+}
+
+.acc-stat {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.acc-stat small {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    display: block;
+}
+
+.acc-stat b {
+    font-size: 1.7rem;
+    font-family: var(--heading-font);
+    color: var(--text-primary);
+}
+
+.acc-stat .sub {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.acc-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.1rem 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.acc-box h2 {
+    font-size: 1.15rem;
+    margin: 0 0 0.9rem;
+}
+
+.acc-box .empty {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    margin: 0;
+}
+
+.bar-row {
+    display: grid;
+    grid-template-columns: 250px 1fr 60px;
+    gap: 0.8rem;
+    align-items: center;
+    padding: 0.3rem 0.2rem;
+    margin: 0.1rem 0;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.bar-row:hover {
+    background: var(--card-bg-secondary);
+}
+
+.bar {
+    height: 10px;
+    border-radius: 99px;
+    background: var(--card-bg-secondary);
+    overflow: hidden;
+}
+
+.bar i {
+    display: block;
+    height: 100%;
+    border-radius: 99px;
+    background: var(--primary-color);
+    opacity: 0.75;
+}
+
+.bar-row.weak .bar i {
+    background: #c98a6c;
+}
+
+.bar-row .pct {
+    text-align: right;
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
+.bar-row.weak .name::after {
+    content: ' · სუსტი';
+    color: var(--bad-fg);
+    font-size: 0.78rem;
+}
+
+.acc-danger {
+    border-color: var(--bad-border);
+}
+
+.acc-danger p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0 0 0.8rem;
+}
+
+.acc-btn-danger {
+    border-color: var(--bad-fg);
+    color: var(--bad-fg);
+}
+
+.acc-btn-danger:hover {
+    background: var(--bad-bg);
+}
+
+@media (max-width: 640px) {
+    .acc-page h1 {
+        font-size: 1.6rem;
+    }
+    .acc-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bar-row {
+        grid-template-columns: 1fr 70px 44px;
+    }
+    .mistake-row {
+        flex-wrap: wrap;
+    }
+}

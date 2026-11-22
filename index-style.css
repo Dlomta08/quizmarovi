@@ -147,3 +147,52 @@ main.hero-section {
         transform: translateY(0);
     }
 }
+
+/* "Continue where you left off" card (added by the script at the end of index.html) */
+.continue-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
+    width: min(440px, 100%);
+    box-sizing: border-box;
+    margin: 1.6rem auto 0;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.continue-card:hover {
+    border-color: rgba(var(--primary-rgb), 0.45);
+    transform: translateY(-1px);
+}
+
+.continue-card .ic {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(var(--primary-rgb), 0.12);
+    color: var(--primary-color);
+}
+
+.continue-card small {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+}
+
+.continue-card b {
+    font-weight: 600;
+}
+
+.continue-card .go {
+    margin-left: auto;
+    color: var(--primary-color);
+}

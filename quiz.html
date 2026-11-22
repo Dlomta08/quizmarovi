@@ -13,7 +13,7 @@
   <title>ქვიზი</title>
   <link rel="stylesheet" href="style.css?v=5">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="quiz-style.css?v=5">
+  <link rel="stylesheet" href="quiz-style.css?v=6">
   <link rel="stylesheet" href="theme.css?v=5">
   <link rel="icon" type="image/png" href="paper.png">
   <script>
@@ -24,6 +24,11 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" async></script>
   <script src="darkmode.js?v=5"></script>
+  <!-- student accounts (optional login): library, project config, header widget -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
+  <script src="supabase-config.js?v=5" defer></script>
+  <script src="auth.js?v=5" defer></script>
+  <script src="cloud.js?v=5" defer></script>
   <script src="subjects.js?v=5"></script>
   <script src="tags-ui.js?v=5"></script>
   <script src="progress.js?v=5"></script>
@@ -128,7 +133,7 @@
     })();
   </script>
   
-  <script src="quiz.js?v=5"></script>
+  <script src="quiz.js?v=6"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>

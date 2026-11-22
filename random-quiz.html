@@ -8,7 +8,7 @@
     <title>შემთხვევითი ქვიზი</title>
     <link rel="stylesheet" href="style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="quiz-style.css?v=5">
+    <link rel="stylesheet" href="quiz-style.css?v=6">
     <link rel="stylesheet" href="theme.css?v=5">
     <link rel="icon" type="image/png" href="paper.png">
     <script>
@@ -20,6 +20,11 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" async></script>
     <script src="darkmode.js?v=5"></script>
+    <!-- student accounts (optional login): library, project config, header widget -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
+    <script src="supabase-config.js?v=5" defer></script>
+    <script src="auth.js?v=5" defer></script>
+    <script src="cloud.js?v=5" defer></script>
     <script src="subjects.js?v=5"></script>
   <script src="tags-ui.js?v=5"></script>
   <script src="progress.js?v=5"></script>
@@ -99,12 +104,14 @@
             if (config && config.subject === 'physics') {
                 document.getElementById('back-link').href = 'random-quiz-generator.html?subject=physics';
             }
-            // quiz made in the problem browser (problems.js): go back to the same filters
-            if (config && typeof config.back === 'string' && config.back.startsWith('problems.html')) {
+            // quiz made in the problem browser (problems.js) or the mistakes notebook (mistakes.js):
+            // go back to where it was made
+            if (config && typeof config.back === 'string' && /^(problems|mistakes)\.html/.test(config.back)) {
                 document.getElementById('back-link').href = config.back;
             }
-            
-            document.getElementById("quiz-title").textContent = `შემთხვევითი ქვიზი (${window.quizData.length} ამოცანა)`;
+
+            const quizName = config && typeof config.title === 'string' ? config.title : 'შემთხვევითი ქვიზი';
+            document.getElementById("quiz-title").textContent = `${quizName} (${window.quizData.length} ამოცანა)`;
             
             if (config) {
                 const infoContainer = document.getElementById('quiz-info-container');
@@ -121,7 +128,7 @@
         }
     </script>
          
-    <script src="quiz.js?v=5"></script>
+    <script src="quiz.js?v=6"></script>
     <script>
     document.addEventListener("DOMContentLoaded", () => {
         const hideButton = () => {

@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link rel="stylesheet" href="style.css?v=5">
-  <link rel="stylesheet" href="index-style.css?v=5">
+  <link rel="stylesheet" href="index-style.css?v=6">
 
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -30,6 +30,11 @@
   <link rel="stylesheet" href="theme.css?v=5">
 
   <script src="darkmode.js?v=5"></script>
+  <!-- student accounts (optional login): library, project config, header widget -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
+  <script src="supabase-config.js?v=5" defer></script>
+  <script src="auth.js?v=5" defer></script>
+  <script src="cloud.js?v=5" defer></script>
   <script src="feedback.js?v=5" defer></script>
   <script src="notice.js?v=6" defer></script>
 
@@ -92,6 +97,7 @@
         <p>&copy; 2026 სსიპ ვლადიმირ კომაროვის თბილისის ფიზიკა-მათემატიკის N199 საჯარო სკოლა. ყველა უფლება დაცულია.</p>
         <p>საკონტაქტო ინფორმაცია:
             <a href="mailto:komaroviqvizebi@gmail.com" class="email-link">komaroviqvizebi@gmail.com</a>
+            · <a href="privacy.html" class="email-link">კონფიდენციალურობა</a>
         </p>
         <style>
         .email-link {
@@ -106,6 +112,38 @@
     </style>
     </footer>
 
+    <script>
+    // "Continue where you left off": the last quiz opened on this device (saved by quiz.js),
+    // or, when logged in, the quiz of the latest saved answer (works across devices). Newest wins.
+    document.addEventListener("DOMContentLoaded", async () => {   // after auth.js / cloud.js (deferred)
+        let last = null;
+        try { last = JSON.parse(localStorage.getItem("last-visit")); } catch {}
+
+        if (window.QuizAuth && window.QuizCloud) {
+            await QuizAuth.ready;
+            const a = QuizAuth.isLoggedIn() ? await QuizCloud.lastAttempt() : null;
+            // problem id "10-2025-26-1-7" -> grade 10, year 2025-26, quiz 1
+            const m = a && /^(\d+)-(\d{4}-\d{2})-(\d+)-\d+$/.exec(a.problem_id);
+            const t = a ? Date.parse(a.created_at) : 0;
+            if (m && (!last || t > last.t)) last = { subject: "math", class: m[1], year: m[2], number: m[3], t };
+        }
+        if (!last || !last.class || !last.year || !last.number) return;
+
+        const physics = last.subject === "physics";
+        const params = new URLSearchParams({ class: last.class, year: last.year, number: last.number });
+        if (physics) params.set("subject", "physics");
+        const quizName = Number(last.number) === 1 ? "1-ელი" : `მე-${last.number}`;
+
+        const card = document.createElement("a");
+        card.className = "continue-card";
+        card.href = "quiz.html?" + params;
+        card.innerHTML = '<span class="ic"><i class="fas fa-play"></i></span>' +
+            '<span><small>გააგრძელე, სადაც გაჩერდი</small><b></b></span><i class="fas fa-arrow-right go"></i>';
+        card.querySelector("b").textContent =
+            `${physics ? "ფიზიკა · " : ""}მე-${last.class} კლასი · ${last.year} · ${quizName} ქვიზი`;
+        document.querySelector(".button-wrapper").before(card);
+    });
+    </script>
     <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>

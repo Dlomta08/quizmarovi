@@ -38,6 +38,15 @@ Run `build-quiz-index.js` after adding/removing/emptying a quiz file; run `build
 - `progress.js` (`window.QuizProgress`) saves per-problem right/wrong results in localStorage `problem-progress`, keyed `${grade}-${year}-${quiz}-${n}`; math only. Quiz completion uses `done-…` keys, with a `physics-` prefix for physics.
 - `feedback.js` is a Web3Forms feedback widget (public key by design); `darkmode.js` handles the theme; `teacher-tool.html` is a standalone page.
 
+## Student accounts (Supabase)
+
+- Optional Google login; guests can do everything. `supabase/schema.sql` is the database (run by hand in the Supabase SQL Editor; there are no migrations): `profiles`, `attempts`, `bookmarks`, views `my_problem_stats` / `my_mistakes`, functions `record_attempt()` (saves an answer, updates XP and the Tbilisi-day streak) and `delete_my_account()`. RLS on everything; the browser can't write attempts, XP or streaks directly.
+- `supabase-config.js` holds the project URL + public (publishable) key — public by design. Never put the service_role/secret key in the site.
+- `auth.js` (`window.QuizAuth`): client, header login button/avatar menu, first-login onboarding. `cloud.js` (`window.QuizCloud`): `recordAttempt`, `fetchAll`, `lastAttempt`, `deleteAccount`; guest answers are buffered in sessionStorage `guest-attempts` and saved after login. Both load with `defer` after the supabase-js CDN script, so code that runs earlier must read `window.QuizAuth` lazily / after `DOMContentLoaded`.
+- `quiz.js` `saveResult()` is the single place a graded answer is stored (progress.js + cloud.js); math only.
+- Pages: `mistakes.html`/`mistakes.js`, `my-progress.html`/`my-progress.js` (styles in `account.css`, `noindex`, not in the sitemap), `privacy.html`. `practice.js` (`QuizPractice.start`) builds a quiz from `problems.json` rows and opens `random-quiz.html` (used by problems.js and mistakes.js).
+- Problem ids in the DB are `grade-year-quiz-n` (n = position in the quiz file), so **never insert or reorder problems in a published quiz file — only append**, or saved answers point at the wrong problem.
+
 ## Conventions
 
 - Every local CSS/JS link in the HTML pages carries a `?v=N` cache-busting query (currently `v=5` everywhere); bump it in every HTML page that loads a file when that file changes.

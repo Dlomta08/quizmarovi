@@ -421,22 +421,6 @@
 
   /* ---------------------------------------------------------------- quiz from the current results */
 
-  // Loads one quiz file and returns its quizData array (or null). Same approach as rand.js.
-  async function loadQuizScript(path) {
-    try {
-      const res = await fetch(path);
-      if (!res.ok) return null;
-      const source = (await res.text())
-        .replace(/^﻿/, "")
-        .replace(/^\s*(?:const|let|var)\s+quizData\s*=/m, "quizData =");
-      const data = new Function("let quizData;\n" + source + "\n;return quizData;")();
-      return Array.isArray(data) ? data : null;
-    } catch (err) {
-      console.warn(`Failed to load ${path}:`, err);
-      return null;
-    }
-  }
-
   function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -455,31 +439,8 @@
     el.practice.disabled = true;
     el.practice.textContent = "იტვირთება...";
     try {
-      const pathOf = p => `quizzes/class-${p.g}/${p.y}/quiz-${p.q}.js`;
-      const files = new Map(pick.map(p => [pathOf(p), null]));
-      await Promise.all([...files.keys()].map(async path => files.set(path, await loadQuizScript(path))));
-      const quiz = pick.map(p => {
-        const src = (files.get(pathOf(p)) || [])[p.n - 1];
-        if (!src || !src.options || !src.options.length) return null;
-        return {
-          ...src,
-          origin: { class: String(p.g), year: p.y, quiz: String(p.q), n: p.n },
-          intro: src.random == 1 ? "" : src.intro,
-          task: src.random == 1 ? "" : src.task,
-        };
-      }).filter(Boolean);
-      if (!quiz.length) throw new Error("no problems loaded");
-
-      // same storage as rand.js, plus where to go back to
-      Object.keys(sessionStorage).filter(k => k.startsWith("sim-state:/random-quiz")).forEach(k => sessionStorage.removeItem(k));
-      sessionStorage.setItem("randomQuizData", JSON.stringify(quiz));
-      sessionStorage.setItem("randomQuizConfig", JSON.stringify({
-        subject: "math",
-        classes: [...new Set(quiz.map(q => Number(q.origin.class)))].sort((a, b) => a - b),
-        totalAvailable: pool.length,
-        back: "problems.html" + location.search,
-      }));
-      location.href = "random-quiz.html";
+      // practice.js loads the original quiz files and opens random-quiz.html
+      await QuizPractice.start(pick, { back: "problems.html" + location.search, totalAvailable: pool.length });
     } catch (err) {
       console.error(err);
       alert("ქვიზის შედგენა ვერ მოხერხდა. სცადეთ თავიდან.");

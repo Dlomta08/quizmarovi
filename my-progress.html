@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>ჩემი პროგრესი · კომაროვის ქვიზები</title>
+    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="account.css?v=5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="theme.css?v=5">
+    <link rel="icon" type="image/png" href="paper.png">
+    <script src="darkmode.js?v=5"></script>
+    <!-- student accounts (optional login): library, project config, header widget -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
+    <script src="supabase-config.js?v=5" defer></script>
+    <script src="auth.js?v=5" defer></script>
+    <script src="cloud.js?v=5" defer></script>
+    <script src="tags-ui.js?v=5"></script>
+    <script src="feedback.js?v=5" defer></script>
+    <script src="my-progress.js?v=5" defer></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-arrow-left"></i>
+                <span>მთავარი</span>
+            </a>
+            <button id="toggle-dark" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="acc-page">
+        <h1>ჩემი პროგრესი</h1>
+        <p class="acc-lead" id="hello"></p>
+        <!-- filled by my-progress.js -->
+        <div id="content"><div class="acc-note"><p>იტვირთება...</p></div></div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 სსიპ ვლადიმირ კომაროვის თბილისის ფიზიკა-მათემატიკის N199 საჯარო სკოლა. ყველა უფლება დაცულია.</p>
+        <p>საკონტაქტო ინფორმაცია:
+        <a href="mailto:komaroviqvizebi@gmail.com" class="email-link">komaroviqvizebi@gmail.com</a>
+        · <a href="privacy.html" class="email-link">კონფიდენციალურობა</a>
+        </p>
+    </footer>
+
+    <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

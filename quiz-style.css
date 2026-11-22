@@ -597,3 +597,47 @@ fieldset:not(.answered) .solution[data-after-answer] {
         display: none;
     }
 }
+
+/* Note for guests after a wrong answer: "log in to save this to your mistakes notebook" (quiz.js guestNudge) */
+.guest-nudge {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 0.8rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    background: var(--card-bg-secondary);
+    border: 1px dashed rgba(var(--primary-rgb), 0.45);
+    color: var(--text-secondary);
+}
+
+.guest-nudge > i {
+    color: var(--primary-color);
+}
+
+.guest-nudge-btn {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 10px;
+    border: 1.5px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    font: 600 0.85rem 'Noto Sans Georgian', sans-serif;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.guest-nudge-btn:hover {
+    background: rgba(var(--primary-rgb), 0.08);
+}
+
+@media (max-width: 480px) {
+    .guest-nudge {
+        flex-wrap: wrap;
+    }
+}

@@ -328,6 +328,41 @@ function problemIdFor(q, i) {
   return g && y && n ? QuizProgress.id(g, y, n, i + 1) : null;
 }
 
+// Time spent per answer (saved for logged-in students): seconds since the quiz started or
+// since the previous answer, whichever is later. Over an hour = the tab was left open -> unknown.
+let answerClock = Date.now();
+function secondsSinceLastAnswer() {
+  const now = Date.now();
+  const s = (now - answerClock) / 1000;
+  answerClock = now;
+  return s > 3600 ? null : s;
+}
+
+// Saves one graded answer: in this browser (progress.js) and, for logged-in students,
+// in the database (cloud.js). Returns the problem id, or null if it can't be identified.
+function saveResult(q, i, idx, isCorrect, seconds) {
+  const pid = problemIdFor(q, i);
+  if (!pid) return null;
+  QuizProgress.record(pid, isCorrect);
+  if (window.QuizCloud) QuizCloud.recordAttempt(pid, idx, isCorrect, seconds);
+  return pid;
+}
+
+// Small note for guests after a wrong answer: "log in to save this to your mistakes notebook".
+// Answers given before logging in are kept in this tab and saved after login (cloud.js).
+// Returns null when accounts are unavailable or the student is already logged in.
+function guestNudge(text) {
+  const A = window.QuizAuth;
+  if (!A || !window.QuizCloud || A.isLoggedIn()) return null;
+  const box = document.createElement("div");
+  box.className = "guest-nudge";
+  box.innerHTML = '<i class="fas fa-book-bookmark" aria-hidden="true"></i><span></span>' +
+    '<button type="button" class="guest-nudge-btn"><i class="fab fa-google" aria-hidden="true"></i>შესვლა</button>';
+  box.querySelector("span").textContent = text;
+  box.querySelector("button").addEventListener("click", () => A.signIn());
+  return box;
+}
+
 // Results by topic group, e.g. "ტრიგონომეტრია 2/4", weakest first; each row links to the problem browser.
 function renderTopicStats(box, rows) {
   const groups = new Map();
@@ -433,6 +468,7 @@ function renderQuiz(){
   form.innerHTML = "";
   hintControls = [];
   hintUsed = [];
+  answerClock = Date.now();
 
   quizData.forEach((q, i) => {
     const fieldset = document.createElement("fieldset");
@@ -576,7 +612,12 @@ function renderQuiz(){
 
       fieldset.classList.add("answered");
       // standard mode: the first answer is the one that counts (the question is locked after it)
-      if (window.QuizProgress) QuizProgress.record(problemIdFor(q, i), isCorrect);
+      const pid = saveResult(q, i, selectedIdx, isCorrect, secondsSinceLastAnswer());
+      if (pid && !isCorrect && !fieldset.querySelector(".guest-nudge")) {
+        const nudge = guestNudge("შედი ანგარიშზე, რომ ეს ამოცანა შეცდომების რვეულში შეინახო.");
+        const sol = fieldset.querySelector(".solution");
+        if (nudge) fieldset.insertBefore(nudge, sol);   // above the solution (or at the end if none)
+      }
     }
 
     function selectPersistent(selectedIdx, clickEvent){
@@ -728,6 +769,15 @@ function renderQuiz(){
   const subjectPrefix = window.QUIZ_SUBJECT ? `${window.QUIZ_SUBJECT}-` : "";
   const doneKey = `done-${subjectPrefix}${classNum}-${year}-${number}`;
 
+  // Remember the last regular quiz opened on this device, for "continue where you left off" on the home page.
+  if (classNum && year && number) {
+    try {
+      localStorage.setItem("last-visit", JSON.stringify({
+        subject: window.QUIZ_SUBJECT || "math", class: classNum, year, number, t: Date.now(),
+      }));
+    } catch {}
+  }
+
   let isMarkedDone = localStorage.getItem(doneKey) === "true";
   if (isMarkedDone) {
     tickSpan.textContent = "✔";
@@ -798,9 +848,15 @@ function renderQuiz(){
       const idx = sel ? parseInt(sel.value, 10) : null;
       const correct = isAnswerCorrect(q, idx);
       tagged.push({ q, correct, hint: hintUsed[i] > 0 });
-      // simulation: record every answered question now (standard mode recorded them on answer)
-      if (simulationMode && idx != null && window.QuizProgress) QuizProgress.record(problemIdFor(q, i), correct);
+      // simulation: record every answered question now (standard mode recorded them on answer).
+      // Time per question is unknown here (answers can be changed freely), so it's saved as null.
+      if (simulationMode && idx != null) saveResult(q, i, idx, correct, null);
     });
+
+    if (simulationMode && tagged.some(r => !r.correct)) {
+      const nudge = guestNudge("შედი ანგარიშზე, რომ შეცდომები შეცდომების რვეულში შეინახო.");
+      if (nudge) resultBox.appendChild(nudge);
+    }
 
     const withHint = tagged.filter(r => r.hint);
     if (withHint.length) {
