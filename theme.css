@@ -1,0 +1,140 @@
+/* Site theme "Sand": beige, terracotta, serif headings, outlined buttons. Loaded last on every page; overrides the tokens in style.css. */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@500;600;700&display=swap');
+:root, :root[data-theme="light"] {
+  --background-light: #f6f1e9;
+  --card-bg: #fffaf3;
+  --card-bg-secondary: #f1e9dd;
+  --text-primary: #2e2620;
+  --text-secondary: #6e6157;
+  --primary-color: #9e5130;
+  --secondary-color: #84432a;
+  --accent-color: #9e5130;
+  --primary-rgb: 158, 81, 48;
+  --accent-rgb: 158, 81, 48;
+  --border-color: rgba(90, 60, 35, 0.14);
+  --box-shadow: 0 1px 0 rgba(90,60,35,.06);
+  --card-shadow: 0 1px 0 rgba(90,60,35,.06);
+  --card-shadow-hover: 0 10px 26px rgba(90,60,35,.10);
+  --heading-font: 'Noto Serif Georgian', Georgia, serif;
+  --btn-bg: transparent; --btn-bg-hover: #9e5130; --btn-fg: #9e5130; --btn-fg-hover: #fffaf3;
+  --btn-border: 2px solid #9e5130; --btn-radius: 10px;
+  --card-radius: 12px; --chip-radius: 8px;
+  --hero-bg: transparent;
+  --ok-bg: #e5eedc; --ok-border: #b2c99c; --ok-fg: #344d22;
+  --bad-bg: #f5e0d8; --bad-border: #dcae9c; --bad-fg: #7a2f1a;
+}
+.main-title .highlight { font-style: normal; }
+.grade-number { font-weight: 600 !important; }
+/* dark: brown-black, warm apricot */
+:root[data-theme="dark"] {
+  --background-light: #1c1814; --card-bg: #25201b; --card-bg-secondary: #2d2721;
+  --text-primary: #efe6da; --text-secondary: #b5a796;
+  --primary-color: #e0936b; --secondary-color: #e8a886; --accent-color: #e0936b;
+  --primary-rgb: 224, 147, 107; --accent-rgb: 224, 147, 107;
+  --border-color: rgba(239, 230, 218, 0.12);
+  --box-shadow: 0 1px 0 rgba(0,0,0,.3); --card-shadow: 0 1px 0 rgba(0,0,0,.3);
+  --card-shadow-hover: 0 10px 26px rgba(0,0,0,.35);
+  --btn-bg: transparent; --btn-bg-hover: #e0936b; --btn-fg: #e0936b; --btn-fg-hover: #1c1814;
+  --btn-border: 2px solid #e0936b;
+  --ok-bg: #2c3822; --ok-border: #566b3f; --ok-fg: #c7dcae;
+  --bad-bg: #3d2620; --bad-border: #6d3b2c; --bad-fg: #f2bba6;
+}
+
+/* Shared component layer: uses only the tokens above. */
+html, body { background: var(--background-light) !important; }
+body { line-height: var(--body-lh, 1.6); letter-spacing: 0.005em; }
+
+/* nav: same tone as the page, thin line instead of a shadow */
+.main-nav {
+  background: color-mix(in srgb, var(--background-light) 88%, transparent) !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--border-color);
+}
+.logo { color: var(--text-primary) !important; font-family: var(--heading-font); }
+.logo i { color: var(--primary-color); font-size: 1.6rem !important; }
+.logo span { font-size: 1.25rem; }
+
+/* headings */
+h1, h2, .main-title, .text-title { font-family: var(--heading-font); text-shadow: none !important; }
+.text-title, .text-title * { text-shadow: none !important; filter: none !important; }
+.classes-container { background: transparent !important; }
+.main-title { font-weight: 700; letter-spacing: -0.01em; }
+.main-title .highlight, .text-title .highlight, .highlight {
+  background: none !important; -webkit-background-clip: initial !important; background-clip: initial !important;
+  color: var(--primary-color) !important;
+}
+
+/* home */
+.hero-section { background: var(--hero-bg, transparent) !important; }
+.hero-content::before { display: none !important; }
+.main-button {
+  background: var(--btn-bg) !important; color: var(--btn-fg) !important;
+  border: var(--btn-border, none) !important;
+  box-shadow: var(--btn-shadow, none) !important;
+  border-radius: var(--btn-radius, 14px) !important;
+  font-size: 1.3rem !important; min-width: 280px !important;
+}
+.main-button::before { display: none; }
+.main-button:hover { background: var(--btn-bg-hover) !important; color: var(--btn-fg-hover, var(--btn-fg)) !important; transform: translateY(-1px); }
+
+/* classes */
+.classes-container::before, .classes-container::after { display: none !important; }
+.grade-card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--card-shadow) !important;
+  border-radius: var(--card-radius, 18px) !important;
+}
+.grade-card::after, .grade-card .shine { display: none !important; }
+.grade-card:hover { transform: translateY(-3px) !important; box-shadow: var(--card-shadow-hover) !important; border-color: rgba(var(--primary-rgb), 0.45) !important; }
+.grade-number, .grade-card:hover .grade-number {
+  background: none !important; -webkit-background-clip: initial !important; background-clip: initial !important;
+  color: var(--primary-color) !important; font-family: var(--heading-font);
+}
+.grade-content h2 { color: var(--text-primary) !important; font-weight: 600; }
+.grade-card.special { background: var(--card-bg-secondary) !important; }
+.grade-icon { color: var(--primary-color) !important; }
+.problem-bank-link { color: var(--primary-color) !important; }
+
+/* quiz */
+.quiz-card-main, .mode-selection-card {
+  background: var(--card-bg) !important; border: 1px solid var(--border-color) !important;
+  box-shadow: var(--card-shadow) !important; border-radius: var(--card-radius, 18px) !important;
+}
+#quizForm fieldset { border-color: var(--border-color) !important; }
+#quizForm legend { font-size: 1.06rem !important; line-height: 1.7 !important; font-weight: 500 !important; }
+.button, .action-row button[type="submit"] {
+  background: var(--btn-bg) !important; color: var(--btn-fg) !important; border: var(--btn-border, none) !important;
+  border-radius: var(--btn-radius, 12px) !important; box-shadow: none !important;
+}
+html body .option-chip {
+  background: var(--card-bg-secondary) !important; border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important; border-radius: var(--chip-radius, 12px) !important;
+  padding: .65rem 1.1rem !important;
+}
+html body .option-chip:hover { border-color: rgba(var(--primary-rgb), 0.55) !important; }
+html body .option-chip.selected { background: rgba(var(--primary-rgb), 0.12) !important; border-color: rgba(var(--primary-rgb), 0.7) !important; box-shadow: none !important; }
+html body .option-chip.is-correct { background: var(--ok-bg) !important; border-color: var(--ok-border) !important; color: var(--ok-fg) !important; box-shadow: none !important; }
+html body .option-chip.is-wrong { background: var(--bad-bg) !important; border-color: var(--bad-border) !important; color: var(--bad-fg) !important; box-shadow: none !important; }
+.solution { background: var(--card-bg-secondary) !important; border: 1px solid var(--border-color) !important; border-radius: 12px !important; }
+.solution summary { color: var(--primary-color) !important; }
+.tag-hint-btn { color: var(--primary-color) !important; border-color: rgba(var(--primary-rgb), 0.4) !important; background: transparent !important; }
+
+/* footer */
+.main-footer { background: transparent !important; border-top: 1px solid var(--border-color); color: var(--text-secondary) !important; }
+.email-link { color: var(--primary-color) !important; }
+#toggle-dark { color: var(--text-secondary) !important; }
+
+/* phones: formulas inside answer options were tiny */
+@media (max-width: 600px) {
+  html body #quizForm fieldset mjx-container.MathJax { font-size: 1.15rem !important; }
+  html body .option-chip { padding: .55rem .95rem !important; }
+}
+
+/* text on filled accent backgrounds (white was unreadable on the dark-mode apricot) */
+:root, :root[data-theme="light"] { --on-primary: #fffaf3; }
+:root[data-theme="dark"] { --on-primary: #1c1814; }
+.pb-badge, .pb-make-quiz, .vertical-buttons button, html body .mark-done-btn.is-done, html body button[type="submit"] { color: var(--on-primary) !important; }
+.button:hover, .action-row button[type="submit"]:hover {
+  background: var(--btn-bg-hover) !important; color: var(--btn-fg-hover) !important;
+}
