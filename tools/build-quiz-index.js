@@ -6,7 +6,7 @@
  *
  * Run it after adding, removing or emptying a quiz file, or after changing tags:
  *     node tools/build-quiz-index.js
- * It also rebuilds data/problems.json (the problem browser's data).
+ * It also rebuilds data/problems.json (the problem browser's data) and sitemap.xml.
  *
  * Output shape:
  * {
@@ -90,3 +90,7 @@ if (skipped.length) console.log(`  skipped (empty): ${skipped.join(", ")}`);
 // Also rebuild the problem browser's data (data/problems.json) from the same quiz files.
 const problems = require("./build-problem-index").build();
 console.log(`data/problems.json: ${problems.count} problems, ${(problems.bytes / 1024).toFixed(0)} KB`);
+
+// And the sitemap, which lists every quiz page.
+const sitemap = require("./build-sitemap").build(index);
+console.log(`sitemap.xml: ${sitemap.count} URLs`);

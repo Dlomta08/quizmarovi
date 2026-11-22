@@ -5,6 +5,21 @@ let simulationMode = false;
 const variantebi = ["ა) ", "ბ) ", "გ) ", "დ) ", "ე) ", "ვ) "];
 const selectionFadeTimers = new WeakMap();
 
+/**
+ * Typesets the math inside `nodes`. MathJax loads async, and until it has started
+ * window.MathJax is only the config object from the page <head>, with no typeset methods.
+ * Content that is already on the page when MathJax starts is typeset by MathJax itself,
+ * so nothing is lost by skipping it here. Calls are chained on startup.promise, as the
+ * MathJax docs recommend, so two typesets never run at the same time.
+ */
+function typesetMath(nodes) {
+  const mj = window.MathJax;
+  if (!mj || typeof mj.typesetPromise !== "function" || !mj.startup || !mj.startup.promise) return;
+  mj.startup.promise = mj.startup.promise
+    .then(() => mj.typesetPromise(nodes))
+    .catch(err => console.warn("MathJax:", err));
+}
+
 (function ensureGlobalStyles(){
   if (document.getElementById("quiz-global-styles")) return;
   const s = document.createElement("style");
@@ -413,6 +428,8 @@ function revealAllAnswers(form){
 
 function renderQuiz(){
   const form = document.getElementById("quizForm");
+  // Forget math MathJax typeset in an earlier render before throwing that markup away.
+  if (window.MathJax && typeof MathJax.typesetClear === "function") MathJax.typesetClear([form]);
   form.innerHTML = "";
   hintControls = [];
   hintUsed = [];
@@ -425,14 +442,12 @@ function renderQuiz(){
       introDiv.className = "introduction";
       introDiv.innerHTML = quizData[i].intro;
       form.appendChild(introDiv);
-      if (window.MathJax) MathJax.typeset();
     }
     if (quizData.length > 0 && typeof quizData[i].task === "string" && quizData[i].task.trim() !== "") {
       const taskDiv = document.createElement("div");
       taskDiv.className = "task";
       taskDiv.innerHTML = quizData[i].task;
       form.appendChild(taskDiv);
-      if (window.MathJax) MathJax.typeset();
     }
     if (typeof q.warning === "string" && q.warning.trim() !== "") {
       const warnDiv = document.createElement("div");
@@ -688,7 +703,7 @@ function renderQuiz(){
     
   });
 
-  if (window.MathJax) MathJax.typeset();
+  typesetMath([form]);
 
   const submitBtn = document.createElement("button");
   submitBtn.type = "submit";
@@ -825,7 +840,7 @@ function renderQuiz(){
 
     if (simulationMode) form.querySelector("button[type='submit']").disabled = true;
     removeFloatingTimer();
-    if (window.MathJax) MathJax.typeset();
+    typesetMath([form]);
   });
 };
 

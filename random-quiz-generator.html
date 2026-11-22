@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="შექმენით შემთხვევითი ქვიზი კომაროვის სკოლის წინა წლების ამოცანებიდან: აირჩიეთ კლასები, ქვიზები და ამოცანების რაოდენობა.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="კომაროვის ქვიზები">
+    <meta property="og:locale" content="ka_GE">
+    <meta property="og:title" content="შემთხვევითი ქვიზის გენერატორი · კომაროვის ქვიზები">
+    <meta property="og:description" content="შექმენით შემთხვევითი ქვიზი კომაროვის სკოლის წინა წლების ამოცანებიდან: აირჩიეთ კლასები, ქვიზები და ამოცანების რაოდენობა.">
     <title>შემთხვევითი ქვიზის გენერატორი</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="random-quiz-generator.css">
+    <link rel="stylesheet" href="random-quiz-generator.css?v=5">
     <link rel="stylesheet" href="theme.css?v=5">
     <link rel="icon" type="image/png" href="paper.png">
-    <script src="darkmode.js"></script>
-    <script src="subjects.js"></script>
-    <script src="feedback.js" defer></script>
+    <script src="darkmode.js?v=5"></script>
+    <script src="subjects.js?v=5"></script>
+    <script src="feedback.js?v=5" defer></script>
 </head>
 <body>
 
@@ -111,7 +116,7 @@
                 .catch(() => render(subject.id === 'physics' ? [8, 9, 10, 11] : [7, 8, 9, 10, 11]));
         })();
     </script>
-    <script src="rand.js?v=4"></script>
+    <script src="rand.js?v=5"></script>
     <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>

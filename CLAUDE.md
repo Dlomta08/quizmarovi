@@ -12,13 +12,13 @@ There is no package.json, test suite or linter. Node is used only for the script
 
 ```sh
 python -m http.server 8000 --bind 127.0.0.1   # run locally → http://127.0.0.1:8000/
-node tools/build-quiz-index.js                # rebuild quizzes.json AND data/problems.json
+node tools/build-quiz-index.js                # rebuild quizzes.json, data/problems.json AND sitemap.xml
 node tools/build-problem-index.js             # rebuild only data/problems.json
 node tools/validate-tags.js [--errors|--summary] [class-9]   # check tags against data/tags.json (exit 1 on errors)
 node tools/auto-tag.js --dry | (none) | --force              # suggest tags into quiz files
 ```
 
-Run `build-quiz-index.js` after adding/removing/emptying a quiz file; run `build-problem-index.js` (or the former) after changing any math problem's text, options or tags. Both generated JSON files are committed.
+Run `build-quiz-index.js` after adding/removing/emptying a quiz file; run `build-problem-index.js` (or the former) after changing any math problem's text, options or tags. The generated files (incl. `sitemap.xml`, which lists every quiz page) are committed.
 
 ## Data model
 
@@ -40,6 +40,8 @@ Run `build-quiz-index.js` after adding/removing/emptying a quiz file; run `build
 
 ## Conventions
 
-- CSS/JS links for the quiz/problem pages carry a `?v=N` cache-busting query (currently `v=4`); bump it in every HTML page that loads a file when that file changes.
+- Every local CSS/JS link in the HTML pages carries a `?v=N` cache-busting query (currently `v=5` everywhere); bump it in every HTML page that loads a file when that file changes.
+- MathJax loads async and `window.MathJax` is only the config object until it starts, so never call `MathJax.typeset*` unguarded; in `quiz.js` use `typesetMath(nodes)`.
+- `404.html` is served by Vercel for any missing URL, so it uses absolute asset paths.
 - Quiz PDFs are named like `მათ-<grade>-<quiz>-<variant>[-პას]` (`-პას` = answer key) and map to `quizzes/class-G/YEAR/quiz-N.js`.
 - After editing quiz files, check they still parse (e.g. `new Function(src + ';return quizData')()` in Node) and that MathJax renders without errors in the browser.
