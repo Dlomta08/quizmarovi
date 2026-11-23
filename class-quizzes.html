@@ -18,12 +18,12 @@
     <script src="darkmode.js?v=5"></script>
     <!-- student accounts (optional login): library, project config, header widget -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
-    <script src="supabase-config.js?v=5" defer></script>
-    <script src="auth.js?v=6" defer></script>
-    <script src="cloud.js?v=7" defer></script>
+    <script src="supabase-config.js?v=6" defer></script>
+    <script src="auth.js?v=8" defer></script>
+    <script src="cloud.js?v=9" defer></script>
     <script src="subjects.js?v=5"></script>
     <script src="feedback.js?v=5" defer></script>
-    <script src="notice.js?v=6" defer></script>
+    <script src="notice.js?v=7" defer></script>
 </head>
 <body>
     <nav class="main-nav">
@@ -69,7 +69,12 @@
     <script>
     (function () {
         const { subject, pageUrl, loadQuizIndex, ordinal } = window.QuizSite;
-        const classNum = parseInt(new URLSearchParams(location.search).get("class"), 10) || 7;
+        const classNum = parseInt(new URLSearchParams(location.search).get("class"), 10);
+        // No grade in the link (e.g. old /physics-quizzes links): let the student pick one.
+        if (!classNum) {
+            location.replace(pageUrl("classes.html"));
+            return;
+        }
 
         const heading = `${ordinal(classNum)} კლასის ${subject.genitive} ქვიზები`;
         document.title = heading;

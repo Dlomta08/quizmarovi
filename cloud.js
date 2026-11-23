@@ -35,13 +35,16 @@
   // The database checks the answer itself (record_attempt, see supabase/02-daily-problem.sql)
   // and returns { is_correct, xp, daily }. Resolves to that object, or null on error.
   async function send(a) {
-    const { data, error } = await auth().client.rpc('record_attempt', {
+    const args = {
       p_problem_id: a.problemId,
       p_answer: a.answer == null ? null : String(a.answer),
       p_is_correct: !!a.isCorrect,
       p_time: a.seconds == null ? null : Math.round(a.seconds),
       p_subject: 'math'
-    });
+    };
+    // topic practice (mastery.html): the answer counts only for this topic (supabase/04-topic-practice.sql)
+    if (a.topic) args.p_topic = a.topic;
+    const { data, error } = await auth().client.rpc('record_attempt', args);
     if (error) { console.warn('cloud.js: attempt not saved', error); return null; }
     return data || {};
   }
@@ -50,7 +53,12 @@
   let refreshTimer = null;
   function refreshSoon() {
     clearTimeout(refreshTimer);
-    refreshTimer = setTimeout(() => { if (auth()) auth().refreshProfile(); }, 1500);
+    refreshTimer = setTimeout(async () => {
+      if (!auth()) return;
+      await auth().refreshProfile();
+      // new badge? (badges.js, loaded on the quiz pages) -> "ახალი ბეჯი!" popup
+      if (window.QuizBadges) window.QuizBadges.lightCheck();
+    }, 1500);
   }
 
   /**
@@ -59,10 +67,11 @@
    * @param {number} answer     chosen option index (0 = ა)
    * @param {boolean} isCorrect
    * @param {number|null} seconds  time spent, or null if unknown (simulation mode)
+   * @param {string|null} topic    topic id when practising one topic on the topic map, else null
    */
-  async function recordAttempt(problemId, answer, isCorrect, seconds) {
+  async function recordAttempt(problemId, answer, isCorrect, seconds, topic) {
     if (!problemId) return false;
-    const a = { problemId, answer, isCorrect, seconds };
+    const a = { problemId, answer, isCorrect, seconds, topic: topic || null };
     const A = auth();
     if (!A) return false;
     await A.ready;                       // wait until we know whether someone is logged in

@@ -96,8 +96,9 @@ async function generateQuiz() {
                 if (data) {
                     return data.map((p, k) => ({
                         ...p,
-                        source: meta,
-                        origin: { ...meta, n: k + 1 },   // problem number too, for saved results (progress.js)
+                        // original grade/year/quiz/number, for saved results (progress.js).
+                        // (`source` stays the problem's own textbook reference.)
+                        origin: { ...meta, n: k + 1 },
                         intro: p.random == 1 ? "" : p.intro,
                         task: p.random == 1 ? "" : p.task
                     })).filter(p => p.options && p.options.length);

@@ -11,7 +11,9 @@
     <script>
         window.MathJax = {
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-            svg: { fontCache: 'global' }
+            svg: { fontCache: 'global' },
+            // formulas are not separate Tab stops (keyboard users tab between answer options)
+            options: { menuOptions: { settings: { inTabOrder: false } } }
         };
     </script>
 

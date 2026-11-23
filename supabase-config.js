@@ -8,5 +8,8 @@
 // that key ignores all security rules.
 window.SUPABASE_CONFIG = {
   url: 'https://kfdsufwykgzctdznzdfq.supabase.co',
-  anonKey: 'sb_publishable_WHxgLz6ceCZBjhap8IZfbQ_OXyFfCLU'
+  anonKey: 'sb_publishable_WHxgLz6ceCZBjhap8IZfbQ_OXyFfCLU',
+  // Google OAuth "Client ID" (ends with .apps.googleusercontent.com). Also public by design.
+  // Used for the login window with Google's button (auth.js). Empty = old redirect login.
+  googleClientId: ''
 };

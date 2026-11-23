@@ -32,5 +32,29 @@
     return r ? (r.s ? "right" : "wrong") : "new";
   }
 
-  window.QuizProgress = { id, record, status, all };
+  /*
+   * Daily problem, guests: the FIRST answer of the day is kept separately, so answering again
+   * (reopening it with "ნახვა" or reloading the quiz) can't turn a wrong answer into a solved one.
+   *   localStorage "daily-first" = { "<pid>": { s: 1 | 0, d: "<Tbilisi date YYYY-MM-DD>" } }  (today only)
+   * Logged-in students don't need this: the database keeps the one try (03-daily-one-try.sql).
+   */
+  const DAILY_KEY = "daily-first";
+  const tbilisiDay = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tbilisi" }).format(new Date());
+
+  function dailyFirst() {
+    try { return JSON.parse(localStorage.getItem(DAILY_KEY)) || {}; } catch { return {}; }
+  }
+
+  function recordDailyFirst(pid, correct) {
+    if (!pid) return;
+    const day = tbilisiDay();
+    const old = dailyFirst();
+    if (old[pid] && old[pid].d === day) return;   // already answered today: keep the first answer
+    const kept = {};
+    Object.keys(old).forEach(k => { if (old[k] && old[k].d === day) kept[k] = old[k]; });
+    kept[pid] = { s: correct ? 1 : 0, d: day };
+    try { localStorage.setItem(DAILY_KEY, JSON.stringify(kept)); } catch {}
+  }
+
+  window.QuizProgress = { id, record, status, all, recordDailyFirst, dailyFirst };
 })();

@@ -22,13 +22,19 @@
     return;
   }
 
+  // Saving an answer must finish even if the student leaves the page right after answering
+  // (e.g. answers, then clicks "back"). `keepalive` lets the browser complete that request.
+  const fetchWithKeepalive = (url, opts) =>
+    fetch(url, String(url).includes('/rpc/record_attempt') ? { ...opts, keepalive: true } : opts);
+
   const client = window.supabase.createClient(cfg.url, cfg.anonKey, {
     auth: {
       persistSession: true,       // stay logged in after closing the tab (stored in localStorage)
       autoRefreshToken: true,
       detectSessionInUrl: true,   // finish the login when Google sends the user back here
       flowType: 'pkce'            // returns ?code=... instead of tokens in the URL #hash
-    }
+    },
+    global: { fetch: fetchWithKeepalive }
   });
 
   // Preset avatars (key saved in the DB -> emoji shown). Keep keys short and stable:
@@ -81,11 +87,135 @@
   }
 
   // ---------------------------------------------------------------- actions
-  function signIn() {
+  // Old way (fallback): full-page redirect through Supabase. Google's screen then says
+  // "to continue to ...supabase.co", which is why the login window below is preferred.
+  function signInRedirect() {
     // Google sends the user back to this exact page after login.
     return client.auth.signInWithOAuth({
       provider: 'google',
       options: { redirectTo: location.href.split('#')[0] }
+    });
+  }
+
+  // "შესვლა" opens our login window with Google's own button (Google Identity Services).
+  // The login happens on our site, so Google says "to continue to komaroviqvizebi.ge".
+  // Without a Google client id in supabase-config.js, the old redirect is used instead.
+  function signIn() {
+    if (!cfg.googleClientId) return signInRedirect();
+    openLogin();
+  }
+
+  // ---------------------------------------------------------------- Google button (GIS)
+  // Google's script is loaded only when the login window is opened for the first time.
+  let gisPromise = null;
+  function loadGis() {
+    if (!gisPromise) {
+      gisPromise = new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = 'https://accounts.google.com/gsi/client';
+        s.async = true;
+        s.onload = () => (window.google && google.accounts && google.accounts.id ? resolve() : reject(new Error('GIS missing')));
+        s.onerror = () => reject(new Error('GIS failed to load'));
+        document.head.appendChild(s);
+      });
+      gisPromise.catch(() => { gisPromise = null; });   // allow a retry next time
+    }
+    return gisPromise;
+  }
+
+  // A "nonce" is a random one-time value: Google puts its SHA-256 hash inside the login
+  // token, and Supabase checks it against the original. This stops a stolen token from
+  // being reused. One per page is enough.
+  let nonce = null;
+  async function getNonce() {
+    if (nonce) return nonce;
+    const raw = Array.from(crypto.getRandomValues(new Uint8Array(32)), b => b.toString(16).padStart(2, '0')).join('');
+    const hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(raw));
+    const hashed = Array.from(new Uint8Array(hash), b => b.toString(16).padStart(2, '0')).join('');
+    nonce = { raw, hashed };
+    return nonce;
+  }
+
+  let gisReady = false;
+  async function initGis(onCredential) {
+    await loadGis();
+    const n = await getNonce();
+    if (!gisReady) {
+      google.accounts.id.initialize({
+        client_id: cfg.googleClientId,
+        nonce: n.hashed,
+        auto_select: false,
+        callback: (resp) => onCredential(resp.credential, n.raw)
+      });
+      gisReady = true;
+    }
+  }
+
+  // ---------------------------------------------------------------- login window
+  let loginModal = null;
+  let loginHandler = null;     // what to do with Google's answer (set by the open window)
+
+  function closeLogin() {
+    if (loginModal) { loginModal.remove(); loginModal = null; }
+    document.removeEventListener('keydown', escLogin);
+  }
+  function escLogin(e) { if (e.key === 'Escape') closeLogin(); }
+
+  function openLogin() {
+    if (loginModal) return;
+    loginModal = document.createElement('div');
+    loginModal.className = 'auth-backdrop';
+    loginModal.innerHTML = `
+<div class="auth-modal auth-login-modal" role="dialog" aria-modal="true" aria-labelledby="auth-login-title">
+  <button type="button" class="auth-x" aria-label="დახურვა">✕</button>
+  <div class="auth-login-ic" aria-hidden="true">🎓</div>
+  <h2 id="auth-login-title">შესვლა</h2>
+  <p class="sub">შედი, რომ შეინახო პროგრესი, შეცდომების რვეული, XP და სერია. შესვლა არ არის სავალდებულო.</p>
+  <div class="auth-gsi"><span class="auth-gsi-wait">იტვირთება...</span></div>
+  <div class="auth-err" role="alert"></div>
+  <p class="auth-privacy">ვინახავთ მხოლოდ მეტსახელს, კლასს, ავატარს და პასუხებს.
+    <a href="privacy.html" target="_blank" rel="noopener" style="color:var(--primary-color)">კონფიდენციალურობა</a></p>
+  <p class="auth-privacy auth-alt" hidden>ღილაკი არ ჩანს? <button type="button" class="auth-redirect">სხვა გზით შესვლა</button></p>
+</div>`;
+    const box = loginModal.querySelector('.auth-gsi');
+    const err = loginModal.querySelector('.auth-err');
+    const alt = loginModal.querySelector('.auth-alt');
+    loginModal.querySelector('.auth-x').addEventListener('click', closeLogin);
+    loginModal.addEventListener('click', e => { if (e.target === loginModal) closeLogin(); });
+    loginModal.querySelector('.auth-redirect').addEventListener('click', signInRedirect);
+    document.addEventListener('keydown', escLogin);
+    document.body.appendChild(loginModal);
+
+    // Google's answer: a signed token (JWT) for the chosen account -> give it to Supabase.
+    loginHandler = async (credential, rawNonce) => {
+      err.textContent = '';
+      const { error } = await client.auth.signInWithIdToken({ provider: 'google', token: credential, nonce: rawNonce });
+      if (error) {
+        console.warn('auth.js: signInWithIdToken failed', error);
+        err.textContent = 'შესვლა ვერ მოხერხდა. სცადე თავიდან.';
+        alt.hidden = false;
+        return;
+      }
+      closeLogin();   // onAuthStateChange (below) updates the header / shows onboarding
+    };
+
+    initGis((cred, raw) => loginHandler && loginHandler(cred, raw)).then(() => {
+      if (!loginModal) return;
+      box.textContent = '';
+      const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      google.accounts.id.renderButton(box, {
+        type: 'standard', theme: dark ? 'filled_black' : 'outline', size: 'large', shape: 'pill',
+        text: 'signin_with', logo_alignment: 'center', locale: 'ka',
+        width: Math.min(320, box.clientWidth || 320)
+      });
+      // If Google refuses this address (e.g. not in "Authorized JavaScript origins"),
+      // the button stays empty: offer the old way after a moment.
+      setTimeout(() => { if (loginModal && !box.querySelector('iframe')) alt.hidden = false; }, 4000);
+    }).catch(e => {
+      console.warn('auth.js: Google button unavailable', e);
+      if (!loginModal) return;
+      box.textContent = '';
+      alt.hidden = false;
     });
   }
 
@@ -188,6 +318,15 @@
 .auth-go:disabled{opacity:.6;cursor:default}
 .auth-privacy{font-size:.78rem;color:var(--text-secondary);text-align:center;margin:.8rem 0 0}
 .auth-privacy button{background:none;border:0;color:var(--primary-color);cursor:pointer;font:inherit;text-decoration:underline;padding:0}
+/* login window (Google's button inside) */
+.auth-login-modal{width:min(380px,100%);text-align:center;position:relative}
+.auth-login-ic{font-size:2rem;line-height:1;margin-bottom:.3rem}
+.auth-login-modal .sub{margin-bottom:1.1rem;line-height:1.55}
+.auth-x{position:absolute;top:.8rem;right:.9rem;background:none;border:0;color:var(--text-secondary);font-size:1.05rem;cursor:pointer;padding:.2rem .4rem;border-radius:6px}
+.auth-x:hover{background:var(--card-bg-secondary)}
+.auth-gsi{display:flex;justify-content:center;min-height:44px;align-items:center}
+.auth-gsi-wait{color:var(--text-secondary);font-size:.9rem}
+.auth-alt[hidden]{display:none}
 `;
     const style = document.createElement('style');
     style.id = 'auth-styles';
@@ -270,6 +409,7 @@
     menu.hidden = true;
     menu.innerHTML =
       '<a href="my-progress.html"><i class="fas fa-chart-line"></i>ჩემი პროგრესი</a>' +
+      '<a href="mastery.html"><i class="fas fa-map"></i>თემების რუკა</a>' +
       '<a href="mistakes.html"><i class="fas fa-book"></i>შეცდომების რვეული</a>' +
       '<hr><button type="button" class="auth-out"><i class="fas fa-right-from-bracket"></i>გასვლა</button>';
     menu.querySelector('.auth-out').addEventListener('click', signOut);

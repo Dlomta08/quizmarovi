@@ -15,21 +15,24 @@
         
         window.MathJax = {
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-            svg: { fontCache: 'global' }
+            svg: { fontCache: 'global' },
+            // formulas are not separate Tab stops (keyboard users tab between answer options)
+            options: { menuOptions: { settings: { inTabOrder: false } } }
         };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" async></script>
     <script src="darkmode.js?v=5"></script>
     <!-- student accounts (optional login): library, project config, header widget -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
-    <script src="supabase-config.js?v=5" defer></script>
-    <script src="auth.js?v=6" defer></script>
-    <script src="cloud.js?v=7" defer></script>
+    <script src="supabase-config.js?v=6" defer></script>
+    <script src="auth.js?v=8" defer></script>
+    <script src="badges.js?v=5" defer></script>
+    <script src="cloud.js?v=9" defer></script>
     <script src="subjects.js?v=5"></script>
   <script src="tags-ui.js?v=5"></script>
-  <script src="progress.js?v=5"></script>
+  <script src="progress.js?v=6"></script>
     <script src="feedback.js?v=5" defer></script>
-    <script src="notice.js?v=6" defer></script>
+    <script src="notice.js?v=7" defer></script>
 </head>
 <body>
 
@@ -104,11 +107,18 @@
             if (config && config.subject === 'physics') {
                 document.getElementById('back-link').href = 'random-quiz-generator.html?subject=physics';
             }
-            // quiz made in the problem browser (problems.js) or the mistakes notebook (mistakes.js):
+            // quiz made in the problem browser, mistakes notebook, daily card or topic map:
             // go back to where it was made
-            if (config && typeof config.back === 'string' && /^(problems|mistakes|index)\.html/.test(config.back)) {
+            if (config && typeof config.back === 'string' && /^(problems|mistakes|index|mastery)\.html/.test(config.back)) {
                 document.getElementById('back-link').href = config.back;
             }
+
+            // topic practice from the topic map (mastery.js): answers count only for this topic
+            if (config && typeof config.topic === 'string' && /^[a-z0-9-]{1,40}$/.test(config.topic)) {
+                window.PRACTICE_TOPIC = config.topic;
+            }
+            // daily problem from the home page: progress.js keeps the first answer of the day
+            if (config && config.daily === true) window.DAILY_PROBLEM = true;
 
             const quizName = config && typeof config.title === 'string' ? config.title : 'შემთხვევითი ქვიზი';
             document.getElementById("quiz-title").textContent = `${quizName} (${window.quizData.length} ამოცანა)`;
@@ -128,14 +138,16 @@
         }
     </script>
          
-    <script src="quiz.js?v=7"></script>
+    <script src="quiz.js?v=9"></script>
     <script>
-    // A one-question quiz (daily problem, one retried mistake) has no use for the 3-hour
-    // simulation, so skip the mode choice and open it in standard mode right away.
-    // The answer is graded on the first click, so there's no "დასრულება" (finish) button either.
-    if (Array.isArray(window.quizData) && window.quizData.length === 1) {
+    // A one-question quiz (daily problem, one retried mistake) and topic practice have no use
+    // for the 3-hour simulation, so skip the mode choice and open in standard mode right away.
+    // One question is graded on the first click, so it gets no "დასრულება" (finish) button either.
+    if (Array.isArray(window.quizData) && (window.quizData.length === 1 || window.PRACTICE_TOPIC)) {
         startQuiz(false);
-        document.querySelectorAll("#quizForm .action-row, #result").forEach(el => el.remove());
+        if (window.quizData.length === 1) {
+            document.querySelectorAll("#quizForm .action-row, #result").forEach(el => el.remove());
+        }
     }
     </script>
     <script>

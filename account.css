@@ -1,4 +1,4 @@
-/* account.css — styles for the student account pages: mistakes.html and my-progress.html.
+/* account.css — styles for the student account pages: mistakes.html, my-progress.html and mastery.html.
    Uses only the color tokens from theme.css, so dark mode works automatically. */
 
 .acc-page {
@@ -252,6 +252,193 @@
 
 .acc-btn-danger:hover {
     background: var(--bad-bg);
+}
+
+/* ---- badges (badges.js, on my-progress.html) ---- */
+/* ring colours: t0 none, t1 bronze, t2 silver, t3 gold */
+:root { --bd-t0: #d9cfc6; --bd-t1: #c98a5a; --bd-t2: #a9b4c0; --bd-t3: #e0b23c; }
+:root[data-theme="dark"] { --bd-t0: #4a413a; }
+.bd-count { float: right; font-size: 0.85rem; font-weight: 500; color: var(--text-secondary); }
+.bd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.8rem; }
+.bd { text-align: center; padding: 0.9rem 0.6rem; border-radius: 14px; background: var(--card-bg-secondary); }
+.bd b { display: block; font-size: 0.88rem; }
+.bd small { display: block; color: var(--text-secondary); font-size: 0.74rem; margin-top: 0.15rem; }
+.bd-medal {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 0.5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.9rem;
+    border: 4px solid var(--bd-t0);
+    background: var(--card-bg);
+}
+.bd-medal.bd-t1 { border-color: var(--bd-t1); }
+.bd-medal.bd-t2 { border-color: var(--bd-t2); }
+.bd-medal.bd-t3 { border-color: var(--bd-t3); box-shadow: 0 0 0 4px rgba(224, 178, 60, 0.18); }
+.bd.lock .bd-medal { filter: grayscale(1); opacity: 0.45; }
+.bd-tiers { display: flex; justify-content: center; gap: 3px; margin-top: 0.35rem; }
+.bd-tiers i { width: 9px; height: 9px; border-radius: 50%; background: var(--border-color); }
+.bd-tiers i.bd-t1 { background: var(--bd-t1); }
+.bd-tiers i.bd-t2 { background: var(--bd-t2); }
+.bd-tiers i.bd-t3 { background: var(--bd-t3); }
+.bd-bar { height: 6px; border-radius: 9px; background: var(--border-color); margin: 0.5rem 0.4rem 0; overflow: hidden; }
+.bd-bar i { display: block; height: 100%; background: var(--primary-color); }
+@media (max-width: 480px) {
+    .bd-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---- topic mastery map (mastery.html) ---- */
+/* level colours: 0 none, 1 started, 2 learning, 3 good, 4 mastered */
+:root {
+    --mx-l0: var(--card-bg-secondary); --mx-l0f: var(--text-secondary);
+    --mx-l1: #f3dccd; --mx-l1f: #7a3f22;
+    --mx-l2: #e6b08f; --mx-l2f: #5c2a12;
+    --mx-l3: #b9d3a0; --mx-l3f: #2f4a1b;
+    --mx-l4: #7fae5a; --mx-l4f: #ffffff;
+}
+:root[data-theme="dark"] {
+    --mx-l1: #4a3125; --mx-l1f: #f2c9b2;
+    --mx-l2: #7a4a31; --mx-l2f: #ffe3d2;
+    --mx-l3: #3e5a2c; --mx-l3f: #d6ecc2;
+    --mx-l4: #6d9a4a; --mx-l4f: #ffffff;
+}
+.mx-l0 { background: var(--mx-l0); color: var(--mx-l0f); }
+.mx-l1 { background: var(--mx-l1); color: var(--mx-l1f); }
+.mx-l2 { background: var(--mx-l2); color: var(--mx-l2f); }
+.mx-l3 { background: var(--mx-l3); color: var(--mx-l3f); }
+.mx-l4 { background: var(--mx-l4); color: var(--mx-l4f); }
+
+.acc-page.mx-page { max-width: 1000px; }
+
+.mx-next {
+    background: var(--card-bg);
+    border: 1px solid rgba(var(--primary-rgb), 0.45);
+    border-radius: 16px;
+    padding: 1rem 1.1rem 0.4rem;
+    margin-bottom: 1.2rem;
+}
+.mx-next h2 { font-size: 1rem; margin: 0 0 0.6rem; }
+.mx-next h2 i { color: var(--primary-color); }
+.mx-nx {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.55rem 0;
+    border-top: 1px solid var(--border-color);
+}
+.mx-nx span { flex: 1; font-size: 0.92rem; min-width: 0; }
+.mx-nx b { font-weight: 500; }
+.mx-nx small { display: block; color: var(--text-secondary); font-size: 0.8rem; }
+.mx-go {
+    border: 0;
+    background: var(--primary-color);
+    color: var(--on-primary, #fffaf3);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font: 600 0.82rem 'Noto Sans Georgian', sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.mx-go:disabled, .mx-big:disabled { opacity: 0.6; cursor: default; }
+
+.mx-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.9rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin: 0 0 0.4rem;
+}
+.mx-legend i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    vertical-align: -1px;
+    margin-right: 0.3rem;
+    border: 1px solid var(--border-color);
+}
+
+.mx-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 1.2rem;
+    align-items: start;
+}
+.mx-area { font-size: 1.05rem; margin: 1.3rem 0 0.6rem; }
+.mx-grp { margin-bottom: 0.9rem; }
+.mx-grp h3 { margin: 0 0 0.4rem; font-size: 0.88rem; color: var(--text-secondary); font-weight: 600; }
+.mx-tiles { display: flex; flex-wrap: wrap; gap: 6px; }
+.mx-tile {
+    width: 116px;
+    height: 62px;
+    border: 0;
+    border-radius: 10px;
+    padding: 0.4rem 0.5rem;
+    font: 600 0.72rem/1.25 'Noto Sans Georgian', sans-serif;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+/* long names: at most 3 lines, then "…" (the full name is in the tooltip and the panel) */
+.mx-tn {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+}
+.mx-tile:hover { filter: brightness(0.96); }
+.mx-tile.sel { outline: 3px solid var(--primary-color); outline-offset: 2px; }
+
+.mx-panel {
+    position: sticky;
+    top: 90px;
+    margin-top: 1.3rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.1rem;
+}
+.mx-crumb { font-size: 0.8rem; color: var(--text-secondary); }
+.mx-panel h3 { margin: 0.2rem 0 0.4rem; font-size: 1.05rem; }
+.mx-pill { display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; margin-bottom: 0.6rem; }
+.mx-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    padding: 0.45rem 0;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+.mx-row b { text-align: right; }
+.mx-big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.8rem;
+    padding: 0.65rem;
+    border: 0;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: var(--on-primary, #fffaf3);
+    font: 600 0.95rem 'Noto Sans Georgian', sans-serif;
+    cursor: pointer;
+}
+.mx-all { display: block; text-align: center; margin-top: 0.6rem; font-size: 0.82rem; color: var(--primary-color); }
+
+/* progress page -> map link */
+.acc-box h2 .mx-link { float: right; font-size: 0.85rem; font-weight: 600; color: var(--primary-color); text-decoration: none; }
+
+@media (max-width: 760px) {
+    .mx-layout { grid-template-columns: 1fr; }
+    .mx-panel { position: static; order: -1; margin-top: 0.6rem; scroll-margin-top: 80px; }
+    .mx-tile { width: calc(33.33% - 4px); }
 }
 
 @media (max-width: 640px) {

@@ -108,7 +108,7 @@ const quizData = [
   {
     question: "წყალბადის ატომში, ელექტრონის პირველი დასაშვები ორბიტის რადიუსია $5$x$10^{-11}\\text{მ}$. განსაზღვრეთ მოცემულ ორბიტაზე ელექტრონის სიჩქარე (კულონის მუდმივა $K=9\\cdot10^9\\text{ნმ}^2/\\text{კ}^2,$ ელექტრონის მუხტის მოდული $q_e=16\\cdot10^{-20}\\text{კ},$ ელექტრონის მასა $m_e=9\\cdot10^{-31}\\text{კგ})$",
     options: ["$2\\sqrt{3}\\cdot10^5\\text{მ/წმ}$", "$16\\sqrt{2}\\cdot10^5\\text{მ/წმ}$", "$6\\cdot10^5\\text{მ/წმ}$", "$7{,}1\\cdot10^5\\text{მ/წმ}$", "$16\\sqrt{2}\\cdot10^5\\text{მ/წმ}$"],
-    correct: 1,
+    correct: [1, 4],   // ბ and ე are the same answer in the source, so both count
     tags: []
   },
 

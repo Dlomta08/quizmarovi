@@ -162,13 +162,29 @@ function createFloatingTimer(){
     ft.id = "floating-timer";
     ft.innerHTML = `<span class="dot"></span><span class="time" id="floating-time">00:00:00</span>`;
     document.body.appendChild(ft);
+    placeFloatingTimer();
+    window.addEventListener("resize", placeFloatingTimer);
   }
   return ft;
+}
+
+// On narrow screens the timer (centered at the top) would cover the header's back link,
+// so there it sits just below the fixed header instead.
+function placeFloatingTimer(){
+  const ft = document.getElementById("floating-timer");
+  if (!ft) return;
+  const nav = document.querySelector(".main-nav");
+  if (nav && window.innerWidth <= 640) {
+    ft.style.top = Math.round(nav.getBoundingClientRect().bottom + 8) + "px";
+  } else {
+    ft.style.top = "";
+  }
 }
 
 function removeFloatingTimer(){
   const ft = document.getElementById("floating-timer");
   if (ft) ft.remove();
+  window.removeEventListener("resize", placeFloatingTimer);
 }
 
 /* ===== Simulation progress saved in sessionStorage (survives a page refresh) ===== */
@@ -354,7 +370,10 @@ function saveResult(q, i, idx, isCorrect, seconds) {
   const pid = problemIdFor(q, i);
   if (!pid) return null;
   QuizProgress.record(pid, isCorrect);
-  if (window.QuizCloud) QuizCloud.recordAttempt(pid, idx, isCorrect, seconds);
+  // daily problem (random-quiz.html sets window.DAILY_PROBLEM): keep the first answer of the day
+  if (window.DAILY_PROBLEM && QuizProgress.recordDailyFirst) QuizProgress.recordDailyFirst(pid, isCorrect);
+  // window.PRACTICE_TOPIC is set by random-quiz.html for topic practice from the topic map
+  if (window.QuizCloud) QuizCloud.recordAttempt(pid, idx, isCorrect, seconds, window.PRACTICE_TOPIC || null);
   return pid;
 }
 
@@ -695,6 +714,7 @@ function renderQuiz(){
       radio.type = "radio";
       radio.name = `question${i}`;
       radio.value = j;
+      radio.tabIndex = -1;   // the label is the Tab stop (it handles Enter/Space); the radio is hidden
 
       // "click" (not "pointerdown") so a touch-scroll that starts on an option doesn't select it.
       label.addEventListener("click", (e) => {
@@ -880,7 +900,8 @@ function renderQuiz(){
       resultBox.appendChild(hintLine);
     }
 
-    if (tagged.length && window.TagUI) {
+    // topic practice: no breakdown by other topics (these answers count only for the practised topic)
+    if (tagged.length && window.TagUI && !window.PRACTICE_TOPIC) {
       const statsBox = document.createElement("div");
       resultBox.appendChild(statsBox);
       TagUI.ready.then(() => renderTopicStats(statsBox, tagged)).catch(() => {});

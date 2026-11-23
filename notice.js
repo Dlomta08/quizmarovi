@@ -1,4 +1,4 @@
-// Small "site is being updated" note, shown on every page load.
+// Small "site is being updated" note, shown once per browser session (first page opened).
 // Kept calm: no overlay, sits bottom-left away from the feedback button, slides in after a short
 // delay and hides itself after a few seconds (paused while hovered or focused). × closes it at once.
 (function () {
@@ -106,7 +106,15 @@
     });
   }
 
-  function start() { setTimeout(build, SHOW_DELAY); }
+  // Once per browser session (tab), not on every page: on phones it covers a big part of the screen.
+  const SEEN_KEY = "site-notice-shown";
+  function start() {
+    try {
+      if (sessionStorage.getItem(SEEN_KEY)) return;
+      sessionStorage.setItem(SEEN_KEY, "1");
+    } catch {}
+    setTimeout(build, SHOW_DELAY);
+  }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
   else start();
 })();

@@ -1,8 +1,8 @@
 /*
  * my-progress.js — the "my progress" page (my-progress.html).
  *
- * For the logged-in student shows: problems solved, accuracy, daily streak, XP, accuracy per
- * topic group (weakest first), and the "delete my account" button.
+ * For the logged-in student shows: problems solved, accuracy, daily streak, XP, badges
+ * (badges.js), accuracy per topic group (weakest first), and the "delete my account" button.
  *
  * Data: the profile (QuizAuth.profile) + the my_problem_stats view (one row per problem tried:
  * attempts and correct_count). Topics come from data/problems.json (same ids as the database).
@@ -36,15 +36,18 @@
   }
 
   // Accuracy per topic group, e.g. ტრიგონომეტრია: right answers / all answers on its problems.
+  // stats rows come from my_topic_stats: answers given while practising one topic on the topic map
+  // (practice_topic set) count only for that topic's group, not for the problem's other topics.
   function topicRows(stats, byId) {
+    const groupOf = t => {
+      const info = TagUI.state.topic.get(t);
+      return info && info.parent ? info.parent : t;     // leaf topic -> its group
+    };
     const groups = new Map();
     stats.forEach(s => {
       const p = byId.get(s.problem_id);
       if (!p) return;
-      const ids = new Set((p.t || []).map(t => {
-        const info = TagUI.state.topic.get(t);
-        return info && info.parent ? info.parent : t;   // leaf topic -> its group
-      }));
+      const ids = s.practice_topic ? new Set([groupOf(s.practice_topic)]) : new Set((p.t || []).map(groupOf));
       ids.forEach(id => {
         const g = groups.get(id) || { id, right: 0, total: 0 };
         g.right += s.correct_count;
@@ -60,7 +63,8 @@
   function topicBox(rows) {
     const box = document.createElement("div");
     box.className = "acc-box";
-    box.innerHTML = "<h2>სიზუსტე თემების მიხედვით</h2>";
+    box.innerHTML = '<h2>სიზუსტე თემების მიხედვით <a class="mx-link" href="mastery.html">' +
+      '<i class="fas fa-map"></i> თემების რუკა →</a></h2>';
     if (!rows.length) {
       box.insertAdjacentHTML("beforeend", '<p class="empty">ჯერ არცერთ ამოცანას არ უპასუხე.</p>');
       return box;
@@ -101,9 +105,11 @@
     if (!QuizAuth.isLoggedIn()) { showLoggedOut(); return; }
     note("<p>იტვირთება...</p>");
     try {
-      const [profile, stats, problems] = await Promise.all([
+      const [profile, stats, topicStats, problems] = await Promise.all([
         QuizAuth.refreshProfile(),        // fresh XP / streak
         QuizCloud.fetchAll("my_problem_stats", "problem_id, attempts, correct_count"),
+        // per problem + practised topic (supabase/04-topic-practice.sql); null if not set up yet
+        QuizCloud.fetchAll("my_topic_stats", "problem_id, practice_topic, attempts, correct_count").catch(() => null),
         fetch("data/problems.json", { cache: "no-cache" }).then(r => (r.ok ? r.json() : [])),
         TagUI.ready,
       ]);
@@ -128,8 +134,19 @@
         stat("XP", String(profile ? profile.xp : 0), "+10 ახალ სწორ პასუხზე"),
       );
 
+      // badges (badges.js): computed from the same data; new tiers also pop up "ახალი ბეჯი!"
+      let badgeBox = null;
+      if (window.QuizBadges) {
+        const forBadges = topicStats || stats.map(s => ({ ...s, practice_topic: null }));
+        const values = await QuizBadges.fullValues(problems, forBadges, profile);
+        badgeBox = QuizBadges.renderGrid(QuizBadges.compute(values));
+        QuizBadges.check(values);
+      }
+
       content.textContent = "";
-      content.append(tiles, topicBox(topicRows(stats, byId)), deleteBox());
+      content.append(tiles);
+      if (badgeBox) content.append(badgeBox);
+      content.append(topicBox(topicRows(topicStats || stats, byId)), deleteBox());
     } catch (err) {
       console.error(err);
       note("<p>ჩატვირთვა ვერ მოხერხდა. სცადე გვერდის განახლება.</p>");

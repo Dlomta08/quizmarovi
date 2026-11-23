@@ -6,25 +6,27 @@
     <meta name="robots" content="noindex">
     <title>შეცდომების რვეული · კომაროვის ქვიზები</title>
     <link rel="stylesheet" href="style.css?v=5">
-    <link rel="stylesheet" href="account.css?v=5">
+    <link rel="stylesheet" href="account.css?v=7">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="theme.css?v=5">
     <link rel="icon" type="image/png" href="paper.png">
     <script>
         window.MathJax = {
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-            svg: { fontCache: 'global' }
+            svg: { fontCache: 'global' },
+            // formulas are not separate Tab stops (keyboard users tab between answer options)
+            options: { menuOptions: { settings: { inTabOrder: false } } }
         };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" async></script>
     <script src="darkmode.js?v=5"></script>
     <!-- student accounts (optional login): library, project config, header widget -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
-    <script src="supabase-config.js?v=5" defer></script>
-    <script src="auth.js?v=6" defer></script>
-    <script src="cloud.js?v=7" defer></script>
+    <script src="supabase-config.js?v=6" defer></script>
+    <script src="auth.js?v=8" defer></script>
+    <script src="cloud.js?v=9" defer></script>
     <script src="tags-ui.js?v=5"></script>
-    <script src="practice.js?v=5"></script>
+    <script src="practice.js?v=7"></script>
     <script src="feedback.js?v=5" defer></script>
     <script src="mistakes.js?v=5" defer></script>
 </head>

@@ -55,6 +55,10 @@
   function localProgress() {
     try { return JSON.parse(localStorage.getItem("problem-progress")) || {}; } catch { return {}; }
   }
+  // first answer of the day per daily problem, written by progress.js (recordDailyFirst)
+  function dailyFirst() {
+    try { return JSON.parse(localStorage.getItem("daily-first")) || {}; } catch { return {}; }
+  }
 
   // ---------------------------------------------------------------- loading the problem
   async function loadProblem(pid) {
@@ -142,15 +146,19 @@
       doneDays = new Set(days);
     } else {
       const progress = localProgress();
+      // the first answer given on the daily card today (later answers don't change it);
+      // otherwise the latest answer today from a regular quiz, if any
+      const first = dailyFirst()[pid];
       const r = progress[pid];
-      tried = r && isoOf(r.t) === today.iso ? r.s === 1 : null;
+      tried = first && first.d === today.iso ? first.s === 1
+        : r && isoOf(r.t) === today.iso ? r.s === 1 : null;
       doneDays = new Set(Object.values(progress).filter(x => x && x.s === 1).map(x => isoOf(x.t)));
     }
     if (id !== renderId) return;
     renderWeek(doneDays);
 
     const action = box.querySelector(".dp-action");
-    const open = () => QuizPractice.start([problem.ref], { back: "index.html", title: "დღის ამოცანა" });
+    const open = () => QuizPractice.start([problem.ref], { back: "index.html", title: "დღის ამოცანა", daily: true });
     if (tried !== null) {
       // already answered today: show the result; "ნახვა" reopens it (to read the solution, no XP)
       action.innerHTML = tried
@@ -179,5 +187,7 @@
   if (!window.QuizAuth || !window.QuizCloud || !window.QuizPractice) return;   // accounts unavailable: no card
   QuizAuth.ready.then(show);
   QuizAuth.onChange(() => show());            // logged in / out, or onboarding finished (grade known)
+  // browser "back" from the quiz shows a saved copy of the page: reload the solved state
+  window.addEventListener("pageshow", e => { if (e.persisted) show(); });
   window.QuizDaily = { refresh: show };
 })();

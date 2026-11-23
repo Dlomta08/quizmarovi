@@ -2,7 +2,7 @@
  * practice.js — builds a practice quiz from a list of problems and opens it in random-quiz.html.
  * Shared by problems.js ("ქვიზის შედგენა") and mistakes.js ("თავიდან ცდა").
  *
- *   QuizPractice.start(list, { back, totalAvailable, title })
+ *   QuizPractice.start(list, { back, totalAvailable, title, topic })
  *   list = rows from data/problems.json ({ g, y, q, n, ... })
  *
  * data/problems.json has no answers or solutions, so the original quiz files are loaded to
@@ -55,6 +55,8 @@
       totalAvailable: opts.totalAvailable || quiz.length,
       back: opts.back || "index.html",
       title: opts.title,                 // optional heading, e.g. "შეცდომების გამეორება"
+      topic: opts.topic,                 // topic map practice: answers count only for this topic
+      daily: opts.daily === true,        // daily problem: the first answer of the day is kept (progress.js)
     }));
     location.href = "random-quiz.html";
   }
