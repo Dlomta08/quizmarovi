@@ -196,3 +196,368 @@ main.hero-section {
     margin-left: auto;
     color: var(--primary-color);
 }
+
+/* =====================================================================
+   Home page layout (body.home): daily problem + subjects fit one screen
+   ===================================================================== */
+body.home .hero-section {
+    min-height: 0;
+    padding: 1.2rem 16px 1.6rem;
+    align-items: flex-start;
+}
+
+body.home .container {
+    padding-top: 72px;
+}
+
+body.home .hero-content {
+    gap: 1.5rem;
+    max-width: 960px;
+}
+
+body.home .main-title {
+    font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+    line-height: 1.25;
+}
+
+body.home .main-title br {
+    display: none;
+}
+
+body.home .main-title .highlight {
+    display: inline;
+    font-size: inherit;
+    margin: 0 0 0 0.28em;
+    padding: 0;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 360px);
+    gap: 1.1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.home-grid.has-daily {
+    grid-template-columns: minmax(0, 560px) 320px;
+}
+
+.home-side {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+body.home .home-side .button-wrapper {
+    margin: 0;
+    gap: 0.75rem;
+}
+
+body.home .home-side .main-button {
+    min-width: 0 !important;          /* theme.css sets 280px !important */
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.15rem !important;
+    padding: 0.85rem 1.2rem;
+    justify-content: center;
+}
+
+body.home .home-side .continue-card {
+    margin: 0;
+    width: 100%;
+    flex: 1;
+    padding: 0.75rem 0.9rem;
+}
+
+/* ---- daily problem card ---- */
+.dp {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    text-align: left;
+    color: var(--text-primary);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 14px 34px -18px rgba(90, 60, 35, 0.28);
+}
+
+.dp[hidden] {
+    display: none;
+}
+
+.dp-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1rem;
+    padding: 1rem 0.5rem;
+    background: linear-gradient(170deg, rgba(var(--primary-rgb), 0.16), rgba(var(--primary-rgb), 0.05));
+    border-right: 1px solid var(--border-color);
+}
+
+.dp-date small {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: 0.04em;
+}
+
+.dp-date b {
+    font-family: var(--heading-font);
+    font-size: 2.7rem;
+    line-height: 1;
+}
+
+.dp-date span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.dp-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.1rem 1.2rem 1.05rem;
+    min-width: 0;
+}
+
+.dp-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--primary-color);
+}
+
+.dp-pill {
+    margin-left: auto;
+    font-size: 0.76rem;
+    padding: 0.18rem 0.6rem;
+    border-radius: 99px;
+    background: rgba(var(--primary-rgb), 0.1);
+}
+
+.dp-q {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0.6rem 0 1rem;
+    overflow-x: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;              /* long questions: first 3 lines, full text in the quiz */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.dp-note {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.dp-grades {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.76rem;
+    color: var(--text-secondary);
+    margin: -0.3rem 0 0.8rem;
+}
+
+.dp-grades button {
+    padding: 0.1rem 0.5rem;
+    border-radius: 7px;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg-secondary);
+    color: var(--text-primary);
+    font: 600 0.78rem 'Noto Sans Georgian', sans-serif;
+    cursor: pointer;
+}
+
+.dp-grades button.on {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: rgba(var(--primary-rgb), 0.14);
+}
+
+.dp-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.dp-action {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+}
+
+.dp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: 11px;
+    border: 0;
+    background: var(--primary-color);
+    color: var(--on-primary);
+    font: 600 0.95rem 'Noto Sans Georgian', sans-serif;
+    cursor: pointer;
+}
+
+.dp-btn:hover {
+    background: var(--secondary-color);
+}
+
+.dp-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.dp-xp {
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+}
+
+.dp-xp b {
+    color: var(--primary-color);
+}
+
+.dp-login {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--primary-color);
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.dp-solved {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 11px;
+    background: var(--ok-bg);
+    border: 1px solid var(--ok-border);
+    color: var(--ok-fg);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* daily problem answered wrong today (one try) */
+.dp-solved.dp-missed {
+    background: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.35);
+    color: #dc2626;
+}
+:root[data-theme="dark"] .dp-solved.dp-missed { color: #f87171; }
+
+.dp-view { margin-left: 0.6rem; font-size: 0.9rem; }
+
+.dp-week {
+    display: flex;
+    gap: 0.4rem;
+    align-items: flex-end;
+    margin-left: auto;
+}
+
+.dp-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.66rem;
+    color: var(--text-secondary);
+}
+
+.dp-day i {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-style: normal;
+    font-size: 0.7rem;
+    background: var(--card-bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.dp-day.done i {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--on-primary);
+}
+
+.dp-day.today i {
+    box-shadow: 0 0 0 2px var(--card-bg), 0 0 0 4px rgba(var(--primary-rgb), 0.55);
+}
+
+/* ---- phones: card on top, then "continue", then the two subjects side by side ---- */
+@media (max-width: 860px) {
+    body.home .container {
+        padding-top: 64px;
+    }
+    body.home .hero-content {
+        gap: 1rem;
+    }
+    body.home .main-title {
+        font-size: 1.75rem;
+    }
+    .home-grid,
+    .home-grid.has-daily {
+        grid-template-columns: minmax(0, 560px);
+        gap: 0.7rem;
+    }
+    .home-side {
+        display: contents;
+    }
+    body.home .home-side .button-wrapper {
+        flex-direction: row;
+        order: 3;
+    }
+    body.home .home-side .main-button {
+        font-size: 1rem !important;
+        padding: 0.7rem 0.6rem;
+        flex: 1;
+        gap: 0.5rem;
+    }
+    body.home .home-side .continue-card {
+        order: 2;
+        padding: 0.6rem 0.8rem;
+    }
+    .dp {
+        order: 1;
+        grid-template-columns: 1fr;
+    }
+    .dp-date {
+        flex-direction: row;
+        gap: 0.55rem;
+        justify-content: flex-start;
+        padding: 0.5rem 1rem;
+        border-right: 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .dp-date b {
+        font-size: 1.35rem;
+    }
+    .dp-main {
+        padding: 0.75rem 0.95rem 0.8rem;
+    }
+    .dp-q {
+        margin: 0.35rem 0 0.7rem;
+    }
+    .dp-week {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+}

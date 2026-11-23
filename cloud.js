@@ -32,16 +32,18 @@
   }
 
   // ---------------------------------------------------------------- saving
+  // The database checks the answer itself (record_attempt, see supabase/02-daily-problem.sql)
+  // and returns { is_correct, xp, daily }. Resolves to that object, or null on error.
   async function send(a) {
-    const { error } = await auth().client.rpc('record_attempt', {
+    const { data, error } = await auth().client.rpc('record_attempt', {
       p_problem_id: a.problemId,
       p_answer: a.answer == null ? null : String(a.answer),
       p_is_correct: !!a.isCorrect,
       p_time: a.seconds == null ? null : Math.round(a.seconds),
       p_subject: 'math'
     });
-    if (error) console.warn('cloud.js: attempt not saved', error);
-    return !error;
+    if (error) { console.warn('cloud.js: attempt not saved', error); return null; }
+    return data || {};
   }
 
   // After a correct answer the streak/XP changed: refresh the header (once, not per answer).
@@ -68,9 +70,9 @@
       const list = readGuest(); list.push(a); writeGuest(list);
       return false;
     }
-    const ok = await send(a);
-    if (ok && isCorrect) refreshSoon();
-    return ok;
+    const res = await send(a);
+    if (res && res.is_correct) refreshSoon();
+    return res;
   }
 
   // Save answers given as a guest in this tab, once the user has logged in.
@@ -84,7 +86,8 @@
     writeGuest([]);                      // clear first so a second tab/reload doesn't save twice
     let anyCorrect = false;
     for (const a of list) {              // one by one, in order (first-correct XP depends on order)
-      if (await send(a) && a.isCorrect) anyCorrect = true;
+      const res = await send(a);
+      if (res && res.is_correct) anyCorrect = true;
     }
     flushing = false;
     if (anyCorrect) refreshSoon();
@@ -118,6 +121,39 @@
     return data;
   }
 
+  // ---------------------------------------------------------------- daily problem
+  /** Today's problem id for a grade, e.g. "10-2025-26-2-3" (works for guests too), or null. */
+  async function dailyProblem(grade) {
+    const A = auth();
+    if (!A) return null;
+    const { data, error } = await A.client.rpc('daily_problem', { p_grade: Number(grade) });
+    if (error) { console.warn('cloud.js: daily problem', error); return null; }
+    return data || null;
+  }
+
+  /** Tbilisi days ('YYYY-MM-DD') since `fromDay` on which the student solved something (streak days). */
+  async function activeDays(fromDay) {
+    const A = auth();
+    if (!A || !A.isLoggedIn()) return [];
+    const { data, error } = await A.client.from('my_active_days').select('day').gte('day', fromDay);
+    if (error) { console.warn('cloud.js', error); return []; }
+    return data.map(r => r.day);
+  }
+
+  /** The logged-in student's FIRST answer to this problem today (Tbilisi day):
+   *  true = right, false = wrong, null = not answered yet today. (Daily problem: one try.) */
+  async function firstAnswerToday(problemId) {
+    const A = auth();
+    if (!A || !A.isLoggedIn()) return null;
+    const since = A.tbilisiDate(0) + 'T00:00:00+04:00';
+    const { data, error } = await A.client.from('attempts')
+      .select('is_correct')
+      .eq('problem_id', problemId).gte('created_at', since)
+      .order('created_at', { ascending: true }).limit(1);
+    if (error) { console.warn('cloud.js', error); return null; }
+    return data && data.length ? data[0].is_correct : null;
+  }
+
   async function deleteAccount() {
     const A = auth();
     if (!A || !A.isLoggedIn()) return 'ჯერ შედი ანგარიშზე.';
@@ -138,5 +174,6 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
   else start();
 
-  window.QuizCloud = { recordAttempt, fetchAll, lastAttempt, deleteAccount, flushGuest };
+  window.QuizCloud = { recordAttempt, fetchAll, lastAttempt, deleteAccount, flushGuest,
+                       dailyProblem, activeDays, firstAnswerToday };
 })();

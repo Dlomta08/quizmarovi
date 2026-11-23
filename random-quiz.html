@@ -23,8 +23,8 @@
     <!-- student accounts (optional login): library, project config, header widget -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
     <script src="supabase-config.js?v=5" defer></script>
-    <script src="auth.js?v=5" defer></script>
-    <script src="cloud.js?v=5" defer></script>
+    <script src="auth.js?v=6" defer></script>
+    <script src="cloud.js?v=7" defer></script>
     <script src="subjects.js?v=5"></script>
   <script src="tags-ui.js?v=5"></script>
   <script src="progress.js?v=5"></script>
@@ -106,7 +106,7 @@
             }
             // quiz made in the problem browser (problems.js) or the mistakes notebook (mistakes.js):
             // go back to where it was made
-            if (config && typeof config.back === 'string' && /^(problems|mistakes)\.html/.test(config.back)) {
+            if (config && typeof config.back === 'string' && /^(problems|mistakes|index)\.html/.test(config.back)) {
                 document.getElementById('back-link').href = config.back;
             }
 
@@ -128,7 +128,16 @@
         }
     </script>
          
-    <script src="quiz.js?v=6"></script>
+    <script src="quiz.js?v=7"></script>
+    <script>
+    // A one-question quiz (daily problem, one retried mistake) has no use for the 3-hour
+    // simulation, so skip the mode choice and open it in standard mode right away.
+    // The answer is graded on the first click, so there's no "დასრულება" (finish) button either.
+    if (Array.isArray(window.quizData) && window.quizData.length === 1) {
+        startQuiz(false);
+        document.querySelectorAll("#quizForm .action-row, #result").forEach(el => el.remove());
+    }
+    </script>
     <script>
     document.addEventListener("DOMContentLoaded", () => {
         const hideButton = () => {

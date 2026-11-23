@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link rel="stylesheet" href="style.css?v=5">
-  <link rel="stylesheet" href="index-style.css?v=6">
+  <link rel="stylesheet" href="index-style.css?v=8">
 
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -33,10 +33,15 @@
   <!-- student accounts (optional login): library, project config, header widget -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
   <script src="supabase-config.js?v=5" defer></script>
-  <script src="auth.js?v=5" defer></script>
-  <script src="cloud.js?v=5" defer></script>
+  <script src="auth.js?v=6" defer></script>
+  <script src="cloud.js?v=7" defer></script>
   <script src="feedback.js?v=5" defer></script>
   <script src="notice.js?v=6" defer></script>
+  <!-- daily problem card: formulas (MathJax), quiz builder, card logic -->
+  <script>window.MathJax = { tex: { inlineMath: [["$", "$"]] }, svg: { fontCache: "global" } };</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" async></script>
+  <script src="practice.js?v=5" defer></script>
+  <script src="daily.js?v=6" defer></script>
 
   <style>
       .button-wrapper {
@@ -54,7 +59,7 @@
       }
   </style>
 </head>
-<body>
+<body class="home">
     <nav class="main-nav">
         <div class="nav-content">
             <div class="logo">
@@ -72,23 +77,30 @@
             <div class="hero-content">
                 <h1 class="main-title">კომაროვის სკოლის<br><span class="highlight">ქვიზები</span></h1>
 
-                <div class="button-wrapper">
-                    <a href="classes.html" class="main-button">
-                        <span>მათემატიკა</span>
-                        <i class="fas fa-square-root-variable"></i>
-                    </a>
+                <!-- Daily problem on the left (filled by daily.js), subjects + "continue" on the right.
+                     Built to fit one screen without scrolling (styles in index-style.css, body.home). -->
+                <div class="home-grid">
+                    <section class="dp" id="daily" aria-label="დღის ამოცანა" hidden></section>
+                    <div class="home-side">
+                        <div class="button-wrapper">
+                            <a href="classes.html" class="main-button">
+                                <span>მათემატიკა</span>
+                                <i class="fas fa-square-root-variable"></i>
+                            </a>
 
-                    <a href="classes.html?subject=physics" class="main-button">
-                        <span>ფიზიკა</span>
-                        <i class="fas fa-atom"></i>
-                    </a>
+                            <a href="classes.html?subject=physics" class="main-button">
+                                <span>ფიზიკა</span>
+                                <i class="fas fa-atom"></i>
+                            </a>
 
-                    <!-- <a href="teacher-tool.html" class="main-button">
-                        <span>ქვიზის/ტესტის შექმნა</span>
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </a> -->
+                            <!-- <a href="teacher-tool.html" class="main-button">
+                                <span>ქვიზის/ტესტის შექმნა</span>
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </a> -->
+                        </div>
+                        <!-- "continue where you left off" card is added here (script below) -->
+                    </div>
                 </div>
-                
             </div>
         </div>
     </main>
@@ -140,8 +152,8 @@
         card.innerHTML = '<span class="ic"><i class="fas fa-play"></i></span>' +
             '<span><small>გააგრძელე, სადაც გაჩერდი</small><b></b></span><i class="fas fa-arrow-right go"></i>';
         card.querySelector("b").textContent =
-            `${physics ? "ფიზიკა · " : ""}მე-${last.class} კლასი · ${last.year} · ${quizName} ქვიზი`;
-        document.querySelector(".button-wrapper").before(card);
+            `${physics ? "ფიზიკა · " : ""}მე-${last.class} კლ. · ${last.year} · ${quizName} ქვიზი`;
+        document.querySelector(".home-side").appendChild(card);
     });
     </script>
     <script>

@@ -127,7 +127,8 @@
 .auth-avatar{width:32px;height:32px;border-radius:50%;display:inline-grid;place-items:center;font-size:1.15rem;
   background:rgba(var(--primary-rgb),.12);flex:none}
 .auth-name{max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.auth-streak{color:var(--primary-color);font-size:.85rem;font-weight:600;white-space:nowrap}
+.auth-streak,.auth-xp{color:var(--primary-color);font-size:.85rem;font-weight:600;white-space:nowrap}
+.auth-xp:empty,.auth-streak:empty{display:none}
 .auth-caret{color:var(--text-secondary);font-size:.7rem}
 .auth-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:250px;white-space:nowrap;background:var(--card-bg);
   border:1px solid var(--border-color);border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.14);padding:.4rem;z-index:1500}
@@ -147,6 +148,17 @@
   .auth-login span{display:none}
   .auth-login{width:38px;height:38px;padding:0;justify-content:center}
   .nav-actions{gap:.2rem}
+  .auth-xp-unit{display:none}
+  .auth-user{gap:.3rem;padding:.15rem .5rem .15rem .15rem}
+  .auth-avatar{width:26px;height:26px;font-size:.95rem}
+  .auth-streak,.auth-xp{font-size:.78rem}
+  .nav-content .logo span{white-space:nowrap}
+}
+@media (max-width:400px){
+  .nav-content{padding-left:1rem;padding-right:1rem}
+  .nav-content .logo{gap:.4rem}
+  .nav-content .logo span{font-size:1.05rem}
+  .nav-content .logo i{font-size:1.3rem !important}
 }
 /* onboarding window */
 .auth-backdrop{position:fixed;inset:0;background:rgba(46,38,32,.35);display:grid;place-items:center;z-index:2000;padding:16px;overflow:auto}
@@ -238,11 +250,20 @@
     chip.type = 'button';
     chip.setAttribute('aria-haspopup', 'true');
     chip.innerHTML = '<span class="auth-avatar"></span><span class="auth-name"></span>' +
-                     '<span class="auth-streak"></span><i class="fas fa-chevron-down auth-caret"></i>';
+                     '<span class="auth-xp"></span><span class="auth-streak"></span><i class="fas fa-chevron-down auth-caret"></i>';
     chip.querySelector('.auth-avatar').textContent = p ? (AVATARS[p.avatar] || '🙂') : '🙂';
     chip.querySelector('.auth-name').textContent = p ? p.username : '…';   // textContent = safe, no HTML injection
     const streak = liveStreak(p);
     chip.querySelector('.auth-streak').textContent = streak > 0 ? '🔥 ' + streak : '';
+    if (p) {   // "⭐ 130 XP" (the word "XP" is hidden on phones, see CSS)
+      const xpEl = chip.querySelector('.auth-xp');
+      xpEl.textContent = '⭐ ' + (p.xp || 0);
+      const unit = document.createElement('span');
+      unit.className = 'auth-xp-unit';
+      unit.textContent = ' XP';
+      xpEl.appendChild(unit);
+    }
+    chip.title = streak > 0 ? `${streak} დღე ზედიზედ · ${p.xp || 0} XP` : (p ? `${p.xp || 0} XP` : '');
 
     const menu = document.createElement('div');
     menu.className = 'auth-menu';

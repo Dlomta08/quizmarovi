@@ -310,6 +310,16 @@ function addRipple(el, x, y, color){
 // Per question: the hint control (see renderQuiz) and the deepest hint level opened before answering.
 let hintControls = [];
 let hintUsed = [];
+// Standard mode: the first option clicked per question (that's the answer that counts).
+// Clicking other options afterwards only highlights them and must not change the score.
+let firstAnswers = [];
+
+// The answer that is graded for question i (index of the option, or null if unanswered).
+function gradedAnswer(form, i) {
+  if (!simulationMode) return firstAnswers[i] != null ? firstAnswers[i] : null;
+  const sel = form.querySelector(`input[name="question${i}"]:checked`);
+  return sel ? parseInt(sel.value, 10) : null;
+}
 
 function isAnswerCorrect(q, idx) {
   if (idx == null) return false;
@@ -430,8 +440,8 @@ function revealAllAnswers(form){
       l.classList.remove("is-correct","is-wrong","pop");
     });
 
-    const selected = form.querySelector(`input[name="question${i}"]:checked`);
-    const selectedIdx = selected ? parseInt(selected.value,10) : null;
+    const selectedIdx = gradedAnswer(form, i);
+    const selected = selectedIdx != null;
     if(q.minpoint != null) minpt = q.minpoint;
     if (Array.isArray(q.correct)) {
       q.correct.forEach(idx => {
@@ -468,6 +478,7 @@ function renderQuiz(){
   form.innerHTML = "";
   hintControls = [];
   hintUsed = [];
+  firstAnswers = [];
   answerClock = Date.now();
 
   quizData.forEach((q, i) => {
@@ -612,6 +623,7 @@ function renderQuiz(){
 
       fieldset.classList.add("answered");
       // standard mode: the first answer is the one that counts (the question is locked after it)
+      firstAnswers[i] = selectedIdx;
       const pid = saveResult(q, i, selectedIdx, isCorrect, secondsSinceLastAnswer());
       if (pid && !isCorrect && !fieldset.querySelector(".guest-nudge")) {
         const nudge = guestNudge("შედი ანგარიშზე, რომ ეს ამოცანა შეცდომების რვეულში შეინახო.");
@@ -844,8 +856,7 @@ function renderQuiz(){
     const tagged = [];
     quizData.forEach((q, i) => {
       if (!q.options || !q.options.length || !Array.isArray(q.topics)) return;
-      const sel = form.querySelector(`input[name="question${i}"]:checked`);
-      const idx = sel ? parseInt(sel.value, 10) : null;
+      const idx = gradedAnswer(form, i);
       const correct = isAnswerCorrect(q, idx);
       tagged.push({ q, correct, hint: hintUsed[i] > 0 });
       // simulation: record every answered question now (standard mode recorded them on answer).
