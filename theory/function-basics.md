@@ -6,7 +6,7 @@ group: functions
 grades: [7, 9]
 prerequisites: [sets, rational-expr]
 next: [linear-func, function-props, graph-transform]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

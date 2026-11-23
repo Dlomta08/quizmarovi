@@ -6,7 +6,7 @@ group: functions
 grades: [7]
 prerequisites: [linear-eq, proportion]
 next: [function-basics, linear-systems, line-circle-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: sequences
 grades: [9]
 prerequisites: [linear-func, linear-systems]
 next: [geometric-prog, induction, seq-limit]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

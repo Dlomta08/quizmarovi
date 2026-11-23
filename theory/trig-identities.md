@@ -6,7 +6,7 @@ group: trigonometry
 grades: [10]
 prerequisites: [radians, identities]
 next: [reduction, sum-formulas, trig-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

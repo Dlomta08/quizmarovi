@@ -6,7 +6,7 @@ group: sequences
 grades: [9]
 prerequisites: [arithmetic-prog, powers]
 next: [induction, seq-limit, exp-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

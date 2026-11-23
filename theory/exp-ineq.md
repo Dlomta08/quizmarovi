@@ -6,7 +6,7 @@ group: exp-log
 grades: [11]
 prerequisites: [exp-eq, interval-method]
 next: [log-ineq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

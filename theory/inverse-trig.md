@@ -6,7 +6,7 @@ group: trigonometry
 grades: [10]
 prerequisites: [radians, function-props]
 next: [trig-eq, trig-ineq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

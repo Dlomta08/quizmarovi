@@ -6,7 +6,7 @@ group: trigonometry
 grades: [10]
 prerequisites: [trig-identities, reduction]
 next: [product-sum, trig-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

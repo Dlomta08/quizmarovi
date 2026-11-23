@@ -6,7 +6,7 @@ group: exp-log
 grades: [11]
 prerequisites: [nth-roots, function-props]
 next: [exp-eq, exp-ineq, logarithms]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

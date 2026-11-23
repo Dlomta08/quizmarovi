@@ -6,7 +6,7 @@ group: trigonometry
 grades: [10]
 prerequisites: [inverse-trig, sum-formulas, quadratic-eq]
 next: [trig-ineq, product-sum]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: sequences
 grades: [9]
 prerequisites: [arithmetic-prog, divisibility]
 next: [binomial, seq-limit]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

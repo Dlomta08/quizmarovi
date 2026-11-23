@@ -6,7 +6,7 @@ group: functions
 grades: [9, 11]
 prerequisites: [quadratic-func, means, function-props]
 next: [monotonic-extrema, curve-sketching]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

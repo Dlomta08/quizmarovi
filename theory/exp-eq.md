@@ -6,7 +6,7 @@ group: exp-log
 grades: [11]
 prerequisites: [real-exponent, quadratic-eq]
 next: [exp-ineq, log-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

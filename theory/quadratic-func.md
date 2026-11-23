@@ -6,7 +6,7 @@ group: functions
 grades: [9]
 prerequisites: [quadratic-eq, linear-func, function-basics]
 next: [quadratic-ineq, graph-transform, max-min]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: trigonometry
 grades: [10]
 prerequisites: [trig-eq, inverse-trig, interval-method]
 next: [exp-ineq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

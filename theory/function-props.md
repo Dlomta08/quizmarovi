@@ -6,7 +6,7 @@ group: functions
 grades: [9, 10]
 prerequisites: [function-basics]
 next: [graph-transform, max-min, monotonic-extrema]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

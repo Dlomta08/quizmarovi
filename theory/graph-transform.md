@@ -6,7 +6,7 @@ group: functions
 grades: [9]
 prerequisites: [function-basics, quadratic-func, negative-abs]
 next: [max-min, curve-sketching]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

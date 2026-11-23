@@ -32,7 +32,7 @@
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.70</priority>
 </url>
 <url>
@@ -212,6 +212,121 @@
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=two-var-ineq</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=function-basics</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=function-props</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=linear-func</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=quadratic-func</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=graph-transform</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=max-min</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=arithmetic-prog</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=geometric-prog</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=induction</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=radians</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=trig-identities</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=reduction</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=sum-formulas</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=product-sum</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=inverse-trig</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=trig-eq</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=trig-ineq</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=real-exponent</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=exp-eq</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=exp-ineq</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=logarithms</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=log-eq</loc>
+  <lastmod>2026-11-23</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=log-ineq</loc>
   <lastmod>2026-11-23</lastmod>
   <priority>0.60</priority>
 </url>

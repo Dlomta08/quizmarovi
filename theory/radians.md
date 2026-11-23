@@ -6,7 +6,7 @@ group: trigonometry
 grades: [10]
 prerequisites: [acute-trig, circle-length-area]
 next: [trig-identities, reduction, trig-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა
