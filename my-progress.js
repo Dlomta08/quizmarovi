@@ -2,7 +2,7 @@
  * my-progress.js — the "my progress" page (my-progress.html).
  *
  * For the logged-in student shows: problems solved, accuracy, daily streak, XP, accuracy per
- * topic group (weakest first), and the "delete my account" button.
+ * topic group (weakest first), the duel record (duel.html) and the "delete my account" button.
  *
  * Data: the profile (QuizAuth.profile) + the my_problem_stats view (one row per problem tried:
  * attempts and correct_count). Topics come from data/problems.json (same ids as the database).
@@ -79,6 +79,32 @@
     return box;
   }
 
+  // Duel record (wins / draws / losses) and the latest duels. duels = my_duels() rows, or null if
+  // duels are unavailable (then the box is left out).
+  function duelBox(duels) {
+    if (!duels) return null;
+    const box = document.createElement("div");
+    box.className = "acc-box";
+    box.innerHTML = "<h2>დუელები</h2>";
+    const count = r => duels.filter(x => x.result === r).length;
+    const row = document.createElement("div");
+    row.className = "duel-mini";
+    const text = document.createElement("span");
+    text.className = "acc-count";
+    text.textContent = duels.length
+      ? `მოგება ${count("win")} · ფრე ${count("draw")} · წაგება ${count("loss")}`
+      : "ჯერ არცერთი დუელი არ გქონია.";
+    const waiting = duels.filter(x => (x.status === "open" || x.status === "active") && !x.started).length;
+    const link = document.createElement("a");
+    link.className = "acc-btn";
+    link.href = "duel.html";
+    link.innerHTML = '<i class="fas fa-bolt"></i>';
+    link.append(waiting ? `დუელები (${waiting} გელოდება)` : duels.length ? "ჩემი დუელები" : "ახალი დუელი");
+    row.append(text, link);
+    box.appendChild(row);
+    return box;
+  }
+
   function deleteBox() {
     const box = document.createElement("div");
     box.className = "acc-box acc-danger";
@@ -101,10 +127,12 @@
     if (!QuizAuth.isLoggedIn()) { showLoggedOut(); return; }
     note("<p>იტვირთება...</p>");
     try {
-      const [profile, stats, problems] = await Promise.all([
+      const [profile, stats, problems, duels] = await Promise.all([
         QuizAuth.refreshProfile(),        // fresh XP / streak
         QuizCloud.fetchAll("my_problem_stats", "problem_id, attempts, correct_count"),
         fetch("data/problems.json", { cache: "no-cache" }).then(r => (r.ok ? r.json() : [])),
+        QuizAuth.client.rpc("my_duels", { p_limit: 100 })
+          .then(({ data, error }) => (error ? null : data), () => null),
         TagUI.ready,
       ]);
       const byId = new Map(problems.map(p => [`${p.g}-${p.y}-${p.q}-${p.n}`, p]));
@@ -129,7 +157,7 @@
       );
 
       content.textContent = "";
-      content.append(tiles, topicBox(topicRows(stats, byId)), deleteBox());
+      content.append(...[tiles, topicBox(topicRows(stats, byId)), duelBox(duels), deleteBox()].filter(Boolean));
     } catch (err) {
       console.error(err);
       note("<p>ჩატვირთვა ვერ მოხერხდა. სცადე გვერდის განახლება.</p>");

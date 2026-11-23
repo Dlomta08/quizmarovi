@@ -233,6 +233,7 @@ grant execute on function public.delete_my_account()                            
 -- =====================================================================
 -- Phase 2 note (nothing to run now): weekly leaderboards will be a function that
 -- sums correct attempts per Monday-week and returns only username/avatar/xp of
--- users with show_on_leaderboard = true in the same grade. Badges, daily problem
--- and duels will be new tables. The tables above need no change for that.
+-- users with show_on_leaderboard = true in the same grade. Badges and the daily problem
+-- will be new tables. The tables above need no change for that.
+-- Duels are in supabase/duels.sql (run after this file) + supabase/answer-key.sql.
 -- =====================================================================

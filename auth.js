@@ -271,6 +271,7 @@
     menu.innerHTML =
       '<a href="my-progress.html"><i class="fas fa-chart-line"></i>ჩემი პროგრესი</a>' +
       '<a href="mistakes.html"><i class="fas fa-book"></i>შეცდომების რვეული</a>' +
+      '<a href="duel.html"><i class="fas fa-bolt"></i>დუელები</a>' +
       '<hr><button type="button" class="auth-out"><i class="fas fa-right-from-bracket"></i>გასვლა</button>';
     menu.querySelector('.auth-out').addEventListener('click', signOut);
 
