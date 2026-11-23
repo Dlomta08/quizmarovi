@@ -6,7 +6,7 @@ group: expressions
 grades: [8]
 prerequisites: [powers, special-products]
 next: [nth-roots, quadratic-eq, irrational-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

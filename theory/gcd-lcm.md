@@ -6,7 +6,7 @@ group: numbers
 grades: [7]
 prerequisites: [divisibility, prime-factor]
 next: [diophantine, rational-expr]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

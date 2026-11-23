@@ -6,7 +6,7 @@ group: equations
 grades: [8, 9]
 prerequisites: [linear-systems, quadratic-eq, vieta]
 next: [two-var-ineq, line-circle-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

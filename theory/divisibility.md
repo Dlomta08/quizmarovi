@@ -6,7 +6,7 @@ group: numbers
 grades: [7, 8, 9]
 prerequisites: []
 next: [gcd-lcm, prime-factor, diophantine]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

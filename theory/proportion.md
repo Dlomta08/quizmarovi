@@ -6,7 +6,7 @@ group: numbers
 grades: [7]
 prerequisites: [percent]
 next: [word-problems, linear-func, similar-figures]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

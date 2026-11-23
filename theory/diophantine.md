@@ -6,7 +6,7 @@ group: equations
 grades: [7, 8]
 prerequisites: [divisibility, gcd-lcm, factoring]
 next: [word-problems, integer-part]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

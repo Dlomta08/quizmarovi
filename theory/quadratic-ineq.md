@@ -6,7 +6,7 @@ group: inequalities
 grades: [9]
 prerequisites: [quadratic-eq, linear-ineq]
 next: [interval-method, quadratic-func, max-min]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

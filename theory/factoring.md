@@ -6,7 +6,7 @@ group: expressions
 grades: [7, 8]
 prerequisites: [special-products]
 next: [rational-expr, poly-division, quadratic-eq, higher-degree]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

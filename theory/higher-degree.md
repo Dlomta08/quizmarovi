@@ -6,7 +6,7 @@ group: equations
 grades: [8, 9]
 prerequisites: [poly-division, quadratic-eq, factoring]
 next: [interval-method, irrational-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

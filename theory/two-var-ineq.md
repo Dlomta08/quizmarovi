@@ -6,7 +6,7 @@ group: inequalities
 grades: [11]
 prerequisites: [linear-ineq, quadratic-ineq, line-circle-eq]
 next: [conics, definite-integral]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

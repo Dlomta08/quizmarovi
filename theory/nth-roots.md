@@ -6,7 +6,7 @@ group: expressions
 grades: [9]
 prerequisites: [square-roots, powers]
 next: [real-exponent, irrational-eq, exp-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

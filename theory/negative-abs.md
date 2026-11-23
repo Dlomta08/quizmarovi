@@ -6,7 +6,7 @@ group: numbers
 grades: [7]
 prerequisites: []
 next: [abs-eq, linear-ineq, powers]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: equations
 grades: [8, 9]
 prerequisites: [square-roots, quadratic-eq]
 next: [nonlinear-systems, exp-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

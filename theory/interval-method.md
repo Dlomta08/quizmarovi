@@ -6,7 +6,7 @@ group: inequalities
 grades: [9]
 prerequisites: [quadratic-ineq, rational-expr]
 next: [exp-ineq, log-ineq, monotonic-extrema]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

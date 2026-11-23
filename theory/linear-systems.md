@@ -6,7 +6,7 @@ group: equations
 grades: [7]
 prerequisites: [linear-eq]
 next: [nonlinear-systems, linear-func, word-problems]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: numbers
 grades: [9]
 prerequisites: [divisibility, linear-ineq]
 next: [diophantine, seq-limit]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

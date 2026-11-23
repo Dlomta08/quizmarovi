@@ -6,7 +6,7 @@ group: expressions
 grades: [7]
 prerequisites: [powers]
 next: [special-products, factoring, poly-division]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

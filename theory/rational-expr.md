@@ -6,7 +6,7 @@ group: expressions
 grades: [8]
 prerequisites: [factoring, poly-division]
 next: [rational-eq, interval-method]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

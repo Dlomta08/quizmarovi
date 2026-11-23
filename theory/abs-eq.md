@@ -6,7 +6,7 @@ group: equations
 grades: [7, 8, 9]
 prerequisites: [negative-abs, linear-eq]
 next: [interval-method, quadratic-eq, irrational-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

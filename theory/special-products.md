@@ -6,7 +6,7 @@ group: expressions
 grades: [7]
 prerequisites: [polynomials]
 next: [factoring, identities, square-roots]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

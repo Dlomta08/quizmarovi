@@ -6,7 +6,7 @@ group: inequalities
 grades: [8, 9]
 prerequisites: [numeric-ineq, special-products, identities]
 next: [means, induction]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

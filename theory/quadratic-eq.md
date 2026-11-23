@@ -6,7 +6,7 @@ group: equations
 grades: [8]
 prerequisites: [linear-eq, factoring, square-roots]
 next: [vieta, quadratic-ineq, higher-degree, quadratic-func]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

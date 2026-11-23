@@ -6,7 +6,7 @@ group: numbers
 grades: [7]
 prerequisites: []
 next: [proportion, word-problems]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

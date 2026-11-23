@@ -6,7 +6,7 @@ group: equations
 grades: [7]
 prerequisites: [negative-abs, polynomials]
 next: [linear-systems, linear-ineq, abs-eq, word-problems]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

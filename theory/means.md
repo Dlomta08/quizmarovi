@@ -6,7 +6,7 @@ group: inequalities
 grades: [8]
 prerequisites: [ineq-proofs, square-roots]
 next: [max-min, monotonic-extrema]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

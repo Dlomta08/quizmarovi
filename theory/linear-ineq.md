@@ -6,7 +6,7 @@ group: inequalities
 grades: [8]
 prerequisites: [linear-eq, numeric-ineq]
 next: [quadratic-ineq, interval-method, two-var-ineq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

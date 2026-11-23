@@ -6,7 +6,7 @@ group: numbers
 grades: [7]
 prerequisites: [divisibility]
 next: [gcd-lcm, powers]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

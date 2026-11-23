@@ -6,7 +6,7 @@ group: equations
 grades: [7, 8, 9]
 prerequisites: [linear-eq, percent, proportion]
 next: [linear-systems, rational-eq, quadratic-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: numbers
 grades: [7]
 prerequisites: []
 next: [function-basics, combinatorics, probability]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

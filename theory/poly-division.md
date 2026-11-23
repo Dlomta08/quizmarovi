@@ -6,7 +6,7 @@ group: expressions
 grades: [7, 8]
 prerequisites: [polynomials, factoring]
 next: [higher-degree, rational-expr, vieta]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

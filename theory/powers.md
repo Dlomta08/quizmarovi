@@ -6,7 +6,7 @@ group: numbers
 grades: [7, 8]
 prerequisites: [negative-abs]
 next: [polynomials, nth-roots, real-exponent]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

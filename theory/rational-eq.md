@@ -6,7 +6,7 @@ group: equations
 grades: [8]
 prerequisites: [rational-expr, linear-eq]
 next: [interval-method, higher-degree, word-problems]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

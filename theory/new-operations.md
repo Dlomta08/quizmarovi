@@ -6,7 +6,7 @@ group: numbers
 grades: [7]
 prerequisites: [polynomials]
 next: [identities, function-basics]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: expressions
 grades: [7]
 prerequisites: [special-products, factoring]
 next: [ineq-proofs, rational-expr]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

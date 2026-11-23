@@ -6,7 +6,7 @@ group: equations
 grades: [8]
 prerequisites: [quadratic-eq]
 next: [quadratic-ineq, higher-degree, nonlinear-systems]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

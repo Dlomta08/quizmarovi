@@ -6,7 +6,7 @@ group: inequalities
 grades: [8]
 prerequisites: [negative-abs, square-roots]
 next: [linear-ineq, ineq-proofs, means]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა
