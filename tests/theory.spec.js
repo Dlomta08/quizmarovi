@@ -76,6 +76,16 @@ for (const [device, width, height] of [['mobile', 390, 844], ['desktop', 1280, 9
         await expect(page.locator('.katex-error')).toHaveCount(0);
         await expect(page.locator('.th-example')).toHaveCount(3);
         await expect(page.locator('.th-check')).toHaveCount(3);
+        // no formula needs sideways scrolling (checked with all solutions open)
+        const wide = await page.evaluate(() => {
+          const open = [...document.querySelectorAll('details')].filter(d => !d.open);
+          open.forEach(d => { d.open = true; });
+          const out = [...document.querySelectorAll('.th-dpiece')].filter(e => e.scrollWidth > e.clientWidth + 1)
+            .map(e => ((e.querySelector('annotation') || {}).textContent || '').slice(0, 80));
+          open.forEach(d => { d.open = false; });
+          return out;
+        });
+        expect(wide, 'formulas wider than the screen').toEqual([]);
         // solutions start hidden and open on click
         const first = page.locator('details.th-reveal').first();
         await expect(first).not.toHaveAttribute('open', '');

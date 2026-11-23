@@ -14,7 +14,7 @@
  *   - prerequisites/next: unknown id, the topic itself, duplicates, a loop in prerequisites
  *   - sections missing or out of order, unknown "##" headings
  *   - not exactly 3 examples each with one :::solution, or 3 :::check each with one :::answer
- *   - broken ::: blocks, a stray "$", or a formula KaTeX can't render
+ *   - broken ::: blocks, a stray "$", an unescaped "%" in a formula, or a formula KaTeX can't render
  * Warnings: word count outside 400–900, example levels not მარტივი → საშუალო → რთული,
  *   grades different from tags.json, a prerequisite/next with no theory file yet.
  */
@@ -153,6 +153,7 @@ docs.forEach((doc, id) => {
       if (tex[k] === "{") depth++;
       if (tex[k] === "}" && --depth < 0) break;
     }
+    if (/(^|[^\\])%/.test(tex)) err(id, `unescaped "%" (a TeX comment, hides the rest): ${tex} — write \\%`);
     if (depth !== 0) err(id, `unbalanced braces: ${tex}`);
     else if (katex) {
       try { katex.renderToString(tex, { displayMode: display, throwOnError: true, strict: false }); }

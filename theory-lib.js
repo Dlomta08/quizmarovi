@@ -71,13 +71,12 @@
     return { text, math };
   }
 
-  /** Puts math back; render(tex, display) returns HTML. A punctuation mark right after inline math
-   *  is kept on the same line as the formula. */
+  /** Puts math back; render(tex, display) returns HTML. A punctuation mark right after inline math is
+   *  rendered inside the formula, so it never starts a new line, while a long formula can still wrap. */
   function restoreMath(html, math, render) {
     return html.replace(/@@D@@/g, "$").replace(/@@M(\d+)@@([.,;:!?)]*)/g, (_, i, punct) => {
       const { tex, display } = math[+i];
-      const out = render(tex, display);
-      return punct && !display ? `<span class="th-nobr">${out}${punct}</span>` : out + punct;
+      return punct && !display ? render(`${tex}{${punct}}`, false) : render(tex, display) + punct;
     });
   }
 

@@ -125,9 +125,33 @@
       .then(src => renderTopic(row, TheoryLib.parse(src), visible, tags));
   }
 
+  /** Splits a display formula at top-level "\qquad" (outside braces), e.g. "A,\qquad B" → ["A,", "B"]. */
+  function splitDisplay(tex) {
+    const parts = [];
+    let depth = 0, start = 0;
+    for (let i = 0; i < tex.length; i++) {
+      const ch = tex[i];
+      if (ch === "\\" && tex.startsWith("\\qquad", i) && depth === 0 && !/[a-zA-Z]/.test(tex[i + 6] || "")) {
+        parts.push(tex.slice(start, i));
+        start = i + 6;
+        i += 5;
+      } else if (ch === "\\") i++;
+      else if (ch === "{") depth++;
+      else if (ch === "}") depth--;
+    }
+    parts.push(tex.slice(start));
+    return parts.map(s => s.trim()).filter(Boolean);
+  }
+
   function renderMath(tex, display) {
     try {
-      return katex.renderToString(tex, { displayMode: display, throwOnError: true, strict: false });
+      if (!display) return katex.renderToString(tex, { displayMode: false, throwOnError: true, strict: false });
+      // Display formulas: KaTeX's display mode never line-breaks, so long formulas would overflow a phone.
+      // Each "\qquad"-separated piece is typeset in display style but inline, so it can wrap after = + etc.;
+      // the pieces sit side by side on wide screens and stack on narrow ones.
+      const pieces = splitDisplay(tex).map(p =>
+        `<span class="th-dpiece">${katex.renderToString("\\displaystyle " + p, { displayMode: false, throwOnError: true, strict: false })}</span>`);
+      return `<span class="th-display">${pieces.join("")}</span>`;
     } catch (e) {
       console.warn("KaTeX:", e.message, tex);
       return `<code class="th-math-error" title="${esc(e.message)}">${esc(tex)}</code>`;

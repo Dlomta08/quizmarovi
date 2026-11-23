@@ -1,3 +1,20 @@
 [
-
+  {"id":"divisibility","title":"გაყოფადობა, ნაშთები","area":"algebra","group":"numbers","grades":[7,8,9],"reviewed":false,"words":460,"n":103},
+  {"id":"gcd-lcm","title":"უსგ და უსჯ, ევკლიდეს ალგორითმი","area":"algebra","group":"numbers","grades":[7],"reviewed":false,"words":398,"n":2},
+  {"id":"prime-factor","title":"მარტივ მამრავლებად დაშლა, გამყოფთა რაოდენობა","area":"algebra","group":"numbers","grades":[7],"reviewed":false,"words":387,"n":12},
+  {"id":"percent","title":"პროცენტი","area":"algebra","group":"numbers","grades":[7],"reviewed":false,"words":403,"n":50},
+  {"id":"proportion","title":"პროპორცია, პირდაპირ- და უკუპროპორციულობა","area":"algebra","group":"numbers","grades":[7],"reviewed":false,"words":346,"n":44},
+  {"id":"negative-abs","title":"უარყოფითი რიცხვები, რიცხვის მოდული","area":"algebra","group":"numbers","grades":[7],"reviewed":false,"words":335,"n":0},
+  {"id":"sets","title":"სიმრავლეები და მოქმედებები","area":"algebra","group":"numbers","grades":[7],"reviewed":false,"words":343,"n":24},
+  {"id":"new-operations","title":"ახალი ოპერაციები","area":"algebra","group":"numbers","grades":[7],"reviewed":false,"words":333,"n":2},
+  {"id":"powers","title":"ხარისხი (ნატურალური, მთელი მაჩვენებელი)","area":"algebra","group":"numbers","grades":[7,8],"reviewed":false,"words":347,"n":66},
+  {"id":"integer-part","title":"მთელი და წილადი ნაწილი","area":"algebra","group":"numbers","grades":[9],"reviewed":false,"words":355,"n":13},
+  {"id":"polynomials","title":"ერთწევრი და მრავალწევრი","area":"algebra","group":"expressions","grades":[7],"reviewed":false,"words":333,"n":36},
+  {"id":"special-products","title":"შემოკლებული გამრავლების ფორმულები","area":"algebra","group":"expressions","grades":[7],"reviewed":false,"words":207,"n":18},
+  {"id":"factoring","title":"მამრავლებად დაშლა","area":"algebra","group":"expressions","grades":[7,8],"reviewed":false,"words":287,"n":9},
+  {"id":"poly-division","title":"მრავალწევრის გაყოფა, ბეზუს თეორემა","area":"algebra","group":"expressions","grades":[7,8],"reviewed":false,"words":335,"n":11},
+  {"id":"identities","title":"იგივეობის დამტკიცება","area":"algebra","group":"expressions","grades":[7],"reviewed":false,"words":280,"n":2},
+  {"id":"rational-expr","title":"რაციონალური გამოსახულებები, ალგებრული წილადები","area":"algebra","group":"expressions","grades":[8],"reviewed":false,"words":239,"n":8},
+  {"id":"square-roots","title":"კვადრატული ფესვი და მისი თვისებები","area":"algebra","group":"expressions","grades":[8],"reviewed":false,"words":251,"n":135},
+  {"id":"nth-roots","title":"n-ური ხარისხის ფესვი, რაციონალური მაჩვენებელი","area":"algebra","group":"expressions","grades":[9],"reviewed":false,"words":260,"n":44}
 ]

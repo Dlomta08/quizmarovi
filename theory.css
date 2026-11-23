@@ -51,8 +51,10 @@
 .th-content img { max-width: 100%; height: auto; display: block; margin: .8rem auto; }
 .th-content code { background: var(--card-bg-secondary); border-radius: 4px; padding: 0 .25rem; }
 .th-content .katex { font-size: 1.08em; }
-.th-content .katex-display { overflow-x: auto; overflow-y: hidden; padding: .2rem 0; margin: .7rem 0; }
-.th-nobr { white-space: nowrap; }
+/* display formulas (theory.js renderMath): pieces side by side, stacked when narrow; each piece may wrap */
+.th-display { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; column-gap: 2.2em; row-gap: .45rem;
+  margin: .75rem 0; text-align: center; }
+.th-dpiece { min-width: 0; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .15rem 0; }
 .th-math-error { color: var(--bad-fg); background: var(--bad-bg); font-family: monospace; padding: 0 .2rem; }
 
 .th-box { --c: var(--primary-rgb); background: rgba(var(--c), .085); border-radius: 12px; padding: .85rem 1.1rem; margin: .9rem 0; }
