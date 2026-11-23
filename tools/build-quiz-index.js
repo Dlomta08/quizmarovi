@@ -6,7 +6,8 @@
  *
  * Run it after adding, removing or emptying a quiz file, or after changing tags:
  *     node tools/build-quiz-index.js
- * It also rebuilds data/problems.json (the problem browser's data) and sitemap.xml.
+ * It also rebuilds data/problems.json (the problem browser's data), supabase/answer-key.sql
+ * (the duel answer key) and sitemap.xml.
  *
  * Output shape:
  * {
@@ -90,6 +91,10 @@ if (skipped.length) console.log(`  skipped (empty): ${skipped.join(", ")}`);
 // Also rebuild the problem browser's data (data/problems.json) from the same quiz files.
 const problems = require("./build-problem-index").build();
 console.log(`data/problems.json: ${problems.count} problems, ${(problems.bytes / 1024).toFixed(0)} KB`);
+
+// The duel answer key (supabase/answer-key.sql), which must be re-run in Supabase after quiz changes.
+const keys = require("./build-answer-key").build();
+console.log(`supabase/answer-key.sql: ${keys.count} problems (re-run it in the Supabase SQL Editor if it changed)`);
 
 // And the sitemap, which lists every quiz page.
 const sitemap = require("./build-sitemap").build(index);
