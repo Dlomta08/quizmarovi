@@ -35,7 +35,8 @@
 .th-crumbs a { color: var(--tag-fg, var(--primary-color)); text-decoration: none; font-weight: 500; }
 .th-crumbs a:hover { text-decoration: underline; }
 .th-crumbs i { font-size: .7em; }
-.th-title { font-family: var(--heading-font); font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.2; margin: .35rem 0 .7rem; color: var(--text-primary); }
+.th-title { font-family: var(--heading-font); font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.2; margin: .35rem 0 .7rem; color: var(--text-primary);
+  overflow-wrap: anywhere; /* very long Georgian words (e.g. "ირაციონალურმაჩვენებლიანი") must not widen a phone screen */ }
 .th-meta { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
 .th-meta .th-btn { margin-left: auto; }
 
@@ -122,6 +123,6 @@ details.th-reveal > summary:focus-visible { outline: 2px solid var(--primary-col
   background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-primary); border-left: 3px solid rgba(var(--tag-rgb), .6);
   transition: box-shadow .15s, transform .15s; }
 a.th-topic:hover, a.th-topic:focus-visible { box-shadow: var(--card-shadow-hover); transform: translateY(-1px); }
-.th-topic span { flex: 1; min-width: 0; font-size: .95rem; line-height: 1.35; }
+.th-topic span { flex: 1; min-width: 0; font-size: .95rem; line-height: 1.35; overflow-wrap: anywhere; }
 .th-topic small { color: var(--text-secondary); font-size: .78rem; white-space: nowrap; }
 .th-topic.is-missing { opacity: .5; border-left-style: dashed; }
