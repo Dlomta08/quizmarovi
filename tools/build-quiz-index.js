@@ -6,8 +6,8 @@
  *
  * Run it after adding, removing or emptying a quiz file, or after changing tags:
  *     node tools/build-quiz-index.js
- * It also rebuilds data/problems.json (the problem browser's data), supabase/answer-key.sql
- * (the duel answer key) and sitemap.xml.
+ * It also rebuilds data/problems.json (the problem browser's data), supabase/answer-key.sql,
+ * (the duel answer key), data/theory.json (theory pages + problem counts) and sitemap.xml.
  *
  * Output shape:
  * {
@@ -96,6 +96,10 @@ console.log(`data/problems.json: ${problems.count} problems, ${(problems.bytes /
 const keys = require("./build-answer-key").build();
 console.log(`supabase/answer-key.sql: ${keys.count} problems (re-run it in the Supabase SQL Editor if it changed)`);
 
-// And the sitemap, which lists every quiz page.
+// The theory list (data/theory.json), whose problem counts come from data/problems.json.
+const theory = require("./build-theory-index").build();
+console.log(`data/theory.json: ${theory.count} theory pages (${theory.reviewed} reviewed)`);
+
+// And the sitemap, which lists every quiz page (and reviewed theory pages).
 const sitemap = require("./build-sitemap").build(index);
 console.log(`sitemap.xml: ${sitemap.count} URLs`);

@@ -11,7 +11,7 @@
     <meta property="og:description" content="კომაროვის სკოლის მათემატიკისა და ფიზიკის ქვიზები 7–11 კლასებისთვის. აირჩიეთ კლასი ან შექმენით შემთხვევითი ქვიზი.">
     <title>მათემატიკის ქვიზები</title>
 
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
     <link rel="stylesheet" href="classes-style.css?v=5">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -83,6 +83,21 @@
             link.className = "problem-bank-link";
             link.innerHTML = '<i class="fas fa-magnifying-glass" aria-hidden="true"></i> ამოცანების ბაზა — ძიება თემების მიხედვით';
             document.querySelector(".subject-header").appendChild(link);
+
+            // Theory pages: linked once at least one is reviewed (drafts: same rule as TagUI.theoryDrafts).
+            let drafts = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+            try { drafts = drafts || localStorage.getItem("theory-drafts") === "1"; } catch (e) {}
+            fetch("data/theory.json", { cache: "no-cache" })
+                .then(r => (r.ok ? r.json() : []))
+                .then(rows => {
+                    if (!rows.some(r => r.reviewed || drafts)) return;
+                    const t = document.createElement("a");
+                    t.href = "theory.html";
+                    t.className = "problem-bank-link";
+                    t.innerHTML = '<i class="fas fa-book-open" aria-hidden="true"></i> თეორია — განმარტებები და ამოხსნილი მაგალითები';
+                    link.after(" ", t);
+                })
+                .catch(() => {});
         }
 
         const grid = document.getElementById("gradeGrid");

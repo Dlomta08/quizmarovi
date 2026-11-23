@@ -5,7 +5,8 @@
   "main": "auth.js",
   "devDependencies": {
     "@playwright/test": "^1.65.1",
-    "@types/node": "^26.6.6"
+    "@types/node": "^26.6.6",
+    "katex": "^0.16.11"
   },
   "scripts": {},
   "repository": {

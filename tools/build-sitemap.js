@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /*
  * Builds sitemap.xml from quizzes.json: the main pages, every class page and every quiz page,
- * so search engines can find each quiz.
+ * so search engines can find each quiz. Also the theory pages from data/theory.json — only reviewed ones
+ * (drafts are noindex), and the theory list only once at least one page is reviewed.
  *
  * build-quiz-index.js runs this automatically; to run it alone:
  *     node tools/build-sitemap.js
@@ -67,6 +68,14 @@ function build(index) {
   for (const [page, priority, subjects] of MAIN_PAGES) {
     const file = page === "/" ? "index.html" : page.slice(1) + ".html";
     for (const subject of subjects) add(url(page, subject), dateOf(file), priority);
+  }
+
+  const theoryFile = path.join(ROOT, "data/theory.json");
+  const theory = fs.existsSync(theoryFile) ? JSON.parse(fs.readFileSync(theoryFile, "utf8")).filter(r => r.reviewed) : [];
+  if (theory.length) {
+    const pages = theory.map(r => ({ loc: url("/theory", "math", { topic: r.id }), lastmod: dateOf(`theory/${r.id}.md`) }));
+    add(url("/theory", "math"), pages.reduce((d, p) => (p.lastmod > d ? p.lastmod : d), dateOf("theory.html")), "0.70");
+    pages.forEach(p => add(p.loc, p.lastmod, "0.60"));
   }
 
   for (const [subject, dir] of Object.entries(SUBJECT_DIRS)) {

@@ -1,6 +1,8 @@
 /*
  * Tag labels and chips, shared by quiz.html (chips under each problem) and problems.html (filters).
  * Loads data/tags.json once; every label shown to users comes from its Georgian "ka" field.
+ * Also loads data/theory.json, so each topic chip gets a "📖 თეორია" link when that topic has a theory page
+ * (drafts only in draft mode, see theoryDrafts).
  *
  *   TagUI.ready.then(() => TagUI.renderChips(container, problem))
  *   problem = { area, topics: [], difficulty, type: [], method: [] }
@@ -8,9 +10,30 @@
 (function () {
   "use strict";
 
-  const state = { tags: null, topic: new Map(), labels: {} };
+  const state = { tags: null, topic: new Map(), labels: {}, theory: new Map() };
 
-  const ready = fetch("data/tags.json", { cache: "no-cache" })
+  /** Theory drafts (reviewed: false) are shown only locally, or after opening any page with ?drafts=1
+   *  (remembered in localStorage; ?drafts=0 turns it off). */
+  function theoryDrafts() {
+    try {
+      const q = new URLSearchParams(location.search).get("drafts");
+      if (q === "1") localStorage.setItem("theory-drafts", "1");
+      if (q === "0") localStorage.removeItem("theory-drafts");
+      if (localStorage.getItem("theory-drafts") === "1") return true;
+    } catch (e) { /* storage blocked */ }
+    return /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  }
+
+  // theory pages are optional: if the file is missing, chips just have no 📖 link
+  const theoryReady = fetch("data/theory.json", { cache: "no-cache" })
+    .then(r => (r.ok ? r.json() : []))
+    .catch(() => [])
+    .then(rows => {
+      const drafts = theoryDrafts();
+      rows.forEach(r => { if (r.reviewed || drafts) state.theory.set(r.id, r); });
+    });
+
+  const tagsReady = fetch("data/tags.json", { cache: "no-cache" })
     .then(r => (r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status))))
     .then(tags => {
       state.tags = tags;
@@ -30,6 +53,7 @@
       };
       return tags;
     });
+  const ready = Promise.all([tagsReady, theoryReady]).then(([tags]) => tags);
 
   /* Icons (Font Awesome) — areas color and mark topic chips; types/methods get their own icon. */
   const AREA_ICON = {
@@ -89,6 +113,11 @@
     return `problems.html?${kind}=${encodeURIComponent(id)}`;
   }
 
+  /** Link to the theory page of a topic, or null if it has none (yet). */
+  function theoryUrl(id) {
+    return state.theory.has(id) ? `theory.html?topic=${encodeURIComponent(id)}` : null;
+  }
+
   /** The chips for one problem, in display order. */
   function chipsFor(p) {
     const chips = [];
@@ -129,9 +158,19 @@
         });
       }
       container.appendChild(a);
+      const theory = kind === "topic" && theoryUrl(id);
+      if (theory) {
+        const t = document.createElement("a");
+        t.className = "tag-theory";
+        t.href = theory;
+        if (opts.newTab) { t.target = "_blank"; t.rel = "noopener"; }
+        t.title = "თეორია: " + label("topic", id);
+        t.innerHTML = '<span aria-hidden="true">📖</span> თეორია';
+        container.appendChild(t);
+      }
     });
     return container;
   }
 
-  window.TagUI = { ready, label, filterUrl, chipsFor, renderChips, areaOf, icon, marker, state };
+  window.TagUI = { ready, label, filterUrl, theoryUrl, theoryDrafts, chipsFor, renderChips, areaOf, icon, marker, state };
 })();
