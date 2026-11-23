@@ -54,7 +54,7 @@
 /* display formulas (theory.js renderMath): pieces side by side, stacked when narrow; each piece may wrap */
 .th-display { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; column-gap: 2.2em; row-gap: .45rem;
   margin: .75rem 0; text-align: center; }
-.th-dpiece { min-width: 0; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .15rem 0; }
+.th-dpiece { min-width: 0; max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .15rem .3em; }
 .th-math-error { color: var(--bad-fg); background: var(--bad-bg); font-family: monospace; padding: 0 .2rem; }
 
 .th-box { --c: var(--primary-rgb); background: rgba(var(--c), .085); border-radius: 12px; padding: .85rem 1.1rem; margin: .9rem 0; }
