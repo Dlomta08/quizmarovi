@@ -32,36 +32,42 @@
   --bad-bg: #fbe4df; --bad-border: #e29a8e; --bad-fg: #8a2a1c;
   --note-1: #fff3a6; --note-2: #d9ecff; --note-3: #ffdfe3; --note-4: #dff3d9; --note-5: #eadfff;
   --note-ink: #25272e;
+  --on-hl: #25272e;                       /* text on the yellow highlighter */
 }
+/* dark: a black notebook read under a desk lamp. White ink, gel-pen blue (maths) / green (physics),
+   an amber highlighter, notes as deep tinted paper; the lamp itself is the layer near the end of this file. */
 :root[data-theme="dark"] {
-  --paper: #16231f;
-  --grid: rgba(255, 255, 255, .07);
-  --margin: rgba(255, 130, 110, .38);
-  --background-light: #16231f;
-  --card-bg: #1d2d28;
-  --card-bg-secondary: #243630;
-  --text-primary: #f1efe4;
-  --text-secondary: #b3bfb6;
-  --line: #f1efe4;
-  --primary-color: #9bbcff;
-  --secondary-color: #c2d6ff;
-  --accent-color: #9bbcff;
-  --primary-rgb: 155, 188, 255;
-  --accent-rgb: 155, 188, 255;
-  --on-primary: #10201a;
-  --border-color: rgba(241, 239, 228, .24);
-  --box-shadow: 2px 3px 0 rgba(0, 0, 0, .35);
-  --card-shadow: 3px 3px 0 rgba(241, 239, 228, .3);
-  --hl: #ffd84d;
-  --hl-band: rgba(255, 216, 77, .24);
+  --paper: #0f0f11;
+  --grid: rgba(255, 255, 255, .045);
+  --margin: rgba(255, 95, 80, .28);
+  --background-light: #0f0f11;
+  --card-bg: #17171a;
+  --card-bg-secondary: #1f1f23;
+  --text-primary: #f3eee4;
+  --text-secondary: #aaa49a;
+  --line: #4b4a50;
+  --primary-color: #9db6ff;
+  --secondary-color: #c2d0ff;
+  --accent-color: #9db6ff;
+  --primary-rgb: 157, 182, 255;
+  --accent-rgb: 157, 182, 255;
+  --on-primary: #0f0f11;
+  --border-color: rgba(243, 238, 228, .13);
+  --box-shadow: 2px 3px 0 rgba(0, 0, 0, .6);
+  --card-shadow: 3px 3px 0 rgba(0, 0, 0, .7);
+  --hl: #ffc560;
+  --hl-band: rgba(255, 197, 96, .2);
   --red: #ff8f80;
-  --green: #86d9a6;
-  --ok-bg: #213d2b; --ok-border: #4f8a63; --ok-fg: #c9ecd3;
-  --bad-bg: #432823; --bad-border: #8a4a40; --bad-fg: #ffc9bf;
+  --green: #86dcae;
+  --ok-bg: #16291f; --ok-border: #3f7556; --ok-fg: #c2ecd4;
+  --bad-bg: #33191f; --bad-border: #7a3d48; --bad-fg: #f7c4cb;
+  --note-1: #2e2717; --note-2: #18213a; --note-3: #33191f; --note-4: #16291f; --note-5: #241c38;
+  --note-ink: #f3eee4;
+  --on-hl: #1a1206;
 }
 /* physics: green ink */
 :root[data-subject="physics"][data-theme="light"] { --primary-color: #1f7a4d; --secondary-color: #165c3a; --accent-color: #1f7a4d; --primary-rgb: 31, 122, 77; --accent-rgb: 31, 122, 77; }
-:root[data-subject="physics"][data-theme="dark"]  { --primary-color: #86d9a6; --secondary-color: #b3ebc9; --accent-color: #86d9a6; --primary-rgb: 134, 217, 166; --accent-rgb: 134, 217, 166; }
+:root[data-subject="physics"][data-theme="dark"]  { --primary-color: #86dcae; --secondary-color: #b4ebcd; --accent-color: #86dcae; --primary-rgb: 134, 220, 174; --accent-rgb: 134, 220, 174; }
 
 /* a little larger text on desktop (everything is sized in rem); phones keep style.css sizes */
 @media (min-width: 861px) { html { font-size: 17px; } }
@@ -173,7 +179,7 @@ body.home .home-side .cover { margin: 0; }
 .dp-pill { background: var(--note-1); color: var(--note-ink); border-radius: 3px; box-shadow: 1px 1px 0 rgba(0, 0, 0, .2); }
 .dp-q { font-family: var(--heading-font); font-weight: 500; line-height: 1.7; color: var(--primary-color); }
 .dp-grades button { border-radius: 50%; width: 1.7rem; height: 1.7rem; padding: 0; border: 1.5px solid var(--line); }
-.dp-grades button.on { background: var(--hl); color: #25272e; border-color: var(--line); }
+.dp-grades button.on { background: var(--hl); color: var(--on-hl); border-color: var(--line); }
 .dp-xp b { color: var(--red); }
 .dp-solved { border-radius: 8px; }
 
@@ -182,7 +188,7 @@ body.home .home-side .cover { margin: 0; }
   background: color-mix(in srgb, var(--card-bg) 75%, transparent) !important;
 }
 .continue-card:hover { border-style: solid !important; transform: none; }
-.continue-card .ic { background: var(--hl) !important; color: #25272e !important; border-radius: 50% !important; }
+.continue-card .ic { background: var(--hl) !important; color: var(--on-hl) !important; border-radius: 50% !important; }
 .continue-card small { color: var(--red); }
 .continue-card .go { color: var(--text-primary); }
 
@@ -216,9 +222,9 @@ body.home .home-side .cover { margin: 0; }
 .grade-card:hover { transform: rotate(0) translateY(-4px) !important; box-shadow: 5px 7px 0 rgba(0, 0, 0, .22) !important; }
 .grade-number, .grade-card:hover .grade-number {
   background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important;
-  color: #25272e !important; font-family: var(--heading-font); font-weight: 700 !important; transform: none !important;
+  color: var(--note-ink) !important; font-family: var(--heading-font); font-weight: 700 !important; transform: none !important;
 }
-.grade-content h2 { color: #25272e !important; font-weight: 600; opacity: 1; }
+.grade-content h2 { color: var(--note-ink) !important; font-weight: 600; opacity: 1; }
 .grade-card.special {
   background: color-mix(in srgb, var(--card-bg) 80%, transparent) !important; color: var(--text-primary) !important;
   border: 2px dashed var(--line) !important; box-shadow: none !important; transform: rotate(.6deg);
@@ -343,7 +349,7 @@ html body .option-chip.is-wrong .opt-letter { background: var(--red); border-col
 .acc-note { border: 1.5px dashed var(--line) !important; border-radius: 10px !important; }
 .acc-stat, .bd-medal { border-color: var(--line) !important; }
 .acc-btn { border-width: 2px; border-color: var(--line); color: var(--text-primary); }
-.acc-btn:hover { background: var(--hl); color: #25272e; }
+.acc-btn:hover { background: var(--hl); color: var(--on-hl); }
 
 /* phones */
 @media (max-width: 600px) {
@@ -445,7 +451,7 @@ body.home .main-title .highlight { margin: 0; padding: 0 .06em; }
 .stick { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 1.8rem; }
 .stick a { padding: .3rem 1.4rem; background: var(--note-1); color: var(--note-ink); text-decoration: none; font: 700 1.15rem var(--heading-font); box-shadow: 2px 2px 0 rgba(0, 0, 0, .18); transform: rotate(-1.5deg); }
 .stick a:nth-child(even) { background: var(--note-2); transform: rotate(1.2deg); }
-.stick a[aria-current] { background: var(--hl); color: #25272e; outline: 2px solid var(--line); }
+.stick a[aria-current] { background: var(--hl); color: var(--on-hl); outline: 2px solid var(--line); }
 .stick a:hover { transform: rotate(0); }
 .year-section { padding: 0 0 .3rem !important; margin-bottom: .6rem; }
 .year-header { display: flex; align-items: baseline; gap: .7rem; }
@@ -516,8 +522,8 @@ body.home .container { padding-top: 108px !important; }
 }
 .site-notice.show { transform: rotate(-1deg) !important; }
 .site-notice .sn-text { color: #4a4c55 !important; }
-.site-notice .sn-icon { background: rgba(0, 0, 0, .08) !important; color: #25272e !important; }
-.site-notice .sn-report { color: #25272e !important; border-color: #25272e !important; background: transparent !important; }
+.site-notice .sn-icon { background: rgba(0, 0, 0, .08) !important; color: var(--note-ink) !important; }
+.site-notice .sn-report { color: var(--note-ink) !important; border-color: var(--note-ink) !important; background: transparent !important; }
 
 /* ---- grade page: bigger notes with the grade name under the number ---- */
 .grade-grid .grade-card:not(.special) { padding: .9rem 1.6rem 1rem !important; min-width: 118px; text-align: center; }
@@ -574,7 +580,7 @@ body.home .container { padding-top: 108px !important; }
 .th-topic { border: 2px solid var(--line) !important; border-left: 6px solid rgb(var(--tag-rgb, var(--primary-rgb))) !important; box-shadow: 2px 2px 0 var(--line); }
 a.th-topic:hover, a.th-topic:focus-visible { transform: translate(1px, 1px) !important; box-shadow: 1px 1px 0 var(--line) !important; }
 .th-grades button { border: 2px solid var(--line) !important; border-radius: 3px !important; background: var(--card-bg) !important; color: var(--text-primary) !important; }
-.th-grades button[aria-pressed="true"] { background: var(--hl) !important; color: #25272e !important; }
+.th-grades button[aria-pressed="true"] { background: var(--hl) !important; color: var(--on-hl) !important; }
 
 @media (max-width: 640px) {
   .text-title { font-size: 1.7rem !important; }
@@ -616,7 +622,7 @@ body::before { left: calc(max(92px, calc((100vw - 1120px) / 2 + 92px)) - 28px) !
 #quizForm legend > br:first-of-type { display: none; }   /* the break after the number, even when the bulb is inserted before it */
 #quizForm legend .hint-used-mark {
   position: absolute; left: 28px; top: -6px; z-index: 1; width: 20px; height: 20px; border-radius: 50%;
-  display: grid; place-items: center; font-size: .7rem; background: var(--hl); color: #25272e; border: 1.5px solid var(--card-bg);
+  display: grid; place-items: center; font-size: .7rem; background: var(--hl); color: var(--on-hl); border: 1.5px solid var(--card-bg);
 }
 @media (max-width: 640px) { #quizForm legend .hint-used-mark { left: 22px; } }
 
@@ -635,7 +641,7 @@ body::before { left: calc(max(92px, calc((100vw - 1120px) / 2 + 92px)) - 28px) !
 }
 .duel-chips button:nth-child(even) { background: var(--note-2) !important; transform: rotate(1deg); }
 .duel-chips button:hover { transform: rotate(0); }
-.duel-chips button.on { background: var(--hl) !important; color: #25272e !important; outline: 2px solid var(--line); transform: rotate(0); }
+.duel-chips button.on { background: var(--hl) !important; color: var(--on-hl) !important; outline: 2px solid var(--line); transform: rotate(0); }
 
 /* selects and the code field: written on an ink-outlined box */
 .duel-page select, .duel-page input {
@@ -746,3 +752,39 @@ h1, h2, .text-title { overflow-wrap: break-word; }
 .main-button::before { display: none; }
 /* account pages: boxes rendered by the scripts (login note, join box, lists) keep a gap between them */
 .acc-page #content > * + * { margin-top: 1.1rem; }
+
+/* ---- dark mode ("night notebook") details that tokens alone don't cover ---- */
+.site-notice .sn-text { color: var(--note-ink) !important; opacity: .78; }
+:root[data-theme="dark"] .cover .cover-label { background: rgba(0, 0, 0, .28); color: #f0ead8; box-shadow: none; }
+:root[data-theme="dark"] .grade-card, :root[data-theme="dark"] .stick a, :root[data-theme="dark"] .duel-chips button,
+:root[data-theme="dark"] .dp-pill, :root[data-theme="dark"] .duel-pill, :root[data-theme="dark"] .duel-banner,
+:root[data-theme="dark"] .th-box, :root[data-theme="dark"] .feedback span[style] { box-shadow: 2px 3px 0 rgba(0, 0, 0, .45) !important; }
+:root[data-theme="dark"] .grade-card:hover { box-shadow: 4px 6px 0 rgba(0, 0, 0, .5) !important; }
+:root[data-theme="dark"] .dp { box-shadow: 3px 4px 0 rgba(0, 0, 0, .45); }
+:root[data-theme="dark"] .cover { box-shadow: 3px 4px 0 rgba(0, 0, 0, .45); }
+:root[data-theme="dark"] .main-title .highlight { color: inherit !important; }
+
+/* =====================================================================
+   The desk lamp (dark mode only). A warm pool of light over the black notebook, darkness towards the
+   screen edges. It is one large layer that moves with transform only (cheap): darkmode.js sets
+   --lamp-x / --lamp-y to the mouse on computers; on phones and with reduced motion it stays put.
+   pointer-events: none — it never blocks a click. z-index 999: over the page, under the top bar (so the
+   lamp switch stays lit), menus, dialogs, the timer and the feedback button.
+   ===================================================================== */
+:root[data-theme="dark"] body::after {
+  content: ''; position: fixed; z-index: 999; pointer-events: none;
+  left: -100vw; top: -100vh; width: 200vw; height: 200vh;
+  transform: translate(var(--lamp-x, 50vw), var(--lamp-y, 16vh));
+  background:
+    radial-gradient(ellipse 23% 26% at 50% 50%, rgba(255, 206, 130, .16), rgba(255, 206, 130, .05) 55%, transparent 75%),
+    radial-gradient(ellipse 42.5% 47.5% at 50% 50%, transparent 40%, rgba(0, 0, 0, .45) 100%);
+  will-change: transform;
+}
+/* switching the lamp on: the light fades in once (only when the student presses the switch) */
+:root.lamp-turning-on[data-theme="dark"] body::after { animation: lamp-on .9s ease-out; }
+@keyframes lamp-on { from { opacity: 0; } 35% { opacity: .35; } to { opacity: 1; } }
+/* the switch: a moon by day, a glowing bulb at night */
+:root[data-theme="dark"] #toggle-dark i { color: var(--hl) !important; text-shadow: 0 0 12px rgba(255, 197, 96, .8), 0 0 28px rgba(255, 197, 96, .45); }
+@media (prefers-reduced-motion: reduce) { :root.lamp-turning-on[data-theme="dark"] body::after { animation: none; } }
+/* printing stays plain */
+@media print { body::after { display: none !important; } }
