@@ -76,7 +76,7 @@
     box.innerHTML = `
       <div class="dp-date"><small>${wd}</small><b>${today.d}</b><span>${MONTHS[today.m - 1]}</span></div>
       <div class="dp-main">
-        <div class="dp-eyebrow"><i class="fas fa-sun" aria-hidden="true"></i> დღის ამოცანა
+        <div class="dp-eyebrow"><i class="fas fa-sun" aria-hidden="true"></i> დღის ამოცანა, ${today.d} ${MONTHS[today.m - 1]}
           <span class="dp-pill">მე-${grade} კლასი</span></div>
         <div class="dp-q">იტვირთება...</div>
         <div class="dp-extra"></div>

@@ -13,15 +13,15 @@
     <link rel="stylesheet" href="style.css?v=6">
     <link rel="stylesheet" href="quiz-pages.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="theme.css?v=5">
+    <link rel="stylesheet" href="theme.css?v=24">
     <link rel="icon" type="image/png" href="paper.png">
-    <script src="darkmode.js?v=5"></script>
+    <script src="darkmode.js?v=7"></script>
     <!-- student accounts (optional login): library, project config, header widget -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
     <script src="supabase-config.js?v=6" defer></script>
     <script src="auth.js?v=9" defer></script>
     <script src="cloud.js?v=9" defer></script>
-    <script src="subjects.js?v=5"></script>
+    <script src="subjects.js?v=6"></script>
     <script src="feedback.js?v=5" defer></script>
     <script src="notice.js?v=7" defer></script>
 </head>
@@ -162,7 +162,9 @@
                 icon.className = "fas fa-calendar-alt";
                 const h2 = document.createElement("h2");
                 h2.textContent = `${year.replace("-", "/")} სასწავლო წელი`;
-                header.append(icon, h2);
+                const count = document.createElement("small");
+                count.textContent = `${numbers.length} ქვიზი`;
+                header.append(icon, h2, count);
 
                 const grid = document.createElement("div");
                 grid.className = "quizzes-grid";
@@ -173,8 +175,29 @@
             });
         }
 
+        // Grade tabs above the list (sticky notes) and a hand-written link to the random quiz under it.
+        function renderTabs(index) {
+            const bar = document.createElement("nav");
+            bar.className = "stick";
+            bar.setAttribute("aria-label", "კლასები");
+            Object.keys(index).map(Number).sort((a, b) => a - b).forEach(g => {
+                const a = document.createElement("a");
+                a.href = pageUrl("class-quizzes.html", { class: g });
+                a.textContent = g;
+                a.title = `${ordinal(g)} კლასი`;
+                if (g === classNum) a.setAttribute("aria-current", "page");
+                bar.appendChild(a);
+            });
+            document.querySelector(".page-header").after(bar);
+            const hand = document.createElement("a");
+            hand.className = "hand-note";
+            hand.href = pageUrl("random-quiz-generator.html");
+            hand.textContent = "გინდა სხვადასხვა წლის ამოცანები ერთად? ცადე „შემთხვევითი ქვიზი“";
+            yearsGrid.after(hand);
+        }
+
         loadQuizIndex()
-            .then(index => render(index[classNum] || {}))
+            .then(index => { renderTabs(index); render(index[classNum] || {}); })
             .catch(() => {
                 yearsGrid.innerHTML = "<p>ქვიზების სია ვერ ჩაიტვირთა. სცადეთ გვერდის განახლება.</p>";
             });

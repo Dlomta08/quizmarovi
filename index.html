@@ -27,9 +27,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap">
   </noscript>
-  <link rel="stylesheet" href="theme.css?v=5">
+  <link rel="stylesheet" href="theme.css?v=24">
 
-  <script src="darkmode.js?v=5"></script>
+  <script src="darkmode.js?v=7"></script>
   <!-- student accounts (optional login): library, project config, header widget -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
   <script src="supabase-config.js?v=6" defer></script>
@@ -41,7 +41,7 @@
   <script>window.MathJax = { tex: { inlineMath: [["$", "$"]] }, svg: { fontCache: "global" }, options: { menuOptions: { settings: { inTabOrder: false } } } };</script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" async></script>
   <script src="practice.js?v=7" defer></script>
-  <script src="daily.js?v=8" defer></script>
+  <script src="daily.js?v=9" defer></script>
 
   <style>
       .button-wrapper {
@@ -66,6 +66,11 @@
                 <i class="fas fa-graduation-cap"></i>
                 <span>კომაროვის სკოლა</span>
             </div>
+            <div class="nav-links">
+                <a href="problems.html">ამოცანები</a>
+                <a href="theory.html">თეორია</a>
+                <a href="my-progress.html">ჩემი პროგრესი</a>
+            </div>
             <button id="toggle-dark" aria-label="Toggle dark mode">
                 <i class="fas fa-moon"></i>
             </button>
@@ -75,22 +80,29 @@
     <main class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1 class="main-title">კომაროვის სკოლის<br><span class="highlight">ქვიზები</span></h1>
+                <div class="home-head">
+                    <h1 class="main-title">წინა წლების <span class="highlight">ქვიზები</span>, ერთ რვეულში</h1>
+                    <p class="home-lede">მათემატიკა და ფიზიკა 7–11 კლასებისთვის: ამოხსნებით, მინიშნებებით და თეორიით.</p>
+                </div>
 
-                <!-- Daily problem on the left (filled by daily.js), subjects + "continue" on the right.
-                     Built to fit one screen without scrolling (styles in index-style.css, body.home). -->
+                <!-- Subject covers + duel + "continue" on the left, the daily problem (filled by daily.js) as a sheet on the right.
+                     Styles: theme.css (notebook layout) over index-style.css. -->
                 <div class="home-grid">
                     <section class="dp" id="daily" aria-label="დღის ამოცანა" hidden></section>
                     <div class="home-side">
                         <div class="button-wrapper">
-                            <a href="classes.html" class="main-button">
-                                <span>მათემატიკა</span>
-                                <i class="fas fa-square-root-variable"></i>
+                            <a href="classes.html" class="cover cover-math" data-subject="math">
+                                <b>მათემატიკა</b>
+                                <small>7–11 კლასი</small>
+                                <span class="cover-label">გახსენი</span>
+                                <span class="cover-sym" aria-hidden="true">∑</span>
                             </a>
 
-                            <a href="classes.html?subject=physics" class="main-button">
-                                <span>ფიზიკა</span>
-                                <i class="fas fa-atom"></i>
+                            <a href="classes.html?subject=physics" class="cover cover-physics" data-subject="physics">
+                                <b>ფიზიკა</b>
+                                <small>8–11 კლასი</small>
+                                <span class="cover-label">გახსენი</span>
+                                <span class="cover-sym" aria-hidden="true">Δ</span>
                             </a>
 
                             <!-- <a href="teacher-tool.html" class="main-button">
@@ -129,6 +141,18 @@
     </style>
     </footer>
 
+    <script>
+    // Cover subtitles: real grade range and quiz count from quizzes.json (the static text stays if the fetch fails).
+    fetch("quizzes.json").then(r => r.json()).then(all => {
+        document.querySelectorAll(".cover[data-subject]").forEach(a => {
+            const grades = all[a.dataset.subject] || {};
+            const nums = Object.keys(grades).map(Number).sort((x, y) => x - y);
+            if (!nums.length) return;
+            const count = Object.values(grades).reduce((n, years) => n + Object.values(years).reduce((m, l) => m + l.length, 0), 0);
+            a.querySelector("small").textContent = `${nums[0]}–${nums[nums.length - 1]} კლასი, ${count} ქვიზი`;
+        });
+    }).catch(() => {});
+    </script>
     <script>
     // "Continue where you left off": the last quiz opened on this device (saved by quiz.js),
     // or, when logged in, the quiz of the latest saved answer (works across devices). Newest wins.

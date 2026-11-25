@@ -750,7 +750,11 @@ function renderQuiz(){
         }
       });
 
-      label.append(`${variantebi[j]}`);
+      const letter = document.createElement("span");
+      letter.className = "opt-letter";
+      letter.setAttribute("aria-hidden", "true");
+      letter.textContent = variantebi[j].replace(") ", "");   // lettered circle (theme.css)
+      label.appendChild(letter);
       label.appendChild(radio);
       label.append(`${opt}`);
       fieldset.appendChild(label);

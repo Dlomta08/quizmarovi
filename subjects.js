@@ -29,6 +29,9 @@
   const params = new URLSearchParams(location.search);
   const subject = SUBJECTS[params.get("subject")] || SUBJECTS.math;
 
+  // theme.css switches the ink colour (blue maths, green physics) from this attribute.
+  document.documentElement.dataset.subject = subject.id;
+
   // quiz.js and feedback.js read this to keep math and physics progress separate.
   window.QUIZ_SUBJECT = subject.id === "math" ? undefined : subject.id;
 
