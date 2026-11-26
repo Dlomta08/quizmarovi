@@ -6,7 +6,7 @@ group: polyhedra
 grades: [10, 11]
 prerequisites: [parallel-space, prism]
 next: [volume-surface]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

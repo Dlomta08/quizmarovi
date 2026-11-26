@@ -6,7 +6,7 @@ group: polygons
 grades: [7, 8]
 prerequisites: [parallel-lines, congruence]
 next: [rhombus-rect-sq, midline, trapezoid]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

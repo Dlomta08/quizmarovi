@@ -6,7 +6,7 @@ group: calc
 grades: [11]
 prerequisites: [convexity, lhopital]
 next: [antiderivative]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

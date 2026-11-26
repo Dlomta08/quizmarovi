@@ -6,7 +6,7 @@ group: polyhedra
 grades: [10]
 prerequisites: [parallel-space, perpendicular-space]
 next: [pyramid, cross-sections]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

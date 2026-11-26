@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>https://www.komaroviqvizebi.ge/</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-26</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/classes</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-26</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/classes?subject=physics</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-26</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/problems</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-26</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/random-quiz-generator</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-26</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/random-quiz-generator?subject=physics</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-26</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory</loc>
-  <lastmod>2026-11-24</lastmod>
+  <lastmod>2026-11-26</lastmod>
   <priority>0.70</priority>
 </url>
 <url>
@@ -217,117 +217,422 @@
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=function-basics</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=function-props</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=linear-func</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=quadratic-func</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=graph-transform</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=max-min</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=arithmetic-prog</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=geometric-prog</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=induction</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=radians</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=trig-identities</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=reduction</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=sum-formulas</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=product-sum</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=inverse-trig</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=trig-eq</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=trig-ineq</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=real-exponent</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=exp-eq</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=exp-ineq</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=logarithms</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=log-eq</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
   <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.komaroviqvizebi.ge/theory?topic=log-ineq</loc>
-  <lastmod>2026-11-23</lastmod>
+  <lastmod>2026-11-24</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=seq-limit</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=func-limit</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=continuity</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=derivative</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=lhopital</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=monotonic-extrema</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=convexity</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=curve-sketching</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=antiderivative</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=definite-integral</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=statistics</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=combinatorics</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=binomial</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=probability</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=lines-angles</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=angle-pairs</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=parallel-lines</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=angle-sum</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=congruence</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=isosceles</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=triangle-ineq</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=right-triangle</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=cevians</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=midline</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=pythagoras</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=acute-trig</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=law-cos-sin</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=notable-points</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=menelaus-ceva</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=polygon-basics</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=parallelogram</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=rhombus-rect-sq</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=trapezoid</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=regular-polygon</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=chords-tangents</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=circle-angles</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=inscribed-circum</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=circle-segments</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=circle-length-area</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=thales</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=similar-figures</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=area-formulas</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=heron</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=area-ratios</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=vectors</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=dot-product</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=line-circle-eq</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=conics</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=constructions</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=stereo-axioms</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=parallel-space</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=perpendicular-space</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=angles-space</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=distances-space</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=prism</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=pyramid</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=cross-sections</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=cylinder</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=cone</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=sphere</loc>
+  <lastmod>2026-11-26</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.komaroviqvizebi.ge/theory?topic=volume-surface</loc>
+  <lastmod>2026-11-26</lastmod>
   <priority>0.60</priority>
 </url>
 <url>

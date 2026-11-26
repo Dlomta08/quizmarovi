@@ -6,7 +6,7 @@ group: triangles
 grades: [7]
 prerequisites: [parallel-lines]
 next: [congruence, isosceles, polygon-basics]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

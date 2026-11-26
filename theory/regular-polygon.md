@@ -6,7 +6,7 @@ group: polygons
 grades: [9]
 prerequisites: [polygon-basics, inscribed-circum]
 next: [circle-length-area]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

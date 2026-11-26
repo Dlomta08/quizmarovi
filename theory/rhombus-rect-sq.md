@@ -6,7 +6,7 @@ group: polygons
 grades: [7, 8]
 prerequisites: [parallelogram]
 next: [trapezoid, area-formulas]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

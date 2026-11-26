@@ -6,7 +6,7 @@ group: solids-revolution
 grades: [11]
 prerequisites: [cone, chords-tangents]
 next: [volume-surface]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

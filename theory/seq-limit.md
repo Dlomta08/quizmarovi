@@ -6,7 +6,7 @@ group: calc
 grades: [11]
 prerequisites: [geometric-prog]
 next: [func-limit]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

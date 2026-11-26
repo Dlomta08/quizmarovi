@@ -6,7 +6,7 @@ group: triangles
 grades: [7]
 prerequisites: [angle-sum]
 next: [isosceles, triangle-ineq, parallelogram]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

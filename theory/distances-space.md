@@ -6,7 +6,7 @@ group: space-basics
 grades: [10]
 prerequisites: [perpendicular-space]
 next: [prism, pyramid]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

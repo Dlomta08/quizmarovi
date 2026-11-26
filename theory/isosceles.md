@@ -6,7 +6,7 @@ group: triangles
 grades: [7]
 prerequisites: [congruence]
 next: [triangle-ineq, cevians, right-triangle]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: vectors-coords
 grades: [11]
 prerequisites: [line-circle-eq, quadratic-func]
 next: []
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

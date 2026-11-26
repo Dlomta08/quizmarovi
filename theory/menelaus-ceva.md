@@ -6,7 +6,7 @@ group: triangles
 grades: [8]
 prerequisites: [thales, area-ratios]
 next: [vectors]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

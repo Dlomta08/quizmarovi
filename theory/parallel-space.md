@@ -6,7 +6,7 @@ group: space-basics
 grades: [10]
 prerequisites: [stereo-axioms]
 next: [perpendicular-space, prism]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

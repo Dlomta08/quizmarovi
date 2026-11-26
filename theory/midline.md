@@ -6,7 +6,7 @@ group: triangles
 grades: [8]
 prerequisites: [parallelogram]
 next: [trapezoid, thales]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: circle
 grades: [9]
 prerequisites: [regular-polygon]
 next: [area-formulas, cylinder]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

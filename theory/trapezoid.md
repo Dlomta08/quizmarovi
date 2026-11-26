@@ -6,7 +6,7 @@ group: polygons
 grades: [8]
 prerequisites: [parallelogram, midline]
 next: [area-formulas, inscribed-circum]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

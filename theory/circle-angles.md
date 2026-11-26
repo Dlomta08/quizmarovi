@@ -6,7 +6,7 @@ group: circle
 grades: [7]
 prerequisites: [chords-tangents]
 next: [inscribed-circum, circle-segments]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

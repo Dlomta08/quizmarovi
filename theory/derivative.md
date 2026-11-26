@@ -6,7 +6,7 @@ group: calc
 grades: [11]
 prerequisites: [func-limit, continuity]
 next: [monotonic-extrema, lhopital]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

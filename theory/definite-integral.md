@@ -6,7 +6,7 @@ group: calc
 grades: [11]
 prerequisites: [antiderivative, continuity]
 next: []
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: plane-basics
 grades: [7]
 prerequisites: []
 next: [angle-pairs, parallel-lines]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

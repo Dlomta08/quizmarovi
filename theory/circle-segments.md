@@ -6,7 +6,7 @@ group: circle
 grades: [8]
 prerequisites: [circle-angles]
 next: [circle-length-area]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

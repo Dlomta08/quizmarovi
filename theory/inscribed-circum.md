@@ -6,7 +6,7 @@ group: circle
 grades: [7, 8]
 prerequisites: [circle-angles, notable-points]
 next: [circle-segments, regular-polygon]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

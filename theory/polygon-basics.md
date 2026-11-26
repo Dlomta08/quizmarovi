@@ -6,7 +6,7 @@ group: polygons
 grades: [8]
 prerequisites: [angle-sum]
 next: [regular-polygon, area-formulas]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

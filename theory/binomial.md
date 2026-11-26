@@ -6,7 +6,7 @@ group: prob
 grades: [10]
 prerequisites: [combinatorics, special-products]
 next: [probability]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

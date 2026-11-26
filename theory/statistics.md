@@ -6,7 +6,7 @@ group: prob
 grades: [7, 9]
 prerequisites: [percent]
 next: [probability]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

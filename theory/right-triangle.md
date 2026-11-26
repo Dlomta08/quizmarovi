@@ -6,7 +6,7 @@ group: triangles
 grades: [7, 8]
 prerequisites: [angle-sum, congruence]
 next: [pythagoras, acute-trig]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

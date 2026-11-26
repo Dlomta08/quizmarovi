@@ -6,7 +6,7 @@ group: prob
 grades: [10]
 prerequisites: []
 next: [binomial, probability]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

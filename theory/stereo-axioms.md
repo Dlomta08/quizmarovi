@@ -6,7 +6,7 @@ group: space-basics
 grades: [10]
 prerequisites: [parallel-lines]
 next: [parallel-space]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: space-basics
 grades: [10]
 prerequisites: [parallel-space, pythagoras]
 next: [angles-space, distances-space]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

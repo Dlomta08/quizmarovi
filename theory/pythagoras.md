@@ -6,7 +6,7 @@ group: triangles
 grades: [8]
 prerequisites: [right-triangle, square-roots]
 next: [acute-trig, law-cos-sin, heron]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

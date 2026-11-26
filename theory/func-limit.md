@@ -6,7 +6,7 @@ group: calc
 grades: [11]
 prerequisites: [seq-limit, function-props]
 next: [continuity, lhopital]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

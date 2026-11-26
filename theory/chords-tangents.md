@@ -6,7 +6,7 @@ group: circle
 grades: [7, 8]
 prerequisites: [isosceles, right-triangle]
 next: [circle-angles, inscribed-circum]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

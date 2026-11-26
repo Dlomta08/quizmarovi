@@ -6,7 +6,7 @@ group: space-basics
 grades: [10]
 prerequisites: [perpendicular-space, acute-trig]
 next: [distances-space, pyramid]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

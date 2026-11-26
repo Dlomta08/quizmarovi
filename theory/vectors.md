@@ -6,7 +6,7 @@ group: vectors-coords
 grades: [9]
 prerequisites: [parallelogram, midline]
 next: [dot-product, line-circle-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

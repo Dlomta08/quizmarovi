@@ -6,7 +6,7 @@ group: area
 grades: [9]
 prerequisites: [trapezoid, acute-trig]
 next: [heron, area-ratios]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

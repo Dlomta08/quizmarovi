@@ -6,7 +6,7 @@ group: vectors-coords
 grades: [9]
 prerequisites: [vectors, law-cos-sin]
 next: [line-circle-eq]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

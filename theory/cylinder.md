@@ -6,7 +6,7 @@ group: solids-revolution
 grades: [11]
 prerequisites: [prism, circle-length-area]
 next: [cone, volume-surface]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

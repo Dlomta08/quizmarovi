@@ -6,7 +6,7 @@ group: solids-revolution
 grades: [11]
 prerequisites: [cylinder, pyramid]
 next: [sphere, volume-surface]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

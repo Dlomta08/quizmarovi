@@ -6,7 +6,7 @@ group: solids-revolution
 grades: [11]
 prerequisites: [prism, pyramid, cylinder, cone, sphere]
 next: []
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

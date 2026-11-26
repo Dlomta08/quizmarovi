@@ -6,7 +6,7 @@ group: polyhedra
 grades: [10]
 prerequisites: [prism, angles-space]
 next: [cross-sections, cone]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

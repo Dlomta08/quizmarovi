@@ -6,7 +6,7 @@ group: area
 grades: [9]
 prerequisites: [area-formulas, law-cos-sin]
 next: [area-ratios, inscribed-circum]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

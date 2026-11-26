@@ -6,7 +6,7 @@ group: calc
 grades: [11]
 prerequisites: [derivative]
 next: [convexity, curve-sketching]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

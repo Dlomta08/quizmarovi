@@ -6,7 +6,7 @@ group: constructions
 grades: [7, 8]
 prerequisites: [congruence, isosceles]
 next: [thales]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

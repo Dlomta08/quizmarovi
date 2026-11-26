@@ -6,7 +6,7 @@ group: calc
 grades: [11]
 prerequisites: [derivative]
 next: [definite-integral]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: triangles
 grades: [8]
 prerequisites: [pythagoras]
 next: [law-cos-sin, trig-identities]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

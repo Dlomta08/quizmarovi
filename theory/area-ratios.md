@@ -6,7 +6,7 @@ group: area
 grades: [9]
 prerequisites: [area-formulas, similar-figures]
 next: [menelaus-ceva]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

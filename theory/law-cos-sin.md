@@ -6,7 +6,7 @@ group: triangles
 grades: [8]
 prerequisites: [acute-trig]
 next: [heron, area-formulas]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

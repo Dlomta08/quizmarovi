@@ -6,7 +6,7 @@ group: triangles
 grades: [7]
 prerequisites: [isosceles]
 next: [notable-points, midline]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

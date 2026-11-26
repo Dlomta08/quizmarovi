@@ -6,7 +6,7 @@ group: calc
 grades: [11]
 prerequisites: [derivative]
 next: [monotonic-extrema, curve-sketching]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

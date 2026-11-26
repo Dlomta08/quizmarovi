@@ -6,7 +6,7 @@ group: similarity
 grades: [8]
 prerequisites: [thales]
 next: [area-ratios, circle-segments]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

@@ -6,7 +6,7 @@ group: triangles
 grades: [7]
 prerequisites: [isosceles]
 next: [right-triangle, cevians]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

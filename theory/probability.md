@@ -6,7 +6,7 @@ group: prob
 grades: [9, 10]
 prerequisites: [combinatorics]
 next: []
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

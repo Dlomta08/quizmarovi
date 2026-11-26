@@ -6,7 +6,7 @@ group: triangles
 grades: [8]
 prerequisites: [cevians, midline]
 next: [inscribed-circum, menelaus-ceva]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა

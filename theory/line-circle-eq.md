@@ -6,7 +6,7 @@ group: vectors-coords
 grades: [9]
 prerequisites: [dot-product, linear-func]
 next: [conics]
-reviewed: false
+reviewed: true
 ---
 
 ## მთავარი იდეა
