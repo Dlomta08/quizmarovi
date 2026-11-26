@@ -81,5 +81,11 @@
   {"id":"circle-angles","title":"ცენტრალური და ჩახაზული კუთხეები","area":"geometry","group":"circle","grades":[7],"reviewed":false,"words":386,"n":44},
   {"id":"inscribed-circum","title":"ჩახაზული და შემოხაზული ფიგურები","area":"geometry","group":"circle","grades":[7,8],"reviewed":false,"words":351,"n":126},
   {"id":"circle-segments","title":"პროპორციული მონაკვეთები წრეში","area":"geometry","group":"circle","grades":[8],"reviewed":false,"words":326,"n":19},
-  {"id":"circle-length-area","title":"წრეწირის სიგრძე და წრის ფართობი","area":"geometry","group":"circle","grades":[9],"reviewed":false,"words":286,"n":16}
+  {"id":"circle-length-area","title":"წრეწირის სიგრძე და წრის ფართობი","area":"geometry","group":"circle","grades":[9],"reviewed":false,"words":286,"n":16},
+  {"id":"thales","title":"თალესის თეორემა","area":"geometry","group":"similarity","grades":[8],"reviewed":false,"words":374,"n":2},
+  {"id":"similar-figures","title":"ფიგურათა მსგავსება","area":"geometry","group":"similarity","grades":[8],"reviewed":false,"words":334,"n":20},
+  {"id":"area-formulas","title":"სამკუთხედის, პარალელოგრამის, ტრაპეციის ფართობი","area":"geometry","group":"area","grades":[9],"reviewed":false,"words":279,"n":18},
+  {"id":"heron","title":"ჰერონის ფორმულა","area":"geometry","group":"area","grades":[9],"reviewed":false,"words":211,"n":1},
+  {"id":"area-ratios","title":"ფართობთა შეფარდება, ტოლდიდი ნაწილები","area":"geometry","group":"area","grades":[9],"reviewed":false,"words":334,"n":16},
+  {"id":"constructions","title":"აგების ამოცანები","area":"geometry","group":"constructions","grades":[7,8],"reviewed":false,"words":477,"n":6}
 ]
