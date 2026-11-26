@@ -1,7 +1,8 @@
 /*
  * Feedback chat widget ("მოგვწერეთ").
- * A floating button in the bottom-right corner opens a small panel where visitors can
- * send a message. Messages are delivered by Web3Forms (https://web3forms.com) to the
+ * A button opens a small panel where visitors can send a message. On computers it is a floating
+ * button in the bottom-right corner; on phones and tablets (≤1100px) it is a small icon in the top bar
+ * instead, so nothing floats over answer options or the tab bar, and the panel opens under the top bar. Messages are delivered by Web3Forms (https://web3forms.com) to the
  * email address the access key was created for.
  *
  * The access key is not a secret: Web3Forms keys are meant to be used in public pages.
@@ -76,11 +77,22 @@
       #fb-panel .fb-status.err { color: #dc2626; }
       #fb-panel .fb-count { font-size: .75rem; color: var(--text-secondary, #6c757d); text-align: right; margin-top: -.4rem; }
 
-      @media (max-width: 480px) {
-        #fb-button { right: 14px; bottom: 14px; }
-        #fb-panel { right: 16px; left: 16px; width: auto; bottom: 80px; }
+      #fb-nav-button { display: none; }
+      @media (max-width: 1100px) {
+        #fb-button { display: none; }
+        #fb-nav-button {
+          display: grid; place-items: center; flex: none; width: 38px; height: 38px; padding: 0;
+          border: 0; border-radius: 50%; background: transparent; cursor: pointer;
+          color: var(--text-secondary, #6c757d); font-size: 1.1rem;
+        }
+        #fb-nav-button:hover, #fb-nav-button[aria-expanded="true"] { color: var(--primary-color, #4361ee); background: rgba(var(--primary-rgb, 67,97,238), .1); }
+        #fb-nav-button:focus-visible { outline: 3px solid var(--primary-color, #4361ee); outline-offset: 2px; }
+        #fb-panel { right: 12px; bottom: auto; top: calc(var(--nav-h, 64px) + 8px); max-height: calc(100vh - var(--nav-h, 64px) - 16px); overflow-y: auto; }
       }
-      @media print { #fb-button, #fb-panel { display: none !important; } }
+      @media (max-width: 480px) {
+        #fb-panel { left: 12px; width: auto; }
+      }
+      @media print { #fb-button, #fb-nav-button, #fb-panel { display: none !important; } }
     `;
     document.head.appendChild(s);
   }
@@ -146,6 +158,22 @@
 
     document.body.append(button, panel);
 
+    // phones and tablets: the same panel opens from an icon in the top bar (before the theme switch)
+    const navButton = document.createElement("button");
+    navButton.id = "fb-nav-button";
+    navButton.type = "button";
+    navButton.title = "მოგვწერეთ";
+    navButton.setAttribute("aria-label", "მოგვწერეთ");
+    navButton.setAttribute("aria-expanded", "false");
+    navButton.setAttribute("aria-controls", "fb-panel");
+    navButton.innerHTML = '<i class="fas fa-comment-dots" aria-hidden="true"></i>';
+    const navContent = document.querySelector(".main-nav .nav-content");
+    const themeSwitch = document.getElementById("toggle-dark");   // auth.js may have moved it into its own group
+    if (themeSwitch && navContent && navContent.contains(themeSwitch)) themeSwitch.before(navButton);
+    else if (navContent) navContent.appendChild(navButton);
+    const openers = [button, navButton];
+    let opener = button;
+
     const form = panel.querySelector("form");
     const message = panel.querySelector("#fb-message");
     const contact = panel.querySelector("#fb-contact");
@@ -160,16 +188,20 @@
     }
     function open() {
       panel.classList.add("open");
-      button.setAttribute("aria-expanded", "true");
+      openers.forEach(b => b.setAttribute("aria-expanded", "true"));
       setTimeout(() => message.focus(), 50);
     }
     function close() {
       panel.classList.remove("open");
-      button.setAttribute("aria-expanded", "false");
-      button.focus();
+      openers.forEach(b => b.setAttribute("aria-expanded", "false"));
+      // back to the button that opened it, if it is visible (the other one is hidden at this width)
+      (opener.offsetParent ? opener : openers.find(b => b.offsetParent) || opener).focus();
     }
 
-    button.addEventListener("click", () => panel.classList.contains("open") ? close() : open());
+    openers.forEach(b => b.addEventListener("click", () => {
+      opener = b;
+      panel.classList.contains("open") ? close() : open();
+    }));
     panel.querySelector(".fb-close").addEventListener("click", close);
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && panel.classList.contains("open")) close();

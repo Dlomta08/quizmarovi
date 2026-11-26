@@ -765,19 +765,22 @@ h1, h2, .text-title { overflow-wrap: break-word; }
 :root[data-theme="dark"] .main-title .highlight { color: inherit !important; }
 
 /* =====================================================================
-   The desk lamp (dark mode only). A warm pool of light over the black notebook, darkness towards the
-   screen edges. It is one large layer that moves with transform only (cheap): darkmode.js sets
-   --lamp-x / --lamp-y to the mouse on computers; on phones and with reduced motion it stays put.
-   pointer-events: none — it never blocks a click. z-index 999: over the page, under the top bar (so the
-   lamp switch stays lit), menus, dialogs, the timer and the feedback button.
+   The desk lamp (dark mode only). A warm pool of light on the black notebook, slightly darker paper
+   towards the screen edges. It is one large layer that moves with transform only (cheap): darkmode.js
+   sets --lamp-x / --lamp-y to the mouse on computers; on phones and with reduced motion it stays put.
+   It lies on the paper, UNDER everything written on it: body is its own stacking context (isolation),
+   so z-index -1 paints the lamp above the body's squared paper but below every card, text and formula.
+   Away from the mouse only the paper darkens, so nothing on the page gets harder to read.
+   pointer-events: none — it never blocks a click.
    ===================================================================== */
+body { isolation: isolate; }
 :root[data-theme="dark"] body::after {
-  content: ''; position: fixed; z-index: 999; pointer-events: none;
+  content: ''; position: fixed; z-index: -1; pointer-events: none;
   left: -100vw; top: -100vh; width: 200vw; height: 200vh;
   transform: translate(var(--lamp-x, 50vw), var(--lamp-y, 16vh));
   background:
     radial-gradient(ellipse 23% 26% at 50% 50%, rgba(255, 206, 130, .16), rgba(255, 206, 130, .05) 55%, transparent 75%),
-    radial-gradient(ellipse 42.5% 47.5% at 50% 50%, transparent 40%, rgba(0, 0, 0, .45) 100%);
+    radial-gradient(ellipse 42.5% 47.5% at 50% 50%, transparent 40%, rgba(0, 0, 0, .22) 100%);
   will-change: transform;
 }
 /* switching the lamp on: the light fades in once (only when the student presses the switch) */
@@ -788,3 +791,37 @@ h1, h2, .text-title { overflow-wrap: break-word; }
 @media (prefers-reduced-motion: reduce) { :root.lamp-turning-on[data-theme="dark"] body::after { animation: none; } }
 /* printing stays plain */
 @media print { body::after { display: none !important; } }
+
+/* =====================================================================
+   Site navigation (nav.js): the same four sections on every page.
+   Computers: links in the top bar, the current section under the highlighter.
+   Phones and tablets (≤1100px, where those links are hidden): a bottom tab bar.
+   ===================================================================== */
+.nav-links a[aria-current] { background: linear-gradient(transparent 60%, var(--hl-band) 60%); padding: 0 .15em; }
+.nav-links a:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+@media (max-width: 1100px) {
+  .nav-content .logo { margin-right: auto; }   /* the links are hidden: the logo pushes the buttons right */
+}
+
+.tabbar { display: none; }
+@media (max-width: 1100px) {
+  .tabbar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000;
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2px;
+    padding: 4px max(6px, calc((100vw - 640px) / 2)) calc(4px + env(safe-area-inset-bottom));
+    background: color-mix(in srgb, var(--paper) 96%, transparent); border-top: 1.5px solid var(--line);
+  }
+  .tabbar .tab {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+    min-height: 54px; border-radius: 10px; text-decoration: none;
+    color: var(--text-secondary); font-size: .76rem; font-weight: 500; line-height: 1.2; text-align: center;
+  }
+  .tabbar .tab svg { width: 24px; height: 24px; flex: none; }
+  .tabbar .tab span { padding: 0 3px; }
+  .tabbar .tab[aria-current] { color: var(--primary-color); font-weight: 700; }
+  .tabbar .tab[aria-current] span { color: var(--text-primary); background: linear-gradient(transparent 55%, var(--hl-band) 55%); }
+  .tabbar .tab:active { background: rgba(var(--primary-rgb), .08); }
+  /* room for the bar under the footer (the page's own padding is set with !important above) */
+  body.has-tabbar { padding-bottom: calc(64px + env(safe-area-inset-bottom)) !important; }
+}
+@media print { .tabbar { display: none !important; } }

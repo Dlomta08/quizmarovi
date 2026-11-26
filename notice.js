@@ -1,6 +1,8 @@
 // Small "site is being updated" note, shown once per browser session (first page opened).
-// Kept calm: no overlay, sits bottom-left away from the feedback button, slides in after a short
-// delay and hides itself after a few seconds (paused while hovered or focused). × closes it at once.
+// Kept calm: no overlay. On computers it sits top-right under the top bar (the pages are left-aligned,
+// so that paper is free; bottom-left it covered the footer); on phones and tablets it spans the width
+// just above the tab bar (nav.js). Slides in after a short delay and hides itself after a few seconds
+// (paused while hovered or focused). × closes it at once.
 (function () {
   const TITLE = "საიტი ახლდება";
   const TEXT = "საიტზე მიმდინარეობს ცვლილებები და თუ რაიმე ხარვეზს გადააწყდებით, გთხოვთ შეგვატყობინოთ.";
@@ -14,8 +16,8 @@
     s.textContent = `
       .site-notice {
         --sn-accent: var(--primary-color, #9e5130);
-        position: fixed; left: 20px; bottom: 20px; z-index: 900;
-        width: min(380px, calc(100vw - 108px));
+        position: fixed; right: 20px; top: calc(var(--nav-h, 64px) + 16px); z-index: 900;
+        width: min(380px, calc(100vw - 40px));
         display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: start;
         padding: 14px 14px 16px;
         background: var(--card-bg, #fff); color: var(--text-primary, #222);
@@ -23,7 +25,7 @@
         border-radius: 16px;
         box-shadow: 0 2px 6px rgba(0,0,0,.05), 0 14px 34px rgba(0,0,0,.12);
         overflow: hidden;
-        opacity: 0; transform: translateY(12px) scale(.98);
+        opacity: 0; transform: translateY(-12px) scale(.98);
         transition: opacity .35s ease, transform .35s cubic-bezier(.2,.8,.2,1);
       }
       .site-notice.show { opacity: 1; transform: none; }
@@ -58,8 +60,12 @@
       }
       .site-notice:hover .sn-timer, .site-notice:focus-within .sn-timer { animation-play-state: paused; }
       @keyframes sn-timer { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+      @media (max-width: 1100px) {
+        .site-notice { top: auto; left: 12px; right: 12px; width: auto; bottom: calc(12px + env(safe-area-inset-bottom)); transform: translateY(12px) scale(.98); }
+        body.has-tabbar .site-notice { bottom: calc(72px + env(safe-area-inset-bottom)); }
+      }
       @media (max-width: 600px) {
-        .site-notice { left: 12px; bottom: 12px; width: calc(100vw - 96px); padding: 12px 12px 14px; gap: 10px; }
+        .site-notice { padding: 12px 12px 14px; gap: 10px; }
         .site-notice .sn-icon { width: 30px; height: 30px; font-size: .85rem; }
       }
       @media (prefers-reduced-motion: reduce) {
