@@ -72,6 +72,7 @@
   {"id":"acute-trig","title":"მახვილი კუთხის ტრიგონომეტრიული ფუნქციები","area":"geometry","group":"triangles","grades":[8],"reviewed":false,"words":266,"n":12},
   {"id":"law-cos-sin","title":"კოსინუსების და სინუსების თეორემები","area":"geometry","group":"triangles","grades":[8],"reviewed":false,"words":286,"n":6},
   {"id":"notable-points","title":"შესანიშნავი წერტილები","area":"geometry","group":"triangles","grades":[8],"reviewed":false,"words":421,"n":14},
+  {"id":"menelaus-ceva","title":"მენელაოსის და ჩევას თეორემები","area":"geometry","group":"triangles","grades":[8],"reviewed":false,"words":367,"n":0},
   {"id":"polygon-basics","title":"მრავალკუთხედი","area":"geometry","group":"polygons","grades":[8],"reviewed":false,"words":329,"n":16},
   {"id":"parallelogram","title":"პარალელოგრამი","area":"geometry","group":"polygons","grades":[7,8],"reviewed":false,"words":361,"n":53},
   {"id":"rhombus-rect-sq","title":"რომბი, მართკუთხედი, კვადრატი","area":"geometry","group":"polygons","grades":[7,8],"reviewed":false,"words":358,"n":76},
@@ -87,5 +88,9 @@
   {"id":"area-formulas","title":"სამკუთხედის, პარალელოგრამის, ტრაპეციის ფართობი","area":"geometry","group":"area","grades":[9],"reviewed":false,"words":279,"n":18},
   {"id":"heron","title":"ჰერონის ფორმულა","area":"geometry","group":"area","grades":[9],"reviewed":false,"words":211,"n":1},
   {"id":"area-ratios","title":"ფართობთა შეფარდება, ტოლდიდი ნაწილები","area":"geometry","group":"area","grades":[9],"reviewed":false,"words":334,"n":16},
+  {"id":"vectors","title":"ვექტორები, მოქმედებები ვექტორებზე","area":"geometry","group":"vectors-coords","grades":[9],"reviewed":false,"words":267,"n":118},
+  {"id":"dot-product","title":"სკალარული ნამრავლი","area":"geometry","group":"vectors-coords","grades":[9],"reviewed":false,"words":252,"n":23},
+  {"id":"line-circle-eq","title":"წრფის და წრეწირის განტოლება","area":"geometry","group":"vectors-coords","grades":[9],"reviewed":false,"words":277,"n":66},
+  {"id":"conics","title":"ელიფსი, ჰიპერბოლა, პარაბოლა","area":"geometry","group":"vectors-coords","grades":[11],"reviewed":false,"words":273,"n":48},
   {"id":"constructions","title":"აგების ამოცანები","area":"geometry","group":"constructions","grades":[7,8],"reviewed":false,"words":477,"n":6}
 ]
