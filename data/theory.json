@@ -63,5 +63,11 @@
   {"id":"parallel-lines","title":"პარალელური წრფეები","area":"geometry","group":"plane-basics","grades":[7],"reviewed":false,"words":495,"n":19},
   {"id":"angle-sum","title":"კუთხეების ჯამი, გარე კუთხე","area":"geometry","group":"triangles","grades":[7],"reviewed":false,"words":387,"n":16},
   {"id":"congruence","title":"სამკუთხედების ტოლობის ნიშნები","area":"geometry","group":"triangles","grades":[7],"reviewed":false,"words":462,"n":2},
-  {"id":"isosceles","title":"ტოლფერდა სამკუთხედი","area":"geometry","group":"triangles","grades":[7],"reviewed":false,"words":399,"n":90}
+  {"id":"isosceles","title":"ტოლფერდა სამკუთხედი","area":"geometry","group":"triangles","grades":[7],"reviewed":false,"words":399,"n":90},
+  {"id":"triangle-ineq","title":"სამკუთხედის უტოლობა","area":"geometry","group":"triangles","grades":[7],"reviewed":false,"words":410,"n":3},
+  {"id":"right-triangle","title":"მართკუთხა სამკუთხედი","area":"geometry","group":"triangles","grades":[7,8],"reviewed":false,"words":364,"n":69},
+  {"id":"cevians","title":"მედიანა, ბისექტრისა, სიმაღლე; ბისექტრისის თვისება","area":"geometry","group":"triangles","grades":[7],"reviewed":false,"words":397,"n":85},
+  {"id":"midline","title":"შუახაზი","area":"geometry","group":"triangles","grades":[8],"reviewed":false,"words":376,"n":15},
+  {"id":"pythagoras","title":"პითაგორას თეორემა","area":"geometry","group":"triangles","grades":[8],"reviewed":false,"words":332,"n":2},
+  {"id":"parallelogram","title":"პარალელოგრამი","area":"geometry","group":"polygons","grades":[7,8],"reviewed":false,"words":361,"n":53}
 ]
