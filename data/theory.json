@@ -98,5 +98,11 @@
   {"id":"perpendicular-space","title":"მართობულობა, მართობი და დახრილი","area":"solid","group":"space-basics","grades":[10],"reviewed":false,"words":333,"n":8},
   {"id":"angles-space","title":"კუთხეები სივრცეში, ორწახნაგა კუთხე","area":"solid","group":"space-basics","grades":[10],"reviewed":false,"words":375,"n":29},
   {"id":"distances-space","title":"მანძილები სივრცეში","area":"solid","group":"space-basics","grades":[10],"reviewed":false,"words":344,"n":8},
-  {"id":"prism","title":"პრიზმა, პარალელეპიპედი, კუბი","area":"solid","group":"polyhedra","grades":[10],"reviewed":false,"words":314,"n":87}
+  {"id":"prism","title":"პრიზმა, პარალელეპიპედი, კუბი","area":"solid","group":"polyhedra","grades":[10],"reviewed":false,"words":314,"n":87},
+  {"id":"pyramid","title":"პირამიდა, წაკვეთილი პირამიდა","area":"solid","group":"polyhedra","grades":[10],"reviewed":false,"words":345,"n":81},
+  {"id":"cross-sections","title":"კვეთები, მკვეთი სიბრტყის აგება","area":"solid","group":"polyhedra","grades":[10,11],"reviewed":false,"words":469,"n":44},
+  {"id":"cylinder","title":"ცილინდრი","area":"solid","group":"solids-revolution","grades":[11],"reviewed":false,"words":280,"n":54},
+  {"id":"cone","title":"კონუსი","area":"solid","group":"solids-revolution","grades":[11],"reviewed":false,"words":283,"n":34},
+  {"id":"sphere","title":"სფერო და ბირთვი","area":"solid","group":"solids-revolution","grades":[11],"reviewed":false,"words":313,"n":49},
+  {"id":"volume-surface","title":"მოცულობა და ზედაპირის ფართობი","area":"solid","group":"solids-revolution","grades":[11],"reviewed":false,"words":301,"n":95}
 ]
