@@ -56,11 +56,14 @@
     <div class="quiz-card-main">
       <h1 id="quiz-title" class="text-title"></h1>
 
+      <!-- The mode buttons stay disabled until the quiz file has loaded (see loadQuizData below):
+           a click before that would start an empty quiz. -->
+      <style>.mode-btn:disabled { opacity: .55; cursor: progress; }</style>
       <div id="mode-selection" class="mode-selection-card">
         <p>აირჩიეთ რეჟიმი:</p>
         <div class="mode-options">
-          <button class="button mode-btn" onclick="startQuiz(false)"><b>სტანდარტული</b><small>პასუხი მაშინვე მოწმდება, მინიშნებები და ამოხსნები ხელმისაწვდომია.</small></button>
-          <button class="button mode-btn" onclick="startQuiz(true)"><b>სიმულაცია</b><small>ტაიმერით, როგორც ნამდვილ ქვიზზე. შედეგს ბოლოს ნახავ.</small></button>
+          <button class="button mode-btn" onclick="startQuiz(false)" disabled><b>სტანდარტული</b><small>პასუხი მაშინვე მოწმდება, მინიშნებები და ამოხსნები ხელმისაწვდომია.</small></button>
+          <button class="button mode-btn" onclick="startQuiz(true)" disabled><b>სიმულაცია</b><small>ტაიმერით, როგორც ნამდვილ ქვიზზე. შედეგს ბოლოს ნახავ.</small></button>
         </div>
       </div>
 
@@ -119,6 +122,7 @@
             showMessage("ქვიზი არ ჩატარებულა.");
             return;
           }
+          document.querySelectorAll("#mode-selection .mode-btn").forEach(b => { b.disabled = false; });
           if (typeof resumeSavedSimulation === "function") resumeSavedSimulation();
         };
         script.onerror = () => showMessage("ქვიზი არ ჩატარებულა.");
