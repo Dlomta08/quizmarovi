@@ -14,10 +14,253 @@ const selectionFadeTimers = new WeakMap();
  */
 function typesetMath(nodes) {
   const mj = window.MathJax;
-  if (!mj || typeof mj.typesetPromise !== "function" || !mj.startup || !mj.startup.promise) return;
+  if (!mj || typeof mj.typesetPromise !== "function" || !mj.startup || !mj.startup.promise) return Promise.resolve();
   mj.startup.promise = mj.startup.promise
     .then(() => mj.typesetPromise(nodes))
     .catch(err => console.warn("MathJax:", err));
+  return mj.startup.promise;
+}
+
+// Runs cb once MathJax has drawn what is on the page (or right away, if MathJax never loads).
+function afterMath(cb) {
+  const mj = window.MathJax;
+  if (mj && mj.startup && mj.startup.promise) { mj.startup.promise.then(cb, cb); return; }
+  if (document.readyState !== "complete") window.addEventListener("load", () => afterMath(cb), { once: true });
+  else cb();
+}
+
+const reduceMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ===== Answer options in even columns (styles: quiz-style.css .opts) =====
+   3 columns on computers, 2 on phones, fewer when an answer doesn't fit its cell. When only the last
+   answer is too long (often "დადგენა შეუძლებელია"), it gets a row of its own and the others keep
+   their columns. Measured again after MathJax has drawn the formulas and when the width changes. */
+const MARK_ROOM = 20;   // room for the ✓ / ✗ that theme.css draws after a graded answer (not in the range below)
+
+// Does the answer fit its cell on one line? The Range covers the letter circle and the text or formula,
+// however far they run past the cell (answers don't wrap in a multi-column grid).
+function optionFits(label) {
+  const range = document.createRange();
+  range.selectNodeContents(label);
+  const box = label.getBoundingClientRect();
+  const end = range.getBoundingClientRect().right;
+  const cs = getComputedStyle(label);
+  return end - box.left + parseFloat(cs.paddingRight) + parseFloat(cs.borderRightWidth) + MARK_ROOM <= box.width + 0.5;
+}
+
+function fitOptionGrid(grid) {
+  const labels = [...grid.children];
+  if (!labels.length) return;
+  const last = labels[labels.length - 1];
+  const fits = optionFits;
+  let cols = Math.min(window.matchMedia("(max-width: 640px)").matches ? 2 : 3, labels.length);
+  let wideLast = false;
+  grid.classList.remove("is-one-col");
+  for (; cols > 1; cols--) {
+    grid.style.setProperty("--cols", cols);
+    last.classList.remove("opt-wide");
+    const tooLong = labels.filter(l => !fits(l));
+    if (!tooLong.length) break;
+    // only the last one is long: it takes a whole row (wrapping if even that is too narrow; one column
+    // would give it no more room) and the others keep their columns
+    if (tooLong.length === 1 && tooLong[0] === last) { wideLast = true; break; }
+  }
+  grid.style.setProperty("--cols", cols);
+  last.classList.toggle("opt-wide", wideLast);
+  grid.classList.toggle("is-one-col", cols === 1);
+}
+
+function fitAllOptionGrids() {
+  document.querySelectorAll("#quizForm .opts").forEach(fitOptionGrid);
+}
+
+let fitWidth = 0, fitTimer = 0;
+window.addEventListener("resize", () => {
+  if (window.innerWidth === fitWidth) return;   // phones fire resize when the address bar hides
+  clearTimeout(fitTimer);
+  fitTimer = setTimeout(() => { fitWidth = window.innerWidth; fitAllOptionGrids(); }, 150);
+});
+
+/* ===== What the quiz holds, above the mode choice (quiz.html, random-quiz.html; styles: theme.css .mode-facts) =====
+   "ამ ქვიზში 25 ამოცანა: ალგებრა 15, გეომეტრია 10." plus a note when some questions are open (not auto-checked).
+   Called when the quiz data is there: on load (random-quiz.html) and by quiz.html once its file has loaded. */
+function renderQuizFacts() {
+  const box = document.getElementById("mode-selection");
+  if (!box || typeof quizData === "undefined" || !Array.isArray(quizData) || !quizData.length) return;
+  let facts = box.querySelector(".mode-facts");
+  if (!facts) {
+    facts = document.createElement("div");
+    facts.className = "mode-facts";
+    box.prepend(facts);
+  }
+  const total = quizData.length;
+  const open = quizData.filter(q => !q.options || !q.options.length).length;
+  const areaCount = {};
+  quizData.forEach(q => [].concat(q.area || []).forEach(a => { areaCount[a] = (areaCount[a] || 0) + 1; }));
+
+  const write = labels => {
+    facts.replaceChildren();
+    const line = document.createElement("p");
+    line.append("ამ ქვიზში ");
+    const b = document.createElement("b");
+    b.textContent = `${total} ამოცანა`;
+    line.append(b, labels.length ? `: ${labels.join(", ")}.` : ".");
+    facts.appendChild(line);
+    if (open) {
+      const note = document.createElement("p");
+      note.className = "mode-facts-note";
+      note.textContent = open === total
+        ? "ყველა ღია კითხვაა: პასუხი ავტომატურად არ მოწმდება, ამოხსნებს ნახავ."
+        : `${open} ამოცანა ღიაა: მისი პასუხი ავტომატურად არ მოწმდება.`;
+      facts.appendChild(note);
+    }
+  };
+  write([]);
+  const areas = Object.entries(areaCount).sort((a, b) => b[1] - a[1]);
+  if (areas.length && window.TagUI) {
+    TagUI.ready.then(() => write(areas.map(([a, n]) => `${TagUI.label("area", a)} ${n}`))).catch(() => {});
+  }
+}
+window.addEventListener("load", renderQuizFacts);
+
+/* ===== Progress navigator (styles: quiz-style.css .qnav) =====
+   A square per question: right, wrong, answered (simulation, before the end) or not yet; the one
+   being read is ringed in yellow, and a click jumps to that question. Computers (≥1280px): a card to
+   the right of the questions, with the counts, the simulation timer and the finish button. Narrower
+   screens: a strip under the top bar. The number circle of each question shows its result too. */
+const QNAV_CARD = "(min-width: 1280px)";
+const QNAV_WORDS = { todo: "უპასუხო", ok: "სწორი", bad: "არასწორი", picked: "პასუხი მონიშნულია", open: "ღია კითხვა" };
+let qnav = null;
+
+function questionState(form, i) {
+  const q = quizData[i];
+  if (!q || !q.options || !q.options.length) return "open";
+  const idx = gradedAnswer(form, i);
+  if (idx == null) return "todo";
+  if (simulationMode && !form.classList.contains("finished")) return "picked";
+  return isAnswerCorrect(q, idx) ? "ok" : "bad";
+}
+
+function quizNavOffset() {
+  const navH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--nav-h")) || 64;
+  const strip = qnav && !window.matchMedia(QNAV_CARD).matches ? qnav.el.offsetHeight : 0;
+  return navH + strip + 12;
+}
+
+function jumpToQuestion(fs) {
+  const top = fs.getBoundingClientRect().top + window.scrollY - quizNavOffset();
+  window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion() ? "auto" : "smooth" });
+  fs.tabIndex = -1;
+  fs.focus({ preventScroll: true });
+}
+
+function buildQuizNav(form) {
+  if (qnav) {
+    qnav.el.remove();
+    window.removeEventListener("scroll", qnav.onScroll);
+    window.removeEventListener("resize", qnav.onScroll);
+    qnav = null;
+  }
+  document.body.classList.remove("qnav-on");
+  const graded = quizData.filter(q => q.options && q.options.length).length;
+  if (graded < 2) return;
+
+  const el = document.createElement("aside");
+  el.className = "qnav";
+  el.setAttribute("aria-label", "ქვიზის პროგრესი");
+  el.innerHTML = `
+    <div class="qnav-head">
+      <p class="qnav-title">პროგრესი</p>
+      <p class="qnav-count"><b>0</b><span> / ${graded}</span></p>
+      <p class="qnav-sub"></p>
+      <p class="qnav-time" hidden></p>
+    </div>
+    <div class="qnav-grid"></div>
+    <button type="button" class="qnav-finish">დასრულება</button>`;
+  const grid = el.querySelector(".qnav-grid");
+  const fieldsets = [...form.querySelectorAll(":scope > fieldset")];
+  const squares = fieldsets.map((fs, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "qnav-sq";
+    b.textContent = String(i + 1);
+    b.addEventListener("click", () => jumpToQuestion(fs));
+    grid.appendChild(b);
+    return b;
+  });
+  const finish = el.querySelector(".qnav-finish");
+  if (form.querySelector("button[type='submit']")) {
+    finish.addEventListener("click", () => {
+      form.requestSubmit();
+      const result = document.getElementById("result");
+      if (result) result.scrollIntoView({ behavior: reduceMotion() ? "auto" : "smooth", block: "center" });
+    });
+  } else {
+    finish.remove();
+  }
+
+  document.body.appendChild(el);
+  document.body.classList.add("qnav-on");
+
+  let ticking = false;
+  const markCurrent = () => {
+    ticking = false;
+    if (!qnav) return;
+    const line = window.innerHeight * 0.4;
+    let cur = 0;
+    qnav.fieldsets.forEach((fs, i) => { if (fs.getBoundingClientRect().top < line) cur = i; });
+    if (cur === qnav.current) return;
+    const old = qnav.squares[qnav.current];
+    if (old) { old.classList.remove("is-current"); old.removeAttribute("aria-current"); }
+    qnav.current = cur;
+    const sq = qnav.squares[cur];
+    sq.classList.add("is-current");
+    sq.setAttribute("aria-current", "step");
+    // keep the current square visible inside the strip (sideways) or the card (up and down)
+    const behavior = reduceMotion() ? "auto" : "smooth";
+    if (grid.scrollWidth > grid.clientWidth + 1) {
+      grid.scrollTo({ left: sq.offsetLeft - (grid.clientWidth - sq.offsetWidth) / 2, behavior });
+    } else if (grid.scrollHeight > grid.clientHeight + 1) {
+      grid.scrollTo({ top: sq.offsetTop - (grid.clientHeight - sq.offsetHeight) / 2, behavior });
+    }
+  };
+  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(markCurrent); } };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+
+  qnav = { el, form, fieldsets, squares, current: -1, onScroll };
+  updateQuizProgress();
+  markCurrent();
+}
+
+// Colours the number circles (fieldset.q-ok / .q-bad) and refreshes the navigator.
+function updateQuizProgress() {
+  const form = document.getElementById("quizForm");
+  if (!form) return;
+  const fieldsets = form.querySelectorAll(":scope > fieldset");
+  const states = [...fieldsets].map((fs, i) => {
+    const st = questionState(form, i);
+    fs.classList.toggle("q-ok", st === "ok");
+    fs.classList.toggle("q-bad", st === "bad");
+    return st;
+  });
+  if (!qnav) return;
+  let answered = 0, right = 0, wrong = 0;
+  states.forEach((st, i) => {
+    if (st === "ok") right++;
+    if (st === "bad") wrong++;
+    if (st === "ok" || st === "bad" || st === "picked") answered++;
+    const sq = qnav.squares[i];
+    if (!sq) return;
+    sq.dataset.state = st;
+    sq.setAttribute("aria-label", `ამოცანა ${i + 1}: ${QNAV_WORDS[st]}`);
+  });
+  const finished = form.classList.contains("finished");
+  qnav.el.querySelector(".qnav-count b").textContent = String(answered);
+  qnav.el.querySelector(".qnav-sub").textContent =
+    simulationMode && !finished ? "შედეგს ბოლოს ნახავ" : `${right} სწორი · ${wrong} შეცდომა`;
+  const finish = qnav.el.querySelector(".qnav-finish");
+  if (finish) finish.hidden = finished;
 }
 
 (function ensureGlobalStyles(){
@@ -184,6 +427,8 @@ function placeFloatingTimer(){
 function removeFloatingTimer(){
   const ft = document.getElementById("floating-timer");
   if (ft) ft.remove();
+  const cardTime = document.querySelector(".qnav-time");
+  if (cardTime) cardTime.hidden = true;
   window.removeEventListener("resize", placeFloatingTimer);
 }
 
@@ -225,6 +470,7 @@ function restoreSimAnswers() {
     const radio = label.querySelector('input[type="radio"]');
     if (radio) radio.checked = true;
   });
+  updateQuizProgress();
 }
 
 // If the page was refreshed during a simulation, continue it automatically.
@@ -301,6 +547,14 @@ function updateTimerDisplay() {
 
   const floating = document.getElementById("floating-time");
   if (floating) floating.textContent = t;
+
+  // wide screens: the time is written on the progress card (the floating timer is hidden there)
+  const cardTime = document.querySelector(".qnav-time");
+  if (cardTime) {
+    cardTime.hidden = false;
+    cardTime.textContent = t;
+    cardTime.classList.toggle("is-low", timeLeft <= 1800);
+  }
 
   const ftRoot = document.getElementById("floating-timer");
   if (ftRoot) {
@@ -541,6 +795,13 @@ function renderQuiz(){
 
     fieldset.appendChild(contentWrapper);
 
+    // Under the answers: one row with the hint button and the solution (quiz-style.css .q-foot).
+    // The hint used to sit between the question and the answers.
+    const foot = document.createElement("div");
+    foot.className = "q-foot";
+    const opts = document.createElement("div");
+    opts.className = "opts";
+
     // Tag chips (math only), hidden behind a hint button that opens in steps:
     // 1st click: topic + difficulty, 2nd click: type + method (these give away more), then "hide".
     if (Array.isArray(q.topics) && window.TagUI) {
@@ -594,13 +855,10 @@ function renderQuiz(){
       hintControls[i] = { restore: l => { markUsed(l); show(Math.min(l, maxLevel)); } };
 
       hint.append(hintBtn, chips);
-      fieldset.appendChild(hint);
+      foot.appendChild(hint);
       // chips open in a new tab so clicking one doesn't leave the quiz
       TagUI.ready.then(() => TagUI.renderChips(chips, q, { newTab: true })).catch(() => hint.remove());
     }
-
-    const feedback = document.createElement("div");
-    feedback.className = "feedback";
 
     function gradeAndLock(selectedIdx, clickEvent) {
       fieldset.querySelectorAll("label.option-chip").forEach(l => {
@@ -646,9 +904,10 @@ function renderQuiz(){
       const pid = saveResult(q, i, selectedIdx, isCorrect, secondsSinceLastAnswer());
       if (pid && !isCorrect && !fieldset.querySelector(".guest-nudge")) {
         const nudge = guestNudge("შედი ანგარიშზე, რომ ეს ამოცანა შეცდომების რვეულში შეინახო.");
-        const sol = fieldset.querySelector(".solution");
-        if (nudge) fieldset.insertBefore(nudge, sol);   // above the solution (or at the end if none)
+        // above the hint / solution row (or at the end if there is none)
+        if (nudge) fieldset.insertBefore(nudge, foot.parentNode === fieldset ? foot : null);
       }
+      updateQuizProgress();
     }
 
     function selectPersistent(selectedIdx, clickEvent){
@@ -673,6 +932,7 @@ function renderQuiz(){
           simState.answers[i] = selectedIdx;
           saveSimState();
         }
+        updateQuizProgress();
       }
     }
 
@@ -757,8 +1017,9 @@ function renderQuiz(){
       label.appendChild(letter);
       label.appendChild(radio);
       label.append(`${opt}`);
-      fieldset.appendChild(label);
+      opts.appendChild(label);
     });
+    if (opts.children.length) fieldset.appendChild(opts);
 
     // Optional solution ("ამოხსნა"), collapsed by default.
     // For multiple-choice questions it stays hidden until the question is answered
@@ -773,14 +1034,19 @@ function renderQuiz(){
       body.className = "solution-body";
       body.innerHTML = q.solution;
       sol.append(summary, body);
-      fieldset.appendChild(sol);
+      foot.appendChild(sol);
     }
+    if (foot.children.length) fieldset.appendChild(foot);
 
     form.appendChild(fieldset);
     
   });
 
   typesetMath([form]);
+  fitWidth = window.innerWidth;
+  fitAllOptionGrids();
+  afterMath(fitAllOptionGrids);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAllOptionGrids);
 
   const submitBtn = document.createElement("button");
   submitBtn.type = "submit";
@@ -805,12 +1071,16 @@ function renderQuiz(){
   const subjectPrefix = window.QUIZ_SUBJECT ? `${window.QUIZ_SUBJECT}-` : "";
   const doneKey = `done-${subjectPrefix}${classNum}-${year}-${number}`;
 
-  // Remember the last regular quiz opened on this device, for "continue where you left off" on the home page.
+  // Remember the last regular quiz opened on this device, for "continue where you left off" on the home page,
+  // and how many of its questions can be answered, for "7/25" on its ticket (class-quizzes.html).
   if (classNum && year && number) {
     try {
       localStorage.setItem("last-visit", JSON.stringify({
         subject: window.QUIZ_SUBJECT || "math", class: classNum, year, number, t: Date.now(),
       }));
+      const sizes = JSON.parse(localStorage.getItem("quiz-sizes")) || {};
+      sizes[`${subjectPrefix}${classNum}-${year}-${number}`] = quizData.filter(q => q.options && q.options.length).length;
+      localStorage.setItem("quiz-sizes", JSON.stringify(sizes));
     } catch {}
   }
 
@@ -852,6 +1122,7 @@ function renderQuiz(){
     actionRow.appendChild(tickSpan);
     form.appendChild(actionRow);
   }
+  buildQuizNav(form);
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -929,6 +1200,7 @@ function renderQuiz(){
 
     clearSimState();
     form.classList.add("finished");
+    updateQuizProgress();
 
     if (simulationMode) form.querySelector("button[type='submit']").disabled = true;
     removeFloatingTimer();

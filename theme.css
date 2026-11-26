@@ -1,9 +1,16 @@
 /* Site theme "Notebook": squared paper with a red margin, ink blue (maths) or green (physics) pens,
-   a yellow highlighter, sticky notes and notebook covers. Dark mode is a chalkboard.
-   Loaded last on every page; overrides the tokens and components of the older stylesheets. */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@500;600;700&display=swap');
+   a yellow highlighter, sticky notes and notebook covers. Dark mode is a black notebook under a desk lamp.
+   Loaded last on every page, over the older stylesheets (style.css and the page ones), so many rules still
+   need !important to beat them. One block per component, in page order:
+     tokens · page · top bar & tab bar · headings · buttons · footer · home · grade page · class page ·
+     quiz page · random quiz generator · problem bank & tag chips · theory · account pages · duels ·
+     site notice · desk lamp · reduced motion & print
+   Values that repeat come from the tokens: --r-* corner radii, --ink-* hard ink shadows, --page-l / --page-r
+   the page margins (also used by quiz-style.css). Fonts come from the <link> in each page's <head>. */
 
-/* ---------- tokens ---------- */
+/* =====================================================================
+   Tokens
+   ===================================================================== */
 :root, :root[data-theme="light"] {
   --paper: #fbfaf3;
   --grid: rgba(70, 130, 190, .2);
@@ -35,7 +42,7 @@
   --on-hl: #25272e;                       /* text on the yellow highlighter */
 }
 /* dark: a black notebook read under a desk lamp. White ink, gel-pen blue (maths) / green (physics),
-   an amber highlighter, notes as deep tinted paper; the lamp itself is the layer near the end of this file. */
+   an amber highlighter, notes as deep tinted paper; the lamp itself is near the end of this file. */
 :root[data-theme="dark"] {
   --paper: #0f0f11;
   --grid: rgba(255, 255, 255, .045);
@@ -69,26 +76,48 @@
 :root[data-subject="physics"][data-theme="light"] { --primary-color: #1f7a4d; --secondary-color: #165c3a; --accent-color: #1f7a4d; --primary-rgb: 31, 122, 77; --accent-rgb: 31, 122, 77; }
 :root[data-subject="physics"][data-theme="dark"]  { --primary-color: #86dcae; --secondary-color: #b4ebcd; --accent-color: #86dcae; --primary-rgb: 134, 220, 174; --accent-rgb: 134, 220, 174; }
 
+/* shapes and page margins (the same in both themes; --ink-* follow the theme's --line) */
+:root {
+  --r-note: 2px;        /* sticky notes and paper slips */
+  --r-label: 4px;       /* tag labels, the daily sheet */
+  --r-btn: 9px;         /* ink buttons and inputs */
+  --r-card: 10px;       /* small cards, tickets, dashed notes */
+  --r-sheet: 12px;      /* question cards and big panels */
+  --r-pill: 999px;
+  --ink-1: 1px 1px 0 var(--line);       /* a button pressed */
+  --ink-2: 2px 2px 0 var(--line);       /* buttons, tickets */
+  --ink-3: 3px 3px 0 var(--line);       /* cards */
+  /* the text column: 1120px wide in the middle of the window, its red margin 28px left of the text */
+  --page-l: max(92px, calc((100vw - 1120px) / 2 + 92px));
+  --page-r: max(40px, calc((100vw - 1120px) / 2 + 40px));
+}
+@media (max-width: 900px) { :root { --page-l: 44px; --page-r: 16px; } }
+
 /* a little larger text on desktop (everything is sized in rem); phones keep style.css sizes */
 @media (min-width: 861px) { html { font-size: 17px; } }
 
-/* ---------- page: squared paper + red margin ---------- */
-/* the notebook page lies on a desk: the page is <body> (squared paper, red margin, soft shadow) */
-:root, :root[data-theme="light"] { --desk: #e7e3d6; }
-:root[data-theme="dark"] { --desk: #0d1512; }
-html { background: var(--desk) !important; }
+/* =====================================================================
+   Page: squared paper over the whole window, a red margin line, the text column in the middle
+   ===================================================================== */
+html { display: block !important; height: auto !important; background: var(--paper) !important; }
+/* the page always grows with its content; the footer sits at the bottom of the page.
+   isolation: body is its own stacking context, so the dark-mode lamp (z-index -1) lies on the paper, under the text */
 body {
-  position: relative; width: 100%; max-width: 1120px; margin: 0 auto !important; min-height: 100vh; height: auto !important;
-  padding: 0 40px 0 92px; box-sizing: border-box; line-height: 1.6; color: var(--text-primary);
+  position: relative; display: flex; flex-direction: column; flex-shrink: 0; isolation: isolate;
+  width: 100%; max-width: none !important; min-height: 100vh; height: auto !important; margin: 0 auto !important;
+  box-sizing: border-box; padding-top: 0; padding-bottom: 0;
+  padding-left: var(--page-l) !important; padding-right: var(--page-r) !important;
+  line-height: 1.6; color: var(--text-primary);
   background-color: var(--paper) !important;
   background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 26px 26px; box-shadow: 0 8px 30px -12px rgba(0, 0, 0, .35);
+  background-size: 26px 26px; box-shadow: none !important;
 }
-body::before { content: ''; position: absolute; z-index: 0; top: 0; bottom: 0; left: 64px; width: 2px; pointer-events: none; background: var(--margin); }
-@media (max-width: 900px) {
-  body { padding: 0 16px 0 44px; box-shadow: none; }
-  body::before { left: 22px; }
+body::before {
+  content: ''; position: absolute; z-index: 0; top: 0; bottom: 0; left: calc(var(--page-l) - 28px) !important;
+  width: 2px; pointer-events: none; background: var(--margin);
 }
+@media (max-width: 900px) { body::before { left: 22px !important; } }
+body > :not(.main-nav) { margin-left: 0 !important; margin-right: 0 !important; max-width: 100%; }
 :focus-visible { outline: 3px solid var(--primary-color); outline-offset: 2px; }
 
 /* the old pages animate and glow on load; the notebook stays still */
@@ -96,56 +125,150 @@ body::before { content: ''; position: absolute; z-index: 0; top: 0; bottom: 0; l
 .hero-content::before, .classes-container::before, .classes-container::after { display: none !important; }
 .classes-container, .hero-section { background: transparent !important; }
 
-/* ---------- top bar ---------- */
+/* page containers: text starts at the margin, titles are written from the left */
+.classes-container, .hero-section, .generator-container, .quiz-container, .quiz-view-container, .acc-page { padding-left: 0 !important; padding-right: 0 !important; }
+.acc-page, .generator-container { margin-left: 0 !important; }
+.hero-content, .container, .subject-header, .page-header, .text-title, .main-title { text-align: left !important; }
+.hero-content { align-items: flex-start !important; max-width: none !important; }
+
+/* =====================================================================
+   Top bar and site navigation (nav.js): the same four sections on every page.
+   Computers: links in the top bar, the current section under the highlighter.
+   Phones and tablets (≤1100px, where those links don't fit): a bottom tab bar.
+   ===================================================================== */
 .main-nav {
-  background: color-mix(in srgb, var(--paper) 92%, transparent) !important;
-  backdrop-filter: none !important; box-shadow: none !important;
+  left: 0 !important; right: auto !important; width: 100%; max-width: none !important;
+  background: color-mix(in srgb, var(--paper) 92%, transparent) !important; backdrop-filter: none !important; box-shadow: none !important;
   border-bottom: 1.5px solid var(--line);
 }
+.nav-content {
+  max-width: none !important; justify-content: flex-start !important; gap: 1.6rem;
+  padding: .85rem var(--page-r) .85rem var(--page-l) !important;
+}
+.nav-content:not(:has(.nav-links)) .logo { margin-right: auto; }
 .logo { color: var(--primary-color) !important; font-family: var(--heading-font); font-weight: 700; }
 .logo i:not(.fa-arrow-left) { display: none; }
-.logo span { font-size: 1.3rem; }
+.logo span { font-size: 1.3rem; white-space: nowrap; }
+body.home .logo span::after { content: 'ქვიზების რვეული'; display: block; font: 500 .68rem/1.2 'Noto Sans Georgian', sans-serif; color: var(--text-secondary); letter-spacing: .02em; }
 #toggle-dark { color: var(--text-secondary) !important; }
+/* the switch: a moon by day, a glowing bulb at night */
+:root[data-theme="dark"] #toggle-dark i { color: var(--hl) !important; text-shadow: 0 0 12px rgba(255, 197, 96, .8), 0 0 28px rgba(255, 197, 96, .45); }
 
-/* ---------- headings ---------- */
-h1, h2, .main-title, .text-title { font-family: var(--heading-font); text-shadow: none !important; }
+/* plain links, nothing wraps (the logged-in widget needs the room) */
+.nav-links { display: flex; gap: 1.3rem; margin-right: auto; font-weight: 500; }
+.nav-links a { color: var(--text-primary); text-decoration: none; white-space: nowrap; }
+.nav-links a[aria-current] { background: linear-gradient(transparent 60%, var(--hl-band) 60%); padding: 0 .15em; }
+.nav-links a:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+
+.tabbar { display: none; }
+@media (max-width: 1100px) {
+  .nav-links { display: none; }
+  .nav-content .logo { margin-right: auto; }   /* the links are hidden: the logo pushes the buttons right */
+  .tabbar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000;
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2px;
+    padding: 4px max(6px, calc((100vw - 640px) / 2)) calc(4px + env(safe-area-inset-bottom));
+    background: color-mix(in srgb, var(--paper) 96%, transparent); border-top: 1.5px solid var(--line);
+  }
+  .tabbar .tab {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+    min-height: 54px; border-radius: var(--r-card); text-decoration: none;
+    color: var(--text-secondary); font-size: .76rem; font-weight: 500; line-height: 1.2; text-align: center;
+  }
+  .tabbar .tab svg { width: 24px; height: 24px; flex: none; }
+  .tabbar .tab span { padding: 0 3px; }
+  .tabbar .tab[aria-current] { color: var(--primary-color); font-weight: 700; }
+  .tabbar .tab[aria-current] span { color: var(--text-primary); background: linear-gradient(transparent 55%, var(--hl-band) 55%); }
+  .tabbar .tab:active { background: rgba(var(--primary-rgb), .08); }
+  /* room for the bar under the footer */
+  body.has-tabbar { padding-bottom: calc(64px + env(safe-area-inset-bottom)) !important; }
+}
+@media (max-width: 900px) {
+  .nav-content { padding-top: .7rem !important; padding-bottom: .7rem !important; gap: .8rem; }
+}
+
+/* =====================================================================
+   Headings
+   ===================================================================== */
+/* long one-word titles (e.g. კონფიდენციალურობის) break instead of running off a phone screen */
+h1, h2, .main-title, .text-title { font-family: var(--heading-font); text-shadow: none !important; overflow-wrap: break-word; }
 .text-title, .main-title {
   background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important;
   color: var(--primary-color) !important; filter: none !important;
   text-transform: none !important; letter-spacing: 0 !important; font-weight: 700;
 }
+/* one size for page titles (the old pages used up to 3.5rem) */
+.text-title {
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem) !important; line-height: 1.25 !important; margin: 0 0 .6rem !important;
+  padding-left: 0 !important; padding-right: 0 !important;
+}
 .text-title:hover { transform: none !important; }
+.page-header .text-title { font-size: clamp(1.7rem, 3.2vw, 2.5rem) !important; }
+.quiz-card-main .text-title { font-size: clamp(1.4rem, 2.6vw, 1.9rem) !important; }
+.main-title { font-size: clamp(1.9rem, 3.6vw, 2.9rem); }
 .highlight { background: none !important; color: inherit !important; }
 /* the home title keeps its highlighter stroke (a marker, not a gradient) */
-.main-title .highlight {
-  background: linear-gradient(transparent 58%, var(--hl-band) 58%) !important;
-  padding: 0 .18em; border-radius: 2px;
-}
+.main-title .highlight { background: linear-gradient(transparent 58%, var(--hl-band) 58%) !important; padding: 0 .18em; border-radius: var(--r-note); }
+:root[data-theme="dark"] .main-title .highlight { color: inherit !important; }
+@media (max-width: 640px) { .text-title { font-size: 1.7rem !important; } }
 
-/* ---------- buttons: blue ink, hard shadow, pressed on hover ---------- */
+/* =====================================================================
+   Buttons: ink-filled, an ink outline and a hard shadow, pressed on hover
+   ===================================================================== */
 .button, .action-row button[type="submit"], .dp-btn, .pb-make-quiz {
   background: var(--primary-color) !important; color: var(--on-primary) !important;
-  border: 2px solid var(--line) !important; border-radius: 9px !important;
-  box-shadow: 2px 2px 0 var(--line) !important; font-weight: 600;
+  border: 2px solid var(--line) !important; border-radius: var(--r-btn) !important;
+  box-shadow: var(--ink-2) !important; font-weight: 600;
   transition: transform .1s, box-shadow .1s;
 }
 .button:hover, .action-row button[type="submit"]:hover, .dp-btn:hover, .pb-make-quiz:hover {
-  background: var(--primary-color) !important; transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--line) !important;
+  background: var(--primary-color) !important; transform: translate(1px, 1px); box-shadow: var(--ink-1) !important;
 }
 button:disabled { box-shadow: none !important; }
+/* 404 page: big links styled as the same buttons */
+.hero-content .button-wrapper { flex-direction: row !important; flex-wrap: wrap; align-items: flex-start !important; justify-content: flex-start; gap: .8rem !important; margin-top: .4rem !important; }
+.main-button {
+  display: inline-flex; align-items: center; gap: .6rem; min-width: 0 !important; width: auto !important; padding: .7rem 1.3rem !important;
+  font-size: 1.05rem !important; font-weight: 700; text-decoration: none; border-radius: var(--r-btn) !important;
+  background: var(--primary-color) !important; color: var(--on-primary) !important; border: 2px solid var(--line) !important;
+  box-shadow: var(--ink-2) !important; transition: transform .1s, box-shadow .1s;
+}
+.main-button:hover { transform: translate(1px, 1px); box-shadow: var(--ink-1) !important; }
+.main-button::before { display: none; }
 
-/* ---------- footer ---------- */
-.main-footer { background: transparent !important; border-top: 2px dashed var(--border-color); color: var(--text-secondary) !important; }
+/* =====================================================================
+   Footer
+   ===================================================================== */
+.main-footer {
+  margin-top: auto; padding: 1.6rem 0 2rem !important; min-height: 0 !important;
+  background: transparent !important; border-top: 2px dashed var(--border-color); color: var(--text-secondary) !important;
+  font-size: .82rem; line-height: 1.7;
+}
+.main-footer p { margin: 0; }
 .email-link { color: var(--primary-color) !important; }
+@media (max-width: 640px) { .main-footer { font-size: .78rem; } }
 
-/* ---------- home: notebook covers, lined daily sheet, dashed note ---------- */
-.main-title { font-size: clamp(1.9rem, 3.6vw, 2.9rem); }
+/* =====================================================================
+   Home (index.html): title, subject covers + duel + "continue" on the left, the daily sheet on the right
+   ===================================================================== */
+body.home .hero-section { padding: 0 0 2rem !important; align-items: flex-start; }
+body.home .container { padding-top: 108px !important; max-width: none; }
+body.home .hero-content { gap: 1.6rem !important; }
+body.home .main-title { font-size: 2.6rem; line-height: 1.2; margin: 0 0 .4rem; }
+body.home .main-title .highlight { margin: 0; padding: 0 .06em; }
+.home-head { width: 100%; }
+.home-lede { margin: 0; max-width: 44ch; color: var(--text-secondary); font-size: 1.05rem; }
+.home-grid, .home-grid.has-daily { width: 100%; }
+body.home .home-side .button-wrapper { align-items: stretch; }
+
+/* subject covers: notebook covers with a spine */
 .cover {
-  display: block; position: relative; text-decoration: none; color: #fff; text-align: left;
-  border-radius: 4px 12px 12px 4px; padding: 18px 20px 16px 38px; min-height: 104px; width: 100%;
-  box-shadow: 3px 4px 0 rgba(0, 0, 0, .22); transition: transform .15s;
+  display: block; position: relative; width: 100%; min-height: 104px; padding: 18px 20px 16px 38px;
+  border-radius: 4px 12px 12px 4px; box-shadow: 3px 4px 0 rgba(0, 0, 0, .22);
+  color: #fff; text-align: left; text-decoration: none; transition: transform .15s;
 }
 .cover::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 16px; background: rgba(0, 0, 0, .2); border-radius: 4px 0 0 4px; }
+.cover:hover { transform: rotate(-1deg) translateY(-2px); }
 .cover-math { background: #1d3f9e; }
 .cover-physics { background: #1f7a4d; }
 .cover b { display: block; font: 700 1.45rem/1.2 var(--heading-font); }
@@ -155,36 +278,45 @@ button:disabled { box-shadow: none !important; }
   background: #fffdf2; transform: rotate(-2deg); box-shadow: 1px 1px 0 rgba(0, 0, 0, .25);
 }
 .cover .cover-sym { position: absolute; right: 16px; bottom: 4px; font: 700 3.4rem/1 var(--heading-font); opacity: .26; }
-.cover:hover { transform: rotate(-1deg) translateY(-2px); }
-body.home .home-side .button-wrapper { align-items: stretch; }
 body.home .home-side .cover { margin: 0; }
+:root[data-theme="dark"] .cover { box-shadow: 3px 4px 0 rgba(0, 0, 0, .45); }
+:root[data-theme="dark"] .cover .cover-label { background: rgba(0, 0, 0, .28); color: #f0ead8; box-shadow: none; }
 
+/* the daily problem (daily.js): a ruled sheet taped to the page */
 .dp {
-  position: relative; overflow: visible; border: 1.5px solid var(--line); border-radius: 4px;
+  display: block; position: relative; overflow: visible; padding: 34px 24px 20px 40px;
+  border: 1.5px solid var(--line); border-radius: var(--r-label);
   background-color: var(--card-bg);
   background-image: repeating-linear-gradient(transparent 0 31px, rgba(70, 130, 190, .26) 31px 32px);
-  box-shadow: 3px 4px 0 rgba(37, 39, 46, .18); transform: rotate(.5deg);
+  box-shadow: 3px 4px 0 rgba(37, 39, 46, .18); transform: rotate(.6deg);
   animation: sheet-in .7s cubic-bezier(.2, .8, .2, 1) both;
 }
-.dp::before {
+:root[data-theme="dark"] .dp { box-shadow: 3px 4px 0 rgba(0, 0, 0, .45); }
+@keyframes sheet-in { from { opacity: 0; transform: translateY(-16px) rotate(-2.5deg); } }
+.dp::before {   /* the tape */
   content: ''; position: absolute; top: -13px; left: 48%; width: 92px; height: 24px; z-index: 2;
   background: rgba(255, 228, 94, .8); transform: rotate(-3deg);
 }
-@keyframes sheet-in { from { opacity: 0; transform: translateY(-16px) rotate(-2.5deg); } }
-.dp-date { background: rgba(210, 58, 44, .07); border-right: 2px dotted rgba(210, 58, 44, .4); }
-.dp-date small, .dp-date b, .dp-date span { color: var(--red); }
-.dp-date b { font-family: var(--heading-font); }
-.dp-eyebrow { color: var(--red); letter-spacing: 0; }
+.dp::after { content: ''; position: absolute; left: 14px; top: 0; bottom: 0; border-left: 3px dotted var(--border-color); }
+.dp-date { display: none; }
+.dp-main { padding: 0; }
+.dp-row { display: block; }
+.dp-eyebrow { color: var(--red); letter-spacing: 0; font-size: .88rem; font-weight: 600; margin-bottom: .1rem; }
 .dp-eyebrow i { display: none; }
-.dp-pill { background: var(--note-1); color: var(--note-ink); border-radius: 3px; box-shadow: 1px 1px 0 rgba(0, 0, 0, .2); }
-.dp-q { font-family: var(--heading-font); font-weight: 500; line-height: 1.7; color: var(--primary-color); }
+.dp-pill { background: var(--note-1); color: var(--note-ink); border-radius: var(--r-note); box-shadow: 1px 1px 0 rgba(0, 0, 0, .2); white-space: nowrap; }
+:root[data-theme="dark"] .dp-pill { box-shadow: 2px 3px 0 rgba(0, 0, 0, .45) !important; }
+.dp-q { font: 500 1.28rem/32px var(--heading-font); margin: .4rem 0 .7rem; -webkit-line-clamp: 5; color: var(--primary-color); }
+.dp-grades { margin: 0 0 .9rem; }
 .dp-grades button { border-radius: 50%; width: 1.7rem; height: 1.7rem; padding: 0; border: 1.5px solid var(--line); }
 .dp-grades button.on { background: var(--hl); color: var(--on-hl); border-color: var(--line); }
+.dp-action { margin-bottom: .2rem; }
 .dp-xp b { color: var(--red); }
 .dp-solved { border-radius: 8px; }
+.dp-week { margin-left: 0; margin-top: .9rem; }
 
+/* "continue where you left off" and the duel link: dashed notes */
 .continue-card {
-  border: 2px dashed var(--line) !important; border-radius: 10px !important;
+  border: 2px dashed var(--line) !important; border-radius: var(--r-card) !important;
   background: color-mix(in srgb, var(--card-bg) 75%, transparent) !important;
 }
 .continue-card:hover { border-style: solid !important; transform: none; }
@@ -192,218 +324,6 @@ body.home .home-side .cover { margin: 0; }
 .continue-card small { color: var(--red); }
 .continue-card .go { color: var(--text-primary); }
 
-/* ---------- classes: sticky notes ---------- */
-.subject-header { margin-bottom: 3rem; }
-.problem-bank-link {
-  display: block !important; width: fit-content; margin: .5rem auto 0 !important; padding: 0 !important;
-  background: none !important; border: 0 !important; border-bottom: 2px dashed rgba(var(--primary-rgb), .5) !important;
-  border-radius: 0 !important; color: var(--primary-color) !important; font-weight: 600;
-}
-.problem-bank-link i { display: none; }
-.problem-bank-link:hover { border-bottom-style: solid !important; }
-/* shorter notes: five grades and the random card fit on one screen */
-.grade-grid { grid-template-columns: repeat(3, minmax(190px, 260px)) !important; gap: 1.3rem !important; }
-.grade-card { aspect-ratio: 1.45 !important; padding: 1rem 1.2rem !important; }
-.grade-number { font-size: 3rem !important; margin-bottom: .1rem !important; }
-.grade-content { gap: .4rem !important; }
-.grade-content h2 { font-size: 1rem !important; }
-.subject-header { margin-bottom: 2.2rem !important; }
-@media (max-width: 640px) { .grade-grid { grid-template-columns: repeat(2, 1fr) !important; } .grade-card { aspect-ratio: 1.15 !important; } }
-.grade-card {
-  background: var(--note-1) !important; color: var(--note-ink) !important; border: 0 !important; border-radius: 3px !important;
-  box-shadow: 3px 4px 0 rgba(0, 0, 0, .2) !important; transform: rotate(-1.4deg);
-  transition: transform .15s, box-shadow .15s !important; backdrop-filter: none !important;
-}
-.grade-card:nth-child(5n+2) { background: var(--note-2) !important; transform: rotate(1.2deg); }
-.grade-card:nth-child(5n+3) { background: var(--note-3) !important; transform: rotate(-.7deg); }
-.grade-card:nth-child(5n+4) { background: var(--note-4) !important; transform: rotate(1.6deg); }
-.grade-card:nth-child(5n+5) { background: var(--note-5) !important; transform: rotate(-1.1deg); }
-.grade-card::before, .grade-card::after, .grade-card .shine { display: none !important; }
-.grade-card:hover { transform: rotate(0) translateY(-4px) !important; box-shadow: 5px 7px 0 rgba(0, 0, 0, .22) !important; }
-.grade-number, .grade-card:hover .grade-number {
-  background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important;
-  color: var(--note-ink) !important; font-family: var(--heading-font); font-weight: 700 !important; transform: none !important;
-}
-.grade-content h2 { color: var(--note-ink) !important; font-weight: 600; opacity: 1; }
-.grade-card.special {
-  background: color-mix(in srgb, var(--card-bg) 80%, transparent) !important; color: var(--text-primary) !important;
-  border: 2px dashed var(--line) !important; box-shadow: none !important; transform: rotate(.6deg);
-}
-.grade-card.special .grade-number, .grade-card.special .grade-content h2 { color: var(--text-primary) !important; }
-.grade-card.special:hover { transform: rotate(0) translateY(-3px) !important; box-shadow: none !important; border-style: solid !important; }
-.grade-icon { color: var(--primary-color) !important; }
-
-/* ---------- class page: years as marker-underlined headings, quizzes as small tickets ---------- */
-.year-section { background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 0 .5rem !important; transform: none !important; }
-.year-header { border-bottom: 0 !important; margin-bottom: .6rem !important; padding-bottom: 0 !important; }
-.year-header i { display: none; }
-.year-header h2 {
-  background: linear-gradient(transparent 62%, var(--hl-band) 62%) !important; -webkit-background-clip: border-box !important; background-clip: border-box !important;
-  color: var(--text-primary) !important; font-size: 1.35rem; padding: 0 .2rem;
-}
-.quizzes-grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)) !important; gap: .9rem !important; }
-.quiz-card {
-  flex-direction: row !important; justify-content: flex-start; gap: .6rem !important; padding: .55rem .9rem !important;
-  background: var(--card-bg) !important; border: 2px solid var(--line) !important; border-radius: 10px !important;
-  box-shadow: 2px 2px 0 var(--line); transition: transform .1s, box-shadow .1s !important;
-}
-.quiz-card:hover { transform: translate(1px, 1px) !important; box-shadow: 1px 1px 0 var(--line); background: var(--card-bg) !important; }
-.quiz-icon { display: none; }
-.quiz-number {
-  background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important;
-  color: var(--primary-color) !important; font-family: var(--heading-font); font-size: 1.5rem !important;
-}
-.quiz-card h3 { display: none; }                       /* the number says it; the heading above names the year */
-.quiz-card:has(.status-icon.done) { background: var(--ok-bg) !important; }
-.page-header .text-title { font-size: clamp(1.7rem, 3.2vw, 2.5rem) !important; }
-.quiz-card .status-icon, .status-icon {
-  position: static !important; margin-left: auto; width: 20px; height: 20px; font-size: 0 !important;
-  border: 2px solid var(--line); border-radius: 4px; display: grid; place-items: center; background: var(--card-bg);
-}
-.status-icon::before { content: none !important; }
-.status-icon.done::after { content: '✓'; font: 700 .9rem/1 sans-serif; color: var(--green); }
-.status-icon.done { background: var(--ok-bg); }
-.quiz-card .best-score {
-  order: 5; background: none !important; padding: 0 !important; color: var(--red) !important;
-  font: 800 .95rem/1 var(--heading-font) !important; transform: rotate(-4deg);
-}
-
-/* ---------- quiz page ---------- */
-.quiz-card-main, .mode-selection-card {
-  background: var(--card-bg) !important; border: 2px solid var(--line) !important; border-radius: 12px !important;
-  box-shadow: var(--card-shadow) !important;
-}
-.mode-selection-card { background: transparent !important; border-style: dashed !important; box-shadow: none !important; }
-#timer { border: 2px solid var(--line); background: var(--card-bg); font-variant-numeric: tabular-nums; }
-#quizForm fieldset { border-color: var(--border-color) !important; }
-#quizForm legend { font: 500 1.15rem/1.8 var(--heading-font) !important; color: var(--primary-color); }
-
-/* answer options: lettered circles, highlighter for the right one, red wavy line for the wrong one */
-html body .option-chip {
-  background: transparent !important; border: 1.5px solid transparent !important; border-radius: 10px !important;
-  box-shadow: none !important; color: var(--text-primary) !important; padding: .35rem .8rem .35rem .45rem !important;
-  gap: .8rem !important; font-family: var(--heading-font); font-size: 1.18rem; font-weight: 500;
-  margin: .3rem .6rem .3rem 0 !important;
-}
-html body .option-chip:hover { transform: none; border-color: rgba(var(--primary-rgb), .45) !important; }
-.chip-ripple { display: none; }
-.opt-letter {
-  flex: none; width: 36px; height: 36px; border: 2px solid var(--line); border-radius: 50%; background: var(--card-bg);
-  display: grid; place-items: center; font: 600 .95rem/1 'Noto Sans Georgian', sans-serif;
-}
-/* teacher's pen after grading: a tick after the right answer, a cross after the wrong one */
-html body .option-chip.is-correct::after, html body .option-chip.is-wrong::after {
-  font: 800 1.5rem/1 'Noto Sans Georgian', sans-serif; margin-left: .2rem; transform: rotate(-8deg);
-}
-html body .option-chip.is-correct::after { content: '✓'; color: var(--green); }
-html body .option-chip.is-wrong::after { content: '✗'; color: var(--red); }
-html body .option-chip.selected { background: rgba(var(--primary-rgb), .1) !important; border-color: rgba(var(--primary-rgb), .6) !important; }
-html body .option-chip.selected .opt-letter { background: var(--primary-color); border-color: var(--primary-color); color: var(--on-primary); }
-html body .option-chip.is-correct { background: var(--hl-band) !important; border-color: transparent !important; color: var(--text-primary) !important; box-shadow: none !important; }
-html body .option-chip.is-correct .opt-letter { background: var(--green); border-color: var(--green); color: var(--on-primary); }
-html body .option-chip.is-wrong {
-  background: rgba(210, 58, 44, .09) !important; border-color: transparent !important; color: var(--text-primary) !important; box-shadow: none !important;
-}
-html body .option-chip.is-wrong .opt-letter { background: var(--red); border-color: var(--red); color: var(--on-primary); }
-
-/* feedback after an answer: a sticky note */
-.feedback span[style*="green"], .feedback span[style*="red"], .feedback span[style*="orange"] {
-  color: var(--note-ink) !important; padding: .8rem 1.1rem; box-shadow: 2px 3px 0 rgba(0, 0, 0, .18); transform: rotate(-.5deg); border-radius: 2px;
-  font-size: 1.02rem; font-weight: 600;
-}
-.feedback span[style*="green"] { background: var(--note-4) !important; }
-.feedback span[style*="red"] { background: var(--note-3) !important; }
-.feedback span[style*="orange"] { background: var(--note-1) !important; }
-
-.solution { background: var(--card-bg-secondary) !important; border: 1.5px dashed var(--line) !important; border-radius: 10px !important; }
-.solution summary { color: var(--primary-color) !important; }
-.introduction { background: rgba(var(--primary-rgb), .06); border: 1.5px solid var(--border-color); border-top: 4px solid var(--primary-color); box-shadow: none; }
-.task { background: rgba(210, 58, 44, .06); border: 1.5px solid var(--border-color); border-left: 5px solid var(--red); box-shadow: none; }
-#result { background: var(--card-bg) !important; border: 2px solid var(--line) !important; border-radius: 12px !important; box-shadow: var(--card-shadow); font-family: var(--heading-font); }
-.tag-hint-btn { color: var(--primary-color) !important; border-color: rgba(var(--primary-rgb), .5) !important; background: transparent !important; }
-.guest-nudge { border-color: var(--line); }
-
-/* ---------- theory pages: boxes are sticky notes, worked examples are outlined sheets ---------- */
-:root {
-  --btn-bg: transparent; --btn-bg-hover: var(--primary-color); --btn-fg: var(--primary-color); --btn-fg-hover: var(--on-primary);
-  --btn-border: 2px solid var(--line); --btn-radius: 9px; --card-shadow-hover: 5px 5px 0 var(--line);
-}
-.th-box {
-  background: var(--note-2) !important; color: var(--note-ink); border-radius: 3px !important;
-  box-shadow: 2px 3px 0 rgba(0, 0, 0, .16); padding: .95rem 1.2rem !important;
-}
-.th-box--theorem { background: var(--note-4) !important; }
-.th-box--formula { background: var(--note-1) !important; }
-.th-box--note { background: var(--note-3) !important; }
-.th-box-label { color: var(--note-ink) !important; opacity: .72; letter-spacing: 0 !important; font-size: .82rem !important; }
-.th-example { border: 2px solid var(--line) !important; border-radius: 10px !important; box-shadow: 2px 2px 0 var(--line); }
-.th-level { background: var(--hl-band); color: var(--text-primary); padding: 0 .55rem; border-radius: 2px; }
-.th-toc a.is-active { border-left-color: var(--primary-color); background: linear-gradient(90deg, var(--hl-band), transparent); color: var(--text-primary); }
-.th-practice { border: 2px dashed var(--line) !important; border-radius: 10px !important; background: color-mix(in srgb, var(--card-bg) 75%, transparent) !important; }
-
-/* ---------- account pages (mistakes, my progress, topic map, duel): same ink outlines ---------- */
-.acc-page h1, .acc-page h1 a { color: var(--primary-color); text-decoration: none; }
-.acc-box, .mx-panel, .duel-bar, .duel-problem, .mistake, .mx-next {
-  border: 1.5px solid var(--line) !important; border-radius: 10px !important; box-shadow: 2px 2px 0 var(--line);
-}
-.acc-note { border: 1.5px dashed var(--line) !important; border-radius: 10px !important; }
-.acc-stat, .bd-medal { border-color: var(--line) !important; }
-.acc-btn { border-width: 2px; border-color: var(--line); color: var(--text-primary); }
-.acc-btn:hover { background: var(--hl); color: var(--on-hl); }
-
-/* phones */
-@media (max-width: 600px) {
-  .cover { min-height: 0; padding: 14px 14px 12px 30px; }
-  .cover b { font-size: 1.15rem; }
-  .cover .cover-sym { font-size: 2.4rem; }
-  body.home .home-side .button-wrapper .cover { flex: 1; }
-  .quizzes-grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)) !important; }
-  html body #quizForm fieldset mjx-container.MathJax { font-size: 1.15rem !important; }
-  html body .option-chip { padding: .3rem .6rem .3rem .35rem !important; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .dp { animation: none; }
-  .cover, .grade-card, .quiz-card, .button { transition: none; }
-}
-
-/* =====================================================================
-   Layout of the approved notebook mockup: left-aligned titles, covers beside the daily sheet,
-   grade sticky tabs, quiz tickets, one card per question. Loaded after everything above on purpose.
-   ===================================================================== */
-
-/* ---- top bar sits on the page; links on the home page ---- */
-.main-nav { left: 50% !important; right: auto !important; transform: translateX(-50%); width: 100%; max-width: 1120px; }
-.nav-content { max-width: none !important; padding: .85rem 40px .85rem 92px !important; justify-content: flex-start !important; gap: 1.6rem; }
-.nav-content:not(:has(.nav-links)) .logo { margin-right: auto; }
-/* plain links: no highlight, no hover colour; nothing wraps (the logged-in widget needs the room) */
-.nav-links { display: flex; gap: 1.3rem; margin-right: auto; font-weight: 500; }
-.nav-links a { color: var(--text-primary); text-decoration: none; white-space: nowrap; }
-.logo span { white-space: nowrap; }
-@media (max-width: 1100px) { .nav-links { display: none; } }
-body.home .logo span::after { content: 'ქვიზების რვეული'; display: block; font: 500 .68rem/1.2 'Noto Sans Georgian', sans-serif; color: var(--text-secondary); letter-spacing: .02em; }
-@media (max-width: 900px) {
-  .main-nav { left: 0 !important; transform: none; max-width: none; }
-  .nav-content { padding: .7rem 16px .7rem 44px !important; gap: .8rem; }
-  .nav-links { display: none; }
-}
-
-/* ---- titles are written from the left, like on a page ---- */
-.hero-content, .container, .subject-header, .page-header, .text-title, .main-title { text-align: left !important; }
-.hero-content { align-items: flex-start !important; max-width: none !important; }
-.problem-bank-link { margin-left: 0 !important; }
-.text-title { padding-left: 0 !important; padding-right: 0 !important; }
-.classes-container, .hero-section, .generator-container, .quiz-container, .quiz-view-container, .acc-page { padding-left: 0 !important; padding-right: 0 !important; }
-.acc-page, .generator-container { margin-left: 0 !important; }
-
-/* ---- home: covers + duel on the left, tilted daily sheet on the right ---- */
-body.home .hero-section { padding: 0 0 2rem !important; align-items: flex-start; }
-body.home .container { padding-top: 84px !important; max-width: none; }
-body.home .hero-content { gap: 1.6rem !important; }
-.home-head { width: 100%; }
-body.home .main-title { font-size: 2.6rem; line-height: 1.2; margin: 0 0 .4rem; }
-body.home .main-title .highlight { margin: 0; padding: 0 .06em; }
-.home-lede { margin: 0; max-width: 44ch; color: var(--text-secondary); font-size: 1.05rem; }
-.home-grid, .home-grid.has-daily { width: 100%; }
 @media (min-width: 861px) {
   .home-grid, .home-grid.has-daily { grid-template-columns: 1.05fr .95fr; gap: 2.2rem; justify-content: stretch; align-items: start; }
   .home-side { grid-column: 1; grid-row: 1; }
@@ -415,129 +335,149 @@ body.home .main-title .highlight { margin: 0; padding: 0 .06em; }
   .cover .cover-label { margin-top: 14px; font-size: .85rem; }
   .cover .cover-sym { font-size: 3.8rem; bottom: 8px; }
 }
-.dp { display: block; padding: 34px 24px 20px 40px; transform: rotate(.6deg); }
-.dp-date { display: none; }
-.dp::after { content: ''; position: absolute; left: 14px; top: 0; bottom: 0; border-left: 3px dotted var(--border-color); }
-.dp-main { padding: 0; }
-.dp-eyebrow { font-size: .88rem; font-weight: 600; margin-bottom: .1rem; }
-.dp-q { font: 500 1.28rem/32px var(--heading-font); margin: .4rem 0 .7rem; -webkit-line-clamp: 5; }
-.dp-grades { margin: 0 0 .9rem; }
-.dp-week { margin-left: 0; margin-top: .9rem; }
-.dp-row { display: block; }
-.dp-action { margin-bottom: .2rem; }
-
-/* ---- grade page: small sticky tabs and a hand-written link ---- */
-.classes-container { padding-top: 6rem !important; padding-bottom: 3rem !important; min-height: 0; }
-.subject-header { margin-bottom: 1.4rem !important; }
-.grade-grid { display: flex !important; flex-wrap: wrap; gap: 12px 14px !important; max-width: none !important; padding: 0 !important; margin: 0 !important; justify-content: flex-start !important; }
-.grade-card { aspect-ratio: auto !important; display: block !important; padding: .3rem 1.5rem !important; border-radius: 2px !important; }
-.grade-card:nth-child(odd) { background: var(--note-1) !important; transform: rotate(-1.5deg); }
-.grade-card:nth-child(even) { background: var(--note-2) !important; transform: rotate(1.2deg); }
-.grade-card:hover { transform: rotate(0) translateY(-3px) !important; }
-.grade-content { flex-direction: row; padding: 0; gap: 0 !important; }
-.grade-content h2 { display: none !important; }
-.grade-number { font-size: 1.6rem !important; margin: 0 !important; }
-.grade-card.special { flex-basis: 100%; background: none !important; padding: .1rem 0 !important; transform: rotate(-1deg); border: 0 !important; box-shadow: none !important; }
-.grade-card.special .grade-number { display: none; }
-.grade-card.special .grade-content h2 { display: block !important; color: var(--red) !important; font: 500 1rem 'Noto Sans Georgian', sans-serif; }
-.grade-card.special .grade-content h2::before { content: '↳ '; }
-.grade-card.special:hover { transform: rotate(-1deg) !important; }
-.grade-card.special:hover h2 { text-decoration: underline; }
-
-/* ---- class page: grade tabs, year headings with a count, quiz tickets ---- */
-.quiz-container { padding-top: 6rem !important; padding-bottom: 3rem !important; max-width: none; }
-.page-header { margin-bottom: 1.2rem !important; }
-.years-grid { max-width: none; margin: 0; }
-.stick { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 1.8rem; }
-.stick a { padding: .3rem 1.4rem; background: var(--note-1); color: var(--note-ink); text-decoration: none; font: 700 1.15rem var(--heading-font); box-shadow: 2px 2px 0 rgba(0, 0, 0, .18); transform: rotate(-1.5deg); }
-.stick a:nth-child(even) { background: var(--note-2); transform: rotate(1.2deg); }
-.stick a[aria-current] { background: var(--hl); color: var(--on-hl); outline: 2px solid var(--line); }
-.stick a:hover { transform: rotate(0); }
-.year-section { padding: 0 0 .3rem !important; margin-bottom: .6rem; }
-.year-header { display: flex; align-items: baseline; gap: .7rem; }
-.year-header h2 { background: none !important; color: var(--text-primary) !important; font: 700 1.3rem var(--heading-font); padding: 0; }
-.year-header small { color: var(--text-secondary); font-size: .85rem; }
-.quizzes-grid { display: flex !important; flex-wrap: wrap; gap: 12px !important; padding: 0 !important; }
-.quiz-card { width: auto; }
-.quiz-number { display: none !important; }
-.quiz-card h3.quiz-title { display: block !important; white-space: nowrap; overflow: visible; margin: 0; font-size: 1rem; font-weight: 600 !important; color: var(--text-primary) !important; }
-.quiz-card .status-icon, .status-icon { order: -1; margin-left: 0 !important; }
-.hand-note { display: inline-block; margin-top: .5rem; color: var(--red); font: 500 1rem 'Noto Sans Georgian', sans-serif; text-decoration: none; transform: rotate(-1deg); }
-.hand-note::before { content: '↳ '; }
-.hand-note:hover { text-decoration: underline; }
-
-/* ---- quiz page: every question is its own card, the number sits in a circle ---- */
-.quiz-view-container { padding-top: 6rem !important; padding-bottom: 3rem !important; }
-.quiz-card-main { background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; border-radius: 0 !important; }
-.quiz-card-main .text-title { font-size: clamp(1.4rem, 2.6vw, 1.9rem) !important; margin-bottom: 1.2rem; }
-.mode-selection-card { text-align: left; max-width: 560px; margin-left: 0 !important; }
-#timer { margin-left: 0 !important; }
-#quizForm { margin-top: 1rem; }
-#quizForm fieldset {
-  background: var(--card-bg); border: 2px solid var(--line) !important; border-radius: 12px;
-  padding: 1.4rem 1.7rem !important; margin: 0 0 1.6rem !important; box-shadow: var(--card-shadow); max-width: 800px;
-}
-#quizForm fieldset:last-of-type { border-bottom: 2px solid var(--line) !important; }
-/* only the question number (the legend's first <strong>) becomes a circle; bold text inside the question,
-   e.g. "(3 ქულა)", stays normal text */
-#quizForm legend > strong:first-child {
-  float: left; width: 42px; height: 42px; margin: 0 1rem .5rem 0; border-radius: 50%; display: grid; place-items: center;
-  background: var(--primary-color); color: var(--on-primary); font: 700 1.1rem/1 var(--heading-font);
-}
-#quizForm legend > strong:first-child + br { display: none; }
-@media (max-width: 640px) {
-  #quizForm fieldset { padding: 1rem 1rem !important; }
-  #quizForm legend > strong:first-child { width: 36px; height: 36px; margin-right: .7rem; }
-  body.home .main-title { font-size: 1.8rem; }
-}
-
-/* =====================================================================
-   Polish pass: page plumbing, spacing and the pages that still had the old soft cards.
-   ===================================================================== */
-
-/* ---- the page always grows with its content; the footer sits at the bottom of the page ---- */
-html { display: block !important; height: auto !important; }
-body { display: flex; flex-direction: column; flex-shrink: 0; }
-body > :not(.main-nav) { margin-left: 0 !important; margin-right: 0 !important; max-width: 100%; }
-.main-footer { margin-top: auto; padding: 1.6rem 0 2rem !important; font-size: .82rem; line-height: 1.7; min-height: 0 !important; }
-.main-footer p { margin: 0; }
-
-/* ---- one size for page titles (the old pages used up to 3.5rem) ---- */
-.text-title { font-size: clamp(1.9rem, 3.4vw, 2.6rem) !important; line-height: 1.25 !important; margin: 0 0 .6rem !important; }
-
-/* ---- home ---- */
-body.home .container { padding-top: 108px !important; }
-.dp-pill { white-space: nowrap; }
 @media (max-width: 860px) {
   body.home .container { padding-top: 84px !important; }
   body.home .home-side .button-wrapper { order: 1 !important; }
   .dp { order: 2 !important; margin: .6rem 0; }
   body.home .home-side .continue-card { order: 3 !important; }
 }
-
-/* ---- the "site is being updated" notice becomes a sticky note ---- */
-.site-notice.show, .site-notice {
-  background: var(--note-1) !important; color: var(--note-ink) !important; border: 0 !important; border-radius: 2px !important;
-  box-shadow: 3px 4px 0 rgba(0, 0, 0, .2) !important;
+@media (max-width: 640px) { body.home .main-title { font-size: 1.8rem; } }
+@media (max-width: 600px) {
+  .cover { min-height: 0; padding: 14px 14px 12px 30px; }
+  .cover b { font-size: 1.15rem; }
+  .cover .cover-sym { font-size: 2.4rem; }
+  body.home .home-side .button-wrapper .cover { flex: 1; }
 }
-.site-notice.show { transform: rotate(-1deg) !important; }
-.site-notice .sn-text { color: #4a4c55 !important; }
-.site-notice .sn-icon { background: rgba(0, 0, 0, .08) !important; color: var(--note-ink) !important; }
-.site-notice .sn-report { color: var(--note-ink) !important; border-color: var(--note-ink) !important; background: transparent !important; }
 
-/* ---- grade page: bigger notes with the grade name under the number ---- */
-.grade-grid .grade-card:not(.special) { padding: .9rem 1.6rem 1rem !important; min-width: 118px; text-align: center; }
-.grade-grid .grade-card:not(.special) .grade-content { flex-direction: column; align-items: center; gap: .1rem !important; }
-.grade-grid .grade-card:not(.special) .grade-number { font-size: 2.3rem !important; line-height: 1.1; }
-.grade-grid .grade-card:not(.special) .grade-content h2 { display: block !important; font-size: .85rem !important; font-weight: 500; }
-.grade-grid { margin-top: .6rem !important; gap: 18px 20px !important; }
-.grade-card.special { margin-top: .6rem; }
+/* =====================================================================
+   Grade page (classes.html): one sticky note per grade with what's inside and how far you are;
+   under them cards for the problem bank and theory and a hand-written link to the random quiz
+   ===================================================================== */
+.classes-container { padding-top: 6rem !important; padding-bottom: 3rem !important; min-height: 0; }
+.subject-header { margin-bottom: 1.4rem !important; }
+.grade-grid {
+  display: flex !important; flex-wrap: wrap; justify-content: flex-start !important; gap: 18px 20px !important;
+  max-width: none !important; margin: .6rem 0 0 !important; padding: 0 !important;
+}
+.grade-card {
+  display: block !important; box-sizing: border-box; width: 176px; min-width: 0; aspect-ratio: auto !important;   /* five fit in the 988px text column */
+  padding: 1rem 1.05rem 1.1rem !important; text-align: left;
+  background: var(--note-1) !important; color: var(--note-ink) !important; border: 0 !important; border-radius: var(--r-note) !important;
+  box-shadow: 3px 4px 0 rgba(0, 0, 0, .2) !important; transform: rotate(-1.5deg);
+  transition: transform .15s, box-shadow .15s !important; backdrop-filter: none !important;
+}
+.grade-card:nth-child(even) { background: var(--note-2) !important; transform: rotate(1.2deg); }
+.grade-card:hover { transform: rotate(0) translateY(-3px) !important; box-shadow: 5px 7px 0 rgba(0, 0, 0, .22) !important; }
+:root[data-theme="dark"] .grade-card { box-shadow: 2px 3px 0 rgba(0, 0, 0, .45) !important; }
+:root[data-theme="dark"] .grade-card:hover { box-shadow: 4px 6px 0 rgba(0, 0, 0, .5) !important; }
+.grade-card::before, .grade-card::after { display: none !important; }
+.grade-content { flex-direction: column; align-items: flex-start; gap: .1rem !important; padding: 0; }
+.grade-number, .grade-card:hover .grade-number {
+  background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important;
+  color: var(--note-ink) !important; font-family: var(--heading-font); font-weight: 700 !important; transform: none !important;
+  font-size: 2.6rem !important; line-height: 1.05; margin: 0 !important;
+}
+.grade-content h2 { display: block !important; color: var(--note-ink) !important; font-size: .95rem !important; font-weight: 600; opacity: 1; }
+.grade-meta { font-size: .85rem; color: var(--note-ink); opacity: .8; }
+.grade-progress { display: flex; flex-direction: column; gap: .3rem; width: 100%; margin-top: .55rem; font-size: .82rem; font-weight: 600; text-align: left; }
+.grade-bar { display: block; height: 8px; border: 1.5px solid var(--note-ink); border-radius: 5px; overflow: hidden; background: color-mix(in srgb, var(--card-bg) 55%, transparent); }
+.grade-bar > span { display: block; height: 100%; background: var(--primary-color); }
 
-/* ---- quiz: left column, mode choice as two outlined cards ---- */
-.quiz-view-container, .quiz-card-main { max-width: none !important; margin: 0 !important; width: 100%; }
-#quizForm fieldset { max-width: 820px; }
-.mode-selection-card { max-width: 640px !important; padding: 1.2rem 1.3rem !important; }
+.grade-extras { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; margin-top: 2.2rem; }
+.side-card {
+  display: flex; align-items: center; gap: .9rem; flex: 0 1 380px; box-sizing: border-box; padding: .9rem 1.2rem;
+  background: var(--card-bg); border: 2px solid var(--line); border-radius: var(--r-sheet); box-shadow: var(--ink-3);
+  color: var(--text-primary); text-decoration: none; transition: transform .1s, box-shadow .1s;
+}
+.side-card:hover { transform: translate(1px, 1px); box-shadow: var(--ink-2); }
+.side-card-ic { flex: none; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--note-1); color: var(--note-ink); }
+.side-card + .side-card .side-card-ic { background: var(--note-2); }
+.side-card b { display: block; font: 700 1.1rem/1.3 var(--heading-font); color: var(--primary-color); }
+.side-card small { display: block; margin-top: .1rem; font-size: .86rem; line-height: 1.4; color: var(--text-secondary); }
+
+/* a hand-written red-pen link (grade page, class page) */
+.hand-note { display: inline-block; margin-top: .5rem; color: var(--red); font: 500 1rem 'Noto Sans Georgian', sans-serif; text-decoration: none; transform: rotate(-1deg); }
+.hand-note::before { content: '↳ '; }
+.hand-note:hover { text-decoration: underline; }
+.grade-extras .hand-note { margin: 0; }
+
+@media (max-width: 640px) {
+  .grade-card { width: calc(50% - 10px); }
+  .side-card { flex-basis: 100%; }
+}
+
+/* =====================================================================
+   Class page (class-quizzes.html): grade tabs, year headings, quiz tickets
+   ===================================================================== */
+.quiz-container { padding-top: 6rem !important; padding-bottom: 3rem !important; max-width: none; }
+.page-header { margin-bottom: 1.2rem !important; }
+.years-grid { max-width: none; margin: 0; }
+
+/* grade tabs: small sticky notes, the current one highlighted */
+.stick { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 1.8rem; }
+.stick a { padding: .3rem 1.4rem; background: var(--note-1); color: var(--note-ink); text-decoration: none; font: 700 1.15rem var(--heading-font); box-shadow: 2px 2px 0 rgba(0, 0, 0, .18); transform: rotate(-1.5deg); }
+.stick a:nth-child(even) { background: var(--note-2); transform: rotate(1.2deg); }
+.stick a[aria-current] { background: var(--hl); color: var(--on-hl); outline: 2px solid var(--line); }
+.stick a:hover { transform: rotate(0); }
+:root[data-theme="dark"] .stick a { box-shadow: 2px 3px 0 rgba(0, 0, 0, .45) !important; }
+
+/* years: plain headings with "5 ქვიზი · 1 გავლილი" */
+.year-section { background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 0 .3rem !important; margin-bottom: .6rem; transform: none !important; }
+.year-header { display: flex; align-items: baseline; gap: .7rem; border-bottom: 0 !important; margin-bottom: .6rem !important; padding-bottom: 0 !important; }
+.year-header i { display: none; }
+.year-header h2 {
+  background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important;
+  color: var(--text-primary) !important; font: 700 1.3rem var(--heading-font); padding: 0;
+}
+.year-header small { color: var(--text-secondary); font-size: .85rem; }
+
+/* quiz tickets: done (green, a tick, the best score in red pen), started (a half-filled dot, "7/25" and a strip
+   showing how far), new (just the name) */
+.quizzes-grid { display: flex !important; flex-wrap: wrap; gap: 12px !important; padding: 0 !important; }
+.quiz-card {
+  position: relative; overflow: hidden; width: auto;
+  flex-direction: row !important; justify-content: flex-start; gap: .6rem !important; padding: .55rem .9rem !important;
+  background: var(--card-bg) !important; border: 2px solid var(--line) !important; border-radius: var(--r-card) !important;
+  box-shadow: var(--ink-2); transition: transform .1s, box-shadow .1s !important;
+}
+.quiz-card:hover { transform: translate(1px, 1px) !important; box-shadow: var(--ink-1); background: var(--card-bg) !important; }
+.quiz-card h3.quiz-title { display: block !important; white-space: nowrap; overflow: visible; margin: 0; font-size: 1rem; font-weight: 600 !important; color: var(--text-primary) !important; }
+.quiz-card .status-icon {
+  position: static !important; order: -1; margin-left: 0 !important; width: 20px; height: 20px; font-size: 0 !important;
+  display: grid; place-items: center; border: 2px solid var(--line); border-radius: 50% !important; background: var(--card-bg);
+}
+.quiz-card .status-icon::before { content: none !important; }
+.quiz-card .best-score {
+  order: 5; background: none !important; padding: 0 !important; color: var(--red) !important;
+  font: 800 .95rem/1 var(--heading-font) !important; transform: rotate(-4deg);
+}
+.quiz-progress { font-size: .8rem; font-weight: 600; color: var(--text-secondary); white-space: nowrap; }
+.quiz-card[data-state="new"] .status-icon { display: none !important; }
+.quiz-card[data-state="started"] .status-icon { background: linear-gradient(90deg, var(--hl) 50%, var(--card-bg) 50%); }
+.quiz-card[data-state="started"]::after {
+  content: ''; position: absolute; left: 0; bottom: 0; height: 4px;
+  width: calc(var(--p, 0) * 100%); background: var(--primary-color);
+}
+.quiz-card[data-state="done"] { background: var(--ok-bg) !important; }
+.quiz-card[data-state="done"] .status-icon { background: var(--green); border-color: var(--green); }
+.quiz-card[data-state="done"] .status-icon::after { content: '✓'; font: 800 .78rem/1 sans-serif; color: var(--on-primary); }
+
+/* =====================================================================
+   Quiz page (quiz.html, random-quiz.html; layout of the answers, hint row and navigator: quiz-style.css)
+   ===================================================================== */
+.quiz-view-container { padding-top: 6rem !important; padding-bottom: 3rem !important; max-width: none !important; margin: 0 !important; width: 100%; }
+.quiz-card-main { background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; padding: 0 !important; max-width: none !important; margin: 0 !important; width: 100%; }
+
+/* mode choice: what the quiz holds, then two outlined cards, standard mode as the main button */
+.mode-selection-card {
+  max-width: 640px !important; margin-left: 0 !important; padding: 1.2rem 1.3rem !important; text-align: left;
+  background: transparent !important; border: 2px dashed var(--line) !important; border-radius: var(--r-sheet) !important; box-shadow: none !important;
+}
 .mode-selection-card > p { margin: 0 0 .8rem !important; font: 600 1rem var(--heading-font); color: var(--text-primary); }
+.mode-facts { margin: 0 0 1rem; }
+.mode-facts p { margin: 0; font-size: 1rem; color: var(--text-primary); }
+.mode-facts b { font-family: var(--heading-font); color: var(--primary-color); }
+.mode-facts .mode-facts-note { margin-top: .25rem; font-size: .88rem; color: var(--text-secondary); }
 .mode-options { display: flex; flex-wrap: wrap; gap: 1rem; }
 .mode-btn {
   flex: 1 1 220px; display: flex !important; flex-direction: column; align-items: flex-start; gap: .25rem; text-align: left;
@@ -547,8 +487,90 @@ body.home .container { padding-top: 108px !important; }
 .mode-btn b { font: 700 1.15rem var(--heading-font); color: var(--primary-color); }
 .mode-btn small { font-size: .85rem; font-weight: 400; color: var(--text-secondary); line-height: 1.45; }
 .mode-btn:hover { background: var(--hl-band) !important; }
+.mode-btn:first-child, .mode-btn:first-child:hover { background: var(--primary-color) !important; }
+.mode-btn:first-child b, .mode-btn:first-child small { color: var(--on-primary); }
+.mode-btn:first-child small { opacity: .92; }
 
-/* ---- random quiz generator: tickets instead of grey panels ---- */
+#timer { margin-left: 0 !important; border: 2px solid var(--line); background: var(--card-bg); font-variant-numeric: tabular-nums; }
+/* simulation timer: an outlined card; on phones in the bottom-left corner so it never covers the title */
+#floating-timer {
+  background: var(--card-bg) !important; color: var(--text-primary) !important; border: 2px solid var(--line) !important;
+  border-radius: var(--r-card) !important; box-shadow: var(--ink-3) !important; backdrop-filter: none !important;
+  font-family: var(--heading-font); font-weight: 700 !important;
+}
+/* random quiz: the summary of the chosen grades and quizzes is a dashed note */
+.quiz-info-box { background: color-mix(in srgb, var(--card-bg) 70%, transparent) !important; border: 1.5px dashed var(--line) !important; border-radius: var(--r-card) !important; }
+
+/* every question is its own card; the number sits in a circle */
+#quizForm { margin-top: 1rem; }
+#quizForm fieldset {
+  max-width: 820px; min-width: 0 !important; margin: 0 0 1.6rem !important; padding: 1.4rem 1.7rem !important;
+  background: var(--card-bg); border: 2px solid var(--line) !important; border-radius: var(--r-sheet); box-shadow: var(--card-shadow);
+}
+/* a fieldset is as wide as its widest formula by default: wide math pushed the card off a phone screen */
+.quiz-question-wrapper, #quizForm legend { min-width: 0 !important; }
+#quizForm mjx-container[display="true"], .solution-body mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+#quizForm legend { position: relative; margin-bottom: .7rem !important; font: 500 1.15rem/1.8 var(--heading-font) !important; color: var(--primary-color); }
+/* only the question number (the legend's first <strong>) becomes a circle; bold text inside the question,
+   e.g. "(3 ქულა)", stays normal text */
+#quizForm legend > strong:first-child {
+  float: left; width: 42px; height: 42px; margin: 0 1rem .5rem 0; border-radius: 50%; display: grid; place-items: center;
+  background: var(--primary-color); color: var(--on-primary); font: 700 1.1rem/1 var(--heading-font);
+}
+#quizForm legend > strong:first-child + br, #quizForm legend > br:first-of-type { display: none; }   /* the break after the number, even when the bulb is inserted before it */
+/* the "hint used" bulb sits on the number circle, so the question never shifts */
+#quizForm legend .hint-used-mark {
+  position: absolute; left: 28px; top: -6px; z-index: 1; width: 20px; height: 20px; border-radius: 50%;
+  display: grid; place-items: center; font-size: .7rem; background: var(--hl); color: var(--on-hl); border: 1.5px solid var(--card-bg);
+}
+#quizForm .tag-hint { clear: both; }
+
+/* answers: lettered circles; after grading the right one gets the highlighter and a tick, a wrong pick a red cross */
+html body .option-chip {
+  background: transparent !important; border: 1.5px solid transparent !important; border-radius: var(--r-card) !important;
+  box-shadow: none !important; color: var(--text-primary) !important; padding: .35rem .8rem .35rem .45rem !important;
+  gap: .8rem !important; font-family: var(--heading-font); font-size: 1.18rem; font-weight: 500;
+  margin: .3rem .6rem .3rem 0 !important;
+}
+html body .option-chip:hover { transform: none; border-color: rgba(var(--primary-rgb), .45) !important; }
+.chip-ripple { display: none; }
+.opt-letter {
+  flex: none; width: 36px; height: 36px; border: 2px solid var(--line); border-radius: 50%; background: var(--card-bg);
+  display: grid; place-items: center; font: 600 .95rem/1 'Noto Sans Georgian', sans-serif;
+}
+html body .option-chip.selected { background: rgba(var(--primary-rgb), .1) !important; border-color: rgba(var(--primary-rgb), .6) !important; }
+html body .option-chip.selected .opt-letter { background: var(--primary-color); border-color: var(--primary-color); color: var(--on-primary); }
+html body .option-chip.is-correct { background: var(--hl-band) !important; border-color: transparent !important; color: var(--text-primary) !important; box-shadow: none !important; }
+html body .option-chip.is-correct .opt-letter { background: var(--green); border-color: var(--green); color: var(--on-primary); }
+html body .option-chip.is-wrong { background: rgba(210, 58, 44, .09) !important; border-color: transparent !important; color: var(--text-primary) !important; box-shadow: none !important; }
+html body .option-chip.is-wrong .opt-letter { background: var(--red); border-color: var(--red); color: var(--on-primary); }
+html body .option-chip.is-correct::after, html body .option-chip.is-wrong::after { font: 800 1.5rem/1 'Noto Sans Georgian', sans-serif; margin-left: .2rem; transform: rotate(-8deg); }
+html body .option-chip.is-correct::after { content: '✓'; color: var(--green); }
+html body .option-chip.is-wrong::after { content: '✗'; color: var(--red); }
+
+/* under the answers */
+.solution { background: var(--card-bg-secondary) !important; border: 1.5px dashed var(--line) !important; border-radius: var(--r-card) !important; }
+.solution summary { color: var(--primary-color) !important; }
+.tag-hint-btn { color: var(--primary-color) !important; border-color: rgba(var(--primary-rgb), .5) !important; background: transparent !important; }
+.guest-nudge { border-color: var(--line); }
+.introduction { background: rgba(var(--primary-rgb), .06); border: 1.5px solid var(--border-color); border-top: 4px solid var(--primary-color); box-shadow: none; }
+.task { background: rgba(210, 58, 44, .06); border: 1.5px solid var(--border-color); border-left: 5px solid var(--red); box-shadow: none; }
+#result { background: var(--card-bg) !important; border: 2px solid var(--line) !important; border-radius: var(--r-sheet) !important; box-shadow: var(--card-shadow); font-family: var(--heading-font); }
+
+@media (max-width: 640px) {
+  #quizForm fieldset { padding: 1rem 1rem !important; }
+  #quizForm legend > strong:first-child { width: 36px; height: 36px; margin-right: .7rem; }
+  #quizForm legend .hint-used-mark { left: 22px; }
+  #floating-timer { top: auto !important; bottom: 16px; left: 16px; transform: none; font-size: 1.05rem; padding: 6px 12px; }
+}
+@media (max-width: 600px) {
+  html body #quizForm fieldset mjx-container.MathJax { font-size: 1.15rem !important; }
+  html body .option-chip { padding: .3rem .6rem .3rem .35rem !important; }
+}
+
+/* =====================================================================
+   Random quiz generator: ticket checkboxes instead of grey panels
+   ===================================================================== */
 .generator-card { background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; border-radius: 0 !important; }
 .generator-title {
   background: none !important; -webkit-background-clip: border-box !important; background-clip: border-box !important;
@@ -561,73 +583,80 @@ body.home .container { padding-top: 108px !important; }
 .select-all-btn::before { content: '↳ '; }
 .select-all-btn:hover { text-decoration: underline; }
 .checkbox-grid { display: flex !important; flex-wrap: wrap; gap: 12px !important; }
-.checkbox-label { background: var(--card-bg) !important; border: 2px solid var(--line) !important; border-radius: 10px !important; box-shadow: 2px 2px 0 var(--line); padding: .5rem .9rem !important; }
+.checkbox-label { background: var(--card-bg) !important; border: 2px solid var(--line) !important; border-radius: var(--r-card) !important; box-shadow: var(--ink-2); padding: .5rem .9rem !important; }
 .checkbox-label.checked { background: var(--hl-band) !important; }
 .number-input-group input[type="number"] { background: transparent !important; border: 0 !important; border-bottom: 2px solid var(--line) !important; border-radius: 0 !important; width: 5rem; font: 700 1.2rem var(--heading-font); color: var(--primary-color); }
 .generate-btn-container { text-align: left !important; justify-content: flex-start !important; }
 
-/* ---- problem bank: outlined sheets, left-aligned header ---- */
+/* =====================================================================
+   Problem bank (problems.html): light cards that take the ink outline on hover; the quiz-size select
+   and "ქვიზის შედგენა" are one joined button
+   ===================================================================== */
 .pb-container { padding-left: 0 !important; padding-right: 0 !important; max-width: none !important; }
 .pb-header { text-align: left !important; }
 .pb-subtitle { margin-top: 0 !important; }
-.pb-card, .pb-filters {
-  background: var(--card-bg) !important; border: 2px solid var(--line) !important; border-radius: 12px !important;
-  box-shadow: 3px 3px 0 var(--line) !important;
+.pb-card {
+  background: var(--card-bg) !important; border: 1.5px solid var(--border-color) !important; border-radius: var(--r-sheet) !important;
+  box-shadow: none !important; transition: border-color .15s, box-shadow .15s;
 }
-.pb-filter-toggle, .pb-practice-size select, .pb-more { border: 2px solid var(--line) !important; border-radius: 9px !important; background: var(--card-bg) !important; color: var(--text-primary) !important; }
+.pb-card:hover, .pb-card:focus-within { border-color: var(--line) !important; box-shadow: var(--ink-2) !important; }
+.pb-filters { background: var(--card-bg) !important; border: 1.5px solid var(--line) !important; border-radius: var(--r-sheet) !important; box-shadow: none !important; }
+.pb-filter-toggle, .pb-practice-size select, .pb-more { border: 2px solid var(--line) !important; border-radius: var(--r-btn) !important; background: var(--card-bg) !important; color: var(--text-primary) !important; }
+.pb-practice { border: 2px solid var(--line); border-radius: var(--r-btn); box-shadow: var(--ink-2); transition: transform .1s, box-shadow .1s; }
+.pb-practice .pb-practice-size select { border: 0 !important; border-right: 2px solid var(--line) !important; border-radius: 0 !important; height: 100%; }
+.pb-practice .pb-make-quiz, .pb-practice .pb-make-quiz:hover { border: 0 !important; border-radius: 0 !important; box-shadow: none !important; transform: none !important; }
+.pb-practice:has(.pb-make-quiz:hover:not(:disabled)) { transform: translate(1px, 1px); box-shadow: var(--ink-1); }
 
-/* ---- theory list: topic tickets keep their area colour on the left ---- */
-.th-topic { border: 2px solid var(--line) !important; border-left: 6px solid rgb(var(--tag-rgb, var(--primary-rgb))) !important; box-shadow: 2px 2px 0 var(--line); }
-a.th-topic:hover, a.th-topic:focus-visible { transform: translate(1px, 1px) !important; box-shadow: 1px 1px 0 var(--line) !important; }
-.th-grades button { border: 2px solid var(--line) !important; border-radius: 3px !important; background: var(--card-bg) !important; color: var(--text-primary) !important; }
-.th-grades button[aria-pressed="true"] { background: var(--hl) !important; color: var(--on-hl) !important; }
-
-@media (max-width: 640px) {
-  .text-title { font-size: 1.7rem !important; }
-  .main-footer { font-size: .78rem; }
-}
-
-/* ---- polish, second look ---- */
+/* tag chips (problem cards, quiz hints): plain notebook labels in one style; only the small area icon
+   of a topic and the difficulty bars keep a colour */
+.tag-chip, .tag-chip--topic { border-radius: var(--r-label); background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-primary); }
 .tag-chip { white-space: normal !important; max-width: 100%; }
-#quizForm legend { margin-bottom: .7rem !important; }
-#quizForm .tag-hint { clear: both; }
-.pb-card { box-shadow: 2px 2px 0 var(--line) !important; }
-.th-wrap { margin-left: 0 !important; margin-right: auto !important; }
-.th-topic { border: 1.5px solid var(--border-color) !important; border-left: 6px solid rgb(var(--tag-rgb, var(--primary-rgb))) !important; box-shadow: none !important; }
-a.th-topic:hover, a.th-topic:focus-visible { border-color: var(--line) !important; border-left-color: rgb(var(--tag-rgb, var(--primary-rgb))) !important; box-shadow: 2px 2px 0 var(--line) !important; transform: translateY(-1px) !important; }
-.th-wrap { padding-left: 0 !important; padding-right: 0 !important; }
-.th-index { max-width: none !important; margin: 0 !important; }
-
-/* ---- full paper: the squared paper fills the whole window; the content keeps its width and stays centred ---- */
-html { background: var(--paper) !important; }
-body {
-  max-width: none !important; box-shadow: none !important;
-  padding-left: max(92px, calc((100vw - 1120px) / 2 + 92px)) !important;
-  padding-right: max(40px, calc((100vw - 1120px) / 2 + 40px)) !important;
-}
-body::before { left: calc(max(92px, calc((100vw - 1120px) / 2 + 92px)) - 28px) !important; }
-.main-nav { max-width: none !important; }
-.nav-content {
-  padding-left: max(92px, calc((100vw - 1120px) / 2 + 92px)) !important;
-  padding-right: max(40px, calc((100vw - 1120px) / 2 + 40px)) !important;
-}
-@media (max-width: 900px) {
-  body { padding: 0 16px 0 44px !important; }
-  body::before { left: 22px !important; }
-  .nav-content { padding: .7rem 16px .7rem 44px !important; }
-}
-
-/* ---- quiz: the "hint used" bulb sits on the number circle, so the question never shifts ---- */
-#quizForm legend { position: relative; }
-#quizForm legend > br:first-of-type { display: none; }   /* the break after the number, even when the bulb is inserted before it */
-#quizForm legend .hint-used-mark {
-  position: absolute; left: 28px; top: -6px; z-index: 1; width: 20px; height: 20px; border-radius: 50%;
-  display: grid; place-items: center; font-size: .7rem; background: var(--hl); color: var(--on-hl); border: 1.5px solid var(--card-bg);
-}
-@media (max-width: 640px) { #quizForm legend .hint-used-mark { left: 22px; } }
+.tag-chip:hover, .tag-chip:focus-visible, .tag-chip--topic:hover, .tag-chip--topic:focus-visible { background: var(--card-bg); border-color: var(--line); color: var(--text-primary); }
+.tag-chip--topic .tag-icon { color: var(--tag-fg, var(--primary-color)); opacity: 1; }
+.tag-chip--method { background: transparent; border-style: dashed; }
+.tag-theory { border-radius: var(--r-label); }
 
 /* =====================================================================
-   Duels (duel.html) in the notebook style: sticky-note choices, ink buttons, a score sheet for the result.
+   Theory (theory.html): boxes are sticky notes, worked examples outlined sheets, topics tickets with their area colour
+   ===================================================================== */
+:root {
+  --btn-bg: transparent; --btn-bg-hover: var(--primary-color); --btn-fg: var(--primary-color); --btn-fg-hover: var(--on-primary);
+  --btn-border: 2px solid var(--line); --btn-radius: var(--r-btn); --card-shadow-hover: 5px 5px 0 var(--line);
+}
+.th-wrap { margin-left: 0 !important; margin-right: auto !important; padding-left: 0 !important; padding-right: 0 !important; }
+.th-index { max-width: none !important; margin: 0 !important; }
+.th-box { background: var(--note-2) !important; color: var(--note-ink); border-radius: var(--r-note) !important; box-shadow: 2px 3px 0 rgba(0, 0, 0, .16); padding: .95rem 1.2rem !important; }
+.th-box--theorem { background: var(--note-4) !important; }
+.th-box--formula { background: var(--note-1) !important; }
+.th-box--note { background: var(--note-3) !important; }
+:root[data-theme="dark"] .th-box { box-shadow: 2px 3px 0 rgba(0, 0, 0, .45) !important; }
+.th-box-label { color: var(--note-ink) !important; opacity: .72; letter-spacing: 0 !important; font-size: .82rem !important; }
+.th-example { border: 2px solid var(--line) !important; border-radius: var(--r-card) !important; box-shadow: var(--ink-2); }
+.th-level { background: var(--hl-band); color: var(--text-primary); padding: 0 .55rem; border-radius: var(--r-note); }
+.th-toc a.is-active { border-left-color: var(--primary-color); background: linear-gradient(90deg, var(--hl-band), transparent); color: var(--text-primary); }
+.th-practice { border: 2px dashed var(--line) !important; border-radius: var(--r-card) !important; background: color-mix(in srgb, var(--card-bg) 75%, transparent) !important; }
+.th-topic { border: 1.5px solid var(--border-color) !important; border-left: 6px solid rgb(var(--tag-rgb, var(--primary-rgb))) !important; box-shadow: none !important; }
+a.th-topic:hover, a.th-topic:focus-visible {
+  border-color: var(--line) !important; border-left-color: rgb(var(--tag-rgb, var(--primary-rgb))) !important;
+  box-shadow: var(--ink-2) !important; transform: translateY(-1px) !important;
+}
+.th-grades button { border: 2px solid var(--line) !important; border-radius: var(--r-note) !important; background: var(--card-bg) !important; color: var(--text-primary) !important; }
+.th-grades button[aria-pressed="true"] { background: var(--hl) !important; color: var(--on-hl) !important; }
+
+/* =====================================================================
+   Account pages (mistakes, my progress, topic map): the same ink outlines
+   ===================================================================== */
+.acc-page h1, .acc-page h1 a { color: var(--primary-color); text-decoration: none; }
+.acc-box, .mx-panel, .mistake, .mx-next { border: 1.5px solid var(--line) !important; border-radius: var(--r-card) !important; box-shadow: var(--ink-2); }
+.acc-note { border: 1.5px dashed var(--line) !important; border-radius: var(--r-card) !important; }
+.acc-stat, .bd-medal { border-color: var(--line) !important; }
+.acc-btn { border-width: 2px; border-color: var(--line); color: var(--text-primary); }
+.acc-btn:hover { background: var(--hl); color: var(--on-hl); }
+/* boxes rendered by the scripts (login note, join box, lists) keep a gap between them */
+.acc-page #content > * + * { margin-top: 1.1rem; }
+
+/* =====================================================================
+   Duels (duel.html): sticky-note choices, ink buttons, a score sheet for the result
    ===================================================================== */
 .duel-page .acc-box h2 { font: 700 1.3rem var(--heading-font); color: var(--text-primary); }
 .duel-field > label { font: 700 1rem var(--heading-font); color: var(--text-primary); }
@@ -635,27 +664,28 @@ body::before { left: calc(max(92px, calc((100vw - 1120px) / 2 + 92px)) - 28px) !
 /* grade and length choices: sticky notes, the chosen one highlighted */
 .duel-chips { gap: 10px !important; }
 .duel-chips button {
-  border: 0 !important; border-radius: 2px !important; background: var(--note-1) !important; color: var(--note-ink) !important;
+  border: 0 !important; border-radius: var(--r-note) !important; background: var(--note-1) !important; color: var(--note-ink) !important;
   box-shadow: 2px 2px 0 rgba(0, 0, 0, .18); transform: rotate(-1.2deg); padding: .4rem 1rem !important;
   font: 700 1rem var(--heading-font) !important; transition: transform .12s;
 }
 .duel-chips button:nth-child(even) { background: var(--note-2) !important; transform: rotate(1deg); }
 .duel-chips button:hover { transform: rotate(0); }
 .duel-chips button.on { background: var(--hl) !important; color: var(--on-hl) !important; outline: 2px solid var(--line); transform: rotate(0); }
+:root[data-theme="dark"] .duel-chips button { box-shadow: 2px 3px 0 rgba(0, 0, 0, .45) !important; }
 
 /* selects and the code field: written on an ink-outlined box */
 .duel-page select, .duel-page input {
-  border: 2px solid var(--line) !important; border-radius: 9px !important; background: var(--card-bg) !important; color: var(--text-primary) !important;
+  border: 2px solid var(--line) !important; border-radius: var(--r-btn) !important; background: var(--card-bg) !important; color: var(--text-primary) !important;
 }
 .duel-code-input { font: 700 1.1rem var(--heading-font) !important; letter-spacing: .18em; }
 
 /* main actions: the same ink button as the rest of the site */
 .duel-go {
   background: var(--primary-color) !important; color: var(--on-primary) !important; border: 2px solid var(--line) !important;
-  border-radius: 9px !important; box-shadow: 2px 2px 0 var(--line); font: 700 1.05rem 'Noto Sans Georgian', sans-serif !important;
+  border-radius: var(--r-btn) !important; box-shadow: var(--ink-2); font: 700 1.05rem 'Noto Sans Georgian', sans-serif !important;
   transition: transform .1s, box-shadow .1s;
 }
-.duel-go:hover:not(:disabled) { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--line); }
+.duel-go:hover:not(:disabled) { transform: translate(1px, 1px); box-shadow: var(--ink-1); }
 .duel-small { color: var(--text-secondary); }
 
 /* my duels: ruled lines like a notebook list, status written on a small note */
@@ -666,28 +696,30 @@ body::before { left: calc(max(92px, calc((100vw - 1120px) / 2 + 92px)) - 28px) !
 .duel-row-mid b { font-family: var(--heading-font); }
 .duel-avatar { border: 2px solid var(--line); background: var(--card-bg) !important; }
 .duel-pill {
-  border-radius: 2px !important; box-shadow: 1px 2px 0 rgba(0, 0, 0, .16); transform: rotate(-1.5deg);
+  border-radius: var(--r-note) !important; box-shadow: 1px 2px 0 rgba(0, 0, 0, .16); transform: rotate(-1.5deg);
   background: var(--card-bg-secondary) !important; color: var(--note-ink) !important; font-weight: 700 !important;
 }
 .duel-pill.win { background: var(--note-4) !important; }
 .duel-pill.loss { background: var(--note-3) !important; }
 .duel-pill.turn { background: var(--note-1) !important; }
 .duel-pill.muted { box-shadow: none; transform: none; background: transparent !important; color: var(--text-secondary) !important; border: 1.5px dashed var(--border-color); }
+:root[data-theme="dark"] .duel-pill { box-shadow: 2px 3px 0 rgba(0, 0, 0, .45) !important; }
 
 /* invitation / ready: rules as a hand-written list, the share link on an outlined line */
 .duel-rules { padding-left: 1.2rem; }
 .duel-rules li::marker { content: '✓  '; color: var(--green); font-weight: 700; }
-.duel-share { border: 1.5px dashed var(--line) !important; border-radius: 10px !important; background: color-mix(in srgb, var(--card-bg) 70%, transparent) !important; }
+.duel-share { border: 1.5px dashed var(--line) !important; border-radius: var(--r-card) !important; background: color-mix(in srgb, var(--card-bg) 70%, transparent) !important; }
 .duel-settings { font-weight: 600; color: var(--text-secondary); }
 
 /* the score sheet: banner as a sticky note, big written scores, a red VS */
 .duel-banner {
-  border-radius: 2px !important; box-shadow: 3px 4px 0 rgba(0, 0, 0, .18); transform: rotate(-1deg);
+  border-radius: var(--r-note) !important; box-shadow: 3px 4px 0 rgba(0, 0, 0, .18); transform: rotate(-1deg);
   color: var(--note-ink) !important; background: var(--note-1) !important; font: 700 1.25rem var(--heading-font) !important;
 }
 .duel-banner.win { background: var(--note-4) !important; }
 .duel-banner.loss { background: var(--note-3) !important; }
 .duel-banner.muted { background: var(--card-bg-secondary) !important; color: var(--text-secondary) !important; font: 500 1rem 'Noto Sans Georgian', sans-serif !important; transform: none; box-shadow: none; }
+:root[data-theme="dark"] .duel-banner { box-shadow: 2px 3px 0 rgba(0, 0, 0, .45) !important; }
 .duel-vs { margin: 1.2rem 0 .6rem; }
 .duel-side .duel-avatar { width: 58px !important; height: 58px !important; font-size: 1.9rem !important; }
 .duel-side b { font: 700 1.1rem var(--heading-font); }
@@ -697,94 +729,67 @@ body::before { left: calc(max(92px, calc((100vw - 1120px) / 2 + 92px)) - 28px) !
 
 /* playing: the timer bar is pinned under the top bar */
 .duel-bar {
-  top: 86px !important; border: 2px solid var(--line) !important; border-radius: 12px !important; background: var(--card-bg) !important;
-  box-shadow: 3px 3px 0 var(--line) !important;
+  top: 86px !important; border: 2px solid var(--line) !important; border-radius: var(--r-sheet) !important; background: var(--card-bg) !important;
+  box-shadow: var(--ink-3) !important;
 }
 .duel-clock { font: 700 1.5rem var(--heading-font) !important; color: var(--primary-color); }
 .duel-clock.low { color: var(--red) !important; }
 .duel-progress { font-weight: 600; }
-.duel-problem { border: 2px solid var(--line) !important; border-radius: 12px !important; box-shadow: var(--card-shadow) !important; background: var(--card-bg) !important; }
+.duel-problem { border: 2px solid var(--line) !important; border-radius: var(--r-sheet) !important; box-shadow: var(--card-shadow) !important; background: var(--card-bg) !important; }
 .duel-q-num {
   display: inline-grid !important; place-items: center; width: 34px; height: 34px; margin-right: .5rem; border-radius: 50%;
   background: var(--primary-color); color: var(--on-primary); font: 700 .95rem var(--heading-font) !important; float: left;
 }
 .duel-q-text { font-family: var(--heading-font); color: var(--primary-color); line-height: 1.75; }
 .duel-letter { font-weight: 700; color: var(--text-primary); }
-.duel-mark { border-radius: 2px !important; }
+.duel-mark { border-radius: var(--r-note) !important; }
 
 /* progress page: the duel row keeps the record and the button apart */
 .duel-mini { gap: .8rem 1.2rem !important; margin-top: .4rem; }
 .duel-mini .acc-count { font: 600 1rem var(--heading-font); }
 
 /* =====================================================================
-   Bug-fix pass (audit of every page, light and dark, desktop and phone)
+   The "site is being updated" note (notice.js, which also places it): a sticky note
    ===================================================================== */
-
-/* quiz on phones: a fieldset is as wide as its widest formula by default, so wide math pushed the card off-screen */
-#quizForm fieldset, .quiz-question-wrapper, #quizForm legend { min-width: 0 !important; }
-#quizForm mjx-container[display="true"], .solution-body mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
-
-/* long one-word titles (e.g. კონფიდენციალურობის) break instead of running off a phone screen */
-h1, h2, .text-title { overflow-wrap: break-word; }
-
-/* simulation timer: an outlined card in the theme; on phones it moves to the bottom-left corner so it never covers the title */
-#floating-timer {
-  background: var(--card-bg) !important; color: var(--text-primary) !important; border: 2px solid var(--line) !important;
-  border-radius: 10px !important; box-shadow: 3px 3px 0 var(--line) !important; backdrop-filter: none !important;
-  font-family: var(--heading-font); font-weight: 700 !important;
+.site-notice.show, .site-notice {
+  background: var(--note-1) !important; color: var(--note-ink) !important; border: 0 !important; border-radius: var(--r-note) !important;
+  box-shadow: 3px 4px 0 rgba(0, 0, 0, .2) !important;
 }
-@media (max-width: 640px) {
-  #floating-timer { top: auto !important; bottom: 16px; left: 16px; transform: none; font-size: 1.05rem; padding: 6px 12px; }
-}
-
-/* random quiz: the summary of the chosen grades and quizzes is a dashed note */
-.quiz-info-box { background: color-mix(in srgb, var(--card-bg) 70%, transparent) !important; border: 1.5px dashed var(--line) !important; border-radius: 10px !important; }
-
-/* 404 page: ink buttons, left-aligned like every other page */
-.hero-content .button-wrapper { flex-direction: row !important; flex-wrap: wrap; align-items: flex-start !important; justify-content: flex-start; gap: .8rem !important; margin-top: .4rem !important; }
-.main-button {
-  display: inline-flex; align-items: center; gap: .6rem; min-width: 0 !important; width: auto !important; padding: .7rem 1.3rem !important;
-  font-size: 1.05rem !important; font-weight: 700; text-decoration: none; border-radius: 9px !important;
-  background: var(--primary-color) !important; color: var(--on-primary) !important; border: 2px solid var(--line) !important;
-  box-shadow: 2px 2px 0 var(--line) !important; transition: transform .1s, box-shadow .1s;
-}
-.main-button:hover { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--line) !important; }
-.main-button::before { display: none; }
-/* account pages: boxes rendered by the scripts (login note, join box, lists) keep a gap between them */
-.acc-page #content > * + * { margin-top: 1.1rem; }
-
-/* ---- dark mode ("night notebook") details that tokens alone don't cover ---- */
+.site-notice.show { transform: rotate(-1deg) !important; }
 .site-notice .sn-text { color: var(--note-ink) !important; opacity: .78; }
-:root[data-theme="dark"] .cover .cover-label { background: rgba(0, 0, 0, .28); color: #f0ead8; box-shadow: none; }
-:root[data-theme="dark"] .grade-card, :root[data-theme="dark"] .stick a, :root[data-theme="dark"] .duel-chips button,
-:root[data-theme="dark"] .dp-pill, :root[data-theme="dark"] .duel-pill, :root[data-theme="dark"] .duel-banner,
-:root[data-theme="dark"] .th-box, :root[data-theme="dark"] .feedback span[style] { box-shadow: 2px 3px 0 rgba(0, 0, 0, .45) !important; }
-:root[data-theme="dark"] .grade-card:hover { box-shadow: 4px 6px 0 rgba(0, 0, 0, .5) !important; }
-:root[data-theme="dark"] .dp { box-shadow: 3px 4px 0 rgba(0, 0, 0, .45); }
-:root[data-theme="dark"] .cover { box-shadow: 3px 4px 0 rgba(0, 0, 0, .45); }
-:root[data-theme="dark"] .main-title .highlight { color: inherit !important; }
+.site-notice .sn-icon { background: rgba(0, 0, 0, .08) !important; color: var(--note-ink) !important; }
+.site-notice .sn-report { color: var(--note-ink) !important; border-color: var(--note-ink) !important; background: transparent !important; }
 
 /* =====================================================================
-   The desk lamp (dark mode only). A warm pool of light over the black notebook, darkness towards the
-   screen edges. It is one large layer that moves with transform only (cheap): darkmode.js sets
-   --lamp-x / --lamp-y to the mouse on computers; on phones and with reduced motion it stays put.
-   pointer-events: none — it never blocks a click. z-index 999: over the page, under the top bar (so the
-   lamp switch stays lit), menus, dialogs, the timer and the feedback button.
+   The desk lamp (dark mode only). A warm pool of light on the black notebook, slightly darker paper
+   towards the screen edges. It is one large layer that moves with transform only (cheap): darkmode.js
+   sets --lamp-x / --lamp-y to the mouse on computers; on phones and with reduced motion it stays put.
+   It lies on the paper, UNDER everything written on it: body is its own stacking context (isolation,
+   above), so z-index -1 paints the lamp above the body's squared paper but below every card, text and
+   formula. Away from the mouse only the paper darkens, so nothing gets harder to read.
+   pointer-events: none — it never blocks a click.
    ===================================================================== */
 :root[data-theme="dark"] body::after {
-  content: ''; position: fixed; z-index: 999; pointer-events: none;
+  content: ''; position: fixed; z-index: -1; pointer-events: none;
   left: -100vw; top: -100vh; width: 200vw; height: 200vh;
   transform: translate(var(--lamp-x, 50vw), var(--lamp-y, 16vh));
   background:
     radial-gradient(ellipse 23% 26% at 50% 50%, rgba(255, 206, 130, .16), rgba(255, 206, 130, .05) 55%, transparent 75%),
-    radial-gradient(ellipse 42.5% 47.5% at 50% 50%, transparent 40%, rgba(0, 0, 0, .45) 100%);
+    radial-gradient(ellipse 42.5% 47.5% at 50% 50%, transparent 40%, rgba(0, 0, 0, .22) 100%);
   will-change: transform;
 }
 /* switching the lamp on: the light fades in once (only when the student presses the switch) */
 :root.lamp-turning-on[data-theme="dark"] body::after { animation: lamp-on .9s ease-out; }
 @keyframes lamp-on { from { opacity: 0; } 35% { opacity: .35; } to { opacity: 1; } }
-/* the switch: a moon by day, a glowing bulb at night */
-:root[data-theme="dark"] #toggle-dark i { color: var(--hl) !important; text-shadow: 0 0 12px rgba(255, 197, 96, .8), 0 0 28px rgba(255, 197, 96, .45); }
-@media (prefers-reduced-motion: reduce) { :root.lamp-turning-on[data-theme="dark"] body::after { animation: none; } }
-/* printing stays plain */
-@media print { body::after { display: none !important; } }
+
+/* =====================================================================
+   Reduced motion and print
+   ===================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .dp, :root.lamp-turning-on[data-theme="dark"] body::after { animation: none; }
+  .cover, .grade-card, .quiz-card, .button, .side-card, .main-button { transition: none !important; }
+}
+@media print {
+  body::after { display: none !important; }
+  .tabbar { display: none !important; }
+}

@@ -11,10 +11,14 @@
   <meta property="og:description" content="კომაროვის სკოლის მათემატიკისა და ფიზიკის ქვიზი: ამოხსენით ამოცანები, შეამოწმეთ პასუხები, ნახეთ ამოხსნები ან გაიარეთ ტაიმერიანი სიმულაცია.">
 
   <title>ქვიზი</title>
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- both fonts in one early request (they used to come through @import in style.css / theme.css) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css?v=7">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="quiz-style.css?v=6">
-  <link rel="stylesheet" href="theme.css?v=29">
+  <link rel="stylesheet" href="quiz-style.css?v=8">
+  <link rel="stylesheet" href="theme.css?v=31">
   <link rel="icon" type="image/png" href="paper.png">
   <script>
     window.MathJax = {
@@ -26,6 +30,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" async></script>
   <script src="darkmode.js?v=8"></script>
+  <script src="nav.js?v=1" defer></script>
   <!-- student accounts (optional login): library, project config, header widget -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.min.js" defer></script>
   <script src="supabase-config.js?v=6" defer></script>
@@ -33,10 +38,10 @@
   <script src="badges.js?v=5" defer></script>
   <script src="cloud.js?v=9" defer></script>
   <script src="subjects.js?v=6"></script>
-  <script src="tags-ui.js?v=6"></script>
+  <script src="tags-ui.js?v=7"></script>
   <script src="progress.js?v=6"></script>
-  <script src="feedback.js?v=5" defer></script>
-  <script src="notice.js?v=7" defer></script>
+  <script src="feedback.js?v=6" defer></script>
+  <script src="notice.js?v=8" defer></script>
 </head>
 <body>
 
@@ -56,11 +61,14 @@
     <div class="quiz-card-main">
       <h1 id="quiz-title" class="text-title"></h1>
 
+      <!-- The mode buttons stay disabled until the quiz file has loaded (see loadQuizData below):
+           a click before that would start an empty quiz. -->
+      <style>.mode-btn:disabled { opacity: .55; cursor: progress; }</style>
       <div id="mode-selection" class="mode-selection-card">
         <p>აირჩიეთ რეჟიმი:</p>
         <div class="mode-options">
-          <button class="button mode-btn" onclick="startQuiz(false)"><b>სტანდარტული</b><small>პასუხი მაშინვე მოწმდება, მინიშნებები და ამოხსნები ხელმისაწვდომია.</small></button>
-          <button class="button mode-btn" onclick="startQuiz(true)"><b>სიმულაცია</b><small>ტაიმერით, როგორც ნამდვილ ქვიზზე. შედეგს ბოლოს ნახავ.</small></button>
+          <button class="button mode-btn" onclick="startQuiz(false)" disabled><b>სტანდარტული</b><small>პასუხი მაშინვე მოწმდება, მინიშნებები და ამოხსნები ხელმისაწვდომია.</small></button>
+          <button class="button mode-btn" onclick="startQuiz(true)" disabled><b>სიმულაცია</b><small>3 საათი, როგორც ნამდვილ ქვიზზე. შედეგს ბოლოს ნახავ.</small></button>
         </div>
       </div>
 
@@ -119,6 +127,7 @@
             showMessage("ქვიზი არ ჩატარებულა.");
             return;
           }
+          document.querySelectorAll("#mode-selection .mode-btn").forEach(b => { b.disabled = false; });
           if (typeof resumeSavedSimulation === "function") resumeSavedSimulation();
         };
         script.onerror = () => showMessage("ქვიზი არ ჩატარებულა.");
@@ -136,7 +145,7 @@
     })();
   </script>
   
-  <script src="quiz.js?v=10"></script>
+  <script src="quiz.js?v=12"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>

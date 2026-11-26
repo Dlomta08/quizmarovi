@@ -158,7 +158,8 @@
         .download-btn:hover { transform: translateY(-2px); background: #c026d3; }
 
         @media (max-width: 900px) {
-            .tool-container { grid-template-columns: 1fr; height: auto; }
+            /* minmax(0, 1fr): a wide input/preview can't push the column past the screen */
+            .tool-container { grid-template-columns: minmax(0, 1fr); height: auto; }
             .preview-panel { height: auto; min-height: 500px; }
         }
     </style>
