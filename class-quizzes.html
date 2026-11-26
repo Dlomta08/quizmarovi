@@ -10,10 +10,14 @@
     <meta property="og:title" content="კლასის ქვიზები · კომაროვის ქვიზები">
     <meta property="og:description" content="კომაროვის სკოლის მათემატიკისა და ფიზიკის ქვიზები სასწავლო წლების მიხედვით, პასუხების შემოწმებით, ამოხსნებით და ტაიმერიანი სიმულაციით.">
     <title>კლასის ქვიზები</title>
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- both fonts in one early request (they used to come through @import in style.css / theme.css) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css?v=7">
     <link rel="stylesheet" href="quiz-pages.css?v=5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="theme.css?v=30">
+    <link rel="stylesheet" href="theme.css?v=31">
     <link rel="icon" type="image/png" href="paper.png">
     <script src="darkmode.js?v=8"></script>
     <script src="nav.js?v=1" defer></script>
@@ -84,35 +88,76 @@
 
         const yearsGrid = document.getElementById("yearsGrid");
 
-        /* ---- progress saved by quiz.js in localStorage ---- */
+        /* ---- progress saved by quiz.js in this browser ----
+           Each ticket is in one of three states (theme.css .quiz-card[data-state]):
+           done    - finished (best score saved) or marked done: green, a tick, the best score in red pen
+           started - some questions answered (math: per-problem results in progress.js; both subjects:
+                     an unfinished simulation in this tab): a half-filled dot, "7/25" and a strip along the bottom
+           new     - just the name */
         function safeGet(key) {
             try { return localStorage.getItem(key); } catch { return null; }
         }
-        function isDone(prefix) {
-            return safeGet(prefix) === "true";
+        function safeJson(key, store) {
+            try { return JSON.parse((store || localStorage).getItem(key)) || {}; } catch { return {}; }
         }
         // Best score is saved by quiz.js under the same key with "best-" instead of "done-".
         function getBest(prefix) {
+            const b = safeJson(prefix.replace(/^done-/, "best-"));
+            return typeof b.score === "number" ? b : null;
+        }
+        // Answers of a simulation still running in this tab (quiz.js keeps it under "sim-state:<page url>").
+        function simAnswers(year, q) {
+            let n = 0;
             try {
-                const b = JSON.parse(safeGet(prefix.replace(/^done-/, "best-")));
-                return b && typeof b.score === "number" ? b : null;
-            } catch { return null; }
+                Object.keys(sessionStorage).filter(k => k.startsWith("sim-state:")).forEach(k => {
+                    const p = new URL(k.slice("sim-state:".length), location.origin).searchParams;
+                    if (p.get("class") === String(classNum) && p.get("year") === year && p.get("number") === String(q) &&
+                        (p.get("subject") || "math") === subject.id) {
+                        n = Math.max(n, Object.keys(safeJson(k, sessionStorage).answers || {}).length);
+                    }
+                });
+            } catch {}
+            return n;
         }
-        function renderStatus(icon, prefix) {
-            const done = isDone(prefix);
-            icon.classList.toggle("done", done);
-            icon.title = done ? "დასრულებულია" : "არ არის დასრულებული";
-            icon.setAttribute("aria-label", icon.title);
-        }
-        function renderBest(el, prefix) {
-            const b = getBest(prefix);
-            el.textContent = b ? `${b.score}/${b.total}` : "";
-            el.title = b ? "საუკეთესო შედეგი" : "";
-            el.hidden = !b;
+        function renderTicket(card, progress, sizes) {
+            const { year, q, keyprefix } = card.dataset;
+            const best = getBest(keyprefix);
+            const done = safeGet(keyprefix) === "true" || !!best;
+            let answered = 0;
+            if (!done) {
+                const pidPrefix = `${classNum}-${year}-${q}-`;   // progress.js ids (math only)
+                if (subject.id === "math") answered = Object.keys(progress).filter(k => k.startsWith(pidPrefix)).length;
+                answered = Math.max(answered, simAnswers(year, q));
+            }
+            const size = sizes[keyprefix.replace(/^done-/, "")];
+            card.dataset.state = done ? "done" : answered ? "started" : "new";
+
+            const status = card.querySelector(".status-icon");
+            status.title = done ? "დასრულებულია" : answered ? "დაწყებულია" : "";
+            if (status.title) status.setAttribute("aria-label", status.title); else status.removeAttribute("aria-label");
+
+            const bestEl = card.querySelector(".best-score");
+            bestEl.textContent = best ? `${best.score}/${best.total}` : "";
+            bestEl.title = best ? "საუკეთესო შედეგი" : "";
+            bestEl.hidden = !best;
+
+            const prog = card.querySelector(".quiz-progress");
+            prog.textContent = !done && answered ? (size ? `${Math.min(answered, size)}/${size}` : String(answered)) : "";
+            prog.title = prog.textContent ? "ნაპასუხები ამოცანები" : "";
+            prog.hidden = !prog.textContent;
+            card.style.setProperty("--p", !done && answered && size ? Math.min(1, answered / size) : 0);
         }
         function refreshAll() {
-            document.querySelectorAll(".status-icon[data-keyprefix]").forEach(el => renderStatus(el, el.dataset.keyprefix));
-            document.querySelectorAll(".best-score[data-keyprefix]").forEach(el => renderBest(el, el.dataset.keyprefix));
+            const progress = subject.id === "math" ? safeJson("problem-progress") : {};
+            const sizes = safeJson("quiz-sizes");
+            document.querySelectorAll(".quiz-card[data-keyprefix]").forEach(c => renderTicket(c, progress, sizes));
+            // year heading: "5 ქვიზი · 1 გავლილი"
+            document.querySelectorAll(".year-section").forEach(sec => {
+                const small = sec.querySelector(".year-header small");
+                const total = sec.querySelectorAll(".quiz-card").length;
+                const done = sec.querySelectorAll('.quiz-card[data-state="done"]').length;
+                small.textContent = `${total} ქვიზი` + (done ? ` · ${done} გავლილი` : "");
+            });
         }
 
         function quizCard(year, q) {
@@ -120,30 +165,24 @@
             const card = document.createElement("a");
             card.className = "quiz-card";
             card.href = pageUrl("quiz.html", { class: classNum, year, number: q });
+            card.dataset.year = year;
+            card.dataset.q = q;
+            card.dataset.keyprefix = `done-${subject.keyPrefix}${classNum}-${year}-${q}`;
 
-            const icon = document.createElement("i");
-            icon.className = "fas fa-file-alt quiz-icon";
-
-            const num = document.createElement("span");
-            num.className = "quiz-number";
-            num.textContent = q;
+            const status = document.createElement("span");
+            status.className = "status-icon";
 
             const title = document.createElement("h3");
             title.className = "quiz-title";
             title.textContent = `${ordinal(q)} ქვიზი`;
 
-            const keyPrefix = `done-${subject.keyPrefix}${classNum}-${year}-${q}`;
-            const status = document.createElement("i");
-            status.className = "fas fa-circle status-icon";
-            status.dataset.keyprefix = keyPrefix;
-            renderStatus(status, keyPrefix);
+            const prog = document.createElement("span");
+            prog.className = "quiz-progress";
 
             const best = document.createElement("span");
             best.className = "best-score";
-            best.dataset.keyprefix = keyPrefix;
-            renderBest(best, keyPrefix);
 
-            card.append(icon, num, title, status, best);
+            card.append(status, title, prog, best);
             return card;
         }
 
@@ -174,6 +213,7 @@
                 section.append(header, grid);
                 yearsGrid.appendChild(section);
             });
+            refreshAll();
         }
 
         // Grade tabs above the list (sticky notes) and a hand-written link to the random quiz under it.
@@ -205,7 +245,7 @@
 
         window.addEventListener("pageshow", e => { if (e.persisted) refreshAll(); });
         window.addEventListener("storage", e => {
-            if (e.key && (e.key.startsWith("done-") || e.key.startsWith("best-"))) refreshAll();
+            if (e.key && (/^(done|best)-/.test(e.key) || e.key === "problem-progress" || e.key === "quiz-sizes")) refreshAll();
         });
     })();
     </script>

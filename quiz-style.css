@@ -690,7 +690,7 @@ body.qnav-on .qnav {
     right: 0;
     top: var(--nav-h, 64px);
     box-sizing: border-box;
-    padding: .45rem max(40px, calc((100vw - 1120px) / 2 + 40px)) .5rem max(92px, calc((100vw - 1120px) / 2 + 92px));
+    padding: .45rem var(--page-r) .5rem var(--page-l);   /* page margins: theme.css tokens */
     background: color-mix(in srgb, var(--paper) 96%, transparent);
     border-bottom: 1.5px solid var(--line);
 }
@@ -738,7 +738,7 @@ body.qnav-on .quiz-view-container { padding-top: calc(6rem + 52px) !important; }
 .qnav-sq.is-current { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4.5px var(--hl); }
 .qnav-sq[data-state="todo"].is-current { background: var(--hl); color: var(--on-hl); }
 @media (max-width: 900px) {
-    body.qnav-on .qnav { padding: .4rem 16px .45rem 44px; }
+    body.qnav-on .qnav { padding-top: .4rem; padding-bottom: .45rem; }
 }
 @media (max-width: 640px) {
     .qnav-sub { display: none; }
@@ -752,8 +752,8 @@ body.qnav-on .quiz-view-container { padding-top: calc(6rem + 52px) !important; }
         gap: .9rem;
         top: calc(var(--nav-h, 64px) + 28px);
         right: auto;
-        left: calc(max(92px, (100vw - 1120px) / 2 + 92px) + 852px);
-        width: min(260px, calc(100vw - max(92px, (100vw - 1120px) / 2 + 92px) - 852px - 24px));
+        left: calc(var(--page-l) + 852px);
+        width: min(260px, calc(100vw - var(--page-l) - 852px - 24px));
         padding: 1.1rem 1.2rem 1.2rem;
         background: var(--card-bg);
         border: 2px solid var(--line);

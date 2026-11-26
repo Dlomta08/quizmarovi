@@ -1,7 +1,7 @@
 /*
  * Tag labels and chips, shared by quiz.html (chips under each problem) and problems.html (filters).
  * Loads data/tags.json once; every label shown to users comes from its Georgian "ka" field.
- * Also loads data/theory.json, so each topic chip gets a "📖 თეორია" link when that topic has a theory page
+ * Also loads data/theory.json, so each topic chip gets a "თეორია" link (book icon) when that topic has a theory page
  * (drafts only in draft mode, see theoryDrafts).
  *
  *   TagUI.ready.then(() => TagUI.renderChips(container, problem))
@@ -24,7 +24,7 @@
     return /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
   }
 
-  // theory pages are optional: if the file is missing, chips just have no 📖 link
+  // theory pages are optional: if the file is missing, chips just have no theory link
   const theoryReady = fetch("data/theory.json", { cache: "no-cache" })
     .then(r => (r.ok ? r.json() : []))
     .catch(() => [])
@@ -165,7 +165,7 @@
         t.href = theory;
         if (opts.newTab) { t.target = "_blank"; t.rel = "noopener"; }
         t.title = "თეორია: " + label("topic", id);
-        t.innerHTML = '<span aria-hidden="true">📖</span> თეორია';
+        t.innerHTML = '<i class="fas fa-book-open" aria-hidden="true"></i> თეორია';
         container.appendChild(t);
       }
     });

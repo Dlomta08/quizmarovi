@@ -1,5 +1,4 @@
-/* fonts — Noto Sans Georgian covers Georgian, Latin and digits, so all text uses one font */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap');
+/* fonts: Noto Sans Georgian (all text) and Noto Serif Georgian (headings) are loaded by one <link> in each page's <head> */
 
 
 * {
@@ -675,7 +674,7 @@ html, body {
     border-color: rgba(var(--tag-rgb, 148, 163, 184), 0.8);
 }
 
-/* "📖 თეორია" right after a topic chip that has a theory page (tags-ui.js) */
+/* "თეორია" (book icon) right after a topic chip that has a theory page (tags-ui.js) */
 .tag-theory {
     display: inline-flex;
     align-items: center;

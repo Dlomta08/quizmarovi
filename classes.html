@@ -11,11 +11,15 @@
     <meta property="og:description" content="კომაროვის სკოლის მათემატიკისა და ფიზიკის ქვიზები 7–11 კლასებისთვის. აირჩიეთ კლასი ან შექმენით შემთხვევითი ქვიზი.">
     <title>მათემატიკის ქვიზები</title>
 
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- both fonts in one early request (they used to come through @import in style.css / theme.css) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css?v=7">
     <link rel="stylesheet" href="classes-style.css?v=5">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="theme.css?v=30">
+    <link rel="stylesheet" href="theme.css?v=31">
     <link rel="icon" type="image/png" href="paper.png">
     <script src="darkmode.js?v=8"></script>
     <script src="nav.js?v=1" defer></script>
@@ -46,8 +50,10 @@
             <h1 class="text-title">აირჩიეთ <span class="highlight">კლასი</span></h1>
         </div>
 
-        <!-- Grade cards are added from quizzes.json, so only grades with quizzes appear. -->
+        <!-- Grade notes are added from quizzes.json, so only grades with quizzes appear;
+             under them the problem bank / theory cards and the random quiz link (theme.css). -->
         <div class="grade-grid" id="gradeGrid"></div>
+        <div class="grade-extras" id="gradeExtras"></div>
     </div>
 
     <footer class="main-footer">
@@ -77,57 +83,102 @@
         document.getElementById("subject-name").textContent = heading;
         document.getElementById("subject-icon").className = `fas ${subject.icon}`;
 
-        // Math has a tagged problem bank: link to the problem browser under the title.
-        if (subject.id === "math") {
-            const link = document.createElement("a");
-            link.href = "problems.html";
-            link.className = "problem-bank-link";
-            link.innerHTML = '<i class="fas fa-magnifying-glass" aria-hidden="true"></i> ამოცანების ბაზა — ძიება თემების მიხედვით';
-            document.querySelector(".subject-header").appendChild(link);
+        const grid = document.getElementById("gradeGrid");
+        const extras = document.getElementById("gradeExtras");
 
-            // Theory pages: linked once at least one is reviewed (drafts: same rule as TagUI.theoryDrafts).
-            let drafts = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
-            try { drafts = drafts || localStorage.getItem("theory-drafts") === "1"; } catch (e) {}
-            fetch("data/theory.json", { cache: "no-cache" })
-                .then(r => (r.ok ? r.json() : []))
-                .then(rows => {
-                    if (!rows.some(r => r.reviewed || drafts)) return;
-                    const t = document.createElement("a");
-                    t.href = "theory.html";
-                    t.className = "problem-bank-link";
-                    t.innerHTML = '<i class="fas fa-book-open" aria-hidden="true"></i> თეორია — განმარტებები და ამოხსნილი მაგალითები';
-                    link.after(" ", t);
-                })
-                .catch(() => {});
+        /* ---- progress saved by quiz.js in this browser: a quiz counts as done when it was finished
+           (best score saved) or marked done; same keys as class-quizzes.html ---- */
+        function safeGet(key) {
+            try { return localStorage.getItem(key); } catch { return null; }
+        }
+        function quizDone(g, year, q) {
+            const key = `done-${subject.keyPrefix}${g}-${year}-${q}`;
+            return safeGet(key) === "true" || !!safeGet(key.replace(/^done-/, "best-"));
         }
 
-        const grid = document.getElementById("gradeGrid");
-
-        function card(href, inner, extraClass) {
+        // One sticky note per grade: number, name, how many quizzes over how many years and,
+        // once the student has finished any quiz of this subject, how many of this grade's are done.
+        function gradeNote(g, years, showProgress) {
+            const yearList = Object.keys(years);
+            const total = yearList.reduce((n, y) => n + years[y].length, 0);
+            const done = yearList.reduce((n, y) => n + years[y].filter(q => quizDone(g, y, q)).length, 0);
             const a = document.createElement("a");
-            a.href = href;
-            a.className = "grade-card" + (extraClass ? " " + extraClass : "");
-            a.innerHTML = `<div class="shine"></div><div class="grade-content">${inner}</div>`;
+            a.href = pageUrl("class-quizzes.html", { class: g });
+            a.className = "grade-card";
+            a.innerHTML = `<div class="grade-content"><span class="grade-number"></span><h2></h2>
+                <span class="grade-meta"></span></div>`;
+            a.querySelector(".grade-number").textContent = g;
+            a.querySelector("h2").textContent = `${ordinal(g)} კლასი`;
+            a.querySelector(".grade-meta").textContent = `${total} ქვიზი · ${yearList.length} წელი`;
+            if (showProgress) {
+                const pct = total ? Math.round((done / total) * 100) : 0;
+                const prog = document.createElement("span");
+                prog.className = "grade-progress";
+                prog.innerHTML = `<span class="grade-bar" aria-hidden="true"><span style="width:${pct}%"></span></span><span class="grade-done"></span>`;
+                prog.querySelector(".grade-done").textContent =
+                    done ? `${done} / ${total} გავლილი${done === total ? " ✓" : ""}` : "ჯერ არ დაგიწყია";
+                a.querySelector(".grade-content").appendChild(prog);
+            }
             return a;
         }
 
-        function render(grades) {
-            grades.forEach(g => {
-                grid.appendChild(card(
-                    pageUrl("class-quizzes.html", { class: g }),
-                    `<span class="grade-number">${g}</span><h2>${ordinal(g)} კლასი</h2>`
-                ));
-            });
-            grid.appendChild(card(
-                pageUrl("random-quiz-generator.html"),
-                `<span class="grade-number">?</span><h2>შემთხვევითი ქვიზის გენერირება</h2>`,
-                "special"
-            ));
+        // Under the notes: the problem bank and the theory as two cards (math only; theory once at
+        // least one page is visible: reviewed, or drafts allowed, same rule as TagUI.theoryDrafts),
+        // then a hand-written link to the random quiz.
+        function sideCard(href, icon, title, text) {
+            const a = document.createElement("a");
+            a.href = href;
+            a.className = "side-card";
+            a.innerHTML = `<span class="side-card-ic" aria-hidden="true"><i class="fas ${icon}"></i></span>
+                <span><b></b><small></small></span>`;
+            a.querySelector("b").textContent = title;
+            a.querySelector("small").textContent = text;
+            return a;
+        }
+
+        function renderExtras() {
+            if (subject.id === "math") {
+                const bank = sideCard("problems.html", "fa-magnifying-glass", "ამოცანების ბაზა", "ძიება თემის, კლასისა და სირთულის მიხედვით");
+                extras.appendChild(bank);
+
+                let drafts = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+                try { drafts = drafts || localStorage.getItem("theory-drafts") === "1"; } catch (e) {}
+                fetch("data/theory.json", { cache: "no-cache" })
+                    .then(r => (r.ok ? r.json() : []))
+                    .then(rows => {
+                        const visible = rows.filter(r => r.reviewed || drafts).length;
+                        if (!visible) return;
+                        bank.after(sideCard("theory.html", "fa-book-open", "თეორია", `${visible} თემა · განმარტებები და ამოხსნილი მაგალითები`));
+                    })
+                    .catch(() => {});
+            }
+            const random = document.createElement("a");
+            random.href = pageUrl("random-quiz-generator.html");
+            random.className = "hand-note";
+            random.textContent = "შემთხვევითი ქვიზის გენერირება";
+            extras.appendChild(random);
+        }
+
+        function render(index) {
+            const grades = Object.keys(index).map(Number).sort((a, b) => a - b);
+            const showProgress = grades.some(g => Object.keys(index[g]).some(y => index[g][y].some(q => quizDone(g, y, q))));
+            grades.forEach(g => grid.appendChild(gradeNote(g, index[g], showProgress)));
+            renderExtras();
         }
 
         loadQuizIndex()
-            .then(index => render(Object.keys(index).map(Number).sort((a, b) => a - b)))
-            .catch(() => render(subject.id === "physics" ? [8, 9, 10, 11] : [7, 8, 9, 10, 11]));
+            .then(render)
+            .catch(() => {
+                const fallback = subject.id === "physics" ? [8, 9, 10, 11] : [7, 8, 9, 10, 11];
+                fallback.forEach(g => {
+                    const a = document.createElement("a");
+                    a.href = pageUrl("class-quizzes.html", { class: g });
+                    a.className = "grade-card";
+                    a.innerHTML = `<div class="grade-content"><span class="grade-number">${g}</span><h2>${ordinal(g)} კლასი</h2></div>`;
+                    grid.appendChild(a);
+                });
+                renderExtras();
+            });
     })();
     </script>
 

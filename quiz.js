@@ -81,6 +81,48 @@ window.addEventListener("resize", () => {
   fitTimer = setTimeout(() => { fitWidth = window.innerWidth; fitAllOptionGrids(); }, 150);
 });
 
+/* ===== What the quiz holds, above the mode choice (quiz.html, random-quiz.html; styles: theme.css .mode-facts) =====
+   "ამ ქვიზში 25 ამოცანა: ალგებრა 15, გეომეტრია 10." plus a note when some questions are open (not auto-checked).
+   Called when the quiz data is there: on load (random-quiz.html) and by quiz.html once its file has loaded. */
+function renderQuizFacts() {
+  const box = document.getElementById("mode-selection");
+  if (!box || typeof quizData === "undefined" || !Array.isArray(quizData) || !quizData.length) return;
+  let facts = box.querySelector(".mode-facts");
+  if (!facts) {
+    facts = document.createElement("div");
+    facts.className = "mode-facts";
+    box.prepend(facts);
+  }
+  const total = quizData.length;
+  const open = quizData.filter(q => !q.options || !q.options.length).length;
+  const areaCount = {};
+  quizData.forEach(q => [].concat(q.area || []).forEach(a => { areaCount[a] = (areaCount[a] || 0) + 1; }));
+
+  const write = labels => {
+    facts.replaceChildren();
+    const line = document.createElement("p");
+    line.append("ამ ქვიზში ");
+    const b = document.createElement("b");
+    b.textContent = `${total} ამოცანა`;
+    line.append(b, labels.length ? `: ${labels.join(", ")}.` : ".");
+    facts.appendChild(line);
+    if (open) {
+      const note = document.createElement("p");
+      note.className = "mode-facts-note";
+      note.textContent = open === total
+        ? "ყველა ღია კითხვაა: პასუხი ავტომატურად არ მოწმდება, ამოხსნებს ნახავ."
+        : `${open} ამოცანა ღიაა: მისი პასუხი ავტომატურად არ მოწმდება.`;
+      facts.appendChild(note);
+    }
+  };
+  write([]);
+  const areas = Object.entries(areaCount).sort((a, b) => b[1] - a[1]);
+  if (areas.length && window.TagUI) {
+    TagUI.ready.then(() => write(areas.map(([a, n]) => `${TagUI.label("area", a)} ${n}`))).catch(() => {});
+  }
+}
+window.addEventListener("load", renderQuizFacts);
+
 /* ===== Progress navigator (styles: quiz-style.css .qnav) =====
    A square per question: right, wrong, answered (simulation, before the end) or not yet; the one
    being read is ringed in yellow, and a click jumps to that question. Computers (≥1280px): a card to
@@ -818,9 +860,6 @@ function renderQuiz(){
       TagUI.ready.then(() => TagUI.renderChips(chips, q, { newTab: true })).catch(() => hint.remove());
     }
 
-    const feedback = document.createElement("div");
-    feedback.className = "feedback";
-
     function gradeAndLock(selectedIdx, clickEvent) {
       fieldset.querySelectorAll("label.option-chip").forEach(l => {
         l.classList.remove("selected","pop");
@@ -1032,12 +1071,16 @@ function renderQuiz(){
   const subjectPrefix = window.QUIZ_SUBJECT ? `${window.QUIZ_SUBJECT}-` : "";
   const doneKey = `done-${subjectPrefix}${classNum}-${year}-${number}`;
 
-  // Remember the last regular quiz opened on this device, for "continue where you left off" on the home page.
+  // Remember the last regular quiz opened on this device, for "continue where you left off" on the home page,
+  // and how many of its questions can be answered, for "7/25" on its ticket (class-quizzes.html).
   if (classNum && year && number) {
     try {
       localStorage.setItem("last-visit", JSON.stringify({
         subject: window.QUIZ_SUBJECT || "math", class: classNum, year, number, t: Date.now(),
       }));
+      const sizes = JSON.parse(localStorage.getItem("quiz-sizes")) || {};
+      sizes[`${subjectPrefix}${classNum}-${year}-${number}`] = quizData.filter(q => q.options && q.options.length).length;
+      localStorage.setItem("quiz-sizes", JSON.stringify(sizes));
     } catch {}
   }
 
