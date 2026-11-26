@@ -1,0 +1,2126 @@
+{
+  ".github/workflows/playwright.yml": {
+    "mtime": 1795449819.689464,
+    "seen": 1795696737.9893978,
+    "ast_hash": "8eeea4038250dc5028a9d1bf4da54425",
+    "semantic_hash": "8eeea4038250dc5028a9d1bf4da54425"
+  },
+  "auth.js": {
+    "mtime": 1795457196.499245,
+    "seen": 1795696737.9894056,
+    "ast_hash": "39530233197e43c76a91c65c3e43bc14",
+    "semantic_hash": "39530233197e43c76a91c65c3e43bc14"
+  },
+  "badges.js": {
+    "mtime": 1795434532.2680676,
+    "seen": 1795696737.9894092,
+    "ast_hash": "fdc052f09bda1d49f198544562f3193a",
+    "semantic_hash": "fdc052f09bda1d49f198544562f3193a"
+  },
+  "cloud.js": {
+    "mtime": 1795434457.9735212,
+    "seen": 1795696737.989411,
+    "ast_hash": "54cd3faa1ebffc576d8ff82497de801f",
+    "semantic_hash": "54cd3faa1ebffc576d8ff82497de801f"
+  },
+  "daily.js": {
+    "mtime": 1795627251.9404254,
+    "seen": 1795696737.9894125,
+    "ast_hash": "6e173e95e0f647e78dc8f30f7574e784",
+    "semantic_hash": "6e173e95e0f647e78dc8f30f7574e784"
+  },
+  "darkmode.js": {
+    "mtime": 1795631205.7197378,
+    "seen": 1795696737.9894142,
+    "ast_hash": "42429335919a461386576894602ccf28",
+    "semantic_hash": "42429335919a461386576894602ccf28"
+  },
+  "data/problems.json": {
+    "mtime": 1795464636.9751563,
+    "seen": 1795696737.9894154,
+    "ast_hash": "ccd2931b59dc64992d580014edee4695",
+    "semantic_hash": "ccd2931b59dc64992d580014edee4695"
+  },
+  "data/tags.json": {
+    "mtime": 1795208316.1401036,
+    "seen": 1795696737.9894166,
+    "ast_hash": "fff4eaf8fd171efb7407371e47d63a2a",
+    "semantic_hash": "fff4eaf8fd171efb7407371e47d63a2a"
+  },
+  "data/theory.json": {
+    "mtime": 1795464686.73114,
+    "seen": 1795696737.9894178,
+    "ast_hash": "6042f34c4825e050e9a86fc03c431594",
+    "semantic_hash": "6042f34c4825e050e9a86fc03c431594"
+  },
+  "duel.js": {
+    "mtime": 1795457196.5024102,
+    "seen": 1795696737.989419,
+    "ast_hash": "1fca41b36ba793a0920d4946ed67c15a",
+    "semantic_hash": "1fca41b36ba793a0920d4946ed67c15a"
+  },
+  "feedback.js": {
+    "mtime": 1795041942.2629585,
+    "seen": 1795696737.98942,
+    "ast_hash": "321ea8dc09da79c2c3315e4dd1fff734",
+    "semantic_hash": "321ea8dc09da79c2c3315e4dd1fff734"
+  },
+  "mastery-lib.js": {
+    "mtime": 1795434392.1552806,
+    "seen": 1795696737.9894216,
+    "ast_hash": "9a443d7d282fa9f5989a3ae8f29f14b3",
+    "semantic_hash": "9a443d7d282fa9f5989a3ae8f29f14b3"
+  },
+  "mastery.js": {
+    "mtime": 1795434397.8831358,
+    "seen": 1795696737.9894226,
+    "ast_hash": "2b8443c48c3d525daeff4e66a0863dc4",
+    "semantic_hash": "2b8443c48c3d525daeff4e66a0863dc4"
+  },
+  "mistakes.js": {
+    "mtime": 1795388413.1053216,
+    "seen": 1795696737.9894235,
+    "ast_hash": "34521952c468d5c42d94ac18c64c5661",
+    "semantic_hash": "34521952c468d5c42d94ac18c64c5661"
+  },
+  "my-progress.js": {
+    "mtime": 1795457342.8175032,
+    "seen": 1795696737.989425,
+    "ast_hash": "db2e4a98987ab87f9fcde27494860624",
+    "semantic_hash": "db2e4a98987ab87f9fcde27494860624"
+  },
+  "notice.js": {
+    "mtime": 1795456385.9489808,
+    "seen": 1795696737.989426,
+    "ast_hash": "4eea8c0e8081f03d2594c817e26033e5",
+    "semantic_hash": "4eea8c0e8081f03d2594c817e26033e5"
+  },
+  "package.json": {
+    "mtime": 1795463597.0993555,
+    "seen": 1795696737.989427,
+    "ast_hash": "924041e4f804000c4eaaa93cda8e155f",
+    "semantic_hash": "924041e4f804000c4eaaa93cda8e155f"
+  },
+  "physics-quizzes/class-10/2020-21/quiz-1.js": {
+    "mtime": 1795026095.2362635,
+    "seen": 1795696737.9894283,
+    "ast_hash": "14037fee96675bdb76cbdb73a2ccb91c",
+    "semantic_hash": "14037fee96675bdb76cbdb73a2ccb91c"
+  },
+  "physics-quizzes/class-10/2020-21/quiz-2.js": {
+    "mtime": 1795026095.2362635,
+    "seen": 1795696737.9894292,
+    "ast_hash": "fe1ac2d680aa2c25210e41b8203c2b29",
+    "semantic_hash": "fe1ac2d680aa2c25210e41b8203c2b29"
+  },
+  "physics-quizzes/class-10/2020-21/quiz-4.js": {
+    "mtime": 1795026095.2362635,
+    "seen": 1795696737.9894302,
+    "ast_hash": "91f9e8be6e9c28c0988cd3e51d1dddee",
+    "semantic_hash": "91f9e8be6e9c28c0988cd3e51d1dddee"
+  },
+  "physics-quizzes/class-10/2020-21/quiz-5.js": {
+    "mtime": 1795026095.2362635,
+    "seen": 1795696737.9894316,
+    "ast_hash": "48cea7bd7ef1efeddbb70be15127c990",
+    "semantic_hash": "48cea7bd7ef1efeddbb70be15127c990"
+  },
+  "physics-quizzes/class-10/2021-22/quiz-1.js": {
+    "mtime": 1795026095.242554,
+    "seen": 1795696737.9894326,
+    "ast_hash": "6e2095f65c90f0557aa57b9a280de5ed",
+    "semantic_hash": "6e2095f65c90f0557aa57b9a280de5ed"
+  },
+  "physics-quizzes/class-10/2021-22/quiz-2.js": {
+    "mtime": 1795026095.2440157,
+    "seen": 1795696737.9894347,
+    "ast_hash": "6eecd2bf6a4cc3cc6549f5dcb620c56b",
+    "semantic_hash": "6eecd2bf6a4cc3cc6549f5dcb620c56b"
+  },
+  "physics-quizzes/class-10/2021-22/quiz-3.js": {
+    "mtime": 1795026095.2450254,
+    "seen": 1795696737.9894357,
+    "ast_hash": "0ceb9f86d6decadbcd064630604e537a",
+    "semantic_hash": "0ceb9f86d6decadbcd064630604e537a"
+  },
+  "physics-quizzes/class-10/2021-22/quiz-4.js": {
+    "mtime": 1795026095.246023,
+    "seen": 1795696737.9894369,
+    "ast_hash": "3b78d75492dd27141bf6414f13a28739",
+    "semantic_hash": "3b78d75492dd27141bf6414f13a28739"
+  },
+  "physics-quizzes/class-10/2021-22/quiz-5.js": {
+    "mtime": 1795026095.2482946,
+    "seen": 1795696737.9894376,
+    "ast_hash": "c24d0d790c7c383e9e1ef1f3e389dd02",
+    "semantic_hash": "c24d0d790c7c383e9e1ef1f3e389dd02"
+  },
+  "physics-quizzes/class-10/2022-23/quiz-1.js": {
+    "mtime": 1795026095.249202,
+    "seen": 1795696737.989439,
+    "ast_hash": "5e96297cf26ebb680cc59e65ffd0dc5d",
+    "semantic_hash": "5e96297cf26ebb680cc59e65ffd0dc5d"
+  },
+  "physics-quizzes/class-10/2022-23/quiz-2.js": {
+    "mtime": 1795026095.252386,
+    "seen": 1795696737.98944,
+    "ast_hash": "df65bb4904962bd44bd8cc2676011199",
+    "semantic_hash": "df65bb4904962bd44bd8cc2676011199"
+  },
+  "physics-quizzes/class-10/2022-23/quiz-3.js": {
+    "mtime": 1795026095.252386,
+    "seen": 1795696737.989441,
+    "ast_hash": "40be2bce4624b125d857b4484fb3f969",
+    "semantic_hash": "40be2bce4624b125d857b4484fb3f969"
+  },
+  "physics-quizzes/class-10/2022-23/quiz-4.js": {
+    "mtime": 1795026095.252386,
+    "seen": 1795696737.9894423,
+    "ast_hash": "29c9bfaa3a0057d5241e7df65a564084",
+    "semantic_hash": "29c9bfaa3a0057d5241e7df65a564084"
+  },
+  "physics-quizzes/class-10/2022-23/quiz-5.js": {
+    "mtime": 1795026095.252386,
+    "seen": 1795696737.9894433,
+    "ast_hash": "463f3c3a39ae3568746015b8f03dee7f",
+    "semantic_hash": "463f3c3a39ae3568746015b8f03dee7f"
+  },
+  "physics-quizzes/class-10/2023-24/quiz-1.js": {
+    "mtime": 1795026095.2574606,
+    "seen": 1795696737.9894443,
+    "ast_hash": "294aa6207fe3c14a56a333c31b3c43ea",
+    "semantic_hash": "294aa6207fe3c14a56a333c31b3c43ea"
+  },
+  "physics-quizzes/class-10/2023-24/quiz-2.js": {
+    "mtime": 1795026095.2574606,
+    "seen": 1795696737.9894454,
+    "ast_hash": "bfcba09128ebb46395c3698f12270e08",
+    "semantic_hash": "bfcba09128ebb46395c3698f12270e08"
+  },
+  "physics-quizzes/class-10/2023-24/quiz-3.js": {
+    "mtime": 1795026095.2574606,
+    "seen": 1795696737.9894466,
+    "ast_hash": "da35a75c127cd31066045483915b5557",
+    "semantic_hash": "da35a75c127cd31066045483915b5557"
+  },
+  "physics-quizzes/class-10/2023-24/quiz-4.js": {
+    "mtime": 1795026095.2625024,
+    "seen": 1795696737.9894476,
+    "ast_hash": "340710d31f023e138fd9d91c3291e0c5",
+    "semantic_hash": "340710d31f023e138fd9d91c3291e0c5"
+  },
+  "physics-quizzes/class-10/2023-24/quiz-5.js": {
+    "mtime": 1795026095.264985,
+    "seen": 1795696737.9894488,
+    "ast_hash": "2a7d57794cecf4ab2870dd4e83112886",
+    "semantic_hash": "2a7d57794cecf4ab2870dd4e83112886"
+  },
+  "physics-quizzes/class-10/2024-25/quiz-1.js": {
+    "mtime": 1795026095.265519,
+    "seen": 1795696737.98945,
+    "ast_hash": "d1078b8fe2866f897c3c00369f3e13b2",
+    "semantic_hash": "d1078b8fe2866f897c3c00369f3e13b2"
+  },
+  "physics-quizzes/class-10/2024-25/quiz-2.js": {
+    "mtime": 1795026095.2684476,
+    "seen": 1795696737.989451,
+    "ast_hash": "16c195fa806a8dbc540412c499049e43",
+    "semantic_hash": "16c195fa806a8dbc540412c499049e43"
+  },
+  "physics-quizzes/class-10/2024-25/quiz-3.js": {
+    "mtime": 1795026095.2694788,
+    "seen": 1795696737.9894521,
+    "ast_hash": "a1c4e2ea6af5baeb0b0e26587a360db4",
+    "semantic_hash": "a1c4e2ea6af5baeb0b0e26587a360db4"
+  },
+  "physics-quizzes/class-10/2024-25/quiz-4.js": {
+    "mtime": 1795026095.2704701,
+    "seen": 1795696737.989453,
+    "ast_hash": "bb45370997f17cbe1547e53d02869f59",
+    "semantic_hash": "bb45370997f17cbe1547e53d02869f59"
+  },
+  "physics-quizzes/class-10/2024-25/quiz-5.js": {
+    "mtime": 1795026095.2726536,
+    "seen": 1795696737.989454,
+    "ast_hash": "b4c5563d68204c4569bcaf8b713d3a3e",
+    "semantic_hash": "b4c5563d68204c4569bcaf8b713d3a3e"
+  },
+  "physics-quizzes/class-11/2020-21/quiz-1.js": {
+    "mtime": 1795026095.4658077,
+    "seen": 1795696737.9894552,
+    "ast_hash": "f5a3beb849faef17a1dd4a8200263d91",
+    "semantic_hash": "f5a3beb849faef17a1dd4a8200263d91"
+  },
+  "physics-quizzes/class-11/2020-21/quiz-2.js": {
+    "mtime": 1795026095.4724352,
+    "seen": 1795696737.9894562,
+    "ast_hash": "50fa355dc3dd838636f328b0fd35f439",
+    "semantic_hash": "50fa355dc3dd838636f328b0fd35f439"
+  },
+  "physics-quizzes/class-11/2020-21/quiz-4.js": {
+    "mtime": 1795026095.473469,
+    "seen": 1795696737.9894578,
+    "ast_hash": "595904c25932b3a5986cc0af8b1b6d2d",
+    "semantic_hash": "595904c25932b3a5986cc0af8b1b6d2d"
+  },
+  "physics-quizzes/class-11/2020-21/quiz-5.js": {
+    "mtime": 1795026095.4744618,
+    "seen": 1795696737.9894593,
+    "ast_hash": "9569157ac578d5bb128d423ee54ca6c2",
+    "semantic_hash": "9569157ac578d5bb128d423ee54ca6c2"
+  },
+  "physics-quizzes/class-11/2021-22/quiz-1.js": {
+    "mtime": 1795026095.479118,
+    "seen": 1795696737.9894605,
+    "ast_hash": "2953760a074451c4c7f1b53774fc83a3",
+    "semantic_hash": "2953760a074451c4c7f1b53774fc83a3"
+  },
+  "physics-quizzes/class-11/2021-22/quiz-2.js": {
+    "mtime": 1795026095.4811182,
+    "seen": 1795696737.9894614,
+    "ast_hash": "3be7690a23cc863703200ae9b6413497",
+    "semantic_hash": "3be7690a23cc863703200ae9b6413497"
+  },
+  "physics-quizzes/class-11/2021-22/quiz-3.js": {
+    "mtime": 1795026095.4826298,
+    "seen": 1795696737.9894626,
+    "ast_hash": "4b9290163c30e7b48b62d5dd7aec78ae",
+    "semantic_hash": "4b9290163c30e7b48b62d5dd7aec78ae"
+  },
+  "physics-quizzes/class-11/2021-22/quiz-4.js": {
+    "mtime": 1795026095.4826298,
+    "seen": 1795696737.9894636,
+    "ast_hash": "aa74e667c61a182fc963edc24ae73de9",
+    "semantic_hash": "aa74e667c61a182fc963edc24ae73de9"
+  },
+  "physics-quizzes/class-11/2021-22/quiz-5.js": {
+    "mtime": 1795026095.4826298,
+    "seen": 1795696737.9894645,
+    "ast_hash": "78137ce7b36d66edbc931846bfab56b5",
+    "semantic_hash": "78137ce7b36d66edbc931846bfab56b5"
+  },
+  "physics-quizzes/class-11/2022-23/quiz-1.js": {
+    "mtime": 1795026095.487365,
+    "seen": 1795696737.989466,
+    "ast_hash": "1cd43a601a217b852a0eb0e10923dfd1",
+    "semantic_hash": "1cd43a601a217b852a0eb0e10923dfd1"
+  },
+  "physics-quizzes/class-11/2022-23/quiz-2.js": {
+    "mtime": 1795026095.4892654,
+    "seen": 1795696737.989467,
+    "ast_hash": "af94aa303ad6b51f5caf55c841dcdc22",
+    "semantic_hash": "af94aa303ad6b51f5caf55c841dcdc22"
+  },
+  "physics-quizzes/class-11/2022-23/quiz-3.js": {
+    "mtime": 1795026095.4904425,
+    "seen": 1795696737.9894679,
+    "ast_hash": "91be2c7f9780e370aaeb00c7a56bbbe4",
+    "semantic_hash": "91be2c7f9780e370aaeb00c7a56bbbe4"
+  },
+  "physics-quizzes/class-11/2022-23/quiz-4.js": {
+    "mtime": 1795026095.4916928,
+    "seen": 1795696737.9894693,
+    "ast_hash": "301f5f61809c26609bf18b4009a900a1",
+    "semantic_hash": "301f5f61809c26609bf18b4009a900a1"
+  },
+  "physics-quizzes/class-11/2022-23/quiz-5.js": {
+    "mtime": 1795026095.4930854,
+    "seen": 1795696737.9894702,
+    "ast_hash": "8f7b735d1da7166ffc2bc5def28c7a4b",
+    "semantic_hash": "8f7b735d1da7166ffc2bc5def28c7a4b"
+  },
+  "physics-quizzes/class-11/2023-24/quiz-1.js": {
+    "mtime": 1795026095.4957287,
+    "seen": 1795696737.9894712,
+    "ast_hash": "fe596e0144a887660283f481773872c2",
+    "semantic_hash": "fe596e0144a887660283f481773872c2"
+  },
+  "physics-quizzes/class-11/2023-24/quiz-2.js": {
+    "mtime": 1795026095.4972775,
+    "seen": 1795696737.9894722,
+    "ast_hash": "1043a23b709c8a59bb802ca785371f4b",
+    "semantic_hash": "1043a23b709c8a59bb802ca785371f4b"
+  },
+  "physics-quizzes/class-11/2023-24/quiz-3.js": {
+    "mtime": 1795026095.4988577,
+    "seen": 1795696737.9894733,
+    "ast_hash": "6383ca161a0e389a2ff4a0d5418e8056",
+    "semantic_hash": "6383ca161a0e389a2ff4a0d5418e8056"
+  },
+  "physics-quizzes/class-11/2023-24/quiz-4.js": {
+    "mtime": 1795456419.239803,
+    "seen": 1795696737.9894745,
+    "ast_hash": "07911cb3d624c218419b7a70e7aa072c",
+    "semantic_hash": "07911cb3d624c218419b7a70e7aa072c"
+  },
+  "physics-quizzes/class-11/2023-24/quiz-5.js": {
+    "mtime": 1795026095.4988577,
+    "seen": 1795696737.9894755,
+    "ast_hash": "59fc336823f791c08052062517bbacaf",
+    "semantic_hash": "59fc336823f791c08052062517bbacaf"
+  },
+  "physics-quizzes/class-11/2024-25/quiz-1.js": {
+    "mtime": 1795026095.5040314,
+    "seen": 1795696737.9894767,
+    "ast_hash": "e1c340a1e1ba30556028f91db51e98d5",
+    "semantic_hash": "e1c340a1e1ba30556028f91db51e98d5"
+  },
+  "physics-quizzes/class-11/2024-25/quiz-2.js": {
+    "mtime": 1795026095.50563,
+    "seen": 1795696737.9894779,
+    "ast_hash": "fad415b535ffdd944ed1aed52b3e7465",
+    "semantic_hash": "fad415b535ffdd944ed1aed52b3e7465"
+  },
+  "physics-quizzes/class-11/2024-25/quiz-3.js": {
+    "mtime": 1795026095.5070498,
+    "seen": 1795696737.9894788,
+    "ast_hash": "1ae438e133f4e6275c64a46d3774f401",
+    "semantic_hash": "1ae438e133f4e6275c64a46d3774f401"
+  },
+  "physics-quizzes/class-11/2024-25/quiz-4.js": {
+    "mtime": 1795026095.5082397,
+    "seen": 1795696737.98948,
+    "ast_hash": "453893f6cdd018290b429ce69859581d",
+    "semantic_hash": "453893f6cdd018290b429ce69859581d"
+  },
+  "physics-quizzes/class-11/2024-25/quiz-5.js": {
+    "mtime": 1795026095.510607,
+    "seen": 1795696737.989481,
+    "ast_hash": "cb842564a15946d98ca47075298c1fe8",
+    "semantic_hash": "cb842564a15946d98ca47075298c1fe8"
+  },
+  "physics-quizzes/class-8/2020-21/quiz-1.js": {
+    "mtime": 1795026095.6322236,
+    "seen": 1795696737.989482,
+    "ast_hash": "df194ff58c945cf823b0626248e3d1e2",
+    "semantic_hash": "df194ff58c945cf823b0626248e3d1e2"
+  },
+  "physics-quizzes/class-8/2020-21/quiz-2.js": {
+    "mtime": 1795026095.6322236,
+    "seen": 1795696737.989483,
+    "ast_hash": "1a2b3dc766d0f93d85a8a33a3dd16ae2",
+    "semantic_hash": "1a2b3dc766d0f93d85a8a33a3dd16ae2"
+  },
+  "physics-quizzes/class-8/2020-21/quiz-4.js": {
+    "mtime": 1795456418.9173882,
+    "seen": 1795696737.9894843,
+    "ast_hash": "8079a4d78688576484edd1175b928f9a",
+    "semantic_hash": "8079a4d78688576484edd1175b928f9a"
+  },
+  "physics-quizzes/class-8/2020-21/quiz-5.js": {
+    "mtime": 1795026095.6322236,
+    "seen": 1795696737.9894853,
+    "ast_hash": "cd9b248b1427cec98ca2e109ec50a49b",
+    "semantic_hash": "cd9b248b1427cec98ca2e109ec50a49b"
+  },
+  "physics-quizzes/class-8/2021-22/quiz-1.js": {
+    "mtime": 1795026095.6322236,
+    "seen": 1795696737.9894867,
+    "ast_hash": "cc868e6b17d341d21fc8b739cce99fa1",
+    "semantic_hash": "cc868e6b17d341d21fc8b739cce99fa1"
+  },
+  "physics-quizzes/class-8/2021-22/quiz-2.js": {
+    "mtime": 1795026095.6322236,
+    "seen": 1795696737.9894876,
+    "ast_hash": "3321bc219cd8cf207dd61ebee5e8877a",
+    "semantic_hash": "3321bc219cd8cf207dd61ebee5e8877a"
+  },
+  "physics-quizzes/class-8/2021-22/quiz-3.js": {
+    "mtime": 1795026095.6423776,
+    "seen": 1795696737.9894886,
+    "ast_hash": "e06e0fe2763c8ae8c8f1163a6b22dee5",
+    "semantic_hash": "e06e0fe2763c8ae8c8f1163a6b22dee5"
+  },
+  "physics-quizzes/class-8/2021-22/quiz-4.js": {
+    "mtime": 1795026095.6423776,
+    "seen": 1795696737.9894896,
+    "ast_hash": "1ac6db6d1b8ba662889678df5b10d72d",
+    "semantic_hash": "1ac6db6d1b8ba662889678df5b10d72d"
+  },
+  "physics-quizzes/class-8/2021-22/quiz-5.js": {
+    "mtime": 1795026095.6423776,
+    "seen": 1795696737.9894907,
+    "ast_hash": "c870ef0381e16f6f9a8b1f0997d04940",
+    "semantic_hash": "c870ef0381e16f6f9a8b1f0997d04940"
+  },
+  "physics-quizzes/class-8/2022-23/quiz-1.js": {
+    "mtime": 1795026095.6423776,
+    "seen": 1795696737.9894917,
+    "ast_hash": "6c3b622334f27a85a94a44919ea9ddb2",
+    "semantic_hash": "6c3b622334f27a85a94a44919ea9ddb2"
+  },
+  "physics-quizzes/class-8/2022-23/quiz-2.js": {
+    "mtime": 1795026095.6479638,
+    "seen": 1795696737.9894927,
+    "ast_hash": "e3e914b4485b9238ff48bedf9447b8e2",
+    "semantic_hash": "e3e914b4485b9238ff48bedf9447b8e2"
+  },
+  "physics-quizzes/class-8/2022-23/quiz-3.js": {
+    "mtime": 1795026095.6495101,
+    "seen": 1795696737.989494,
+    "ast_hash": "8017e0c42251c96252e28044064e4e56",
+    "semantic_hash": "8017e0c42251c96252e28044064e4e56"
+  },
+  "physics-quizzes/class-8/2022-23/quiz-4.js": {
+    "mtime": 1795026095.6495101,
+    "seen": 1795696737.989495,
+    "ast_hash": "77448f483298789c347760344935f4dc",
+    "semantic_hash": "77448f483298789c347760344935f4dc"
+  },
+  "physics-quizzes/class-8/2022-23/quiz-5.js": {
+    "mtime": 1795026095.6524687,
+    "seen": 1795696737.9894962,
+    "ast_hash": "dfa05f82b5cff2f6e9ad54bd415b5d32",
+    "semantic_hash": "dfa05f82b5cff2f6e9ad54bd415b5d32"
+  },
+  "physics-quizzes/class-8/2023-24/quiz-1.js": {
+    "mtime": 1795026095.6524687,
+    "seen": 1795696737.9894974,
+    "ast_hash": "872505f579a2241a408e79b4b97a76c7",
+    "semantic_hash": "872505f579a2241a408e79b4b97a76c7"
+  },
+  "physics-quizzes/class-8/2023-24/quiz-2.js": {
+    "mtime": 1795026095.6524687,
+    "seen": 1795696737.9894984,
+    "ast_hash": "446564611569d18e35de30abbcd51a04",
+    "semantic_hash": "446564611569d18e35de30abbcd51a04"
+  },
+  "physics-quizzes/class-8/2023-24/quiz-3.js": {
+    "mtime": 1795026095.6524687,
+    "seen": 1795696737.9894993,
+    "ast_hash": "777ab334eae92ed5b2f10835b9b830e9",
+    "semantic_hash": "777ab334eae92ed5b2f10835b9b830e9"
+  },
+  "physics-quizzes/class-8/2023-24/quiz-4.js": {
+    "mtime": 1795026095.6524687,
+    "seen": 1795696737.9895008,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "physics-quizzes/class-8/2023-24/quiz-5.js": {
+    "mtime": 1795026095.6524687,
+    "seen": 1795696737.9895017,
+    "ast_hash": "916b9b34c8c7d04d7a554ae217843944",
+    "semantic_hash": "916b9b34c8c7d04d7a554ae217843944"
+  },
+  "physics-quizzes/class-8/2024-25/quiz-1.js": {
+    "mtime": 1795026095.6618285,
+    "seen": 1795696737.9895027,
+    "ast_hash": "4ad811e41967aae159a6e246f772c03a",
+    "semantic_hash": "4ad811e41967aae159a6e246f772c03a"
+  },
+  "physics-quizzes/class-8/2024-25/quiz-2.js": {
+    "mtime": 1795026095.6628313,
+    "seen": 1795696737.989504,
+    "ast_hash": "2b119e04a45bb4099544dfa4cd8b6213",
+    "semantic_hash": "2b119e04a45bb4099544dfa4cd8b6213"
+  },
+  "physics-quizzes/class-8/2024-25/quiz-3.js": {
+    "mtime": 1795026095.6647942,
+    "seen": 1795696737.989506,
+    "ast_hash": "df014ead076aae5f99b0c1bc4c116938",
+    "semantic_hash": "df014ead076aae5f99b0c1bc4c116938"
+  },
+  "physics-quizzes/class-8/2024-25/quiz-4.js": {
+    "mtime": 1795026095.665433,
+    "seen": 1795696737.9895074,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "physics-quizzes/class-8/2024-25/quiz-5.js": {
+    "mtime": 1795026095.665433,
+    "seen": 1795696737.9895084,
+    "ast_hash": "def6e507155b83d323f708d72940767e",
+    "semantic_hash": "def6e507155b83d323f708d72940767e"
+  },
+  "physics-quizzes/class-9/2020-21/quiz-1.js": {
+    "mtime": 1795026095.8272486,
+    "seen": 1795696737.9895093,
+    "ast_hash": "67bae736197b7639fe272ffcb5a5b8da",
+    "semantic_hash": "67bae736197b7639fe272ffcb5a5b8da"
+  },
+  "physics-quizzes/class-9/2020-21/quiz-2.js": {
+    "mtime": 1795026095.8322473,
+    "seen": 1795696737.9895103,
+    "ast_hash": "b17043eb11182cefaca7877ef0af622c",
+    "semantic_hash": "b17043eb11182cefaca7877ef0af622c"
+  },
+  "physics-quizzes/class-9/2020-21/quiz-4.js": {
+    "mtime": 1795026095.8322473,
+    "seen": 1795696737.9895115,
+    "ast_hash": "f0623f3a81870e1af2c482d5a15e24b4",
+    "semantic_hash": "f0623f3a81870e1af2c482d5a15e24b4"
+  },
+  "physics-quizzes/class-9/2020-21/quiz-5.js": {
+    "mtime": 1795026095.8322473,
+    "seen": 1795696737.9895158,
+    "ast_hash": "813c34c6832ddc36ea652f4aa5e064fd",
+    "semantic_hash": "813c34c6832ddc36ea652f4aa5e064fd"
+  },
+  "physics-quizzes/class-9/2021-22/quiz-1.js": {
+    "mtime": 1795026095.8363192,
+    "seen": 1795696737.989517,
+    "ast_hash": "f3a9b1bbcf0446c98acac790c8b3ec13",
+    "semantic_hash": "f3a9b1bbcf0446c98acac790c8b3ec13"
+  },
+  "physics-quizzes/class-9/2021-22/quiz-2.js": {
+    "mtime": 1795026095.83927,
+    "seen": 1795696737.9895182,
+    "ast_hash": "70e5c3d1cfee37fb1db0a115eb06cef5",
+    "semantic_hash": "70e5c3d1cfee37fb1db0a115eb06cef5"
+  },
+  "physics-quizzes/class-9/2021-22/quiz-3.js": {
+    "mtime": 1795026095.840004,
+    "seen": 1795696737.9895194,
+    "ast_hash": "c44fbe1c91872d30996040ba9ca404a9",
+    "semantic_hash": "c44fbe1c91872d30996040ba9ca404a9"
+  },
+  "physics-quizzes/class-9/2021-22/quiz-4.js": {
+    "mtime": 1795026095.8424647,
+    "seen": 1795696737.9895203,
+    "ast_hash": "f1917dc0287cc42d4622a2d78d39e3a6",
+    "semantic_hash": "f1917dc0287cc42d4622a2d78d39e3a6"
+  },
+  "physics-quizzes/class-9/2021-22/quiz-5.js": {
+    "mtime": 1795026095.8424647,
+    "seen": 1795696737.9895215,
+    "ast_hash": "ab78e240b039d32e9af37070cc6cb0d2",
+    "semantic_hash": "ab78e240b039d32e9af37070cc6cb0d2"
+  },
+  "physics-quizzes/class-9/2022-23/quiz-1.js": {
+    "mtime": 1795026095.8461952,
+    "seen": 1795696737.9895225,
+    "ast_hash": "74576b131138b8aa176e1594d62c8de5",
+    "semantic_hash": "74576b131138b8aa176e1594d62c8de5"
+  },
+  "physics-quizzes/class-9/2022-23/quiz-2.js": {
+    "mtime": 1795026095.8481052,
+    "seen": 1795696737.9895236,
+    "ast_hash": "7689bc5f23a4b18e6af0bf85ece045ae",
+    "semantic_hash": "7689bc5f23a4b18e6af0bf85ece045ae"
+  },
+  "physics-quizzes/class-9/2022-23/quiz-3.js": {
+    "mtime": 1795026095.8501787,
+    "seen": 1795696737.9895248,
+    "ast_hash": "397af7d9a7a32c0177d7909b7eafc8a9",
+    "semantic_hash": "397af7d9a7a32c0177d7909b7eafc8a9"
+  },
+  "physics-quizzes/class-9/2022-23/quiz-4.js": {
+    "mtime": 1795026095.8501787,
+    "seen": 1795696737.989526,
+    "ast_hash": "01a2eea971ef60cf92a8213c8d9565c0",
+    "semantic_hash": "01a2eea971ef60cf92a8213c8d9565c0"
+  },
+  "physics-quizzes/class-9/2022-23/quiz-5.js": {
+    "mtime": 1795026095.8501787,
+    "seen": 1795696737.9895272,
+    "ast_hash": "cb8f5d812be4c1fef915b6590b2cc6e9",
+    "semantic_hash": "cb8f5d812be4c1fef915b6590b2cc6e9"
+  },
+  "physics-quizzes/class-9/2023-24/quiz-1.js": {
+    "mtime": 1795026095.852695,
+    "seen": 1795696737.9895284,
+    "ast_hash": "8a05859d387c2431b9d2ee6b4a2eb1ed",
+    "semantic_hash": "8a05859d387c2431b9d2ee6b4a2eb1ed"
+  },
+  "physics-quizzes/class-9/2023-24/quiz-2.js": {
+    "mtime": 1795295871.1484764,
+    "seen": 1795696737.9895294,
+    "ast_hash": "80277d7e1326f701e5eda12baf76938c",
+    "semantic_hash": "80277d7e1326f701e5eda12baf76938c"
+  },
+  "physics-quizzes/class-9/2023-24/quiz-3.js": {
+    "mtime": 1795026095.852695,
+    "seen": 1795696737.9895303,
+    "ast_hash": "a965090a5d6e650744f728fff476e114",
+    "semantic_hash": "a965090a5d6e650744f728fff476e114"
+  },
+  "physics-quizzes/class-9/2023-24/quiz-4.js": {
+    "mtime": 1795026095.8589864,
+    "seen": 1795696737.9895313,
+    "ast_hash": "34cc9543ecfda20662711b2eb4b22d37",
+    "semantic_hash": "34cc9543ecfda20662711b2eb4b22d37"
+  },
+  "physics-quizzes/class-9/2023-24/quiz-5.js": {
+    "mtime": 1795026095.860005,
+    "seen": 1795696737.9895325,
+    "ast_hash": "b305144aea66c3679073f175a5b02bb9",
+    "semantic_hash": "b305144aea66c3679073f175a5b02bb9"
+  },
+  "physics-quizzes/class-9/2024-25/quiz-1.js": {
+    "mtime": 1795026095.8625164,
+    "seen": 1795696737.9895337,
+    "ast_hash": "a1df82edcbbf7296a3de93fa2579f5a2",
+    "semantic_hash": "a1df82edcbbf7296a3de93fa2579f5a2"
+  },
+  "physics-quizzes/class-9/2024-25/quiz-2.js": {
+    "mtime": 1795026095.8635342,
+    "seen": 1795696737.9895346,
+    "ast_hash": "dbd3a19e7dd9d58e8f775f8f284bb5f6",
+    "semantic_hash": "dbd3a19e7dd9d58e8f775f8f284bb5f6"
+  },
+  "physics-quizzes/class-9/2024-25/quiz-3.js": {
+    "mtime": 1795026095.8656785,
+    "seen": 1795696737.989536,
+    "ast_hash": "79e7ba8f9dde81831fe230da1c4bcf87",
+    "semantic_hash": "79e7ba8f9dde81831fe230da1c4bcf87"
+  },
+  "physics-quizzes/class-9/2024-25/quiz-4.js": {
+    "mtime": 1795026095.8656785,
+    "seen": 1795696737.989537,
+    "ast_hash": "5dff1b11b95241d7bccc8750778cad09",
+    "semantic_hash": "5dff1b11b95241d7bccc8750778cad09"
+  },
+  "physics-quizzes/class-9/2024-25/quiz-5.js": {
+    "mtime": 1795026095.867695,
+    "seen": 1795696737.989538,
+    "ast_hash": "38a197d340216ce549bc86436225f645",
+    "semantic_hash": "38a197d340216ce549bc86436225f645"
+  },
+  "playwright.config.js": {
+    "mtime": 1795449819.687278,
+    "seen": 1795696737.9895391,
+    "ast_hash": "479d1f10d4203b8e7419c7f41c0f842e",
+    "semantic_hash": "479d1f10d4203b8e7419c7f41c0f842e"
+  },
+  "practice.js": {
+    "mtime": 1795456345.0527675,
+    "seen": 1795696737.98954,
+    "ast_hash": "c938c2278f6a2c6b252a268b396f0eb0",
+    "semantic_hash": "c938c2278f6a2c6b252a268b396f0eb0"
+  },
+  "problems.js": {
+    "mtime": 1795388329.5533826,
+    "seen": 1795696737.989541,
+    "ast_hash": "8dba70c15636f15fd3890f76b87e5bd4",
+    "semantic_hash": "8dba70c15636f15fd3890f76b87e5bd4"
+  },
+  "progress.js": {
+    "mtime": 1795456343.7320986,
+    "seen": 1795696737.9895425,
+    "ast_hash": "cf3a7043d40e32e691633b1ba9a9ab1c",
+    "semantic_hash": "cf3a7043d40e32e691633b1ba9a9ab1c"
+  },
+  "quiz.js": {
+    "mtime": 1795627251.9523962,
+    "seen": 1795696737.9895434,
+    "ast_hash": "60ce1b42055d5f61d8d1444622c8a0bb",
+    "semantic_hash": "60ce1b42055d5f61d8d1444622c8a0bb"
+  },
+  "quizzes.json": {
+    "mtime": 1795464636.600037,
+    "seen": 1795696737.9895444,
+    "ast_hash": "705a9fc8397bcb4116f85a19b82f3b26",
+    "semantic_hash": "705a9fc8397bcb4116f85a19b82f3b26"
+  },
+  "quizzes/class-10/2020-21/quiz-1.js": {
+    "mtime": 1795208316.1472256,
+    "seen": 1795696737.9895456,
+    "ast_hash": "2de3cad7b0aa1f8adefa89b367ca5bfd",
+    "semantic_hash": "2de3cad7b0aa1f8adefa89b367ca5bfd"
+  },
+  "quizzes/class-10/2020-21/quiz-2.js": {
+    "mtime": 1795208316.1472256,
+    "seen": 1795696737.9895465,
+    "ast_hash": "14820c1e5ab0e978fc1c554d65a462b1",
+    "semantic_hash": "14820c1e5ab0e978fc1c554d65a462b1"
+  },
+  "quizzes/class-10/2020-21/quiz-3.js": {
+    "mtime": 1795208316.1472256,
+    "seen": 1795696737.9895475,
+    "ast_hash": "c63f549b9f518518bb8be5178195486c",
+    "semantic_hash": "c63f549b9f518518bb8be5178195486c"
+  },
+  "quizzes/class-10/2020-21/quiz-5.js": {
+    "mtime": 1795208316.1504552,
+    "seen": 1795696737.9895487,
+    "ast_hash": "be2de57c0121a5034be87d53bb61becd",
+    "semantic_hash": "be2de57c0121a5034be87d53bb61becd"
+  },
+  "quizzes/class-10/2021-22/quiz-1.js": {
+    "mtime": 1795208316.1504552,
+    "seen": 1795696737.9895499,
+    "ast_hash": "f4d656891d55bd78daaa7890e63d9d61",
+    "semantic_hash": "f4d656891d55bd78daaa7890e63d9d61"
+  },
+  "quizzes/class-10/2021-22/quiz-2.js": {
+    "mtime": 1795208316.1504552,
+    "seen": 1795696737.9895508,
+    "ast_hash": "1da0337b1046fdbd0f9d6182577fbec0",
+    "semantic_hash": "1da0337b1046fdbd0f9d6182577fbec0"
+  },
+  "quizzes/class-10/2021-22/quiz-3.js": {
+    "mtime": 1795208316.1504552,
+    "seen": 1795696737.989552,
+    "ast_hash": "3194a332a9986977b4a67df5bb68afe0",
+    "semantic_hash": "3194a332a9986977b4a67df5bb68afe0"
+  },
+  "quizzes/class-10/2021-22/quiz-4.js": {
+    "mtime": 1795208316.1504552,
+    "seen": 1795696737.9895532,
+    "ast_hash": "cab8f2fdcdac8bb1d27161019beeb60a",
+    "semantic_hash": "cab8f2fdcdac8bb1d27161019beeb60a"
+  },
+  "quizzes/class-10/2021-22/quiz-5.js": {
+    "mtime": 1795208316.1504552,
+    "seen": 1795696737.9895542,
+    "ast_hash": "4a63a6152ecda11f955fb6e42d59d663",
+    "semantic_hash": "4a63a6152ecda11f955fb6e42d59d663"
+  },
+  "quizzes/class-10/2022-23/quiz-1.js": {
+    "mtime": 1795208316.1504552,
+    "seen": 1795696737.9895551,
+    "ast_hash": "5d2540a344ff2aab310357a68947772c",
+    "semantic_hash": "5d2540a344ff2aab310357a68947772c"
+  },
+  "quizzes/class-10/2022-23/quiz-2.js": {
+    "mtime": 1795208316.1504552,
+    "seen": 1795696737.9895563,
+    "ast_hash": "59dfa60ed71f94a869ebd50847fda064",
+    "semantic_hash": "59dfa60ed71f94a869ebd50847fda064"
+  },
+  "quizzes/class-10/2022-23/quiz-3.js": {
+    "mtime": 1795208316.1575832,
+    "seen": 1795696737.9895573,
+    "ast_hash": "7a57b344dcd0abf3e6bedce67ee5837f",
+    "semantic_hash": "7a57b344dcd0abf3e6bedce67ee5837f"
+  },
+  "quizzes/class-10/2022-23/quiz-4.js": {
+    "mtime": 1795208316.1575832,
+    "seen": 1795696737.9895582,
+    "ast_hash": "ae9281dfc3ef5453775b570abc627886",
+    "semantic_hash": "ae9281dfc3ef5453775b570abc627886"
+  },
+  "quizzes/class-10/2022-23/quiz-5.js": {
+    "mtime": 1795208316.1585624,
+    "seen": 1795696737.9895597,
+    "ast_hash": "b39da2ffeb857ddc6113a51aee3b2728",
+    "semantic_hash": "b39da2ffeb857ddc6113a51aee3b2728"
+  },
+  "quizzes/class-10/2023-24/quiz-1.js": {
+    "mtime": 1795208316.1605885,
+    "seen": 1795696737.9895606,
+    "ast_hash": "3dc56f40b2d79037936bbc6b7621c066",
+    "semantic_hash": "3dc56f40b2d79037936bbc6b7621c066"
+  },
+  "quizzes/class-10/2023-24/quiz-2.js": {
+    "mtime": 1795208316.1605885,
+    "seen": 1795696737.9895616,
+    "ast_hash": "2ca775d7d8e9301e939b81d2a99b1f5a",
+    "semantic_hash": "2ca775d7d8e9301e939b81d2a99b1f5a"
+  },
+  "quizzes/class-10/2023-24/quiz-3.js": {
+    "mtime": 1795208316.1605885,
+    "seen": 1795696737.9895625,
+    "ast_hash": "c23506cef549839319644b56df7bb5a5",
+    "semantic_hash": "c23506cef549839319644b56df7bb5a5"
+  },
+  "quizzes/class-10/2023-24/quiz-4.js": {
+    "mtime": 1795208316.1605885,
+    "seen": 1795696737.989564,
+    "ast_hash": "aa0ef903388c92f4a5c30e07b8806a92",
+    "semantic_hash": "aa0ef903388c92f4a5c30e07b8806a92"
+  },
+  "quizzes/class-10/2023-24/quiz-5.js": {
+    "mtime": 1795208316.1605885,
+    "seen": 1795696737.989565,
+    "ast_hash": "87cb237dc3ba51bd54fa72e8e1f862f6",
+    "semantic_hash": "87cb237dc3ba51bd54fa72e8e1f862f6"
+  },
+  "quizzes/class-10/2024-25/quiz-1.js": {
+    "mtime": 1795269180.7264419,
+    "seen": 1795696737.9895663,
+    "ast_hash": "d7d079aa1d00ceaed234ea3f1e85f49f",
+    "semantic_hash": "d7d079aa1d00ceaed234ea3f1e85f49f"
+  },
+  "quizzes/class-10/2024-25/quiz-2.js": {
+    "mtime": 1795269261.1588495,
+    "seen": 1795696737.9895673,
+    "ast_hash": "300c20133c6da985ffa662ca7cfe66d1",
+    "semantic_hash": "300c20133c6da985ffa662ca7cfe66d1"
+  },
+  "quizzes/class-10/2024-25/quiz-3.js": {
+    "mtime": 1795269341.6587386,
+    "seen": 1795696737.9895682,
+    "ast_hash": "fb6c089a5539334636b62e40b9ea23c6",
+    "semantic_hash": "fb6c089a5539334636b62e40b9ea23c6"
+  },
+  "quizzes/class-10/2024-25/quiz-4.js": {
+    "mtime": 1795269407.1681583,
+    "seen": 1795696737.9895692,
+    "ast_hash": "b7f96aa0ae5bfc0c7b0c2c7093d2940a",
+    "semantic_hash": "b7f96aa0ae5bfc0c7b0c2c7093d2940a"
+  },
+  "quizzes/class-10/2024-25/quiz-5.js": {
+    "mtime": 1795269473.6171105,
+    "seen": 1795696737.9895704,
+    "ast_hash": "3040a62bc4b6cbb9ecd1c6f21e1df9da",
+    "semantic_hash": "3040a62bc4b6cbb9ecd1c6f21e1df9da"
+  },
+  "quizzes/class-10/2025-26/quiz-1.js": {
+    "mtime": 1795208316.16677,
+    "seen": 1795696737.9895713,
+    "ast_hash": "57a1feb9e7fd094b962dc1bc6dfcb703",
+    "semantic_hash": "57a1feb9e7fd094b962dc1bc6dfcb703"
+  },
+  "quizzes/class-10/2025-26/quiz-2.js": {
+    "mtime": 1795208316.16677,
+    "seen": 1795696737.9895723,
+    "ast_hash": "19d0db58fb102bb5f5988e7e64c51611",
+    "semantic_hash": "19d0db58fb102bb5f5988e7e64c51611"
+  },
+  "quizzes/class-10/2025-26/quiz-3.js": {
+    "mtime": 1795208316.16677,
+    "seen": 1795696737.9895735,
+    "ast_hash": "8e7bd42ade00b62a2ec2b3aaf19eeb06",
+    "semantic_hash": "8e7bd42ade00b62a2ec2b3aaf19eeb06"
+  },
+  "quizzes/class-10/2025-26/quiz-4.js": {
+    "mtime": 1795208316.1704423,
+    "seen": 1795696737.9895747,
+    "ast_hash": "c4ea493041963903adefa7b86dc6069a",
+    "semantic_hash": "c4ea493041963903adefa7b86dc6069a"
+  },
+  "quizzes/class-10/2025-26/quiz-5.js": {
+    "mtime": 1795208316.1704423,
+    "seen": 1795696737.9895756,
+    "ast_hash": "f9858d1475c1c5a19b197fff8591d965",
+    "semantic_hash": "f9858d1475c1c5a19b197fff8591d965"
+  },
+  "quizzes/class-11/2020-21/quiz-1.js": {
+    "mtime": 1795208316.1704423,
+    "seen": 1795696737.9895768,
+    "ast_hash": "004f4a0604c29ff6da321918db215f28",
+    "semantic_hash": "004f4a0604c29ff6da321918db215f28"
+  },
+  "quizzes/class-11/2020-21/quiz-2.js": {
+    "mtime": 1795208316.1704423,
+    "seen": 1795696737.9895778,
+    "ast_hash": "242edcb856e3f454aa81ae67fb66c7c3",
+    "semantic_hash": "242edcb856e3f454aa81ae67fb66c7c3"
+  },
+  "quizzes/class-11/2020-21/quiz-4.js": {
+    "mtime": 1795208316.173676,
+    "seen": 1795696737.9895787,
+    "ast_hash": "ca4ba5986a1140c1d74342c1c1d1fec3",
+    "semantic_hash": "ca4ba5986a1140c1d74342c1c1d1fec3"
+  },
+  "quizzes/class-11/2020-21/quiz-5.js": {
+    "mtime": 1795208316.173676,
+    "seen": 1795696737.9895797,
+    "ast_hash": "9b2058867d1200355b648d6e77d21a0d",
+    "semantic_hash": "9b2058867d1200355b648d6e77d21a0d"
+  },
+  "quizzes/class-11/2021-22/quiz-1.js": {
+    "mtime": 1795208316.1746824,
+    "seen": 1795696737.989581,
+    "ast_hash": "ccb77976ad94d17d97d6684d30141be3",
+    "semantic_hash": "ccb77976ad94d17d97d6684d30141be3"
+  },
+  "quizzes/class-11/2021-22/quiz-2.js": {
+    "mtime": 1795208316.1757848,
+    "seen": 1795696737.989582,
+    "ast_hash": "5f52009bf536f3ac3ff6224ff581f0c6",
+    "semantic_hash": "5f52009bf536f3ac3ff6224ff581f0c6"
+  },
+  "quizzes/class-11/2021-22/quiz-3.js": {
+    "mtime": 1795208316.1762898,
+    "seen": 1795696737.989583,
+    "ast_hash": "7bb1c7b6b960f04feb8919713a745d16",
+    "semantic_hash": "7bb1c7b6b960f04feb8919713a745d16"
+  },
+  "quizzes/class-11/2021-22/quiz-4.js": {
+    "mtime": 1795208316.1762898,
+    "seen": 1795696737.9895842,
+    "ast_hash": "4ba02909ff01ef612ee77322eac14ffc",
+    "semantic_hash": "4ba02909ff01ef612ee77322eac14ffc"
+  },
+  "quizzes/class-11/2021-22/quiz-5.js": {
+    "mtime": 1795208316.1762898,
+    "seen": 1795696737.9895852,
+    "ast_hash": "8bc914f14e9fdf15a4d05b90ad66bd13",
+    "semantic_hash": "8bc914f14e9fdf15a4d05b90ad66bd13"
+  },
+  "quizzes/class-11/2022-23/quiz-1.js": {
+    "mtime": 1795208316.1762898,
+    "seen": 1795696737.989586,
+    "ast_hash": "6ed256385424f24b8087f917999776ff",
+    "semantic_hash": "6ed256385424f24b8087f917999776ff"
+  },
+  "quizzes/class-11/2022-23/quiz-2.js": {
+    "mtime": 1795208316.1762898,
+    "seen": 1795696737.9895875,
+    "ast_hash": "941529dd87d3609f859445dc8b13cef1",
+    "semantic_hash": "941529dd87d3609f859445dc8b13cef1"
+  },
+  "quizzes/class-11/2022-23/quiz-3.js": {
+    "mtime": 1795208316.181143,
+    "seen": 1795696737.9895885,
+    "ast_hash": "b375a4922e7d2d90bccb110da2be5bab",
+    "semantic_hash": "b375a4922e7d2d90bccb110da2be5bab"
+  },
+  "quizzes/class-11/2022-23/quiz-4.js": {
+    "mtime": 1795208316.181143,
+    "seen": 1795696737.9895897,
+    "ast_hash": "7bf6e22e21e1c3027ca190204012615f",
+    "semantic_hash": "7bf6e22e21e1c3027ca190204012615f"
+  },
+  "quizzes/class-11/2022-23/quiz-5.js": {
+    "mtime": 1795295871.0317988,
+    "seen": 1795696737.989591,
+    "ast_hash": "b97a0e5c98e183b453fddd829c5f6f64",
+    "semantic_hash": "b97a0e5c98e183b453fddd829c5f6f64"
+  },
+  "quizzes/class-11/2023-24/quiz-1.js": {
+    "mtime": 1795208316.1831503,
+    "seen": 1795696737.9895918,
+    "ast_hash": "0619cc318ef568961d6a219f83d9c68d",
+    "semantic_hash": "0619cc318ef568961d6a219f83d9c68d"
+  },
+  "quizzes/class-11/2023-24/quiz-2.js": {
+    "mtime": 1795208316.1831503,
+    "seen": 1795696737.989593,
+    "ast_hash": "d75910d828251becc4ea5166beb6aacc",
+    "semantic_hash": "d75910d828251becc4ea5166beb6aacc"
+  },
+  "quizzes/class-11/2023-24/quiz-3.js": {
+    "mtime": 1795208316.1831503,
+    "seen": 1795696737.9895942,
+    "ast_hash": "862f6c24ed73ed19cc8cfe3a9dc16eb0",
+    "semantic_hash": "862f6c24ed73ed19cc8cfe3a9dc16eb0"
+  },
+  "quizzes/class-11/2023-24/quiz-4.js": {
+    "mtime": 1795208316.1851573,
+    "seen": 1795696737.9895952,
+    "ast_hash": "31621aaec1f21dd737e206f063d52428",
+    "semantic_hash": "31621aaec1f21dd737e206f063d52428"
+  },
+  "quizzes/class-11/2023-24/quiz-5.js": {
+    "mtime": 1795208316.1851573,
+    "seen": 1795696737.9895961,
+    "ast_hash": "251deafa6d256d25fd6cce85c68c292a",
+    "semantic_hash": "251deafa6d256d25fd6cce85c68c292a"
+  },
+  "quizzes/class-11/2024-25/quiz-1.js": {
+    "mtime": 1795269544.4308097,
+    "seen": 1795696737.989597,
+    "ast_hash": "4a5c0c85061717a708de93796c16a122",
+    "semantic_hash": "4a5c0c85061717a708de93796c16a122"
+  },
+  "quizzes/class-11/2024-25/quiz-2.js": {
+    "mtime": 1795269614.2755878,
+    "seen": 1795696737.9895983,
+    "ast_hash": "371cb12d8cc6d80e6988a5ea28a87f40",
+    "semantic_hash": "371cb12d8cc6d80e6988a5ea28a87f40"
+  },
+  "quizzes/class-11/2024-25/quiz-3.js": {
+    "mtime": 1795269671.7545767,
+    "seen": 1795696737.9895995,
+    "ast_hash": "11be2dcaa6d3c473a44a95525d01571e",
+    "semantic_hash": "11be2dcaa6d3c473a44a95525d01571e"
+  },
+  "quizzes/class-11/2024-25/quiz-4.js": {
+    "mtime": 1795269731.0908184,
+    "seen": 1795696737.9896004,
+    "ast_hash": "e10008e413e6d0c7b98e86a261b40e60",
+    "semantic_hash": "e10008e413e6d0c7b98e86a261b40e60"
+  },
+  "quizzes/class-11/2024-25/quiz-5.js": {
+    "mtime": 1795290417.6085255,
+    "seen": 1795696737.9896033,
+    "ast_hash": "d0c8b8d296d0d0eb91a869e68bea9ec8",
+    "semantic_hash": "d0c8b8d296d0d0eb91a869e68bea9ec8"
+  },
+  "quizzes/class-11/2025-26/quiz-1.js": {
+    "mtime": 1795208316.1851573,
+    "seen": 1795696737.9896047,
+    "ast_hash": "8fd65e5eeb65fd319b0a25f908ec82eb",
+    "semantic_hash": "8fd65e5eeb65fd319b0a25f908ec82eb"
+  },
+  "quizzes/class-11/2025-26/quiz-2.js": {
+    "mtime": 1795208316.1851573,
+    "seen": 1795696737.9896057,
+    "ast_hash": "1fa190890832c33240efd13ab399d42e",
+    "semantic_hash": "1fa190890832c33240efd13ab399d42e"
+  },
+  "quizzes/class-11/2025-26/quiz-3.js": {
+    "mtime": 1795208316.1909556,
+    "seen": 1795696737.9896069,
+    "ast_hash": "2662719e4911d12d526b0bc717297609",
+    "semantic_hash": "2662719e4911d12d526b0bc717297609"
+  },
+  "quizzes/class-11/2025-26/quiz-4.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896076,
+    "ast_hash": "975569ee59f0dca059b0d62fe51f47b6",
+    "semantic_hash": "975569ee59f0dca059b0d62fe51f47b6"
+  },
+  "quizzes/class-11/2025-26/quiz-5.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.989609,
+    "ast_hash": "4f0be57918fcaf2e01d18cff259cdb15",
+    "semantic_hash": "4f0be57918fcaf2e01d18cff259cdb15"
+  },
+  "quizzes/class-7/2020-21/quiz-1.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.98961,
+    "ast_hash": "1a663fcf6f574ac37b40b7a3fdaa6299",
+    "semantic_hash": "1a663fcf6f574ac37b40b7a3fdaa6299"
+  },
+  "quizzes/class-7/2020-21/quiz-2.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.989611,
+    "ast_hash": "5254eda3d84e76531aab1c3939f1a3ad",
+    "semantic_hash": "5254eda3d84e76531aab1c3939f1a3ad"
+  },
+  "quizzes/class-7/2020-21/quiz-4.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896123,
+    "ast_hash": "d7d730f31869a2b3c8b7557a22090c28",
+    "semantic_hash": "d7d730f31869a2b3c8b7557a22090c28"
+  },
+  "quizzes/class-7/2020-21/quiz-5.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896133,
+    "ast_hash": "1e334644576c801a2f1c1cee39a723a3",
+    "semantic_hash": "1e334644576c801a2f1c1cee39a723a3"
+  },
+  "quizzes/class-7/2021-22/quiz-1.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896142,
+    "ast_hash": "e4f3cf8438c7d6f075a88f980ad69ebb",
+    "semantic_hash": "e4f3cf8438c7d6f075a88f980ad69ebb"
+  },
+  "quizzes/class-7/2021-22/quiz-2.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896154,
+    "ast_hash": "82667aa8d623367c5a1f34166e63e0ad",
+    "semantic_hash": "82667aa8d623367c5a1f34166e63e0ad"
+  },
+  "quizzes/class-7/2021-22/quiz-3.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896164,
+    "ast_hash": "e7849872f6c805c260ca0d42d82abb15",
+    "semantic_hash": "e7849872f6c805c260ca0d42d82abb15"
+  },
+  "quizzes/class-7/2021-22/quiz-4.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896176,
+    "ast_hash": "dad0947c05871b888ac21d69f6cb5008",
+    "semantic_hash": "dad0947c05871b888ac21d69f6cb5008"
+  },
+  "quizzes/class-7/2021-22/quiz-5.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896188,
+    "ast_hash": "19b7657b084a3cba317751a66352b156",
+    "semantic_hash": "19b7657b084a3cba317751a66352b156"
+  },
+  "quizzes/class-7/2022-23/quiz-1.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896197,
+    "ast_hash": "193fc5229ffdbce5ff0ce59ca236dc4b",
+    "semantic_hash": "193fc5229ffdbce5ff0ce59ca236dc4b"
+  },
+  "quizzes/class-7/2022-23/quiz-2.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896207,
+    "ast_hash": "b28f2aba362bbc3e9ad0b42f6eb0fe65",
+    "semantic_hash": "b28f2aba362bbc3e9ad0b42f6eb0fe65"
+  },
+  "quizzes/class-7/2022-23/quiz-3.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896219,
+    "ast_hash": "5422772cb556c7ae728247c904b7e31c",
+    "semantic_hash": "5422772cb556c7ae728247c904b7e31c"
+  },
+  "quizzes/class-7/2022-23/quiz-4.js": {
+    "mtime": 1795208316.1918688,
+    "seen": 1795696737.9896228,
+    "ast_hash": "d7e58553e9c4edf189cb90e057036263",
+    "semantic_hash": "d7e58553e9c4edf189cb90e057036263"
+  },
+  "quizzes/class-7/2022-23/quiz-5.js": {
+    "mtime": 1795208316.202184,
+    "seen": 1795696737.9896238,
+    "ast_hash": "ff30e4b3e99d1dd137eeb374256f7f5c",
+    "semantic_hash": "ff30e4b3e99d1dd137eeb374256f7f5c"
+  },
+  "quizzes/class-7/2023-24/quiz-1.js": {
+    "mtime": 1795208316.202184,
+    "seen": 1795696737.989625,
+    "ast_hash": "64055b50aa08711d97d4726cae6a717b",
+    "semantic_hash": "64055b50aa08711d97d4726cae6a717b"
+  },
+  "quizzes/class-7/2023-24/quiz-2.js": {
+    "mtime": 1795208316.202184,
+    "seen": 1795696737.9896262,
+    "ast_hash": "39a6d475372581c03763990830baa9bc",
+    "semantic_hash": "39a6d475372581c03763990830baa9bc"
+  },
+  "quizzes/class-7/2023-24/quiz-3.js": {
+    "mtime": 1795208316.202184,
+    "seen": 1795696737.9896271,
+    "ast_hash": "1d8d00d334dcd9a3df3eb09a5dd43244",
+    "semantic_hash": "1d8d00d334dcd9a3df3eb09a5dd43244"
+  },
+  "quizzes/class-7/2023-24/quiz-4.js": {
+    "mtime": 1795208316.202184,
+    "seen": 1795696737.989628,
+    "ast_hash": "7b7ba060826b2f04afd2e479e3a85a22",
+    "semantic_hash": "7b7ba060826b2f04afd2e479e3a85a22"
+  },
+  "quizzes/class-7/2023-24/quiz-5.js": {
+    "mtime": 1795208316.202184,
+    "seen": 1795696737.9896293,
+    "ast_hash": "f89e7fb8665bcd05b9ad9a6f15c66df1",
+    "semantic_hash": "f89e7fb8665bcd05b9ad9a6f15c66df1"
+  },
+  "quizzes/class-7/2024-25/quiz-1.js": {
+    "mtime": 1795265721.1496964,
+    "seen": 1795696737.9896302,
+    "ast_hash": "d877606cb0ee1907c33e033a2dfdf3e6",
+    "semantic_hash": "d877606cb0ee1907c33e033a2dfdf3e6"
+  },
+  "quizzes/class-7/2024-25/quiz-2.js": {
+    "mtime": 1795267027.8835962,
+    "seen": 1795696737.9896312,
+    "ast_hash": "87d2c7f542172fedbe6e307e0bf2bd23",
+    "semantic_hash": "87d2c7f542172fedbe6e307e0bf2bd23"
+  },
+  "quizzes/class-7/2024-25/quiz-3.js": {
+    "mtime": 1795267119.4921927,
+    "seen": 1795696737.9896324,
+    "ast_hash": "bf920ef5ddad53f42a684a3fc6ed9e84",
+    "semantic_hash": "bf920ef5ddad53f42a684a3fc6ed9e84"
+  },
+  "quizzes/class-7/2024-25/quiz-4.js": {
+    "mtime": 1795268426.4938097,
+    "seen": 1795696737.9896333,
+    "ast_hash": "1c7da48dceb1ae74a4e05d1a4b31ec73",
+    "semantic_hash": "1c7da48dceb1ae74a4e05d1a4b31ec73"
+  },
+  "quizzes/class-7/2024-25/quiz-5.js": {
+    "mtime": 1795268426.5560408,
+    "seen": 1795696737.9896343,
+    "ast_hash": "366d0405000e7b8f02e4a0c11e4db413",
+    "semantic_hash": "366d0405000e7b8f02e4a0c11e4db413"
+  },
+  "quizzes/class-7/2025-26/quiz-1.js": {
+    "mtime": 1795208316.2103665,
+    "seen": 1795696737.9896355,
+    "ast_hash": "c72cbe876f6ce11e8110738f91ea9551",
+    "semantic_hash": "c72cbe876f6ce11e8110738f91ea9551"
+  },
+  "quizzes/class-7/2025-26/quiz-2.js": {
+    "mtime": 1795208316.2119308,
+    "seen": 1795696737.9896367,
+    "ast_hash": "cada9120d2537fa63ebb1c8aead78387",
+    "semantic_hash": "cada9120d2537fa63ebb1c8aead78387"
+  },
+  "quizzes/class-7/2025-26/quiz-3.js": {
+    "mtime": 1795208316.2119308,
+    "seen": 1795696737.9896376,
+    "ast_hash": "ac8d557f4878887c4318f78588c88665",
+    "semantic_hash": "ac8d557f4878887c4318f78588c88665"
+  },
+  "quizzes/class-7/2025-26/quiz-4.js": {
+    "mtime": 1795208316.2119308,
+    "seen": 1795696737.9896386,
+    "ast_hash": "6c969ce4ed269bf41598fe8e40c151cb",
+    "semantic_hash": "6c969ce4ed269bf41598fe8e40c151cb"
+  },
+  "quizzes/class-8/2020-21/quiz-1.js": {
+    "mtime": 1795208316.2119308,
+    "seen": 1795696737.9896398,
+    "ast_hash": "8a63bb7dbdbd7a3133055959d359e2f2",
+    "semantic_hash": "8a63bb7dbdbd7a3133055959d359e2f2"
+  },
+  "quizzes/class-8/2020-21/quiz-2.js": {
+    "mtime": 1795208316.2119308,
+    "seen": 1795696737.9896407,
+    "ast_hash": "f906888995598867aa63d355ca78950c",
+    "semantic_hash": "f906888995598867aa63d355ca78950c"
+  },
+  "quizzes/class-8/2020-21/quiz-3.js": {
+    "mtime": 1795208316.2119308,
+    "seen": 1795696737.9896417,
+    "ast_hash": "c54ad4b7c45d52ed41314086a7836a6d",
+    "semantic_hash": "c54ad4b7c45d52ed41314086a7836a6d"
+  },
+  "quizzes/class-8/2020-21/quiz-4.js": {
+    "mtime": 1795208316.2167675,
+    "seen": 1795696737.989643,
+    "ast_hash": "4fc4aaf1d88ed4999d5a19d26b36980f",
+    "semantic_hash": "4fc4aaf1d88ed4999d5a19d26b36980f"
+  },
+  "quizzes/class-8/2020-21/quiz-5.js": {
+    "mtime": 1795208316.2167675,
+    "seen": 1795696737.989644,
+    "ast_hash": "30839f01f69827883e824cf515e60282",
+    "semantic_hash": "30839f01f69827883e824cf515e60282"
+  },
+  "quizzes/class-8/2021-22/quiz-1.js": {
+    "mtime": 1795208316.2167675,
+    "seen": 1795696737.989645,
+    "ast_hash": "949f4b9511232f18e6af5b0360eebae6",
+    "semantic_hash": "949f4b9511232f18e6af5b0360eebae6"
+  },
+  "quizzes/class-8/2021-22/quiz-2.js": {
+    "mtime": 1795208316.2194583,
+    "seen": 1795696737.9896462,
+    "ast_hash": "98eb122fbe87fe4f853e672f505cda1f",
+    "semantic_hash": "98eb122fbe87fe4f853e672f505cda1f"
+  },
+  "quizzes/class-8/2021-22/quiz-3.js": {
+    "mtime": 1795208316.2194583,
+    "seen": 1795696737.9896472,
+    "ast_hash": "9a0bb43cdd2b30867f44002dfb6da043",
+    "semantic_hash": "9a0bb43cdd2b30867f44002dfb6da043"
+  },
+  "quizzes/class-8/2021-22/quiz-4.js": {
+    "mtime": 1795208316.2194583,
+    "seen": 1795696737.9896483,
+    "ast_hash": "7cf19739827c47f8fd28364daab2fa61",
+    "semantic_hash": "7cf19739827c47f8fd28364daab2fa61"
+  },
+  "quizzes/class-8/2021-22/quiz-5.js": {
+    "mtime": 1795208316.2214649,
+    "seen": 1795696737.9896493,
+    "ast_hash": "0c9b3786f9ad474d854f7d3d4a366e63",
+    "semantic_hash": "0c9b3786f9ad474d854f7d3d4a366e63"
+  },
+  "quizzes/class-8/2022-23/quiz-1.js": {
+    "mtime": 1795208316.2214649,
+    "seen": 1795696737.9896505,
+    "ast_hash": "9a7657792f431544d96976e02de81f74",
+    "semantic_hash": "9a7657792f431544d96976e02de81f74"
+  },
+  "quizzes/class-8/2022-23/quiz-2.js": {
+    "mtime": 1795208316.2214649,
+    "seen": 1795696737.9896517,
+    "ast_hash": "7b13de394cd2c853c468ff58e5862abd",
+    "semantic_hash": "7b13de394cd2c853c468ff58e5862abd"
+  },
+  "quizzes/class-8/2022-23/quiz-3.js": {
+    "mtime": 1795208316.2214649,
+    "seen": 1795696737.9896526,
+    "ast_hash": "6a0aa6762615e37a185ce0671863ca58",
+    "semantic_hash": "6a0aa6762615e37a185ce0671863ca58"
+  },
+  "quizzes/class-8/2022-23/quiz-4.js": {
+    "mtime": 1795295886.601696,
+    "seen": 1795696737.9896538,
+    "ast_hash": "27f1abf26310830785aedf1b701ffe2b",
+    "semantic_hash": "27f1abf26310830785aedf1b701ffe2b"
+  },
+  "quizzes/class-8/2022-23/quiz-5.js": {
+    "mtime": 1795208316.2251973,
+    "seen": 1795696737.989655,
+    "ast_hash": "8a3bd2472e1982deb21756aec6643283",
+    "semantic_hash": "8a3bd2472e1982deb21756aec6643283"
+  },
+  "quizzes/class-8/2023-24/quiz-1.js": {
+    "mtime": 1795208316.2251973,
+    "seen": 1795696737.9896576,
+    "ast_hash": "87b97f973848088d3120ce232ff772b6",
+    "semantic_hash": "87b97f973848088d3120ce232ff772b6"
+  },
+  "quizzes/class-8/2023-24/quiz-2.js": {
+    "mtime": 1795208316.2251973,
+    "seen": 1795696737.9896586,
+    "ast_hash": "935fa8f01ccb8344030d2bc988d5c89c",
+    "semantic_hash": "935fa8f01ccb8344030d2bc988d5c89c"
+  },
+  "quizzes/class-8/2023-24/quiz-3.js": {
+    "mtime": 1795208316.2251973,
+    "seen": 1795696737.9896598,
+    "ast_hash": "218785d9646901934c9ed71ec42df274",
+    "semantic_hash": "218785d9646901934c9ed71ec42df274"
+  },
+  "quizzes/class-8/2023-24/quiz-4.js": {
+    "mtime": 1795208316.2251973,
+    "seen": 1795696737.9896607,
+    "ast_hash": "f6db70076be24d1e934285c9a26791da",
+    "semantic_hash": "f6db70076be24d1e934285c9a26791da"
+  },
+  "quizzes/class-8/2023-24/quiz-5.js": {
+    "mtime": 1795208316.2251973,
+    "seen": 1795696737.989662,
+    "ast_hash": "f6b48b6403c4153b1b8eddbeddf6ad82",
+    "semantic_hash": "f6b48b6403c4153b1b8eddbeddf6ad82"
+  },
+  "quizzes/class-8/2024-25/quiz-1.js": {
+    "mtime": 1795268500.628497,
+    "seen": 1795696737.989663,
+    "ast_hash": "10e21dcb5281a46846afd597148b1c7e",
+    "semantic_hash": "10e21dcb5281a46846afd597148b1c7e"
+  },
+  "quizzes/class-8/2024-25/quiz-2.js": {
+    "mtime": 1795268561.2696915,
+    "seen": 1795696737.989664,
+    "ast_hash": "33b99930a36270f21ec0159127c98e07",
+    "semantic_hash": "33b99930a36270f21ec0159127c98e07"
+  },
+  "quizzes/class-8/2024-25/quiz-3.js": {
+    "mtime": 1795268681.944306,
+    "seen": 1795696737.9896653,
+    "ast_hash": "37f30a8733eed238a88fc696f529cc50",
+    "semantic_hash": "37f30a8733eed238a88fc696f529cc50"
+  },
+  "quizzes/class-8/2024-25/quiz-4.js": {
+    "mtime": 1795268681.9985607,
+    "seen": 1795696737.9896665,
+    "ast_hash": "ceef28d9c9d87b5f127aedd6c611991f",
+    "semantic_hash": "ceef28d9c9d87b5f127aedd6c611991f"
+  },
+  "quizzes/class-8/2024-25/quiz-5.js": {
+    "mtime": 1795268749.9635258,
+    "seen": 1795696737.9896677,
+    "ast_hash": "54ea40a68a0eca62a019250ca07e9df9",
+    "semantic_hash": "54ea40a68a0eca62a019250ca07e9df9"
+  },
+  "quizzes/class-8/2025-26/quiz-1.js": {
+    "mtime": 1795208316.2349677,
+    "seen": 1795696737.9896686,
+    "ast_hash": "e12ac16374f949a3a2a4f36f57697a6b",
+    "semantic_hash": "e12ac16374f949a3a2a4f36f57697a6b"
+  },
+  "quizzes/class-8/2025-26/quiz-2.js": {
+    "mtime": 1795208316.2349677,
+    "seen": 1795696737.9896696,
+    "ast_hash": "0bf9957c100c01f99c7b3222403b75a3",
+    "semantic_hash": "0bf9957c100c01f99c7b3222403b75a3"
+  },
+  "quizzes/class-8/2025-26/quiz-3.js": {
+    "mtime": 1795208316.2369773,
+    "seen": 1795696737.989671,
+    "ast_hash": "92daf942e674e94ec590129b2d22db88",
+    "semantic_hash": "92daf942e674e94ec590129b2d22db88"
+  },
+  "quizzes/class-8/2025-26/quiz-4.js": {
+    "mtime": 1795208316.2369773,
+    "seen": 1795696737.989672,
+    "ast_hash": "ea3283f91cabe56add2839f27aca3958",
+    "semantic_hash": "ea3283f91cabe56add2839f27aca3958"
+  },
+  "quizzes/class-8/2025-26/quiz-5.js": {
+    "mtime": 1795208316.2369773,
+    "seen": 1795696737.989673,
+    "ast_hash": "e27ed75c3d147b472f7c53d5a0573717",
+    "semantic_hash": "e27ed75c3d147b472f7c53d5a0573717"
+  },
+  "quizzes/class-9/2020-21/quiz-1.js": {
+    "mtime": 1795208316.2369773,
+    "seen": 1795696737.989674,
+    "ast_hash": "8ee34378cf16e09e8eaf7c73308e4cc9",
+    "semantic_hash": "8ee34378cf16e09e8eaf7c73308e4cc9"
+  },
+  "quizzes/class-9/2020-21/quiz-2.js": {
+    "mtime": 1795208316.2408583,
+    "seen": 1795696737.989675,
+    "ast_hash": "9693ff41fc84efacbe009a5c51a0e9c5",
+    "semantic_hash": "9693ff41fc84efacbe009a5c51a0e9c5"
+  },
+  "quizzes/class-9/2020-21/quiz-3.js": {
+    "mtime": 1795208316.2408583,
+    "seen": 1795696737.9896762,
+    "ast_hash": "fc420c7867f9b8e5db5991ff2c67002a",
+    "semantic_hash": "fc420c7867f9b8e5db5991ff2c67002a"
+  },
+  "quizzes/class-9/2020-21/quiz-4.js": {
+    "mtime": 1795208316.2418344,
+    "seen": 1795696737.9896774,
+    "ast_hash": "05a5a455198d173bd03049d04899c3ba",
+    "semantic_hash": "05a5a455198d173bd03049d04899c3ba"
+  },
+  "quizzes/class-9/2020-21/quiz-5.js": {
+    "mtime": 1795208316.2423334,
+    "seen": 1795696737.9896786,
+    "ast_hash": "887922f2d6c69349ebfeb2b4f1bc0ead",
+    "semantic_hash": "887922f2d6c69349ebfeb2b4f1bc0ead"
+  },
+  "quizzes/class-9/2021-22/quiz-1.js": {
+    "mtime": 1795208316.2423334,
+    "seen": 1795696737.9896798,
+    "ast_hash": "ba8da690bd761b99f0c79b89687d700f",
+    "semantic_hash": "ba8da690bd761b99f0c79b89687d700f"
+  },
+  "quizzes/class-9/2021-22/quiz-2.js": {
+    "mtime": 1795208316.2423334,
+    "seen": 1795696737.989681,
+    "ast_hash": "f427a610f057a429e2ad7f0f71be3795",
+    "semantic_hash": "f427a610f057a429e2ad7f0f71be3795"
+  },
+  "quizzes/class-9/2021-22/quiz-3.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.989682,
+    "ast_hash": "021d44d674d37e1758bb1d33b1fb4797",
+    "semantic_hash": "021d44d674d37e1758bb1d33b1fb4797"
+  },
+  "quizzes/class-9/2021-22/quiz-4.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.989683,
+    "ast_hash": "cf0df2da784b46bb27715044898e2c83",
+    "semantic_hash": "cf0df2da784b46bb27715044898e2c83"
+  },
+  "quizzes/class-9/2021-22/quiz-5.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.989684,
+    "ast_hash": "e1d09601dc637b446a69c27aa6ef75d4",
+    "semantic_hash": "e1d09601dc637b446a69c27aa6ef75d4"
+  },
+  "quizzes/class-9/2022-23/quiz-1.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.9896853,
+    "ast_hash": "a0325b62174942aae3b75aa6ef208d70",
+    "semantic_hash": "a0325b62174942aae3b75aa6ef208d70"
+  },
+  "quizzes/class-9/2022-23/quiz-2.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.9896863,
+    "ast_hash": "610987bec62a3902e14ecc2b86120df6",
+    "semantic_hash": "610987bec62a3902e14ecc2b86120df6"
+  },
+  "quizzes/class-9/2022-23/quiz-3.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.9896874,
+    "ast_hash": "fb718f01fc27de2ae57a4396cf326466",
+    "semantic_hash": "fb718f01fc27de2ae57a4396cf326466"
+  },
+  "quizzes/class-9/2022-23/quiz-4.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.9896886,
+    "ast_hash": "7b95ef114c46a8a9599d294c044906d5",
+    "semantic_hash": "7b95ef114c46a8a9599d294c044906d5"
+  },
+  "quizzes/class-9/2022-23/quiz-5.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.9896896,
+    "ast_hash": "f5c03a5c6d19f7ba5c3943522bbfcc24",
+    "semantic_hash": "f5c03a5c6d19f7ba5c3943522bbfcc24"
+  },
+  "quizzes/class-9/2023-24/quiz-1.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.9896905,
+    "ast_hash": "c04c7009f5af51bab1fd2f4cd645ae0e",
+    "semantic_hash": "c04c7009f5af51bab1fd2f4cd645ae0e"
+  },
+  "quizzes/class-9/2023-24/quiz-2.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.989692,
+    "ast_hash": "60df5ca12a0b772dad561ed003ea402c",
+    "semantic_hash": "60df5ca12a0b772dad561ed003ea402c"
+  },
+  "quizzes/class-9/2023-24/quiz-3.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.989693,
+    "ast_hash": "ffcc69089323a2b5662b8c47ee789b1a",
+    "semantic_hash": "ffcc69089323a2b5662b8c47ee789b1a"
+  },
+  "quizzes/class-9/2023-24/quiz-4.js": {
+    "mtime": 1795208316.2448041,
+    "seen": 1795696737.9896939,
+    "ast_hash": "cd1ca1c39aaf55d049072d49b1f25ac9",
+    "semantic_hash": "cd1ca1c39aaf55d049072d49b1f25ac9"
+  },
+  "quizzes/class-9/2023-24/quiz-5.js": {
+    "mtime": 1795208316.2536306,
+    "seen": 1795696737.989695,
+    "ast_hash": "68ae0f8e81d06d47b36b935740a34196",
+    "semantic_hash": "68ae0f8e81d06d47b36b935740a34196"
+  },
+  "quizzes/class-9/2024-25/quiz-1.js": {
+    "mtime": 1795268832.992767,
+    "seen": 1795696737.989696,
+    "ast_hash": "c99a603996ea1d251194a1b2b9d53cad",
+    "semantic_hash": "c99a603996ea1d251194a1b2b9d53cad"
+  },
+  "quizzes/class-9/2024-25/quiz-2.js": {
+    "mtime": 1795290400.0779755,
+    "seen": 1795696737.989697,
+    "ast_hash": "bb72f98c9a811e5cbbaec78d1e6b65c2",
+    "semantic_hash": "bb72f98c9a811e5cbbaec78d1e6b65c2"
+  },
+  "quizzes/class-9/2024-25/quiz-3.js": {
+    "mtime": 1795268994.5128725,
+    "seen": 1795696737.989698,
+    "ast_hash": "eaf1b7e7aad8261f20dc9495a5783cd8",
+    "semantic_hash": "eaf1b7e7aad8261f20dc9495a5783cd8"
+  },
+  "quizzes/class-9/2024-25/quiz-4.js": {
+    "mtime": 1795269053.4819229,
+    "seen": 1795696737.9896991,
+    "ast_hash": "ede7289aa3c734a18d61981833863e75",
+    "semantic_hash": "ede7289aa3c734a18d61981833863e75"
+  },
+  "quizzes/class-9/2024-25/quiz-5.js": {
+    "mtime": 1795456419.7698348,
+    "seen": 1795696737.9897003,
+    "ast_hash": "0f5247fc9ad5685593ebe43e5bb7233b",
+    "semantic_hash": "0f5247fc9ad5685593ebe43e5bb7233b"
+  },
+  "quizzes/class-9/2025-26/quiz-1.js": {
+    "mtime": 1795208316.2584846,
+    "seen": 1795696737.9897013,
+    "ast_hash": "6c90aa3b3da08d6c9a409b93da07bc04",
+    "semantic_hash": "6c90aa3b3da08d6c9a409b93da07bc04"
+  },
+  "quizzes/class-9/2025-26/quiz-2.js": {
+    "mtime": 1795208316.2590172,
+    "seen": 1795696737.9897025,
+    "ast_hash": "2c9bcb020f8c5f5ad47c14ba3530adb8",
+    "semantic_hash": "2c9bcb020f8c5f5ad47c14ba3530adb8"
+  },
+  "quizzes/class-9/2025-26/quiz-3.js": {
+    "mtime": 1795208316.2590172,
+    "seen": 1795696737.9897037,
+    "ast_hash": "63939ced4d9fe686a817e8351b23f87d",
+    "semantic_hash": "63939ced4d9fe686a817e8351b23f87d"
+  },
+  "quizzes/class-9/2025-26/quiz-4.js": {
+    "mtime": 1795208316.2590172,
+    "seen": 1795696737.9897046,
+    "ast_hash": "e3b2dd5e483e167b8e46fbf758154a43",
+    "semantic_hash": "e3b2dd5e483e167b8e46fbf758154a43"
+  },
+  "quizzes/class-9/2025-26/quiz-5.js": {
+    "mtime": 1795208316.2590172,
+    "seen": 1795696737.9897058,
+    "ast_hash": "69166d0238f06203843a357c77aec652",
+    "semantic_hash": "69166d0238f06203843a357c77aec652"
+  },
+  "rand.js": {
+    "mtime": 1795456380.379122,
+    "seen": 1795696737.989707,
+    "ast_hash": "f1928fef87e6cb5f38fd6c94c545c0a5",
+    "semantic_hash": "f1928fef87e6cb5f38fd6c94c545c0a5"
+  },
+  "subjects.js": {
+    "mtime": 1795627251.9559693,
+    "seen": 1795696737.989708,
+    "ast_hash": "bcd95d073e594790088e0368b6c76fa3",
+    "semantic_hash": "bcd95d073e594790088e0368b6c76fa3"
+  },
+  "supabase-config.js": {
+    "mtime": 1795430043.5456543,
+    "seen": 1795696737.9897091,
+    "ast_hash": "7e45145a40636e52aa0995681cb0c13a",
+    "semantic_hash": "7e45145a40636e52aa0995681cb0c13a"
+  },
+  "supabase/02-daily-problem.sql": {
+    "mtime": 1795394350.829458,
+    "seen": 1795696737.98971,
+    "ast_hash": "c711f3b08141f7e5a39c667a9f50af66",
+    "semantic_hash": "c711f3b08141f7e5a39c667a9f50af66"
+  },
+  "supabase/03-daily-one-try.sql": {
+    "mtime": 1795428332.3215692,
+    "seen": 1795696737.989711,
+    "ast_hash": "2811a96e2a825d46c9db512deb01018f",
+    "semantic_hash": "2811a96e2a825d46c9db512deb01018f"
+  },
+  "supabase/04-topic-practice.sql": {
+    "mtime": 1795431534.7362304,
+    "seen": 1795696737.9897125,
+    "ast_hash": "1ad3d08bc9a282c5022bd48be2fdf49d",
+    "semantic_hash": "1ad3d08bc9a282c5022bd48be2fdf49d"
+  },
+  "supabase/answer-key.sql": {
+    "mtime": 1795464637.241473,
+    "seen": 1795696737.9897134,
+    "ast_hash": "96e5de6f2f4ad0f327a2f4347b55531a",
+    "semantic_hash": "96e5de6f2f4ad0f327a2f4347b55531a"
+  },
+  "supabase/duels.sql": {
+    "mtime": 1795457196.515027,
+    "seen": 1795696737.9897144,
+    "ast_hash": "49a361c9f552605200ee58913ca7df40",
+    "semantic_hash": "49a361c9f552605200ee58913ca7df40"
+  },
+  "supabase/schema.sql": {
+    "mtime": 1795457196.5155804,
+    "seen": 1795696737.9897158,
+    "ast_hash": "9d638ccec34f2b6ddd78c14243f4d693",
+    "semantic_hash": "9d638ccec34f2b6ddd78c14243f4d693"
+  },
+  "tags-ui.js": {
+    "mtime": 1795463597.105132,
+    "seen": 1795696737.9897165,
+    "ast_hash": "f78580bbb68dc662d3e62f30172752d2",
+    "semantic_hash": "f78580bbb68dc662d3e62f30172752d2"
+  },
+  "tests/example.spec.js": {
+    "mtime": 1795449819.6905794,
+    "seen": 1795696737.9897177,
+    "ast_hash": "d4511c5e832301303c4a858124c75e90",
+    "semantic_hash": "d4511c5e832301303c4a858124c75e90"
+  },
+  "tests/theory.spec.js": {
+    "mtime": 1795463597.105716,
+    "seen": 1795696737.9897187,
+    "ast_hash": "2bb445da626cc923319555b795153b3f",
+    "semantic_hash": "2bb445da626cc923319555b795153b3f"
+  },
+  "theory-lib.js": {
+    "mtime": 1795463597.106797,
+    "seen": 1795696737.9897199,
+    "ast_hash": "12c4c7efc167e037eabba201980bbc1c",
+    "semantic_hash": "12c4c7efc167e037eabba201980bbc1c"
+  },
+  "theory.js": {
+    "mtime": 1795463597.1084447,
+    "seen": 1795696737.989721,
+    "ast_hash": "eb43e842c2989ca097fd6af805c36611",
+    "semantic_hash": "eb43e842c2989ca097fd6af805c36611"
+  },
+  "tools/auto-tag.js": {
+    "mtime": 1795208316.2693567,
+    "seen": 1795696737.989722,
+    "ast_hash": "38b36aa8e514d42a6ecfe6397bf7eb25",
+    "semantic_hash": "38b36aa8e514d42a6ecfe6397bf7eb25"
+  },
+  "tools/build-answer-key.js": {
+    "mtime": 1795457196.516616,
+    "seen": 1795696737.9897246,
+    "ast_hash": "3ff5ad3909b81c6d373f60cc156c9408",
+    "semantic_hash": "3ff5ad3909b81c6d373f60cc156c9408"
+  },
+  "tools/build-problem-index.js": {
+    "mtime": 1795208316.2698772,
+    "seen": 1795696737.9897263,
+    "ast_hash": "6b859fd87d106504dc14b287d9bb96d0",
+    "semantic_hash": "6b859fd87d106504dc14b287d9bb96d0"
+  },
+  "tools/build-quiz-index.js": {
+    "mtime": 1795463597.1338444,
+    "seen": 1795696737.9897273,
+    "ast_hash": "39feac47b5292bf73f27dbabba0e02f1",
+    "semantic_hash": "39feac47b5292bf73f27dbabba0e02f1"
+  },
+  "tools/build-sitemap.js": {
+    "mtime": 1795463597.134361,
+    "seen": 1795696737.9897285,
+    "ast_hash": "ee1ab6b2d11d07dab87fe58cf3b6cfcc",
+    "semantic_hash": "ee1ab6b2d11d07dab87fe58cf3b6cfcc"
+  },
+  "tools/build-theory-index.js": {
+    "mtime": 1795463597.1348784,
+    "seen": 1795696737.9897296,
+    "ast_hash": "db4424480253732a05edc3badeca810c",
+    "semantic_hash": "db4424480253732a05edc3badeca810c"
+  },
+  "tools/tag-data/manual-2025-26.js": {
+    "mtime": 1795208316.2718465,
+    "seen": 1795696737.9897306,
+    "ast_hash": "2c16b3b0378da7b2952ece1b20385265",
+    "semantic_hash": "2c16b3b0378da7b2952ece1b20385265"
+  },
+  "tools/tags-lib.js": {
+    "mtime": 1795208316.2723787,
+    "seen": 1795696737.9897316,
+    "ast_hash": "3de054521ac658388b4ff33d89a61de8",
+    "semantic_hash": "3de054521ac658388b4ff33d89a61de8"
+  },
+  "tools/validate-tags.js": {
+    "mtime": 1795208316.273937,
+    "seen": 1795696737.989733,
+    "ast_hash": "f55002af0c503605846c37dc94253f8d",
+    "semantic_hash": "f55002af0c503605846c37dc94253f8d"
+  },
+  "tools/validate-theory.js": {
+    "mtime": 1795463597.135923,
+    "seen": 1795696737.989734,
+    "ast_hash": "9fb54eaebd706930ff90dd92ca6437bc",
+    "semantic_hash": "9fb54eaebd706930ff90dd92ca6437bc"
+  },
+  "vercel.json": {
+    "mtime": 1795026096.3657303,
+    "seen": 1795696737.9897351,
+    "ast_hash": "d8e6601568612da9a83a000fb27e9a37",
+    "semantic_hash": "d8e6601568612da9a83a000fb27e9a37"
+  },
+  "physics-game.html": {
+    "mtime": 1795631245.112626,
+    "seen": 1795696737.989736,
+    "ast_hash": "e64319a6a2926f25dd1ad4063a85546d",
+    "semantic_hash": "e64319a6a2926f25dd1ad4063a85546d"
+  },
+  "physics-quizzes.html": {
+    "mtime": 1795631245.1172853,
+    "seen": 1795696737.9897375,
+    "ast_hash": "82c75c9b3aefb26d07cd90cf8320a82a",
+    "semantic_hash": "82c75c9b3aefb26d07cd90cf8320a82a"
+  },
+  "physics.html": {
+    "mtime": 1795631245.1212273,
+    "seen": 1795696737.9897385,
+    "ast_hash": "d852057b6b4bfc424e41ecc98beab0fd",
+    "semantic_hash": "d852057b6b4bfc424e41ecc98beab0fd"
+  },
+  "robots.txt": {
+    "mtime": 1795026096.3625531,
+    "seen": 1795696737.98974,
+    "ast_hash": "0f4b51bdc203852a8cbb80380f1a6bba",
+    "semantic_hash": "0f4b51bdc203852a8cbb80380f1a6bba"
+  },
+  "theory.html": {
+    "mtime": 1795631245.47116,
+    "seen": 1795696737.9897408,
+    "ast_hash": "c0b0c9cc336a484ec8112dfb55710959",
+    "semantic_hash": "c0b0c9cc336a484ec8112dfb55710959"
+  },
+  "theory/abs-eq.md": {
+    "mtime": 1795464634.9844189,
+    "seen": 1795696737.9897418,
+    "ast_hash": "85f0fc30a8e56c68e6b988957e956aa5",
+    "semantic_hash": "85f0fc30a8e56c68e6b988957e956aa5"
+  },
+  "theory/arithmetic-prog.md": {
+    "mtime": 1795464686.7348614,
+    "seen": 1795696737.9897509,
+    "ast_hash": "deba7fbc49d5297e19c394f2cdda73d1",
+    "semantic_hash": "deba7fbc49d5297e19c394f2cdda73d1"
+  },
+  "theory/diophantine.md": {
+    "mtime": 1795464635.022317,
+    "seen": 1795696737.989753,
+    "ast_hash": "986fd55f0fe6049433c35f374e4e5578",
+    "semantic_hash": "986fd55f0fe6049433c35f374e4e5578"
+  },
+  "theory/divisibility.md": {
+    "mtime": 1795464635.0308864,
+    "seen": 1795696737.9897547,
+    "ast_hash": "8a1be212cc21a247a9f824bc46f38599",
+    "semantic_hash": "8a1be212cc21a247a9f824bc46f38599"
+  },
+  "theory/exp-eq.md": {
+    "mtime": 1795464686.7359824,
+    "seen": 1795696737.9897556,
+    "ast_hash": "c225eb571f4d2c62deb0f456dc25f48b",
+    "semantic_hash": "c225eb571f4d2c62deb0f456dc25f48b"
+  },
+  "theory/exp-ineq.md": {
+    "mtime": 1795464686.7364883,
+    "seen": 1795696737.9897568,
+    "ast_hash": "3af9192f6e98722e9ef80011ff0f7c4a",
+    "semantic_hash": "3af9192f6e98722e9ef80011ff0f7c4a"
+  },
+  "theory/factoring.md": {
+    "mtime": 1795464635.094632,
+    "seen": 1795696737.989758,
+    "ast_hash": "7099b794293de9fb6dba6b75b28ec9e8",
+    "semantic_hash": "7099b794293de9fb6dba6b75b28ec9e8"
+  },
+  "theory/function-basics.md": {
+    "mtime": 1795464686.7364883,
+    "seen": 1795696737.989759,
+    "ast_hash": "c9cca7518676cf1835e469e2c05c5521",
+    "semantic_hash": "c9cca7518676cf1835e469e2c05c5521"
+  },
+  "theory/function-props.md": {
+    "mtime": 1795464686.7377088,
+    "seen": 1795696737.98976,
+    "ast_hash": "d768e5370a6ec9dd365f5c43f0e11d17",
+    "semantic_hash": "d768e5370a6ec9dd365f5c43f0e11d17"
+  },
+  "theory/gcd-lcm.md": {
+    "mtime": 1795464635.1540363,
+    "seen": 1795696737.9897614,
+    "ast_hash": "4571887ba3a8904b83c7728866209758",
+    "semantic_hash": "4571887ba3a8904b83c7728866209758"
+  },
+  "theory/geometric-prog.md": {
+    "mtime": 1795464686.738223,
+    "seen": 1795696737.9897623,
+    "ast_hash": "f8c1b245e46addb54ec633d3962a0408",
+    "semantic_hash": "f8c1b245e46addb54ec633d3962a0408"
+  },
+  "theory/graph-transform.md": {
+    "mtime": 1795464686.738729,
+    "seen": 1795696737.9897635,
+    "ast_hash": "5267d93ac24f43898e8568d85703cdcc",
+    "semantic_hash": "5267d93ac24f43898e8568d85703cdcc"
+  },
+  "theory/higher-degree.md": {
+    "mtime": 1795464635.2183516,
+    "seen": 1795696737.9897647,
+    "ast_hash": "d29af0e1f8183964dcf5d9c99847a8e0",
+    "semantic_hash": "d29af0e1f8183964dcf5d9c99847a8e0"
+  },
+  "theory/identities.md": {
+    "mtime": 1795464635.2362175,
+    "seen": 1795696737.989766,
+    "ast_hash": "7945d6313ce079c1e60f0f8721a50a99",
+    "semantic_hash": "7945d6313ce079c1e60f0f8721a50a99"
+  },
+  "theory/induction.md": {
+    "mtime": 1795464686.738729,
+    "seen": 1795696737.989767,
+    "ast_hash": "011546573fcf2e90938ec7de4d25f47d",
+    "semantic_hash": "011546573fcf2e90938ec7de4d25f47d"
+  },
+  "theory/ineq-proofs.md": {
+    "mtime": 1795464635.262371,
+    "seen": 1795696737.9897683,
+    "ast_hash": "ae3180bcd74c581d1f1f9d7ed19dcd89",
+    "semantic_hash": "ae3180bcd74c581d1f1f9d7ed19dcd89"
+  },
+  "theory/integer-part.md": {
+    "mtime": 1795464635.2997174,
+    "seen": 1795696737.9897692,
+    "ast_hash": "90f35f05d31ece579f8582f3d9c4b5f5",
+    "semantic_hash": "90f35f05d31ece579f8582f3d9c4b5f5"
+  },
+  "theory/interval-method.md": {
+    "mtime": 1795464635.306931,
+    "seen": 1795696737.989772,
+    "ast_hash": "8fd07e6d48d5c3cb85a80fdd13f912cf",
+    "semantic_hash": "8fd07e6d48d5c3cb85a80fdd13f912cf"
+  },
+  "theory/inverse-trig.md": {
+    "mtime": 1795464686.739737,
+    "seen": 1795696737.9897735,
+    "ast_hash": "a9e513956fd70f5191bddc7bfe0f36de",
+    "semantic_hash": "a9e513956fd70f5191bddc7bfe0f36de"
+  },
+  "theory/irrational-eq.md": {
+    "mtime": 1795464635.3343577,
+    "seen": 1795696737.989775,
+    "ast_hash": "d1b76dc50b6de6a83e81a892278b117d",
+    "semantic_hash": "d1b76dc50b6de6a83e81a892278b117d"
+  },
+  "theory/linear-eq.md": {
+    "mtime": 1795464635.3543868,
+    "seen": 1795696737.9897761,
+    "ast_hash": "dc918a732a86f2d2febb368c78ce94e2",
+    "semantic_hash": "dc918a732a86f2d2febb368c78ce94e2"
+  },
+  "theory/linear-func.md": {
+    "mtime": 1795464686.7403295,
+    "seen": 1795696737.989777,
+    "ast_hash": "07e18cff1f615148d1373e6787d51e4a",
+    "semantic_hash": "07e18cff1f615148d1373e6787d51e4a"
+  },
+  "theory/linear-ineq.md": {
+    "mtime": 1795464635.396911,
+    "seen": 1795696737.9897783,
+    "ast_hash": "f412d9d483fc57ad529988c36691d9dd",
+    "semantic_hash": "f412d9d483fc57ad529988c36691d9dd"
+  },
+  "theory/linear-systems.md": {
+    "mtime": 1795464635.4193566,
+    "seen": 1795696737.9897795,
+    "ast_hash": "fcfc196bf8698339dc26ecaddf54c90a",
+    "semantic_hash": "fcfc196bf8698339dc26ecaddf54c90a"
+  },
+  "theory/log-eq.md": {
+    "mtime": 1795464686.7408352,
+    "seen": 1795696737.9897804,
+    "ast_hash": "b0274eee927fc430b896ba4f1a8527be",
+    "semantic_hash": "b0274eee927fc430b896ba4f1a8527be"
+  },
+  "theory/log-ineq.md": {
+    "mtime": 1795464686.741222,
+    "seen": 1795696737.9897819,
+    "ast_hash": "684e8c124f6c3955e783e5c6e91eed20",
+    "semantic_hash": "684e8c124f6c3955e783e5c6e91eed20"
+  },
+  "theory/logarithms.md": {
+    "mtime": 1795464686.74217,
+    "seen": 1795696737.9897828,
+    "ast_hash": "942d5578e6c0e1bf39da4b45ef1eff18",
+    "semantic_hash": "942d5578e6c0e1bf39da4b45ef1eff18"
+  },
+  "theory/max-min.md": {
+    "mtime": 1795464686.7426748,
+    "seen": 1795696737.989784,
+    "ast_hash": "477220d828e19b7e878a0b5eca840f87",
+    "semantic_hash": "477220d828e19b7e878a0b5eca840f87"
+  },
+  "theory/means.md": {
+    "mtime": 1795464635.522626,
+    "seen": 1795696737.9897852,
+    "ast_hash": "08e0910073b224b3b642ee64776bbff3",
+    "semantic_hash": "08e0910073b224b3b642ee64776bbff3"
+  },
+  "theory/negative-abs.md": {
+    "mtime": 1795464635.5288687,
+    "seen": 1795696737.9897861,
+    "ast_hash": "c5ab9cef2afcc33cface1501c9b34063",
+    "semantic_hash": "c5ab9cef2afcc33cface1501c9b34063"
+  },
+  "theory/new-operations.md": {
+    "mtime": 1795464635.5492232,
+    "seen": 1795696737.989787,
+    "ast_hash": "84ab08796923bb2eb0ca868d2081a978",
+    "semantic_hash": "84ab08796923bb2eb0ca868d2081a978"
+  },
+  "theory/nonlinear-systems.md": {
+    "mtime": 1795464635.577486,
+    "seen": 1795696737.9897885,
+    "ast_hash": "752c51f4fb2b3f4df5e27c7bd1d3c873",
+    "semantic_hash": "752c51f4fb2b3f4df5e27c7bd1d3c873"
+  },
+  "theory/nth-roots.md": {
+    "mtime": 1795464635.5842636,
+    "seen": 1795696737.9897895,
+    "ast_hash": "5613c5a535531fe2f87cf7ff4d4cf117",
+    "semantic_hash": "5613c5a535531fe2f87cf7ff4d4cf117"
+  },
+  "theory/numeric-ineq.md": {
+    "mtime": 1795464635.5910017,
+    "seen": 1795696737.9897907,
+    "ast_hash": "84d70f87eab6bcbad89f73f7818fb847",
+    "semantic_hash": "84d70f87eab6bcbad89f73f7818fb847"
+  },
+  "theory/percent.md": {
+    "mtime": 1795464635.5999894,
+    "seen": 1795696737.9897916,
+    "ast_hash": "3098ae5def2d7d6ad98ec34958d9425e",
+    "semantic_hash": "3098ae5def2d7d6ad98ec34958d9425e"
+  },
+  "theory/poly-division.md": {
+    "mtime": 1795464635.6058512,
+    "seen": 1795696737.989793,
+    "ast_hash": "c3c2b8f1d78bb7bd63bc73c478ec7605",
+    "semantic_hash": "c3c2b8f1d78bb7bd63bc73c478ec7605"
+  },
+  "theory/polynomials.md": {
+    "mtime": 1795464635.6298344,
+    "seen": 1795696737.9897938,
+    "ast_hash": "b9fc6f00d5fdbb64597aca008c8d7330",
+    "semantic_hash": "b9fc6f00d5fdbb64597aca008c8d7330"
+  },
+  "theory/powers.md": {
+    "mtime": 1795464635.664071,
+    "seen": 1795696737.989795,
+    "ast_hash": "bc8a22192a65ceb90568ef4d8e6643d2",
+    "semantic_hash": "bc8a22192a65ceb90568ef4d8e6643d2"
+  },
+  "theory/prime-factor.md": {
+    "mtime": 1795464635.6991966,
+    "seen": 1795696737.9897962,
+    "ast_hash": "0d9db85c381f062a507bebd5be423b3d",
+    "semantic_hash": "0d9db85c381f062a507bebd5be423b3d"
+  },
+  "theory/product-sum.md": {
+    "mtime": 1795464686.7438662,
+    "seen": 1795696737.9897974,
+    "ast_hash": "d4e017aff5f9dc0c3486c9ee7b6268ce",
+    "semantic_hash": "d4e017aff5f9dc0c3486c9ee7b6268ce"
+  },
+  "theory/proportion.md": {
+    "mtime": 1795464635.7410824,
+    "seen": 1795696737.9897983,
+    "ast_hash": "5694d13b9562b800aa36ff8d4c13523c",
+    "semantic_hash": "5694d13b9562b800aa36ff8d4c13523c"
+  },
+  "theory/quadratic-eq.md": {
+    "mtime": 1795464635.747989,
+    "seen": 1795696737.9897995,
+    "ast_hash": "65ff2da1adf7d8be59e9b37ee7b8fadf",
+    "semantic_hash": "65ff2da1adf7d8be59e9b37ee7b8fadf"
+  },
+  "theory/quadratic-func.md": {
+    "mtime": 1795464686.7444491,
+    "seen": 1795696737.9898007,
+    "ast_hash": "1860625f175214194cffdbb0a9328f83",
+    "semantic_hash": "1860625f175214194cffdbb0a9328f83"
+  },
+  "theory/quadratic-ineq.md": {
+    "mtime": 1795464635.774206,
+    "seen": 1795696737.9898016,
+    "ast_hash": "f8e3b156cf12d928aa60ab4916936cd4",
+    "semantic_hash": "f8e3b156cf12d928aa60ab4916936cd4"
+  },
+  "theory/radians.md": {
+    "mtime": 1795464686.7456455,
+    "seen": 1795696737.9898028,
+    "ast_hash": "85c3f4cd46444ed7218625f464398c04",
+    "semantic_hash": "85c3f4cd46444ed7218625f464398c04"
+  },
+  "theory/rational-eq.md": {
+    "mtime": 1795464635.8214567,
+    "seen": 1795696737.9898038,
+    "ast_hash": "8f3548359189e1e1aa122b7541161e4c",
+    "semantic_hash": "8f3548359189e1e1aa122b7541161e4c"
+  },
+  "theory/rational-expr.md": {
+    "mtime": 1795464635.8264458,
+    "seen": 1795696737.9898047,
+    "ast_hash": "572417c4a0b876823b64dcafb62ca8a1",
+    "semantic_hash": "572417c4a0b876823b64dcafb62ca8a1"
+  },
+  "theory/real-exponent.md": {
+    "mtime": 1795464686.74618,
+    "seen": 1795696737.9898095,
+    "ast_hash": "9fd12c82711e71c710d1fa96c278807b",
+    "semantic_hash": "9fd12c82711e71c710d1fa96c278807b"
+  },
+  "theory/reduction.md": {
+    "mtime": 1795464686.7468503,
+    "seen": 1795696737.9898107,
+    "ast_hash": "a490b55b60d0018e194f5c0db807aafb",
+    "semantic_hash": "a490b55b60d0018e194f5c0db807aafb"
+  },
+  "theory/sets.md": {
+    "mtime": 1795464635.867727,
+    "seen": 1795696737.9898117,
+    "ast_hash": "64f21ff58acd8f173b5a27608cc52285",
+    "semantic_hash": "64f21ff58acd8f173b5a27608cc52285"
+  },
+  "theory/special-products.md": {
+    "mtime": 1795464635.9009657,
+    "seen": 1795696737.989813,
+    "ast_hash": "a357585326fa5f1c6f582a8cb5f763f9",
+    "semantic_hash": "a357585326fa5f1c6f582a8cb5f763f9"
+  },
+  "theory/square-roots.md": {
+    "mtime": 1795464635.9202526,
+    "seen": 1795696737.989814,
+    "ast_hash": "d4c1cbf370657c00d9d4447cdf572b5e",
+    "semantic_hash": "d4c1cbf370657c00d9d4447cdf572b5e"
+  },
+  "theory/sum-formulas.md": {
+    "mtime": 1795464686.7473562,
+    "seen": 1795696737.9898152,
+    "ast_hash": "9cd8623dd40a7e42402c9b68e323c251",
+    "semantic_hash": "9cd8623dd40a7e42402c9b68e323c251"
+  },
+  "theory/trig-eq.md": {
+    "mtime": 1795464686.7479985,
+    "seen": 1795696737.9898164,
+    "ast_hash": "ff53fdc66eca0d7c7a102acbb841ca47",
+    "semantic_hash": "ff53fdc66eca0d7c7a102acbb841ca47"
+  },
+  "theory/trig-identities.md": {
+    "mtime": 1795464686.7486124,
+    "seen": 1795696737.9898176,
+    "ast_hash": "ec7c59fbd91a718199121dd734b0f822",
+    "semantic_hash": "ec7c59fbd91a718199121dd734b0f822"
+  },
+  "theory/trig-ineq.md": {
+    "mtime": 1795464686.7491484,
+    "seen": 1795696737.9898186,
+    "ast_hash": "2305e9e2210980030b5ab1fa500aafc9",
+    "semantic_hash": "2305e9e2210980030b5ab1fa500aafc9"
+  },
+  "theory/two-var-ineq.md": {
+    "mtime": 1795464636.008782,
+    "seen": 1795696737.98982,
+    "ast_hash": "abef92f1a0b044a249369647d303eaa2",
+    "semantic_hash": "abef92f1a0b044a249369647d303eaa2"
+  },
+  "theory/vieta.md": {
+    "mtime": 1795464636.0157926,
+    "seen": 1795696737.989821,
+    "ast_hash": "1a38184e72a02eed559fcc2ae7c3f8ac",
+    "semantic_hash": "1a38184e72a02eed559fcc2ae7c3f8ac"
+  },
+  "theory/word-problems.md": {
+    "mtime": 1795464636.0502923,
+    "seen": 1795696737.989822,
+    "ast_hash": "21429d80052f8a8ad9456ca04e33a2bc",
+    "semantic_hash": "21429d80052f8a8ad9456ca04e33a2bc"
+  }
+}
