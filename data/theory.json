@@ -75,5 +75,11 @@
   {"id":"polygon-basics","title":"მრავალკუთხედი","area":"geometry","group":"polygons","grades":[8],"reviewed":false,"words":329,"n":16},
   {"id":"parallelogram","title":"პარალელოგრამი","area":"geometry","group":"polygons","grades":[7,8],"reviewed":false,"words":361,"n":53},
   {"id":"rhombus-rect-sq","title":"რომბი, მართკუთხედი, კვადრატი","area":"geometry","group":"polygons","grades":[7,8],"reviewed":false,"words":358,"n":76},
-  {"id":"trapezoid","title":"ტრაპეცია","area":"geometry","group":"polygons","grades":[8],"reviewed":false,"words":380,"n":87}
+  {"id":"trapezoid","title":"ტრაპეცია","area":"geometry","group":"polygons","grades":[8],"reviewed":false,"words":380,"n":87},
+  {"id":"regular-polygon","title":"წესიერი მრავალკუთხედი","area":"geometry","group":"polygons","grades":[9],"reviewed":false,"words":316,"n":27},
+  {"id":"chords-tangents","title":"ქორდა, მხები, ორი წრეწირი","area":"geometry","group":"circle","grades":[7,8],"reviewed":false,"words":388,"n":75},
+  {"id":"circle-angles","title":"ცენტრალური და ჩახაზული კუთხეები","area":"geometry","group":"circle","grades":[7],"reviewed":false,"words":386,"n":44},
+  {"id":"inscribed-circum","title":"ჩახაზული და შემოხაზული ფიგურები","area":"geometry","group":"circle","grades":[7,8],"reviewed":false,"words":351,"n":126},
+  {"id":"circle-segments","title":"პროპორციული მონაკვეთები წრეში","area":"geometry","group":"circle","grades":[8],"reviewed":false,"words":326,"n":19},
+  {"id":"circle-length-area","title":"წრეწირის სიგრძე და წრის ფართობი","area":"geometry","group":"circle","grades":[9],"reviewed":false,"words":286,"n":16}
 ]
