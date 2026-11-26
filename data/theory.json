@@ -69,5 +69,11 @@
   {"id":"cevians","title":"მედიანა, ბისექტრისა, სიმაღლე; ბისექტრისის თვისება","area":"geometry","group":"triangles","grades":[7],"reviewed":false,"words":397,"n":85},
   {"id":"midline","title":"შუახაზი","area":"geometry","group":"triangles","grades":[8],"reviewed":false,"words":376,"n":15},
   {"id":"pythagoras","title":"პითაგორას თეორემა","area":"geometry","group":"triangles","grades":[8],"reviewed":false,"words":332,"n":2},
-  {"id":"parallelogram","title":"პარალელოგრამი","area":"geometry","group":"polygons","grades":[7,8],"reviewed":false,"words":361,"n":53}
+  {"id":"acute-trig","title":"მახვილი კუთხის ტრიგონომეტრიული ფუნქციები","area":"geometry","group":"triangles","grades":[8],"reviewed":false,"words":266,"n":12},
+  {"id":"law-cos-sin","title":"კოსინუსების და სინუსების თეორემები","area":"geometry","group":"triangles","grades":[8],"reviewed":false,"words":286,"n":6},
+  {"id":"notable-points","title":"შესანიშნავი წერტილები","area":"geometry","group":"triangles","grades":[8],"reviewed":false,"words":421,"n":14},
+  {"id":"polygon-basics","title":"მრავალკუთხედი","area":"geometry","group":"polygons","grades":[8],"reviewed":false,"words":329,"n":16},
+  {"id":"parallelogram","title":"პარალელოგრამი","area":"geometry","group":"polygons","grades":[7,8],"reviewed":false,"words":361,"n":53},
+  {"id":"rhombus-rect-sq","title":"რომბი, მართკუთხედი, კვადრატი","area":"geometry","group":"polygons","grades":[7,8],"reviewed":false,"words":358,"n":76},
+  {"id":"trapezoid","title":"ტრაპეცია","area":"geometry","group":"polygons","grades":[8],"reviewed":false,"words":380,"n":87}
 ]
