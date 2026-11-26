@@ -92,5 +92,11 @@
   {"id":"dot-product","title":"სკალარული ნამრავლი","area":"geometry","group":"vectors-coords","grades":[9],"reviewed":false,"words":252,"n":23},
   {"id":"line-circle-eq","title":"წრფის და წრეწირის განტოლება","area":"geometry","group":"vectors-coords","grades":[9],"reviewed":false,"words":277,"n":66},
   {"id":"conics","title":"ელიფსი, ჰიპერბოლა, პარაბოლა","area":"geometry","group":"vectors-coords","grades":[11],"reviewed":false,"words":273,"n":48},
-  {"id":"constructions","title":"აგების ამოცანები","area":"geometry","group":"constructions","grades":[7,8],"reviewed":false,"words":477,"n":6}
+  {"id":"constructions","title":"აგების ამოცანები","area":"geometry","group":"constructions","grades":[7,8],"reviewed":false,"words":477,"n":6},
+  {"id":"stereo-axioms","title":"სტერეომეტრიის აქსიომები","area":"solid","group":"space-basics","grades":[10],"reviewed":false,"words":464,"n":8},
+  {"id":"parallel-space","title":"წრფეთა და სიბრტყეთა პარალელურობა","area":"solid","group":"space-basics","grades":[10],"reviewed":false,"words":404,"n":12},
+  {"id":"perpendicular-space","title":"მართობულობა, მართობი და დახრილი","area":"solid","group":"space-basics","grades":[10],"reviewed":false,"words":333,"n":8},
+  {"id":"angles-space","title":"კუთხეები სივრცეში, ორწახნაგა კუთხე","area":"solid","group":"space-basics","grades":[10],"reviewed":false,"words":375,"n":29},
+  {"id":"distances-space","title":"მანძილები სივრცეში","area":"solid","group":"space-basics","grades":[10],"reviewed":false,"words":344,"n":8},
+  {"id":"prism","title":"პრიზმა, პარალელეპიპედი, კუბი","area":"solid","group":"polyhedra","grades":[10],"reviewed":false,"words":314,"n":87}
 ]
